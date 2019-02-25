@@ -5,6 +5,7 @@
 ## SanteDB
 
 * [SanteDB Development](santedb/santedb.md)
+* [SanteDB History](santedb/santedb-history.md)
 * [Applets](santedb/applets/README.md)
   * [Applet Structure](santedb/applets/applet-structure.md)
   * [HTML Assets](santedb/applets/html-assets.md)
