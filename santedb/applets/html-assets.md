@@ -1,0 +1,153 @@
+# HTML Assets
+
+In a SanteDB applet, a page, partial or piece of HTML is designed around strict XHTML and must be annotated so the proper routing is setup on the AngularJS stack.
+
+Rules for HTML assets in an applet are:
+
+1. Must be well-formed XML
+2. Root element must be in **http://www.w3.org/1999/xhtml** namespace
+3. Root element must be a &lt;div&gt;, &lt;table&gt;, &lt;span&gt;, or &lt;p&gt; tag.
+
+## Empty HTML Asset Template
+
+At a bare minimum, an empty HTML asset should appear with the following structure:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml">
+    ...
+</div>
+```
+
+From here the asset can be loaded by the applet collection manager.
+
+## Extended Asset Tags
+
+You can also decorate your HTML asset with a series of tags in the http://santedb.org/applet namespace in order to add functionality. Before decorating your asset, be sure to declare the namespace:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    ...
+</div>
+```
+
+### Including Scripts
+
+One of the extended tags allows you to either inject a JavaScript include into the header of the already rendered page \(a static reference\) or to load the reference on demand when the asset it requested. This is done using the script tag. 
+
+The following example includes a controller JS file, dynamically loaded:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    ...
+    <sdb:script static="false">~/controllers/index.js</sdb:script>
+    ...
+</div>
+```
+
+### Including CSS
+
+You can also use the style tag to inject a CSS reference into the already rendered HTML page \(this is useful if you are creating a custom theme or using a third party library\).
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    ...
+    <sdb:style>~/css/theme.css</sdb:style>
+    ...
+</div>
+```
+
+### Angular Routes / States
+
+One of the more powerful features of the SanteDB user interface, is that it uses an AngularJS SPA architecture. SanteDB's rendering engine will automatically generate a routes.js file based on the applets which are loaded into the execution context. 
+
+In order to register your page and a route, you need to create an AngularJS state, this is done by decorating your asset with an asset tag:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    ...
+    <sdb:state name="example">
+        <sdb:title lang="en">Example</sdb:title>
+        <sdb:url>/example</sdb:url>
+        ...
+    </sdb:state>
+</div>
+```
+
+This registers a new state with name "example" at the URL /example into the ng-route context. This page can now be referenced by using:
+
+```markup
+<a ui-sref="example">Go to Example</a>
+```
+
+The sdb:title element is used by the breadcrumb plugin to render the path to the specified page, as well as to change the title of the browser window \(if applicable\).
+
+Furthermore, we can demand a specific permission be present for the current user in order to allow navigation:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    ...
+    <sdb:state name="example">
+        <sdb:url>/example</sdb:url>
+        <sdb:demand>1.3.6.1.4.1.33349.3.1.5.9.2.1</sdb:demand>
+        ...
+    </sdb:state>
+</div>
+```
+
+This has the following behavior:
+
+* If there is no session, then the policy evaluation equates to ELEVATE and a 401 is returned \(where SanteDB will by default, navigate to state 'login'\)
+* If there is a session, and the user has the policy, the evaluation is GRANT and a HTTP 200 is returned and the asset HTML is provided to the client
+* If there is a session, and the user has the specified policy but on when elevated, then the ELEVATE decision \(401\) is returned with a re-authentication request.
+* If there is a session and the user does not have access then DENY is evaluated and an HTTP 403 is returned.
+
+Finally, if your route requires a controller, you can have this dynamically executed / requested by using the sdb:view element:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    ...
+    <sdb:state name="example">
+        <sdb:url>/example</sdb:url>
+        <sdb:demand>1.3.6.1.4.1.33349.3.1.5.9.2.1</sdb:demand>
+        <sdb:view>
+            <sdb:controller>ExampleController</sdb:controller>
+        </sdb:view>
+    </sdb:state>
+</div>
+```
+
+A completed example page may be:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:sdb="http://santedb.org/applet">
+    <sdb:script static="false">~/controllers/index.js</sdb:script>
+    <sdb:style>~/css/theme.css</sdb:style>
+    <sdb:state name="example">
+        <sdb:title lang="en">Example Page</sdb:title>
+        <sdb:url>/example</sdb:url>
+        <sdb:demand>1.3.6.1.4.1.33349.3.1.5.9.2.1</sdb:demand>
+        <sdb:view>
+            <sdb:controller>ExampleController</sdb:controller>
+        </sdb:view>
+    </sdb:state>
+    {{ helloMessage }}
+</div>
+```
+
+Where the index.js file contents would be:
+
+```javascript
+angular.module('santedb').controller('ExampleController', ["$scope", function($scope) {
+    $scope.helloMessage = 'Hello World!';
+}]);
+```
+
+
+
