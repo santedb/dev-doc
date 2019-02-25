@@ -10,7 +10,7 @@ SanteDB is not a new application framework developed in isolation, rather it is 
 
 SanteDB is really an evolution of OpenIZ \([http://openiz.org](http://openiz.org\)\) which itself was an evolution of the MARC-HI SHR RI. The table below illustrates the relative features of each solution.
 
-| Feature | MARC-HI SHR RI | SanteDB | SanteDB iCDR |
+| Feature | MARC-HI SHR RI | OpenIZ | SanteDB iCDR |
 | :--- | :--- | :--- | :--- |
 | **Platform Information** |  |  |  |
 | Original Release Year | 2011 | 2016 | 2019 |
