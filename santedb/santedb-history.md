@@ -20,7 +20,7 @@ SanteDB is really an evolution of OpenIZ \([http://openiz.org](http://openiz.org
 | **Deployment / Operationalization** |  |  |  |
 | Server Environment\(s\) | Windows Server 2003+ | Windows Server 2008R2+ | Windows Server 2008R2+, Linux, MacOS |
 | Client Environments |  | Android 4.4+, Windows 7+, Linux, MacOS | Android 5.0+, Windows 8+, Linux, MacOS |
-| RDBMS Support | PostgreSQL | PostgreSQL, SQLite, MSSQL 2008+ | PostgreSQL, FirebirdSQL, Oracle 18c,   SQLite |
+| RDBMS Support | PostgreSQL 9.2 | PostgreSQL 9.4, SQLite, MSSQL 2008+ | PostgreSQL 10, FirebirdSQL 3.3, Oracle 11g,   SQLite |
 | Scale-Out | DB: Streaming Replication, App Server: Round-Robin DNS | DB: Streaming Replication, App Server: Round-Robin DNS | DB: Streaming Replication,  App Server: Round-Robin DNS, Role-Based Scale-out |
 | **Information Model** |  |  |  |
 | Model | Component Model | HL7 RIM | HL7 RIM |
