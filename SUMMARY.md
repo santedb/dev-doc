@@ -19,6 +19,12 @@
 * [Knowledgebase](santedb/sdb-kb.md)
 * [Fixes & Patches](santedb/fixpatch/README.md)
   * [Update 2017-07-21](santedb/fixpatch/20170721-01.md)
+  * [Update 2017-07-25](santedb/fixpatch/20170725-01.md)
+  * [Update 2017-08-03](santedb/fixpatch/20170803-01.md)
+  * [Update 2017-08-04](santedb/fixpatch/20170804-01.md)
+  * [Update 2017-09-13](santedb/fixpatch/20170913-01.md)
+  * [Update 2017-10-03](santedb/fixpatch/20171003-01.md)
+  * [Update 2017-10-11](santedb/fixpatch/20171011-01.md)
 
 ## SanteGuard
 
