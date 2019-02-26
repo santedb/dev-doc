@@ -1,6 +1,6 @@
 # Table of contents
 
-* [SanteSuite EngNet Portal](README.md)
+* [SanteSuite OpsPortal](README.md)
 
 ## SanteDB
 
