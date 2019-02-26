@@ -16,6 +16,8 @@
   * [Packaging Applets](santedb/applets/packaging-applets.md)
 * [Tool References](santedb/tool-references/README.md)
   * [Applet Debugger](santedb/tool-references/applet-debugger.md)
+* [Knowledgebase](santedb/sdb-kb/README.md)
+  * [Fixes & Patches](santedb/sdb-kb/fixes-and-patches.md)
 
 ## SanteGuard
 
