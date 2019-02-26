@@ -17,7 +17,8 @@
 * [Tool References](santedb/tool-references/README.md)
   * [Applet Debugger](santedb/tool-references/applet-debugger.md)
 * [Knowledgebase](santedb/sdb-kb.md)
-* [Fixes & Patches](santedb/fixpatch.md)
+* [Fixes & Patches](santedb/fixpatch/README.md)
+  * [Update 2017-07-21](santedb/fixpatch/20170721-01.md)
 
 ## SanteGuard
 
