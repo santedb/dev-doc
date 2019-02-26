@@ -1,8 +1,9 @@
 ---
 description: >-
-  Welcome to the SanteSuite Developer's Portal. This portal is designed to
-  capture documentation related to SanteSuite products.
+  Welcome to the SanteSuite EngNet Portal. This portal is designed to capture
+  documentation for developers, systems engineers, and operational technologists
+  who use SanteSuite products.
 ---
 
-# SanteSuite Developer's Portal
+# SanteSuite EngNet Portal
 
