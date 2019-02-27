@@ -14,6 +14,8 @@
   * [Business Rules](santedb/applets/business-rules.md)
   * [AngularJS](santedb/applets/angularjs.md)
   * [Packaging Applets](santedb/applets/packaging-applets.md)
+* [Database & Data Management](santedb/data/README.md)
+  * [Datasets](santedb/data/datasets.md)
 * [Tool References](santedb/tool-references/README.md)
   * [Applet Debugger](santedb/tool-references/applet-debugger.md)
 * [Knowledgebase](santedb/sdb-kb.md)
