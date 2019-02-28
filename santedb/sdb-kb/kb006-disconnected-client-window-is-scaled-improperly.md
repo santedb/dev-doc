@@ -16,8 +16,8 @@
 
 **Solution:**
 
-* Right click on the disconnected client icon in your start menu and select **Open File Location** ![](../.gitbook/assets/kb006-startcommand.png)
-* Right click on the OpenIZ Disconnected Client icon in the explorer window that appears![](../.gitbook/assets/kb006-explorer-rc.png)
-* In the properties dialog, select **Compatibility** and then **Disable display scaling on high DPI settings**![](../.gitbook/assets/kb006-disable-scaling.png)
+* Right click on the disconnected client icon in your start menu and select **Open File Location** ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb006-startcommand.png)
+* Right click on the OpenIZ Disconnected Client icon in the explorer window that appears![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb006-explorer-rc.png)
+* In the properties dialog, select **Compatibility** and then **Disable display scaling on high DPI settings**![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb006-disable-scaling.png)
 * Close the disconnected client and open it again
 

@@ -7,7 +7,7 @@
 * Atlassian JIRA - A web-based bug tracking and ticketing system
 * E-Mail - Which e-mails diagnostic reports via SMTP.
 
-**Applies To:** 
+**Applies To:**
 
 * OpenIZ Immunization Management Server 
 
@@ -34,13 +34,11 @@ If you wish to setup the Atlassian JIRA target:
    3. username = The user under which new tickets should be created
    4. password = The password for the user
 
-4. Add the JIRA service to the **&lt;serviceProviders&gt;** section of the configuration file  
+4. Add the JIRA service to the **&lt;serviceProviders&gt;** section of the configuration file
 
    `<add type="OpenIZ.Persistence.Diagnostics.Jira.DiagnosticReportPersistenceService, OpenIZ.Persistence.Diagnostics.Jira, Version=0.6.0.0"/>`
 
-5. Restart the OpenIZ host process: 
-   1. **net stop openiz**
-   2. **net start openiz**
+5. Restart the OpenIZ host process: 1. **net stop openiz** 2. **net start openiz**
 
 If you wish to setup the e-mail target:
 
@@ -68,11 +66,9 @@ If you wish to setup the e-mail target:
    5. from = The address which appears in the FROM: header
    6. recipient/add = Adds a recipient to which diagnostic reports should be sent.
 
-4. Add the EMAIL service to the **&lt;serviceProviders&gt;** section of the configuration file  
+4. Add the EMAIL service to the **&lt;serviceProviders&gt;** section of the configuration file
 
    `<add type="OpenIZ.Persistence.Diagnostics.Email.DiagnosticReportPersistenceService, OpenIZ.Persistence.Diagnostics.Email, Version=0.6.0.0" />`
 
-5. Restart the OpenIZ host process: 
-   1. **net stop openiz**
-   2. **net start openiz**
+5. Restart the OpenIZ host process: 1. **net stop openiz** 2. **net start openiz**
 

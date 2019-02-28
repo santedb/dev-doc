@@ -1,8 +1,8 @@
-# HS005 - Installing the OpenIZ Disconnected Server
+# HS005 - Installing the SanteDB Disconnected Server
 
-**Purpose:**  You wish to run an area hospital, or group of computers with a Local Area Network in disconnected mode. In this scenario, all the machines within the hospital are connected 24/7 via LAN however internet connectivity is limited.
+**Purpose:** You wish to run an area hospital, or group of computers with a Local Area Network in disconnected mode. In this scenario, all the machines within the hospital are connected 24/7 via LAN however internet connectivity is limited.
 
-**Introduction:**  In some cases, there may be scenarios where deployments that wish to run OpenIZ in an environment whereby several machines connect to the central IMS, however those machines are not always connected to the internet \(though are connected to each other via LAN\). This can be common for large clinics, hospitals, or rural service centres.
+**Introduction:** In some cases, there may be scenarios where deployments that wish to run OpenIZ in an environment whereby several machines connect to the central IMS, however those machines are not always connected to the internet \(though are connected to each other via LAN\). This can be common for large clinics, hospitals, or rural service centres.
 
 Such a deployment leverages the OpenIZ Disconnected Server.
 

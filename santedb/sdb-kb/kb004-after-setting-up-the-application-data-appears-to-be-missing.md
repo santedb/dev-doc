@@ -8,7 +8,7 @@
 * OpenIZ Disconnected Client for Windows
 * OpenIZ Disconnected Client for Linux
 
-**Symptoms:** 
+**Symptoms:**
 
 * After a fresh application install, labels on the user interface are blank
 * The system prevents you from logging in with "The security settings of this tablet do not allow..."

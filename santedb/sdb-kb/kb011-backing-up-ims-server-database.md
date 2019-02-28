@@ -1,4 +1,4 @@
-# HS001 - Backing up IMS server database
+# HS001 - Backing up HDSI server database
 
 **Purpose:** You wish to perform a complete backup of the OpenIZ primary data store, or a data store which OpenIZ uses.
 

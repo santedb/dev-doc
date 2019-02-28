@@ -1,6 +1,6 @@
 # Clinical Decision-Support
 
-##  Introduction
+## Introduction
 
 This tutorial is intended to assist developers in getting started with the SanteDB Protocol Definition XML format, the format in which SanteDB clinical protocol rules are expressed.
 
@@ -70,7 +70,7 @@ We now can create the start of our XML protocol:
 ```markup
 <?xml version="1.0" encoding="utf-8" ?>
 <ProtocolDefinition xmlns="http://santedb.org/cdss">
-  
+
 </ProtocolDefinition>
 ```
 
@@ -78,10 +78,10 @@ We now can create the start of our XML protocol:
 
 Whenever SanteDB creates an Act based on the suggestion of a clinical protocol, or whenever it is installing your applet, it needs to assign a unique identifier to the protocol for linking. The four attributes that control this behavior are:
 
-*  **id** - The developer friendly name for the protocol like MyProtocol1
-*  **name** - The human friendly name for the protocol like HepA+HepB Dualvalent
-*  **uuid** - The universally unique name for the protocol \(a UUID\)
-*  **version** - The version of the protocol represented in the file.
+* **id** - The developer friendly name for the protocol like MyProtocol1
+* **name** - The human friendly name for the protocol like HepA+HepB Dualvalent
+* **uuid** - The universally unique name for the protocol \(a UUID\)
+* **version** - The version of the protocol represented in the file.
 
 After adding these your protocol should look like this:
 
@@ -99,8 +99,8 @@ After adding these your protocol should look like this:
 
 Next, we have to determine who we even want to apply this protocol to. The entry criteria could be:
 
-*  **Mandatory** - In which case we want to define the entry criteria for populations which must have the schedule applied \(for example: All FEMALES must have HPV\)
-*  **Optional** - In which case subsequent doses are based off the first.
+* **Mandatory** - In which case we want to define the entry criteria for populations which must have the schedule applied \(for example: All FEMALES must have HPV\)
+* **Optional** - In which case subsequent doses are based off the first.
 
 For our example, we're going to say that this HepA+HepB vaccination is optional. This means that we only want to schedule Dose \#2 and Dose \#3 if Dose \#1 was given.
 
@@ -109,7 +109,7 @@ For our example, we're going to say that this HepA+HepB vaccination is optional.
 To do this we create a `<when>` tag on our protocol. The WHEN tag can use HDSI expressions or simple LINQ expressions. Our entry criteria is:
 
 * When the patient was involved in a SubstanceAdministration where the product given was this particular type of vaccine
-  *  **note**: You can also base your condition on Consumable rather than Product if you care which brand the previous vaccination was
+  * **note**: You can also base your condition on Consumable rather than Product if you care which brand the previous vaccination was
 * When the dose sequence of that administration was 1.
 
 ```markup
@@ -217,9 +217,9 @@ The 'then' logic on a rule indicates what should happen if the "when"condition w
 
 This will setup the static object, now we want to have some logic that will update the start/stop time of the dose based on our previous expression. To do this we use `<assign>`. Be default the current scope of Assign is the same as the when condition \(the patient\) but we need to change this since we'll be setting properties based on dose 1. To do that we need to set the three properties of assign:
 
-*  **propertyName** Which identifies the property in the proposed object we want to change
-*  **scope** Which identifies the scope property we want to use
-*  **where** Which allows us to filter to a particular object in the scope array
+* **propertyName** Which identifies the property in the proposed object we want to change
+* **scope** Which identifies the scope property we want to use
+* **where** Which allows us to filter to a particular object in the scope array
 
 ```markup
         </jsonModel>

@@ -7,7 +7,7 @@
 * OpenIZ Disconnected Client for Windows
 * OpenIZ Disconnected Client for Linux
 
-**Solutions:** 
+**Solutions:**
 
 There are three ways to wipe the configuration of the OpenIZ disconnected client.
 
@@ -17,15 +17,14 @@ There are three ways to wipe the configuration of the OpenIZ disconnected client
    3. Navigate to **Open Immunize**
    4. Click "**Reset OpenIZ Disconnected Client"**
    5. Press "**Yes**" when prompted
-2. In a command window
-   1. Open a command prompt window
-   2. On Linux type the command : ****
+2. In a command window 1. Open a command prompt window 2. On Linux type the command : _\*\*_
 
-      **~/usr/share/openiz/dc/bin/gtkclient --reset**
+   **~/usr/share/openiz/dc/bin/gtkclient --reset**
 
-   3. On Windows type the command: 
+   1. On Windows type the command:
 
       **"C:\Program Files \(x86\)\Mohawk College\OpenIZ\Disconnected Client\DisconnectedClient.exe --reset"**
+
 3. By deleting the application's configuration directory
    1. Close all running instances of the OpenIZ Disconnected Client
    2. Open **Windows File Explorer**
@@ -33,5 +32,5 @@ There are three ways to wipe the configuration of the OpenIZ disconnected client
    4. Delete the folder **OpenIZDC**
    5. Navigate to %localappdata%
    6. Delete the folder **OpenIZDC**
-   7. ![](../.gitbook/assets/kb003-delete.png) 
+   7. ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb003-delete.png) 
 

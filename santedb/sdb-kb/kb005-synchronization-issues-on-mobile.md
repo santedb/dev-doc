@@ -2,7 +2,7 @@
 
 **Issue:** During the course of using the disconnected client, you notice that patients re-appear on the encounter queue or that data is not being synchronized between tablets.
 
-**Applies To:** 
+**Applies To:**
 
 * OpenIZ Disconnected Client Android Application
 * OpenIZ Disconnected Client for Windows
@@ -14,7 +14,7 @@
 * Vaccination appointments fail to appear on other tablets
 * There are different numbers being reported in the same facility between devices
 * Patients on the encounter queue disappear and/or reappear, and/or are not shown the same on more than one device
-* There is an exclamation mark beside the ![](../.gitbook/assets/common-syncicon.png)icon
+* There is an exclamation mark beside the ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/common-syncicon.png)icon
 
 **Cause:** The most likely cause of any of these issues is a synchronization issue. OpenIZ disconnected client will attempt to push your changes to the server in the background during the course of your workflow. Sometimes the server will reject these changes, some of these reasons include:
 
@@ -28,10 +28,10 @@ When this occurs, the tablet will place the outbound message in the deadletter q
 **Solutions:**
 
 * **Important:** Do no re-perform the action! This may cause further synchronization issues
-* Check the sync centre to see if you have any conflicted messages![](../.gitbook/assets/kb005-syncentreconfirm.png)
+* Check the sync centre to see if you have any conflicted messages![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb005-syncentreconfirm.png)
 * If you have a conflict you can attempt to simply resubmit them by pressing **Retry Conflicted**. 
-* If the message is still rejected you can click on the **Inspect Contents** option![](../.gitbook/assets/kb005-inspect-contents.png)
-* You can press the **Resolve** button to see what the conflict is![](../.gitbook/assets/kb005-resolve-issue.png)
+* If the message is still rejected you can click on the **Inspect Contents** option![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb005-inspect-contents.png)
+* You can press the **Resolve** button to see what the conflict is![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb005-resolve-issue.png)
 * There are several types of errors that may occur here:
   * 500 = Server Error - The server couldn't process your message at all, it is invalid and cannot be processed until the server receives an update or data is resubmitted to correct any foreign key constraints \(see below\).
   * 422 = Business Rule Violated - There was a business rule violated on the server side, you will need to correct the conditions that caused the rule to be violated before sync can happen \(negative stock is a common cause of this\)
@@ -46,7 +46,7 @@ If you notice that a 500 error is being returned by the server, and the server i
 * Select the **Environment** tab and locate the **Re-Submit To Server** section
 * Select the date range of data you wish to re-submit, and press the **Confirm** button
 
-  ![](../.gitbook/assets/kb005-resubmit.png)
+  ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb005-resubmit.png)
 
   * Depending on your deployment, you may be required to supply an administrative password to perform the action requested.
   * The re-synchronization process may take upwards of 20-30 minutes as the tablet verifies its data integrity with the server. 

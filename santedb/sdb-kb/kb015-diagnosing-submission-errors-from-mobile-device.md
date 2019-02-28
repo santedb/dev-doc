@@ -13,7 +13,7 @@
 
 * When using the disconnected client application you notice a synchronization conflicts. The synchronization conflict mentions error 422 - Unprocessable Entity
 
-  ![](../.gitbook/assets/kb014-sync-error.png)
+  ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb014-sync-error.png)
 
 * When contacting the HTTP service directly the service responds with HTTP code 422 and an &lt;ErrorResult&gt; message.
 
@@ -25,7 +25,7 @@
 2. Change to `C:\Program Files (x86)\Mohawk College\OpenIZ`, or installation directory where OpenIZ server tools are installed.
 3. Run the OpenIZ Administration Console `oizac` as follows:
 
-    `oizac -r <<server address>>`
+   `oizac -r <<server address>>`
 
    * If you are using a different port specify it with --port=
    * If you are using TLS indicate it with --tls
@@ -45,7 +45,7 @@
    ```
 
 5. Get a list of all logs from the server by running `loglist`
-6. Note the date of the log that you wish to view and use the logcat command to search the log for the error. 
+6. Note the date of the log that you wish to view and use the logcat command to search the log for the error.
    * _**Note:**_ You will want the error to be in interpreted format so we get the message that caused the error.
 
      ```text

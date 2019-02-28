@@ -109,16 +109,16 @@ The properties are described in more detail below:
     <tr>
       <td style="text-align:left">i18n-prefix</td>
       <td style="text-align:left">The localization prefix to be used when rendering buttons, column titles,
-        etc. If you have a prefix of "org.myapp" then a column "userName" would
-        be rendered with "org.myapp.userName"</td>
+        etc. If you have a prefix of &quot;org.myapp&quot; then a column &quot;userName&quot;
+        would be rendered with &quot;org.myapp.userName&quot;</td>
     </tr>
     <tr>
       <td style="text-align:left">render</td>
       <td style="text-align:left">
         <p>Provides a series of rendering functions for the named columns. For example,
-          to render "userName" using a function "renderUserName" the following value
-          would be used:</p>
-        <p>{ userName: 'renderUserName' }</p>
+          to render &quot;userName&quot; using a function &quot;renderUserName&quot;
+          the following value would be used:</p>
+        <p>{ userName: &apos;renderUserName&apos; }</p>
       </td>
     </tr>
     <tr>

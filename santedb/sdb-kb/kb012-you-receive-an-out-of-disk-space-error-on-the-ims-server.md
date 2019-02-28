@@ -14,7 +14,7 @@
 
 **Cause:** The cause of this issue is that the OpenIZ host server or server which you're attempting to connect to has run out of disk space.
 
-**Solutions:** 
+**Solutions:**
 
 1. You can prune the OpenIZ log files located in C:\Program Files \(x86\)\Mohawk College\OpenIZ and named in a format similar to openiz\_20170901.log.
    1. You can delete historical log files per your retention policy

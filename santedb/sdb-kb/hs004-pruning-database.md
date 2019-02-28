@@ -21,7 +21,7 @@
    * If you notice that last\_vacuum has not occurred in a long time run **VACUUM FULL** command
    * If you notice that last\_autovacuum has not occurred in a long time, ensure that your configuration is correct and auto-vacuum is setup by running **SHOW ALL**
 
-3. Get the size of the database per patient: 
+3. Get the size of the database per patient:
 
    ```text
     select pg_size_pretty(pg_database_size(current_database()) / (select count(*) from pat_tbl));
@@ -29,7 +29,7 @@
 
    * If the database size seems large for your patient population \(about 50 kb per patient\) you may want to reduce size by squashing the database. \(**NOTE:** Only base your decision on the size reported after running **VACUUM FULL**\)
    * **SQUASHING:** - Just as in GIT the act of squashing the database results in removing all the version history for patients and acts such that only the current version is kept. To squash the database:
-   * **!!WARNING!!**: Ensure that you take a backup of your database before squashing it.      
+   * **!!WARNING!!**: Ensure that you take a backup of your database before squashing it.
 
      ```text
       BEGIN TRANSACTION;

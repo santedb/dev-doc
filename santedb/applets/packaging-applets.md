@@ -58,8 +58,7 @@ To create a production \(optimized\) applet:
     sdb-pakr --source=C:\myapp --output=myapp.pak --optimize --keyFile=C:\keys\mykey.pfx --embedCert
    ```
 
-3. When prompted enter the private key password for your PFX file
-   1. Alternately you can save the password in a file and use --keyPassword parameter \(make sure the key password file and PFX file are kept out of source control\)
+3. When prompted enter the private key password for your PFX file 1. Alternately you can save the password in a file and use --keyPassword parameter \(make sure the key password file and PFX file are kept out of source control\)
 4. Upload myapp.pak to your SanteDB HDS server
 5. Join your SanteDB HDS server with the disconnected client
    1. Your IMS server may not start or may refuse to applets signed from third party keys. If this is the case add the thumbprint of your signing key to &lt;trustedPublishers&gt;

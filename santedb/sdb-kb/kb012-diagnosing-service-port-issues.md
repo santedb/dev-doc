@@ -33,7 +33,7 @@ If you encounter the issue regarding conflicting port numbers, try changing the 
    </service>
    ```
 
-3. Restart the OpenIZ host process with 
+3. Restart the OpenIZ host process with
    * **net stop openiz**
    * **net start openiz**
 
@@ -70,7 +70,7 @@ If the OpenIZ host process starts successfully, however you cannot access the se
    netsh http add sslcert ipport=0.0.0.0:8443 certhash=certificate_thumbprint appid={uuid}
    ```
 
-7. Restart the OpenIZ host process with 
+7. Restart the OpenIZ host process with
    * **net stop openiz**
    * **net start openiz**
 
