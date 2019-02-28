@@ -11,7 +11,7 @@
 
 * The application displays a window on your screen during the splash page
 
-![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb002-errordialog.png)
+![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb002-errordialog.png)
 
 **Cause:** The Disconnected Client is really a miniature copy of the full OpenIZ IMS, as such it needs to open a port on your computer so that the front-end user interface can communicate with the back-end application. When more than one instance of the application is running, the second instance cannot open the port and thus the application launch fails.
 

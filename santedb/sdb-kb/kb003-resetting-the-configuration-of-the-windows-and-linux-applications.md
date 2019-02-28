@@ -32,5 +32,5 @@ There are three ways to wipe the configuration of the OpenIZ disconnected client
    4. Delete the folder **OpenIZDC**
    5. Navigate to %localappdata%
    6. Delete the folder **OpenIZDC**
-   7. ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb003-delete.png) 
+   7. ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb003-delete.png) 
 

@@ -21,7 +21,7 @@ _On the source server \(the server you're copying from\):_
    * **net stop "OpenIZ Host Process"**
 2. Backup the database by following the instructions listed in [HS001 - Backing up IMS server database](https://github.com/mohawkmedic/openiz-knowledge-base/tree/ebda3706cc82d21b6c3de8bb26b1dee9f2f3c392/kb011-backing-up-ims-server-database.html)
 3. Navigate to **C:\Program Files \(x86\)\Mohawk College\OpenIZ**
-4. Compress the folder by right clicking and selecting **Send To** &gt; **Compressed Folder** ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/hs003-compress.png)
+4. Compress the folder by right clicking and selecting **Send To** &gt; **Compressed Folder** ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/hs003-compress.png)
 5. This will create an **OpenIZ.zip** file in the **Mohawk College** folder _\(you may be asked to place the file on the desktop instead\)_   _\*\*_
 
 _On the destination server \(the server you're copying to\):_

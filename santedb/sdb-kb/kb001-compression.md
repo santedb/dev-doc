@@ -30,5 +30,5 @@
   * Fast/Low - Uses the deflate compression algorithm. This algorithm uses very little CPU on the server and tablet \(so is faster\) but has poorer compression quality than GZIP.
   * Off - Does not optimize traffic. This is intended for debugging only or when using a proxy which requires inspecting contents.
 
-![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb001-settings.png)
+![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb001-settings.png)
 

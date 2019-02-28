@@ -20,13 +20,13 @@
 
 1. From any page in the OpenIZ mobile application select the Debug -&gt; Debug Information
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb010-001.png)
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb010-001.png)
 
-2. Select the Environment tab ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb010-002.png)
-3. In the **Datafile Information** section press "Backup Data" ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb010-003.png)
+2. Select the Environment tab ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb010-002.png)
+3. In the **Datafile Information** section press "Backup Data" ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb010-003.png)
 4. Depending on your organization's policy, you may be prompted to enter an appropriate username and password.
-5. When prompted select **OK** to the warning dialog box presented to you. ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb010-004.png)
+5. When prompted select **OK** to the warning dialog box presented to you. ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb010-004.png)
 6. The backup process will begin, depending on the size of your data files this can take anywhere from 5 - 30 minutes.
-7. When prompted restart the application ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb010-005.png) \_**Android 7 Users:** \_Some Samsung versions of Android 7 won't restart the application after pressing OK, this is normal. Simply restart the application manually by closing and restarting the application.
-8. The backup file is located on the tablet's Documents folder. ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb010-006.png)
+7. When prompted restart the application ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb010-005.png) \_**Android 7 Users:** \_Some Samsung versions of Android 7 won't restart the application after pressing OK, this is normal. Simply restart the application manually by closing and restarting the application.
+8. The backup file is located on the tablet's Documents folder. ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb010-006.png)
 

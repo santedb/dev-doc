@@ -19,25 +19,25 @@
    1. Launch a new Microsoft Management Console by pressing **Windows + R** and typing **mmc**  
    2. Select **File &gt; Add / Remove Snap-In**
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-snapin.png) 3. Select the **Certificates** snap-in
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-snapin.png) 3. Select the **Certificates** snap-in
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-certificatesnap.png) 4. Select **Computer Account** and press **Next**
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-certificatesnap.png) 4. Select **Computer Account** and press **Next**
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-computeraccount.png) 5. Select **Local Computer** and \*\*Finish
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-computeraccount.png) 5. Select **Local Computer** and \*\*Finish
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-finishwizard.png) 6. Expand the **Certificates &gt; Personal &gt; Certificates** tree and verify that the certificate is installed on the local machine. The certificate is installed with a private key if it appears in the list with a key icon.
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-finishwizard.png) 6. Expand the **Certificates &gt; Personal &gt; Certificates** tree and verify that the certificate is installed on the local machine. The certificate is installed with a private key if it appears in the list with a key icon.
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-verifyinstalledwithkey.png)
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-verifyinstalledwithkey.png)
 
 2. If the certificate is not installed, you can import it. 1. Ensure that you acquire a PFX file from your certification authority. 2. Right click on the **Personal** folder in the administration console and select **All Tasks &gt; Import**
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-importmenu.png) 3. Select the PFX file that was provided by your certificate authority and enter the password, completing the import process.
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-importmenu.png) 3. Select the PFX file that was provided by your certificate authority and enter the password, completing the import process.
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-certificatepassword.png)
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-certificatepassword.png)
 
 3. Register the certificate in the configuration file 1. In the MMC panel \(if you have not opened it see above\) locate the certificate you want to secure your service with. Double click on the certificate and select the details tab. Locate the **serial number** attribute and copy the value.
 
-   ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb013-copyserialnumber.png) 2. Open **C:\Program Files \(x86\)\Mohawk College\OpenIZ\openiz.exe.config** in a text editor 3. Locate the **&lt;system.serviceModel&gt;** section and find the **&lt;service&gt;** to which you want to apply the certificate. Change the **baseAddress** and **address** attributes' scheme to HTTPS and change the port to 8443 \(or other port that is open\). Take note of the **behaviorConfiguration** attribute:
+   ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb013-copyserialnumber.png) 2. Open **C:\Program Files \(x86\)\Mohawk College\OpenIZ\openiz.exe.config** in a text editor 3. Locate the **&lt;system.serviceModel&gt;** section and find the **&lt;service&gt;** to which you want to apply the certificate. Change the **baseAddress** and **address** attributes' scheme to HTTPS and change the port to 8443 \(or other port that is open\). Take note of the **behaviorConfiguration** attribute:
 
    ```text
       <service name="RISI" behaviorConfiguration="risi_behavior">

@@ -13,7 +13,7 @@
 
 * When using the disconnected client application you notice a synchronization conflicts. The synchronization conflict mentions error 422 - Unprocessable Entity
 
-  ![](https://github.com/santedb/dev-doc/tree/9b45e644816a9036372ab34507ea733c8b7af72b/santedb/sdb-kb/.gitbook/assets/kb014-sync-error.png)
+  ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb014-sync-error.png)
 
 * When contacting the HTTP service directly the service responds with HTTP code 422 and an &lt;ErrorResult&gt; message.
 
