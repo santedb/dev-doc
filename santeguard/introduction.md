@@ -4,5 +4,5 @@ description: >-
   with SanteDB products and as well as any product using OAUTH and IHE ATNA.
 ---
 
-# SanteGuard Development
+# About SanteGuard
 

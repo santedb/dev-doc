@@ -210,7 +210,7 @@ The provenance filter is used to render the provenance data related to the objec
 
 The output of this is a control which allows examination of the event including user, application, device, timestamp and session id.
 
-![Rendering of the Provenance Filter](../../.gitbook/assets/image.png)
+![Rendering of the Provenance Filter](../../.gitbook/assets/image%20%283%29.png)
 
 ### Extended Date \(ext-date\)
 

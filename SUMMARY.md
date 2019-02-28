@@ -4,8 +4,13 @@
 
 ## SanteDB
 
-* [SanteDB Development](santedb/santedb.md)
+* [About SanteDB](santedb/santedb.md)
 * [SanteDB History](santedb/santedb-history.md)
+* [Installation](santedb/installation/README.md)
+  * [SanteDB Server](santedb/installation/santedb-server/README.md)
+    * [Planning & Preparation Work](santedb/installation/santedb-server/planning-and-preparation-work.md)
+    * [Configuration](santedb/installation/santedb-server/configuration.md)
+  * [SanteDB Disconnected Services](santedb/installation/santedb-disconnected-services.md)
 * [Applets](santedb/applets/README.md)
   * [Applet Structure](santedb/applets/applet-structure.md)
   * [HTML Assets](santedb/applets/html-assets.md)
@@ -50,5 +55,5 @@
 
 ## SanteGuard
 
-* [SanteGuard Development](santeguard/introduction.md)
+* [About SanteGuard](santeguard/introduction.md)
 

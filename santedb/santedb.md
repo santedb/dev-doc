@@ -4,5 +4,5 @@ description: >-
   related technologies.
 ---
 
-# SanteDB Development
+# About SanteDB
 
