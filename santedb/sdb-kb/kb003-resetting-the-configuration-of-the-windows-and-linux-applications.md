@@ -25,12 +25,5 @@ There are three ways to wipe the configuration of the OpenIZ disconnected client
 
       **"C:\Program Files \(x86\)\Mohawk College\OpenIZ\Disconnected Client\DisconnectedClient.exe --reset"**
 
-3. By deleting the application's configuration directory
-   1. Close all running instances of the OpenIZ Disconnected Client
-   2. Open **Windows File Explorer**
-   3. Navigate to %appdata%
-   4. Delete the folder **OpenIZDC**
-   5. Navigate to %localappdata%
-   6. Delete the folder **OpenIZDC**
-   7. ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb003-delete.png) 
+3. By deleting the application's configuration directory 1. Close all running instances of the OpenIZ Disconnected Client 2. Open **Windows File Explorer** 3. Navigate to %appdata% 4. Delete the folder **OpenIZDC** 5. Navigate to %localappdata% 6. Delete the folder **OpenIZDC** 7. ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb003-delete.png)
 
