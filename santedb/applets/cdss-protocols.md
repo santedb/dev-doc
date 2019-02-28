@@ -235,7 +235,7 @@ This will setup the static object, now we want to have some logic that will upda
 The SanteDB SDK provides a utility for testing your clinical protocols before deploying in production. In order to run the debugging tool, you will need a copy of Minims \(also in the SDK\) database. This allows you to debug your protocols against configured data sources. You can obtain these files by:
 
 * Creating a backup from the SanteDB Disconnected Client mobile application
-* Pointing the database at a configured Minims database \(`--db=%localappdata%\minims\openiz.sqlite`\). Note this is the default operating mode when launching the application from the start menu.
+* Pointing the database at a configured Minims database \(`--db=%localappdata%\sdbare\santedb.sqlite`\). Note this is the default operating mode when launching the application from the start menu.
 * Creating a new database and using anonymous patients \(only recommended for simple protocols\)
 
 This tooling is provided by the SanteDB Debug \(sdb-dbg\) and can be executed by running:
@@ -245,7 +245,7 @@ This tooling is provided by the SanteDB Debug \(sdb-dbg\) and can be executed by
 
 SanteDB Debugger v1.0.0.20334 (Fredericton)
 Copyright (C) 2015-2019 Mohawk College of Applied Arts and Technology
-[Warning 2018/01/28 11:41:03] OizDebug.Core.DebugApplicationContext : Can't find the OpenIZ database, will re-install all migrations
+[Warning 2018/01/28 11:41:03] OizDebug.Core.DebugApplicationContext : Can't find the SanteDB database, will re-install all migrations
 Loading debuggees...
 Working Directory: C:\Users\justin\Documents
 Ready...
@@ -332,7 +332,7 @@ dbg >dj
   },
   "act": [
     {
-      "$type": "OpenIZ.Core.Model.Acts.SubstanceAdministration, OpenIZ.Core.Model",
+      "$type": "SanteDB.Core.Model.Acts.SubstanceAdministration, SanteDB.Core.Model",
       "route": "d594f99f-0151-41a0-a359-282ab54683a1",
 ```
 

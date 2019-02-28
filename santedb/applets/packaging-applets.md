@@ -18,7 +18,7 @@ The following parameters are supported by the applet compiler:
 | source | The source files / directory to include in the applet | --source=c:\myapplet |
 | output | The destination PAK file that should be created | --output=myapplet.pak |
 | help | Display application help and exit |  |
-| include | Includes / references files from another applet pak file | --include=org.openiz.core.pak |
+| include | Includes / references files from another applet pak file | --include=org.santedb.core.pak |
 | optimize | When provided, instructs the applet compiler to minify javascript and css files |  |
 | keyFile | Specifies the location of your signing key \(in PFX format\) | --keyFile=mykey.pfx |
 | keyPassword | Specifies a file where the password to unlock your private key can be found | --keyPassword=mykey.password |
@@ -41,9 +41,9 @@ To create an unsigned applet:
     sdb-pakr --source=C:\myapp --output=myapp.pak
    ```
 
-3. Upload myapp.pak to your OpenIZ IMS server
-4. Join your OpenIZ IMS server with the disconnected client
-   1. Your IMS server may not start or may refuse to load unsigned applets. If this is the case either configure your IMS server to allow unsigned applets or sign your applet 
+3. Upload myapp.pak to your SanteDB HDS server
+4. Join your SanteDB HDS server with the disconnected client
+   1. Your HDS server may not start or may refuse to load unsigned applets. If this is the case either configure your IMS server to allow unsigned applets or sign your applet 
    2. Notice that your disconnected client will warn you that the package is not signed
    3. Note that contents of the file can be accessed by using `sdb-dcc --debug` , no minifcation has occurred.
 
@@ -60,8 +60,8 @@ To create a production \(optimized\) applet:
 
 3. When prompted enter the private key password for your PFX file
    1. Alternately you can save the password in a file and use --keyPassword parameter \(make sure the key password file and PFX file are kept out of source control\)
-4. Upload myapp.pak to your OpenIZ IMS server
-5. Join your OpenIZ IMS server with the disconnected client
+4. Upload myapp.pak to your SanteDB HDS server
+5. Join your SanteDB HDS server with the disconnected client
    1. Your IMS server may not start or may refuse to applets signed from third party keys. If this is the case add the thumbprint of your signing key to &lt;trustedPublishers&gt;
    2. The disconnected client may warn that the application is from an unknown publisher
    3. Note that contents of the controller files are minified, so running `sdb-dcc --debug` will require un-minification tools to debug.
