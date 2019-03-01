@@ -49,7 +49,9 @@ Once you have pressed OK, you will be shown the status of configuration:
 
 After the initial configuration screen has completed, you will be prompted to confirm a series of tasks which will import the default data sets into SanteDB. 
 
-**Note:** On FirebirdSQL you may receive "Connection Shutdown", this is an internal FirebirdSQL server fault and we are actively working to fix it. Until then, you can simply restart the configuration program and the import will continue.
+{% hint style="info" %}
+On FirebirdSQL you may receive "Connection Shutdown", this is an internal FirebirdSQL server fault and we are actively working to fix it. Until then, you can simply restart the configuration program and the import will continue.
+{% endhint %}
 
 ![Figure 6 - Secondary Configuration Tasks](../../../.gitbook/assets/image%20%2823%29.png)
 

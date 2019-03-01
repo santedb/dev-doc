@@ -85,6 +85,10 @@ This registers a new state with name "example" at the URL /example into the ng-r
 
 The sdb:title element is used by the breadcrumb plugin to render the path to the specified page, as well as to change the title of the browser window \(if applicable\).
 
+{% hint style="info" %}
+HTML asset states which need to be abstract can be created by adding the **abstract** attribute to the **sdb:state** element.
+{% endhint %}
+
 Furthermore, we can demand a specific permission be present for the current user in order to allow navigation:
 
 ```markup
