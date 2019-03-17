@@ -55,6 +55,7 @@
   * [Update 2017-09-13](santedb/fixpatch/20170913-01.md)
   * [Update 2017-10-03](santedb/fixpatch/20171003-01.md)
   * [Update 2017-10-11](santedb/fixpatch/20171011-01.md)
+* [Service APIs](santedb/service-apis.md)
 
 ## SanteGuard
 
