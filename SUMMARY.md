@@ -35,6 +35,12 @@
 
 * [About SanteGuard](santeguard/introduction.md)
 
+## OpenIZ
+
+* [About OpenIZ](openiz/about-openiz.md)
+* [FAQ](openiz/faq.md)
+* [Demonstration Servers](openiz/demonstration-servers.md)
+
 ## Knowledgebase
 
 * [Knowledgebase](knowledgebase/sdb-kb/README.md)
