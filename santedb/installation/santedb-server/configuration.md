@@ -43,7 +43,7 @@ When you press **Continue** on the initial configuration page, you will be prese
 
 Once you have pressed OK, you will be shown the status of configuration: 
 
-![Figure 5 - Configuration Worker](../../../.gitbook/assets/image%20%2818%29.png)
+![Figure 5 - Configuration Worker](../../../.gitbook/assets/image%20%2819%29.png)
 
 #### Importing Default Datasets
 
@@ -53,7 +53,7 @@ After the initial configuration screen has completed, you will be prompted to co
 On FirebirdSQL you may receive "Connection Shutdown", this is an internal FirebirdSQL server fault and we are actively working to fix it. Until then, you can simply restart the configuration program and the import will continue.
 {% endhint %}
 
-![Figure 6 - Secondary Configuration Tasks](../../../.gitbook/assets/image%20%2823%29.png)
+![Figure 6 - Secondary Configuration Tasks](../../../.gitbook/assets/image%20%2825%29.png)
 
 The installation of the initial datasets for your SanteDB deployment may take some time, this is normal.
 

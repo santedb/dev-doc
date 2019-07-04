@@ -6,6 +6,7 @@
 
 * [About SanteDB](santedb/santedb.md)
 * [SanteDB History](santedb/santedb-history.md)
+* [Architecture](santedb/architecture.md)
 * [Installation](santedb/installation/README.md)
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
     * [Planning & Preparation Work](santedb/installation/santedb-server/planning-and-preparation-work.md)
@@ -19,7 +20,7 @@
   * [Business Rules](santedb/applets/business-rules.md)
   * [AngularJS](santedb/applets/angularjs.md)
   * [Packaging Applets](santedb/applets/packaging-applets.md)
-* [Server Plugins](santedb/server-plugins/README.md)
+* [.NET Plugins](santedb/server-plugins/README.md)
   * [Authoring Plugins](santedb/server-plugins/authoring-plugins/README.md)
     * [Unit Testing Framework](santedb/server-plugins/authoring-plugins/unit-testing-framework.md)
 * [Database & Data Management](santedb/data/README.md)

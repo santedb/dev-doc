@@ -4,5 +4,5 @@ description: >-
   plugins.
 ---
 
-# Server Plugins
+# .NET Plugins
 

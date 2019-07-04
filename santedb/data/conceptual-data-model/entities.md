@@ -2,7 +2,7 @@
 
 An entity within the SanteDB data model is used to represent a person, place, or thing. Entities represent the who, which and where aspects of an action. Entities are further classified into several sub classes illustrated in Figure 1.
 
-![Figure 1 - Entity Classes](../../../.gitbook/assets/image%20%2821%29.png)
+![Figure 1 - Entity Classes](../../../.gitbook/assets/image%20%2823%29.png)
 
 ### Class Codes
 
@@ -50,7 +50,7 @@ The SanteDB model also supports more simplistic representation of a “BCG Vacci
 
 Entities also support a basic series of states which identify the current status of the entity in the SanteDB data model. Figure 7 illustrates the states of an entity and the valid transitions.
 
-![Figure 7 - Entity State Diagram](../../../.gitbook/assets/image%20%2815%29.png)
+![Figure 7 - Entity State Diagram](../../../.gitbook/assets/image%20%2816%29.png)
 
 The states of the entity are:
 

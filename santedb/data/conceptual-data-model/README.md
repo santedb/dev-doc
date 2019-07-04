@@ -19,7 +19,7 @@ Clinical data in SanteDB is represented as Entities playing Roles Participating 
 
 In this context we can represent many different clinical scenarios. In order to make conceptualizing data elements in the SanteDB persistence store easier, much data documentation leverages an information model cards as illustrated in Figure 2.
 
-![Figure 2 - Information Model Cards](../../../.gitbook/assets/image%20%2814%29.png)
+![Figure 2 - Information Model Cards](../../../.gitbook/assets/image%20%2815%29.png)
 
 ### Templates
 
