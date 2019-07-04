@@ -10,6 +10,8 @@
   * [Conceptual Data Model](santedb/architecture/conceptual-data-model/README.md)
     * [Acts](santedb/architecture/conceptual-data-model/acts.md)
     * [Entities](santedb/architecture/conceptual-data-model/entities.md)
+    * [Concept Dictionary](santedb/architecture/conceptual-data-model/concept-dictionary.md)
+    * [Security](santedb/architecture/conceptual-data-model/security.md)
 * [Installation](santedb/installation/README.md)
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
     * [Planning & Preparation Work](santedb/installation/santedb-server/planning-and-preparation-work.md)

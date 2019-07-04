@@ -2,7 +2,7 @@
 
 An entity within the SanteDB data model is used to represent a person, place, or thing. Entities represent the who, which and where aspects of an action. Entities are further classified into several sub classes illustrated in Figure 1.
 
-![Figure 1 - Entity Classes](../../../.gitbook/assets/image%20%2823%29.png)
+![Figure 1 - Entity Classes](../../../.gitbook/assets/image%20%2824%29.png)
 
 ### Class Codes
 
@@ -58,4 +58,6 @@ The states of the entity are:
 * **Active :** The entity has been persisted, any necessary review and/or processing has occurred, and the entity record is active.
 * **Nullified :** Indicates that the entity was created in error, the entity never existed.
 * **Obsolete :** Indicates that the entity did exist, however it no longer is active.
+
+### 
 

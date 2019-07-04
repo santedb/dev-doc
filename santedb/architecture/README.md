@@ -6,7 +6,7 @@ This page provides a summary of the SanteDB architecture. The "source of truth" 
 
 SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure. 
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 At a high level, the major components of the SanteDB architecture are:
 
@@ -27,14 +27,9 @@ Upon these base level components a series of products or "solutions" are package
 * SanteGuard - A general purpose Audit Repository based on the SanteDB platform
 * OpenIZ / SanteIMS - An Immunization Management System \(IMS\) 
 
-## Extension Architecture
+## .
 
-All components within the SanteDB ecosystem can be extended using the following methods:
 
-* Implementing a service contract in any .NET language
-* Writing business rules or behaviors in JavaScript
-* Writing user interfaces in XHTML5
-* Writing XML based extensions using the clinical protocol engine or reporting / BI engine.
 
 
 

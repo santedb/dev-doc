@@ -4,7 +4,7 @@ Acts in the SanteDB data model represent actions taken by entities to other enti
 
 There are five different types of acts that are supported by the default SanteDB schema \(Figure 1\).
 
-![Figure 1 - Act Classes](../../../.gitbook/assets/image%20%2822%29.png)
+![Figure 1 - Act Classes](../../../.gitbook/assets/image%20%2823%29.png)
 
 * **Patient Encounters:** Represent an act whereby a patient presents, or is intended to present for care.
 * **Observations:** Represent an act whereby an entity observes something. Observations can include codified observations such as diagnoses, textual values such as a free-text description of an event, or a quantity such as weight or heart rate.
@@ -59,12 +59,12 @@ Often time acts are related to one another via the ActRelationship entity. Act r
 2. **Scheduling a second dose of an antigen:**  
     In this use case the primary act is a PatientEncounter with mood of Intent \(i.e. I intend to have an encounter\) and date in the future. The PatientEncounter may have one or more substance administrations with mood of Intent that represent the vaccinations that are intended to be given at the appointment.  
 
-   ![](../../../.gitbook/assets/image%20%2824%29.png)
+   ![](../../../.gitbook/assets/image%20%2825%29.png)
 
 3. **Patient Presents for Appointment:**  In this use case, the patient presents for the scheduled appointment. The encounter fulfills the appointment request.    
 
 
-   ![](../../../.gitbook/assets/image%20%2820%29.png)
+   ![](../../../.gitbook/assets/image%20%2821%29.png)
 
 4. **Forecasted vaccination:**  In this use case a decision support system identifies a patient which needs to receive a vaccine. The forecasting engine may create a PatientEncounter with mood of Proposed that indicates that a computer system is proposing an action to occur. When the patient presents for their vaccination the clinician creates a new PatientEncounter with mood of Event that fulfills the PatientEncounter with mood of Proposed \(i.e. the clinician is saying “I am acting on your proposal”\).
 
