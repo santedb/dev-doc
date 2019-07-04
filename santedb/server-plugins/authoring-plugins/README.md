@@ -16,6 +16,16 @@ All SanteDB components \(the iCDR, dCDR, and UI\) all leverage common packages. 
 
 When implementing your plugin, if, for example, you target .NET Framework and use the SanteDB.Server.Plugin package, then your plugin will not work on the dCDR. Conversely if you only reference APIs in the SanteDB Core Libs package then your plugin will work on all platforms SanteDB supports.
 
+The general rule is:
+
+* If you're creating a global .NET plugin select PCL Profile7 project type
+* If you're creating a SanteDB dCDR based plugin use either PCL Profile7 or .NET Framework 4.5.2 
+* If you're creating a SanteDB iCDR based plugin use .NET Framework 4.5.2
+
+## Adding Nuget Dependencies
+
+Once you've decided where your plugin fits into the SanteDB ecosystem you'll have to add your Nuget dependencies. All SanteDB Nuget packages are registered on the central Nuget repository, the table below identifies which SanteDB Nuget packages provide which functionality.
+
 ## Services
 
 Whenever you write a plugin for SanteDB, you are actually implementing and consuming a series of service contracts. Whenever another plugin wants a particular service it will ask the host context for the currently configured service instance and call the relevant method on the contract.
@@ -29,5 +39,5 @@ var patients = repo.Find(p=>p.Identifiers.Any(i=>i.Value == "102938293"));
 
 This code instructs the service host to retrieve the currently configured patient repository \(whether it is a database, HTTP call, a link to a shared health record\) and execute the specified query.
 
-### Service 
+### 
 
