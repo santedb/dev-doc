@@ -59,5 +59,3 @@ The states of the entity are:
 * **Nullified :** Indicates that the entity was created in error, the entity never existed.
 * **Obsolete :** Indicates that the entity did exist, however it no longer is active.
 
-### 
-
