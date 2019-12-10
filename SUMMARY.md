@@ -24,6 +24,7 @@
   * [Business Rules](santedb/applets/business-rules.md)
   * [AngularJS](santedb/applets/angularjs.md)
   * [Packaging Applets](santedb/applets/packaging-applets.md)
+  * [Business Intelligence \(BI\) Assets](santedb/applets/business-intelligence-bi-assets.md)
 * [.NET Plugins](santedb/server-plugins/README.md)
   * [Authoring Plugins](santedb/server-plugins/authoring-plugins/README.md)
     * [Unit Testing Framework](santedb/server-plugins/authoring-plugins/unit-testing-framework.md)
