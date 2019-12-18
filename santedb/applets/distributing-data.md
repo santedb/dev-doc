@@ -1,4 +1,4 @@
-# Distributing Data
+# Dataset Files
 
 Sometimes your plugin/applet will need to include specialized data in order to operate. Some examples of data which a plugin might rely on are:
 

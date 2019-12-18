@@ -70,7 +70,7 @@ To create a production \(optimized\) applet:
 In order to publish your applet, you must first acquire a code signing certificate signed by the SanteDB community. If you don't have a code signing certificate your organization can obtain one following this process:
 
 1. Create a certificate signing request \(CSR\) for your organization \(if you don't want to do this the community can issue a PFX with a custom private key\).
-2. Visit the SanteSuite developer's community page and complete the **Request Community Signing Certificate** form. Include your CSR generated in step 1.  The community usually verifies:
+2. E-Mail the SanteDB developer administration at \(developers@santesuite.net\). Include your CSR generated in step 1.  The community usually verifies:
    1. Your organization has not been blacklisted previously \(for circumventing community rules\)
    2. Your organization is a recognized community partner which contributes in some manner, to the community.
    3. Your organization has a web-presence and/or contact person.
