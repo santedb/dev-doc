@@ -1,9 +1,6 @@
 ---
-description: >-
-  Welcome to the SanteSuite OpsPortal. This portal is designed to capture
-  documentation for developers, systems engineers, and operational technologists
-  who use SanteSuite products.
+description: Welcome to the SanteSuite Help Portal!
 ---
 
-# SanteSuite OpsPortal
+# SanteSuite Help Portal
 
