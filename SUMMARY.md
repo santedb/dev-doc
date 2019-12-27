@@ -15,7 +15,6 @@
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
     * [Planning & Preparation Work](santedb/installation/santedb-server/planning-and-preparation-work.md)
     * [Configuration](santedb/installation/santedb-server/configuration.md)
-  * [SanteDB Disconnected Services](santedb/installation/santedb-disconnected-services.md)
 * [Extending SanteDB](santedb/extending-santedb/README.md)
   * [Applets](santedb/extending-santedb/applets/README.md)
     * [Applet Structure](santedb/extending-santedb/applets/applet-structure.md)
@@ -43,7 +42,7 @@
       * [Views](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/views.md)
       * [Reports](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/reports.md)
     * [BI Render Controls](santedb/extending-santedb/business-intelligence-bi-assets/bi-render-controls.md)
-* [Service APIs](santedb/service-apis.md)
+  * [Service APIs](santedb/extending-santedb/service-apis.md)
 
 ## SanteGuard
 
