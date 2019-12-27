@@ -18,6 +18,8 @@
   * [SanteDB Disconnected Services](santedb/installation/santedb-disconnected-services.md)
 * [Applets](santedb/applets/README.md)
   * [Applet Structure](santedb/applets/applet-structure.md)
+  * [Localization](santedb/applets/localization.md)
+  * [Customization & Branding](santedb/applets/customization-and-branding.md)
   * [HTML Assets](santedb/applets/html-assets.md)
   * [HTML Widgets](santedb/applets/html-widgets.md)
   * [AngularJS](santedb/applets/angularjs.md)
