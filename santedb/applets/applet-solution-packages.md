@@ -41,8 +41,8 @@ In this example, only the org.santedb.sample package needs to be written, the re
 Once you are ready to distribute your applet solution you use the sdb-pakr command \(the same as used to package your applet\). 
 
 ```markup
-pakman --compile --source=.\ -o org.santedb.sample.pak --install
-pakman --compose --source=santedb.sample.sln.xml -o santedb.sample.sln.pak
+sdb-pakr --compile --source=.\ -o org.santedb.sample.pak
+sdb-pakr --compose --source=santedb.sample.sln.xml -o santedb.sample.sln.pak
 ```
 
 The generated pak file contains static copies of the referenced pak files as well as a package manifest.
