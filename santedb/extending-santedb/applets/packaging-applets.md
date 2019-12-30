@@ -6,19 +6,16 @@ The applet compiler will also optionally sign the package using your signing key
 
 ## Command Line Options
 
-**Tool:** sdb-pakr.exe
+**Tool:** pakman.exe
 
 The following parameters are supported by the applet compiler:
 
 | Option | Description | Example |
 | :--- | :--- | :--- |
-| deploy | Deploys the rendered applet files to an HTTP server location | --deploy=/srv/www/htdocs |
-| lang | The language to pre-render deployed output files in | --lang=en |
 | c | Instructs the compiler to clean the output directory |  |
 | source | The source files / directory to include in the applet | --source=c:\myapplet |
 | output | The destination PAK file that should be created | --output=myapplet.pak |
 | help | Display application help and exit |  |
-| include | Includes / references files from another applet pak file | --include=org.santedb.core.pak |
 | optimize | When provided, instructs the applet compiler to minify javascript and css files |  |
 | keyFile | Specifies the location of your signing key \(in PFX format\) | --keyFile=mykey.pfx |
 | keyPassword | Specifies a file where the password to unlock your private key can be found | --keyPassword=mykey.password |
@@ -27,6 +24,7 @@ The following parameters are supported by the applet compiler:
 | embedCert | Instructs the applet compiler to embed a copy of the public key into the PAK file \(recommended for deployments\) |  |
 | compression | Changes the compression algorithm from DEFLATE to an alternate method \(lzma, gzip, bzip2, defalte\) | --compression=lzma |
 | compose | If your manifest file is an applet solution \(a bundle of other applets\), then this command will compose the solution pak file. | --compose=mysln.xml |
+| install | Instructs the pakman tool to place the output file into its reference cache. | --install |
 
 ## **Packaging your Applet**
 
@@ -38,7 +36,7 @@ To create an unsigned applet:
 2. Run the applet compiler as follows:
 
    ```text
-    sdb-pakr --source=C:\myapp --output=myapp.pak
+    pakman --source=C:\myapp --output=myapp.pak
    ```
 
 3. Upload myapp.pak to your SanteDB HDS server
@@ -55,7 +53,7 @@ To create a production \(optimized\) applet:
 2. Run the applet compiler as follows:
 
    ```text
-    sdb-pakr --source=C:\myapp --output=myapp.pak --optimize --keyFile=C:\keys\mykey.pfx --embedCert
+    pakman --source=C:\myapp --output=myapp.pak --optimize --keyFile=C:\keys\mykey.pfx --embedCert
    ```
 
 3. When prompted enter the private key password for your PFX file 1. Alternately you can save the password in a file and use --keyPassword parameter \(make sure the key password file and PFX file are kept out of source control\)

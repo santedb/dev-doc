@@ -69,7 +69,7 @@ In order to register your page and a route, you need to create an AngularJS stat
 <div xmlns="http://www.w3.org/1999/xhtml" 
     xmlns:sdb="http://santedb.org/applet">
     ...
-    <sdb:state name="example">
+    <sdb:state name="example" priority="0">
         <sdb:title lang="en">Example</sdb:title>
         <sdb:url>/example</sdb:url>
         ...
@@ -152,6 +152,36 @@ angular.module('santedb').controller('ExampleController', ["$scope", function($s
     $scope.helloMessage = 'Hello World!';
 }]);
 ```
+
+## Content Security Policy
+
+SanteDB applets must adhere to CSP rules, failure to adhere to these rules in your applets not working properly in deployment. 
+
+### Script References
+
+Any scripts that you want to load should be loaded with the syntax:
+
+```markup
+<sdb:script static="false|true">path_to_script</sdb:script>
+```
+
+The SanteDB system will place a unique NONCE on this element rendered into HTML and will append the corresponding NONCE to the JS file as it is served out.
+
+### Inline Scripts
+
+Inline scripts like the one illustrated below
+
+```markup
+<button onclick="foo()">Foo!</button>
+```
+
+Are strictly prohibited, and will throw an error in the browser. It is recommended you use the guidance here [https://csp.withgoogle.com/docs/adopting-csp.html](https://csp.withgoogle.com/docs/adopting-csp.html) , to overcome this.
+
+### Browser APIs
+
+SanteDB's disconnected client software blocks access to the browser APIs for camera, geolocation, accelerometer, payment, and autoplay. SanteDB provides its own APIs for calling these services.
+
+This allows SanteDB to restrict access to these services on a per-user basis in scenarios where devices are shared between users. SanteDB also audits access to these sensitive services in its audit repository.
 
 
 
