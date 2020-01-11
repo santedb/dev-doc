@@ -10,7 +10,7 @@ DO NOT use these instructions to deploy a production SanteDB environment. It lev
 
 You'll need a machine \(or VM\) running Windows 8 Home Edition or better, with 2 GB of RAM and 1 CPU. 
 
-You should use the latest SanteDB Server installer from : https://github.com/santedb/santedb-server/releases 
+You should use the latest SanteDB Server installer from : [https://github.com/santedb/santedb-server/releases](https://github.com/santedb/santedb-server/releases) 
 
 {% hint style="info" %}
 You can install the development environment on Linux, however there is no bundled installer for this option. 
@@ -20,7 +20,7 @@ You can install the development environment on Linux, however there is no bundle
 
 Launch the installer and accept the license agreement. By default the installer will not configure SanteDB or modify any security settings on the host environment. Because we want a quick development / demo environment we should select the "**Elbonia Quickstart"** option.
 
-![Select the Elbonia Quickstart Option](../../../.gitbook/assets/image%20%2823%29.png)
+![Select the Elbonia Quickstart Option](../../../.gitbook/assets/image%20%2840%29.png)
 
 After installation is completed, the SanteDB service will start and begin initialization of your sample dataset.
 
@@ -28,7 +28,7 @@ After installation is completed, the SanteDB service will start and begin initia
 
 You can verify your installation by visiting: http://localhost:8080/api-docs in a web-browser.
 
-![SanteDB&apos;s OpenAPI Documentation](../../../.gitbook/assets/image%20%284%29.png)
+![SanteDB&apos;s OpenAPI Documentation](../../../.gitbook/assets/image%20%289%29.png)
 
 {% hint style="info" %}
 You may receive a 503 - Service Unavailable error. This simply means SanteDB's service is not yet finished initializing your database. You can check the status of the installation in the log located at : C:\Program Files\SanteSuite\SanteDB\Server
