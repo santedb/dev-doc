@@ -15,6 +15,7 @@
   * [Data Storage Patterns](santedb/architecture/data-storage-patterns.md)
 * [Installation](santedb/installation/README.md)
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
+    * [Installing a Development / Demo Environment](santedb/installation/santedb-server/installing-a-development-demo-environment.md)
     * [Planning & Preparation Work](santedb/installation/santedb-server/planning-and-preparation-work.md)
     * [Configuration](santedb/installation/santedb-server/configuration.md)
 * [Extending SanteDB](santedb/extending-santedb/README.md)
