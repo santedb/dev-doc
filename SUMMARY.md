@@ -4,14 +4,15 @@
 
 ## SanteDB
 
-* [About SanteDB](santedb/santedb.md)
-* [SanteDB Versioning](santedb/santedb-versioning.md)
-* [SanteDB History](santedb/santedb-history.md)
+* [About SanteDB](santedb/santedb/README.md)
+  * [SanteDB Versioning](santedb/santedb/santedb-versioning.md)
+  * [SanteDB History](santedb/santedb/santedb-history.md)
 * [Architecture](santedb/architecture/README.md)
   * [Data & Information Architecture](santedb/architecture/data-and-information-architecture/README.md)
     * [Conceptual Information Model](santedb/architecture/data-and-information-architecture/conceptual-data-model/README.md)
       * [Acts](santedb/architecture/data-and-information-architecture/conceptual-data-model/acts.md)
       * [Entities](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities.md)
+  * [Data Storage Patterns](santedb/architecture/data-storage-patterns.md)
 * [Installation](santedb/installation/README.md)
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
     * [Planning & Preparation Work](santedb/installation/santedb-server/planning-and-preparation-work.md)

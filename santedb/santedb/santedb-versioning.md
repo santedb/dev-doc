@@ -32,6 +32,8 @@ Informational versions are usually tied to milestones or date ranges. Typically 
 * Edmonton - 0.9.7.x series
 * Fredericton - 1.0.0 series
 * Gananoque - 1.10 - 1.50 
-* Halifax - 1.50 - 1.100
-* Iqaluit - 1.100 - current
+* Halifax - 1.50 - 1.99
+* Iqaluit - 1.100 - 1.119 \(Current\)
+* Jasper - 1.120 - 139
+* Kamloops - 1.140 - 1.159
 
