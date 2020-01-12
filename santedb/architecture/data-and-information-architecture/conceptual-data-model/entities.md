@@ -2,7 +2,7 @@
 
 An entity within the SanteDB data model is used to represent a person, place, or thing. Entities represent the who, which and where aspects of an action. Entities are further classified into several sub classes illustrated in Figure 1.
 
-![Figure 1 - Entity Classes](../../../../.gitbook/assets/image%20%2844%29.png)
+![Figure 1 - Entity Classes](../../../../.gitbook/assets/image%20%2856%29.png)
 
 ### Class Codes
 
@@ -36,7 +36,7 @@ Determiner codes are used to classify whether a tuple in the entity table repres
 
 Figure 2 represents a sample information model of a kit of BCG vaccine. The model illustrates how a single tuples in the SanteDB model are related to one another to represent a kit. The material “BCG Vaccine” is comprised of one dose of “BCG Antigen”, one “Syringe”, and one dose of “BCG Diluent”. A box of “BCG Vaccine” represents 25 single doses of “BCG Vaccine” \(meaning 25 syringes, 25 antigen and 25 diluent\). Finally, from this we can order \(via instantiation or inheriting a kind\) a kit of GSK 5ml BCG vaccine. This derivation will have the same rules applied \(in that this vaccine must have a syringe, antigen, and diluent.
 
-![Figure 2 - Kitting of BCG](../../../../.gitbook/assets/image%20%2818%29.png)
+![Figure 2 - Kitting of BCG](../../../../.gitbook/assets/image%20%2826%29.png)
 
 Figure 3 represents a complex scenario of kitting a vaccine and then deriving a specific type of kit. The relationship between the instantiation and the generic concepts of the material would have a type of “Manufactured” meaning the “GSK 5 ml BCG” is a manufactured representation of the generic BCGvaccine.
 
@@ -44,13 +44,13 @@ Figure 3 represents a complex scenario of kitting a vaccine and then deriving a 
 
 The SanteDB model also supports more simplistic representation of a “BCG Vaccine” if kits are not required by the jurisdiction that is implementing SanteDB. Figure 4 illustrates a valid representation of BCG in a jurisdiction where only the antigen is tracked.
 
-![Figure 4 - Representing an instance of a KIND of Entity](../../../../.gitbook/assets/image%20%2816%29.png)
+![Figure 4 - Representing an instance of a KIND of Entity](../../../../.gitbook/assets/image%20%2824%29.png)
 
 ### States
 
 Entities also support a basic series of states which identify the current status of the entity in the SanteDB data model. Figure 7 illustrates the states of an entity and the valid transitions.
 
-![Figure 7 - Entity State Diagram](../../../../.gitbook/assets/image%20%2833%29.png)
+![Figure 7 - Entity State Diagram](../../../../.gitbook/assets/image%20%2845%29.png)
 
 The states of the entity are:
 
