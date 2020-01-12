@@ -18,7 +18,7 @@ From this screen you can quickly:
 
 To create a new user account, press the **Create** button, to edit an existing user account, press the **Edit** button beside the user you'd like to edit. You'll be presented with a user creation screen as illustrated below.
 
-![](../../../.gitbook/assets/image%20%2857%29.png)
+![](../../../.gitbook/assets/image%20%2862%29.png)
 
 The user edit / creation screen is broken into four sections:
 
@@ -29,7 +29,7 @@ The user edit / creation screen is broken into four sections:
 
 ### Demographics Fields
 
-![](../../../.gitbook/assets/image%20%2836%29.png)
+![](../../../.gitbook/assets/image%20%2838%29.png)
 
 Users in SanteDB have to profiles. The first profile is the **SecurityUser**, which are the attributes that the user uses for security reasons. The second profile is their **UserEntity** profile \(and optionally **Provider** profile\), which is a clinical representation of the user. 
 
@@ -39,5 +39,5 @@ To imagine the difference, you can think of an e-mail address or telephone numbe
 
 All clinical data \(including Provider and UserEntity data\) is versioned in SanteDB. This section of the screen shows a complete edit history of the clinical data, including which fields were changed, which user changed the fields, and which device/application was used to change the data.
 
-![](../../../.gitbook/assets/image%20%288%29.png)
+![](../../../.gitbook/assets/image%20%289%29.png)
 

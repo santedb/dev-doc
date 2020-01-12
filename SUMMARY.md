@@ -59,9 +59,17 @@
     * [BI Render Controls](santedb/extending-santedb/business-intelligence-bi-assets/bi-render-controls.md)
   * [Service APIs](santedb/extending-santedb/service-apis.md)
 
+## SanteMPI
+
+* [About SanteMPI](santempi/about-santempi.md)
+* [SanteMPI Dashboard](santempi/santempi-dashboard.md)
+* [SanteMPI Searching](santempi/santempi-searching.md)
+* [The Patient Dashboard](santempi/the-patient-dashboard.md)
+
 ## SanteGuard
 
 * [About SanteGuard](santeguard/introduction.md)
+* [SanteGuard Patient Insights](santeguard/santeguard-patient-insights.md)
 
 ## OpenIZ
 
