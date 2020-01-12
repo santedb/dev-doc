@@ -6,7 +6,7 @@ This page provides a summary of the SanteDB architecture. The "source of truth" 
 
 SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure. 
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2864%29.png)
 
 At a high level, the major components of the SanteDB architecture are:
 

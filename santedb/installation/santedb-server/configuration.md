@@ -15,7 +15,7 @@ When you first launch the configuration tool, you will be presented with two opt
 1. **Easy Configuration:** Which automatically sets up most of the SanteDB services with the default options.
 2. **Advanced Configuration:** Which does not configure any services, and provides you with an opportunity to manually configure only the features you wish.
 
-![Figure 1 - Initial Configuration Screen](../../../.gitbook/assets/image%20%2831%29.png)
+![Figure 1 - Initial Configuration Screen](../../../.gitbook/assets/image%20%2832%29.png)
 
 ### Easy Configuration Walkthrough
 
@@ -29,7 +29,7 @@ The tooling will also provide you with an opportunity to create a new database \
 
 When selecting **New...** you will be presented with an opportunity to specify the name of your new database:
 
-![Figure 3 - Creating a new Database](../../../.gitbook/assets/image%20%2826%29.png)
+![Figure 3 - Creating a new Database](../../../.gitbook/assets/image%20%2827%29.png)
 
 #### Instance Name
 
@@ -39,11 +39,11 @@ The last setting you may wish to modify is the "Instance Name". Instance naming 
 
 When you press **Continue** on the initial configuration page, you will be presented with a list of tasks which will be executed in order to configure your instance of SanteDB Server. This window allows you to bypass any configuration steps you don't want performed \(such as updates, demonstration data, etc.\). For example, if I didn't want the configuration tool to install SanteDB Server as a windows service \(perhaps I only want to run the server on the console\), I could disable that particular task.
 
-![Figure 4 - Disabling A Task](../../../.gitbook/assets/image%20%2829%29.png)
+![Figure 4 - Disabling A Task](../../../.gitbook/assets/image%20%2830%29.png)
 
 Once you have pressed OK, you will be shown the status of configuration: 
 
-![Figure 5 - Configuration Worker](../../../.gitbook/assets/image%20%2856%29.png)
+![Figure 5 - Configuration Worker](../../../.gitbook/assets/image%20%2860%29.png)
 
 #### Importing Default Datasets
 
@@ -53,7 +53,7 @@ After the initial configuration screen has completed, you will be prompted to co
 On FirebirdSQL you may receive "Connection Shutdown", this is an internal FirebirdSQL server fault and we are actively working to fix it. Until then, you can simply restart the configuration program and the import will continue.
 {% endhint %}
 
-![Figure 6 - Secondary Configuration Tasks](../../../.gitbook/assets/image%20%2866%29.png)
+![Figure 6 - Secondary Configuration Tasks](../../../.gitbook/assets/image%20%2871%29.png)
 
 The installation of the initial datasets for your SanteDB deployment may take some time, this is normal.
 

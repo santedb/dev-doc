@@ -6,7 +6,7 @@ SanteDB provides a robust security environment. This security environment is mai
 
 The SanteDB security center provides a dashboard of your SanteDB security environment. The dashboard provides several key insights into your SanteDB solution.
 
-![](../../../.gitbook/assets/image%20%2870%29.png)
+![](../../../.gitbook/assets/image%20%2875%29.png)
 
 ### SanteDB Administration Console
 

@@ -10,7 +10,7 @@ The SanteDB conceptual data model is based on several different resources:
 
 Clinical data in SanteDB is represented as Entities playing Roles Participating in Acts. This is illustrated in Figure 1.
 
-![Figure 1 - Conceptual Data Model](../../../../.gitbook/assets/image%20%2833%29.png)
+![Figure 1 - Conceptual Data Model](../../../../.gitbook/assets/image%20%2834%29.png)
 
 * **Entities:** An entity represents a person, place, organization, or thing \(syringe, antigen, vaccine, etc.\). Entities can be related to one another via an entity relationship such as place belonging to an organization or series of materials belonging to a vaccination kit.
 * **Roles:** Roles represent a type of part an entity plays. For example, a Person entity may play the role of a provider or a patient.
@@ -19,7 +19,7 @@ Clinical data in SanteDB is represented as Entities playing Roles Participating 
 
 In this context we can represent many different clinical scenarios. In order to make conceptualizing data elements in the SanteDB persistence store easier, much data documentation leverages an information model cards as illustrated in Figure 2.
 
-![Figure 2 - Information Model Cards](../../../../.gitbook/assets/image%20%2846%29.png)
+![Figure 2 - Information Model Cards](../../../../.gitbook/assets/image%20%2848%29.png)
 
 ### Templates
 

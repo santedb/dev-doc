@@ -16,7 +16,7 @@ Once you've created a group, you cannot change its name, only its description ca
 
 SanteDB supports a very robust policy infrastructure. The security architecture is described more in the architecture section however, in brief policies are applied to users , using applications, on devices. User policy associations occur through  the SecurityRole objects to which the user belongs.
 
-![](../../../.gitbook/assets/image%20%2867%29.png)
+![](../../../.gitbook/assets/image%20%2872%29.png)
 
 You can set one of three permissions on each policy:
 
@@ -48,7 +48,7 @@ Which will produce a list of effective permissions for that user:
 
 Managing user memberships in a group is done the same was as managing policies. You can add or remove users to/from a group using the Members portion of the edit group panel
 
-![](../../../.gitbook/assets/image%20%2848%29.png)
+![](../../../.gitbook/assets/image%20%2850%29.png)
 
 
 

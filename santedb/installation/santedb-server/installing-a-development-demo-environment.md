@@ -20,7 +20,7 @@ You can install the development environment on Linux, however there is no bundle
 
 Launch the installer and accept the license agreement. By default the installer will not configure SanteDB or modify any security settings on the host environment. Because we want a quick development / demo environment we should select the "**Elbonia Quickstart"** option.
 
-![Select the Elbonia Quickstart Option](../../../.gitbook/assets/image%20%2858%29.png)
+![Select the Elbonia Quickstart Option](../../../.gitbook/assets/image%20%2862%29.png)
 
 After installation is completed, the SanteDB service will start and begin initialization of your sample dataset.
 
