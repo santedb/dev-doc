@@ -57,7 +57,8 @@
       * [Views](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/views.md)
       * [Reports](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/reports.md)
     * [BI Render Controls](santedb/extending-santedb/business-intelligence-bi-assets/bi-render-controls.md)
-  * [Service APIs](santedb/extending-santedb/service-apis.md)
+  * [Service APIs](santedb/extending-santedb/service-apis/README.md)
+    * [Patching](santedb/extending-santedb/service-apis/patching.md)
 
 ## SanteMPI
 
