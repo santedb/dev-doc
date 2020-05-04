@@ -38,5 +38,5 @@ Although each of the products built upon SanteDB provide the most clinical value
   * HL7 FHIR STU3 support on select resources
   * Select support for GS1 BMS XML 3.3 \(over REST or AS.2\)
   * Support for IHE ATNA \(RFC 3881 or DICOM\)
-  * OAUTH 2.0 compatible authentication services \(password, client\_credential and refresh grants only\) with JWT identity tokens
+  * OPENID Connect / OAUTH 2.0 compatible authentication services \(password, client\_credential, authorization\_code and refresh grants\) with JWT identity tokens
 

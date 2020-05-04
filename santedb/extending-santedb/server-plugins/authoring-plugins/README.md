@@ -18,9 +18,9 @@ When implementing your plugin, if, for example, you target .NET Framework and us
 
 The general rule is:
 
-* If you're creating a global .NET plugin select PCL Profile7 project type
-* If you're creating a SanteDB dCDR based plugin use either PCL Profile7 or .NET Framework 4.5.2 
-* If you're creating a SanteDB iCDR based plugin use .NET Framework 4.5.2
+* If you're creating a global .NET plugin select .NET Standard 2.0 as the project type
+* If you're creating a SanteDB dCDR based plugin use either .NET Standard 2.0 or .NET Framework 4.7 
+* If you're creating a SanteDB iCDR based plugin use .NET Framework 4.7
 
 ## Adding Nuget Dependencies
 
