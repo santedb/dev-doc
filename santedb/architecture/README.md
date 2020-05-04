@@ -25,13 +25,5 @@ Upon these base level components a series of products or "solutions" are package
 * SanteMPI - A master patient index based on the SanteDB platform
 * SanteEMR - A general purpose EMR platform based on the SanteDB platform
 * SanteGuard - A general purpose Audit Repository based on the SanteDB platform
-* OpenIZ / SanteIMS - An Immunization Management System \(IMS\) 
-
-## .
-
-
-
-
-
-
+* OpenIZ / SanteIMS - An Immunization Management System \(IMS\)
 
