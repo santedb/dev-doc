@@ -6,7 +6,7 @@ The administrative portal provides several key functions related to the administ
 
 To review user accounts, you can select the Security &gt; Users option in the administration panel.
 
-![](../../../.gitbook/assets/image%20%282%29.png)
+![](../../../.gitbook/assets/image%20%284%29.png)
 
 From this screen you can quickly:
 
@@ -14,11 +14,11 @@ From this screen you can quickly:
 * Reset a password for a user
 * Delete or un-delete a user account.
 
-## Creating / Editing User Accounts
+## Creating User Accounts
 
-To create a new user account, press the **Create** button, to edit an existing user account, press the **Edit** button beside the user you'd like to edit. You'll be presented with a user creation screen as illustrated below.
+To create a new user account, press the **Create** button. You'll be presented with a user creation screen as illustrated below.
 
-![](../../../.gitbook/assets/image%20%2867%29.png)
+![](../../../.gitbook/assets/image%20%2873%29.png)
 
 The user edit / creation screen is broken into four sections:
 
@@ -29,15 +29,36 @@ The user edit / creation screen is broken into four sections:
 
 ### Demographics Fields
 
-![](../../../.gitbook/assets/image%20%2840%29.png)
+![](../../../.gitbook/assets/image%20%2846%29.png)
 
 Users in SanteDB have to profiles. The first profile is the **SecurityUser**, which are the attributes that the user uses for security reasons. The second profile is their **UserEntity** profile \(and optionally **Provider** profile\), which is a clinical representation of the user. 
 
 To imagine the difference, you can think of an e-mail address or telephone number attached to security user as being the address used by the system for things like TFA and password resets, however the e-mail on the clinical profile may be for clinical purposes like booking appointments, referrals, etc.
 
-### Version History
+## Editing Users
 
-All clinical data \(including Provider and UserEntity data\) is versioned in SanteDB. This section of the screen shows a complete edit history of the clinical data, including which fields were changed, which user changed the fields, and which device/application was used to change the data.
+To edit a user, click the **Edit** button beside the user that you wish to edit. You will be presented with a screen as illustrated below.
 
-![](../../../.gitbook/assets/image%20%289%29.png)
+![](../../../.gitbook/assets/image%20%283%29.png)
+
+### Editing Security Settings
+
+Clicking on the pencil on the security properties panel will enable the editing of the user's security settings. When complete, clicking the check button to commit your changes.
+
+![](../../../.gitbook/assets/image%20%2881%29.png)
+
+### Editing User Profile
+
+SanteDB security users also have a profile exposed in the CDR \(apart from the security tables\) which contain information such as:
+
+* Name
+* Employment
+* Assigned Places of Work
+* Business Contacts
+* Addresses
+
+These can be edited using the **profile** tab of the user's detail screen.  
+
+
+![](../../../.gitbook/assets/image%20%2823%29.png)
 
