@@ -23,7 +23,18 @@ SanteDB is a general purpose clinical data repository based loosely on the HL7 R
 * dCG - The **Disconnected Gateway** is a specialized version of the dCDR which combines plugins for HL7v2, ATNA, \(and FHIR\) and allows clinics who are using third party software such as OpenMRS or OSCAR to leverage dCDR features with standards based interfaces. 
 * Android / Windows / Linux Apps - These applications are built on the dCDR and provide an extensible user interface platform based on HTML5 and JavaScript. By default, AngularJS is the bundled UI framework, however these applications \(and applets\) may override this and implement their own interfaces to SanteDB's dCDR services.
 
+### Quick Links
 
+* [Architecture Documentation](santedb/architecture/)
+* [Operations Management](santedb/operations/)
+  * [Installation](santedb/installation/)
+  * [Knowledgebase](knowledgebase/sdb-kb/)
+  * [Fixes & Patches](knowledgebase/fixpatch/)
+* [Extending the Platform \(SDK\)](santedb/extending-santedb/)
+* SanteDB Solution Projects
+  * [SanteDB Master Patient Index \(SanteMPI](santempi/about-santempi.md)\)
+  * [SanteDB Audit Repository \(SanteGuard\)](santeguard/introduction.md)
+  * [OpenIZ](openiz/about-openiz.md)
 
 
 
