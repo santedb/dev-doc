@@ -13,7 +13,7 @@ Each of these interfaces are enabled/disabled based on the role that SanteDB is 
 
 ### Health Information Exchange Roles
 
-SanteDB can be integrated into HIE architecture \(including OpenHIE\) in a variety of roles and should can be used to fill in missing functions. Some roles in which SanteDB can be configured.
+SanteDB can be integrated into HIE architecture \(including OpenHIE\) in a variety of roles and can be used to fill in missing functions. Some roles in which SanteDB can be configured.
 
 <table>
   <thead>
@@ -88,7 +88,7 @@ SanteDB can be integrated into HIE architecture \(including OpenHIE\) in a varie
     </tr>
   </tbody>
 </table>{% hint style="info" %}
-While SanteDB can be integrated into OpenHIE, it doesn't require a full OpenHIE infrastructure to operate properly. It can be used as a launch point into a broader e-health strategy.
+While SanteDB can be integrated into any standards compliant HIE \(including OpenHIE\), it doesn't require a full HIE infrastructure to operate properly and securely. It can be used as a launch point into a broader e-health infrastructure \(i.e. it is possible to launch SanteDB based solutions without an HIE and then build an HIE around it\)
 {% endhint %}
 
 ### Roadmap
