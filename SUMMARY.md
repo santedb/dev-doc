@@ -60,6 +60,7 @@
     * [BI Render Controls](santedb/extending-santedb/business-intelligence-bi-assets/bi-render-controls.md)
   * [Service APIs](santedb/extending-santedb/service-apis/README.md)
     * [Patching](santedb/extending-santedb/service-apis/patching.md)
+* [HIE & Interoperability](santedb/hie-and-interoperability.md)
 
 ## SanteMPI
 
