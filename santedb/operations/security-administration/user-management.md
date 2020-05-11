@@ -47,6 +47,10 @@ Clicking on the pencil on the security properties panel will enable the editing 
 
 ![](../../../.gitbook/assets/image%20%2881%29.png)
 
+{% hint style="info" %}
+The e-mail and phone number information on the security properties panel is only used for security purposes \(like TFA, password resets, etc.\). If you're using SanteDB with a third party IdP, Active Directory or LDAP authentication these fields will attempt to update the profile on the source system. This differs from the clinical contact information on the profile tab which is always stored in SanteDB. 
+{% endhint %}
+
 ### Editing User Profile
 
 SanteDB security users also have a profile exposed in the CDR \(apart from the security tables\) which contain information such as:
