@@ -47,6 +47,7 @@
     * [Packaging Applets](santedb/extending-santedb/applets/packaging-applets.md)
     * [Applet Solution Packages](santedb/extending-santedb/applets/applet-solution-packages.md)
     * [Applet Debugger](santedb/extending-santedb/applets/applet-debugger.md)
+    * [JavaScript API Reference](http://santesuite.org/assets/doc/js/santedb/)
   * [.NET Plugins](santedb/extending-santedb/server-plugins/README.md)
     * [Authoring Plugins](santedb/extending-santedb/server-plugins/authoring-plugins/README.md)
       * [Unit Testing Framework](santedb/extending-santedb/server-plugins/authoring-plugins/unit-testing-framework.md)
