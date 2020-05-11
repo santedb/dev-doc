@@ -79,5 +79,9 @@ SanteDB can be integrated into HIE architecture \(including OpenHIE\) in a varie
 While SanteDB can be integrated into OpenHIE, it doesn't require a full OpenHIE infrastructure to operate properly. It can be used as a launch point into a broader e-health strategy.
 {% endhint %}
 
+### Roadmap
 
+There are additional product features which have been identified as part of the SanteDB roadmap which would facilitate leveraging SanteDB in other future roles.
+
+* XACML Interface - The SanteDB internal policy framework was modeled after the patterns defined in XACML \(PEP, PDP, PIP\).
 
