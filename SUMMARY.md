@@ -86,6 +86,7 @@
 ## Knowledgebase
 
 * [Knowledgebase](knowledgebase/sdb-kb/README.md)
+  * [KB016 - When logging into the dCDR you are immediately logged back out](knowledgebase/sdb-kb/kb016-when-logging-into-the-dcdr-you-are-immediately-logged-back-out.md)
   * [KB008 - PostgreSQL connections fail with block message](knowledgebase/sdb-kb/kb008-postgresql-connections-fail-with-block-message.md)
   * [HS001 - Backing up HDSI server database](knowledgebase/sdb-kb/kb011-backing-up-ims-server-database.md)
   * [KB011 - You receive an "out of disk space" error on the IMS server](knowledgebase/sdb-kb/kb012-you-receive-an-out-of-disk-space-error-on-the-ims-server.md)
