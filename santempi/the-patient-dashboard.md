@@ -4,7 +4,7 @@ The SanteMPI patient dashboard is available for any patient which has been regis
 
 ### Demographics Dashboard
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 The patient demographics dashboard is first shown when you open a patient's entity information in the SanteMPI platform. This sheet shows the key demographics the patient has, the relationships the patient has with other entities \(people, places, things, etc.\) as well as the Master / Local relationship. 
 
@@ -12,7 +12,7 @@ The patient demographics dashboard is first shown when you open a patient's enti
 
 On the MDM dashboard tab of the dashboard will present you with three panels where you can edit key details about the multi-instance storage of information.
 
-![](../.gitbook/assets/image%20%2885%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 
 

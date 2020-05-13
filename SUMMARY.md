@@ -71,6 +71,7 @@
 * [SanteMPI Dashboard](santempi/santempi-dashboard.md)
 * [SanteMPI Searching](santempi/santempi-searching.md)
 * [The Patient Dashboard](santempi/the-patient-dashboard.md)
+* [Configuring Identity Domains](santempi/configuring-identity-domains.md)
 * [Correcting Data](santempi/correcting-data.md)
 
 ## SanteGuard

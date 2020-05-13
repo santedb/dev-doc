@@ -18,7 +18,7 @@ From this screen you can quickly:
 
 To create a new user account, press the **Create** button. You'll be presented with a user creation screen as illustrated below.
 
-![](../../../.gitbook/assets/image%20%2889%29.png)
+![](../../../.gitbook/assets/image%20%2892%29.png)
 
 The user edit / creation screen is broken into four sections:
 
@@ -29,7 +29,7 @@ The user edit / creation screen is broken into four sections:
 
 ### Demographics Fields
 
-![](../../../.gitbook/assets/image%20%2854%29.png)
+![](../../../.gitbook/assets/image%20%2856%29.png)
 
 Users in SanteDB have to profiles. The first profile is the **SecurityUser**, which are the attributes that the user uses for security reasons. The second profile is their **UserEntity** profile \(and optionally **Provider** profile\), which is a clinical representation of the user. 
 
@@ -45,7 +45,7 @@ To edit a user, click the **Edit** button beside the user that you wish to edit.
 
 Clicking on the pencil on the security properties panel will enable the editing of the user's security settings. When complete, clicking the check button to commit your changes.
 
-![](../../../.gitbook/assets/image%20%2898%29.png)
+![](../../../.gitbook/assets/image%20%28101%29.png)
 
 {% hint style="info" %}
 The e-mail and phone number information on the security properties panel is only used for security purposes \(like TFA, password resets, etc.\). If you're using SanteDB with a third party IdP, Active Directory or LDAP authentication these fields will attempt to update the profile on the source system. This differs from the clinical contact information on the profile tab which is always stored in SanteDB. 
@@ -64,5 +64,5 @@ SanteDB security users also have a profile exposed in the CDR \(apart from the s
 These can be edited using the **profile** tab of the user's detail screen.  
 
 
-![](../../../.gitbook/assets/image%20%2826%29.png)
+![](../../../.gitbook/assets/image%20%2828%29.png)
 
