@@ -73,7 +73,11 @@
 * [The Patient Dashboard](santempi/the-patient-dashboard.md)
 * [Configuring Identity Domains](santempi/configuring-identity-domains.md)
 * [Correcting Data](santempi/correcting-data/README.md)
+  * [Editing Demographic Information](santempi/correcting-data/editing-demographic-information.md)
   * [Editing Identifiers](santempi/correcting-data/editing-identifiers.md)
+  * [Editing Next of Kin](santempi/correcting-data/editing-next-of-kin.md)
+  * [Records of Truth](santempi/correcting-data/records-of-truth.md)
+  * [Local Records](santempi/correcting-data/local-records.md)
 
 ## SanteGuard
 
@@ -82,7 +86,8 @@
 
 ## OpenIZ
 
-* [About OpenIZ](openiz/about-openiz.md)
+* [About OpenIZ](openiz/about-openiz/README.md)
+  * [Upgrading from OpenIZ to SanteDB](openiz/about-openiz/upgrading-from-openiz-to-santedb.md)
 * [FAQ](openiz/faq.md)
 * [Demonstration Servers](openiz/demonstration-servers.md)
 

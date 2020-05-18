@@ -6,7 +6,7 @@ Users may be placed into one or more groups in the SanteDB system . A group \(or
 
 Groups can be reviewed by selecting the Security &gt; Group panel on the SanteDB administration panel.
 
-![](../../../.gitbook/assets/image%20%2822%29.png)
+![](../../../.gitbook/assets/image%20%2830%29.png)
 
 ## Creating / Managing Groups
 
@@ -16,7 +16,7 @@ Once you've created a group, you cannot change its name, only its description ca
 
 SanteDB supports a very robust policy infrastructure. The security architecture is described more in the architecture section however, in brief policies are applied to users , using applications, on devices. User policy associations occur through  the SecurityRole objects to which the user belongs.
 
-![](../../../.gitbook/assets/image%20%28101%29.png)
+![](../../../.gitbook/assets/image%20%28131%29.png)
 
 You can set one of three permissions on each policy:
 
@@ -30,7 +30,7 @@ Remember, SanteDB uses the MOST RESTRICTIVE permission for a policy. If a user i
 
 To assign a new policy to a group, search for the policy and press the add button, then assign the permission you'd like that group to have.
 
-![](../../../.gitbook/assets/image%20%2817%29.png)
+![](../../../.gitbook/assets/image%20%2825%29.png)
 
 #### Determining Effective Permissions
 
@@ -42,13 +42,13 @@ user.info <<USERNAME>>
 
 Which will produce a list of effective permissions for that user:
 
-![](../../../.gitbook/assets/image%20%2825%29.png)
+![](../../../.gitbook/assets/image%20%2834%29.png)
 
 ### Managing Users in Groups
 
 Managing user memberships in a group is done the same was as managing policies. You can add or remove users to/from a group using the Members portion of the edit group panel
 
-![](../../../.gitbook/assets/image%20%2873%29.png)
+![](../../../.gitbook/assets/image%20%2898%29.png)
 
 
 

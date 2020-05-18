@@ -38,7 +38,7 @@ You can submit bugs for any SanteSuite solution on our [BugZilla portal](https:/
 * SanteDB Solution Projects
   * [SanteDB Master Patient Index \(SanteMPI](santempi/about-santempi.md)\)
   * [SanteDB Audit Repository \(SanteGuard\)](santeguard/introduction.md)
-  * [OpenIZ](openiz/about-openiz.md)
+  * [OpenIZ](openiz/about-openiz/)
 
 
 
