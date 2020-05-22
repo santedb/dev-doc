@@ -26,7 +26,7 @@ SanteDB allows a single patient to have a multitude of names. The name input is 
 ![](../../.gitbook/assets/image%20%28121%29.png)
 
 {% hint style="info" %}
-This input may appear with more or less inputs depending on the structure of names within your country deployment.
+This input may appear with more or less inputs depending on the structure of names within your deployment.
 {% endhint %}
 
 The fields which may appear on this input include:
@@ -64,13 +64,15 @@ SanteDB allows a single patient to have multiple addresses each with a different
 
 ![](../../.gitbook/assets/image%20%2857%29.png)
 
-This input area can change based on the configuration of your instance of SanteMPI. There are three types of address entry generally used:
+This input area can change based on the configuration of your instance of SanteMPI. There are three types of address entry generally provided:
 
 * Fully Structured - You will be presented with a single drop-down which will allow you to select a single address entry from a pre-populated list of "official" addresses.
 * Semi-Structured \(Shown Above\) - You will be presented with a  complex address entry whereby you can select a few structured fields \(usually state/province, county and city\) and enter freetext for the remainder of the address.
 * Freeform - You will be presented with freetext inputs where you can manually enter each field.
 
+{% hint style="info" %}
 The labels of the fields in the address entry screen can also be customized based on your configuration of SanteMPI. For example, County/District may appear in your interface as **Township** .
+{% endhint %}
 
 The type of addresses which can be captured in SanteDB/SanteMPI are listed below, this list can be customized by editing the concept set AddressUse.
 
@@ -137,7 +139,7 @@ The relationship types are listed below for additional assistance:
 | :--- | :--- | :--- |
 | Caregiver\(s\) | Yes | One or more organizations or providers which are dedicated caregivers for the patient. \(For example: CHW, at-home nurse, nursing home contact\). |
 | Citizenship\(s\) | Yes | One or more countries for which the patient is a citizen. |
-| Coverage/Sponsor | Yes | The organization that provides insurance coverage for the patient. |
+| Coverage/Sponsor | Yes | The organization that provides insurance coverage for the patient or is sponsoring the patient's care. |
 | Primary Facility | No | The dedicated facility where this patient receives care. |
 | Employer | Yes | One or more organizations where the patient is known to work. |
 | Primary Provider | Yes | The patient's primary care provider \(family doctor\) or other known providers. |
