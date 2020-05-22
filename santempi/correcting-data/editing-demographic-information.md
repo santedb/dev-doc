@@ -39,7 +39,7 @@ The fields which may appear on this input include:
 | Family | Required | The patient's family name\(s\). Depending on your configuration this input may be tokenized. |
 | Suffix | Optional | The suffix for the name such as MD., Esq., etc. |
 
-There are several common types of names which are built into SanteDB
+There are several common types of names which are built into SanteDB. Name types are controlled by changing the concept members of the NameUse concept set.
 
 | Type | Use |
 | :--- | :--- |
