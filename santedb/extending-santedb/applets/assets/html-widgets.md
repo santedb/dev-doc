@@ -89,7 +89,9 @@ The contents of the &lt;sdb:widget/&gt; element control the widget's rendering a
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>### Widget Contexts
+</table>
+
+### Widget Contexts
 
 There are several contexts in which widgets appear.
 

@@ -87,7 +87,9 @@ SanteDB can be integrated into HIE architecture \(including OpenHIE\) in a varie
       </td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 While SanteDB can be integrated into any standards compliant HIE \(including OpenHIE\), it doesn't require a full HIE infrastructure to operate properly and securely. It can be used as a launch point into a broader e-health infrastructure \(i.e. it is possible to launch SanteDB based solutions without an HIE and then build an HIE around it\)
 {% endhint %}
 

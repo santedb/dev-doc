@@ -68,7 +68,9 @@ There are, however, some benefits to following the SanteDB user interface elemen
       <td style="text-align:left">Registers the Swahili Language asset</td>
     </tr>
   </tbody>
-</table>### Manifest File
+</table>
+
+### Manifest File
 
 The only required file for an applet is the Manifest.xml file. This file is used by the packager to generate a bundle manifest. The manifest file contains:
 

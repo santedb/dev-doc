@@ -136,7 +136,9 @@ The properties are described in more detail below:
         the table.</td>
     </tr>
   </tbody>
-</table>#### Rendering Buttons
+</table>
+
+#### Rendering Buttons
 
 Buttons are rendered on the entity-table using a series of control objects. Each control object is placed into an Array on either the item-actions or actions attributes in this format:
 
