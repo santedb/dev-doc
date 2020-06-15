@@ -4,17 +4,3 @@ An entity within the SanteDB data model is used to represent a person, place, or
 
 ![Figure 1 - Entity Classes](../../../../../.gitbook/assets/image%20%28124%29.png)
 
-### Class Codes
-
-
-
-### Determiner Codes
-
-
-
-### Relationships
-
-### States
-
-
-
