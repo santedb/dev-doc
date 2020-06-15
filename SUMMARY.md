@@ -21,6 +21,7 @@
         * [Entity Relationships](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities/entity-relationships.md)
         * [Determiner Codes](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities/determiner-codes.md)
         * [Class Codes](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities/class-codes.md)
+        * [Data Dictionary](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities/data-dictionary.md)
   * [Data Storage Patterns](santedb/architecture/data-storage-patterns.md)
 * [Installation](santedb/installation/README.md)
   * [Planning & Preparation Work](santedb/installation/planning-and-preparation-work/README.md)
