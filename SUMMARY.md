@@ -90,7 +90,10 @@
   * [Editing Next of Kin](santempi/correcting-data/editing-next-of-kin.md)
   * [Records of Truth](santempi/correcting-data/records-of-truth.md)
   * [Local Records](santempi/correcting-data/local-records.md)
-* [Recipes](santempi/recipes.md)
+* [Recipes](santempi/recipes/README.md)
+  * [Assigning a Home Facility](santempi/recipes/assigning-a-home-facility.md)
+  * [Codified Address](santempi/recipes/codified-address.md)
+  * [Generating ID on Registration](santempi/recipes/generating-id-on-registration.md)
 
 ## SanteGuard
 
