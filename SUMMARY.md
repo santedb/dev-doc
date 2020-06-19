@@ -90,6 +90,7 @@
   * [Editing Next of Kin](santempi/correcting-data/editing-next-of-kin.md)
   * [Records of Truth](santempi/correcting-data/records-of-truth.md)
   * [Local Records](santempi/correcting-data/local-records.md)
+* [Recipes](santempi/recipes.md)
 
 ## SanteGuard
 
