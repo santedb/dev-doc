@@ -49,4 +49,9 @@ Informational versions are usually tied to milestones or date ranges. Typically 
 * Halifax - 1.50 - 1.99
 * Iqaluit - 1.100 - 1.119 \(Current\)
 * Jasper - 2.0 
+* Kelowna - 2.0.20 - 2.0.29
+
+### Roadmap
+
+The SanteDB core roadmap is captured on our GitHub project at : [https://github.com/orgs/santedb/projects/15](https://github.com/orgs/santedb/projects/15) . 
 
