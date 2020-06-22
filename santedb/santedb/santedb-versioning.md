@@ -47,9 +47,28 @@ Informational versions are usually tied to milestones or date ranges. Typically 
 * Fredericton - 1.0.0 series
 * Gananoque - 1.10 - 1.50 
 * Halifax - 1.50 - 1.99
-* Iqaluit - 1.100 - 1.119 \(Current\)
-* Jasper - 2.0 
-* Kelowna - 2.0.20 - 2.0.29
+* Iqaluit - 1.100 - 1.119 
+* Jasper - 2.0.0 - 2.0.9 
+  * Upgrade to .NET Standard and .NET Framework 4.8
+* Kelowna - 2.0.10 - 2.0.59
+  * Performance Enhancements to the Query Engine
+  * Refactoring of IDaemonServices to IJob \(where appropriate\)
+  * Storage of Data Quality Rules in Database \(instead of configuration files\)
+  * Enhancements to the Core Matching Engine \(user interfaces for matching and test scripts\)
+  * Integration of SQLite SpellFix plugin into the dCDR engine
+  * Integration of OpenAPI into dCDR
+  * Support for virtual resources in the PAK files
+* Langley - 2.0.60 - 2.0.99
+  * Storage of Matching Rules in Database rather than file-based storage
+  * Integration of Matching Engine \(SIM mode\) into dCDR
+  * Integration of FHIR into dCDR
+  * Integration of diagnostic probes UI on dashboard
+  * Support OBO \(on-behalf-of\), OAU \(user auth org\) claims and full support for customizing server OpenID connect login interface.
+* Montreal - 2.0.100 - 2.0.159
+  * Support for Razor \(CSHTML\) pages in the Applet Rendering / Packager
+  * Enhancements to MDM performance \(refactor of query translation to use pure native Expression trees\)
+  * BI Investigation Tooling for Query/Report authoring in panel
+  * Expose EntityRelationship validation rules in administrative interfaces \(also add ActParticipation and ActRelationship validation rules\)
 
 ### Roadmap
 
