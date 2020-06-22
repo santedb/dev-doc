@@ -1,4 +1,4 @@
-# KB012 - Diagnosing service port issues
+# Diagnosing service port issues
 
 **Issue:** When starting up the OpenIZ immunization management service, the service interfaces appear to be unavailable.
 

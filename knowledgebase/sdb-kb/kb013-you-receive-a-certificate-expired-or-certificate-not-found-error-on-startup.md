@@ -1,4 +1,4 @@
-# KB013 - You receive a certificate expired or certificate not found error on startup
+# You receive a certificate expired or certificate not found error on startup
 
 **Issue:** When starting up the IMS service the HTTPS services stop working or provide a certificate expired error.
 

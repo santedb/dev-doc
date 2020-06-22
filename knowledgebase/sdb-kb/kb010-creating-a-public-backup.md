@@ -1,4 +1,4 @@
-# KB010 - Creating A Public Backup
+# Creating A Public Backup
 
 **Issue:** You wish to create a publicly \(non-hidden\) archive of all OpenIZ disconnected client data for use later, or for diagnostic purposes.
 

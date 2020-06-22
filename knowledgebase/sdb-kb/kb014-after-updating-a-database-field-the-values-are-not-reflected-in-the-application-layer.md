@@ -1,4 +1,4 @@
-# KB014 - After updating a database field the values are not reflected in the application layer
+# After updating a database field the values are not reflected in the application layer
 
 **Issue:** After updating a database field directly on the primary data source the values are not reflected on the IMSI and/or FHIR interfaces.
 

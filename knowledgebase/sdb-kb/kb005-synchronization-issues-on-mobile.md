@@ -1,4 +1,4 @@
-# KB005 - Synchronization Issues on Mobile
+# Synchronization Issues on Mobile
 
 **Issue:** During the course of using the disconnected client, you notice that patients re-appear on the encounter queue or that data is not being synchronized between tablets.
 

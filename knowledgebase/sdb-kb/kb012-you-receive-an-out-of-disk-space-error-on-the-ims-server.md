@@ -1,4 +1,4 @@
-# KB011 - You receive an "out of disk space" error on the IMS server
+# You receive an "out of disk space" error on the IMS server
 
 **Issue:** During regular operation of your OpenIZ server environment you begin to encounter synchronization issues or other errors with clients with the message "Out of disk space".
 

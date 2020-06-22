@@ -1,4 +1,4 @@
-# KB007 - Fatal Error on Startup
+# Fatal Error on Startup
 
 **Issue:** When restarting the application after a hard crash \(one where the application closes\), you receive an error:  
 _A serious error occurred during startup. OpenIZ Mobile cannot continue. Please reference the following error code when seeking help :: &lt;&lt; error code &gt;&gt;_

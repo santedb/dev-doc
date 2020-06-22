@@ -1,4 +1,4 @@
-# KB002 - You receive a client already running error message
+# You receive a client already running error message
 
 **Issue:** When you try to start the OpenIZ Disconnected Client on Windows or Linux you receive the error : "There is more than on instance of the application running. This may cause serious issues. Closing all instances of the application and restarting is recommended"
 

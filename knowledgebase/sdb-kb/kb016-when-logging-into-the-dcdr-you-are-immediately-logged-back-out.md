@@ -1,4 +1,4 @@
-# KB016 - When logging into the dCDR you are immediately logged back out
+# When logging into the dCDR you are immediately logged back out
 
 
 

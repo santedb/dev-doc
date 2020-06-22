@@ -1,4 +1,4 @@
-# KB001 - Improving Download Speeds on Slow Connections
+# Improving Download Speeds on Slow Connections
 
 **Issue:** When using the Disconnected Client from a device with a slow internet connection, downloads take a large amount of time.
 

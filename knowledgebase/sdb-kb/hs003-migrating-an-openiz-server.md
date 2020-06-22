@@ -1,4 +1,4 @@
-# HS003 - Migrating A SanteDB Server
+# Migrating A SanteDB Server
 
 **Purpose:** You wish to migrate a server from one hosted environment to another or to copy a configuration from one server to another in order to scale up.
 

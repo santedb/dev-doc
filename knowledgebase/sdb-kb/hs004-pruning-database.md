@@ -1,4 +1,4 @@
-# HS004 - Pruning and Cleaning the Database
+# Pruning and Cleaning the Database
 
 **Purpose:** You wish to reduce the size of your OpenIZ instance by removing obsolete versions of data from the data store and/or increase performance of the database.
 

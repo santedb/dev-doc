@@ -1,4 +1,4 @@
-# KB004 - After setting up the application data appears to be missing
+# After setting up the application data appears to be missing
 
 **Issue:** After setting up the application, and joining the security realm, and logging into the application, you notice that data is missing.
 

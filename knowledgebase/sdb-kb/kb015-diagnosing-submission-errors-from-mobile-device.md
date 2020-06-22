@@ -1,4 +1,4 @@
-# KB015 - Diagnosing Submission Errors From Mobile Device
+# Diagnosing Submission Errors From Mobile Device
 
 **Issue:** The mobile device has submitted an object to the server, however the server rejects the submission with error code 422.
 

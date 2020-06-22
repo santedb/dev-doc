@@ -1,4 +1,4 @@
-# KB006 - Disconnected Client Window is Scaled Improperly
+# Disconnected Client Window is Scaled Improperly
 
 **Issue:** When running the disconnected client in a high resolution mode \(&gt; 96 DPI\), you notice that the main contents of the window are black, don't respond properly, or don't scale properly.
 

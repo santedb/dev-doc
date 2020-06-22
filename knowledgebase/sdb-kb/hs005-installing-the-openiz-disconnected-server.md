@@ -1,4 +1,4 @@
-# HS005 - Installing the SanteDB Disconnected Server
+# Installing the SanteDB Disconnected Server
 
 **Purpose:** You wish to run an area hospital, or group of computers with a Local Area Network in disconnected mode. In this scenario, all the machines within the hospital are connected 24/7 via LAN however internet connectivity is limited.
 

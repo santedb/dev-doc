@@ -1,4 +1,4 @@
-# KB009 - Installation on Mono 4.x does not permit joining of realm
+# Installation on Mono 4.x does not permit joining of realm
 
 **Issue:** When you install the Disconnected Client on Linux or MacOS, you are able to launch the setup page, however are unable to join any realm.
 

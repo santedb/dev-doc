@@ -1,4 +1,4 @@
-# KB008 - PostgreSQL connections fail with block message
+# PostgreSQL connections fail with block message
 
 **Issue:** During heavy operation, or when two IMS servers are accessing one PostgreSQL server, you receive an error message related to the PostgreSQL server being unavailable or rejecting your connection attempt.
 

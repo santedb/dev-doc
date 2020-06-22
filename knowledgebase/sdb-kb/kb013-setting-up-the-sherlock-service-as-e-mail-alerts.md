@@ -1,4 +1,4 @@
-# HS002 - Setting up the "sherlock" service
+# Setting up the "sherlock" service
 
 **Purpose:** You wish to capture service reports from the field via e-mail or JIRA.
 

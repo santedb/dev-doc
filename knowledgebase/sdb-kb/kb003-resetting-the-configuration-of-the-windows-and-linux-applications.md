@@ -1,4 +1,4 @@
-# KB003 - Resetting the configuration of the Windows & Linux Applications
+# Resetting the configuration of the Windows & Linux Applications
 
 **Issue:** You wish to reset the configuration of the Disconnected Client so you may join a different security realm, or you can subscribe to a different facility, or you wish to purge all local data from you instance of OpenIZ Disconnected Client.
 
