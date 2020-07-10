@@ -75,6 +75,7 @@
   * [Service APIs](santedb/extending-santedb/service-apis/README.md)
     * [Patching](santedb/extending-santedb/service-apis/patching.md)
 * [HIE & Interoperability](santedb/hie-and-interoperability.md)
+* [Demonstration Environment](santedb/demonstration-environment.md)
 
 ## SanteMPI
 
