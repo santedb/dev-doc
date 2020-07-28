@@ -5,6 +5,21 @@ description: IDaemonService (SanteDB.Core.Api)
 ## Summary
 Daemon service which runs when the application is started
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Starting|System.EventHandler|Fired when the daemon is starting|
+|Started|System.EventHandler|Fired when the daemon is started|
+|Stopping|System.EventHandler|Fired when the daemon is stopping|
+|Stopped|System.EventHandler|Fired when the daemon has stopped|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

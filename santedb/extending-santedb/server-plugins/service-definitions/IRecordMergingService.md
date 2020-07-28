@@ -5,6 +5,19 @@ description: IRecordMergingService`1 (SanteDB.Core.Api)
 ## Summary
 Represents a service which appropriately merges / unmerges records
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Merging|System.EventHandler<SanteDB.Core.Event.DataMergingEventArgs<T>>|Fired prior to a merge occurring|
+|Merged|System.EventHandler<SanteDB.Core.Event.DataMergeEventArgs<T>>|Fired after a merge has occurred|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

@@ -6,6 +6,17 @@ description: ITemplateDefinitionRepositoryService (SanteDB.Core.Api)
 Represents a repository which deals with metadata such as assigning authorities,
             concept classes, etc.
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

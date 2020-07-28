@@ -5,6 +5,17 @@ description: ITagPersistenceService (SanteDB.Core.Api)
 ## Summary
 Taggable persistence service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

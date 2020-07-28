@@ -5,6 +5,17 @@ description: IPolicyInformationService (SanteDB.Core.Api)
 ## Summary
 Represents a contract for a policy information service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

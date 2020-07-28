@@ -5,6 +5,17 @@ description: IDataPersistenceServiceEx`1 (SanteDB.Core.Api)
 ## Summary
 Extended data persistence service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

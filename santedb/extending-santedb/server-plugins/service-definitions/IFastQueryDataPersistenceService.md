@@ -5,6 +5,17 @@ description: IFastQueryDataPersistenceService`1 (SanteDB.Core.Api)
 ## Summary
 Data persistence service lean mode
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

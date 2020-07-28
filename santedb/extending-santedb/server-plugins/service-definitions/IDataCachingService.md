@@ -6,6 +6,20 @@ description: IDataCachingService (SanteDB.Core.Api)
 Represents a data caching service which allows services to retrieve
             cached objects
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Added|System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs>|Item was added to cache|
+|Updated|System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs>|Item was updated from cache|
+|Removed|System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs>|Item was removed from cache|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

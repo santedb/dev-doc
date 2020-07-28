@@ -5,6 +5,17 @@ description: IRecordMatchingConfigurationService (SanteDB.Core.Api)
 ## Summary
 Represents a service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

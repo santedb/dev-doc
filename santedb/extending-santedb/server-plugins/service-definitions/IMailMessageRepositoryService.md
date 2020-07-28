@@ -5,6 +5,19 @@ description: IMailMessageRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents an alerting service.
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Committed|System.EventHandler<SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert is received.|
+|Received|System.EventHandler<SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

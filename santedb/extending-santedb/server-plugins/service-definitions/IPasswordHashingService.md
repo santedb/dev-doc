@@ -5,6 +5,17 @@ description: IPasswordHashingService (SanteDB.Core.Api)
 ## Summary
 Password hashing service.
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

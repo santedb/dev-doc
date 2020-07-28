@@ -5,6 +5,17 @@ description: IPolicyDecisionService (SanteDB.Core.Api)
 ## Summary
 Represents a policy decision service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

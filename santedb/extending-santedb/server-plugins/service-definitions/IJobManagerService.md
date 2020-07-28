@@ -5,6 +5,17 @@ description: IJobManagerService (SanteDB.Core.Api)
 ## Summary
 Job manager service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

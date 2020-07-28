@@ -5,6 +5,17 @@ description: IClinicalProtocolRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a service that can do clinical protocols
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

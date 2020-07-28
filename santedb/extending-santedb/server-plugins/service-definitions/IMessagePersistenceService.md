@@ -5,6 +5,17 @@ description: IMessagePersistenceService (SanteDB.Core.Api)
 ## Summary
 Identifies a structure for message persistence service implementations
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

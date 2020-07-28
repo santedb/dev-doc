@@ -5,6 +5,17 @@ description: ISubscriptionRepository (SanteDB.Core.Api)
 ## Summary
 Represents an implementation of a repository which loads subscription definitions
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

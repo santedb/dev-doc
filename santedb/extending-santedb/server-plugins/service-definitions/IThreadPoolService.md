@@ -5,6 +5,17 @@ description: IThreadPoolService (SanteDB.Core.Api)
 ## Summary
 Represents a thread pooling service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

@@ -5,6 +5,17 @@ description: IFreetextSearchService (SanteDB.Core.Api)
 ## Summary
 Free text search service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

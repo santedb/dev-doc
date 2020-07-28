@@ -5,6 +5,17 @@ description: IBarcodeGeneratorService (SanteDB.Core.Api)
 ## Summary
 Represents a barcode generator
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

@@ -5,6 +5,17 @@ description: IAuditDispatchService (SanteDB.Core.Api)
 ## Summary
 Represents a service that dispatches audits to a central repository
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

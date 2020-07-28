@@ -5,6 +5,17 @@ description: IAliasProvider (SanteDB.Core.Api)
 ## Summary
 Represents a provider for aliases
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

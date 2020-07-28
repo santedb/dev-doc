@@ -5,6 +5,17 @@ description: IStockManagementRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a stock management repository service.
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

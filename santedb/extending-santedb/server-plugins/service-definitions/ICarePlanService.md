@@ -5,6 +5,17 @@ description: ICarePlanService (SanteDB.Core.Api)
 ## Summary
 Represents a class which can create care plans
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

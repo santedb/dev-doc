@@ -9,6 +9,17 @@ Represents a service that executes business rules based on triggers which happen
 Note: This can be done, instead with events on the persistence layer on the SanteDB datalayer, however there
             may come a time when a rule is fired without persistence occurring
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

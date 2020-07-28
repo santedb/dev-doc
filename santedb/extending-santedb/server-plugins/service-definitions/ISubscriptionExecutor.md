@@ -5,6 +5,19 @@ description: ISubscriptionExecutor (SanteDB.Core.Api)
 ## Summary
 Represents a subscription executor
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Executed|System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<SanteDB.Core.Model.IdentifiedData>>|Occurs when queried.|
+|Executing|System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<SanteDB.Core.Model.IdentifiedData>>|Occurs when querying.|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

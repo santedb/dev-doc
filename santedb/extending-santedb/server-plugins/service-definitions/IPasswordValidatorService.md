@@ -5,6 +5,17 @@ description: IPasswordValidatorService (SanteDB.Core.Api)
 ## Summary
 Represents a password validation service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

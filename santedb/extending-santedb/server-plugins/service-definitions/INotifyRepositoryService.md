@@ -5,6 +5,27 @@ description: INotifyRepositoryService`1 (SanteDB.Core.Api)
 ## Summary
 Repreents a repository which notifies of changes
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Inserting|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TModel>>|Data is inserting|
+|Inserted|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TModel>>|Fired after data was inserted|
+|Saving|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TModel>>|Fired before saving|
+|Saved|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TModel>>|Fired after data was saved|
+|Obsoleting|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TModel>>|Fired before obsoleting|
+|Obsoleted|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TModel>>|Fired after data was obsoleted|
+|Retrieving|System.EventHandler<SanteDB.Core.Event.DataRetrievingEventArgs<TModel>>|Retrieving the data|
+|Retrieved|System.EventHandler<SanteDB.Core.Event.DataRetrievedEventArgs<TModel>>|Fired after data was retrieved|
+|Querying|System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<TModel>>|Fired after data was queried|
+|Queried|System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<TModel>>|Fired after data was queried|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

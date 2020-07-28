@@ -5,6 +5,17 @@ description: IRoleProviderService (SanteDB.Core.Api)
 ## Summary
 Represents a service which is capableof retrieving roles
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

@@ -5,6 +5,19 @@ description: ISessionProviderService (SanteDB.Core.Api)
 ## Summary
 Represents a service which is responsible for the storage and retrieval of sessions
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Established|System.EventHandler<SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has established|
+|Abandoned|System.EventHandler<SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has ended by the user's decision|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

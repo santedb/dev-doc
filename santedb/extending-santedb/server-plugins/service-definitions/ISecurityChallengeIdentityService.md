@@ -5,6 +5,19 @@ description: ISecurityChallengeIdentityService (SanteDB.Core.Api)
 ## Summary
 Represents a security challenge service which can provide identity
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
+|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

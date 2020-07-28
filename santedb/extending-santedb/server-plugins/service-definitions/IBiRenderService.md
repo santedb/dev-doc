@@ -5,6 +5,17 @@ description: IBiRenderService (SanteDB.BI)
 ## Summary
 BI Render service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

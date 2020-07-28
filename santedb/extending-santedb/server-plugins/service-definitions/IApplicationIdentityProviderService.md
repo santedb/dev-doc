@@ -5,6 +5,19 @@ description: IApplicationIdentityProviderService (SanteDB.Core.Api)
 ## Summary
 Represents a service which retrieves IPrincipal objects for applications.
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
+|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

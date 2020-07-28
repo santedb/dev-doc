@@ -5,6 +5,17 @@ description: IBiMetadataRepository (SanteDB.BI)
 ## Summary
 Represents a metadata repository for the BIS services
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

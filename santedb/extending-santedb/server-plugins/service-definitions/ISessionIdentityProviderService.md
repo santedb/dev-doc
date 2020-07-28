@@ -5,6 +5,17 @@ description: ISessionIdentityProviderService (SanteDB.Core.Api)
 ## Summary
 Represents a session identity service that can provide identities
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

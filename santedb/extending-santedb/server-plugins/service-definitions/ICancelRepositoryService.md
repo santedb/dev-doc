@@ -5,6 +5,17 @@ description: ICancelRepositoryService`1 (SanteDB.Core.Api)
 ## Summary
 Represents a repository that can cancel an act
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

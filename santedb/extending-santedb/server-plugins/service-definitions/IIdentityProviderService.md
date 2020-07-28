@@ -5,6 +5,19 @@ description: IIdentityProviderService (SanteDB.Core.Api)
 ## Summary
 Identity provider service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
+|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

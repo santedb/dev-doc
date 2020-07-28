@@ -5,6 +5,17 @@ description: IQueryPersistenceService (SanteDB.Core.Api)
 ## Summary
 Query persistence service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

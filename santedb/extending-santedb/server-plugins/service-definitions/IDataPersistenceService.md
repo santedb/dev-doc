@@ -6,6 +6,27 @@ description: IDataPersistenceService`1 (SanteDB.Core.Api)
 Represents a data persistence service which is capable of storing and retrieving data
             to/from a data store
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|Inserted|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TData>>|Occurs when inserted.|
+|Inserting|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TData>>|Occurs when inserting.|
+|Updated|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TData>>|Occurs when updated.|
+|Updating|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TData>>|Occurs when updating.|
+|Obsoleted|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TData>>|Occurs when obsoleted.|
+|Obsoleting|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TData>>|Occurs when obsoleting.|
+|Queried|System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<TData>>|Occurs when queried.|
+|Querying|System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<TData>>|Occurs when querying.|
+|Retrieving|System.EventHandler<SanteDB.Core.Event.DataRetrievingEventArgs<TData>>|Data is being retrieved|
+|Retrieved|System.EventHandler<SanteDB.Core.Event.DataRetrievedEventArgs<TData>>|Fired when data has been retrieved|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

@@ -5,6 +5,18 @@ description: IElevatableIdentityProviderService (SanteDB.Core.Api)
 ## Summary
 Represents an identity provider that allows for elevation
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|OverrideRequested|System.EventHandler<SanteDB.Core.Security.Services.SecurityOverrideEventArgs>|The caller has requested an override|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

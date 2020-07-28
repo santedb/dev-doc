@@ -5,6 +5,17 @@ description: ITwoFactorSecretGenerator (SanteDB.Core.Api)
 ## Summary
 Identifies a class which can generate TFA secrets
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

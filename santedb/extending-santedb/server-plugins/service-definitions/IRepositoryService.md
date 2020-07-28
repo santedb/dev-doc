@@ -5,6 +5,17 @@ description: IRepositoryService`1 (SanteDB.Core.Api)
 ## Summary
 Represents a repository service base
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 None

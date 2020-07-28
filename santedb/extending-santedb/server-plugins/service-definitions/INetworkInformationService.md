@@ -5,6 +5,18 @@ description: INetworkInformationService (SanteDB.Core.Api)
 ## Summary
 Represents network information service
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+|NetworkStatusChanged|System.EventHandler|Fired when the network status changes|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

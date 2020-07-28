@@ -5,6 +5,17 @@ description: IServiceImplementation (SanteDB.Core.Api)
 ## Summary
 Represents a marker class for a service implementation
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 

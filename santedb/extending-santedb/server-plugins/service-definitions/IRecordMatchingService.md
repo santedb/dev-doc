@@ -5,6 +5,17 @@ description: IRecordMatchingService (SanteDB.Core.Api)
 ## Summary
 Represents a service that performs record matching and classification
 
+## Events
+
+|Event|Type|Description|
+|-|-|-|
+
+## Properties
+
+
+## Methods
+
+
 ## Implementations
 
 
