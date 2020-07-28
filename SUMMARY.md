@@ -64,6 +64,7 @@
     * [Plugin Metadata](santedb/extending-santedb/server-plugins/plugin-metadata.md)
     * [Database Patching](santedb/extending-santedb/server-plugins/database-patching.md)
     * [Unit Testing Framework](santedb/extending-santedb/server-plugins/unit-testing-framework.md)
+    * [Service Definitions](santedb/extending-santedb/server-plugins/service-definitions.md)
     * [Authoring Plugins](santedb/extending-santedb/server-plugins/authoring-plugins.md)
   * [Business Intelligence Services](santedb/extending-santedb/business-intelligence-bi-assets/README.md)
     * [BI Asset Definitions](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/README.md)
