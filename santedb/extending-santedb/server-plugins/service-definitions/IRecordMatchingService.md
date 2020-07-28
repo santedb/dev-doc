@@ -12,7 +12,7 @@ Represents a service that performs record matching and classification
 Represents a deterministic record matching service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -26,7 +26,7 @@ Represents a deterministic record matching service
 Represents a probabalistic record matching service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -34,8 +34,4 @@ Represents a probabalistic record matching service
 		<add type="SanteDB.Matcher.Matchers.WeightedRecordMatchingService, SanteDB.Matcher, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
-```
-## Example Implementation
-```
-None
 ```

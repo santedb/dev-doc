@@ -9,7 +9,3 @@ Represents a data persistence provider that can store and continue queries
 
 None
 
-## Example Implementation
-```
-None
-```

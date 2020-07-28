@@ -9,7 +9,3 @@ Represents a barcode generator
 
 None
 
-## Example Implementation
-```
-None
-```

@@ -13,7 +13,7 @@ Represents a simple data warehousing service which allows business rules to stas
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -21,8 +21,4 @@ TODO: Document this
 		<add type="SanteDB.Warehouse.ADO.ADODataWarehouse, SanteDB.Warehouse.ADO, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
-```
-## Example Implementation
-```
-None
 ```

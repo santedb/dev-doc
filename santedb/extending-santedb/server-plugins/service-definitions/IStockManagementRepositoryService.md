@@ -12,7 +12,7 @@ Represents a stock management repository service.
 Represents a stock management repository service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -20,8 +20,4 @@ Represents a stock management repository service.
 		<add type="SanteDB.Core.Services.Impl.LocalStockManagementRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
-```
-## Example Implementation
-```
-None
 ```

@@ -10,7 +10,3 @@ Represents a data persistence service which is capable of storing and retrieving
 
 None
 
-## Example Implementation
-```
-None
-```

@@ -9,7 +9,3 @@ Represents a provider for aliases
 
 None
 
-## Example Implementation
-```
-None
-```

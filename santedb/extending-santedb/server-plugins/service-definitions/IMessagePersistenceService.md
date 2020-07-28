@@ -9,7 +9,3 @@ Identifies a structure for message persistence service implementations
 
 None
 
-## Example Implementation
-```
-None
-```

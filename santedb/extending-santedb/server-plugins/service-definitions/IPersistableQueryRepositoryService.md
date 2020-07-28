@@ -9,7 +9,3 @@ Persistable query provider is an extensable interface which can perform a query 
 
 None
 
-## Example Implementation
-```
-None
-```

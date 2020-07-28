@@ -9,7 +9,3 @@ Extended data persistence service
 
 None
 
-## Example Implementation
-```
-None
-```

@@ -12,7 +12,7 @@ Represents a marker class for a service implementation
 OAuth2 message handler
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -26,7 +26,7 @@ OAuth2 message handler
 Represents a default implementation of a BIS metadata repository which loads definitions from loaded applets
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -40,7 +40,7 @@ Represents a default implementation of a BIS metadata repository which loads def
 Rendering service which renders reports locally
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -54,7 +54,7 @@ Rendering service which renders reports locally
 Represents a rule service base binding
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -68,7 +68,7 @@ Represents a rule service base binding
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -82,7 +82,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -96,7 +96,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -110,7 +110,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -124,7 +124,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -138,7 +138,7 @@ TODO: Document this
 Applet clinical protocol repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -152,7 +152,7 @@ Applet clinical protocol repository
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -166,7 +166,7 @@ TODO: Document this
 Local policy enforcement point service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -180,7 +180,7 @@ Local policy enforcement point service
 A daemon service which listens to audit sources and forwards them to the auditor
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -195,7 +195,7 @@ Represents a care plan service that can bundle protocol acts together
             based on their start/stop times
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -209,7 +209,7 @@ Represents a care plan service that can bundle protocol acts together
 Represents a simple patch service which can calculate patches and apply them
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -224,7 +224,7 @@ Represents a thread pool which is implemented separately from the default .net
             threadpool, this is to reduce the load on the .net framework thread pool
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -238,7 +238,7 @@ Represents a thread pool which is implemented separately from the default .net
 Represents a daemon service that registers a series of merge services which can merge records together
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -252,7 +252,7 @@ Represents a daemon service that registers a series of merge services which can 
 Represents a bundle data quality rule
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -266,7 +266,7 @@ Represents a bundle data quality rule
 Represents a single data quality business rule
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -280,7 +280,7 @@ Represents a single data quality business rule
 The data quality service handler
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -294,7 +294,7 @@ The data quality service handler
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -308,7 +308,7 @@ TODO: Document this
 An implementation of the ISubscriptionRepository that loads definitions from applets
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -322,7 +322,7 @@ An implementation of the ISubscriptionRepository that loads definitions from app
 Provides a context for components.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -336,7 +336,7 @@ Provides a context for components.
 Represents the default implementation of the timer
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -350,7 +350,7 @@ Represents the default implementation of the timer
 Default network information service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -364,7 +364,7 @@ Default network information service
 Represents a file system queue that monitors directories
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -378,7 +378,7 @@ Represents a file system queue that monitors directories
 Represents an act repository service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -392,7 +392,7 @@ Represents an act repository service.
 Represents generic local clinical data repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -406,7 +406,7 @@ Represents generic local clinical data repository
 Generic local concept repository with sufficient permissions
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -420,7 +420,7 @@ Generic local concept repository with sufficient permissions
 Generic nullifiable local repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -434,7 +434,7 @@ Generic nullifiable local repository
 Represents a local entity relationship repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -448,7 +448,7 @@ Represents a local entity relationship repository
 Local extension types
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -462,7 +462,7 @@ Local extension types
 Local material persistence service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -476,7 +476,7 @@ Local material persistence service
 Provides operations for managing organizations.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -490,7 +490,7 @@ Provides operations for managing organizations.
 Represents a generic resource repository factory
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -504,7 +504,7 @@ Represents a generic resource repository factory
 Daemon service which adds all the repositories for acts
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -518,7 +518,7 @@ Daemon service which adds all the repositories for acts
 Represents a local alert service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -532,7 +532,7 @@ Represents a local alert service.
 Represents an applet manager service that uses the local file system
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -546,7 +546,7 @@ Represents an applet manager service that uses the local file system
 Represents a repository service for managing assigning authorities.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -560,7 +560,7 @@ Represents a repository service for managing assigning authorities.
 Represents an audit repository which stores and queries audit data.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -574,7 +574,7 @@ Represents an audit repository which stores and queries audit data.
 Local batch repository service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -588,7 +588,7 @@ Local batch repository service
 Represents a base class for entity repository services
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -602,7 +602,7 @@ Represents a base class for entity repository services
 Provides generic basis for metadata editing
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -616,7 +616,7 @@ Provides generic basis for metadata editing
 Local material persistence service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -630,7 +630,7 @@ Local material persistence service
 Local security application repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -644,7 +644,7 @@ Local security application repository
 Local security device repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -658,7 +658,7 @@ Local security device repository
 Alter policies
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -672,7 +672,7 @@ Alter policies
 Represents a local security role service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -686,7 +686,7 @@ Represents a local security role service
 Security user repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -700,7 +700,7 @@ Security user repository
 Represents a local metadata repository service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -714,7 +714,7 @@ Represents a local metadata repository service
 Provides operations for managing organizations.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -728,7 +728,7 @@ Provides operations for managing organizations.
 Local patient repository service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -742,7 +742,7 @@ Local patient repository service
 Place repository that uses local persistence
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -756,7 +756,7 @@ Place repository that uses local persistence
 Represents a stock management repository service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -770,7 +770,7 @@ Represents a stock management repository service.
 Tag persistence service for act
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -784,7 +784,7 @@ Tag persistence service for act
 Provides a redirected configuration service which reads configuration from a different file
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -798,7 +798,7 @@ Provides a redirected configuration service which reads configuration from a dif
 Localuser entity repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -813,7 +813,7 @@ Represents a service which is responsible for the
             maintenance of concepts.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -827,7 +827,7 @@ Represents a service which is responsible for the
 Represents a security repository service that uses the direct local services
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -841,7 +841,7 @@ Represents a security repository service that uses the direct local services
 A daemon which loads business rules from the applet manager
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -855,7 +855,7 @@ A daemon which loads business rules from the applet manager
 Default data signature service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -870,7 +870,7 @@ Represents a default implementation of a TFA relay service which scans the entir
             mechanisms and allows calling of them all
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -884,7 +884,7 @@ Represents a default implementation of a TFA relay service which scans the entir
 Represents a local regex password validator
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -898,7 +898,7 @@ Represents a local regex password validator
 Local policy decision service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -912,7 +912,7 @@ Local policy decision service
 SHA256 password generator service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -926,7 +926,7 @@ SHA256 password generator service
 SHA1 password generator service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -940,7 +940,7 @@ SHA1 password generator service
 SHA1 password generator service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -954,7 +954,7 @@ SHA1 password generator service
 Plaintext password generator service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -968,7 +968,7 @@ Plaintext password generator service
 Represents a TFA secret generator which uses the server's clock
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -982,7 +982,7 @@ Represents a TFA secret generator which uses the server's clock
 Local policy enforcement point service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -996,7 +996,7 @@ Local policy enforcement point service
 Data initialization service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1010,7 +1010,7 @@ Data initialization service
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1024,7 +1024,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1038,7 +1038,7 @@ TODO: Document this
 Represents a configuration provider which is for matching
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1052,7 +1052,7 @@ Represents a configuration provider which is for matching
 Applet match configuration provider loads match configurations from available applets
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1066,7 +1066,7 @@ Applet match configuration provider loads match configurations from available ap
 File based match configuration provider
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1080,7 +1080,7 @@ File based match configuration provider
 Represents a deterministic record matching service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1094,7 +1094,7 @@ Represents a deterministic record matching service
 Represents a probabalistic record matching service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1108,7 +1108,7 @@ Represents a probabalistic record matching service
 AMI Message handler
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1122,7 +1122,7 @@ AMI Message handler
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1136,7 +1136,7 @@ TODO: Document this
 Message handler for FHIR
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1150,7 +1150,7 @@ Message handler for FHIR
 Represents a notification service that listens to stock events and then prepares them for broadcast
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1164,7 +1164,7 @@ Represents a notification service that listens to stock events and then prepares
 Stock service message handler
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1178,7 +1178,7 @@ Stock service message handler
 GS1 Stock Integration Service
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1192,7 +1192,7 @@ GS1 Stock Integration Service
 The HDSI Message Handler Daemon class
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1206,7 +1206,7 @@ The HDSI Message Handler Daemon class
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1220,7 +1220,7 @@ TODO: Document this
 Represents the daemon service that starts/stops the OpenApi information file
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1234,7 +1234,7 @@ Represents the daemon service that starts/stops the OpenApi information file
 Represents a message handler for reporting services.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1248,7 +1248,7 @@ Represents a message handler for reporting services.
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1262,7 +1262,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1276,7 +1276,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1290,7 +1290,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1304,7 +1304,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1318,7 +1318,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1332,7 +1332,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1346,7 +1346,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1360,7 +1360,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1374,7 +1374,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1388,7 +1388,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1402,7 +1402,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1416,7 +1416,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1430,7 +1430,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1444,7 +1444,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1458,7 +1458,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1472,7 +1472,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1486,7 +1486,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1500,7 +1500,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1514,7 +1514,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1528,7 +1528,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1542,7 +1542,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1556,7 +1556,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1570,7 +1570,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1584,7 +1584,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1598,7 +1598,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1612,7 +1612,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1626,7 +1626,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1640,7 +1640,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1654,7 +1654,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1668,7 +1668,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1682,7 +1682,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1696,7 +1696,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1710,7 +1710,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1724,7 +1724,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1738,7 +1738,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1752,7 +1752,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1766,7 +1766,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1780,7 +1780,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1794,7 +1794,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1808,7 +1808,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1822,7 +1822,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1836,7 +1836,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1850,7 +1850,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1864,7 +1864,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1878,7 +1878,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1892,7 +1892,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1906,7 +1906,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1920,7 +1920,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1934,7 +1934,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1948,7 +1948,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1962,7 +1962,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1976,7 +1976,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -1990,7 +1990,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2004,7 +2004,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2018,7 +2018,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2032,7 +2032,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2046,7 +2046,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2060,7 +2060,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2074,7 +2074,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2088,7 +2088,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2102,7 +2102,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2116,7 +2116,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2130,7 +2130,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2144,7 +2144,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2158,7 +2158,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2172,7 +2172,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2186,7 +2186,7 @@ TODO: Document this
 Represents a persistence service for reporting services.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2200,7 +2200,7 @@ Represents a persistence service for reporting services.
 Represents a data type persistence service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2214,7 +2214,7 @@ Represents a data type persistence service.
 Represents a ReportDefinition persistence service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2228,7 +2228,7 @@ Represents a ReportDefinition persistence service.
 Represents a report format persistence service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2242,7 +2242,7 @@ Represents a report format persistence service.
 Represents a report persistence service.
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2256,7 +2256,7 @@ Represents a report persistence service.
 Represents a message handler for the BIS
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2270,7 +2270,7 @@ Represents a message handler for the BIS
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2284,7 +2284,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2298,7 +2298,7 @@ TODO: Document this
 TODO: Document this
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -2306,8 +2306,4 @@ TODO: Document this
 		<add type="SanteDB.Warehouse.ADO.ADODataWarehouse, SanteDB.Warehouse.ADO, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
-```
-## Example Implementation
-```
-None
 ```

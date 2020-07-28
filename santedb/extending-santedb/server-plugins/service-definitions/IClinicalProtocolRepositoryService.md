@@ -12,7 +12,7 @@ Represents a service that can do clinical protocols
 Applet clinical protocol repository
 
 #### Service Registration
-```
+```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
@@ -20,8 +20,4 @@ Applet clinical protocol repository
 		<add type="SanteDB.Cdss.Xml.AppletClinicalProtocolRepository, SanteDB.Cdss.Xml, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
-```
-## Example Implementation
-```
-None
 ```

@@ -13,7 +13,3 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 
 None
 
-## Example Implementation
-```
-None
-```

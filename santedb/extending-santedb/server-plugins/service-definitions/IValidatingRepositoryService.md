@@ -9,7 +9,3 @@ Represents a repository that can validate
 
 None
 
-## Example Implementation
-```
-None
-```

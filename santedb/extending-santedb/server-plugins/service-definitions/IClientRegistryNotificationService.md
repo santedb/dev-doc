@@ -9,7 +9,3 @@ Represents a client registry notification service.
 
 None
 
-## Example Implementation
-```
-None
-```

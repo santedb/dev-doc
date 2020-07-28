@@ -9,7 +9,3 @@ Represents an identity provider that allows for elevation
 
 None
 
-## Example Implementation
-```
-None
-```

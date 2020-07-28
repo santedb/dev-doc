@@ -9,7 +9,3 @@ Represents a repository service wrapping an extended persistence service
 
 None
 
-## Example Implementation
-```
-None
-```

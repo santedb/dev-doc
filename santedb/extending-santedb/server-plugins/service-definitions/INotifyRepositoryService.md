@@ -9,7 +9,3 @@ Repreents a repository which notifies of changes
 
 None
 
-## Example Implementation
-```
-None
-```

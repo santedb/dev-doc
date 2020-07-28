@@ -9,7 +9,3 @@ Represents an implementation of a repository which loads subscription definition
 
 None
 
-## Example Implementation
-```
-None
-```

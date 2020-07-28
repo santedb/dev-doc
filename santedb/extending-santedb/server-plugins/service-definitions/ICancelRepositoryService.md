@@ -9,7 +9,3 @@ Represents a repository that can cancel an act
 
 None
 
-## Example Implementation
-```
-None
-```

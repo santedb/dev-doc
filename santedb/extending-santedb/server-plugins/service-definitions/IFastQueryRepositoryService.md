@@ -9,7 +9,3 @@ Represents a query repository service which can find lean queries
 
 None
 
-## Example Implementation
-```
-None
-```

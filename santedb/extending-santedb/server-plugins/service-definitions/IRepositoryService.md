@@ -9,7 +9,3 @@ Represents a repository service base
 
 None
 
-## Example Implementation
-```
-None
-```

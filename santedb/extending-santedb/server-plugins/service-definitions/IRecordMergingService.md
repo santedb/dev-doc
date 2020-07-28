@@ -9,7 +9,3 @@ Represents a service which appropriately merges / unmerges records
 
 None
 
-## Example Implementation
-```
-None
-```

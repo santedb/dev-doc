@@ -9,7 +9,3 @@ Free text search service
 
 None
 
-## Example Implementation
-```
-None
-```

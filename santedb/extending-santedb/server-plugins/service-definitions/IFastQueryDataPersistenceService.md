@@ -9,7 +9,3 @@ Data persistence service lean mode
 
 None
 
-## Example Implementation
-```
-None
-```
