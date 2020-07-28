@@ -5,21 +5,11 @@ description: IAdhocCacheService (SanteDB.Core.Api)
 ## Summary
 A caching service which permits the storage of any data regardless of type
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Add|void|*String* **key**<br/>*T* **value**<br/>*Nullable<TimeSpan>* **timeout**|Add the specified object to the cache|
+|Add|void|*String* **key**<br/>*T* **value**<br/>*Nullable&lt;TimeSpan>* **timeout**|Add the specified object to the cache|
 |Get|T|*String* **key**|Gets the specified object from the cache|
 
 ## Implementations

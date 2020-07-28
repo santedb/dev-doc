@@ -5,24 +5,14 @@ description: IRepositoryService<TModel> (SanteDB.Core.Api)
 ## Summary
 Represents a repository service base
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |Get|TModel|*Guid* **key**|Gets the specified model.|
 |Get|TModel|*Guid* **key**<br/>*Guid* **versionKey**|Gets the specified model.|
-|Find|IEnumerable&lt;TModel>|*Expression<Func<TModel,Boolean>>* **query**|Finds the specified data.|
-|Find|IEnumerable&lt;TModel>|*Expression<Func<TModel,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Finds the specified data.|
+|Find|IEnumerable&lt;TModel>|*Expression&lt;Func&lt;TModel,Boolean>>* **query**|Finds the specified data.|
+|Find|IEnumerable&lt;TModel>|*Expression&lt;Func&lt;TModel,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Finds the specified data.|
 |Insert|TModel|*TModel* **data**|Inserts the specified data.|
 |Save|TModel|*TModel* **data**|Saves the specified data.|
 |Obsolete|TModel|*Guid* **key**|Obsoletes the specified data.|

@@ -12,11 +12,6 @@ Represents a security challenge service which can provide identity
 |Authenticating|EventHandler&lt;AuthenticatingEventArgs>|Fired prior to an authentication event|
 |Authenticated|EventHandler&lt;AuthenticatedEventArgs>|Fired after an authentication decision being made|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

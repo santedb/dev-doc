@@ -5,16 +5,6 @@ description: IRepositoryServiceFactory (SanteDB.Core.Api)
 ## Summary
 Represents a factory service which can be used to generate default factories
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

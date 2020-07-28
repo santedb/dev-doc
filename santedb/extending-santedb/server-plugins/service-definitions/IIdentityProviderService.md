@@ -12,11 +12,6 @@ Identity provider service
 |Authenticating|EventHandler&lt;AuthenticatingEventArgs>|Fired prior to an authentication event|
 |Authenticated|EventHandler&lt;AuthenticatedEventArgs>|Fired after an authentication decision being made|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
@@ -31,7 +26,7 @@ Identity provider service
 |GenerateTfaSecret|String|*String* **userName**|Set the user's two factor authentication secret|
 |DeleteIdentity|void|*String* **userName**<br/>*IPrincipal* **principal**|Delete an identity|
 |SetLockout|void|*String* **userName**<br/>*Boolean* **lockout**<br/>*IPrincipal* **principal**|Set lockout|
-|AddClaim|void|*String* **userName**<br/>*IClaim* **claim**<br/>*IPrincipal* **principal**<br/>*Nullable<TimeSpan>* **expiriy**|Adds a claim to the specified user account|
+|AddClaim|void|*String* **userName**<br/>*IClaim* **claim**<br/>*IPrincipal* **principal**<br/>*Nullable&lt;TimeSpan>* **expiriy**|Adds a claim to the specified user account|
 |RemoveClaim|void|*String* **userName**<br/>*String* **claimType**<br/>*IPrincipal* **principal**|Removes a claim from the specified user account|
 
 ## Implementations

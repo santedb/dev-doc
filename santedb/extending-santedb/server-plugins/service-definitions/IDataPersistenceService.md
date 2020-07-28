@@ -21,11 +21,6 @@ Represents a data persistence service which is capable of storing and retrieving
 |Retrieving|EventHandler&lt;DataRetrievingEventArgs&lt;TData>>|Data is being retrieved|
 |Retrieved|EventHandler&lt;DataRetrievedEventArgs&lt;TData>>|Fired when data has been retrieved|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
@@ -33,10 +28,10 @@ Represents a data persistence service which is capable of storing and retrieving
 |Insert|TData|*TData* **data**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Insert the specified data.|
 |Update|TData|*TData* **data**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Update the specified data|
 |Obsolete|TData|*TData* **data**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Obsolete the specified identified data|
-|Get|TData|*Guid* **key**<br/>*Nullable<Guid>* **versionKey**<br/>*Boolean* **loadFast**<br/>*IPrincipal* **principal**|Get the specified key.|
-|Query|IEnumerable&lt;TData>|*Expression<Func<TData,Boolean>>* **query**<br/>*IPrincipal* **principal**|Query the specified data|
-|Query|IEnumerable&lt;TData>|*Expression<Func<TData,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*IPrincipal* **principal**<br/>*ModelSort`1[]* **orderBy**|Query the specified data|
-|Count|Int64|*Expression<Func<TData,Boolean>>* **p**<br/>*IPrincipal* **authContext**|Performs a fast count|
+|Get|TData|*Guid* **key**<br/>*Nullable&lt;Guid>* **versionKey**<br/>*Boolean* **loadFast**<br/>*IPrincipal* **principal**|Get the specified key.|
+|Query|IEnumerable&lt;TData>|*Expression&lt;Func&lt;TData,Boolean>>* **query**<br/>*IPrincipal* **principal**|Query the specified data|
+|Query|IEnumerable&lt;TData>|*Expression&lt;Func&lt;TData,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*IPrincipal* **principal**<br/>*ModelSort`1[]* **orderBy**|Query the specified data|
+|Count|Int64|*Expression&lt;Func&lt;TData,Boolean>>* **p**<br/>*IPrincipal* **authContext**|Performs a fast count|
 
 ## Implementations
 

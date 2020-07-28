@@ -12,20 +12,15 @@ Represents a service which appropriately merges / unmerges records
 |Merging|EventHandler&lt;DataMergingEventArgs&lt;T>>|Fired prior to a merge occurring|
 |Merged|EventHandler&lt;DataMergeEventArgs&lt;T>>|Fired after a merge has occurred|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GetDuplicates|IEnumerable&lt;T>|*Guid* **masterKey**|Gets the duplicates for the specified master record|
 |GetIgnored|IEnumerable&lt;T>|*Guid* **masterKey**|Gets the ignore list for the specified master record|
-|Ignore|T|*Guid* **masterKey**<br/>*IEnumerable<Guid>* **falsePositives**|Indicates that the engine should ignore the specified false positives|
-|UnIgnore|T|*Guid* **masterKey**<br/>*IEnumerable<Guid>* **ignoredKeys**|Indicates that an ignored record should be removed from the ignore list|
-|Merge|T|*Guid* **masterKey**<br/>*IEnumerable<Guid>* **linkedDuplicates**|Merges the specified  into|
+|Ignore|T|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **falsePositives**|Indicates that the engine should ignore the specified false positives|
+|UnIgnore|T|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **ignoredKeys**|Indicates that an ignored record should be removed from the ignore list|
+|Merge|T|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **linkedDuplicates**|Merges the specified  into|
 |Unmerge|T|*Guid* **masterKey**<br/>*Guid* **unmergeDuplicateKey**|Un-merges the specified  from|
 |Diff|Patch|*Guid* **masterKey**<br/>*Guid* **linkedDuplicateKey**|Gets the differences between the master and the linked duplicate|
 |FlagDuplicates|void|*String* **configurationName**|Clears all candidates and re-runs the specified  for the entire database|

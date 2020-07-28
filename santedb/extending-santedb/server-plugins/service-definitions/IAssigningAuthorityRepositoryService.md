@@ -5,16 +5,6 @@ description: IAssigningAuthorityRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a repository service for managing assigning authorities.
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

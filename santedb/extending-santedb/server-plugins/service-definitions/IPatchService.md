@@ -5,16 +5,6 @@ description: IPatchService (SanteDB.Core.Api)
 ## Summary
 Represents a patch service which can calculate and apply patches
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

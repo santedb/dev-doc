@@ -5,24 +5,14 @@ description: IThreadPoolService (SanteDB.Core.Api)
 ## Summary
 Represents a thread pooling service
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|QueueUserWorkItem|void|*Action<Object>* **action**|Queues the specified action into the worker pool|
-|QueueUserWorkItem|void|*Action<Object>* **action**<br/>*Object* **parm**|Queues the specified action into the worker pool|
-|QueueUserWorkItem|void|*TimeSpan* **timeout**<br/>*Action<Object>* **action**<br/>*Object* **parm**|Queues the specified action into the worker pool|
-|QueueNonPooledWorkItem|void|*Action<Object>* **action**<br/>*Object* **parm**|Creates a normal thread which is not in the pool|
+|QueueUserWorkItem|void|*Action&lt;Object>* **action**|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|*Action&lt;Object>* **action**<br/>*Object* **parm**|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|*TimeSpan* **timeout**<br/>*Action&lt;Object>* **action**<br/>*Object* **parm**|Queues the specified action into the worker pool|
+|QueueNonPooledWorkItem|void|*Action&lt;Object>* **action**<br/>*Object* **parm**|Creates a normal thread which is not in the pool|
 
 ## Implementations
 

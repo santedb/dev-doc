@@ -5,21 +5,11 @@ description: IClinicalProtocolRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a service that can do clinical protocols
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindProtocol|IEnumerable&lt;Protocol>|*Expression<Func<Protocol,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**|Find protocols in the repository service|
+|FindProtocol|IEnumerable&lt;Protocol>|*Expression&lt;Func&lt;Protocol,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**|Find protocols in the repository service|
 |InsertProtocol|Protocol|*Protocol* **data**|Find protocols in the repository service|
 
 ## Implementations

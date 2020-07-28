@@ -5,11 +5,6 @@ description: IConfigurationManager (SanteDB.Core.Api)
 ## Summary
 Represents a configuration manager service
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
 ## Properties
 
 |Property|Type|Access|Description|

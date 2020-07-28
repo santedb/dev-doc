@@ -5,21 +5,11 @@ description: IFastQueryDataPersistenceService<TEntity> (SanteDB.Core.Api)
 ## Summary
 Data persistence service lean mode
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|QueryFast|IEnumerable&lt;TEntity>|*Expression<Func<TEntity,Boolean>>* **query**<br/>*Guid* **queryId**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalCount**<br/>*IPrincipal* **overrideAuthContext**|Queries or continues a query in lean mode|
+|QueryFast|IEnumerable&lt;TEntity>|*Expression&lt;Func&lt;TEntity,Boolean>>* **query**<br/>*Guid* **queryId**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalCount**<br/>*IPrincipal* **overrideAuthContext**|Queries or continues a query in lean mode|
 
 ## Implementations
 

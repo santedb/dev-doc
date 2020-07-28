@@ -5,23 +5,13 @@ description: IClientRegistryNotificationService (SanteDB.Core.Api)
 ## Summary
 Represents a client registry notification service.
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|NotifyDuplicatesResolved|void|*NotificationEventArgs<Patient>* **eventArgs**|Notify that duplicates have been resolved.|
-|NotifyRegister|void|*NotificationEventArgs<Patient>* **eventArgs**|Notify that a registration occurred.|
-|NotifyUpdate|void|*NotificationEventArgs<Patient>* **eventArgs**|Notify that an update occurred.|
+|NotifyDuplicatesResolved|void|*NotificationEventArgs&lt;Patient>* **eventArgs**|Notify that duplicates have been resolved.|
+|NotifyRegister|void|*NotificationEventArgs&lt;Patient>* **eventArgs**|Notify that a registration occurred.|
+|NotifyUpdate|void|*NotificationEventArgs&lt;Patient>* **eventArgs**|Notify that an update occurred.|
 
 ## Implementations
 

@@ -5,27 +5,17 @@ description: IQueryPersistenceService (SanteDB.Core.Api)
 ## Summary
 Query persistence service
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |FindQueryId|Guid|*Object* **queryTag**|Find the query ID by the query tag|
-|RegisterQuerySet|Boolean|*Guid* **queryId**<br/>*IEnumerable<Guid>* **results**<br/>*Object* **tag**<br/>*Int32* **totalResults**|Register a query set|
+|RegisterQuerySet|Boolean|*Guid* **queryId**<br/>*IEnumerable&lt;Guid>* **results**<br/>*Object* **tag**<br/>*Int32* **totalResults**|Register a query set|
 |IsRegistered|Boolean|*Guid* **queryId**|Returns true if the query identifier is already registered|
 |GetQueryResults|IEnumerable&lt;Guid>|*Guid* **queryId**<br/>*Int32* **offset**<br/>*Int32* **count**|Get query results from the query set result store|
 |GetQueryTag|Object|*Guid* **queryId**|Get the query tag value from the result store|
 |QueryResultTotalQuantity|Int64|*Guid* **queryId**|Count the number of remaining query results|
-|AddResults|void|*Guid* **queryId**<br/>*IEnumerable<Guid>* **results**|Add results to the query|
+|AddResults|void|*Guid* **queryId**<br/>*IEnumerable&lt;Guid>* **results**|Add results to the query|
 |SetQueryTag|void|*Guid* **queryId**<br/>*Object* **value**|Set or update the query tag of an existing query id|
 
 ## Implementations

@@ -5,16 +5,6 @@ description: IValidatingRepositoryService<TModel> (SanteDB.Core.Api)
 ## Summary
 Represents a repository that can validate
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

@@ -20,16 +20,6 @@ Repreents a repository which notifies of changes
 |Querying|EventHandler&lt;QueryRequestEventArgs&lt;TModel>>|Fired after data was queried|
 |Queried|EventHandler&lt;QueryResultEventArgs&lt;TModel>>|Fired after data was queried|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
-## Operations
-
-|Operation|Response/Return|Input/Parameter|Description|
-|-|-|-|-|
-
 ## Implementations
 
 None

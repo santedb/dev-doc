@@ -9,11 +9,6 @@ Represents a service that executes business rules based on triggers which happen
 Note: This can be done, instead with events on the persistence layer on the SanteDB datalayer, however there
             may come a time when a rule is fired without persistence occurring
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
 ## Properties
 
 |Property|Type|Access|Description|
@@ -26,7 +21,7 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 |-|-|-|-|
 |AfterInsert|TModel|*TModel* **data**|Called after an insert occurs|
 |AfterObsolete|TModel|*TModel* **data**|Called after obsolete committed|
-|AfterQuery|IEnumerable&lt;TModel>|*IEnumerable<TModel>* **results**|Called after query|
+|AfterQuery|IEnumerable&lt;TModel>|*IEnumerable&lt;TModel>* **results**|Called after query|
 |AfterRetrieve|TModel|*TModel* **result**|Called after retrieve|
 |AfterUpdate|TModel|*TModel* **data**|Called after update committed|
 |BeforeInsert|TModel|*TModel* **data**|Called before an insert occurs|

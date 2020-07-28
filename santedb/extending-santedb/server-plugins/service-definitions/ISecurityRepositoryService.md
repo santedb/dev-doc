@@ -5,16 +5,6 @@ description: ISecurityRepositoryService (SanteDB.Core.Api)
 ## Summary
 Security repository service is responsible for the maintenance of security entities
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
@@ -34,7 +24,7 @@ Security repository service is responsible for the maintenance of security entit
 |LockUser|void|*Guid* **userId**|Locks a specific user.|
 |UnlockUser|void|*Guid* **userId**|Unlocks a specific user.|
 |GetProvenance|SecurityProvenance|*Guid* **provenanceId**|Get the provenance object|
-|FindProvenance|IEnumerable&lt;SecurityProvenance>|*Expression<Func<SecurityProvenance,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**<br/>*ModelSort`1[]* **orderBy**|Find provenance objects matching the specified object|
+|FindProvenance|IEnumerable&lt;SecurityProvenance>|*Expression&lt;Func&lt;SecurityProvenance,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**<br/>*ModelSort`1[]* **orderBy**|Find provenance objects matching the specified object|
 
 ## Implementations
 

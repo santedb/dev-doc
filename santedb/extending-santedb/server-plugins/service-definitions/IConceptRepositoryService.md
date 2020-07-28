@@ -5,16 +5,6 @@ description: IConceptRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a service which is responsible for the maintenance of concepts.
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

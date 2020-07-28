@@ -5,24 +5,14 @@ description: IAuditRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a service which can persist and retrieve audits
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |Insert|AuditData|*AuditData* **audit**|Insert an audit into the repository|
-|Find|IEnumerable&lt;AuditData>|*Expression<Func<AuditData,Boolean>>* **query**|Find an audit from the audit repository|
+|Find|IEnumerable&lt;AuditData>|*Expression&lt;Func&lt;AuditData,Boolean>>* **query**|Find an audit from the audit repository|
 |Get|AuditData|*Object* **correlationKey**|Get the specified audit|
-|Find|IEnumerable&lt;AuditData>|*Expression<Func<AuditData,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Find an audit from the audit repository|
+|Find|IEnumerable&lt;AuditData>|*Expression&lt;Func&lt;AuditData,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Find an audit from the audit repository|
 
 ## Implementations
 

@@ -5,11 +5,6 @@ description: ICarePlanService (SanteDB.Core.Api)
 ## Summary
 Represents a class which can create care plans
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
 ## Properties
 
 |Property|Type|Access|Description|
@@ -22,8 +17,8 @@ Represents a class which can create care plans
 |-|-|-|-|
 |CreateCarePlan|CarePlan|*Patient* **p**|Create a care plam|
 |CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**|Create a care plam|
-|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary<String,Object>* **parameters**|Create a care plam|
-|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary<String,Object>* **parameters**<br/>*Guid[]* **protocols**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary&lt;String,Object>* **parameters**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary&lt;String,Object>* **parameters**<br/>*Guid[]* **protocols**|Create a care plam|
 
 ## Implementations
 

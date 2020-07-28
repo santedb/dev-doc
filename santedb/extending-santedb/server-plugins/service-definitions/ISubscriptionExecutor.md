@@ -12,17 +12,12 @@ Represents a subscription executor
 |Executed|EventHandler&lt;QueryResultEventArgs&lt;IdentifiedData>>|Occurs when queried.|
 |Executing|EventHandler&lt;QueryRequestEventArgs&lt;IdentifiedData>>|Occurs when querying.|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Execute|IEnumerable&lt;Object>|*Guid* **subscriptionKey**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
-|Execute|IEnumerable&lt;Object>|*SubscriptionDefinition* **subscription**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|*Guid* **subscriptionKey**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|*SubscriptionDefinition* **subscription**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
 
 ## Implementations
 

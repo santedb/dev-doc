@@ -5,21 +5,11 @@ description: IUnionQueryDataPersistenceService<TEntity> (SanteDB.Core.Api)
 ## Summary
 Represents a data persistence provider that can store and continue queries
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Union|IEnumerable&lt;TEntity>|*Expression`1[]* **queries**<br/>*Guid* **queryId**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalCount**<br/>*IPrincipal* **overrideAuthContext**<br/>*ModelSort`1[]* **orderBy**|Queries or continues a query|
+|Union|IEnumerable&lt;TEntity>|*Expression`1[]* **queries**<br/>*Guid* **queryId**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalCount**<br/>*IPrincipal* **overrideAuthContext**<br/>*ModelSort`1[]* **orderBy**|Queries or continues a query|
 
 ## Implementations
 

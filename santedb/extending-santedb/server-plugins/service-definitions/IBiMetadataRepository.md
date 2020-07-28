@@ -5,21 +5,11 @@ description: IBiMetadataRepository (SanteDB.BI)
 ## Summary
 Represents a metadata repository for the BIS services
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Query|IEnumerable&lt;TBisDefinition>|*Expression<Func<TBisDefinition,Boolean>>* **filter**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**|Query metadata repository for|
+|Query|IEnumerable&lt;TBisDefinition>|*Expression&lt;Func&lt;TBisDefinition,Boolean>>* **filter**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**|Query metadata repository for|
 |Get|TBisDefinition|*String* **id**|Get the specified BI definition by identifier|
 |Remove|void|*String* **id**|Removes the specified BI definition from the repository|
 |Insert|TBisDefinition|*TBisDefinition* **metadata**|Inserts the specified BI definition into the repository|

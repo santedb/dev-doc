@@ -5,11 +5,6 @@ description: ISqlDataPersistenceService (SanteDB.Core.Api)
 ## Summary
 Represents a data persistence service where arbitrary SQL can be run
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
 ## Properties
 
 |Property|Type|Access|Description|

@@ -5,21 +5,11 @@ description: IBiRenderService (SanteDB.BI)
 ## Summary
 BI Render service
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Render|Stream|*String* **reportId**<br/>*String* **viewName**<br/>*String* **formatName**<br/>*IDictionary<String,Object>* **parameters**<br/>*String&* **mimeType**|Render the specified report|
+|Render|Stream|*String* **reportId**<br/>*String* **viewName**<br/>*String* **formatName**<br/>*IDictionary&lt;String,Object>* **parameters**<br/>*String&* **mimeType**|Render the specified report|
 
 ## Implementations
 

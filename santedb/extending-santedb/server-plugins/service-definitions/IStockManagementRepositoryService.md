@@ -5,24 +5,14 @@ description: IStockManagementRepositoryService (SanteDB.Core.Api)
 ## Summary
 Represents a stock management repository service.
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |Adjust|Act|*ManufacturedMaterial* **manufacturedMaterial**<br/>*Place* **place**<br/>*Int32* **quantity**<br/>*Concept* **reason**|Performs a stock adjustment for the specified facility and material.|
 |GetBalance|Int32|*Place* **place**<br/>*ManufacturedMaterial* **manufacturedMaterial**|Gets the balance for the material.|
-|GetConsumed|IEnumerable&lt;ActParticipation>|*Guid* **manufacturedMaterialKey**<br/>*Guid* **placeKey**<br/>*Nullable<DateTimeOffset>* **startPeriod**<br/>*Nullable<DateTimeOffset>* **endPeriod**|Get the total amount of consumed objects|
-|FindAdjustments|IEnumerable&lt;Act>|*Guid* **manufacturedMaterialKey**<br/>*Guid* **placeKey**<br/>*Nullable<DateTimeOffset>* **startPeriod**<br/>*Nullable<DateTimeOffset>* **endPeriod**|Find adjustments matching the specified|
+|GetConsumed|IEnumerable&lt;ActParticipation>|*Guid* **manufacturedMaterialKey**<br/>*Guid* **placeKey**<br/>*Nullable&lt;DateTimeOffset>* **startPeriod**<br/>*Nullable&lt;DateTimeOffset>* **endPeriod**|Get the total amount of consumed objects|
+|FindAdjustments|IEnumerable&lt;Act>|*Guid* **manufacturedMaterialKey**<br/>*Guid* **placeKey**<br/>*Nullable&lt;DateTimeOffset>* **startPeriod**<br/>*Nullable&lt;DateTimeOffset>* **endPeriod**|Find adjustments matching the specified|
 
 ## Implementations
 

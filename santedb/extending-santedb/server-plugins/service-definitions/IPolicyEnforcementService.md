@@ -5,16 +5,6 @@ description: IPolicyEnforcementService (SanteDB.Core.Api)
 ## Summary
 Represents a PEP that receives demands
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

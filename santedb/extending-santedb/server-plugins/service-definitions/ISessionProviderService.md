@@ -12,11 +12,6 @@ Represents a service which is responsible for the storage and retrieval of sessi
 |Established|EventHandler&lt;SessionEstablishedEventArgs>|Fired when the session provider service has established|
 |Abandoned|EventHandler&lt;SessionEstablishedEventArgs>|Fired when the session provider service has ended by the user's decision|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

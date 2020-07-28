@@ -12,17 +12,12 @@ Represents an alerting service.
 |Committed|EventHandler&lt;MailMessageEventArgs>|Fired when an alert is received.|
 |Received|EventHandler&lt;MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |Broadcast|void|*MailMessage* **message**|Broadcasts an alert.|
-|Find|IEnumerable&lt;MailMessage>|*Expression<Func<MailMessage,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalCount**<br/>*ModelSort`1[]* **orderBy**|Searches for alerts.|
+|Find|IEnumerable&lt;MailMessage>|*Expression&lt;Func&lt;MailMessage,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalCount**<br/>*ModelSort`1[]* **orderBy**|Searches for alerts.|
 |Get|MailMessage|*Guid* **id**|Gets an alert.|
 |Insert|MailMessage|*MailMessage* **message**|Inserts an alert message.|
 |Save|MailMessage|*MailMessage* **message**|Saves an alert.|

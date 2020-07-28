@@ -11,11 +11,6 @@ Represents an identity provider that allows for elevation
 |-|-|-|
 |OverrideRequested|EventHandler&lt;SecurityOverrideEventArgs>|The caller has requested an override|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

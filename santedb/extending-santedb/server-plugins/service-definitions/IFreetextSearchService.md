@@ -5,21 +5,11 @@ description: IFreetextSearchService (SanteDB.Core.Api)
 ## Summary
 Free text search service
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Search|IEnumerable&lt;TEntity>|*String[]* **term**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Search based on tokens|
+|Search|IEnumerable&lt;TEntity>|*String[]* **term**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Search based on tokens|
 
 ## Implementations
 

@@ -6,11 +6,6 @@ description: IAdHocDatawarehouseService (SanteDB.Core.Api)
 Represents a simple data warehousing service which allows business rules to stash
             pre-computed values.
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
 ## Properties
 
 |Property|Type|Access|Description|

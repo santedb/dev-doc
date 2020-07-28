@@ -5,16 +5,6 @@ description: IDataSigningService (SanteDB.Core.Api)
 ## Summary
 Represents a service which can sign arbitrary data
 
-## Events
-
-|Event|Type|Description|
-|-|-|-|
-
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|

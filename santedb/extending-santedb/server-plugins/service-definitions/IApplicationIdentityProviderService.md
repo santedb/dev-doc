@@ -12,11 +12,6 @@ Represents a service which retrieves IPrincipal objects for applications.
 |Authenticated|EventHandler&lt;AuthenticatedEventArgs>|Fired after an authentication request has been made.|
 |Authenticating|EventHandler&lt;AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
 
-## Properties
-
-|Property|Type|Access|Description|
-|-|-|-|-|
-
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
