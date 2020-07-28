@@ -133,6 +133,7 @@
       * [Security Repository](santedb/extending-santedb/server-plugins/service-definitions/ISecurityRepositoryService.md)
       * [Template Definition Repository](santedb/extending-santedb/server-plugins/service-definitions/ITemplateDefinitionRepositoryService.md)
       * [Thread Pool](santedb/extending-santedb/server-plugins/service-definitions/IThreadPoolService.md)
+      * [Secure Barcode Generator](santedb/extending-santedb/server-plugins/service-definitions/IBarcodeGeneratorService.md)
     * [Authoring Plugins](santedb/extending-santedb/server-plugins/authoring-plugins.md)
   * [Business Intelligence Services](santedb/extending-santedb/business-intelligence-bi-assets/README.md)
     * [BI Asset Definitions](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/README.md)

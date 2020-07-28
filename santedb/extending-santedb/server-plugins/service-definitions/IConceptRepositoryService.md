@@ -7,8 +7,21 @@ Represents a service which is responsible for the maintenance of concepts.
 
 ## Implementations
 
-None
 
+### LocalConceptRepository - (SanteDB.Core)
+Represents a service which is responsible for the
+            maintenance of concepts.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalConceptRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 ## Example Implementation
 ```
 None

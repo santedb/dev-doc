@@ -7,8 +7,48 @@ Represents a configuration manager service
 
 ## Implementations
 
-None
 
+### ConfigurationContext - (SanteDB.Configuration)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Configuration.ConfigurationContext, SanteDB.Configuration, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Local Configuration Manager - (SanteDB.Core)
+Provides a redirected configuration service which reads configuration from a different file
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.FileConfigurationService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### TestConfigurationService - (SanteDB.Core.TestFramework)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.TestFramework.TestConfigurationService, SanteDB.Core.TestFramework, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 ## Example Implementation
 ```
 None

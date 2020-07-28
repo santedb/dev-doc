@@ -7,9 +7,8 @@ Free text search service
 
 ## Implementations
 
+None
 
-### SQLiteSearchIndexService (SanteDB.DisconnectedClient.SQLite)
-Search indexing service
 ## Example Implementation
 ```
 None

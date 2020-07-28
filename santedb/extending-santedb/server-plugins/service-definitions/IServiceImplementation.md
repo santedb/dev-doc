@@ -8,228 +8,2305 @@ Represents a marker class for a service implementation
 ## Implementations
 
 
-### AppletSubscriptionRepository (build-nu)
-TODO: Document this
+### OAuth 2.0 Token Service - (SanteDB.Authentication.OAuth2)
+OAuth2 message handler
 
-### AppletBiRepository (SanteDB.BI)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Authentication.OAuth2.OAuthMessageHandler, SanteDB.Authentication.OAuth2, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### AppletBiRepository - (SanteDB.BI)
 Represents a default implementation of a BIS metadata repository which loads definitions from loaded applets
 
-### LocalBiRenderService (SanteDB.BI)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.BI.Services.Impl.AppletBiRepository, SanteDB.BI, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalBiRenderService - (SanteDB.BI)
 Rendering service which renders reports locally
 
-### RuleServiceBase`1 (SanteDB.BusinessRules.JavaScript)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.BI.Services.Impl.LocalBiRenderService, SanteDB.BI, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### RuleServiceBase`1 - (SanteDB.BusinessRules.JavaScript)
 Represents a rule service base binding
 
-### Applet Based Clinical Protocol Repository (SanteDB.Cdss.Xml)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.BusinessRules.JavaScript.RuleServiceBase`1, SanteDB.BusinessRules.JavaScript, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Memory Cache Service - (SanteDB.Caching.Memory)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Caching.Memory.MemoryCacheService, SanteDB.Caching.Memory, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Memory-Based Query Persistence Service - (SanteDB.Caching.Memory)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Caching.Memory.MemoryQueryPersistenceService, SanteDB.Caching.Memory, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### RedisAdhocCache - (SanteDB.Caching.Redis)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Caching.Redis.RedisAdhocCache, SanteDB.Caching.Redis, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### REDIS Data Caching Service - (SanteDB.Caching.Redis)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Caching.Redis.RedisCacheService, SanteDB.Caching.Redis, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### REDIS Query Persistence Service - (SanteDB.Caching.Redis)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Caching.Redis.RedisQueryPersistenceService, SanteDB.Caching.Redis, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Applet Based Clinical Protocol Repository - (SanteDB.Cdss.Xml)
 Applet clinical protocol repository
 
-### Default Policy Enforcement Service (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Cdss.Xml.AppletClinicalProtocolRepository, SanteDB.Cdss.Xml, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ConfigurationContext - (SanteDB.Configuration)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Configuration.ConfigurationContext, SanteDB.Configuration, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Default Policy Enforcement Service - (SanteDB.Core.Api)
 Local policy enforcement point service
 
-### SECURITY AUDIT SERVICE (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.Privacy.DataPolicyFilterService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SECURITY AUDIT SERVICE - (SanteDB.Core.Api)
 A daemon service which listens to audit sources and forwards them to the auditor
 
-### Simple Care Planning Service (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.Audit.AuditDaemonService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Simple Care Planning Service - (SanteDB.Core.Api)
 Represents a care plan service that can bundle protocol acts together 
             based on their start/stop times
 
-### Basic Patching Service (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Protocol.SimpleCarePlanService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Basic Patching Service - (SanteDB.Core.Api)
 Represents a simple patch service which can calculate patches and apply them
 
-### SimDataManagementService (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.SimplePatchService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### DefaultThreadPoolService - (SanteDB.Core.Api)
+Represents a thread pool which is implemented separately from the default .net
+            threadpool, this is to reduce the load on the .net framework thread pool
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.DefaultThreadPoolService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SimDataManagementService - (SanteDB.Core.Api)
 Represents a daemon service that registers a series of merge services which can merge records together
 
-### DataQualityBundleRule (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Data.SimDataManagementService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### DataQualityBundleRule - (SanteDB.Core.Api)
 Represents a bundle data quality rule
 
-### DataQualityBusinessRule`1 (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Data.Quality.DataQualityBundleRule, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### DataQualityBusinessRule`1 - (SanteDB.Core.Api)
 Represents a single data quality business rule
 
-### DataQualityService (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Data.Quality.DataQualityBusinessRule`1, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### DataQualityService - (SanteDB.Core.Api)
 The data quality service handler
 
-### SimResourceMerger`1 (SanteDB.Core.Api)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Data.Quality.DataQualityService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SimResourceMerger`1 - (SanteDB.Core.Api)
 TODO: Document this
 
-### AppletSubscriptionRepository (SanteDB.Core.Applets)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Data.SimDataManagementService+SimResourceMerger`1, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### AppletSubscriptionRepository - (SanteDB.Core.Applets)
 An implementation of the ISubscriptionRepository that loads definitions from applets
 
-### AgsService (SanteDB.DisconnectedClient.Ags)
-Represents the Applet Gateway Service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SQLiteAuditRepositoryService (SanteDB.DisconnectedClient.SQLite)
-Local audit repository service
+### ApplicationContext - (SanteDB.Core)
+Provides a context for components.
 
-### SQLiteDatawarehouse (SanteDB.DisconnectedClient.SQLite)
-Represents a simple SQLite ad-hoc data warehouse
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.ApplicationContext, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SQLiteQueueManagerService (SanteDB.DisconnectedClient.SQLite)
-Queue manager daemon
+### Default Job Manager - (SanteDB.Core)
+Represents the default implementation of the timer
 
-### SQLite-NET PCL Device Identity Provider (SanteDB.DisconnectedClient.SQLite)
-Represents a SQL.NET PCL Device identity provider
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.DefaultJobManagerService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SQLiteIdentityService (SanteDB.DisconnectedClient.SQLite)
-Local identity service.
+### Default Network Information Service - (SanteDB.Core)
+Default network information service
 
-### SQLitePolicyInformationService (SanteDB.DisconnectedClient.SQLite)
-Represents a PIP which uses the local data store
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.DefaultNetworkInformationService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SQLiteRoleProviderService (SanteDB.DisconnectedClient.SQLite)
-Local role provider service
+### File System Message Queue - (SanteDB.Core)
+Represents a file system queue that monitors directories
 
-### SQLiteSearchIndexService (SanteDB.DisconnectedClient.SQLite)
-Search indexing service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.FileSystemQueueService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### ActDerivedPersistenceService`3 (SanteDB.DisconnectedClient.SQLite)
-Represents a persistence service which is derived from an act
+### GenericLocalActRepository`1 - (SanteDB.Core)
+Represents an act repository service.
 
-### ActParticipationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Act participation persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.GenericLocalActRepository`1, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### ActPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persistence service which persists ACT classes
+### GenericLocalClinicalDataRepository`1 - (SanteDB.Core)
+Represents generic local clinical data repository
 
-### ActRelationshipPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persister which is a act relationship
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.GenericLocalClinicalDataRepository`1, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### ApplicationEntityPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents the persistence service for application eneities
+### GenericLocalConceptRepository`1 - (SanteDB.Core)
+Generic local concept repository with sufficient permissions
 
-### AuthorityPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persistence service for authorities
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.GenericLocalConceptRepository`1, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### BundlePersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a bundle persistence service
+### GenericLocalRepositoryEx`1 - (SanteDB.Core)
+Generic nullifiable local repository
 
-### ConceptPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Concept persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.GenericLocalRepositoryEx`1, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### ConceptSetPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Persistence service for ConceptSets
+### LocalEntityRelationshipRepository - (SanteDB.Core)
+Represents a local entity relationship repository
 
-### ControlActPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Control act persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalEntityRelationshipRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### DeviceEntityPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persistence service for a device entity
+### LocalExtensionTypeRepository - (SanteDB.Core)
+Local extension types
 
-### EncounterPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Persistence class which persists encounters
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalExtensionTypeRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### EntityAddressPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persistence service for entity addresses
+### LocalManufacturedMaterialRepository - (SanteDB.Core)
+Local material persistence service
 
-### EntityAddressComponentPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Entity address component persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalManufacturedMaterialRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### EntityDerivedPersistenceService`3 (SanteDB.DisconnectedClient.SQLite)
-Entity derived persistence services
+### LocalProviderRepository - (SanteDB.Core)
+Provides operations for managing organizations.
 
-### EntityNamePersistenceService (SanteDB.DisconnectedClient.SQLite)
-Entity name persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalProviderRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### EntityNameComponentPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Entity address component persistence service
+### Local Data Repository Factory - (SanteDB.Core)
+Represents a generic resource repository factory
 
-### EntityPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Entity persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalRepositoryFactoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### EntityRelationshipPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Entity relationship persistence service
+### Local (database) repository service - (SanteDB.Core)
+Daemon service which adds all the repositories for acts
 
-### ManufacturedMaterialPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Manufactured material persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### MaterialPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Persistence service for matrials
+### Local Mail Message - (SanteDB.Core)
+Represents a local alert service.
 
-### TextObservationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Text observation service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalMailMessageRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### CodedObservationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Coded observation service
+### Local Applet Repository/Manager - (SanteDB.Core)
+Represents an applet manager service that uses the local file system
 
-### QuantityObservationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Quantity observation persistence service
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalAppletManagerService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### OrganizationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents an organization persistence service
+### LocalAssigningAuthorityRepository - (SanteDB.Core)
+Represents a repository service for managing assigning authorities.
 
-### PatientPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Persistence service which is used to persist patients
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalAssigningAuthorityRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### PersonPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Person persistence service
+### Default Audit Repository - (SanteDB.Core)
+Represents an audit repository which stores and queries audit data.
 
-### PlacePersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persister which persists places
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalAuditRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### ProviderPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Provider persistence service
+### LocalBatchRepository - (SanteDB.Core)
+Local batch repository service
 
-### ReferenceTermNamePersister (SanteDB.DisconnectedClient.SQLite)
-Persistence service for reftermname
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalBatchRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### ReferenceTermPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a reference term persistence service.
+### Local Repository Service - (SanteDB.Core)
+Represents a base class for entity repository services
 
-### SecurityUserPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Security user persistence
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.GenericLocalRepository`1, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SecurityRolePersistenceService (SanteDB.DisconnectedClient.SQLite)
-Security user persistence
+### GenericLocalMetadataRepository`1 - (SanteDB.Core)
+Provides generic basis for metadata editing
 
-### SecurityDevicePersistenceService (SanteDB.DisconnectedClient.SQLite)
-Security user persistence
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.GenericLocalMetadataRepository`1, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SecurityApplicationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Security user persistence
+### LocalMaterialRepository - (SanteDB.Core)
+Local material persistence service
 
-### SubstanceAdministrationPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persistence service for substance administrations
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalMaterialRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### UserEntityPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Represents a persister that can read/write user entities
+### LocalSecurityApplicationRepository - (SanteDB.Core)
+Local security application repository
 
-### MdmDataManager (SanteDB.DisconnectedClient.SQLite)
-When synchronizing with a server which has MDM enabled.
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalSecurityApplicationRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### SQLiteMailPersistenceService (SanteDB.DisconnectedClient.SQLite)
-Alert persistence service
+### LocalSecurityDeviceRepository - (SanteDB.Core)
+Local security device repository
 
-### SQLiteConnectionManager (SanteDB.DisconnectedClient.SQLite)
-SQLiteConnectionManager
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalSecurityDeviceRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### GenericVersionedPersistenceService`2 (SanteDB.DisconnectedClient.SQLite)
+### LocalSecurityPolicyRepository - (SanteDB.Core)
+Alter policies
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalSecurityPolicyRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalSecurityRoleRepositoryService - (SanteDB.Core)
+Represents a local security role service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalSecurityRoleRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalSecurityUserRepositoryService - (SanteDB.Core)
+Security user repository
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalSecurityUserRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalTemplateDefinitionRepositoryService - (SanteDB.Core)
+Represents a local metadata repository service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalTemplateDefinitionRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalOrganizationRepository - (SanteDB.Core)
+Provides operations for managing organizations.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalOrganizationRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalPatientRepository - (SanteDB.Core)
+Local patient repository service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalPatientRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalPlaceRepository - (SanteDB.Core)
+Place repository that uses local persistence
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalPlaceRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Local Stock Management Repository - (SanteDB.Core)
+Represents a stock management repository service.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalStockManagementRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Local Tag Persistence - (SanteDB.Core)
+Tag persistence service for act
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalTagPersistenceService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Local Configuration Manager - (SanteDB.Core)
+Provides a redirected configuration service which reads configuration from a different file
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.FileConfigurationService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalUserEntityRepository - (SanteDB.Core)
+Localuser entity repository
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalUserEntityRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalConceptRepository - (SanteDB.Core)
+Represents a service which is responsible for the
+            maintenance of concepts.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalConceptRepository, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### LocalSecurityRepositoryService - (SanteDB.Core)
+Represents a security repository service that uses the direct local services
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalSecurityRepositoryService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Applet JavaScript BRE - (SanteDB.Core)
+A daemon which loads business rules from the applet manager
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Daemons.AppletBusinessRulesDaemon, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### DefaultDataSigningService - (SanteDB.Core)
+Default data signature service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.DefaultDataSigningService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Default TFA Relay Provider - (SanteDB.Core)
+Represents a default implementation of a TFA relay service which scans the entire application domain for 
+            mechanisms and allows calling of them all
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.DefaultTfaRelayService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Default Password Validator - (SanteDB.Core)
+Represents a local regex password validator
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.DefaultPasswordValidationService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Default PDP Service - (SanteDB.Core)
+Local policy decision service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.DefaultPolicyDecisionService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SHA256 Password Encoding Service - (SanteDB.Core)
+SHA256 password generator service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.SHA256PasswordHashingService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SHA1 Password Encoding Service - (SanteDB.Core)
+SHA1 password generator service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.SHA1PasswordHashingService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### MD5 Password Encoding Service - (SanteDB.Core)
+SHA1 password generator service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.MD5PasswordHashingService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Plaintext Password Encode - (SanteDB.Core)
+Plaintext password generator service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.PlainPasswordHashingService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Simple TFA Secret Generator - (SanteDB.Core)
+Represents a TFA secret generator which uses the server's clock
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.SimpleTfaSecretGenerator, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ExemptablePolicyFilterService - (SanteDB.Core)
+Local policy enforcement point service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.Privacy.ExemptablePolicyFilterService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Dataset Installation Service - (SanteDB.Core)
+Data initialization service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Persistence.DataInitializationService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### TestApplicationContext - (SanteDB.Core.TestFramework)
 TODO: Document this
 
-### GenericBasePersistenceService`2 (SanteDB.DisconnectedClient.SQLite)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.TestFramework.TestApplicationContext, SanteDB.Core.TestFramework, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### TestConfigurationService - (SanteDB.Core.TestFramework)
 TODO: Document this
 
-### GenericIdentityPersistenceService`2 (SanteDB.DisconnectedClient.SQLite)
-TODO: Document this
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.TestFramework.TestConfigurationService, SanteDB.Core.TestFramework, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
-### GenericIdentityAssociationPersistenceService`2 (SanteDB.DisconnectedClient.SQLite)
-TODO: Document this
+### FileMatchConfigurationProvider - (SanteDB.Matcher.Configuration.File)
+Represents a configuration provider which is for matching
 
-### AppletMatchConfigurationProvider (SanteDB.Matcher)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Matcher.Configuration.File.FileMatchConfigurationProvider, SanteDB.Matcher.Configuration.File, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### AppletMatchConfigurationProvider - (SanteDB.Matcher)
 Applet match configuration provider loads match configurations from available applets
 
-### AssemblyMatchConfigurationProvider (SanteDB.Matcher)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Matcher.Services.AppletMatchConfigurationProvider, SanteDB.Matcher, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### AssemblyMatchConfigurationProvider - (SanteDB.Matcher)
 File based match configuration provider
 
-### SanteMatch Deterministic Matcher (SanteDB.Matcher)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Matcher.Services.AssemblyMatchConfigurationProvider, SanteDB.Matcher, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SanteMatch Deterministic Matcher - (SanteDB.Matcher)
 Represents a deterministic record matching service
 
-### SanteMatch Probabalistic Match Service (SanteDB.Matcher)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Matcher.Matchers.SimpleRecordMatchingService, SanteDB.Matcher, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SanteMatch Probabalistic Match Service - (SanteDB.Matcher)
 Represents a probabalistic record matching service
 
-### OpenAPI Metadata Exchange (SanteDB.Messaging.Metadata)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Matcher.Matchers.WeightedRecordMatchingService, SanteDB.Matcher, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Administrative REST Daemon - (SanteDB.Messaging.AMI)
+AMI Message handler
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.AMI.AmiMessageHandler, SanteDB.Messaging.AMI, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### IHE ATNA Audit Dispatcher - (SanteDB.Messaging.Atna)
 TODO: Document this
 
-### BIS REST Daemon (SanteDB.Rest.BIS)
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.Atna.AtnaAuditService, SanteDB.Messaging.Atna, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### HL7 FHIR R3 API Endpoint - (SanteDB.Messaging.FHIR)
+Message handler for FHIR
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.FHIR.FhirMessageHandler, SanteDB.Messaging.FHIR, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GS1 Stock Event Subscriber - (SanteDB.Messaging.GS1)
+Represents a notification service that listens to stock events and then prepares them for broadcast
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.GS1.StockSubscriber, SanteDB.Messaging.GS1, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GS1 BMS XML3.3 API Endpoint - (SanteDB.Messaging.GS1)
+Stock service message handler
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.GS1.StockServiceMessageHandler, SanteDB.Messaging.GS1, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GS1 AS2(ish) Integration Service - (SanteDB.Messaging.GS1)
+GS1 Stock Integration Service
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.GS1.Transport.AS2.As2IntegrationService, SanteDB.Messaging.GS1, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### iCDR Message Service - (SanteDB.Messaging.HDSI)
+The HDSI Message Handler Daemon class
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.HDSI.HdsiMessageHandler, SanteDB.Messaging.HDSI, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### HL7v2 API Endpoint - (SanteDB.Messaging.HL7)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.HL7.HL7MessageHandler, SanteDB.Messaging.HL7, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### OpenAPI Metadata Exchange - (SanteDB.Messaging.Metadata)
+Represents the daemon service that starts/stops the OpenApi information file
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.Metadata.MetadataMessageHandler, SanteDB.Messaging.Metadata, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### RISI API Daemon - (SanteDB.Messaging.RISI)
+Represents a message handler for reporting services.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.RISI.RisiMessageHandler, SanteDB.Messaging.RISI, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Audit Repository - (SanteDB.Persistence.Auditing.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Auditing.ADO.Services.AdoAuditRepositoryService, SanteDB.Persistence.Auditing.ADO, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Application Identity Provider - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoApplicationIdentityProvider, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Device Identity Provider - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoDeviceIdentityProvider, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Identity Provider - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoIdentityProvider, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Data Persistence Service - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Policy Information Service - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPolicyInformationService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Role Provider Service - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoRoleProvider, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### AdoSecurityChallengeProvider - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoSecurityChallengeProvider, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Session Storage - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoSessionProvider, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Subscription Executor - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoSubscriptionExector, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityIdentifierPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityIdentifierPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ActParticipationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ActParticipationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ActPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ActPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ActRelationshipPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ActRelationshipPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### MailMessagePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.MailMessagePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ApplicationEntityPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ApplicationEntityPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### AssigningAuthorityPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.AssigningAuthorityPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### BundlePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.BundlePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ConceptPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ConceptPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ConceptNamePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ConceptNamePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ConceptSetPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ConceptSetPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ControlActPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ControlActPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### DeviceEntityPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.DeviceEntityPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EncounterPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EncounterPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityAddressPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityAddressPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityAddressComponentPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityAddressComponentPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityDerivedPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityDerivedPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityDerivedPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityDerivedPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityNamePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityNamePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityNameComponentPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityNameComponentPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### EntityRelationshipPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityRelationshipPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### IdentifierTypePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.IdentifierTypePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ManufacturedMaterialPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ManufacturedMaterialPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### MaterialPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.MaterialPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ObservationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ObservationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### TextObservationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.TextObservationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### CodedObservationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.CodedObservationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### QuantityObservationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.QuantityObservationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### OrganizationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.OrganizationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### PatientPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.PatientPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### PersonPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.PersonPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### PlacePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.PlacePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ProtocolPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ProtocolPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ProviderPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ProviderPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ReferenceTermNamePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ReferenceTermNamePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SecurityProvenancePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SecurityProvenancePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SecurityApplicationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SecurityApplicationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SecurityDevicePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SecurityDevicePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SecurityPolicyPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SecurityPolicyPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SecurityRolePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SecurityRolePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SecurityUserPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SecurityUserPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ProcedurePersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ProcedurePersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### SubstanceAdministrationPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SubstanceAdministrationPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### UserEntityPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.UserEntityPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ReferenceTermPersistenceService - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ReferenceTermPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GenericBasePersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService+GenericBasePersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GenericIdentityPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService+GenericIdentityPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GenericBaseAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService+GenericBaseAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GenericBaseVersionedAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService+GenericBaseVersionedAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GenericIdentityAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService+GenericIdentityAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### GenericIdentityVersionedAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService+GenericIdentityVersionedAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### E-Mail Diagnostic (Bug) Report Submission - (SanteDB.Persistence.Diagnostics.Email)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Diagnostics.Email.DiagnosticReportPersistenceService, SanteDB.Persistence.Diagnostics.Email, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### JIRA Based Diagnostic (Bug) Report Submissions - (SanteDB.Persistence.Diagnostics.Jira)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Diagnostics.Jira.DiagnosticReportPersistenceService, SanteDB.Persistence.Diagnostics.Jira, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### BundleResourceListener - (SanteDB.Persistence.MDM)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.MDM.Services.BundleResourceListener, SanteDB.Persistence.MDM, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### MIDM Data Repository - (SanteDB.Persistence.MDM)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.MDM.Services.MdmDataManagementService, SanteDB.Persistence.MDM, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### MdmResourceListener`1 - (SanteDB.Persistence.MDM)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.MDM.Services.MdmResourceListener`1, SanteDB.Persistence.MDM, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Report/Wareouse Persistence - (SanteDB.Persistence.Reporting.ADO)
+Represents a persistence service for reporting services.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Reporting.ADO.ReportingPersistenceService, SanteDB.Persistence.Reporting.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ParameterTypePersistenceService - (SanteDB.Persistence.Reporting.ADO)
+Represents a data type persistence service.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Reporting.ADO.Services.ParameterTypePersistenceService, SanteDB.Persistence.Reporting.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ReportDefinitionPersistenceService - (SanteDB.Persistence.Reporting.ADO)
+Represents a ReportDefinition persistence service.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Reporting.ADO.Services.ReportDefinitionPersistenceService, SanteDB.Persistence.Reporting.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ReportFormatPersistenceService - (SanteDB.Persistence.Reporting.ADO)
+Represents a report format persistence service.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Reporting.ADO.Services.ReportFormatPersistenceService, SanteDB.Persistence.Reporting.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ReportParameterPersistenceService - (SanteDB.Persistence.Reporting.ADO)
+Represents a report persistence service.
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Reporting.ADO.Services.ReportParameterPersistenceService, SanteDB.Persistence.Reporting.ADO, Version=2.0.27.29202, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### BIS REST Daemon - (SanteDB.Rest.BIS)
 Represents a message handler for the BIS
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Rest.BIS.BisMessageHandler, SanteDB.Rest.BIS, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### Debugger: Data Sandbox UI - (SanteDB.Tools.DataSandbox)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Tools.DataSandbox.DataSandboxService, SanteDB.Tools.DataSandbox, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### File Based BI Repository - (SanteDB.Tools.Debug)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Tools.Debug.BI.FileMetadataRepository, SanteDB.Tools.Debug, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+### ADO.NET Ad-Hoc Data Warehouse Service - (SanteDB.Warehouse.ADO)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Warehouse.ADO.ADODataWarehouse, SanteDB.Warehouse.ADO, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 ## Example Implementation
 ```
 None

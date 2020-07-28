@@ -7,8 +7,20 @@ Taggable persistence service
 
 ## Implementations
 
-None
 
+### Local Tag Persistence - (SanteDB.Core)
+Tag persistence service for act
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Services.Impl.LocalTagPersistenceService, SanteDB.Core, Version=2.0.27.29201, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 ## Example Implementation
 ```
 None

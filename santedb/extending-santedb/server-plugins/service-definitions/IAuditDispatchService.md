@@ -7,8 +7,20 @@ Represents a service that dispatches audits to a central repository
 
 ## Implementations
 
-None
 
+### IHE ATNA Audit Dispatcher - (SanteDB.Messaging.Atna)
+TODO: Document this
+
+#### Service Registration
+```
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.Atna.AtnaAuditService, SanteDB.Messaging.Atna, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 ## Example Implementation
 ```
 None
