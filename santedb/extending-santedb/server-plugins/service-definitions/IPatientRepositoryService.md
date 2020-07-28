@@ -21,8 +21,8 @@ Represents the patient repository service. This service is responsible
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Merge|SanteDB.Core.Model.Roles.Patient|survivor <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>victim <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small>|Merges two patients together|
-|UnMerge|SanteDB.Core.Model.Roles.Patient|patient <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>versionKey <small style='border:solid 1px #aaa'>System.Guid</small>|Un-merges two patients from each other|
+|Merge|Patient|survivor <small style='border:solid 1px #aaa'>Patient</small><br/>victim <small style='border:solid 1px #aaa'>Patient</small>|Merges two patients together|
+|UnMerge|Patient|patient <small style='border:solid 1px #aaa'>Patient</small><br/>versionKey <small style='border:solid 1px #aaa'>Guid</small>|Un-merges two patients from each other|
 
 ## Implementations
 
@@ -50,13 +50,13 @@ public class MyPatientRepositoryService : SanteDB.Core.Services.IPatientReposito
 	/// <summary>
 	/// Merges two patients together
 	/// </summary>
-	public SanteDB.Core.Model.Roles.Patient Merge(SanteDB.Core.Model.Roles.Patient survivor,SanteDB.Core.Model.Roles.Patient victim){
+	public Patient Merge(Patient survivor,Patient victim){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Un-merges two patients from each other
 	/// </summary>
-	public SanteDB.Core.Model.Roles.Patient UnMerge(SanteDB.Core.Model.Roles.Patient patient,System.Guid versionKey){
+	public Patient UnMerge(Patient patient,Guid versionKey){
 		throw new System.NotImplementedException();
 	}
 }

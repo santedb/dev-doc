@@ -1,5 +1,5 @@
 ---
-description: IPersistableQueryRepositoryService`1 (SanteDB.Core.Api)
+description: IPersistableQueryRepositoryService<TEntity> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -19,7 +19,7 @@ Persistable query provider is an extensable interface which can perform a query 
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Find|System.Collections.Generic.IEnumerable&lt;TEntity>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TEntity,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>orderBy <small style='border:solid 1px #aaa'></small>|Performs a query which|
+|Find|IEnumerable&lt;TEntity>|query <small style='border:solid 1px #aaa'>Expression<Func<TEntity,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Performs a query which|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyPersistableQueryRepositoryService<TEntity> : SanteDB.Core.Service
 	/// <summary>
 	/// Performs a query which
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<TEntity> Find(System.Linq.Expressions.Expression<System.Func<TEntity,System.Boolean>> query,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId, orderBy){
+	public IEnumerable<TEntity> Find(Expression<Func<TEntity,Boolean>> query,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId,ModelSort`1[] orderBy){
 		throw new System.NotImplementedException();
 	}
 }

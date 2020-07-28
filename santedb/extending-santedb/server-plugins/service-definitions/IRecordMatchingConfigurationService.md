@@ -14,14 +14,14 @@ Represents a service
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Configurations|System.Collections.Generic.IEnumerable&lt;System.String>|R|Gets the names of configurations in this provider|
+|Configurations|IEnumerable&lt;String>|R|Gets the names of configurations in this provider|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetConfiguration|SanteDB.Core.Services.IRecordMatchingConfiguration|name <small style='border:solid 1px #aaa'>System.String</small>|Get the specified named configuration|
-|SaveConfiguration|SanteDB.Core.Services.IRecordMatchingConfiguration|configuration <small style='border:solid 1px #aaa'>SanteDB.Core.Services.IRecordMatchingConfiguration</small>|Saves the specified configuration to the configuration service|
+|GetConfiguration|IRecordMatchingConfiguration|name <small style='border:solid 1px #aaa'>String</small>|Get the specified named configuration|
+|SaveConfiguration|IRecordMatchingConfiguration|configuration <small style='border:solid 1px #aaa'>IRecordMatchingConfiguration</small>|Saves the specified configuration to the configuration service|
 
 ## Implementations
 
@@ -77,19 +77,19 @@ public class MyRecordMatchingConfigurationService : SanteDB.Core.Services.IRecor
 	/// <summary>
 	/// Gets the names of configurations in this provider
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<System.String> Configurations {
+	public IEnumerable<String> Configurations {
 		get;
 	}
 	/// <summary>
 	/// Get the specified named configuration
 	/// </summary>
-	public SanteDB.Core.Services.IRecordMatchingConfiguration GetConfiguration(System.String name){
+	public IRecordMatchingConfiguration GetConfiguration(String name){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Saves the specified configuration to the configuration service
 	/// </summary>
-	public SanteDB.Core.Services.IRecordMatchingConfiguration SaveConfiguration(SanteDB.Core.Services.IRecordMatchingConfiguration configuration){
+	public IRecordMatchingConfiguration SaveConfiguration(IRecordMatchingConfiguration configuration){
 		throw new System.NotImplementedException();
 	}
 }

@@ -19,8 +19,8 @@ Represents a policy decision service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetPolicyDecision|SanteDB.Core.Security.PolicyDecision|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>securable <small style='border:solid 1px #aaa'>System.Object</small>|Make a simple policy decision for a specific securable|
-|GetPolicyOutcome|SanteDB.Core.Model.Security.PolicyGrantType|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>policyId <small style='border:solid 1px #aaa'>System.String</small>|Get a policy decision outcome (i.e. make a policy decision)|
+|GetPolicyDecision|PolicyDecision|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>securable <small style='border:solid 1px #aaa'>Object</small>|Make a simple policy decision for a specific securable|
+|GetPolicyOutcome|PolicyGrantType|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>policyId <small style='border:solid 1px #aaa'>String</small>|Get a policy decision outcome (i.e. make a policy decision)|
 
 ## Implementations
 
@@ -48,13 +48,13 @@ public class MyPolicyDecisionService : SanteDB.Core.Security.Services.IPolicyDec
 	/// <summary>
 	/// Make a simple policy decision for a specific securable
 	/// </summary>
-	public SanteDB.Core.Security.PolicyDecision GetPolicyDecision(System.Security.Principal.IPrincipal principal,System.Object securable){
+	public PolicyDecision GetPolicyDecision(IPrincipal principal,Object securable){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get a policy decision outcome (i.e. make a policy decision)
 	/// </summary>
-	public SanteDB.Core.Model.Security.PolicyGrantType GetPolicyOutcome(System.Security.Principal.IPrincipal principal,System.String policyId){
+	public PolicyGrantType GetPolicyOutcome(IPrincipal principal,String policyId){
 		throw new System.NotImplementedException();
 	}
 }

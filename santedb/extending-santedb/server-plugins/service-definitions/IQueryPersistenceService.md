@@ -19,14 +19,14 @@ Query persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindQueryId|System.Guid|queryTag <small style='border:solid 1px #aaa'>System.Object</small>|Find the query ID by the query tag|
-|RegisterQuerySet|System.Boolean|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>results <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small><br/>tag <small style='border:solid 1px #aaa'>System.Object</small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32</small>|Register a query set|
-|IsRegistered|System.Boolean|queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Returns true if the query identifier is already registered|
-|GetQueryResults|System.Collections.Generic.IEnumerable&lt;System.Guid>|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Int32</small>|Get query results from the query set result store|
-|GetQueryTag|System.Object|queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Get the query tag value from the result store|
-|QueryResultTotalQuantity|System.Int64|queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Count the number of remaining query results|
-|AddResults|void|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>results <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small>|Add results to the query|
-|SetQueryTag|void|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>value <small style='border:solid 1px #aaa'>System.Object</small>|Set or update the query tag of an existing query id|
+|FindQueryId|Guid|queryTag <small style='border:solid 1px #aaa'>Object</small>|Find the query ID by the query tag|
+|RegisterQuerySet|Boolean|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>results <small style='border:solid 1px #aaa'>IEnumerable<Guid></small><br/>tag <small style='border:solid 1px #aaa'>Object</small><br/>totalResults <small style='border:solid 1px #aaa'>Int32</small>|Register a query set|
+|IsRegistered|Boolean|queryId <small style='border:solid 1px #aaa'>Guid</small>|Returns true if the query identifier is already registered|
+|GetQueryResults|IEnumerable&lt;Guid>|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Int32</small>|Get query results from the query set result store|
+|GetQueryTag|Object|queryId <small style='border:solid 1px #aaa'>Guid</small>|Get the query tag value from the result store|
+|QueryResultTotalQuantity|Int64|queryId <small style='border:solid 1px #aaa'>Guid</small>|Count the number of remaining query results|
+|AddResults|void|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>results <small style='border:solid 1px #aaa'>IEnumerable<Guid></small>|Add results to the query|
+|SetQueryTag|void|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>value <small style='border:solid 1px #aaa'>Object</small>|Set or update the query tag of an existing query id|
 
 ## Implementations
 
@@ -68,49 +68,49 @@ public class MyQueryPersistenceService : SanteDB.Core.Services.IQueryPersistence
 	/// <summary>
 	/// Find the query ID by the query tag
 	/// </summary>
-	public System.Guid FindQueryId(System.Object queryTag){
+	public Guid FindQueryId(Object queryTag){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Register a query set
 	/// </summary>
-	public System.Boolean RegisterQuerySet(System.Guid queryId,System.Collections.Generic.IEnumerable<System.Guid> results,System.Object tag,System.Int32 totalResults){
+	public Boolean RegisterQuerySet(Guid queryId,IEnumerable<Guid> results,Object tag,Int32 totalResults){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Returns true if the query identifier is already registered
 	/// </summary>
-	public System.Boolean IsRegistered(System.Guid queryId){
+	public Boolean IsRegistered(Guid queryId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get query results from the query set result store
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<System.Guid> GetQueryResults(System.Guid queryId,System.Int32 offset,System.Int32 count){
+	public IEnumerable<Guid> GetQueryResults(Guid queryId,Int32 offset,Int32 count){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the query tag value from the result store
 	/// </summary>
-	public System.Object GetQueryTag(System.Guid queryId){
+	public Object GetQueryTag(Guid queryId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Count the number of remaining query results
 	/// </summary>
-	public System.Int64 QueryResultTotalQuantity(System.Guid queryId){
+	public Int64 QueryResultTotalQuantity(Guid queryId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Add results to the query
 	/// </summary>
-	public void AddResults(System.Guid queryId,System.Collections.Generic.IEnumerable<System.Guid> results){
+	public void AddResults(Guid queryId,IEnumerable<Guid> results){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Set or update the query tag of an existing query id
 	/// </summary>
-	public void SetQueryTag(System.Guid queryId,System.Object value){
+	public void SetQueryTag(Guid queryId,Object value){
 		throw new System.NotImplementedException();
 	}
 }

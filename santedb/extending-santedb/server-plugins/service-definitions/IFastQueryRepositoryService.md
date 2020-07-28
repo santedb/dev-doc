@@ -1,5 +1,5 @@
 ---
-description: IFastQueryRepositoryService`1 (SanteDB.Core.Api)
+description: IFastQueryRepositoryService<TEntity> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -19,7 +19,7 @@ Represents a query repository service which can find lean queries
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindFast|System.Collections.Generic.IEnumerable&lt;TEntity>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TEntity,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Perform a quick search (instructs the data persistence layer not to load as many properties)|
+|FindFast|IEnumerable&lt;TEntity>|query <small style='border:solid 1px #aaa'>Expression<Func<TEntity,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small>|Perform a quick search (instructs the data persistence layer not to load as many properties)|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyFastQueryRepositoryService<TEntity> : SanteDB.Core.Services.IFast
 	/// <summary>
 	/// Perform a quick search (instructs the data persistence layer not to load as many properties)
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<TEntity> FindFast(System.Linq.Expressions.Expression<System.Func<TEntity,System.Boolean>> query,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId){
+	public IEnumerable<TEntity> FindFast(Expression<Func<TEntity,Boolean>> query,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId){
 		throw new System.NotImplementedException();
 	}
 }

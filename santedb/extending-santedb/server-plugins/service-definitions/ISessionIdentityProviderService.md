@@ -19,8 +19,8 @@ Represents a session identity service that can provide identities
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|System.Security.Principal.IPrincipal|session <small style='border:solid 1px #aaa'>SanteDB.Core.Security.ISession</small>|Authenticate based on session|
-|GetIdentities|System.Security.Principal.IIdentity[]|session <small style='border:solid 1px #aaa'>SanteDB.Core.Security.ISession</small>|Gets an un-authenticated principal from the specified session|
+|Authenticate|IPrincipal|session <small style='border:solid 1px #aaa'>ISession</small>|Authenticate based on session|
+|GetIdentities|IIdentity[]|session <small style='border:solid 1px #aaa'>ISession</small>|Gets an un-authenticated principal from the specified session|
 
 ## Implementations
 
@@ -48,13 +48,13 @@ public class MySessionIdentityProviderService : SanteDB.Core.Services.ISessionId
 	/// <summary>
 	/// Authenticate based on session
 	/// </summary>
-	public System.Security.Principal.IPrincipal Authenticate(SanteDB.Core.Security.ISession session){
+	public IPrincipal Authenticate(ISession session){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets an un-authenticated principal from the specified session
 	/// </summary>
-	public System.Security.Principal.IIdentity[] GetIdentities(SanteDB.Core.Security.ISession session){
+	public IIdentity[] GetIdentities(ISession session){
 		throw new System.NotImplementedException();
 	}
 }

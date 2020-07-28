@@ -19,7 +19,7 @@ Represents a password validation service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Validate|System.Boolean|password <small style='border:solid 1px #aaa'>System.String</small>|Validate the password|
+|Validate|Boolean|password <small style='border:solid 1px #aaa'>String</small>|Validate the password|
 
 ## Implementations
 
@@ -47,7 +47,7 @@ public class MyPasswordValidatorService : SanteDB.Core.Security.Services.IPasswo
 	/// <summary>
 	/// Validate the password
 	/// </summary>
-	public System.Boolean Validate(System.String password){
+	public Boolean Validate(String password){
 		throw new System.NotImplementedException();
 	}
 }

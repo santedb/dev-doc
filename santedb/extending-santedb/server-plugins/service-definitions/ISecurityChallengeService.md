@@ -19,9 +19,9 @@ Represents an interface that allows for the retrieval of pre-configured security
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Security.SecurityChallenge>|userName <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Gets the challenges current registered for the user (not the answers)|
-|Set|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>challengeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>response <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Add a challenge to the current registered user|
-|Remove|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>challengeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Removes or clears the specified challenge|
+|Get|IEnumerable&lt;SecurityChallenge>|userName <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Gets the challenges current registered for the user (not the answers)|
+|Set|void|userName <small style='border:solid 1px #aaa'>String</small><br/>challengeKey <small style='border:solid 1px #aaa'>Guid</small><br/>response <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Add a challenge to the current registered user|
+|Remove|void|userName <small style='border:solid 1px #aaa'>String</small><br/>challengeKey <small style='border:solid 1px #aaa'>Guid</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Removes or clears the specified challenge|
 
 ## Implementations
 
@@ -49,19 +49,19 @@ public class MySecurityChallengeService : SanteDB.Core.Security.ISecurityChallen
 	/// <summary>
 	/// Gets the challenges current registered for the user (not the answers)
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Model.Security.SecurityChallenge> Get(System.String userName,System.Security.Principal.IPrincipal principal){
+	public IEnumerable<SecurityChallenge> Get(String userName,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Add a challenge to the current registered user
 	/// </summary>
-	public void Set(System.String userName,System.Guid challengeKey,System.String response,System.Security.Principal.IPrincipal principal){
+	public void Set(String userName,Guid challengeKey,String response,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Removes or clears the specified challenge
 	/// </summary>
-	public void Remove(System.String userName,System.Guid challengeKey,System.Security.Principal.IPrincipal principal){
+	public void Remove(String userName,Guid challengeKey,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }

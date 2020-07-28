@@ -19,7 +19,7 @@ Represents the extension type repository
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|SanteDB.Core.Model.DataTypes.ExtensionType|uri <small style='border:solid 1px #aaa'>System.Uri</small>|Get the xtension type my its url|
+|Get|ExtensionType|uri <small style='border:solid 1px #aaa'>Uri</small>|Get the xtension type my its url|
 
 ## Implementations
 
@@ -47,7 +47,7 @@ public class MyExtensionTypeRepository : SanteDB.Core.Services.IExtensionTypeRep
 	/// <summary>
 	/// Get the xtension type my its url
 	/// </summary>
-	public SanteDB.Core.Model.DataTypes.ExtensionType Get(System.Uri uri){
+	public ExtensionType Get(Uri uri){
 		throw new System.NotImplementedException();
 	}
 }

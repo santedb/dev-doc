@@ -9,7 +9,7 @@ Represents an identity provider that allows for elevation
 
 |Event|Type|Description|
 |-|-|-|
-|OverrideRequested|System.EventHandler&lt;SanteDB.Core.Security.Services.SecurityOverrideEventArgs>|The caller has requested an override|
+|OverrideRequested|EventHandler&lt;SecurityOverrideEventArgs>|The caller has requested an override|
 
 ## Properties
 
@@ -20,7 +20,7 @@ Represents an identity provider that allows for elevation
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ElevatedAuthenticate|System.Security.Principal.IPrincipal|userName <small style='border:solid 1px #aaa'>System.String</small><br/>password <small style='border:solid 1px #aaa'>System.String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>System.String</small><br/>purpose <small style='border:solid 1px #aaa'>System.String</small><br/>policies <small style='border:solid 1px #aaa'>System.String[]</small>|Requests the currently established principal to be elevated|
+|ElevatedAuthenticate|IPrincipal|userName <small style='border:solid 1px #aaa'>String</small><br/>password <small style='border:solid 1px #aaa'>String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>String</small><br/>purpose <small style='border:solid 1px #aaa'>String</small><br/>policies <small style='border:solid 1px #aaa'>String[]</small>|Requests the currently established principal to be elevated|
 
 ## Implementations
 
@@ -36,11 +36,11 @@ public class MyElevatableIdentityProviderService : SanteDB.Core.Security.Service
 	/// <summary>
 	/// The caller has requested an override
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.SecurityOverrideEventArgs> OverrideRequested;
+	public event EventHandler<SecurityOverrideEventArgs> OverrideRequested;
 	/// <summary>
 	/// Requests the currently established principal to be elevated
 	/// </summary>
-	public System.Security.Principal.IPrincipal ElevatedAuthenticate(System.String userName,System.String password,System.String tfaSecret,System.String purpose,System.String[] policies){
+	public IPrincipal ElevatedAuthenticate(String userName,String password,String tfaSecret,String purpose,String[] policies){
 		throw new System.NotImplementedException();
 	}
 }

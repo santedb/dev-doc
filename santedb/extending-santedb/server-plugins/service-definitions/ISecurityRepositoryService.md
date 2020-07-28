@@ -19,22 +19,22 @@ Security repository service is responsible for the maintenance of security entit
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ChangePassword|SanteDB.Core.Model.Security.SecurityUser|userId <small style='border:solid 1px #aaa'>System.Guid</small><br/>password <small style='border:solid 1px #aaa'>System.String</small>|Changes a user's password.|
-|GetProviderEntity|SanteDB.Core.Model.Roles.Provider|identity <small style='border:solid 1px #aaa'>System.Security.Principal.IIdentity</small>|Gets the specified provider entity from the specified identity|
-|CreateUser|SanteDB.Core.Model.Security.SecurityUser|userInfo <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Security.SecurityUser</small><br/>password <small style='border:solid 1px #aaa'>System.String</small>|Creates a user with a specified password.|
-|GetUser|SanteDB.Core.Model.Security.SecurityUser|userName <small style='border:solid 1px #aaa'>System.String</small>|Get a user by user name|
-|GetPolicy|SanteDB.Core.Model.Security.SecurityPolicy|policyOid <small style='border:solid 1px #aaa'>System.String</small>|Get the specified security policy by OID|
-|GetRole|SanteDB.Core.Model.Security.SecurityRole|roleName <small style='border:solid 1px #aaa'>System.String</small>|Gets a specific role.|
-|LockDevice|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Locks a device principal|
-|LockApplication|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Locks an application|
-|UnlockDevice|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Removes a lock from a device|
-|UnlockApplication|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Removes a lock from an application|
-|GetUser|SanteDB.Core.Model.Security.SecurityUser|identity <small style='border:solid 1px #aaa'>System.Security.Principal.IIdentity</small>|Get a user by user name|
-|GetUserEntity|SanteDB.Core.Model.Entities.UserEntity|identity <small style='border:solid 1px #aaa'>System.Security.Principal.IIdentity</small>|Get the user entity|
-|LockUser|void|userId <small style='border:solid 1px #aaa'>System.Guid</small>|Locks a specific user.|
-|UnlockUser|void|userId <small style='border:solid 1px #aaa'>System.Guid</small>|Unlocks a specific user.|
-|GetProvenance|SanteDB.Core.Model.Security.SecurityProvenance|provenanceId <small style='border:solid 1px #aaa'>System.Guid</small>|Get the provenance object|
-|FindProvenance|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Security.SecurityProvenance>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Model.Security.SecurityProvenance,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>orderBy <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Model.Security.SecurityProvenance, SanteDB.Core.Model, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][]</small>|Find provenance objects matching the specified object|
+|ChangePassword|SecurityUser|userId <small style='border:solid 1px #aaa'>Guid</small><br/>password <small style='border:solid 1px #aaa'>String</small>|Changes a user's password.|
+|GetProviderEntity|Provider|identity <small style='border:solid 1px #aaa'>IIdentity</small>|Gets the specified provider entity from the specified identity|
+|CreateUser|SecurityUser|userInfo <small style='border:solid 1px #aaa'>SecurityUser</small><br/>password <small style='border:solid 1px #aaa'>String</small>|Creates a user with a specified password.|
+|GetUser|SecurityUser|userName <small style='border:solid 1px #aaa'>String</small>|Get a user by user name|
+|GetPolicy|SecurityPolicy|policyOid <small style='border:solid 1px #aaa'>String</small>|Get the specified security policy by OID|
+|GetRole|SecurityRole|roleName <small style='border:solid 1px #aaa'>String</small>|Gets a specific role.|
+|LockDevice|void|key <small style='border:solid 1px #aaa'>Guid</small>|Locks a device principal|
+|LockApplication|void|key <small style='border:solid 1px #aaa'>Guid</small>|Locks an application|
+|UnlockDevice|void|key <small style='border:solid 1px #aaa'>Guid</small>|Removes a lock from a device|
+|UnlockApplication|void|key <small style='border:solid 1px #aaa'>Guid</small>|Removes a lock from an application|
+|GetUser|SecurityUser|identity <small style='border:solid 1px #aaa'>IIdentity</small>|Get a user by user name|
+|GetUserEntity|UserEntity|identity <small style='border:solid 1px #aaa'>IIdentity</small>|Get the user entity|
+|LockUser|void|userId <small style='border:solid 1px #aaa'>Guid</small>|Locks a specific user.|
+|UnlockUser|void|userId <small style='border:solid 1px #aaa'>Guid</small>|Unlocks a specific user.|
+|GetProvenance|SecurityProvenance|provenanceId <small style='border:solid 1px #aaa'>Guid</small>|Get the provenance object|
+|FindProvenance|IEnumerable&lt;SecurityProvenance>|query <small style='border:solid 1px #aaa'>Expression<Func<SecurityProvenance,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Find provenance objects matching the specified object|
 
 ## Implementations
 
@@ -62,97 +62,97 @@ public class MySecurityRepositoryService : SanteDB.Core.Services.ISecurityReposi
 	/// <summary>
 	/// Changes a user's password.
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityUser ChangePassword(System.Guid userId,System.String password){
+	public SecurityUser ChangePassword(Guid userId,String password){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the specified provider entity from the specified identity
 	/// </summary>
-	public SanteDB.Core.Model.Roles.Provider GetProviderEntity(System.Security.Principal.IIdentity identity){
+	public Provider GetProviderEntity(IIdentity identity){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Creates a user with a specified password.
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityUser CreateUser(SanteDB.Core.Model.Security.SecurityUser userInfo,System.String password){
+	public SecurityUser CreateUser(SecurityUser userInfo,String password){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get a user by user name
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityUser GetUser(System.String userName){
+	public SecurityUser GetUser(String userName){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the specified security policy by OID
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityPolicy GetPolicy(System.String policyOid){
+	public SecurityPolicy GetPolicy(String policyOid){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets a specific role.
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityRole GetRole(System.String roleName){
+	public SecurityRole GetRole(String roleName){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Locks a device principal
 	/// </summary>
-	public void LockDevice(System.Guid key){
+	public void LockDevice(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Locks an application
 	/// </summary>
-	public void LockApplication(System.Guid key){
+	public void LockApplication(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Removes a lock from a device
 	/// </summary>
-	public void UnlockDevice(System.Guid key){
+	public void UnlockDevice(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Removes a lock from an application
 	/// </summary>
-	public void UnlockApplication(System.Guid key){
+	public void UnlockApplication(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get a user by user name
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityUser GetUser(System.Security.Principal.IIdentity identity){
+	public SecurityUser GetUser(IIdentity identity){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the user entity
 	/// </summary>
-	public SanteDB.Core.Model.Entities.UserEntity GetUserEntity(System.Security.Principal.IIdentity identity){
+	public UserEntity GetUserEntity(IIdentity identity){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Locks a specific user.
 	/// </summary>
-	public void LockUser(System.Guid userId){
+	public void LockUser(Guid userId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Unlocks a specific user.
 	/// </summary>
-	public void UnlockUser(System.Guid userId){
+	public void UnlockUser(Guid userId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the provenance object
 	/// </summary>
-	public SanteDB.Core.Model.Security.SecurityProvenance GetProvenance(System.Guid provenanceId){
+	public SecurityProvenance GetProvenance(Guid provenanceId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Find provenance objects matching the specified object
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Model.Security.SecurityProvenance> FindProvenance(System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Model.Security.SecurityProvenance,System.Boolean>> query,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId,SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Model.Security.SecurityProvenance, SanteDB.Core.Model, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][] orderBy){
+	public IEnumerable<SecurityProvenance> FindProvenance(Expression<Func<SecurityProvenance,Boolean>> query,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId,ModelSort`1[] orderBy){
 		throw new System.NotImplementedException();
 	}
 }

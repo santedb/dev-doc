@@ -19,10 +19,10 @@ Represents a stock management repository service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Adjust|SanteDB.Core.Model.Acts.Act|manufacturedMaterial <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Entities.ManufacturedMaterial</small><br/>place <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Entities.Place</small><br/>quantity <small style='border:solid 1px #aaa'>System.Int32</small><br/>reason <small style='border:solid 1px #aaa'>SanteDB.Core.Model.DataTypes.Concept</small>|Performs a stock adjustment for the specified facility and material.|
-|GetBalance|System.Int32|place <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Entities.Place</small><br/>manufacturedMaterial <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Entities.ManufacturedMaterial</small>|Gets the balance for the material.|
-|GetConsumed|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Acts.ActParticipation>|manufacturedMaterialKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>placeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>startPeriod <small style='border:solid 1px #aaa'>System.Nullable<System.DateTimeOffset></small><br/>endPeriod <small style='border:solid 1px #aaa'>System.Nullable<System.DateTimeOffset></small>|Get the total amount of consumed objects|
-|FindAdjustments|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Acts.Act>|manufacturedMaterialKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>placeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>startPeriod <small style='border:solid 1px #aaa'>System.Nullable<System.DateTimeOffset></small><br/>endPeriod <small style='border:solid 1px #aaa'>System.Nullable<System.DateTimeOffset></small>|Find adjustments matching the specified|
+|Adjust|Act|manufacturedMaterial <small style='border:solid 1px #aaa'>ManufacturedMaterial</small><br/>place <small style='border:solid 1px #aaa'>Place</small><br/>quantity <small style='border:solid 1px #aaa'>Int32</small><br/>reason <small style='border:solid 1px #aaa'>Concept</small>|Performs a stock adjustment for the specified facility and material.|
+|GetBalance|Int32|place <small style='border:solid 1px #aaa'>Place</small><br/>manufacturedMaterial <small style='border:solid 1px #aaa'>ManufacturedMaterial</small>|Gets the balance for the material.|
+|GetConsumed|IEnumerable&lt;ActParticipation>|manufacturedMaterialKey <small style='border:solid 1px #aaa'>Guid</small><br/>placeKey <small style='border:solid 1px #aaa'>Guid</small><br/>startPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small><br/>endPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small>|Get the total amount of consumed objects|
+|FindAdjustments|IEnumerable&lt;Act>|manufacturedMaterialKey <small style='border:solid 1px #aaa'>Guid</small><br/>placeKey <small style='border:solid 1px #aaa'>Guid</small><br/>startPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small><br/>endPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small>|Find adjustments matching the specified|
 
 ## Implementations
 
@@ -50,25 +50,25 @@ public class MyStockManagementRepositoryService : SanteDB.Core.Services.IStockMa
 	/// <summary>
 	/// Performs a stock adjustment for the specified facility and material.
 	/// </summary>
-	public SanteDB.Core.Model.Acts.Act Adjust(SanteDB.Core.Model.Entities.ManufacturedMaterial manufacturedMaterial,SanteDB.Core.Model.Entities.Place place,System.Int32 quantity,SanteDB.Core.Model.DataTypes.Concept reason){
+	public Act Adjust(ManufacturedMaterial manufacturedMaterial,Place place,Int32 quantity,Concept reason){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the balance for the material.
 	/// </summary>
-	public System.Int32 GetBalance(SanteDB.Core.Model.Entities.Place place,SanteDB.Core.Model.Entities.ManufacturedMaterial manufacturedMaterial){
+	public Int32 GetBalance(Place place,ManufacturedMaterial manufacturedMaterial){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the total amount of consumed objects
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Model.Acts.ActParticipation> GetConsumed(System.Guid manufacturedMaterialKey,System.Guid placeKey,System.Nullable<System.DateTimeOffset> startPeriod,System.Nullable<System.DateTimeOffset> endPeriod){
+	public IEnumerable<ActParticipation> GetConsumed(Guid manufacturedMaterialKey,Guid placeKey,Nullable<DateTimeOffset> startPeriod,Nullable<DateTimeOffset> endPeriod){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Find adjustments matching the specified
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Model.Acts.Act> FindAdjustments(System.Guid manufacturedMaterialKey,System.Guid placeKey,System.Nullable<System.DateTimeOffset> startPeriod,System.Nullable<System.DateTimeOffset> endPeriod){
+	public IEnumerable<Act> FindAdjustments(Guid manufacturedMaterialKey,Guid placeKey,Nullable<DateTimeOffset> startPeriod,Nullable<DateTimeOffset> endPeriod){
 		throw new System.NotImplementedException();
 	}
 }

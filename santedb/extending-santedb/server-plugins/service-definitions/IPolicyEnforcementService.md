@@ -19,8 +19,8 @@ Represents a PEP that receives demands
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Demand|void|policyId <small style='border:solid 1px #aaa'>System.String</small>|Demand access to the policy|
-|Demand|void|policyId <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Demand access to the policy|
+|Demand|void|policyId <small style='border:solid 1px #aaa'>String</small>|Demand access to the policy|
+|Demand|void|policyId <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Demand access to the policy|
 
 ## Implementations
 
@@ -62,13 +62,13 @@ public class MyPolicyEnforcementService : SanteDB.Core.Security.Services.IPolicy
 	/// <summary>
 	/// Demand access to the policy
 	/// </summary>
-	public void Demand(System.String policyId){
+	public void Demand(String policyId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Demand access to the policy
 	/// </summary>
-	public void Demand(System.String policyId,System.Security.Principal.IPrincipal principal){
+	public void Demand(String policyId,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }

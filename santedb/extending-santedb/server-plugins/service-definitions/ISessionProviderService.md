@@ -9,8 +9,8 @@ Represents a service which is responsible for the storage and retrieval of sessi
 
 |Event|Type|Description|
 |-|-|-|
-|Established|System.EventHandler&lt;SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has established|
-|Abandoned|System.EventHandler&lt;SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has ended by the user's decision|
+|Established|EventHandler&lt;SessionEstablishedEventArgs>|Fired when the session provider service has established|
+|Abandoned|EventHandler&lt;SessionEstablishedEventArgs>|Fired when the session provider service has ended by the user's decision|
 
 ## Properties
 
@@ -21,10 +21,10 @@ Represents a service which is responsible for the storage and retrieval of sessi
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Establish|SanteDB.Core.Security.ISession|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>remoteEp <small style='border:solid 1px #aaa'>System.String</small><br/>isOverride <small style='border:solid 1px #aaa'>System.Boolean</small><br/>purpose <small style='border:solid 1px #aaa'>System.String</small><br/>scope <small style='border:solid 1px #aaa'>System.String[]</small><br/>lang <small style='border:solid 1px #aaa'>System.String</small>|Establishes a session for the specified principal|
-|Get|SanteDB.Core.Security.ISession|sessionToken <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>allowExpired <small style='border:solid 1px #aaa'>System.Boolean</small>|Authenticates the session identifier as evidence of session|
-|Extend|SanteDB.Core.Security.ISession|refreshToken <small style='border:solid 1px #aaa'>System.Byte[]</small>|Extend the session with the specified refresh token|
-|Abandon|void|session <small style='border:solid 1px #aaa'>SanteDB.Core.Security.ISession</small>|Abandons the session|
+|Establish|ISession|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>remoteEp <small style='border:solid 1px #aaa'>String</small><br/>isOverride <small style='border:solid 1px #aaa'>Boolean</small><br/>purpose <small style='border:solid 1px #aaa'>String</small><br/>scope <small style='border:solid 1px #aaa'>String[]</small><br/>lang <small style='border:solid 1px #aaa'>String</small>|Establishes a session for the specified principal|
+|Get|ISession|sessionToken <small style='border:solid 1px #aaa'>Byte[]</small><br/>allowExpired <small style='border:solid 1px #aaa'>Boolean</small>|Authenticates the session identifier as evidence of session|
+|Extend|ISession|refreshToken <small style='border:solid 1px #aaa'>Byte[]</small>|Extend the session with the specified refresh token|
+|Abandon|void|session <small style='border:solid 1px #aaa'>ISession</small>|Abandons the session|
 
 ## Implementations
 
@@ -52,33 +52,33 @@ public class MySessionProviderService : SanteDB.Core.Services.ISessionProviderSe
 	/// <summary>
 	/// Fired when the session provider service has established
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Services.SessionEstablishedEventArgs> Established;
+	public event EventHandler<SessionEstablishedEventArgs> Established;
 	/// <summary>
 	/// Fired when the session provider service has ended by the user's decision
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Services.SessionEstablishedEventArgs> Abandoned;
+	public event EventHandler<SessionEstablishedEventArgs> Abandoned;
 	/// <summary>
 	/// Establishes a session for the specified principal
 	/// </summary>
-	public SanteDB.Core.Security.ISession Establish(System.Security.Principal.IPrincipal principal,System.String remoteEp,System.Boolean isOverride,System.String purpose,System.String[] scope,System.String lang){
+	public ISession Establish(IPrincipal principal,String remoteEp,Boolean isOverride,String purpose,String[] scope,String lang){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Authenticates the session identifier as evidence of session
 	/// </summary>
-	public SanteDB.Core.Security.ISession Get(System.Byte[] sessionToken,System.Boolean allowExpired){
+	public ISession Get(Byte[] sessionToken,Boolean allowExpired){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Extend the session with the specified refresh token
 	/// </summary>
-	public SanteDB.Core.Security.ISession Extend(System.Byte[] refreshToken){
+	public ISession Extend(Byte[] refreshToken){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Abandons the session
 	/// </summary>
-	public void Abandon(SanteDB.Core.Security.ISession session){
+	public void Abandon(ISession session){
 		throw new System.NotImplementedException();
 	}
 }

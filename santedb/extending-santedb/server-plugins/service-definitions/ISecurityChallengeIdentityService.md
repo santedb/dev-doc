@@ -9,8 +9,8 @@ Represents a security challenge service which can provide identity
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
-|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
+|Authenticating|EventHandler&lt;AuthenticatingEventArgs>|Fired prior to an authentication event|
+|Authenticated|EventHandler&lt;AuthenticatedEventArgs>|Fired after an authentication decision being made|
 
 ## Properties
 
@@ -21,7 +21,7 @@ Represents a security challenge service which can provide identity
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|System.Security.Principal.IPrincipal|userName <small style='border:solid 1px #aaa'>System.String</small><br/>challengeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>response <small style='border:solid 1px #aaa'>System.String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>System.String</small>|Authenticates the specified user with a challenge key and response|
+|Authenticate|IPrincipal|userName <small style='border:solid 1px #aaa'>String</small><br/>challengeKey <small style='border:solid 1px #aaa'>Guid</small><br/>response <small style='border:solid 1px #aaa'>String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>String</small>|Authenticates the specified user with a challenge key and response|
 
 ## Implementations
 
@@ -49,15 +49,15 @@ public class MySecurityChallengeIdentityService : SanteDB.Core.Security.ISecurit
 	/// <summary>
 	/// Fired prior to an authentication event
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs> Authenticating;
+	public event EventHandler<AuthenticatingEventArgs> Authenticating;
 	/// <summary>
 	/// Fired after an authentication decision being made
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs> Authenticated;
+	public event EventHandler<AuthenticatedEventArgs> Authenticated;
 	/// <summary>
 	/// Authenticates the specified user with a challenge key and response
 	/// </summary>
-	public System.Security.Principal.IPrincipal Authenticate(System.String userName,System.Guid challengeKey,System.String response,System.String tfaSecret){
+	public IPrincipal Authenticate(String userName,Guid challengeKey,String response,String tfaSecret){
 		throw new System.NotImplementedException();
 	}
 }

@@ -1,5 +1,5 @@
 ---
-description: IDataPersistenceServiceEx`1 (SanteDB.Core.Api)
+description: IDataPersistenceServiceEx<TModel> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -19,7 +19,7 @@ Extended data persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Touch|void|key <small style='border:solid 1px #aaa'>System.Guid</small><br/>mode <small style='border:solid 1px #aaa'>SanteDB.Core.Services.TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Touch the specified data|
+|Touch|void|key <small style='border:solid 1px #aaa'>Guid</small><br/>mode <small style='border:solid 1px #aaa'>TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Touch the specified data|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyDataPersistenceServiceEx<TModel> : SanteDB.Core.Services.IDataPer
 	/// <summary>
 	/// Touch the specified data
 	/// </summary>
-	public void Touch(System.Guid key,SanteDB.Core.Services.TransactionMode mode,System.Security.Principal.IPrincipal principal){
+	public void Touch(Guid key,TransactionMode mode,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }

@@ -19,9 +19,9 @@ Represents a metadata repository for the BIS services
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Query|System.Collections.Generic.IEnumerable&lt;TBisDefinition>|filter <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TBisDefinition,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small>|Query metadata repository for|
-|Get|TBisDefinition|id <small style='border:solid 1px #aaa'>System.String</small>|Get the specified BI definition by identifier|
-|Remove|void|id <small style='border:solid 1px #aaa'>System.String</small>|Removes the specified BI definition from the repository|
+|Query|IEnumerable&lt;TBisDefinition>|filter <small style='border:solid 1px #aaa'>Expression<Func<TBisDefinition,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small>|Query metadata repository for|
+|Get|TBisDefinition|id <small style='border:solid 1px #aaa'>String</small>|Get the specified BI definition by identifier|
+|Remove|void|id <small style='border:solid 1px #aaa'>String</small>|Removes the specified BI definition from the repository|
 |Insert|TBisDefinition|metadata <small style='border:solid 1px #aaa'>TBisDefinition</small>|Inserts the specified BI definition into the repository|
 
 ## Implementations
@@ -64,19 +64,19 @@ public class MyBiMetadataRepository : SanteDB.BI.Services.IBiMetadataRepository 
 	/// <summary>
 	/// Query metadata repository for
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<TBisDefinition> Query<TBisDefinition>(System.Linq.Expressions.Expression<System.Func<TBisDefinition,System.Boolean>> filter,System.Int32 offset,System.Nullable<System.Int32> count){
+	public IEnumerable<TBisDefinition> Query<TBisDefinition>(Expression<Func<TBisDefinition,Boolean>> filter,Int32 offset,Nullable<Int32> count){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the specified BI definition by identifier
 	/// </summary>
-	public TBisDefinition Get<TBisDefinition>(System.String id){
+	public TBisDefinition Get<TBisDefinition>(String id){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Removes the specified BI definition from the repository
 	/// </summary>
-	public void Remove<TBisDefinition>(System.String id){
+	public void Remove<TBisDefinition>(String id){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>

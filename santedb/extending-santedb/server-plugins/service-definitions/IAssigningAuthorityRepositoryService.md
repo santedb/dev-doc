@@ -19,8 +19,8 @@ Represents a repository service for managing assigning authorities.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|SanteDB.Core.Model.DataTypes.AssigningAuthority|domain <small style='border:solid 1px #aaa'>System.String</small>|Get by domain|
-|Get|SanteDB.Core.Model.DataTypes.AssigningAuthority|uri <small style='border:solid 1px #aaa'>System.Uri</small>|Get by domain|
+|Get|AssigningAuthority|domain <small style='border:solid 1px #aaa'>String</small>|Get by domain|
+|Get|AssigningAuthority|uri <small style='border:solid 1px #aaa'>Uri</small>|Get by domain|
 
 ## Implementations
 
@@ -48,13 +48,13 @@ public class MyAssigningAuthorityRepositoryService : SanteDB.Core.Services.IAssi
 	/// <summary>
 	/// Get by domain
 	/// </summary>
-	public SanteDB.Core.Model.DataTypes.AssigningAuthority Get(System.String domain){
+	public AssigningAuthority Get(String domain){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get by domain
 	/// </summary>
-	public SanteDB.Core.Model.DataTypes.AssigningAuthority Get(System.Uri uri){
+	public AssigningAuthority Get(Uri uri){
 		throw new System.NotImplementedException();
 	}
 }

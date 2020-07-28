@@ -1,5 +1,5 @@
 ---
-description: IRepositoryServiceEx`1 (SanteDB.Core.Api)
+description: IRepositoryServiceEx<TModel> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -19,8 +19,8 @@ Represents a repository service wrapping an extended persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Touch|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Touch the specified object|
-|Nullify|TModel|id <small style='border:solid 1px #aaa'>System.Guid</small>|Nullifies a specific instance|
+|Touch|void|key <small style='border:solid 1px #aaa'>Guid</small>|Touch the specified object|
+|Nullify|TModel|id <small style='border:solid 1px #aaa'>Guid</small>|Nullifies a specific instance|
 
 ## Implementations
 
@@ -36,13 +36,13 @@ public class MyRepositoryServiceEx<TModel> : SanteDB.Core.Services.IRepositorySe
 	/// <summary>
 	/// Touch the specified object
 	/// </summary>
-	public void Touch(System.Guid key){
+	public void Touch(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Nullifies a specific instance
 	/// </summary>
-	public TModel Nullify(System.Guid id){
+	public TModel Nullify(Guid id){
 		throw new System.NotImplementedException();
 	}
 }

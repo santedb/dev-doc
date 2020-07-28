@@ -1,5 +1,5 @@
 ---
-description: IValidatingRepositoryService`1 (SanteDB.Core.Api)
+description: IValidatingRepositoryService<TModel> (SanteDB.Core.Api)
 ---
 
 ## Summary

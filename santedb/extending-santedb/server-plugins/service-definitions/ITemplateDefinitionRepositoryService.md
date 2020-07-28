@@ -20,7 +20,7 @@ Represents a repository which deals with metadata such as assigning authorities,
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetTemplateDefinition|SanteDB.Core.Model.DataTypes.TemplateDefinition|mnemonic <small style='border:solid 1px #aaa'>System.String</small>|Get tempate definition|
+|GetTemplateDefinition|TemplateDefinition|mnemonic <small style='border:solid 1px #aaa'>String</small>|Get tempate definition|
 
 ## Implementations
 
@@ -48,7 +48,7 @@ public class MyTemplateDefinitionRepositoryService : SanteDB.Core.Services.ITemp
 	/// <summary>
 	/// Get tempate definition
 	/// </summary>
-	public SanteDB.Core.Model.DataTypes.TemplateDefinition GetTemplateDefinition(System.String mnemonic){
+	public TemplateDefinition GetTemplateDefinition(String mnemonic){
 		throw new System.NotImplementedException();
 	}
 }

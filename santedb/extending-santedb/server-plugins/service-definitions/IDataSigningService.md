@@ -19,9 +19,9 @@ Represents a service which can sign arbitrary data
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetSignatureAlgorithm|System.String|keyId <small style='border:solid 1px #aaa'>System.String</small>|Get the siganture algorithm this service would use to sign w/the specified key|
-|SignData|System.Byte[]|data <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>System.String</small>|Signs the specified data using the service's configured signing key|
-|Verify|System.Boolean|data <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>signature <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>System.String</small>|Verifies the digital signature of the data|
+|GetSignatureAlgorithm|String|keyId <small style='border:solid 1px #aaa'>String</small>|Get the siganture algorithm this service would use to sign w/the specified key|
+|SignData|Byte[]|data <small style='border:solid 1px #aaa'>Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>String</small>|Signs the specified data using the service's configured signing key|
+|Verify|Boolean|data <small style='border:solid 1px #aaa'>Byte[]</small><br/>signature <small style='border:solid 1px #aaa'>Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>String</small>|Verifies the digital signature of the data|
 
 ## Implementations
 
@@ -49,19 +49,19 @@ public class MyDataSigningService : SanteDB.Core.Security.IDataSigningService {
 	/// <summary>
 	/// Get the siganture algorithm this service would use to sign w/the specified key
 	/// </summary>
-	public System.String GetSignatureAlgorithm(System.String keyId){
+	public String GetSignatureAlgorithm(String keyId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Signs the specified data using the service's configured signing key
 	/// </summary>
-	public System.Byte[] SignData(System.Byte[] data,System.String keyId){
+	public Byte[] SignData(Byte[] data,String keyId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Verifies the digital signature of the data
 	/// </summary>
-	public System.Boolean Verify(System.Byte[] data,System.Byte[] signature,System.String keyId){
+	public Boolean Verify(Byte[] data,Byte[] signature,String keyId){
 		throw new System.NotImplementedException();
 	}
 }

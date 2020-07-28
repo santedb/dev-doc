@@ -9,8 +9,8 @@ Represents an alerting service.
 
 |Event|Type|Description|
 |-|-|-|
-|Committed|System.EventHandler&lt;SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert is received.|
-|Received|System.EventHandler&lt;SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
+|Committed|EventHandler&lt;MailMessageEventArgs>|Fired when an alert is received.|
+|Received|EventHandler&lt;MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
 
 ## Properties
 
@@ -21,11 +21,11 @@ Represents an alerting service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Broadcast|void|message <small style='border:solid 1px #aaa'>SanteDB.Core.Mail.MailMessage</small>|Broadcasts an alert.|
-|Find|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Mail.MailMessage>|predicate <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Mail.MailMessage,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>System.Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Mail.MailMessage, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][]</small>|Searches for alerts.|
-|Get|SanteDB.Core.Mail.MailMessage|id <small style='border:solid 1px #aaa'>System.Guid</small>|Gets an alert.|
-|Insert|SanteDB.Core.Mail.MailMessage|message <small style='border:solid 1px #aaa'>SanteDB.Core.Mail.MailMessage</small>|Inserts an alert message.|
-|Save|SanteDB.Core.Mail.MailMessage|message <small style='border:solid 1px #aaa'>SanteDB.Core.Mail.MailMessage</small>|Saves an alert.|
+|Broadcast|void|message <small style='border:solid 1px #aaa'>MailMessage</small>|Broadcasts an alert.|
+|Find|IEnumerable&lt;MailMessage>|predicate <small style='border:solid 1px #aaa'>Expression<Func<MailMessage,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Searches for alerts.|
+|Get|MailMessage|id <small style='border:solid 1px #aaa'>Guid</small>|Gets an alert.|
+|Insert|MailMessage|message <small style='border:solid 1px #aaa'>MailMessage</small>|Inserts an alert message.|
+|Save|MailMessage|message <small style='border:solid 1px #aaa'>MailMessage</small>|Saves an alert.|
 
 ## Implementations
 
@@ -53,39 +53,39 @@ public class MyMailMessageRepositoryService : SanteDB.Core.Services.IMailMessage
 	/// <summary>
 	/// Fired when an alert is received.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Mail.MailMessageEventArgs> Committed;
+	public event EventHandler<MailMessageEventArgs> Committed;
 	/// <summary>
 	/// Fired when an alert was raised and is being processed.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Mail.MailMessageEventArgs> Received;
+	public event EventHandler<MailMessageEventArgs> Received;
 	/// <summary>
 	/// Broadcasts an alert.
 	/// </summary>
-	public void Broadcast(SanteDB.Core.Mail.MailMessage message){
+	public void Broadcast(MailMessage message){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Searches for alerts.
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Mail.MailMessage> Find(System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Mail.MailMessage,System.Boolean>> predicate,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalCount,SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Mail.MailMessage, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][] orderBy){
+	public IEnumerable<MailMessage> Find(Expression<Func<MailMessage,Boolean>> predicate,Int32 offset,Nullable<Int32> count,Int32& totalCount,ModelSort`1[] orderBy){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets an alert.
 	/// </summary>
-	public SanteDB.Core.Mail.MailMessage Get(System.Guid id){
+	public MailMessage Get(Guid id){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Inserts an alert message.
 	/// </summary>
-	public SanteDB.Core.Mail.MailMessage Insert(SanteDB.Core.Mail.MailMessage message){
+	public MailMessage Insert(MailMessage message){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Saves an alert.
 	/// </summary>
-	public SanteDB.Core.Mail.MailMessage Save(SanteDB.Core.Mail.MailMessage message){
+	public MailMessage Save(MailMessage message){
 		throw new System.NotImplementedException();
 	}
 }

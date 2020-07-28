@@ -9,8 +9,8 @@ Represents a service which retrieves IPrincipal objects for applications.
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
-|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
+|Authenticated|EventHandler&lt;AuthenticatedEventArgs>|Fired after an authentication request has been made.|
+|Authenticating|EventHandler&lt;AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
 
 ## Properties
 
@@ -21,10 +21,10 @@ Represents a service which retrieves IPrincipal objects for applications.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|System.Security.Principal.IPrincipal|applicationId <small style='border:solid 1px #aaa'>System.String</small><br/>applicationSecret <small style='border:solid 1px #aaa'>System.String</small>|Authenticate the application identity.|
-|GetIdentity|System.Security.Principal.IIdentity|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified identity for an application.|
-|SetLockout|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>lockoutState <small style='border:solid 1px #aaa'>System.Boolean</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Set the lockout status|
-|ChangeSecret|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>secret <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Change the specified application identity's secret|
+|Authenticate|IPrincipal|applicationId <small style='border:solid 1px #aaa'>String</small><br/>applicationSecret <small style='border:solid 1px #aaa'>String</small>|Authenticate the application identity.|
+|GetIdentity|IIdentity|name <small style='border:solid 1px #aaa'>String</small>|Gets the specified identity for an application.|
+|SetLockout|void|name <small style='border:solid 1px #aaa'>String</small><br/>lockoutState <small style='border:solid 1px #aaa'>Boolean</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Set the lockout status|
+|ChangeSecret|void|name <small style='border:solid 1px #aaa'>String</small><br/>secret <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Change the specified application identity's secret|
 
 ## Implementations
 
@@ -52,33 +52,33 @@ public class MyApplicationIdentityProviderService : SanteDB.Core.Security.Servic
 	/// <summary>
 	/// Fired after an authentication request has been made.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs> Authenticated;
+	public event EventHandler<AuthenticatedEventArgs> Authenticated;
 	/// <summary>
 	/// Fired prior to an authentication request being made.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs> Authenticating;
+	public event EventHandler<AuthenticatingEventArgs> Authenticating;
 	/// <summary>
 	/// Authenticate the application identity.
 	/// </summary>
-	public System.Security.Principal.IPrincipal Authenticate(System.String applicationId,System.String applicationSecret){
+	public IPrincipal Authenticate(String applicationId,String applicationSecret){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the specified identity for an application.
 	/// </summary>
-	public System.Security.Principal.IIdentity GetIdentity(System.String name){
+	public IIdentity GetIdentity(String name){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Set the lockout status
 	/// </summary>
-	public void SetLockout(System.String name,System.Boolean lockoutState,System.Security.Principal.IPrincipal principal){
+	public void SetLockout(String name,Boolean lockoutState,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Change the specified application identity's secret
 	/// </summary>
-	public void ChangeSecret(System.String name,System.String secret,System.Security.Principal.IPrincipal principal){
+	public void ChangeSecret(String name,String secret,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }

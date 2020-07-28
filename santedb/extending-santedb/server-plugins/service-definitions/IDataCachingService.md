@@ -10,24 +10,24 @@ Represents a data caching service which allows services to retrieve
 
 |Event|Type|Description|
 |-|-|-|
-|Added|System.EventHandler&lt;SanteDB.Core.Services.DataCacheEventArgs>|Item was added to cache|
-|Updated|System.EventHandler&lt;SanteDB.Core.Services.DataCacheEventArgs>|Item was updated from cache|
-|Removed|System.EventHandler&lt;SanteDB.Core.Services.DataCacheEventArgs>|Item was removed from cache|
+|Added|EventHandler&lt;DataCacheEventArgs>|Item was added to cache|
+|Updated|EventHandler&lt;DataCacheEventArgs>|Item was updated from cache|
+|Removed|EventHandler&lt;DataCacheEventArgs>|Item was removed from cache|
 
 ## Properties
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Size|System.Int64|R|Gets the current size of the cache|
+|Size|Int64|R|Gets the current size of the cache|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetCacheItem|TData|key <small style='border:solid 1px #aaa'>System.Guid</small>|Get the specified cache item|
-|GetCacheItem|System.Object|key <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the specified cache item|
-|Add|void|data <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small>|Adds the specified item to the cache|
-|Remove|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Removes an object from the cache|
+|GetCacheItem|TData|key <small style='border:solid 1px #aaa'>Guid</small>|Get the specified cache item|
+|GetCacheItem|Object|key <small style='border:solid 1px #aaa'>Guid</small>|Gets the specified cache item|
+|Add|void|data <small style='border:solid 1px #aaa'>IdentifiedData</small>|Adds the specified item to the cache|
+|Remove|void|key <small style='border:solid 1px #aaa'>Guid</small>|Removes an object from the cache|
 |Clear|void||TODO|
 
 ## Implementations
@@ -70,43 +70,43 @@ public class MyDataCachingService : SanteDB.Core.Services.IDataCachingService {
 	/// <summary>
 	/// Item was added to cache
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs> Added;
+	public event EventHandler<DataCacheEventArgs> Added;
 	/// <summary>
 	/// Item was updated from cache
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs> Updated;
+	public event EventHandler<DataCacheEventArgs> Updated;
 	/// <summary>
 	/// Item was removed from cache
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs> Removed;
+	public event EventHandler<DataCacheEventArgs> Removed;
 	/// <summary>
 	/// Gets the current size of the cache
 	/// </summary>
-	public System.Int64 Size {
+	public Int64 Size {
 		get;
 	}
 	/// <summary>
 	/// Get the specified cache item
 	/// </summary>
-	public TData GetCacheItem<TData>(System.Guid key){
+	public TData GetCacheItem<TData>(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the specified cache item
 	/// </summary>
-	public System.Object GetCacheItem(System.Guid key){
+	public Object GetCacheItem(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Adds the specified item to the cache
 	/// </summary>
-	public void Add(SanteDB.Core.Model.IdentifiedData data){
+	public void Add(IdentifiedData data){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Removes an object from the cache
 	/// </summary>
-	public void Remove(System.Guid key){
+	public void Remove(Guid key){
 		throw new System.NotImplementedException();
 	}
 	public void Clear(){

@@ -19,7 +19,7 @@ BI Render service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Render|System.IO.Stream|reportId <small style='border:solid 1px #aaa'>System.String</small><br/>viewName <small style='border:solid 1px #aaa'>System.String</small><br/>formatName <small style='border:solid 1px #aaa'>System.String</small><br/>parameters <small style='border:solid 1px #aaa'>System.Collections.Generic.IDictionary<System.String,System.Object></small><br/>mimeType <small style='border:solid 1px #aaa'>System.String&</small>|Render the specified report|
+|Render|Stream|reportId <small style='border:solid 1px #aaa'>String</small><br/>viewName <small style='border:solid 1px #aaa'>String</small><br/>formatName <small style='border:solid 1px #aaa'>String</small><br/>parameters <small style='border:solid 1px #aaa'>IDictionary<String,Object></small><br/>mimeType <small style='border:solid 1px #aaa'>String&</small>|Render the specified report|
 
 ## Implementations
 
@@ -47,7 +47,7 @@ public class MyBiRenderService : SanteDB.BI.Services.IBiRenderService {
 	/// <summary>
 	/// Render the specified report
 	/// </summary>
-	public System.IO.Stream Render(System.String reportId,System.String viewName,System.String formatName,System.Collections.Generic.IDictionary<System.String,System.Object> parameters,System.String& mimeType){
+	public Stream Render(String reportId,String viewName,String formatName,IDictionary<String,Object> parameters,String& mimeType){
 		throw new System.NotImplementedException();
 	}
 }

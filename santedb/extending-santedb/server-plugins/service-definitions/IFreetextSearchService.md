@@ -19,7 +19,7 @@ Free text search service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Search|System.Collections.Generic.IEnumerable&lt;TEntity>|term <small style='border:solid 1px #aaa'>System.String[]</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'></small>|Search based on tokens|
+|Search|IEnumerable&lt;TEntity>|term <small style='border:solid 1px #aaa'>String[]</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Search based on tokens|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyFreetextSearchService : SanteDB.Core.Services.IFreetextSearchServ
 	/// <summary>
 	/// Search based on tokens
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<TEntity> Search<TEntity>(System.String[] term,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults, orderBy){
+	public IEnumerable<TEntity> Search<TEntity>(String[] term,Int32 offset,Nullable<Int32> count,Int32& totalResults,ModelSort`1[] orderBy){
 		throw new System.NotImplementedException();
 	}
 }

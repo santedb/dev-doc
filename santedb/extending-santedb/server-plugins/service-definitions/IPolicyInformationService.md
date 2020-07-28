@@ -19,12 +19,12 @@ Represents a contract for a policy information service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetActivePolicies|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Security.IPolicyInstance>|securable <small style='border:solid 1px #aaa'>System.Object</small>|Get active policies for the specified securable type|
-|GetPolicies|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Security.IPolicy>||TODO|
-|GetPolicy|SanteDB.Core.Security.IPolicy|policyOid <small style='border:solid 1px #aaa'>System.String</small>|Get a specific policy|
-|AddPolicies|void|securable <small style='border:solid 1px #aaa'>System.Object</small><br/>rule <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Security.PolicyGrantType</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>policyOids <small style='border:solid 1px #aaa'>System.String[]</small>|Adds the specified policies to the specified securable object|
-|GetPolicyInstance|SanteDB.Core.Security.IPolicyInstance|securable <small style='border:solid 1px #aaa'>System.Object</small><br/>policyOid <small style='border:solid 1px #aaa'>System.String</small>|Gets the policy instance for the specified object|
-|RemovePolicies|void|securable <small style='border:solid 1px #aaa'>System.Object</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>oid <small style='border:solid 1px #aaa'>System.String[]</small>|Removes the specified policies from the user account|
+|GetActivePolicies|IEnumerable&lt;IPolicyInstance>|securable <small style='border:solid 1px #aaa'>Object</small>|Get active policies for the specified securable type|
+|GetPolicies|IEnumerable&lt;IPolicy>||TODO|
+|GetPolicy|IPolicy|policyOid <small style='border:solid 1px #aaa'>String</small>|Get a specific policy|
+|AddPolicies|void|securable <small style='border:solid 1px #aaa'>Object</small><br/>rule <small style='border:solid 1px #aaa'>PolicyGrantType</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>policyOids <small style='border:solid 1px #aaa'>String[]</small>|Adds the specified policies to the specified securable object|
+|GetPolicyInstance|IPolicyInstance|securable <small style='border:solid 1px #aaa'>Object</small><br/>policyOid <small style='border:solid 1px #aaa'>String</small>|Gets the policy instance for the specified object|
+|RemovePolicies|void|securable <small style='border:solid 1px #aaa'>Object</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>oid <small style='border:solid 1px #aaa'>String[]</small>|Removes the specified policies from the user account|
 
 ## Implementations
 
@@ -52,34 +52,34 @@ public class MyPolicyInformationService : SanteDB.Core.Security.Services.IPolicy
 	/// <summary>
 	/// Get active policies for the specified securable type
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Security.IPolicyInstance> GetActivePolicies(System.Object securable){
+	public IEnumerable<IPolicyInstance> GetActivePolicies(Object securable){
 		throw new System.NotImplementedException();
 	}
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Security.IPolicy> GetPolicies(){
+	public IEnumerable<IPolicy> GetPolicies(){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get a specific policy
 	/// </summary>
-	public SanteDB.Core.Security.IPolicy GetPolicy(System.String policyOid){
+	public IPolicy GetPolicy(String policyOid){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Adds the specified policies to the specified securable object
 	/// </summary>
-	public void AddPolicies(System.Object securable,SanteDB.Core.Model.Security.PolicyGrantType rule,System.Security.Principal.IPrincipal principal,System.String[] policyOids){
+	public void AddPolicies(Object securable,PolicyGrantType rule,IPrincipal principal,String[] policyOids){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the policy instance for the specified object
 	/// </summary>
-	public SanteDB.Core.Security.IPolicyInstance GetPolicyInstance(System.Object securable,System.String policyOid){
+	public IPolicyInstance GetPolicyInstance(Object securable,String policyOid){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Removes the specified policies from the user account
 	/// </summary>
-	public void RemovePolicies(System.Object securable,System.Security.Principal.IPrincipal principal,System.String[] oid){
+	public void RemovePolicies(Object securable,IPrincipal principal,String[] oid){
 		throw new System.NotImplementedException();
 	}
 }

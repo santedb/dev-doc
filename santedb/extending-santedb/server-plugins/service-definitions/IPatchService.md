@@ -19,9 +19,9 @@ Represents a patch service which can calculate and apply patches
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Diff|SanteDB.Core.Model.Patch.Patch|existing <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small><br/>updated <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small><br/>ignoreProperties <small style='border:solid 1px #aaa'>System.String[]</small>|Performs a DIFF and creates the related patch which can be used to update             to|
-|Patch|SanteDB.Core.Model.IdentifiedData|patch <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Patch.Patch</small><br/>data <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small><br/>force <small style='border:solid 1px #aaa'>System.Boolean</small>|Apples the specified  onto  returning the updated object|
-|Test|System.Boolean|patch <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Patch.Patch</small><br/>target <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small>|Tests that the patch can be applied on the specified object|
+|Diff|Patch|existing <small style='border:solid 1px #aaa'>IdentifiedData</small><br/>updated <small style='border:solid 1px #aaa'>IdentifiedData</small><br/>ignoreProperties <small style='border:solid 1px #aaa'>String[]</small>|Performs a DIFF and creates the related patch which can be used to update             to|
+|Patch|IdentifiedData|patch <small style='border:solid 1px #aaa'>Patch</small><br/>data <small style='border:solid 1px #aaa'>IdentifiedData</small><br/>force <small style='border:solid 1px #aaa'>Boolean</small>|Apples the specified  onto  returning the updated object|
+|Test|Boolean|patch <small style='border:solid 1px #aaa'>Patch</small><br/>target <small style='border:solid 1px #aaa'>IdentifiedData</small>|Tests that the patch can be applied on the specified object|
 
 ## Implementations
 
@@ -49,19 +49,19 @@ public class MyPatchService : SanteDB.Core.Services.IPatchService {
 	/// <summary>
 	/// Performs a DIFF and creates the related patch which can be used to update             to
 	/// </summary>
-	public SanteDB.Core.Model.Patch.Patch Diff(SanteDB.Core.Model.IdentifiedData existing,SanteDB.Core.Model.IdentifiedData updated,System.String[] ignoreProperties){
+	public Patch Diff(IdentifiedData existing,IdentifiedData updated,String[] ignoreProperties){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Apples the specified  onto  returning the updated object
 	/// </summary>
-	public SanteDB.Core.Model.IdentifiedData Patch(SanteDB.Core.Model.Patch.Patch patch,SanteDB.Core.Model.IdentifiedData data,System.Boolean force){
+	public IdentifiedData Patch(Patch patch,IdentifiedData data,Boolean force){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Tests that the patch can be applied on the specified object
 	/// </summary>
-	public System.Boolean Test(SanteDB.Core.Model.Patch.Patch patch,SanteDB.Core.Model.IdentifiedData target){
+	public Boolean Test(Patch patch,IdentifiedData target){
 		throw new System.NotImplementedException();
 	}
 }

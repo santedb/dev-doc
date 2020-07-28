@@ -1,5 +1,5 @@
 ---
-description: IBusinessRulesService`1 (SanteDB.Core.Api)
+description: IBusinessRulesService<TModel> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -18,7 +18,7 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Next|SanteDB.Core.Services.IBusinessRulesService&lt;TModel>|RW|Gets or sets the rule to be run after this rule (for chained rules)|
+|Next|IBusinessRulesService&lt;TModel>|RW|Gets or sets the rule to be run after this rule (for chained rules)|
 
 ## Operations
 
@@ -26,13 +26,13 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 |-|-|-|-|
 |AfterInsert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after an insert occurs|
 |AfterObsolete|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after obsolete committed|
-|AfterQuery|System.Collections.Generic.IEnumerable&lt;TModel>|results <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<TModel></small>|Called after query|
+|AfterQuery|IEnumerable&lt;TModel>|results <small style='border:solid 1px #aaa'>IEnumerable<TModel></small>|Called after query|
 |AfterRetrieve|TModel|result <small style='border:solid 1px #aaa'>TModel</small>|Called after retrieve|
 |AfterUpdate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after update committed|
 |BeforeInsert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before an insert occurs|
 |BeforeObsolete|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before obsolete|
 |BeforeUpdate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before an update occurs|
-|Validate|System.Collections.Generic.List&lt;SanteDB.Core.BusinessRules.DetectedIssue>|data <small style='border:solid 1px #aaa'>TModel</small>|Called to validate a specific object|
+|Validate|List&lt;DetectedIssue>|data <small style='border:solid 1px #aaa'>TModel</small>|Called to validate a specific object|
 
 ## Implementations
 
@@ -48,7 +48,7 @@ public class MyBusinessRulesService<TModel> : SanteDB.Core.Services.IBusinessRul
 	/// <summary>
 	/// Gets or sets the rule to be run after this rule (for chained rules)
 	/// </summary>
-	public SanteDB.Core.Services.IBusinessRulesService<TModel> Next {
+	public IBusinessRulesService<TModel> Next {
 		get;
 		set;
 	}
@@ -67,7 +67,7 @@ public class MyBusinessRulesService<TModel> : SanteDB.Core.Services.IBusinessRul
 	/// <summary>
 	/// Called after query
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<TModel> AfterQuery(System.Collections.Generic.IEnumerable<TModel> results){
+	public IEnumerable<TModel> AfterQuery(IEnumerable<TModel> results){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -103,7 +103,7 @@ public class MyBusinessRulesService<TModel> : SanteDB.Core.Services.IBusinessRul
 	/// <summary>
 	/// Called to validate a specific object
 	/// </summary>
-	public System.Collections.Generic.List<SanteDB.Core.BusinessRules.DetectedIssue> Validate(TModel data){
+	public List<DetectedIssue> Validate(TModel data){
 		throw new System.NotImplementedException();
 	}
 }

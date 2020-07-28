@@ -14,16 +14,16 @@ Represents a configuration manager service
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Configuration|SanteDB.Core.Configuration.SanteDBConfiguration|R|Get the configuration object|
+|Configuration|SanteDBConfiguration|R|Get the configuration object|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GetSection|T||TODO|
-|GetAppSetting|System.String|key <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified application setting|
-|GetConnectionString|SanteDB.Core.Configuration.Data.ConnectionString|key <small style='border:solid 1px #aaa'>System.String</small>|Get the specified connection string|
-|SetAppSetting|void|key <small style='border:solid 1px #aaa'>System.String</small><br/>value <small style='border:solid 1px #aaa'>System.String</small>|Set the specified application setting|
+|GetAppSetting|String|key <small style='border:solid 1px #aaa'>String</small>|Gets the specified application setting|
+|GetConnectionString|ConnectionString|key <small style='border:solid 1px #aaa'>String</small>|Get the specified connection string|
+|SetAppSetting|void|key <small style='border:solid 1px #aaa'>String</small><br/>value <small style='border:solid 1px #aaa'>String</small>|Set the specified application setting|
 |Reload|void||TODO|
 
 ## Implementations
@@ -80,7 +80,7 @@ public class MyConfigurationManager : SanteDB.Core.Services.IConfigurationManage
 	/// <summary>
 	/// Get the configuration object
 	/// </summary>
-	public SanteDB.Core.Configuration.SanteDBConfiguration Configuration {
+	public SanteDBConfiguration Configuration {
 		get;
 	}
 	public T GetSection<T>(){
@@ -89,19 +89,19 @@ public class MyConfigurationManager : SanteDB.Core.Services.IConfigurationManage
 	/// <summary>
 	/// Gets the specified application setting
 	/// </summary>
-	public System.String GetAppSetting(System.String key){
+	public String GetAppSetting(String key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get the specified connection string
 	/// </summary>
-	public SanteDB.Core.Configuration.Data.ConnectionString GetConnectionString(System.String key){
+	public ConnectionString GetConnectionString(String key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Set the specified application setting
 	/// </summary>
-	public void SetAppSetting(System.String key,System.String value){
+	public void SetAppSetting(String key,String value){
 		throw new System.NotImplementedException();
 	}
 	public void Reload(){

@@ -14,14 +14,14 @@ Identifies a class which can generate TFA secrets
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Name|System.String|R|Gets the name of the TFA generator|
+|Name|String|R|Gets the name of the TFA generator|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GenerateTfaSecret|System.String||TODO|
-|Validate|System.Boolean|secret <small style='border:solid 1px #aaa'>System.String</small>|Validates the secret|
+|GenerateTfaSecret|String||TODO|
+|Validate|Boolean|secret <small style='border:solid 1px #aaa'>String</small>|Validates the secret|
 
 ## Implementations
 
@@ -49,16 +49,16 @@ public class MyTwoFactorSecretGenerator : SanteDB.Core.Security.Services.ITwoFac
 	/// <summary>
 	/// Gets the name of the TFA generator
 	/// </summary>
-	public System.String Name {
+	public String Name {
 		get;
 	}
-	public System.String GenerateTfaSecret(){
+	public String GenerateTfaSecret(){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Validates the secret
 	/// </summary>
-	public System.Boolean Validate(System.String secret){
+	public Boolean Validate(String secret){
 		throw new System.NotImplementedException();
 	}
 }

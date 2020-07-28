@@ -19,8 +19,8 @@ Represents a service that can do clinical protocols
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindProtocol|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Acts.Protocol>|predicate <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Model.Acts.Protocol,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small>|Find protocols in the repository service|
-|InsertProtocol|SanteDB.Core.Model.Acts.Protocol|data <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Acts.Protocol</small>|Find protocols in the repository service|
+|FindProtocol|IEnumerable&lt;Protocol>|predicate <small style='border:solid 1px #aaa'>Expression<Func<Protocol,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small>|Find protocols in the repository service|
+|InsertProtocol|Protocol|data <small style='border:solid 1px #aaa'>Protocol</small>|Find protocols in the repository service|
 
 ## Implementations
 
@@ -48,13 +48,13 @@ public class MyClinicalProtocolRepositoryService : SanteDB.Core.Services.IClinic
 	/// <summary>
 	/// Find protocols in the repository service
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Model.Acts.Protocol> FindProtocol(System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Model.Acts.Protocol,System.Boolean>> predicate,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults){
+	public IEnumerable<Protocol> FindProtocol(Expression<Func<Protocol,Boolean>> predicate,Int32 offset,Nullable<Int32> count,Int32& totalResults){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Find protocols in the repository service
 	/// </summary>
-	public SanteDB.Core.Model.Acts.Protocol InsertProtocol(SanteDB.Core.Model.Acts.Protocol data){
+	public Protocol InsertProtocol(Protocol data){
 		throw new System.NotImplementedException();
 	}
 }

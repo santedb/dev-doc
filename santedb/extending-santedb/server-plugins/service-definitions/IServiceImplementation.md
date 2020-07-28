@@ -14,7 +14,7 @@ Represents a marker class for a service implementation
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|ServiceName|System.String|R|Gets the service name|
+|ServiceName|String|R|Gets the service name|
 
 ## Operations
 
@@ -2333,7 +2333,7 @@ public class MyServiceImplementation : SanteDB.Core.Services.IServiceImplementat
 	/// <summary>
 	/// Gets the service name
 	/// </summary>
-	public System.String ServiceName {
+	public String ServiceName {
 		get;
 	}
 }

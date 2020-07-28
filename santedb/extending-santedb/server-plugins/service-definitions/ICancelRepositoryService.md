@@ -1,5 +1,5 @@
 ---
-description: ICancelRepositoryService`1 (SanteDB.Core.Api)
+description: ICancelRepositoryService<TModel> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -19,7 +19,7 @@ Represents a repository that can cancel an act
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Cancel|TModel|id <small style='border:solid 1px #aaa'>System.Guid</small>|Cancels the specified object|
+|Cancel|TModel|id <small style='border:solid 1px #aaa'>Guid</small>|Cancels the specified object|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyCancelRepositoryService<TModel> : SanteDB.Core.Services.ICancelRe
 	/// <summary>
 	/// Cancels the specified object
 	/// </summary>
-	public TModel Cancel(System.Guid id){
+	public TModel Cancel(Guid id){
 		throw new System.NotImplementedException();
 	}
 }

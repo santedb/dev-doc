@@ -9,8 +9,8 @@ Represents a subscription executor
 
 |Event|Type|Description|
 |-|-|-|
-|Executed|System.EventHandler&lt;SanteDB.Core.Event.QueryResultEventArgs&lt;SanteDB.Core.Model.IdentifiedData>>|Occurs when queried.|
-|Executing|System.EventHandler&lt;SanteDB.Core.Event.QueryRequestEventArgs&lt;SanteDB.Core.Model.IdentifiedData>>|Occurs when querying.|
+|Executed|EventHandler&lt;QueryResultEventArgs&lt;IdentifiedData>>|Occurs when queried.|
+|Executing|EventHandler&lt;QueryRequestEventArgs&lt;IdentifiedData>>|Occurs when querying.|
 
 ## Properties
 
@@ -21,8 +21,8 @@ Represents a subscription executor
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Execute|System.Collections.Generic.IEnumerable&lt;System.Object>|subscriptionKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>parameters <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.NameValueCollection</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Executes the specified subscription mechanism|
-|Execute|System.Collections.Generic.IEnumerable&lt;System.Object>|subscription <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Subscription.SubscriptionDefinition</small><br/>parameters <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.NameValueCollection</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|subscriptionKey <small style='border:solid 1px #aaa'>Guid</small><br/>parameters <small style='border:solid 1px #aaa'>NameValueCollection</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small>|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|subscription <small style='border:solid 1px #aaa'>SubscriptionDefinition</small><br/>parameters <small style='border:solid 1px #aaa'>NameValueCollection</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small>|Executes the specified subscription mechanism|
 
 ## Implementations
 
@@ -50,21 +50,21 @@ public class MySubscriptionExecutor : SanteDB.Core.Services.ISubscriptionExecuto
 	/// <summary>
 	/// Occurs when queried.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<SanteDB.Core.Model.IdentifiedData>> Executed;
+	public event EventHandler<QueryResultEventArgs<IdentifiedData>> Executed;
 	/// <summary>
 	/// Occurs when querying.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<SanteDB.Core.Model.IdentifiedData>> Executing;
+	public event EventHandler<QueryRequestEventArgs<IdentifiedData>> Executing;
 	/// <summary>
 	/// Executes the specified subscription mechanism
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<System.Object> Execute(System.Guid subscriptionKey,SanteDB.Core.Model.Query.NameValueCollection parameters,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId){
+	public IEnumerable<Object> Execute(Guid subscriptionKey,NameValueCollection parameters,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Executes the specified subscription mechanism
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<System.Object> Execute(SanteDB.Core.Model.Subscription.SubscriptionDefinition subscription,SanteDB.Core.Model.Query.NameValueCollection parameters,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId){
+	public IEnumerable<Object> Execute(SubscriptionDefinition subscription,NameValueCollection parameters,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId){
 		throw new System.NotImplementedException();
 	}
 }

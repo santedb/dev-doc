@@ -19,10 +19,10 @@ Represents a thread pooling service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>System.Action<System.Object></small>|Queues the specified action into the worker pool|
-|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>System.Action<System.Object></small><br/>parm <small style='border:solid 1px #aaa'>System.Object</small>|Queues the specified action into the worker pool|
-|QueueUserWorkItem|void|timeout <small style='border:solid 1px #aaa'>System.TimeSpan</small><br/>action <small style='border:solid 1px #aaa'>System.Action<System.Object></small><br/>parm <small style='border:solid 1px #aaa'>System.Object</small>|Queues the specified action into the worker pool|
-|QueueNonPooledWorkItem|void|action <small style='border:solid 1px #aaa'>System.Action<System.Object></small><br/>parm <small style='border:solid 1px #aaa'>System.Object</small>|Creates a normal thread which is not in the pool|
+|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>Action<Object></small>|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>Action<Object></small><br/>parm <small style='border:solid 1px #aaa'>Object</small>|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|timeout <small style='border:solid 1px #aaa'>TimeSpan</small><br/>action <small style='border:solid 1px #aaa'>Action<Object></small><br/>parm <small style='border:solid 1px #aaa'>Object</small>|Queues the specified action into the worker pool|
+|QueueNonPooledWorkItem|void|action <small style='border:solid 1px #aaa'>Action<Object></small><br/>parm <small style='border:solid 1px #aaa'>Object</small>|Creates a normal thread which is not in the pool|
 
 ## Implementations
 
@@ -51,25 +51,25 @@ public class MyThreadPoolService : SanteDB.Core.Services.IThreadPoolService {
 	/// <summary>
 	/// Queues the specified action into the worker pool
 	/// </summary>
-	public void QueueUserWorkItem(System.Action<System.Object> action){
+	public void QueueUserWorkItem(Action<Object> action){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Queues the specified action into the worker pool
 	/// </summary>
-	public void QueueUserWorkItem(System.Action<System.Object> action,System.Object parm){
+	public void QueueUserWorkItem(Action<Object> action,Object parm){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Queues the specified action into the worker pool
 	/// </summary>
-	public void QueueUserWorkItem(System.TimeSpan timeout,System.Action<System.Object> action,System.Object parm){
+	public void QueueUserWorkItem(TimeSpan timeout,Action<Object> action,Object parm){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Creates a normal thread which is not in the pool
 	/// </summary>
-	public void QueueNonPooledWorkItem(System.Action<System.Object> action,System.Object parm){
+	public void QueueNonPooledWorkItem(Action<Object> action,Object parm){
 		throw new System.NotImplementedException();
 	}
 }

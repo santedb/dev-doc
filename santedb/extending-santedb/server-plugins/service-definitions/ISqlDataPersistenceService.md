@@ -14,13 +14,13 @@ Represents a data persistence service where arbitrary SQL can be run
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|InvariantName|System.String|R|Text that identifies the type of database system that is running|
+|InvariantName|String|R|Text that identifies the type of database system that is running|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ExecuteNonQuery|void|sql <small style='border:solid 1px #aaa'>System.String</small>|Executes the arbitrary SQL|
+|ExecuteNonQuery|void|sql <small style='border:solid 1px #aaa'>String</small>|Executes the arbitrary SQL|
 
 ## Implementations
 
@@ -48,13 +48,13 @@ public class MySqlDataPersistenceService : SanteDB.Core.Services.ISqlDataPersist
 	/// <summary>
 	/// Text that identifies the type of database system that is running
 	/// </summary>
-	public System.String InvariantName {
+	public String InvariantName {
 		get;
 	}
 	/// <summary>
 	/// Executes the arbitrary SQL
 	/// </summary>
-	public void ExecuteNonQuery(System.String sql){
+	public void ExecuteNonQuery(String sql){
 		throw new System.NotImplementedException();
 	}
 }

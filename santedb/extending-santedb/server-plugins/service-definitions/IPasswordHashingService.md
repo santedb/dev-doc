@@ -19,7 +19,7 @@ Password hashing service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ComputeHash|System.String|password <small style='border:solid 1px #aaa'>System.String</small>|Compute the password hash|
+|ComputeHash|String|password <small style='border:solid 1px #aaa'>String</small>|Compute the password hash|
 
 ## Implementations
 
@@ -89,7 +89,7 @@ public class MyPasswordHashingService : SanteDB.Core.Security.Services.IPassword
 	/// <summary>
 	/// Compute the password hash
 	/// </summary>
-	public System.String ComputeHash(System.String password){
+	public String ComputeHash(String password){
 		throw new System.NotImplementedException();
 	}
 }

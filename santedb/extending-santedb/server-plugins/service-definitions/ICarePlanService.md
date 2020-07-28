@@ -14,16 +14,16 @@ Represents a class which can create care plans
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Protocols|System.Collections.Generic.List&lt;SanteDB.Core.Protocol.IClinicalProtocol>|R|Gets the list of protocols which can be or should be used to create the care plans|
+|Protocols|List&lt;IClinicalProtocol>|R|Gets the list of protocols which can be or should be used to create the care plans|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small>|Create a care plam|
-|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>System.Boolean</small>|Create a care plam|
-|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>System.Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>System.Collections.Generic.IDictionary<System.String,System.Object></small>|Create a care plam|
-|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>System.Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>System.Collections.Generic.IDictionary<System.String,System.Object></small><br/>protocols <small style='border:solid 1px #aaa'>System.Guid[]</small>|Create a care plam|
+|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small>|Create a care plam|
+|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>Boolean</small>|Create a care plam|
+|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>IDictionary<String,Object></small>|Create a care plam|
+|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>IDictionary<String,Object></small><br/>protocols <small style='border:solid 1px #aaa'>Guid[]</small>|Create a care plam|
 
 ## Implementations
 
@@ -52,31 +52,31 @@ public class MyCarePlanService : SanteDB.Core.Services.ICarePlanService {
 	/// <summary>
 	/// Gets the list of protocols which can be or should be used to create the care plans
 	/// </summary>
-	public System.Collections.Generic.List<SanteDB.Core.Protocol.IClinicalProtocol> Protocols {
+	public List<IClinicalProtocol> Protocols {
 		get;
 	}
 	/// <summary>
 	/// Create a care plam
 	/// </summary>
-	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p){
+	public CarePlan CreateCarePlan(Patient p){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Create a care plam
 	/// </summary>
-	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p,System.Boolean asEncounters){
+	public CarePlan CreateCarePlan(Patient p,Boolean asEncounters){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Create a care plam
 	/// </summary>
-	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p,System.Boolean asEncounters,System.Collections.Generic.IDictionary<System.String,System.Object> parameters){
+	public CarePlan CreateCarePlan(Patient p,Boolean asEncounters,IDictionary<String,Object> parameters){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Create a care plam
 	/// </summary>
-	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p,System.Boolean asEncounters,System.Collections.Generic.IDictionary<System.String,System.Object> parameters,System.Guid[] protocols){
+	public CarePlan CreateCarePlan(Patient p,Boolean asEncounters,IDictionary<String,Object> parameters,Guid[] protocols){
 		throw new System.NotImplementedException();
 	}
 }

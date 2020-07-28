@@ -19,7 +19,7 @@ Represents a service that dispatches audits to a central repository
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|SendAudit|void|audit <small style='border:solid 1px #aaa'>SanteDB.Core.Auditing.AuditData</small>|Sends the audit to the central authority|
+|SendAudit|void|audit <small style='border:solid 1px #aaa'>AuditData</small>|Sends the audit to the central authority|
 
 ## Implementations
 
@@ -47,7 +47,7 @@ public class MyAuditDispatchService : SanteDB.Core.Services.IAuditDispatchServic
 	/// <summary>
 	/// Sends the audit to the central authority
 	/// </summary>
-	public void SendAudit(SanteDB.Core.Auditing.AuditData audit){
+	public void SendAudit(AuditData audit){
 		throw new System.NotImplementedException();
 	}
 }

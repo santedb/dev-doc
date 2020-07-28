@@ -19,7 +19,7 @@ Taggable persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Save|void|sourceKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>tag <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Interfaces.ITag</small>|Save tag to source key|
+|Save|void|sourceKey <small style='border:solid 1px #aaa'>Guid</small><br/>tag <small style='border:solid 1px #aaa'>ITag</small>|Save tag to source key|
 
 ## Implementations
 
@@ -47,7 +47,7 @@ public class MyTagPersistenceService : SanteDB.Core.Services.ITagPersistenceServ
 	/// <summary>
 	/// Save tag to source key
 	/// </summary>
-	public void Save(System.Guid sourceKey,SanteDB.Core.Model.Interfaces.ITag tag){
+	public void Save(Guid sourceKey,ITag tag){
 		throw new System.NotImplementedException();
 	}
 }

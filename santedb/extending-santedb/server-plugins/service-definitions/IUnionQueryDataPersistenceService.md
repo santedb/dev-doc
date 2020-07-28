@@ -1,5 +1,5 @@
 ---
-description: IUnionQueryDataPersistenceService`1 (SanteDB.Core.Api)
+description: IUnionQueryDataPersistenceService<TEntity> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -19,7 +19,7 @@ Represents a data persistence provider that can store and continue queries
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Union|System.Collections.Generic.IEnumerable&lt;TEntity>|queries <small style='border:solid 1px #aaa'></small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>System.Int32&</small><br/>overrideAuthContext <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>orderBy <small style='border:solid 1px #aaa'></small>|Queries or continues a query|
+|Union|IEnumerable&lt;TEntity>|queries <small style='border:solid 1px #aaa'>Expression`1[]</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>Int32&</small><br/>overrideAuthContext <small style='border:solid 1px #aaa'>IPrincipal</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Queries or continues a query|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyUnionQueryDataPersistenceService<TEntity> : SanteDB.Core.Services
 	/// <summary>
 	/// Queries or continues a query
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<TEntity> Union( queries,System.Guid queryId,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalCount,System.Security.Principal.IPrincipal overrideAuthContext, orderBy){
+	public IEnumerable<TEntity> Union(Expression`1[] queries,Guid queryId,Int32 offset,Nullable<Int32> count,Int32& totalCount,IPrincipal overrideAuthContext,ModelSort`1[] orderBy){
 		throw new System.NotImplementedException();
 	}
 }

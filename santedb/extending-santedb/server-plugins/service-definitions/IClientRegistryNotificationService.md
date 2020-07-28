@@ -19,9 +19,9 @@ Represents a client registry notification service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|NotifyDuplicatesResolved|void|eventArgs <small style='border:solid 1px #aaa'>SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient></small>|Notify that duplicates have been resolved.|
-|NotifyRegister|void|eventArgs <small style='border:solid 1px #aaa'>SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient></small>|Notify that a registration occurred.|
-|NotifyUpdate|void|eventArgs <small style='border:solid 1px #aaa'>SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient></small>|Notify that an update occurred.|
+|NotifyDuplicatesResolved|void|eventArgs <small style='border:solid 1px #aaa'>NotificationEventArgs<Patient></small>|Notify that duplicates have been resolved.|
+|NotifyRegister|void|eventArgs <small style='border:solid 1px #aaa'>NotificationEventArgs<Patient></small>|Notify that a registration occurred.|
+|NotifyUpdate|void|eventArgs <small style='border:solid 1px #aaa'>NotificationEventArgs<Patient></small>|Notify that an update occurred.|
 
 ## Implementations
 
@@ -37,19 +37,19 @@ public class MyClientRegistryNotificationService : SanteDB.Core.Services.IClient
 	/// <summary>
 	/// Notify that duplicates have been resolved.
 	/// </summary>
-	public void NotifyDuplicatesResolved(SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient> eventArgs){
+	public void NotifyDuplicatesResolved(NotificationEventArgs<Patient> eventArgs){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Notify that a registration occurred.
 	/// </summary>
-	public void NotifyRegister(SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient> eventArgs){
+	public void NotifyRegister(NotificationEventArgs<Patient> eventArgs){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Notify that an update occurred.
 	/// </summary>
-	public void NotifyUpdate(SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient> eventArgs){
+	public void NotifyUpdate(NotificationEventArgs<Patient> eventArgs){
 		throw new System.NotImplementedException();
 	}
 }

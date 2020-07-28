@@ -9,8 +9,8 @@ Represents an identity service which authenticates devices.
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
-|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
+|Authenticated|EventHandler&lt;AuthenticatedEventArgs>|Fired after an authentication request has been made.|
+|Authenticating|EventHandler&lt;AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
 
 ## Properties
 
@@ -21,10 +21,10 @@ Represents an identity service which authenticates devices.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|System.Security.Principal.IPrincipal|deviceId <small style='border:solid 1px #aaa'>System.String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>System.String</small><br/>authMethod <small style='border:solid 1px #aaa'>SanteDB.Core.Security.Services.AuthenticationMethod</small>|Authenticates the specified device identifier.|
-|GetIdentity|System.Security.Principal.IIdentity|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified identity for an device.|
-|SetLockout|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>lockoutState <small style='border:solid 1px #aaa'>System.Boolean</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Set the lockout status|
-|ChangeSecret|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>System.String</small><br/>systemPrincipal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Change the device secret|
+|Authenticate|IPrincipal|deviceId <small style='border:solid 1px #aaa'>String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>String</small><br/>authMethod <small style='border:solid 1px #aaa'>AuthenticationMethod</small>|Authenticates the specified device identifier.|
+|GetIdentity|IIdentity|name <small style='border:solid 1px #aaa'>String</small>|Gets the specified identity for an device.|
+|SetLockout|void|name <small style='border:solid 1px #aaa'>String</small><br/>lockoutState <small style='border:solid 1px #aaa'>Boolean</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Set the lockout status|
+|ChangeSecret|void|name <small style='border:solid 1px #aaa'>String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>String</small><br/>systemPrincipal <small style='border:solid 1px #aaa'>IPrincipal</small>|Change the device secret|
 
 ## Implementations
 
@@ -52,33 +52,33 @@ public class MyDeviceIdentityProviderService : SanteDB.Core.Security.Services.ID
 	/// <summary>
 	/// Fired after an authentication request has been made.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs> Authenticated;
+	public event EventHandler<AuthenticatedEventArgs> Authenticated;
 	/// <summary>
 	/// Fired prior to an authentication request being made.
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs> Authenticating;
+	public event EventHandler<AuthenticatingEventArgs> Authenticating;
 	/// <summary>
 	/// Authenticates the specified device identifier.
 	/// </summary>
-	public System.Security.Principal.IPrincipal Authenticate(System.String deviceId,System.String deviceSecret,SanteDB.Core.Security.Services.AuthenticationMethod authMethod){
+	public IPrincipal Authenticate(String deviceId,String deviceSecret,AuthenticationMethod authMethod){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the specified identity for an device.
 	/// </summary>
-	public System.Security.Principal.IIdentity GetIdentity(System.String name){
+	public IIdentity GetIdentity(String name){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Set the lockout status
 	/// </summary>
-	public void SetLockout(System.String name,System.Boolean lockoutState,System.Security.Principal.IPrincipal principal){
+	public void SetLockout(String name,Boolean lockoutState,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Change the device secret
 	/// </summary>
-	public void ChangeSecret(System.String name,System.String deviceSecret,System.Security.Principal.IPrincipal systemPrincipal){
+	public void ChangeSecret(String name,String deviceSecret,IPrincipal systemPrincipal){
 		throw new System.NotImplementedException();
 	}
 }

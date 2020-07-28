@@ -9,23 +9,23 @@ Daemon service which runs when the application is started
 
 |Event|Type|Description|
 |-|-|-|
-|Starting|System.EventHandler|Fired when the daemon is starting|
-|Started|System.EventHandler|Fired when the daemon is started|
-|Stopping|System.EventHandler|Fired when the daemon is stopping|
-|Stopped|System.EventHandler|Fired when the daemon has stopped|
+|Starting|EventHandler|Fired when the daemon is starting|
+|Started|EventHandler|Fired when the daemon is started|
+|Stopping|EventHandler|Fired when the daemon is stopping|
+|Stopped|EventHandler|Fired when the daemon has stopped|
 
 ## Properties
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|IsRunning|System.Boolean|R|True when daemon is running|
+|IsRunning|Boolean|R|True when daemon is running|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Start|System.Boolean||TODO|
-|Stop|System.Boolean||TODO|
+|Start|Boolean||TODO|
+|Stop|Boolean||TODO|
 
 ## Implementations
 
@@ -487,29 +487,29 @@ public class MyDaemonService : SanteDB.Core.Services.IDaemonService {
 	/// <summary>
 	/// Fired when the daemon is starting
 	/// </summary>
-	public event System.EventHandler Starting;
+	public event EventHandler Starting;
 	/// <summary>
 	/// Fired when the daemon is started
 	/// </summary>
-	public event System.EventHandler Started;
+	public event EventHandler Started;
 	/// <summary>
 	/// Fired when the daemon is stopping
 	/// </summary>
-	public event System.EventHandler Stopping;
+	public event EventHandler Stopping;
 	/// <summary>
 	/// Fired when the daemon has stopped
 	/// </summary>
-	public event System.EventHandler Stopped;
+	public event EventHandler Stopped;
 	/// <summary>
 	/// True when daemon is running
 	/// </summary>
-	public System.Boolean IsRunning {
+	public Boolean IsRunning {
 		get;
 	}
-	public System.Boolean Start(){
+	public Boolean Start(){
 		throw new System.NotImplementedException();
 	}
-	public System.Boolean Stop(){
+	public Boolean Stop(){
 		throw new System.NotImplementedException();
 	}
 }

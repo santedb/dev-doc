@@ -9,25 +9,25 @@ Represents network information service
 
 |Event|Type|Description|
 |-|-|-|
-|NetworkStatusChanged|System.EventHandler|Fired when the network status changes|
+|NetworkStatusChanged|EventHandler|Fired when the network status changes|
 
 ## Properties
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|IsNetworkAvailable|System.Boolean|R|Gets whether the network is available|
-|IsNetworkConnected|System.Boolean|R|Gets whether the network is connected.|
-|IsNetworkWifi|System.Boolean|R|Returns true if the network is WIFI|
+|IsNetworkAvailable|Boolean|R|Gets whether the network is available|
+|IsNetworkConnected|Boolean|R|Gets whether the network is connected.|
+|IsNetworkWifi|Boolean|R|Returns true if the network is WIFI|
 
 ## Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetInterfaces|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Services.NetworkInterfaceInfo>||TODO|
-|Ping|System.Int64|hostName <small style='border:solid 1px #aaa'>System.String</small>|Pings the specified host|
-|Nslookup|System.String|address <small style='border:solid 1px #aaa'>System.String</small>|Perform a DNS lookup|
-|GetHostName|System.String||TODO|
-|GetMachineName|System.String||TODO|
+|GetInterfaces|IEnumerable&lt;NetworkInterfaceInfo>||TODO|
+|Ping|Int64|hostName <small style='border:solid 1px #aaa'>String</small>|Pings the specified host|
+|Nslookup|String|address <small style='border:solid 1px #aaa'>String</small>|Perform a DNS lookup|
+|GetHostName|String||TODO|
+|GetMachineName|String||TODO|
 
 ## Implementations
 
@@ -55,44 +55,44 @@ public class MyNetworkInformationService : SanteDB.Core.Services.INetworkInforma
 	/// <summary>
 	/// Fired when the network status changes
 	/// </summary>
-	public event System.EventHandler NetworkStatusChanged;
+	public event EventHandler NetworkStatusChanged;
 	/// <summary>
 	/// Gets whether the network is available
 	/// </summary>
-	public System.Boolean IsNetworkAvailable {
+	public Boolean IsNetworkAvailable {
 		get;
 	}
 	/// <summary>
 	/// Gets whether the network is connected.
 	/// </summary>
-	public System.Boolean IsNetworkConnected {
+	public Boolean IsNetworkConnected {
 		get;
 	}
 	/// <summary>
 	/// Returns true if the network is WIFI
 	/// </summary>
-	public System.Boolean IsNetworkWifi {
+	public Boolean IsNetworkWifi {
 		get;
 	}
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Services.NetworkInterfaceInfo> GetInterfaces(){
+	public IEnumerable<NetworkInterfaceInfo> GetInterfaces(){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Pings the specified host
 	/// </summary>
-	public System.Int64 Ping(System.String hostName){
+	public Int64 Ping(String hostName){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Perform a DNS lookup
 	/// </summary>
-	public System.String Nslookup(System.String address){
+	public String Nslookup(String address){
 		throw new System.NotImplementedException();
 	}
-	public System.String GetHostName(){
+	public String GetHostName(){
 		throw new System.NotImplementedException();
 	}
-	public System.String GetMachineName(){
+	public String GetMachineName(){
 		throw new System.NotImplementedException();
 	}
 }

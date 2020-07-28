@@ -19,7 +19,7 @@ Represents a barcode generator
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Generate|System.IO.Stream|identifers <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<SanteDB.Core.Model.DataTypes.IdentifierBase<TEntity>></small>|Generate a barcode from the specified identifier|
+|Generate|Stream|identifers <small style='border:solid 1px #aaa'>IEnumerable<IdentifierBase<TEntity>></small>|Generate a barcode from the specified identifier|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyBarcodeGeneratorService : SanteDB.Core.Api.Services.IBarcodeGener
 	/// <summary>
 	/// Generate a barcode from the specified identifier
 	/// </summary>
-	public System.IO.Stream Generate<TEntity>(System.Collections.Generic.IEnumerable<SanteDB.Core.Model.DataTypes.IdentifierBase<TEntity>> identifers){
+	public Stream Generate<TEntity>(IEnumerable<IdentifierBase<TEntity>> identifers){
 		throw new System.NotImplementedException();
 	}
 }

@@ -19,7 +19,7 @@ Represents a provider for aliases
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetAlias|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Services.ComponentAlias>|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the known alias names and score for the alias|
+|GetAlias|IEnumerable&lt;ComponentAlias>|name <small style='border:solid 1px #aaa'>String</small>|Gets the known alias names and score for the alias|
 
 ## Implementations
 
@@ -35,7 +35,7 @@ public class MyAliasProvider : SanteDB.Core.Services.IAliasProvider {
 	/// <summary>
 	/// Gets the known alias names and score for the alias
 	/// </summary>
-	public System.Collections.Generic.IEnumerable<SanteDB.Core.Services.ComponentAlias> GetAlias(System.String name){
+	public IEnumerable<ComponentAlias> GetAlias(String name){
 		throw new System.NotImplementedException();
 	}
 }

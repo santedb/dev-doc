@@ -1,5 +1,5 @@
 ---
-description: INotifyRepositoryService`1 (SanteDB.Core.Api)
+description: INotifyRepositoryService<TModel> (SanteDB.Core.Api)
 ---
 
 ## Summary
@@ -9,16 +9,16 @@ Repreents a repository which notifies of changes
 
 |Event|Type|Description|
 |-|-|-|
-|Inserting|System.EventHandler&lt;SanteDB.Core.Event.DataPersistingEventArgs&lt;TModel>>|Data is inserting|
-|Inserted|System.EventHandler&lt;SanteDB.Core.Event.DataPersistedEventArgs&lt;TModel>>|Fired after data was inserted|
-|Saving|System.EventHandler&lt;SanteDB.Core.Event.DataPersistingEventArgs&lt;TModel>>|Fired before saving|
-|Saved|System.EventHandler&lt;SanteDB.Core.Event.DataPersistedEventArgs&lt;TModel>>|Fired after data was saved|
-|Obsoleting|System.EventHandler&lt;SanteDB.Core.Event.DataPersistingEventArgs&lt;TModel>>|Fired before obsoleting|
-|Obsoleted|System.EventHandler&lt;SanteDB.Core.Event.DataPersistedEventArgs&lt;TModel>>|Fired after data was obsoleted|
-|Retrieving|System.EventHandler&lt;SanteDB.Core.Event.DataRetrievingEventArgs&lt;TModel>>|Retrieving the data|
-|Retrieved|System.EventHandler&lt;SanteDB.Core.Event.DataRetrievedEventArgs&lt;TModel>>|Fired after data was retrieved|
-|Querying|System.EventHandler&lt;SanteDB.Core.Event.QueryRequestEventArgs&lt;TModel>>|Fired after data was queried|
-|Queried|System.EventHandler&lt;SanteDB.Core.Event.QueryResultEventArgs&lt;TModel>>|Fired after data was queried|
+|Inserting|EventHandler&lt;DataPersistingEventArgs&lt;TModel>>|Data is inserting|
+|Inserted|EventHandler&lt;DataPersistedEventArgs&lt;TModel>>|Fired after data was inserted|
+|Saving|EventHandler&lt;DataPersistingEventArgs&lt;TModel>>|Fired before saving|
+|Saved|EventHandler&lt;DataPersistedEventArgs&lt;TModel>>|Fired after data was saved|
+|Obsoleting|EventHandler&lt;DataPersistingEventArgs&lt;TModel>>|Fired before obsoleting|
+|Obsoleted|EventHandler&lt;DataPersistedEventArgs&lt;TModel>>|Fired after data was obsoleted|
+|Retrieving|EventHandler&lt;DataRetrievingEventArgs&lt;TModel>>|Retrieving the data|
+|Retrieved|EventHandler&lt;DataRetrievedEventArgs&lt;TModel>>|Fired after data was retrieved|
+|Querying|EventHandler&lt;QueryRequestEventArgs&lt;TModel>>|Fired after data was queried|
+|Queried|EventHandler&lt;QueryResultEventArgs&lt;TModel>>|Fired after data was queried|
 
 ## Properties
 
@@ -44,42 +44,42 @@ public class MyNotifyRepositoryService<TModel> : SanteDB.Core.Services.INotifyRe
 	/// <summary>
 	/// Data is inserting
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TModel>> Inserting;
+	public event EventHandler<DataPersistingEventArgs<TModel>> Inserting;
 	/// <summary>
 	/// Fired after data was inserted
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TModel>> Inserted;
+	public event EventHandler<DataPersistedEventArgs<TModel>> Inserted;
 	/// <summary>
 	/// Fired before saving
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TModel>> Saving;
+	public event EventHandler<DataPersistingEventArgs<TModel>> Saving;
 	/// <summary>
 	/// Fired after data was saved
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TModel>> Saved;
+	public event EventHandler<DataPersistedEventArgs<TModel>> Saved;
 	/// <summary>
 	/// Fired before obsoleting
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TModel>> Obsoleting;
+	public event EventHandler<DataPersistingEventArgs<TModel>> Obsoleting;
 	/// <summary>
 	/// Fired after data was obsoleted
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TModel>> Obsoleted;
+	public event EventHandler<DataPersistedEventArgs<TModel>> Obsoleted;
 	/// <summary>
 	/// Retrieving the data
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataRetrievingEventArgs<TModel>> Retrieving;
+	public event EventHandler<DataRetrievingEventArgs<TModel>> Retrieving;
 	/// <summary>
 	/// Fired after data was retrieved
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.DataRetrievedEventArgs<TModel>> Retrieved;
+	public event EventHandler<DataRetrievedEventArgs<TModel>> Retrieved;
 	/// <summary>
 	/// Fired after data was queried
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<TModel>> Querying;
+	public event EventHandler<QueryRequestEventArgs<TModel>> Querying;
 	/// <summary>
 	/// Fired after data was queried
 	/// </summary>
-	public event System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<TModel>> Queried;
+	public event EventHandler<QueryResultEventArgs<TModel>> Queried;
 }
 ```
