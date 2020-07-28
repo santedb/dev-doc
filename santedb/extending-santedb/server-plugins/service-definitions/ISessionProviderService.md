@@ -21,10 +21,10 @@ Represents a service which is responsible for the storage and retrieval of sessi
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Establish|ISession|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>remoteEp <small style='border:solid 1px #aaa'>String</small><br/>isOverride <small style='border:solid 1px #aaa'>Boolean</small><br/>purpose <small style='border:solid 1px #aaa'>String</small><br/>scope <small style='border:solid 1px #aaa'>String[]</small><br/>lang <small style='border:solid 1px #aaa'>String</small>|Establishes a session for the specified principal|
-|Get|ISession|sessionToken <small style='border:solid 1px #aaa'>Byte[]</small><br/>allowExpired <small style='border:solid 1px #aaa'>Boolean</small>|Authenticates the session identifier as evidence of session|
-|Extend|ISession|refreshToken <small style='border:solid 1px #aaa'>Byte[]</small>|Extend the session with the specified refresh token|
-|Abandon|void|session <small style='border:solid 1px #aaa'>ISession</small>|Abandons the session|
+|Establish|ISession|*IPrincipal* **principal**<br/>*String* **remoteEp**<br/>*Boolean* **isOverride**<br/>*String* **purpose**<br/>*String[]* **scope**<br/>*String* **lang**|Establishes a session for the specified principal|
+|Get|ISession|*Byte[]* **sessionToken**<br/>*Boolean* **allowExpired**|Authenticates the session identifier as evidence of session|
+|Extend|ISession|*Byte[]* **refreshToken**|Extend the session with the specified refresh token|
+|Abandon|void|*ISession* **session**|Abandons the session|
 
 ## Implementations
 

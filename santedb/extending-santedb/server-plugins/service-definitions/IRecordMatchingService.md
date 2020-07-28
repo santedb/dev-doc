@@ -19,10 +19,10 @@ Represents a service that performs record matching and classification
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Block|IEnumerable&lt;T>|input <small style='border:solid 1px #aaa'>T</small><br/>configurationName <small style='border:solid 1px #aaa'>String</small>|Instructs the record matching service to perform a quick block function of records            for type  with|
-|Classify|IEnumerable&lt;IRecordMatchResult&lt;T>>|input <small style='border:solid 1px #aaa'>T</small><br/>blocks <small style='border:solid 1px #aaa'>IEnumerable<T></small><br/>configurationName <small style='border:solid 1px #aaa'>String</small>|Instructs the record matcher to run a detailed classification on the matching blocks in|
-|Match|IEnumerable&lt;IRecordMatchResult&lt;T>>|input <small style='border:solid 1px #aaa'>T</small><br/>configurationName <small style='border:solid 1px #aaa'>String</small>|Instructs the record matcher to run a block and match operation against|
-|Score|IRecordMatchResult&lt;T>|input <small style='border:solid 1px #aaa'>T</small><br/>query <small style='border:solid 1px #aaa'>Expression<Func<T,Boolean>></small><br/>configurationName <small style='border:solid 1px #aaa'>String</small>|Performs a score against the specified query (how confident the match is that the  matches the|
+|Block|IEnumerable&lt;T>|*T* **input**<br/>*String* **configurationName**|Instructs the record matching service to perform a quick block function of records            for type  with|
+|Classify|IEnumerable&lt;IRecordMatchResult&lt;T>>|*T* **input**<br/>*IEnumerable<T>* **blocks**<br/>*String* **configurationName**|Instructs the record matcher to run a detailed classification on the matching blocks in|
+|Match|IEnumerable&lt;IRecordMatchResult&lt;T>>|*T* **input**<br/>*String* **configurationName**|Instructs the record matcher to run a block and match operation against|
+|Score|IRecordMatchResult&lt;T>|*T* **input**<br/>*Expression<Func<T,Boolean>>* **query**<br/>*String* **configurationName**|Performs a score against the specified query (how confident the match is that the  matches the|
 
 ## Implementations
 

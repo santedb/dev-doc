@@ -21,18 +21,18 @@ Identity provider service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetIdentity|IIdentity|userName <small style='border:solid 1px #aaa'>String</small>|Retrieves an identity from the object|
-|GetIdentity|IIdentity|sid <small style='border:solid 1px #aaa'>Guid</small>|Retrieves an identity from the object|
-|CreateIdentity|IIdentity|userName <small style='border:solid 1px #aaa'>String</small><br/>password <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Create a basic identity in the provider|
-|Authenticate|IPrincipal|userName <small style='border:solid 1px #aaa'>String</small><br/>password <small style='border:solid 1px #aaa'>String</small>|Authenticate the user creating an identity|
-|Authenticate|IPrincipal|userName <small style='border:solid 1px #aaa'>String</small><br/>password <small style='border:solid 1px #aaa'>String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>String</small>|Authenticate the user creating an identity|
-|ReAuthenticate|IPrincipal|principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Perform a re-authentication of the principal|
-|ChangePassword|void|userName <small style='border:solid 1px #aaa'>String</small><br/>newPassword <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Change user password|
-|GenerateTfaSecret|String|userName <small style='border:solid 1px #aaa'>String</small>|Set the user's two factor authentication secret|
-|DeleteIdentity|void|userName <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Delete an identity|
-|SetLockout|void|userName <small style='border:solid 1px #aaa'>String</small><br/>lockout <small style='border:solid 1px #aaa'>Boolean</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Set lockout|
-|AddClaim|void|userName <small style='border:solid 1px #aaa'>String</small><br/>claim <small style='border:solid 1px #aaa'>IClaim</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>expiriy <small style='border:solid 1px #aaa'>Nullable<TimeSpan></small>|Adds a claim to the specified user account|
-|RemoveClaim|void|userName <small style='border:solid 1px #aaa'>String</small><br/>claimType <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Removes a claim from the specified user account|
+|GetIdentity|IIdentity|*String* **userName**|Retrieves an identity from the object|
+|GetIdentity|IIdentity|*Guid* **sid**|Retrieves an identity from the object|
+|CreateIdentity|IIdentity|*String* **userName**<br/>*String* **password**<br/>*IPrincipal* **principal**|Create a basic identity in the provider|
+|Authenticate|IPrincipal|*String* **userName**<br/>*String* **password**|Authenticate the user creating an identity|
+|Authenticate|IPrincipal|*String* **userName**<br/>*String* **password**<br/>*String* **tfaSecret**|Authenticate the user creating an identity|
+|ReAuthenticate|IPrincipal|*IPrincipal* **principal**|Perform a re-authentication of the principal|
+|ChangePassword|void|*String* **userName**<br/>*String* **newPassword**<br/>*IPrincipal* **principal**|Change user password|
+|GenerateTfaSecret|String|*String* **userName**|Set the user's two factor authentication secret|
+|DeleteIdentity|void|*String* **userName**<br/>*IPrincipal* **principal**|Delete an identity|
+|SetLockout|void|*String* **userName**<br/>*Boolean* **lockout**<br/>*IPrincipal* **principal**|Set lockout|
+|AddClaim|void|*String* **userName**<br/>*IClaim* **claim**<br/>*IPrincipal* **principal**<br/>*Nullable<TimeSpan>* **expiriy**|Adds a claim to the specified user account|
+|RemoveClaim|void|*String* **userName**<br/>*String* **claimType**<br/>*IPrincipal* **principal**|Removes a claim from the specified user account|
 
 ## Implementations
 

@@ -19,14 +19,14 @@ Represents a service which is capableof retrieving roles
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|CreateRole|void|roleName <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Creates a role|
-|AddUsersToRoles|void|users <small style='border:solid 1px #aaa'>String[]</small><br/>roles <small style='border:solid 1px #aaa'>String[]</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Add users to roles|
-|RemoveUsersFromRoles|void|users <small style='border:solid 1px #aaa'>String[]</small><br/>roles <small style='border:solid 1px #aaa'>String[]</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Remove users from specified roles|
-|FindUsersInRole|String[]|role <small style='border:solid 1px #aaa'>String</small>|Find all users in a specified role|
+|CreateRole|void|*String* **roleName**<br/>*IPrincipal* **principal**|Creates a role|
+|AddUsersToRoles|void|*String[]* **users**<br/>*String[]* **roles**<br/>*IPrincipal* **principal**|Add users to roles|
+|RemoveUsersFromRoles|void|*String[]* **users**<br/>*String[]* **roles**<br/>*IPrincipal* **principal**|Remove users from specified roles|
+|FindUsersInRole|String[]|*String* **role**|Find all users in a specified role|
 |GetAllRoles|String[]||Get all roles|
-|GetAllRoles|String[]|userName <small style='border:solid 1px #aaa'>String</small>|Get all roles|
-|IsUserInRole|Boolean|userName <small style='border:solid 1px #aaa'>String</small><br/>roleName <small style='border:solid 1px #aaa'>String</small>|User user in the specified role|
-|IsUserInRole|Boolean|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>roleName <small style='border:solid 1px #aaa'>String</small>|User user in the specified role|
+|GetAllRoles|String[]|*String* **userName**|Get all roles|
+|IsUserInRole|Boolean|*String* **userName**<br/>*String* **roleName**|User user in the specified role|
+|IsUserInRole|Boolean|*IPrincipal* **principal**<br/>*String* **roleName**|User user in the specified role|
 
 ## Implementations
 

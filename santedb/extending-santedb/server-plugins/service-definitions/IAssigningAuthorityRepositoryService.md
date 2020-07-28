@@ -19,8 +19,8 @@ Represents a repository service for managing assigning authorities.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|AssigningAuthority|domain <small style='border:solid 1px #aaa'>String</small>|Get by domain|
-|Get|AssigningAuthority|uri <small style='border:solid 1px #aaa'>Uri</small>|Get by domain|
+|Get|AssigningAuthority|*String* **domain**|Get by domain|
+|Get|AssigningAuthority|*Uri* **uri**|Get by domain|
 
 ## Implementations
 

@@ -20,7 +20,7 @@ Represents a repository which deals with metadata such as assigning authorities,
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetTemplateDefinition|TemplateDefinition|mnemonic <small style='border:solid 1px #aaa'>String</small>|Get tempate definition|
+|GetTemplateDefinition|TemplateDefinition|*String* **mnemonic**|Get tempate definition|
 
 ## Implementations
 

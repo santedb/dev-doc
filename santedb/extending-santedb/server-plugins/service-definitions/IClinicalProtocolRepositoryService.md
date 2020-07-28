@@ -19,8 +19,8 @@ Represents a service that can do clinical protocols
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindProtocol|IEnumerable&lt;Protocol>|predicate <small style='border:solid 1px #aaa'>Expression<Func<Protocol,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small>|Find protocols in the repository service|
-|InsertProtocol|Protocol|data <small style='border:solid 1px #aaa'>Protocol</small>|Find protocols in the repository service|
+|FindProtocol|IEnumerable&lt;Protocol>|*Expression<Func<Protocol,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**|Find protocols in the repository service|
+|InsertProtocol|Protocol|*Protocol* **data**|Find protocols in the repository service|
 
 ## Implementations
 

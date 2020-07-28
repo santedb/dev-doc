@@ -19,8 +19,8 @@ A caching service which permits the storage of any data regardless of type
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Add|void|key <small style='border:solid 1px #aaa'>String</small><br/>value <small style='border:solid 1px #aaa'>T</small><br/>timeout <small style='border:solid 1px #aaa'>Nullable<TimeSpan></small>|Add the specified object to the cache|
-|Get|T|key <small style='border:solid 1px #aaa'>String</small>|Gets the specified object from the cache|
+|Add|void|*String* **key**<br/>*T* **value**<br/>*Nullable<TimeSpan>* **timeout**|Add the specified object to the cache|
+|Get|T|*String* **key**|Gets the specified object from the cache|
 
 ## Implementations
 

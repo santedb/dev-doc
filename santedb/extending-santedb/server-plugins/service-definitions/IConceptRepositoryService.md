@@ -19,15 +19,15 @@ Represents a service which is responsible for the maintenance of concepts.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindConceptsByName|IEnumerable&lt;Concept>|name <small style='border:solid 1px #aaa'>String</small><br/>language <small style='border:solid 1px #aaa'>String</small>|Searches for a concept by name and language.|
-|FindConceptsByReferenceTerm|IEnumerable&lt;Concept>|code <small style='border:solid 1px #aaa'>String</small><br/>codeSystem <small style='border:solid 1px #aaa'>Uri</small>|Finds a concept by reference term.|
-|GetConceptSetMembers|IEnumerable&lt;Concept>|mnemonic <small style='border:solid 1px #aaa'>String</small>|Get concept set members|
-|FindConceptsByReferenceTerm|IEnumerable&lt;Concept>|code <small style='border:solid 1px #aaa'>String</small><br/>codeSystemDomain <small style='border:solid 1px #aaa'>String</small>|Finds a concept by reference term.|
-|GetConcept|Concept|mnemonic <small style='border:solid 1px #aaa'>String</small>|Gets a concept by mnemonic.|
-|Implies|Boolean|a <small style='border:solid 1px #aaa'>Concept</small><br/>b <small style='border:solid 1px #aaa'>Concept</small>|Returns a value which indicates whether  implies|
-|IsMember|Boolean|set <small style='border:solid 1px #aaa'>ConceptSet</small><br/>concept <small style='border:solid 1px #aaa'>Concept</small>|Returns true if the concept  is a member of set|
-|IsMember|Boolean|set <small style='border:solid 1px #aaa'>Guid</small><br/>concept <small style='border:solid 1px #aaa'>Guid</small>|Returns true if the concept  is a member of set|
-|GetConceptReferenceTerm|ReferenceTerm|conceptId <small style='border:solid 1px #aaa'>Guid</small><br/>codeSystem <small style='border:solid 1px #aaa'>String</small>|Gets the concept reference term for the specified code system|
+|FindConceptsByName|IEnumerable&lt;Concept>|*String* **name**<br/>*String* **language**|Searches for a concept by name and language.|
+|FindConceptsByReferenceTerm|IEnumerable&lt;Concept>|*String* **code**<br/>*Uri* **codeSystem**|Finds a concept by reference term.|
+|GetConceptSetMembers|IEnumerable&lt;Concept>|*String* **mnemonic**|Get concept set members|
+|FindConceptsByReferenceTerm|IEnumerable&lt;Concept>|*String* **code**<br/>*String* **codeSystemDomain**|Finds a concept by reference term.|
+|GetConcept|Concept|*String* **mnemonic**|Gets a concept by mnemonic.|
+|Implies|Boolean|*Concept* **a**<br/>*Concept* **b**|Returns a value which indicates whether  implies|
+|IsMember|Boolean|*ConceptSet* **set**<br/>*Concept* **concept**|Returns true if the concept  is a member of set|
+|IsMember|Boolean|*Guid* **set**<br/>*Guid* **concept**|Returns true if the concept  is a member of set|
+|GetConceptReferenceTerm|ReferenceTerm|*Guid* **conceptId**<br/>*String* **codeSystem**|Gets the concept reference term for the specified code system|
 
 ## Implementations
 

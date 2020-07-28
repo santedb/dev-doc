@@ -20,7 +20,7 @@ Represents an identity provider that allows for elevation
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ElevatedAuthenticate|IPrincipal|userName <small style='border:solid 1px #aaa'>String</small><br/>password <small style='border:solid 1px #aaa'>String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>String</small><br/>purpose <small style='border:solid 1px #aaa'>String</small><br/>policies <small style='border:solid 1px #aaa'>String[]</small>|Requests the currently established principal to be elevated|
+|ElevatedAuthenticate|IPrincipal|*String* **userName**<br/>*String* **password**<br/>*String* **tfaSecret**<br/>*String* **purpose**<br/>*String[]* **policies**|Requests the currently established principal to be elevated|
 
 ## Implementations
 

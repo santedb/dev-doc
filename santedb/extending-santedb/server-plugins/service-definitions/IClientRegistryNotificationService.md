@@ -19,9 +19,9 @@ Represents a client registry notification service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|NotifyDuplicatesResolved|void|eventArgs <small style='border:solid 1px #aaa'>NotificationEventArgs<Patient></small>|Notify that duplicates have been resolved.|
-|NotifyRegister|void|eventArgs <small style='border:solid 1px #aaa'>NotificationEventArgs<Patient></small>|Notify that a registration occurred.|
-|NotifyUpdate|void|eventArgs <small style='border:solid 1px #aaa'>NotificationEventArgs<Patient></small>|Notify that an update occurred.|
+|NotifyDuplicatesResolved|void|*NotificationEventArgs<Patient>* **eventArgs**|Notify that duplicates have been resolved.|
+|NotifyRegister|void|*NotificationEventArgs<Patient>* **eventArgs**|Notify that a registration occurred.|
+|NotifyUpdate|void|*NotificationEventArgs<Patient>* **eventArgs**|Notify that an update occurred.|
 
 ## Implementations
 

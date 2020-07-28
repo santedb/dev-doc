@@ -19,8 +19,8 @@ Represents a repository service wrapping an extended persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Touch|void|key <small style='border:solid 1px #aaa'>Guid</small>|Touch the specified object|
-|Nullify|TModel|id <small style='border:solid 1px #aaa'>Guid</small>|Nullifies a specific instance|
+|Touch|void|*Guid* **key**|Touch the specified object|
+|Nullify|TModel|*Guid* **id**|Nullifies a specific instance|
 
 ## Implementations
 

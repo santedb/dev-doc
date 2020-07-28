@@ -19,9 +19,9 @@ Represents a service which can sign arbitrary data
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetSignatureAlgorithm|String|keyId <small style='border:solid 1px #aaa'>String</small>|Get the siganture algorithm this service would use to sign w/the specified key|
-|SignData|Byte[]|data <small style='border:solid 1px #aaa'>Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>String</small>|Signs the specified data using the service's configured signing key|
-|Verify|Boolean|data <small style='border:solid 1px #aaa'>Byte[]</small><br/>signature <small style='border:solid 1px #aaa'>Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>String</small>|Verifies the digital signature of the data|
+|GetSignatureAlgorithm|String|*String* **keyId**|Get the siganture algorithm this service would use to sign w/the specified key|
+|SignData|Byte[]|*Byte[]* **data**<br/>*String* **keyId**|Signs the specified data using the service's configured signing key|
+|Verify|Boolean|*Byte[]* **data**<br/>*Byte[]* **signature**<br/>*String* **keyId**|Verifies the digital signature of the data|
 
 ## Implementations
 

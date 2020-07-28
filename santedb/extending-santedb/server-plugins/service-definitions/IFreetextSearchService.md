@@ -19,7 +19,7 @@ Free text search service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Search|IEnumerable&lt;TEntity>|term <small style='border:solid 1px #aaa'>String[]</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Search based on tokens|
+|Search|IEnumerable&lt;TEntity>|*String[]* **term**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Search based on tokens|
 
 ## Implementations
 

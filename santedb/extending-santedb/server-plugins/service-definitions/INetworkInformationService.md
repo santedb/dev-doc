@@ -24,8 +24,8 @@ Represents network information service
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GetInterfaces|IEnumerable&lt;NetworkInterfaceInfo>||TODO|
-|Ping|Int64|hostName <small style='border:solid 1px #aaa'>String</small>|Pings the specified host|
-|Nslookup|String|address <small style='border:solid 1px #aaa'>String</small>|Perform a DNS lookup|
+|Ping|Int64|*String* **hostName**|Pings the specified host|
+|Nslookup|String|*String* **address**|Perform a DNS lookup|
 |GetHostName|String||TODO|
 |GetMachineName|String||TODO|
 

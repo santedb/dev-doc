@@ -19,7 +19,7 @@ Represents a barcode generator
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Generate|Stream|identifers <small style='border:solid 1px #aaa'>IEnumerable<IdentifierBase<TEntity>></small>|Generate a barcode from the specified identifier|
+|Generate|Stream|*IEnumerable<IdentifierBase<TEntity>>* **identifers**|Generate a barcode from the specified identifier|
 
 ## Implementations
 

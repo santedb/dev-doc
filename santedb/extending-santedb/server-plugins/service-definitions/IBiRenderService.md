@@ -19,7 +19,7 @@ BI Render service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Render|Stream|reportId <small style='border:solid 1px #aaa'>String</small><br/>viewName <small style='border:solid 1px #aaa'>String</small><br/>formatName <small style='border:solid 1px #aaa'>String</small><br/>parameters <small style='border:solid 1px #aaa'>IDictionary<String,Object></small><br/>mimeType <small style='border:solid 1px #aaa'>String&</small>|Render the specified report|
+|Render|Stream|*String* **reportId**<br/>*String* **viewName**<br/>*String* **formatName**<br/>*IDictionary<String,Object>* **parameters**<br/>*String&* **mimeType**|Render the specified report|
 
 ## Implementations
 

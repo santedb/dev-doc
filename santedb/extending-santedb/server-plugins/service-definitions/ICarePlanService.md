@@ -20,10 +20,10 @@ Represents a class which can create care plans
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small>|Create a care plam|
-|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>Boolean</small>|Create a care plam|
-|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>IDictionary<String,Object></small>|Create a care plam|
-|CreateCarePlan|CarePlan|p <small style='border:solid 1px #aaa'>Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>IDictionary<String,Object></small><br/>protocols <small style='border:solid 1px #aaa'>Guid[]</small>|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary<String,Object>* **parameters**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary<String,Object>* **parameters**<br/>*Guid[]* **protocols**|Create a care plam|
 
 ## Implementations
 

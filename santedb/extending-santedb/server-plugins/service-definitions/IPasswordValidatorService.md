@@ -19,7 +19,7 @@ Represents a password validation service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Validate|Boolean|password <small style='border:solid 1px #aaa'>String</small>|Validate the password|
+|Validate|Boolean|*String* **password**|Validate the password|
 
 ## Implementations
 

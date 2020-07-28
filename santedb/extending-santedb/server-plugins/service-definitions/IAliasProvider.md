@@ -19,7 +19,7 @@ Represents a provider for aliases
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetAlias|IEnumerable&lt;ComponentAlias>|name <small style='border:solid 1px #aaa'>String</small>|Gets the known alias names and score for the alias|
+|GetAlias|IEnumerable&lt;ComponentAlias>|*String* **name**|Gets the known alias names and score for the alias|
 
 ## Implementations
 

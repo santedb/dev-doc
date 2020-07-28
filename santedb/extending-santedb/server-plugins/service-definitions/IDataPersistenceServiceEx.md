@@ -19,7 +19,7 @@ Extended data persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Touch|void|key <small style='border:solid 1px #aaa'>Guid</small><br/>mode <small style='border:solid 1px #aaa'>TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Touch the specified data|
+|Touch|void|*Guid* **key**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Touch the specified data|
 
 ## Implementations
 

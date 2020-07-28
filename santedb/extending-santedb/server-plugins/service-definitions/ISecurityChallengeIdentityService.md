@@ -21,7 +21,7 @@ Represents a security challenge service which can provide identity
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|IPrincipal|userName <small style='border:solid 1px #aaa'>String</small><br/>challengeKey <small style='border:solid 1px #aaa'>Guid</small><br/>response <small style='border:solid 1px #aaa'>String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>String</small>|Authenticates the specified user with a challenge key and response|
+|Authenticate|IPrincipal|*String* **userName**<br/>*Guid* **challengeKey**<br/>*String* **response**<br/>*String* **tfaSecret**|Authenticates the specified user with a challenge key and response|
 
 ## Implementations
 

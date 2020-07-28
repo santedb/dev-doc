@@ -19,13 +19,13 @@ Represents a repository service base
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|TModel|key <small style='border:solid 1px #aaa'>Guid</small>|Gets the specified model.|
-|Get|TModel|key <small style='border:solid 1px #aaa'>Guid</small><br/>versionKey <small style='border:solid 1px #aaa'>Guid</small>|Gets the specified model.|
-|Find|IEnumerable&lt;TModel>|query <small style='border:solid 1px #aaa'>Expression<Func<TModel,Boolean>></small>|Finds the specified data.|
-|Find|IEnumerable&lt;TModel>|query <small style='border:solid 1px #aaa'>Expression<Func<TModel,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Finds the specified data.|
-|Insert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Inserts the specified data.|
-|Save|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Saves the specified data.|
-|Obsolete|TModel|key <small style='border:solid 1px #aaa'>Guid</small>|Obsoletes the specified data.|
+|Get|TModel|*Guid* **key**|Gets the specified model.|
+|Get|TModel|*Guid* **key**<br/>*Guid* **versionKey**|Gets the specified model.|
+|Find|IEnumerable&lt;TModel>|*Expression<Func<TModel,Boolean>>* **query**|Finds the specified data.|
+|Find|IEnumerable&lt;TModel>|*Expression<Func<TModel,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Finds the specified data.|
+|Insert|TModel|*TModel* **data**|Inserts the specified data.|
+|Save|TModel|*TModel* **data**|Saves the specified data.|
+|Obsolete|TModel|*Guid* **key**|Obsoletes the specified data.|
 
 ## Implementations
 

@@ -21,9 +21,9 @@ Represents a configuration manager service
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GetSection|T||TODO|
-|GetAppSetting|String|key <small style='border:solid 1px #aaa'>String</small>|Gets the specified application setting|
-|GetConnectionString|ConnectionString|key <small style='border:solid 1px #aaa'>String</small>|Get the specified connection string|
-|SetAppSetting|void|key <small style='border:solid 1px #aaa'>String</small><br/>value <small style='border:solid 1px #aaa'>String</small>|Set the specified application setting|
+|GetAppSetting|String|*String* **key**|Gets the specified application setting|
+|GetConnectionString|ConnectionString|*String* **key**|Get the specified connection string|
+|SetAppSetting|void|*String* **key**<br/>*String* **value**|Set the specified application setting|
 |Reload|void||TODO|
 
 ## Implementations

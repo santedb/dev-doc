@@ -19,22 +19,22 @@ Security repository service is responsible for the maintenance of security entit
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ChangePassword|SecurityUser|userId <small style='border:solid 1px #aaa'>Guid</small><br/>password <small style='border:solid 1px #aaa'>String</small>|Changes a user's password.|
-|GetProviderEntity|Provider|identity <small style='border:solid 1px #aaa'>IIdentity</small>|Gets the specified provider entity from the specified identity|
-|CreateUser|SecurityUser|userInfo <small style='border:solid 1px #aaa'>SecurityUser</small><br/>password <small style='border:solid 1px #aaa'>String</small>|Creates a user with a specified password.|
-|GetUser|SecurityUser|userName <small style='border:solid 1px #aaa'>String</small>|Get a user by user name|
-|GetPolicy|SecurityPolicy|policyOid <small style='border:solid 1px #aaa'>String</small>|Get the specified security policy by OID|
-|GetRole|SecurityRole|roleName <small style='border:solid 1px #aaa'>String</small>|Gets a specific role.|
-|LockDevice|void|key <small style='border:solid 1px #aaa'>Guid</small>|Locks a device principal|
-|LockApplication|void|key <small style='border:solid 1px #aaa'>Guid</small>|Locks an application|
-|UnlockDevice|void|key <small style='border:solid 1px #aaa'>Guid</small>|Removes a lock from a device|
-|UnlockApplication|void|key <small style='border:solid 1px #aaa'>Guid</small>|Removes a lock from an application|
-|GetUser|SecurityUser|identity <small style='border:solid 1px #aaa'>IIdentity</small>|Get a user by user name|
-|GetUserEntity|UserEntity|identity <small style='border:solid 1px #aaa'>IIdentity</small>|Get the user entity|
-|LockUser|void|userId <small style='border:solid 1px #aaa'>Guid</small>|Locks a specific user.|
-|UnlockUser|void|userId <small style='border:solid 1px #aaa'>Guid</small>|Unlocks a specific user.|
-|GetProvenance|SecurityProvenance|provenanceId <small style='border:solid 1px #aaa'>Guid</small>|Get the provenance object|
-|FindProvenance|IEnumerable&lt;SecurityProvenance>|query <small style='border:solid 1px #aaa'>Expression<Func<SecurityProvenance,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Find provenance objects matching the specified object|
+|ChangePassword|SecurityUser|*Guid* **userId**<br/>*String* **password**|Changes a user's password.|
+|GetProviderEntity|Provider|*IIdentity* **identity**|Gets the specified provider entity from the specified identity|
+|CreateUser|SecurityUser|*SecurityUser* **userInfo**<br/>*String* **password**|Creates a user with a specified password.|
+|GetUser|SecurityUser|*String* **userName**|Get a user by user name|
+|GetPolicy|SecurityPolicy|*String* **policyOid**|Get the specified security policy by OID|
+|GetRole|SecurityRole|*String* **roleName**|Gets a specific role.|
+|LockDevice|void|*Guid* **key**|Locks a device principal|
+|LockApplication|void|*Guid* **key**|Locks an application|
+|UnlockDevice|void|*Guid* **key**|Removes a lock from a device|
+|UnlockApplication|void|*Guid* **key**|Removes a lock from an application|
+|GetUser|SecurityUser|*IIdentity* **identity**|Get a user by user name|
+|GetUserEntity|UserEntity|*IIdentity* **identity**|Get the user entity|
+|LockUser|void|*Guid* **userId**|Locks a specific user.|
+|UnlockUser|void|*Guid* **userId**|Unlocks a specific user.|
+|GetProvenance|SecurityProvenance|*Guid* **provenanceId**|Get the provenance object|
+|FindProvenance|IEnumerable&lt;SecurityProvenance>|*Expression<Func<SecurityProvenance,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**<br/>*ModelSort`1[]* **orderBy**|Find provenance objects matching the specified object|
 
 ## Implementations
 

@@ -19,7 +19,7 @@ Password hashing service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ComputeHash|String|password <small style='border:solid 1px #aaa'>String</small>|Compute the password hash|
+|ComputeHash|String|*String* **password**|Compute the password hash|
 
 ## Implementations
 

@@ -30,13 +30,13 @@ Represents a data persistence service which is capable of storing and retrieving
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Insert|TData|data <small style='border:solid 1px #aaa'>TData</small><br/>mode <small style='border:solid 1px #aaa'>TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Insert the specified data.|
-|Update|TData|data <small style='border:solid 1px #aaa'>TData</small><br/>mode <small style='border:solid 1px #aaa'>TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Update the specified data|
-|Obsolete|TData|data <small style='border:solid 1px #aaa'>TData</small><br/>mode <small style='border:solid 1px #aaa'>TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Obsolete the specified identified data|
-|Get|TData|key <small style='border:solid 1px #aaa'>Guid</small><br/>versionKey <small style='border:solid 1px #aaa'>Nullable<Guid></small><br/>loadFast <small style='border:solid 1px #aaa'>Boolean</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Get the specified key.|
-|Query|IEnumerable&lt;TData>|query <small style='border:solid 1px #aaa'>Expression<Func<TData,Boolean>></small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Query the specified data|
-|Query|IEnumerable&lt;TData>|query <small style='border:solid 1px #aaa'>Expression<Func<TData,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Query the specified data|
-|Count|Int64|p <small style='border:solid 1px #aaa'>Expression<Func<TData,Boolean>></small><br/>authContext <small style='border:solid 1px #aaa'>IPrincipal</small>|Performs a fast count|
+|Insert|TData|*TData* **data**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Insert the specified data.|
+|Update|TData|*TData* **data**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Update the specified data|
+|Obsolete|TData|*TData* **data**<br/>*TransactionMode* **mode**<br/>*IPrincipal* **principal**|Obsolete the specified identified data|
+|Get|TData|*Guid* **key**<br/>*Nullable<Guid>* **versionKey**<br/>*Boolean* **loadFast**<br/>*IPrincipal* **principal**|Get the specified key.|
+|Query|IEnumerable&lt;TData>|*Expression<Func<TData,Boolean>>* **query**<br/>*IPrincipal* **principal**|Query the specified data|
+|Query|IEnumerable&lt;TData>|*Expression<Func<TData,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*IPrincipal* **principal**<br/>*ModelSort`1[]* **orderBy**|Query the specified data|
+|Count|Int64|*Expression<Func<TData,Boolean>>* **p**<br/>*IPrincipal* **authContext**|Performs a fast count|
 
 ## Implementations
 

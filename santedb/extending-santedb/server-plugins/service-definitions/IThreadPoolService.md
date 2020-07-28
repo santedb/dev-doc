@@ -19,10 +19,10 @@ Represents a thread pooling service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>Action<Object></small>|Queues the specified action into the worker pool|
-|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>Action<Object></small><br/>parm <small style='border:solid 1px #aaa'>Object</small>|Queues the specified action into the worker pool|
-|QueueUserWorkItem|void|timeout <small style='border:solid 1px #aaa'>TimeSpan</small><br/>action <small style='border:solid 1px #aaa'>Action<Object></small><br/>parm <small style='border:solid 1px #aaa'>Object</small>|Queues the specified action into the worker pool|
-|QueueNonPooledWorkItem|void|action <small style='border:solid 1px #aaa'>Action<Object></small><br/>parm <small style='border:solid 1px #aaa'>Object</small>|Creates a normal thread which is not in the pool|
+|QueueUserWorkItem|void|*Action<Object>* **action**|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|*Action<Object>* **action**<br/>*Object* **parm**|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|*TimeSpan* **timeout**<br/>*Action<Object>* **action**<br/>*Object* **parm**|Queues the specified action into the worker pool|
+|QueueNonPooledWorkItem|void|*Action<Object>* **action**<br/>*Object* **parm**|Creates a normal thread which is not in the pool|
 
 ## Implementations
 

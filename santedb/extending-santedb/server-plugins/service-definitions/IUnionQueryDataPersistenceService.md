@@ -19,7 +19,7 @@ Represents a data persistence provider that can store and continue queries
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Union|IEnumerable&lt;TEntity>|queries <small style='border:solid 1px #aaa'>Expression`1[]</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>Int32&</small><br/>overrideAuthContext <small style='border:solid 1px #aaa'>IPrincipal</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Queries or continues a query|
+|Union|IEnumerable&lt;TEntity>|*Expression`1[]* **queries**<br/>*Guid* **queryId**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalCount**<br/>*IPrincipal* **overrideAuthContext**<br/>*ModelSort`1[]* **orderBy**|Queries or continues a query|
 
 ## Implementations
 

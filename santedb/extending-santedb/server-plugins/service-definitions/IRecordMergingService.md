@@ -21,15 +21,15 @@ Represents a service which appropriately merges / unmerges records
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetDuplicates|IEnumerable&lt;T>|masterKey <small style='border:solid 1px #aaa'>Guid</small>|Gets the duplicates for the specified master record|
-|GetIgnored|IEnumerable&lt;T>|masterKey <small style='border:solid 1px #aaa'>Guid</small>|Gets the ignore list for the specified master record|
-|Ignore|T|masterKey <small style='border:solid 1px #aaa'>Guid</small><br/>falsePositives <small style='border:solid 1px #aaa'>IEnumerable<Guid></small>|Indicates that the engine should ignore the specified false positives|
-|UnIgnore|T|masterKey <small style='border:solid 1px #aaa'>Guid</small><br/>ignoredKeys <small style='border:solid 1px #aaa'>IEnumerable<Guid></small>|Indicates that an ignored record should be removed from the ignore list|
-|Merge|T|masterKey <small style='border:solid 1px #aaa'>Guid</small><br/>linkedDuplicates <small style='border:solid 1px #aaa'>IEnumerable<Guid></small>|Merges the specified  into|
-|Unmerge|T|masterKey <small style='border:solid 1px #aaa'>Guid</small><br/>unmergeDuplicateKey <small style='border:solid 1px #aaa'>Guid</small>|Un-merges the specified  from|
-|Diff|Patch|masterKey <small style='border:solid 1px #aaa'>Guid</small><br/>linkedDuplicateKey <small style='border:solid 1px #aaa'>Guid</small>|Gets the differences between the master and the linked duplicate|
-|FlagDuplicates|void|configurationName <small style='border:solid 1px #aaa'>String</small>|Clears all candidates and re-runs the specified  for the entire database|
-|FlagDuplicates|T|key <small style='border:solid 1px #aaa'>Guid</small><br/>configurationName <small style='border:solid 1px #aaa'>String</small>|Clears all candidates and re-runs the specified  for the entire database|
+|GetDuplicates|IEnumerable&lt;T>|*Guid* **masterKey**|Gets the duplicates for the specified master record|
+|GetIgnored|IEnumerable&lt;T>|*Guid* **masterKey**|Gets the ignore list for the specified master record|
+|Ignore|T|*Guid* **masterKey**<br/>*IEnumerable<Guid>* **falsePositives**|Indicates that the engine should ignore the specified false positives|
+|UnIgnore|T|*Guid* **masterKey**<br/>*IEnumerable<Guid>* **ignoredKeys**|Indicates that an ignored record should be removed from the ignore list|
+|Merge|T|*Guid* **masterKey**<br/>*IEnumerable<Guid>* **linkedDuplicates**|Merges the specified  into|
+|Unmerge|T|*Guid* **masterKey**<br/>*Guid* **unmergeDuplicateKey**|Un-merges the specified  from|
+|Diff|Patch|*Guid* **masterKey**<br/>*Guid* **linkedDuplicateKey**|Gets the differences between the master and the linked duplicate|
+|FlagDuplicates|void|*String* **configurationName**|Clears all candidates and re-runs the specified  for the entire database|
+|FlagDuplicates|T|*Guid* **key**<br/>*String* **configurationName**|Clears all candidates and re-runs the specified  for the entire database|
 
 ## Implementations
 

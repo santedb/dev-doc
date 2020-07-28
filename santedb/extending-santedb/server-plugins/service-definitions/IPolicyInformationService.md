@@ -19,12 +19,12 @@ Represents a contract for a policy information service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetActivePolicies|IEnumerable&lt;IPolicyInstance>|securable <small style='border:solid 1px #aaa'>Object</small>|Get active policies for the specified securable type|
+|GetActivePolicies|IEnumerable&lt;IPolicyInstance>|*Object* **securable**|Get active policies for the specified securable type|
 |GetPolicies|IEnumerable&lt;IPolicy>||TODO|
-|GetPolicy|IPolicy|policyOid <small style='border:solid 1px #aaa'>String</small>|Get a specific policy|
-|AddPolicies|void|securable <small style='border:solid 1px #aaa'>Object</small><br/>rule <small style='border:solid 1px #aaa'>PolicyGrantType</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>policyOids <small style='border:solid 1px #aaa'>String[]</small>|Adds the specified policies to the specified securable object|
-|GetPolicyInstance|IPolicyInstance|securable <small style='border:solid 1px #aaa'>Object</small><br/>policyOid <small style='border:solid 1px #aaa'>String</small>|Gets the policy instance for the specified object|
-|RemovePolicies|void|securable <small style='border:solid 1px #aaa'>Object</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>oid <small style='border:solid 1px #aaa'>String[]</small>|Removes the specified policies from the user account|
+|GetPolicy|IPolicy|*String* **policyOid**|Get a specific policy|
+|AddPolicies|void|*Object* **securable**<br/>*PolicyGrantType* **rule**<br/>*IPrincipal* **principal**<br/>*String[]* **policyOids**|Adds the specified policies to the specified securable object|
+|GetPolicyInstance|IPolicyInstance|*Object* **securable**<br/>*String* **policyOid**|Gets the policy instance for the specified object|
+|RemovePolicies|void|*Object* **securable**<br/>*IPrincipal* **principal**<br/>*String[]* **oid**|Removes the specified policies from the user account|
 
 ## Implementations
 

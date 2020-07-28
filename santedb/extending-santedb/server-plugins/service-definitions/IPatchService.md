@@ -19,9 +19,9 @@ Represents a patch service which can calculate and apply patches
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Diff|Patch|existing <small style='border:solid 1px #aaa'>IdentifiedData</small><br/>updated <small style='border:solid 1px #aaa'>IdentifiedData</small><br/>ignoreProperties <small style='border:solid 1px #aaa'>String[]</small>|Performs a DIFF and creates the related patch which can be used to update             to|
-|Patch|IdentifiedData|patch <small style='border:solid 1px #aaa'>Patch</small><br/>data <small style='border:solid 1px #aaa'>IdentifiedData</small><br/>force <small style='border:solid 1px #aaa'>Boolean</small>|Apples the specified  onto  returning the updated object|
-|Test|Boolean|patch <small style='border:solid 1px #aaa'>Patch</small><br/>target <small style='border:solid 1px #aaa'>IdentifiedData</small>|Tests that the patch can be applied on the specified object|
+|Diff|Patch|*IdentifiedData* **existing**<br/>*IdentifiedData* **updated**<br/>*String[]* **ignoreProperties**|Performs a DIFF and creates the related patch which can be used to update             to|
+|Patch|IdentifiedData|*Patch* **patch**<br/>*IdentifiedData* **data**<br/>*Boolean* **force**|Apples the specified  onto  returning the updated object|
+|Test|Boolean|*Patch* **patch**<br/>*IdentifiedData* **target**|Tests that the patch can be applied on the specified object|
 
 ## Implementations
 

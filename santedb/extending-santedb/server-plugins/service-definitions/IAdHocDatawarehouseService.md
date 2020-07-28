@@ -21,20 +21,20 @@ Represents a simple data warehousing service which allows business rules to stas
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|CreateDatamart|DatamartDefinition|name <small style='border:solid 1px #aaa'>String</small><br/>schema <small style='border:solid 1px #aaa'>Object</small>|Creates an ad-hoc datamart which is not based on an ETL process, rather created            by a trigger.|
+|CreateDatamart|DatamartDefinition|*String* **name**<br/>*Object* **schema**|Creates an ad-hoc datamart which is not based on an ETL process, rather created            by a trigger.|
 |GetDatamarts|List&lt;DatamartDefinition>||TODO|
-|GetDatamart|DatamartDefinition|name <small style='border:solid 1px #aaa'>String</small>|Gets the specified datamart|
-|GetDatamart|DatamartDefinition|id <small style='border:solid 1px #aaa'>Guid</small>|Gets the specified datamart|
-|DeleteDatamart|void|datamartId <small style='border:solid 1px #aaa'>Guid</small>|Deletes a datamart|
-|Truncate|void|datamartId <small style='border:solid 1px #aaa'>Guid</small>|Truncates (drops all data) the specified data mart|
-|Get|Object|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>tupleId <small style='border:solid 1px #aaa'>Guid</small>|Gets data from an ad-hoc data mart|
-|AdhocQuery|IEnumerable&lt;Object>|queryText <small style='border:solid 1px #aaa'>String</small>|Executes the specified query|
-|AdhocQuery|IEnumerable&lt;Object>|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>filterParameters <small style='border:solid 1px #aaa'>Object</small>|Executes the specified query|
-|AdhocQuery|IEnumerable&lt;Object>|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>filterParameters <small style='border:solid 1px #aaa'>Object</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Int32</small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small>|Executes the specified query|
-|CreateStoredQuery|DatamartStoredQuery|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>queryDefinition <small style='border:solid 1px #aaa'>Object</small>|Create the specified stored query on the warehouse provider|
-|StoredQuery|IEnumerable&lt;Object>|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>queryId <small style='border:solid 1px #aaa'>String</small><br/>queryParameters <small style='border:solid 1px #aaa'>Object</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Int32</small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small>|Executes a predefined query against a datamart|
-|Add|Guid|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>obj <small style='border:solid 1px #aaa'>Object</small>|Adds the specified object to the specified datamart returning the tupleId|
-|Delete|void|datamartId <small style='border:solid 1px #aaa'>Guid</small><br/>matchingQuery <small style='border:solid 1px #aaa'>Object</small>|Delete a tuple from the datamart|
+|GetDatamart|DatamartDefinition|*String* **name**|Gets the specified datamart|
+|GetDatamart|DatamartDefinition|*Guid* **id**|Gets the specified datamart|
+|DeleteDatamart|void|*Guid* **datamartId**|Deletes a datamart|
+|Truncate|void|*Guid* **datamartId**|Truncates (drops all data) the specified data mart|
+|Get|Object|*Guid* **datamartId**<br/>*Guid* **tupleId**|Gets data from an ad-hoc data mart|
+|AdhocQuery|IEnumerable&lt;Object>|*String* **queryText**|Executes the specified query|
+|AdhocQuery|IEnumerable&lt;Object>|*Guid* **datamartId**<br/>*Object* **filterParameters**|Executes the specified query|
+|AdhocQuery|IEnumerable&lt;Object>|*Guid* **datamartId**<br/>*Object* **filterParameters**<br/>*Int32* **offset**<br/>*Int32* **count**<br/>*Int32&* **totalResults**|Executes the specified query|
+|CreateStoredQuery|DatamartStoredQuery|*Guid* **datamartId**<br/>*Object* **queryDefinition**|Create the specified stored query on the warehouse provider|
+|StoredQuery|IEnumerable&lt;Object>|*Guid* **datamartId**<br/>*String* **queryId**<br/>*Object* **queryParameters**<br/>*Int32* **offset**<br/>*Int32* **count**<br/>*Int32&* **totalResults**|Executes a predefined query against a datamart|
+|Add|Guid|*Guid* **datamartId**<br/>*Object* **obj**|Adds the specified object to the specified datamart returning the tupleId|
+|Delete|void|*Guid* **datamartId**<br/>*Object* **matchingQuery**|Delete a tuple from the datamart|
 
 ## Implementations
 

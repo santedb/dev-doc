@@ -21,11 +21,11 @@ Represents an alerting service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Broadcast|void|message <small style='border:solid 1px #aaa'>MailMessage</small>|Broadcasts an alert.|
-|Find|IEnumerable&lt;MailMessage>|predicate <small style='border:solid 1px #aaa'>Expression<Func<MailMessage,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Searches for alerts.|
-|Get|MailMessage|id <small style='border:solid 1px #aaa'>Guid</small>|Gets an alert.|
-|Insert|MailMessage|message <small style='border:solid 1px #aaa'>MailMessage</small>|Inserts an alert message.|
-|Save|MailMessage|message <small style='border:solid 1px #aaa'>MailMessage</small>|Saves an alert.|
+|Broadcast|void|*MailMessage* **message**|Broadcasts an alert.|
+|Find|IEnumerable&lt;MailMessage>|*Expression<Func<MailMessage,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalCount**<br/>*ModelSort`1[]* **orderBy**|Searches for alerts.|
+|Get|MailMessage|*Guid* **id**|Gets an alert.|
+|Insert|MailMessage|*MailMessage* **message**|Inserts an alert message.|
+|Save|MailMessage|*MailMessage* **message**|Saves an alert.|
 
 ## Implementations
 

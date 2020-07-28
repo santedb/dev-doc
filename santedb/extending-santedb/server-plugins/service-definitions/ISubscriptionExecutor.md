@@ -21,8 +21,8 @@ Represents a subscription executor
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Execute|IEnumerable&lt;Object>|subscriptionKey <small style='border:solid 1px #aaa'>Guid</small><br/>parameters <small style='border:solid 1px #aaa'>NameValueCollection</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small>|Executes the specified subscription mechanism|
-|Execute|IEnumerable&lt;Object>|subscription <small style='border:solid 1px #aaa'>SubscriptionDefinition</small><br/>parameters <small style='border:solid 1px #aaa'>NameValueCollection</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small>|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|*Guid* **subscriptionKey**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|*SubscriptionDefinition* **subscription**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
 
 ## Implementations
 

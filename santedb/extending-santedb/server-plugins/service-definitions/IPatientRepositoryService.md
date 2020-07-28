@@ -21,8 +21,8 @@ Represents the patient repository service. This service is responsible
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Merge|Patient|survivor <small style='border:solid 1px #aaa'>Patient</small><br/>victim <small style='border:solid 1px #aaa'>Patient</small>|Merges two patients together|
-|UnMerge|Patient|patient <small style='border:solid 1px #aaa'>Patient</small><br/>versionKey <small style='border:solid 1px #aaa'>Guid</small>|Un-merges two patients from each other|
+|Merge|Patient|*Patient* **survivor**<br/>*Patient* **victim**|Merges two patients together|
+|UnMerge|Patient|*Patient* **patient**<br/>*Guid* **versionKey**|Un-merges two patients from each other|
 
 ## Implementations
 

@@ -19,14 +19,14 @@ Query persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindQueryId|Guid|queryTag <small style='border:solid 1px #aaa'>Object</small>|Find the query ID by the query tag|
-|RegisterQuerySet|Boolean|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>results <small style='border:solid 1px #aaa'>IEnumerable<Guid></small><br/>tag <small style='border:solid 1px #aaa'>Object</small><br/>totalResults <small style='border:solid 1px #aaa'>Int32</small>|Register a query set|
-|IsRegistered|Boolean|queryId <small style='border:solid 1px #aaa'>Guid</small>|Returns true if the query identifier is already registered|
-|GetQueryResults|IEnumerable&lt;Guid>|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Int32</small>|Get query results from the query set result store|
-|GetQueryTag|Object|queryId <small style='border:solid 1px #aaa'>Guid</small>|Get the query tag value from the result store|
-|QueryResultTotalQuantity|Int64|queryId <small style='border:solid 1px #aaa'>Guid</small>|Count the number of remaining query results|
-|AddResults|void|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>results <small style='border:solid 1px #aaa'>IEnumerable<Guid></small>|Add results to the query|
-|SetQueryTag|void|queryId <small style='border:solid 1px #aaa'>Guid</small><br/>value <small style='border:solid 1px #aaa'>Object</small>|Set or update the query tag of an existing query id|
+|FindQueryId|Guid|*Object* **queryTag**|Find the query ID by the query tag|
+|RegisterQuerySet|Boolean|*Guid* **queryId**<br/>*IEnumerable<Guid>* **results**<br/>*Object* **tag**<br/>*Int32* **totalResults**|Register a query set|
+|IsRegistered|Boolean|*Guid* **queryId**|Returns true if the query identifier is already registered|
+|GetQueryResults|IEnumerable&lt;Guid>|*Guid* **queryId**<br/>*Int32* **offset**<br/>*Int32* **count**|Get query results from the query set result store|
+|GetQueryTag|Object|*Guid* **queryId**|Get the query tag value from the result store|
+|QueryResultTotalQuantity|Int64|*Guid* **queryId**|Count the number of remaining query results|
+|AddResults|void|*Guid* **queryId**<br/>*IEnumerable<Guid>* **results**|Add results to the query|
+|SetQueryTag|void|*Guid* **queryId**<br/>*Object* **value**|Set or update the query tag of an existing query id|
 
 ## Implementations
 

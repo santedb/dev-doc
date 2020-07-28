@@ -21,10 +21,10 @@ Represents an identity service which authenticates devices.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|IPrincipal|deviceId <small style='border:solid 1px #aaa'>String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>String</small><br/>authMethod <small style='border:solid 1px #aaa'>AuthenticationMethod</small>|Authenticates the specified device identifier.|
-|GetIdentity|IIdentity|name <small style='border:solid 1px #aaa'>String</small>|Gets the specified identity for an device.|
-|SetLockout|void|name <small style='border:solid 1px #aaa'>String</small><br/>lockoutState <small style='border:solid 1px #aaa'>Boolean</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Set the lockout status|
-|ChangeSecret|void|name <small style='border:solid 1px #aaa'>String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>String</small><br/>systemPrincipal <small style='border:solid 1px #aaa'>IPrincipal</small>|Change the device secret|
+|Authenticate|IPrincipal|*String* **deviceId**<br/>*String* **deviceSecret**<br/>*AuthenticationMethod* **authMethod**|Authenticates the specified device identifier.|
+|GetIdentity|IIdentity|*String* **name**|Gets the specified identity for an device.|
+|SetLockout|void|*String* **name**<br/>*Boolean* **lockoutState**<br/>*IPrincipal* **principal**|Set the lockout status|
+|ChangeSecret|void|*String* **name**<br/>*String* **deviceSecret**<br/>*IPrincipal* **systemPrincipal**|Change the device secret|
 
 ## Implementations
 

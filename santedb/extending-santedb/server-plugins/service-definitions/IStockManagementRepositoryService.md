@@ -19,10 +19,10 @@ Represents a stock management repository service.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Adjust|Act|manufacturedMaterial <small style='border:solid 1px #aaa'>ManufacturedMaterial</small><br/>place <small style='border:solid 1px #aaa'>Place</small><br/>quantity <small style='border:solid 1px #aaa'>Int32</small><br/>reason <small style='border:solid 1px #aaa'>Concept</small>|Performs a stock adjustment for the specified facility and material.|
-|GetBalance|Int32|place <small style='border:solid 1px #aaa'>Place</small><br/>manufacturedMaterial <small style='border:solid 1px #aaa'>ManufacturedMaterial</small>|Gets the balance for the material.|
-|GetConsumed|IEnumerable&lt;ActParticipation>|manufacturedMaterialKey <small style='border:solid 1px #aaa'>Guid</small><br/>placeKey <small style='border:solid 1px #aaa'>Guid</small><br/>startPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small><br/>endPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small>|Get the total amount of consumed objects|
-|FindAdjustments|IEnumerable&lt;Act>|manufacturedMaterialKey <small style='border:solid 1px #aaa'>Guid</small><br/>placeKey <small style='border:solid 1px #aaa'>Guid</small><br/>startPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small><br/>endPeriod <small style='border:solid 1px #aaa'>Nullable<DateTimeOffset></small>|Find adjustments matching the specified|
+|Adjust|Act|*ManufacturedMaterial* **manufacturedMaterial**<br/>*Place* **place**<br/>*Int32* **quantity**<br/>*Concept* **reason**|Performs a stock adjustment for the specified facility and material.|
+|GetBalance|Int32|*Place* **place**<br/>*ManufacturedMaterial* **manufacturedMaterial**|Gets the balance for the material.|
+|GetConsumed|IEnumerable&lt;ActParticipation>|*Guid* **manufacturedMaterialKey**<br/>*Guid* **placeKey**<br/>*Nullable<DateTimeOffset>* **startPeriod**<br/>*Nullable<DateTimeOffset>* **endPeriod**|Get the total amount of consumed objects|
+|FindAdjustments|IEnumerable&lt;Act>|*Guid* **manufacturedMaterialKey**<br/>*Guid* **placeKey**<br/>*Nullable<DateTimeOffset>* **startPeriod**<br/>*Nullable<DateTimeOffset>* **endPeriod**|Find adjustments matching the specified|
 
 ## Implementations
 

@@ -20,7 +20,7 @@ Represents a data persistence service where arbitrary SQL can be run
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|ExecuteNonQuery|void|sql <small style='border:solid 1px #aaa'>String</small>|Executes the arbitrary SQL|
+|ExecuteNonQuery|void|*String* **sql**|Executes the arbitrary SQL|
 
 ## Implementations
 

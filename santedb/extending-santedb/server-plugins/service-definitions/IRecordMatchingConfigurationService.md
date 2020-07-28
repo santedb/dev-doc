@@ -20,8 +20,8 @@ Represents a service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetConfiguration|IRecordMatchingConfiguration|name <small style='border:solid 1px #aaa'>String</small>|Get the specified named configuration|
-|SaveConfiguration|IRecordMatchingConfiguration|configuration <small style='border:solid 1px #aaa'>IRecordMatchingConfiguration</small>|Saves the specified configuration to the configuration service|
+|GetConfiguration|IRecordMatchingConfiguration|*String* **name**|Get the specified named configuration|
+|SaveConfiguration|IRecordMatchingConfiguration|*IRecordMatchingConfiguration* **configuration**|Saves the specified configuration to the configuration service|
 
 ## Implementations
 

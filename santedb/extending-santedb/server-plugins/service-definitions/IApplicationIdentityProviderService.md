@@ -21,10 +21,10 @@ Represents a service which retrieves IPrincipal objects for applications.
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|IPrincipal|applicationId <small style='border:solid 1px #aaa'>String</small><br/>applicationSecret <small style='border:solid 1px #aaa'>String</small>|Authenticate the application identity.|
-|GetIdentity|IIdentity|name <small style='border:solid 1px #aaa'>String</small>|Gets the specified identity for an application.|
-|SetLockout|void|name <small style='border:solid 1px #aaa'>String</small><br/>lockoutState <small style='border:solid 1px #aaa'>Boolean</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Set the lockout status|
-|ChangeSecret|void|name <small style='border:solid 1px #aaa'>String</small><br/>secret <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Change the specified application identity's secret|
+|Authenticate|IPrincipal|*String* **applicationId**<br/>*String* **applicationSecret**|Authenticate the application identity.|
+|GetIdentity|IIdentity|*String* **name**|Gets the specified identity for an application.|
+|SetLockout|void|*String* **name**<br/>*Boolean* **lockoutState**<br/>*IPrincipal* **principal**|Set the lockout status|
+|ChangeSecret|void|*String* **name**<br/>*String* **secret**<br/>*IPrincipal* **principal**|Change the specified application identity's secret|
 
 ## Implementations
 

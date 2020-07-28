@@ -19,10 +19,10 @@ Represents a service which can persist and retrieve audits
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Insert|AuditData|audit <small style='border:solid 1px #aaa'>AuditData</small>|Insert an audit into the repository|
-|Find|IEnumerable&lt;AuditData>|query <small style='border:solid 1px #aaa'>Expression<Func<AuditData,Boolean>></small>|Find an audit from the audit repository|
-|Get|AuditData|correlationKey <small style='border:solid 1px #aaa'>Object</small>|Get the specified audit|
-|Find|IEnumerable&lt;AuditData>|query <small style='border:solid 1px #aaa'>Expression<Func<AuditData,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Find an audit from the audit repository|
+|Insert|AuditData|*AuditData* **audit**|Insert an audit into the repository|
+|Find|IEnumerable&lt;AuditData>|*Expression<Func<AuditData,Boolean>>* **query**|Find an audit from the audit repository|
+|Get|AuditData|*Object* **correlationKey**|Get the specified audit|
+|Find|IEnumerable&lt;AuditData>|*Expression<Func<AuditData,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Find an audit from the audit repository|
 
 ## Implementations
 

@@ -19,7 +19,7 @@ Taggable persistence service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Save|void|sourceKey <small style='border:solid 1px #aaa'>Guid</small><br/>tag <small style='border:solid 1px #aaa'>ITag</small>|Save tag to source key|
+|Save|void|*Guid* **sourceKey**<br/>*ITag* **tag**|Save tag to source key|
 
 ## Implementations
 

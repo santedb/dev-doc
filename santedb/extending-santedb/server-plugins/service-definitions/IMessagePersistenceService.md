@@ -19,14 +19,14 @@ Identifies a structure for message persistence service implementations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetMessageState|MessageState|messageId <small style='border:solid 1px #aaa'>String</small>|Get the state of a message|
-|PersistMessage|void|messageId <small style='border:solid 1px #aaa'>String</small><br/>message <small style='border:solid 1px #aaa'>Stream</small>|Persists the message|
-|PersistMessageInfo|void|message <small style='border:solid 1px #aaa'>MessageInfo</small>|Persist message extension|
-|GetMessageResponseMessage|Stream|messageId <small style='border:solid 1px #aaa'>String</small>|Get the identifier of the message that represents the response to the current message|
-|GetMessage|Stream|messageId <small style='border:solid 1px #aaa'>String</small>|Get a message|
-|PersistResultMessage|void|messageId <small style='border:solid 1px #aaa'>String</small><br/>respondsToId <small style='border:solid 1px #aaa'>String</small><br/>response <small style='border:solid 1px #aaa'>Stream</small>|Persist|
-|GetMessageIds|IEnumerable&lt;String>|from <small style='border:solid 1px #aaa'>DateTime</small><br/>to <small style='border:solid 1px #aaa'>DateTime</small>|Get all message ids between the specified time(s)|
-|GetMessageInfo|MessageInfo|messageId <small style='border:solid 1px #aaa'>String</small>|Get message extended attribute|
+|GetMessageState|MessageState|*String* **messageId**|Get the state of a message|
+|PersistMessage|void|*String* **messageId**<br/>*Stream* **message**|Persists the message|
+|PersistMessageInfo|void|*MessageInfo* **message**|Persist message extension|
+|GetMessageResponseMessage|Stream|*String* **messageId**|Get the identifier of the message that represents the response to the current message|
+|GetMessage|Stream|*String* **messageId**|Get a message|
+|PersistResultMessage|void|*String* **messageId**<br/>*String* **respondsToId**<br/>*Stream* **response**|Persist|
+|GetMessageIds|IEnumerable&lt;String>|*DateTime* **from**<br/>*DateTime* **to**|Get all message ids between the specified time(s)|
+|GetMessageInfo|MessageInfo|*String* **messageId**|Get message extended attribute|
 
 ## Implementations
 

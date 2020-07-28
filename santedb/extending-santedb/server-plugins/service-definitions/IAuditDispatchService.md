@@ -19,7 +19,7 @@ Represents a service that dispatches audits to a central repository
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|SendAudit|void|audit <small style='border:solid 1px #aaa'>AuditData</small>|Sends the audit to the central authority|
+|SendAudit|void|*AuditData* **audit**|Sends the audit to the central authority|
 
 ## Implementations
 

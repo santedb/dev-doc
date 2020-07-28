@@ -19,8 +19,8 @@ Represents a session identity service that can provide identities
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|IPrincipal|session <small style='border:solid 1px #aaa'>ISession</small>|Authenticate based on session|
-|GetIdentities|IIdentity[]|session <small style='border:solid 1px #aaa'>ISession</small>|Gets an un-authenticated principal from the specified session|
+|Authenticate|IPrincipal|*ISession* **session**|Authenticate based on session|
+|GetIdentities|IIdentity[]|*ISession* **session**|Gets an un-authenticated principal from the specified session|
 
 ## Implementations
 

@@ -19,7 +19,7 @@ Persistable query provider is an extensable interface which can perform a query 
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Find|IEnumerable&lt;TEntity>|query <small style='border:solid 1px #aaa'>Expression<Func<TEntity,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>Guid</small><br/>orderBy <small style='border:solid 1px #aaa'>ModelSort`1[]</small>|Performs a query which|
+|Find|IEnumerable&lt;TEntity>|*Expression<Func<TEntity,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**<br/>*ModelSort`1[]* **orderBy**|Performs a query which|
 
 ## Implementations
 

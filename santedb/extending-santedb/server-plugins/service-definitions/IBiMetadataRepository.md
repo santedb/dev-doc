@@ -19,10 +19,10 @@ Represents a metadata repository for the BIS services
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Query|IEnumerable&lt;TBisDefinition>|filter <small style='border:solid 1px #aaa'>Expression<Func<TBisDefinition,Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>Int32</small><br/>count <small style='border:solid 1px #aaa'>Nullable<Int32></small>|Query metadata repository for|
-|Get|TBisDefinition|id <small style='border:solid 1px #aaa'>String</small>|Get the specified BI definition by identifier|
-|Remove|void|id <small style='border:solid 1px #aaa'>String</small>|Removes the specified BI definition from the repository|
-|Insert|TBisDefinition|metadata <small style='border:solid 1px #aaa'>TBisDefinition</small>|Inserts the specified BI definition into the repository|
+|Query|IEnumerable&lt;TBisDefinition>|*Expression<Func<TBisDefinition,Boolean>>* **filter**<br/>*Int32* **offset**<br/>*Nullable<Int32>* **count**|Query metadata repository for|
+|Get|TBisDefinition|*String* **id**|Get the specified BI definition by identifier|
+|Remove|void|*String* **id**|Removes the specified BI definition from the repository|
+|Insert|TBisDefinition|*TBisDefinition* **metadata**|Inserts the specified BI definition into the repository|
 
 ## Implementations
 

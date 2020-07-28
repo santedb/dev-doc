@@ -19,8 +19,8 @@ Represents a policy decision service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetPolicyDecision|PolicyDecision|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>securable <small style='border:solid 1px #aaa'>Object</small>|Make a simple policy decision for a specific securable|
-|GetPolicyOutcome|PolicyGrantType|principal <small style='border:solid 1px #aaa'>IPrincipal</small><br/>policyId <small style='border:solid 1px #aaa'>String</small>|Get a policy decision outcome (i.e. make a policy decision)|
+|GetPolicyDecision|PolicyDecision|*IPrincipal* **principal**<br/>*Object* **securable**|Make a simple policy decision for a specific securable|
+|GetPolicyOutcome|PolicyGrantType|*IPrincipal* **principal**<br/>*String* **policyId**|Get a policy decision outcome (i.e. make a policy decision)|
 
 ## Implementations
 

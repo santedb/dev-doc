@@ -19,7 +19,7 @@ Represents a repository that can validate
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Validate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Validates the supplied data and returns a valid copy (or) throws an appropriate exception|
+|Validate|TModel|*TModel* **data**|Validates the supplied data and returns a valid copy (or) throws an appropriate exception|
 
 ## Implementations
 

@@ -19,9 +19,9 @@ Represents an interface that allows for the retrieval of pre-configured security
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|IEnumerable&lt;SecurityChallenge>|userName <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Gets the challenges current registered for the user (not the answers)|
-|Set|void|userName <small style='border:solid 1px #aaa'>String</small><br/>challengeKey <small style='border:solid 1px #aaa'>Guid</small><br/>response <small style='border:solid 1px #aaa'>String</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Add a challenge to the current registered user|
-|Remove|void|userName <small style='border:solid 1px #aaa'>String</small><br/>challengeKey <small style='border:solid 1px #aaa'>Guid</small><br/>principal <small style='border:solid 1px #aaa'>IPrincipal</small>|Removes or clears the specified challenge|
+|Get|IEnumerable&lt;SecurityChallenge>|*String* **userName**<br/>*IPrincipal* **principal**|Gets the challenges current registered for the user (not the answers)|
+|Set|void|*String* **userName**<br/>*Guid* **challengeKey**<br/>*String* **response**<br/>*IPrincipal* **principal**|Add a challenge to the current registered user|
+|Remove|void|*String* **userName**<br/>*Guid* **challengeKey**<br/>*IPrincipal* **principal**|Removes or clears the specified challenge|
 
 ## Implementations
 

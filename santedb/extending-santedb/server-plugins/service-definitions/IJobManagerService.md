@@ -20,10 +20,10 @@ Job manager service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|AddJob|void|jobType <small style='border:solid 1px #aaa'>IJob</small><br/>elapseTime <small style='border:solid 1px #aaa'>TimeSpan</small><br/>startType <small style='border:solid 1px #aaa'>JobStartType</small>|Add a job|
-|IsJobRegistered|Boolean|jobType <small style='border:solid 1px #aaa'>Type</small>|Returns true if the job is registered|
-|StartJob|void|job <small style='border:solid 1px #aaa'>IJob</small><br/>parameters <small style='border:solid 1px #aaa'>Object[]</small>|Start a job|
-|GetJobInstance|IJob|jobTypeName <small style='border:solid 1px #aaa'>String</small>|Get this manager's instance of a job|
+|AddJob|void|*IJob* **jobType**<br/>*TimeSpan* **elapseTime**<br/>*JobStartType* **startType**|Add a job|
+|IsJobRegistered|Boolean|*Type* **jobType**|Returns true if the job is registered|
+|StartJob|void|*IJob* **job**<br/>*Object[]* **parameters**|Start a job|
+|GetJobInstance|IJob|*String* **jobTypeName**|Get this manager's instance of a job|
 
 ## Implementations
 

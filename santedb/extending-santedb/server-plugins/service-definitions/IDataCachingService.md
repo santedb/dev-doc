@@ -24,10 +24,10 @@ Represents a data caching service which allows services to retrieve
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetCacheItem|TData|key <small style='border:solid 1px #aaa'>Guid</small>|Get the specified cache item|
-|GetCacheItem|Object|key <small style='border:solid 1px #aaa'>Guid</small>|Gets the specified cache item|
-|Add|void|data <small style='border:solid 1px #aaa'>IdentifiedData</small>|Adds the specified item to the cache|
-|Remove|void|key <small style='border:solid 1px #aaa'>Guid</small>|Removes an object from the cache|
+|GetCacheItem|TData|*Guid* **key**|Get the specified cache item|
+|GetCacheItem|Object|*Guid* **key**|Gets the specified cache item|
+|Add|void|*IdentifiedData* **data**|Adds the specified item to the cache|
+|Remove|void|*Guid* **key**|Removes an object from the cache|
 |Clear|void||TODO|
 
 ## Implementations

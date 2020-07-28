@@ -21,7 +21,7 @@ Identifies a class which can generate TFA secrets
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GenerateTfaSecret|String||TODO|
-|Validate|Boolean|secret <small style='border:solid 1px #aaa'>String</small>|Validates the secret|
+|Validate|Boolean|*String* **secret**|Validates the secret|
 
 ## Implementations
 

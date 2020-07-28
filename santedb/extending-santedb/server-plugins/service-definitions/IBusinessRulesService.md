@@ -24,15 +24,15 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|AfterInsert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after an insert occurs|
-|AfterObsolete|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after obsolete committed|
-|AfterQuery|IEnumerable&lt;TModel>|results <small style='border:solid 1px #aaa'>IEnumerable<TModel></small>|Called after query|
-|AfterRetrieve|TModel|result <small style='border:solid 1px #aaa'>TModel</small>|Called after retrieve|
-|AfterUpdate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after update committed|
-|BeforeInsert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before an insert occurs|
-|BeforeObsolete|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before obsolete|
-|BeforeUpdate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before an update occurs|
-|Validate|List&lt;DetectedIssue>|data <small style='border:solid 1px #aaa'>TModel</small>|Called to validate a specific object|
+|AfterInsert|TModel|*TModel* **data**|Called after an insert occurs|
+|AfterObsolete|TModel|*TModel* **data**|Called after obsolete committed|
+|AfterQuery|IEnumerable&lt;TModel>|*IEnumerable<TModel>* **results**|Called after query|
+|AfterRetrieve|TModel|*TModel* **result**|Called after retrieve|
+|AfterUpdate|TModel|*TModel* **data**|Called after update committed|
+|BeforeInsert|TModel|*TModel* **data**|Called before an insert occurs|
+|BeforeObsolete|TModel|*TModel* **data**|Called before obsolete|
+|BeforeUpdate|TModel|*TModel* **data**|Called before an update occurs|
+|Validate|List&lt;DetectedIssue>|*TModel* **data**|Called to validate a specific object|
 
 ## Implementations
 

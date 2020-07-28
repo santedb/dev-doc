@@ -19,7 +19,7 @@ Represents the extension type repository
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|ExtensionType|uri <small style='border:solid 1px #aaa'>Uri</small>|Get the xtension type my its url|
+|Get|ExtensionType|*Uri* **uri**|Get the xtension type my its url|
 
 ## Implementations
 
