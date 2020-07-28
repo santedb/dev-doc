@@ -12,9 +12,15 @@ Represents a service that can do clinical protocols
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|FindProtocol|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Acts.Protocol>|predicate <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Model.Acts.Protocol,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small>|Find protocols in the repository service|
+|InsertProtocol|SanteDB.Core.Model.Acts.Protocol|data <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Acts.Protocol</small>|Find protocols in the repository service|
 
 ## Implementations
 

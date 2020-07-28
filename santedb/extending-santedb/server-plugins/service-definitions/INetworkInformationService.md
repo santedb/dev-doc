@@ -13,9 +13,21 @@ Represents network information service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|IsNetworkAvailable|System.Boolean|R|Gets whether the network is available|
+|IsNetworkConnected|System.Boolean|R|Gets whether the network is connected.|
+|IsNetworkWifi|System.Boolean|R|Returns true if the network is WIFI|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetInterfaces|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Services.NetworkInterfaceInfo>||TODO|
+|Ping|System.Int64|hostName <small style='border:solid 1px #aaa'>System.String</small>|Pings the specified host|
+|Nslookup|System.String|address <small style='border:solid 1px #aaa'>System.String</small>|Perform a DNS lookup|
+|GetHostName|System.String||TODO|
+|GetMachineName|System.String||TODO|
 
 ## Implementations
 

@@ -12,9 +12,20 @@ Represents a repository service base
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Get|TModel|key <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the specified model.|
+|Get|TModel|key <small style='border:solid 1px #aaa'>System.Guid</small><br/>versionKey <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the specified model.|
+|Find|System.Collections.Generic.IEnumerable&lt;TModel>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TModel,System.Boolean>></small>|Finds the specified data.|
+|Find|System.Collections.Generic.IEnumerable&lt;TModel>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TModel,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'></small>|Finds the specified data.|
+|Insert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Inserts the specified data.|
+|Save|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Saves the specified data.|
+|Obsolete|TModel|key <small style='border:solid 1px #aaa'>System.Guid</small>|Obsoletes the specified data.|
 
 ## Implementations
 

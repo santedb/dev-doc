@@ -10,15 +10,25 @@ Represents a data caching service which allows services to retrieve
 
 |Event|Type|Description|
 |-|-|-|
-|Added|System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs>|Item was added to cache|
-|Updated|System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs>|Item was updated from cache|
-|Removed|System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs>|Item was removed from cache|
+|Added|System.EventHandler&lt;SanteDB.Core.Services.DataCacheEventArgs>|Item was added to cache|
+|Updated|System.EventHandler&lt;SanteDB.Core.Services.DataCacheEventArgs>|Item was updated from cache|
+|Removed|System.EventHandler&lt;SanteDB.Core.Services.DataCacheEventArgs>|Item was removed from cache|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Size|System.Int64|R|Gets the current size of the cache|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetCacheItem|TData|key <small style='border:solid 1px #aaa'>System.Guid</small>|Get the specified cache item|
+|GetCacheItem|System.Object|key <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the specified cache item|
+|Add|void|data <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small>|Adds the specified item to the cache|
+|Remove|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Removes an object from the cache|
+|Clear|void||TODO|
 
 ## Implementations
 

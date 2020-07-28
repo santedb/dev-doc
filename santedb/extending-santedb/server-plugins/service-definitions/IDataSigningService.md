@@ -12,9 +12,16 @@ Represents a service which can sign arbitrary data
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetSignatureAlgorithm|System.String|keyId <small style='border:solid 1px #aaa'>System.String</small>|Get the siganture algorithm this service would use to sign w/the specified key|
+|SignData|System.Byte[]|data <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>System.String</small>|Signs the specified data using the service's configured signing key|
+|Verify|System.Boolean|data <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>signature <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>keyId <small style='border:solid 1px #aaa'>System.String</small>|Verifies the digital signature of the data|
 
 ## Implementations
 

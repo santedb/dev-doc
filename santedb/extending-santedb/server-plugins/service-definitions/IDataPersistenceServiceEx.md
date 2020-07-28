@@ -12,9 +12,14 @@ Extended data persistence service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Touch|void|key <small style='border:solid 1px #aaa'>System.Guid</small><br/>mode <small style='border:solid 1px #aaa'>SanteDB.Core.Services.TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Touch the specified data|
 
 ## Implementations
 

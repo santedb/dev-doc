@@ -12,9 +12,21 @@ Represents a service which is capableof retrieving roles
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|CreateRole|void|roleName <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Creates a role|
+|AddUsersToRoles|void|users <small style='border:solid 1px #aaa'>System.String[]</small><br/>roles <small style='border:solid 1px #aaa'>System.String[]</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Add users to roles|
+|RemoveUsersFromRoles|void|users <small style='border:solid 1px #aaa'>System.String[]</small><br/>roles <small style='border:solid 1px #aaa'>System.String[]</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Remove users from specified roles|
+|FindUsersInRole|System.String[]|role <small style='border:solid 1px #aaa'>System.String</small>|Find all users in a specified role|
+|GetAllRoles|System.String[]||Get all roles|
+|GetAllRoles|System.String[]|userName <small style='border:solid 1px #aaa'>System.String</small>|Get all roles|
+|IsUserInRole|System.Boolean|userName <small style='border:solid 1px #aaa'>System.String</small><br/>roleName <small style='border:solid 1px #aaa'>System.String</small>|User user in the specified role|
+|IsUserInRole|System.Boolean|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>roleName <small style='border:solid 1px #aaa'>System.String</small>|User user in the specified role|
 
 ## Implementations
 

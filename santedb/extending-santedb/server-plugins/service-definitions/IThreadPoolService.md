@@ -12,9 +12,17 @@ Represents a thread pooling service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>System.Action<System.Object></small>|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|action <small style='border:solid 1px #aaa'>System.Action<System.Object></small><br/>parm <small style='border:solid 1px #aaa'>System.Object</small>|Queues the specified action into the worker pool|
+|QueueUserWorkItem|void|timeout <small style='border:solid 1px #aaa'>System.TimeSpan</small><br/>action <small style='border:solid 1px #aaa'>System.Action<System.Object></small><br/>parm <small style='border:solid 1px #aaa'>System.Object</small>|Queues the specified action into the worker pool|
+|QueueNonPooledWorkItem|void|action <small style='border:solid 1px #aaa'>System.Action<System.Object></small><br/>parm <small style='border:solid 1px #aaa'>System.Object</small>|Creates a normal thread which is not in the pool|
 
 ## Implementations
 

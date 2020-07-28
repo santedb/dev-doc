@@ -12,9 +12,14 @@ Free text search service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Search|System.Collections.Generic.IEnumerable&lt;TEntity>|term <small style='border:solid 1px #aaa'>System.String[]</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'></small>|Search based on tokens|
 
 ## Implementations
 

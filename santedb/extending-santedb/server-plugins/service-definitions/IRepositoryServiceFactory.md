@@ -12,9 +12,14 @@ Represents a factory service which can be used to generate default factories
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|CreateRepository|SanteDB.Core.Services.IRepositoryService&lt;T>||TODO|
 
 ## Implementations
 

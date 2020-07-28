@@ -12,9 +12,17 @@ Represents a metadata repository for the BIS services
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Query|System.Collections.Generic.IEnumerable&lt;TBisDefinition>|filter <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TBisDefinition,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small>|Query metadata repository for|
+|Get|TBisDefinition|id <small style='border:solid 1px #aaa'>System.String</small>|Get the specified BI definition by identifier|
+|Remove|void|id <small style='border:solid 1px #aaa'>System.String</small>|Removes the specified BI definition from the repository|
+|Insert|TBisDefinition|metadata <small style='border:solid 1px #aaa'>TBisDefinition</small>|Inserts the specified BI definition into the repository|
 
 ## Implementations
 

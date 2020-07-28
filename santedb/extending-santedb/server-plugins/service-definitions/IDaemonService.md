@@ -16,9 +16,16 @@ Daemon service which runs when the application is started
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|IsRunning|System.Boolean|R|True when daemon is running|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Start|System.Boolean||TODO|
+|Stop|System.Boolean||TODO|
 
 ## Implementations
 

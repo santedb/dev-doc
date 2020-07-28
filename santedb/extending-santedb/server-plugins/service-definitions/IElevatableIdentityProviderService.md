@@ -9,13 +9,18 @@ Represents an identity provider that allows for elevation
 
 |Event|Type|Description|
 |-|-|-|
-|OverrideRequested|System.EventHandler<SanteDB.Core.Security.Services.SecurityOverrideEventArgs>|The caller has requested an override|
+|OverrideRequested|System.EventHandler&lt;SanteDB.Core.Security.Services.SecurityOverrideEventArgs>|The caller has requested an override|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|ElevatedAuthenticate|System.Security.Principal.IPrincipal|userName <small style='border:solid 1px #aaa'>System.String</small><br/>password <small style='border:solid 1px #aaa'>System.String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>System.String</small><br/>purpose <small style='border:solid 1px #aaa'>System.String</small><br/>policies <small style='border:solid 1px #aaa'>System.String[]</small>|Requests the currently established principal to be elevated|
 
 ## Implementations
 

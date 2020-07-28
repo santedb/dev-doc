@@ -12,9 +12,22 @@ Represents a service which is responsible for the maintenance of concepts.
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|FindConceptsByName|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.DataTypes.Concept>|name <small style='border:solid 1px #aaa'>System.String</small><br/>language <small style='border:solid 1px #aaa'>System.String</small>|Searches for a concept by name and language.|
+|FindConceptsByReferenceTerm|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.DataTypes.Concept>|code <small style='border:solid 1px #aaa'>System.String</small><br/>codeSystem <small style='border:solid 1px #aaa'>System.Uri</small>|Finds a concept by reference term.|
+|GetConceptSetMembers|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.DataTypes.Concept>|mnemonic <small style='border:solid 1px #aaa'>System.String</small>|Get concept set members|
+|FindConceptsByReferenceTerm|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.DataTypes.Concept>|code <small style='border:solid 1px #aaa'>System.String</small><br/>codeSystemDomain <small style='border:solid 1px #aaa'>System.String</small>|Finds a concept by reference term.|
+|GetConcept|SanteDB.Core.Model.DataTypes.Concept|mnemonic <small style='border:solid 1px #aaa'>System.String</small>|Gets a concept by mnemonic.|
+|Implies|System.Boolean|a <small style='border:solid 1px #aaa'>SanteDB.Core.Model.DataTypes.Concept</small><br/>b <small style='border:solid 1px #aaa'>SanteDB.Core.Model.DataTypes.Concept</small>|Returns a value which indicates whether  implies|
+|IsMember|System.Boolean|set <small style='border:solid 1px #aaa'>SanteDB.Core.Model.DataTypes.ConceptSet</small><br/>concept <small style='border:solid 1px #aaa'>SanteDB.Core.Model.DataTypes.Concept</small>|Returns true if the concept  is a member of set|
+|IsMember|System.Boolean|set <small style='border:solid 1px #aaa'>System.Guid</small><br/>concept <small style='border:solid 1px #aaa'>System.Guid</small>|Returns true if the concept  is a member of set|
+|GetConceptReferenceTerm|SanteDB.Core.Model.DataTypes.ReferenceTerm|conceptId <small style='border:solid 1px #aaa'>System.Guid</small><br/>codeSystem <small style='border:solid 1px #aaa'>System.String</small>|Gets the concept reference term for the specified code system|
 
 ## Implementations
 

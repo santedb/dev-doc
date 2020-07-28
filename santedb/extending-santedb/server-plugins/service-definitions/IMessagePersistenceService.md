@@ -12,9 +12,21 @@ Identifies a structure for message persistence service implementations
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetMessageState|SanteDB.Core.Services.MessageState|messageId <small style='border:solid 1px #aaa'>System.String</small>|Get the state of a message|
+|PersistMessage|void|messageId <small style='border:solid 1px #aaa'>System.String</small><br/>message <small style='border:solid 1px #aaa'>System.IO.Stream</small>|Persists the message|
+|PersistMessageInfo|void|message <small style='border:solid 1px #aaa'>SanteDB.Core.Services.MessageInfo</small>|Persist message extension|
+|GetMessageResponseMessage|System.IO.Stream|messageId <small style='border:solid 1px #aaa'>System.String</small>|Get the identifier of the message that represents the response to the current message|
+|GetMessage|System.IO.Stream|messageId <small style='border:solid 1px #aaa'>System.String</small>|Get a message|
+|PersistResultMessage|void|messageId <small style='border:solid 1px #aaa'>System.String</small><br/>respondsToId <small style='border:solid 1px #aaa'>System.String</small><br/>response <small style='border:solid 1px #aaa'>System.IO.Stream</small>|Persist|
+|GetMessageIds|System.Collections.Generic.IEnumerable&lt;System.String>|from <small style='border:solid 1px #aaa'>System.DateTime</small><br/>to <small style='border:solid 1px #aaa'>System.DateTime</small>|Get all message ids between the specified time(s)|
+|GetMessageInfo|SanteDB.Core.Services.MessageInfo|messageId <small style='border:solid 1px #aaa'>System.String</small>|Get message extended attribute|
 
 ## Implementations
 

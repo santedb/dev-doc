@@ -10,22 +10,33 @@ Represents a data persistence service which is capable of storing and retrieving
 
 |Event|Type|Description|
 |-|-|-|
-|Inserted|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TData>>|Occurs when inserted.|
-|Inserting|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TData>>|Occurs when inserting.|
-|Updated|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TData>>|Occurs when updated.|
-|Updating|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TData>>|Occurs when updating.|
-|Obsoleted|System.EventHandler<SanteDB.Core.Event.DataPersistedEventArgs<TData>>|Occurs when obsoleted.|
-|Obsoleting|System.EventHandler<SanteDB.Core.Event.DataPersistingEventArgs<TData>>|Occurs when obsoleting.|
-|Queried|System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<TData>>|Occurs when queried.|
-|Querying|System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<TData>>|Occurs when querying.|
-|Retrieving|System.EventHandler<SanteDB.Core.Event.DataRetrievingEventArgs<TData>>|Data is being retrieved|
-|Retrieved|System.EventHandler<SanteDB.Core.Event.DataRetrievedEventArgs<TData>>|Fired when data has been retrieved|
+|Inserted|System.EventHandler&lt;SanteDB.Core.Event.DataPersistedEventArgs&lt;TData>>|Occurs when inserted.|
+|Inserting|System.EventHandler&lt;SanteDB.Core.Event.DataPersistingEventArgs&lt;TData>>|Occurs when inserting.|
+|Updated|System.EventHandler&lt;SanteDB.Core.Event.DataPersistedEventArgs&lt;TData>>|Occurs when updated.|
+|Updating|System.EventHandler&lt;SanteDB.Core.Event.DataPersistingEventArgs&lt;TData>>|Occurs when updating.|
+|Obsoleted|System.EventHandler&lt;SanteDB.Core.Event.DataPersistedEventArgs&lt;TData>>|Occurs when obsoleted.|
+|Obsoleting|System.EventHandler&lt;SanteDB.Core.Event.DataPersistingEventArgs&lt;TData>>|Occurs when obsoleting.|
+|Queried|System.EventHandler&lt;SanteDB.Core.Event.QueryResultEventArgs&lt;TData>>|Occurs when queried.|
+|Querying|System.EventHandler&lt;SanteDB.Core.Event.QueryRequestEventArgs&lt;TData>>|Occurs when querying.|
+|Retrieving|System.EventHandler&lt;SanteDB.Core.Event.DataRetrievingEventArgs&lt;TData>>|Data is being retrieved|
+|Retrieved|System.EventHandler&lt;SanteDB.Core.Event.DataRetrievedEventArgs&lt;TData>>|Fired when data has been retrieved|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Insert|TData|data <small style='border:solid 1px #aaa'>TData</small><br/>mode <small style='border:solid 1px #aaa'>SanteDB.Core.Services.TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Insert the specified data.|
+|Update|TData|data <small style='border:solid 1px #aaa'>TData</small><br/>mode <small style='border:solid 1px #aaa'>SanteDB.Core.Services.TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Update the specified data|
+|Obsolete|TData|data <small style='border:solid 1px #aaa'>TData</small><br/>mode <small style='border:solid 1px #aaa'>SanteDB.Core.Services.TransactionMode</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Obsolete the specified identified data|
+|Get|TData|key <small style='border:solid 1px #aaa'>System.Guid</small><br/>versionKey <small style='border:solid 1px #aaa'>System.Nullable<System.Guid></small><br/>loadFast <small style='border:solid 1px #aaa'>System.Boolean</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Get the specified key.|
+|Query|System.Collections.Generic.IEnumerable&lt;TData>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TData,System.Boolean>></small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Query the specified data|
+|Query|System.Collections.Generic.IEnumerable&lt;TData>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TData,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>orderBy <small style='border:solid 1px #aaa'></small>|Query the specified data|
+|Count|System.Int64|p <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<TData,System.Boolean>></small><br/>authContext <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Performs a fast count|
 
 ## Implementations
 

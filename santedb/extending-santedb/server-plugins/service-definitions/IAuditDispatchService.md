@@ -12,9 +12,14 @@ Represents a service that dispatches audits to a central repository
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|SendAudit|void|audit <small style='border:solid 1px #aaa'>SanteDB.Core.Auditing.AuditData</small>|Sends the audit to the central authority|
 
 ## Implementations
 

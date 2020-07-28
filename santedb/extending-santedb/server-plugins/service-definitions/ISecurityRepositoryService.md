@@ -12,9 +12,29 @@ Security repository service is responsible for the maintenance of security entit
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|ChangePassword|SanteDB.Core.Model.Security.SecurityUser|userId <small style='border:solid 1px #aaa'>System.Guid</small><br/>password <small style='border:solid 1px #aaa'>System.String</small>|Changes a user's password.|
+|GetProviderEntity|SanteDB.Core.Model.Roles.Provider|identity <small style='border:solid 1px #aaa'>System.Security.Principal.IIdentity</small>|Gets the specified provider entity from the specified identity|
+|CreateUser|SanteDB.Core.Model.Security.SecurityUser|userInfo <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Security.SecurityUser</small><br/>password <small style='border:solid 1px #aaa'>System.String</small>|Creates a user with a specified password.|
+|GetUser|SanteDB.Core.Model.Security.SecurityUser|userName <small style='border:solid 1px #aaa'>System.String</small>|Get a user by user name|
+|GetPolicy|SanteDB.Core.Model.Security.SecurityPolicy|policyOid <small style='border:solid 1px #aaa'>System.String</small>|Get the specified security policy by OID|
+|GetRole|SanteDB.Core.Model.Security.SecurityRole|roleName <small style='border:solid 1px #aaa'>System.String</small>|Gets a specific role.|
+|LockDevice|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Locks a device principal|
+|LockApplication|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Locks an application|
+|UnlockDevice|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Removes a lock from a device|
+|UnlockApplication|void|key <small style='border:solid 1px #aaa'>System.Guid</small>|Removes a lock from an application|
+|GetUser|SanteDB.Core.Model.Security.SecurityUser|identity <small style='border:solid 1px #aaa'>System.Security.Principal.IIdentity</small>|Get a user by user name|
+|GetUserEntity|SanteDB.Core.Model.Entities.UserEntity|identity <small style='border:solid 1px #aaa'>System.Security.Principal.IIdentity</small>|Get the user entity|
+|LockUser|void|userId <small style='border:solid 1px #aaa'>System.Guid</small>|Locks a specific user.|
+|UnlockUser|void|userId <small style='border:solid 1px #aaa'>System.Guid</small>|Unlocks a specific user.|
+|GetProvenance|SanteDB.Core.Model.Security.SecurityProvenance|provenanceId <small style='border:solid 1px #aaa'>System.Guid</small>|Get the provenance object|
+|FindProvenance|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Security.SecurityProvenance>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Model.Security.SecurityProvenance,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>orderBy <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Model.Security.SecurityProvenance, SanteDB.Core.Model, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][]</small>|Find provenance objects matching the specified object|
 
 ## Implementations
 

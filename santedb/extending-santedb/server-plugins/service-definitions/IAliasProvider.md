@@ -12,9 +12,14 @@ Represents a provider for aliases
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetAlias|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Services.ComponentAlias>|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the known alias names and score for the alias|
 
 ## Implementations
 

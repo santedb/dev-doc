@@ -12,9 +12,16 @@ Represents an interface that allows for the retrieval of pre-configured security
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Get|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Model.Security.SecurityChallenge>|userName <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Gets the challenges current registered for the user (not the answers)|
+|Set|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>challengeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>response <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Add a challenge to the current registered user|
+|Remove|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>challengeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Removes or clears the specified challenge|
 
 ## Implementations
 

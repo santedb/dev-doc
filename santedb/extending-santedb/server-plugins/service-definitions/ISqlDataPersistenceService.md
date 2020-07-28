@@ -12,9 +12,15 @@ Represents a data persistence service where arbitrary SQL can be run
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|InvariantName|System.String|R|Text that identifies the type of database system that is running|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|ExecuteNonQuery|void|sql <small style='border:solid 1px #aaa'>System.String</small>|Executes the arbitrary SQL|
 
 ## Implementations
 

@@ -12,9 +12,13 @@ Represents an implementation of a repository which loads subscription definition
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
 
 ## Implementations
 

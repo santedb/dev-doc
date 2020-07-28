@@ -12,9 +12,18 @@ Job manager service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Jobs|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Jobs.IJob>|R|Gets the status of all jobs|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|AddJob|void|jobType <small style='border:solid 1px #aaa'>SanteDB.Core.Jobs.IJob</small><br/>elapseTime <small style='border:solid 1px #aaa'>System.TimeSpan</small><br/>startType <small style='border:solid 1px #aaa'>SanteDB.Core.Jobs.JobStartType</small>|Add a job|
+|IsJobRegistered|System.Boolean|jobType <small style='border:solid 1px #aaa'>System.Type</small>|Returns true if the job is registered|
+|StartJob|void|job <small style='border:solid 1px #aaa'>SanteDB.Core.Jobs.IJob</small><br/>parameters <small style='border:solid 1px #aaa'>System.Object[]</small>|Start a job|
+|GetJobInstance|SanteDB.Core.Jobs.IJob|jobTypeName <small style='border:solid 1px #aaa'>System.String</small>|Get this manager's instance of a job|
 
 ## Implementations
 

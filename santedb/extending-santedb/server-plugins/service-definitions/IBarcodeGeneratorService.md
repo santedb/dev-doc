@@ -12,9 +12,14 @@ Represents a barcode generator
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Generate|System.IO.Stream|identifers <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<SanteDB.Core.Model.DataTypes.IdentifierBase<TEntity>></small>|Generate a barcode from the specified identifier|
 
 ## Implementations
 

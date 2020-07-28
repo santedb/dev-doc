@@ -16,9 +16,23 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Next|SanteDB.Core.Services.IBusinessRulesService&lt;TModel>|RW|Gets or sets the rule to be run after this rule (for chained rules)|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|AfterInsert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after an insert occurs|
+|AfterObsolete|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after obsolete committed|
+|AfterQuery|System.Collections.Generic.IEnumerable&lt;TModel>|results <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<TModel></small>|Called after query|
+|AfterRetrieve|TModel|result <small style='border:solid 1px #aaa'>TModel</small>|Called after retrieve|
+|AfterUpdate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called after update committed|
+|BeforeInsert|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before an insert occurs|
+|BeforeObsolete|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before obsolete|
+|BeforeUpdate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Called before an update occurs|
+|Validate|System.Collections.Generic.List&lt;SanteDB.Core.BusinessRules.DetectedIssue>|data <small style='border:solid 1px #aaa'>TModel</small>|Called to validate a specific object|
 
 ## Implementations
 

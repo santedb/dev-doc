@@ -12,9 +12,15 @@ A caching service which permits the storage of any data regardless of type
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Add|void|key <small style='border:solid 1px #aaa'>System.String</small><br/>value <small style='border:solid 1px #aaa'>T</small><br/>timeout <small style='border:solid 1px #aaa'>System.Nullable<System.TimeSpan></small>|Add the specified object to the cache|
+|Get|T|key <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified object from the cache|
 
 ## Implementations
 

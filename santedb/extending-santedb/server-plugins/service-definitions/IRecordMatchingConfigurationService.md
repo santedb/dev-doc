@@ -12,9 +12,16 @@ Represents a service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Configurations|System.Collections.Generic.IEnumerable&lt;System.String>|R|Gets the names of configurations in this provider|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetConfiguration|SanteDB.Core.Services.IRecordMatchingConfiguration|name <small style='border:solid 1px #aaa'>System.String</small>|Get the specified named configuration|
+|SaveConfiguration|SanteDB.Core.Services.IRecordMatchingConfiguration|configuration <small style='border:solid 1px #aaa'>SanteDB.Core.Services.IRecordMatchingConfiguration</small>|Saves the specified configuration to the configuration service|
 
 ## Implementations
 

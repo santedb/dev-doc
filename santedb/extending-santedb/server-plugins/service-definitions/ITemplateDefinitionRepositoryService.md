@@ -13,9 +13,14 @@ Represents a repository which deals with metadata such as assigning authorities,
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetTemplateDefinition|SanteDB.Core.Model.DataTypes.TemplateDefinition|mnemonic <small style='border:solid 1px #aaa'>System.String</small>|Get tempate definition|
 
 ## Implementations
 

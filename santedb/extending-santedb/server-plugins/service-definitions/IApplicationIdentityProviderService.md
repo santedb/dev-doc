@@ -9,14 +9,22 @@ Represents a service which retrieves IPrincipal objects for applications.
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
-|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
+|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
+|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Authenticate|System.Security.Principal.IPrincipal|applicationId <small style='border:solid 1px #aaa'>System.String</small><br/>applicationSecret <small style='border:solid 1px #aaa'>System.String</small>|Authenticate the application identity.|
+|GetIdentity|System.Security.Principal.IIdentity|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified identity for an application.|
+|SetLockout|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>lockoutState <small style='border:solid 1px #aaa'>System.Boolean</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Set the lockout status|
+|ChangeSecret|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>secret <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Change the specified application identity's secret|
 
 ## Implementations
 

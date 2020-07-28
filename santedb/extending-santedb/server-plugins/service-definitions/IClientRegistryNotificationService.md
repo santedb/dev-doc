@@ -12,9 +12,16 @@ Represents a client registry notification service.
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|NotifyDuplicatesResolved|void|eventArgs <small style='border:solid 1px #aaa'>SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient></small>|Notify that duplicates have been resolved.|
+|NotifyRegister|void|eventArgs <small style='border:solid 1px #aaa'>SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient></small>|Notify that a registration occurred.|
+|NotifyUpdate|void|eventArgs <small style='border:solid 1px #aaa'>SanteDB.Core.Event.NotificationEventArgs<SanteDB.Core.Model.Roles.Patient></small>|Notify that an update occurred.|
 
 ## Implementations
 

@@ -9,14 +9,22 @@ Represents an identity service which authenticates devices.
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
-|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
+|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication request has been made.|
+|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication request being made.|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Authenticate|System.Security.Principal.IPrincipal|deviceId <small style='border:solid 1px #aaa'>System.String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>System.String</small><br/>authMethod <small style='border:solid 1px #aaa'>SanteDB.Core.Security.Services.AuthenticationMethod</small>|Authenticates the specified device identifier.|
+|GetIdentity|System.Security.Principal.IIdentity|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified identity for an device.|
+|SetLockout|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>lockoutState <small style='border:solid 1px #aaa'>System.Boolean</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Set the lockout status|
+|ChangeSecret|void|name <small style='border:solid 1px #aaa'>System.String</small><br/>deviceSecret <small style='border:solid 1px #aaa'>System.String</small><br/>systemPrincipal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Change the device secret|
 
 ## Implementations
 

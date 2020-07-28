@@ -12,9 +12,21 @@ Query persistence service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|FindQueryId|System.Guid|queryTag <small style='border:solid 1px #aaa'>System.Object</small>|Find the query ID by the query tag|
+|RegisterQuerySet|System.Boolean|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>results <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small><br/>tag <small style='border:solid 1px #aaa'>System.Object</small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32</small>|Register a query set|
+|IsRegistered|System.Boolean|queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Returns true if the query identifier is already registered|
+|GetQueryResults|System.Collections.Generic.IEnumerable&lt;System.Guid>|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Int32</small>|Get query results from the query set result store|
+|GetQueryTag|System.Object|queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Get the query tag value from the result store|
+|QueryResultTotalQuantity|System.Int64|queryId <small style='border:solid 1px #aaa'>System.Guid</small>|Count the number of remaining query results|
+|AddResults|void|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>results <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small>|Add results to the query|
+|SetQueryTag|void|queryId <small style='border:solid 1px #aaa'>System.Guid</small><br/>value <small style='border:solid 1px #aaa'>System.Object</small>|Set or update the query tag of an existing query id|
 
 ## Implementations
 

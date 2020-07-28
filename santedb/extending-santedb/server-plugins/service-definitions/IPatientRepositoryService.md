@@ -14,9 +14,15 @@ Represents the patient repository service. This service is responsible
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Merge|SanteDB.Core.Model.Roles.Patient|survivor <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>victim <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small>|Merges two patients together|
+|UnMerge|SanteDB.Core.Model.Roles.Patient|patient <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>versionKey <small style='border:solid 1px #aaa'>System.Guid</small>|Un-merges two patients from each other|
 
 ## Implementations
 

@@ -12,9 +12,17 @@ Represents a service which can persist and retrieve audits
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Insert|SanteDB.Core.Auditing.AuditData|audit <small style='border:solid 1px #aaa'>SanteDB.Core.Auditing.AuditData</small>|Insert an audit into the repository|
+|Find|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Auditing.AuditData>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Auditing.AuditData,System.Boolean>></small>|Find an audit from the audit repository|
+|Get|SanteDB.Core.Auditing.AuditData|correlationKey <small style='border:solid 1px #aaa'>System.Object</small>|Get the specified audit|
+|Find|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Auditing.AuditData>|query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Auditing.AuditData,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Auditing.AuditData, SanteDB.Core.Model, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][]</small>|Find an audit from the audit repository|
 
 ## Implementations
 

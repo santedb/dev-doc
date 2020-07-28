@@ -12,9 +12,14 @@ Represents a password validation service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Validate|System.Boolean|password <small style='border:solid 1px #aaa'>System.String</small>|Validate the password|
 
 ## Implementations
 

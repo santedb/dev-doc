@@ -9,14 +9,27 @@ Represents a service which appropriately merges / unmerges records
 
 |Event|Type|Description|
 |-|-|-|
-|Merging|System.EventHandler<SanteDB.Core.Event.DataMergingEventArgs<T>>|Fired prior to a merge occurring|
-|Merged|System.EventHandler<SanteDB.Core.Event.DataMergeEventArgs<T>>|Fired after a merge has occurred|
+|Merging|System.EventHandler&lt;SanteDB.Core.Event.DataMergingEventArgs&lt;T>>|Fired prior to a merge occurring|
+|Merged|System.EventHandler&lt;SanteDB.Core.Event.DataMergeEventArgs&lt;T>>|Fired after a merge has occurred|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetDuplicates|System.Collections.Generic.IEnumerable&lt;T>|masterKey <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the duplicates for the specified master record|
+|GetIgnored|System.Collections.Generic.IEnumerable&lt;T>|masterKey <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the ignore list for the specified master record|
+|Ignore|T|masterKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>falsePositives <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small>|Indicates that the engine should ignore the specified false positives|
+|UnIgnore|T|masterKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>ignoredKeys <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small>|Indicates that an ignored record should be removed from the ignore list|
+|Merge|T|masterKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>linkedDuplicates <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<System.Guid></small>|Merges the specified  into|
+|Unmerge|T|masterKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>unmergeDuplicateKey <small style='border:solid 1px #aaa'>System.Guid</small>|Un-merges the specified  from|
+|Diff|SanteDB.Core.Model.Patch.Patch|masterKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>linkedDuplicateKey <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the differences between the master and the linked duplicate|
+|FlagDuplicates|void|configurationName <small style='border:solid 1px #aaa'>System.String</small>|Clears all candidates and re-runs the specified  for the entire database|
+|FlagDuplicates|T|key <small style='border:solid 1px #aaa'>System.Guid</small><br/>configurationName <small style='border:solid 1px #aaa'>System.String</small>|Clears all candidates and re-runs the specified  for the entire database|
 
 ## Implementations
 

@@ -12,9 +12,14 @@ BI Render service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Render|System.IO.Stream|reportId <small style='border:solid 1px #aaa'>System.String</small><br/>viewName <small style='border:solid 1px #aaa'>System.String</small><br/>formatName <small style='border:solid 1px #aaa'>System.String</small><br/>parameters <small style='border:solid 1px #aaa'>System.Collections.Generic.IDictionary<System.String,System.Object></small><br/>mimeType <small style='border:solid 1px #aaa'>System.String&</small>|Render the specified report|
 
 ## Implementations
 

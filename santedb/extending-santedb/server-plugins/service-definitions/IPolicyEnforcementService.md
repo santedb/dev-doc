@@ -12,9 +12,15 @@ Represents a PEP that receives demands
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Demand|void|policyId <small style='border:solid 1px #aaa'>System.String</small>|Demand access to the policy|
+|Demand|void|policyId <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Demand access to the policy|
 
 ## Implementations
 

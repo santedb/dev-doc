@@ -12,9 +12,18 @@ Represents a class which can create care plans
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Protocols|System.Collections.Generic.List&lt;SanteDB.Core.Protocol.IClinicalProtocol>|R|Gets the list of protocols which can be or should be used to create the care plans|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small>|Create a care plam|
+|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>System.Boolean</small>|Create a care plam|
+|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>System.Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>System.Collections.Generic.IDictionary<System.String,System.Object></small>|Create a care plam|
+|CreateCarePlan|SanteDB.Core.Model.Acts.CarePlan|p <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Roles.Patient</small><br/>asEncounters <small style='border:solid 1px #aaa'>System.Boolean</small><br/>parameters <small style='border:solid 1px #aaa'>System.Collections.Generic.IDictionary<System.String,System.Object></small><br/>protocols <small style='border:solid 1px #aaa'>System.Guid[]</small>|Create a care plam|
 
 ## Implementations
 

@@ -12,9 +12,15 @@ Represents a repository service for managing assigning authorities.
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Get|SanteDB.Core.Model.DataTypes.AssigningAuthority|domain <small style='border:solid 1px #aaa'>System.String</small>|Get by domain|
+|Get|SanteDB.Core.Model.DataTypes.AssigningAuthority|uri <small style='border:solid 1px #aaa'>System.Uri</small>|Get by domain|
 
 ## Implementations
 

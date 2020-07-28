@@ -9,14 +9,23 @@ Represents an alerting service.
 
 |Event|Type|Description|
 |-|-|-|
-|Committed|System.EventHandler<SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert is received.|
-|Received|System.EventHandler<SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
+|Committed|System.EventHandler&lt;SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert is received.|
+|Received|System.EventHandler&lt;SanteDB.Core.Mail.MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Broadcast|void|message <small style='border:solid 1px #aaa'>SanteDB.Core.Mail.MailMessage</small>|Broadcasts an alert.|
+|Find|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Mail.MailMessage>|predicate <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<SanteDB.Core.Mail.MailMessage,System.Boolean>></small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Nullable<System.Int32></small><br/>totalCount <small style='border:solid 1px #aaa'>System.Int32&</small><br/>orderBy <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Query.ModelSort`1[[SanteDB.Core.Mail.MailMessage, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null]][]</small>|Searches for alerts.|
+|Get|SanteDB.Core.Mail.MailMessage|id <small style='border:solid 1px #aaa'>System.Guid</small>|Gets an alert.|
+|Insert|SanteDB.Core.Mail.MailMessage|message <small style='border:solid 1px #aaa'>SanteDB.Core.Mail.MailMessage</small>|Inserts an alert message.|
+|Save|SanteDB.Core.Mail.MailMessage|message <small style='border:solid 1px #aaa'>SanteDB.Core.Mail.MailMessage</small>|Saves an alert.|
 
 ## Implementations
 

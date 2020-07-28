@@ -12,9 +12,15 @@ Represents a policy decision service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetPolicyDecision|SanteDB.Core.Security.PolicyDecision|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>securable <small style='border:solid 1px #aaa'>System.Object</small>|Make a simple policy decision for a specific securable|
+|GetPolicyOutcome|SanteDB.Core.Model.Security.PolicyGrantType|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>policyId <small style='border:solid 1px #aaa'>System.String</small>|Get a policy decision outcome (i.e. make a policy decision)|
 
 ## Implementations
 

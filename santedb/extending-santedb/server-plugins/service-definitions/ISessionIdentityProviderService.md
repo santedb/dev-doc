@@ -12,9 +12,15 @@ Represents a session identity service that can provide identities
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Authenticate|System.Security.Principal.IPrincipal|session <small style='border:solid 1px #aaa'>SanteDB.Core.Security.ISession</small>|Authenticate based on session|
+|GetIdentities|System.Security.Principal.IIdentity[]|session <small style='border:solid 1px #aaa'>SanteDB.Core.Security.ISession</small>|Gets an un-authenticated principal from the specified session|
 
 ## Implementations
 

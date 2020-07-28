@@ -12,9 +12,17 @@ Represents a service that performs record matching and classification
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Block|System.Collections.Generic.IEnumerable&lt;T>|input <small style='border:solid 1px #aaa'>T</small><br/>configurationName <small style='border:solid 1px #aaa'>System.String</small>|Instructs the record matching service to perform a quick block function of records            for type  with|
+|Classify|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Services.IRecordMatchResult&lt;T>>|input <small style='border:solid 1px #aaa'>T</small><br/>blocks <small style='border:solid 1px #aaa'>System.Collections.Generic.IEnumerable<T></small><br/>configurationName <small style='border:solid 1px #aaa'>System.String</small>|Instructs the record matcher to run a detailed classification on the matching blocks in|
+|Match|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Services.IRecordMatchResult&lt;T>>|input <small style='border:solid 1px #aaa'>T</small><br/>configurationName <small style='border:solid 1px #aaa'>System.String</small>|Instructs the record matcher to run a block and match operation against|
+|Score|SanteDB.Core.Services.IRecordMatchResult&lt;T>|input <small style='border:solid 1px #aaa'>T</small><br/>query <small style='border:solid 1px #aaa'>System.Linq.Expressions.Expression<System.Func<T,System.Boolean>></small><br/>configurationName <small style='border:solid 1px #aaa'>System.String</small>|Performs a score against the specified query (how confident the match is that the  matches the|
 
 ## Implementations
 

@@ -12,9 +12,14 @@ Represents a marker class for a service implementation
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|ServiceName|System.String|R|Gets the service name|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
 
 ## Implementations
 

@@ -12,9 +12,16 @@ Represents a patch service which can calculate and apply patches
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Diff|SanteDB.Core.Model.Patch.Patch|existing <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small><br/>updated <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small><br/>ignoreProperties <small style='border:solid 1px #aaa'>System.String[]</small>|Performs a DIFF and creates the related patch which can be used to update             to|
+|Patch|SanteDB.Core.Model.IdentifiedData|patch <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Patch.Patch</small><br/>data <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small><br/>force <small style='border:solid 1px #aaa'>System.Boolean</small>|Apples the specified  onto  returning the updated object|
+|Test|System.Boolean|patch <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Patch.Patch</small><br/>target <small style='border:solid 1px #aaa'>SanteDB.Core.Model.IdentifiedData</small>|Tests that the patch can be applied on the specified object|
 
 ## Implementations
 

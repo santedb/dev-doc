@@ -9,14 +9,22 @@ Represents a service which is responsible for the storage and retrieval of sessi
 
 |Event|Type|Description|
 |-|-|-|
-|Established|System.EventHandler<SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has established|
-|Abandoned|System.EventHandler<SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has ended by the user's decision|
+|Established|System.EventHandler&lt;SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has established|
+|Abandoned|System.EventHandler&lt;SanteDB.Core.Services.SessionEstablishedEventArgs>|Fired when the session provider service has ended by the user's decision|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Establish|SanteDB.Core.Security.ISession|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>remoteEp <small style='border:solid 1px #aaa'>System.String</small><br/>isOverride <small style='border:solid 1px #aaa'>System.Boolean</small><br/>purpose <small style='border:solid 1px #aaa'>System.String</small><br/>scope <small style='border:solid 1px #aaa'>System.String[]</small><br/>lang <small style='border:solid 1px #aaa'>System.String</small>|Establishes a session for the specified principal|
+|Get|SanteDB.Core.Security.ISession|sessionToken <small style='border:solid 1px #aaa'>System.Byte[]</small><br/>allowExpired <small style='border:solid 1px #aaa'>System.Boolean</small>|Authenticates the session identifier as evidence of session|
+|Extend|SanteDB.Core.Security.ISession|refreshToken <small style='border:solid 1px #aaa'>System.Byte[]</small>|Extend the session with the specified refresh token|
+|Abandon|void|session <small style='border:solid 1px #aaa'>SanteDB.Core.Security.ISession</small>|Abandons the session|
 
 ## Implementations
 

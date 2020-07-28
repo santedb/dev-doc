@@ -12,9 +12,19 @@ Represents a contract for a policy information service
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetActivePolicies|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Security.IPolicyInstance>|securable <small style='border:solid 1px #aaa'>System.Object</small>|Get active policies for the specified securable type|
+|GetPolicies|System.Collections.Generic.IEnumerable&lt;SanteDB.Core.Security.IPolicy>||TODO|
+|GetPolicy|SanteDB.Core.Security.IPolicy|policyOid <small style='border:solid 1px #aaa'>System.String</small>|Get a specific policy|
+|AddPolicies|void|securable <small style='border:solid 1px #aaa'>System.Object</small><br/>rule <small style='border:solid 1px #aaa'>SanteDB.Core.Model.Security.PolicyGrantType</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>policyOids <small style='border:solid 1px #aaa'>System.String[]</small>|Adds the specified policies to the specified securable object|
+|GetPolicyInstance|SanteDB.Core.Security.IPolicyInstance|securable <small style='border:solid 1px #aaa'>System.Object</small><br/>policyOid <small style='border:solid 1px #aaa'>System.String</small>|Gets the policy instance for the specified object|
+|RemovePolicies|void|securable <small style='border:solid 1px #aaa'>System.Object</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>oid <small style='border:solid 1px #aaa'>System.String[]</small>|Removes the specified policies from the user account|
 
 ## Implementations
 

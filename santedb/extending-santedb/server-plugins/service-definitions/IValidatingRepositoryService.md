@@ -12,9 +12,14 @@ Represents a repository that can validate
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Validate|TModel|data <small style='border:solid 1px #aaa'>TModel</small>|Validates the supplied data and returns a valid copy (or) throws an appropriate exception|
 
 ## Implementations
 

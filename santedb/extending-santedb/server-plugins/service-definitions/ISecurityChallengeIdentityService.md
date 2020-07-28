@@ -9,14 +9,19 @@ Represents a security challenge service which can provide identity
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
-|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
+|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
+|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Authenticate|System.Security.Principal.IPrincipal|userName <small style='border:solid 1px #aaa'>System.String</small><br/>challengeKey <small style='border:solid 1px #aaa'>System.Guid</small><br/>response <small style='border:solid 1px #aaa'>System.String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>System.String</small>|Authenticates the specified user with a challenge key and response|
 
 ## Implementations
 

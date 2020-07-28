@@ -9,14 +9,30 @@ Identity provider service
 
 |Event|Type|Description|
 |-|-|-|
-|Authenticating|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
-|Authenticated|System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
+|Authenticating|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatingEventArgs>|Fired prior to an authentication event|
+|Authenticated|System.EventHandler&lt;SanteDB.Core.Security.Services.AuthenticatedEventArgs>|Fired after an authentication decision being made|
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GetIdentity|System.Security.Principal.IIdentity|userName <small style='border:solid 1px #aaa'>System.String</small>|Retrieves an identity from the object|
+|GetIdentity|System.Security.Principal.IIdentity|sid <small style='border:solid 1px #aaa'>System.Guid</small>|Retrieves an identity from the object|
+|CreateIdentity|System.Security.Principal.IIdentity|userName <small style='border:solid 1px #aaa'>System.String</small><br/>password <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Create a basic identity in the provider|
+|Authenticate|System.Security.Principal.IPrincipal|userName <small style='border:solid 1px #aaa'>System.String</small><br/>password <small style='border:solid 1px #aaa'>System.String</small>|Authenticate the user creating an identity|
+|Authenticate|System.Security.Principal.IPrincipal|userName <small style='border:solid 1px #aaa'>System.String</small><br/>password <small style='border:solid 1px #aaa'>System.String</small><br/>tfaSecret <small style='border:solid 1px #aaa'>System.String</small>|Authenticate the user creating an identity|
+|ReAuthenticate|System.Security.Principal.IPrincipal|principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Perform a re-authentication of the principal|
+|ChangePassword|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>newPassword <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Change user password|
+|GenerateTfaSecret|System.String|userName <small style='border:solid 1px #aaa'>System.String</small>|Set the user's two factor authentication secret|
+|DeleteIdentity|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Delete an identity|
+|SetLockout|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>lockout <small style='border:solid 1px #aaa'>System.Boolean</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Set lockout|
+|AddClaim|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>claim <small style='border:solid 1px #aaa'>SanteDB.Core.Security.Claims.IClaim</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small><br/>expiriy <small style='border:solid 1px #aaa'>System.Nullable<System.TimeSpan></small>|Adds a claim to the specified user account|
+|RemoveClaim|void|userName <small style='border:solid 1px #aaa'>System.String</small><br/>claimType <small style='border:solid 1px #aaa'>System.String</small><br/>principal <small style='border:solid 1px #aaa'>System.Security.Principal.IPrincipal</small>|Removes a claim from the specified user account|
 
 ## Implementations
 

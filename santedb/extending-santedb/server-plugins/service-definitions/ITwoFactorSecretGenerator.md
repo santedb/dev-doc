@@ -12,9 +12,16 @@ Identifies a class which can generate TFA secrets
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Name|System.String|R|Gets the name of the TFA generator|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|GenerateTfaSecret|System.String||TODO|
+|Validate|System.Boolean|secret <small style='border:solid 1px #aaa'>System.String</small>|Validates the secret|
 
 ## Implementations
 

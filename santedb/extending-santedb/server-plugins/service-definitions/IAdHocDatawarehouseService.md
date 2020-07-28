@@ -13,9 +13,28 @@ Represents a simple data warehousing service which allows business rules to stas
 
 ## Properties
 
+|Property|Type|Access|Description|
+|-|-|-|-|
+|DataProvider|System.String|R|Gets the provider mnemonic|
 
-## Methods
+## Operations
 
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|CreateDatamart|SanteDB.Core.Model.Warehouse.DatamartDefinition|name <small style='border:solid 1px #aaa'>System.String</small><br/>schema <small style='border:solid 1px #aaa'>System.Object</small>|Creates an ad-hoc datamart which is not based on an ETL process, rather created            by a trigger.|
+|GetDatamarts|System.Collections.Generic.List&lt;SanteDB.Core.Model.Warehouse.DatamartDefinition>||TODO|
+|GetDatamart|SanteDB.Core.Model.Warehouse.DatamartDefinition|name <small style='border:solid 1px #aaa'>System.String</small>|Gets the specified datamart|
+|GetDatamart|SanteDB.Core.Model.Warehouse.DatamartDefinition|id <small style='border:solid 1px #aaa'>System.Guid</small>|Gets the specified datamart|
+|DeleteDatamart|void|datamartId <small style='border:solid 1px #aaa'>System.Guid</small>|Deletes a datamart|
+|Truncate|void|datamartId <small style='border:solid 1px #aaa'>System.Guid</small>|Truncates (drops all data) the specified data mart|
+|Get|System.Object|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>tupleId <small style='border:solid 1px #aaa'>System.Guid</small>|Gets data from an ad-hoc data mart|
+|AdhocQuery|System.Collections.Generic.IEnumerable&lt;System.Object>|queryText <small style='border:solid 1px #aaa'>System.String</small>|Executes the specified query|
+|AdhocQuery|System.Collections.Generic.IEnumerable&lt;System.Object>|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>filterParameters <small style='border:solid 1px #aaa'>System.Object</small>|Executes the specified query|
+|AdhocQuery|System.Collections.Generic.IEnumerable&lt;System.Object>|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>filterParameters <small style='border:solid 1px #aaa'>System.Object</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Int32</small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small>|Executes the specified query|
+|CreateStoredQuery|SanteDB.Core.Model.Warehouse.DatamartStoredQuery|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>queryDefinition <small style='border:solid 1px #aaa'>System.Object</small>|Create the specified stored query on the warehouse provider|
+|StoredQuery|System.Collections.Generic.IEnumerable&lt;System.Object>|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>queryId <small style='border:solid 1px #aaa'>System.String</small><br/>queryParameters <small style='border:solid 1px #aaa'>System.Object</small><br/>offset <small style='border:solid 1px #aaa'>System.Int32</small><br/>count <small style='border:solid 1px #aaa'>System.Int32</small><br/>totalResults <small style='border:solid 1px #aaa'>System.Int32&</small>|Executes a predefined query against a datamart|
+|Add|System.Guid|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>obj <small style='border:solid 1px #aaa'>System.Object</small>|Adds the specified object to the specified datamart returning the tupleId|
+|Delete|void|datamartId <small style='border:solid 1px #aaa'>System.Guid</small><br/>matchingQuery <small style='border:solid 1px #aaa'>System.Object</small>|Delete a tuple from the datamart|
 
 ## Implementations
 
