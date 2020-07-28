@@ -21,3 +21,24 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyAdhocCacheService : SanteDB.Core.Services.IAdhocCacheService { 
+	public String ServiceName => "My own IAdhocCacheService service";
+	/// <summary>
+	/// Add the specified object to the cache
+	/// </summary>
+	public void Add<T>(System.String key,T value,System.Nullable<System.TimeSpan> timeout){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets the specified object from the cache
+	/// </summary>
+	public T Get<T>(System.String key){
+		throw new System.NotImplementedException();
+	}
+}
+```

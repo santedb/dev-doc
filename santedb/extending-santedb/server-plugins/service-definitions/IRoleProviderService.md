@@ -21,3 +21,60 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security.Services;
+/// Other usings here
+public class MyRoleProviderService : SanteDB.Core.Security.Services.IRoleProviderService { 
+	public String ServiceName => "My own IRoleProviderService service";
+	/// <summary>
+	/// Creates a role
+	/// </summary>
+	public void CreateRole(System.String roleName,System.Security.Principal.IPrincipal principal){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Add users to roles
+	/// </summary>
+	public void AddUsersToRoles(System.String[] users,System.String[] roles,System.Security.Principal.IPrincipal principal){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Remove users from specified roles
+	/// </summary>
+	public void RemoveUsersFromRoles(System.String[] users,System.String[] roles,System.Security.Principal.IPrincipal principal){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Find all users in a specified role
+	/// </summary>
+	public System.String[] FindUsersInRole(System.String role){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get all roles
+	/// </summary>
+	public System.String[] GetAllRoles(){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get all roles
+	/// </summary>
+	public System.String[] GetAllRoles(System.String userName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// User user in the specified role
+	/// </summary>
+	public System.Boolean IsUserInRole(System.String userName,System.String roleName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// User user in the specified role
+	/// </summary>
+	public System.Boolean IsUserInRole(System.Security.Principal.IPrincipal principal,System.String roleName){
+		throw new System.NotImplementedException();
+	}
+}
+```

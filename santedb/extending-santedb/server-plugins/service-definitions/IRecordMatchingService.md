@@ -35,3 +35,36 @@ Represents a probabalistic record matching service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyRecordMatchingService : SanteDB.Core.Services.IRecordMatchingService { 
+	public String ServiceName => "My own IRecordMatchingService service";
+	/// <summary>
+	/// Instructs the record matching service to perform a quick block function of records            for type  with
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<T> Block<T>(T input,System.String configurationName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Instructs the record matcher to run a detailed classification on the matching blocks in
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<SanteDB.Core.Services.IRecordMatchResult<T>> Classify<T>(T input,System.Collections.Generic.IEnumerable<T> blocks,System.String configurationName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Instructs the record matcher to run a block and match operation against
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<SanteDB.Core.Services.IRecordMatchResult<T>> Match<T>(T input,System.String configurationName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Performs a score against the specified query (how confident the match is that the  matches the
+	/// </summary>
+	public SanteDB.Core.Services.IRecordMatchResult<T> Score<T>(T input,System.Linq.Expressions.Expression<System.Func<T,System.Boolean>> query,System.String configurationName){
+		throw new System.NotImplementedException();
+	}
+}
+```

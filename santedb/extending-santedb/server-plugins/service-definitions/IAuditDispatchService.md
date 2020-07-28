@@ -21,3 +21,18 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyAuditDispatchService : SanteDB.Core.Services.IAuditDispatchService { 
+	public String ServiceName => "My own IAuditDispatchService service";
+	/// <summary>
+	/// Sends the audit to the central authority
+	/// </summary>
+	public void SendAudit(SanteDB.Core.Auditing.AuditData audit){
+		throw new System.NotImplementedException();
+	}
+}
+```

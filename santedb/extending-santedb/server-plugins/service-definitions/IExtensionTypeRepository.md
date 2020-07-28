@@ -21,3 +21,18 @@ Local extension types
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyExtensionTypeRepository : SanteDB.Core.Services.IExtensionTypeRepository { 
+	public String ServiceName => "My own IExtensionTypeRepository service";
+	/// <summary>
+	/// Get the xtension type my its url
+	/// </summary>
+	public SanteDB.Core.Model.DataTypes.ExtensionType Get(System.Uri uri){
+		throw new System.NotImplementedException();
+	}
+}
+```

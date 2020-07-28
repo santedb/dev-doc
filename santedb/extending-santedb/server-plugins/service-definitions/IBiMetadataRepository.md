@@ -35,3 +35,36 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.BI.Services;
+/// Other usings here
+public class MyBiMetadataRepository : SanteDB.BI.Services.IBiMetadataRepository { 
+	public String ServiceName => "My own IBiMetadataRepository service";
+	/// <summary>
+	/// Query metadata repository for
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<TBisDefinition> Query<TBisDefinition>(System.Linq.Expressions.Expression<System.Func<TBisDefinition,System.Boolean>> filter,System.Int32 offset,System.Nullable<System.Int32> count){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get the specified BI definition by identifier
+	/// </summary>
+	public TBisDefinition Get<TBisDefinition>(System.String id){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Removes the specified BI definition from the repository
+	/// </summary>
+	public void Remove<TBisDefinition>(System.String id){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Inserts the specified BI definition into the repository
+	/// </summary>
+	public TBisDefinition Insert<TBisDefinition>(TBisDefinition metadata){
+		throw new System.NotImplementedException();
+	}
+}
+```

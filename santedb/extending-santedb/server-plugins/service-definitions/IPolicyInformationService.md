@@ -21,3 +21,45 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security.Services;
+/// Other usings here
+public class MyPolicyInformationService : SanteDB.Core.Security.Services.IPolicyInformationService { 
+	public String ServiceName => "My own IPolicyInformationService service";
+	/// <summary>
+	/// Get active policies for the specified securable type
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<SanteDB.Core.Security.IPolicyInstance> GetActivePolicies(System.Object securable){
+		throw new System.NotImplementedException();
+	}
+	public System.Collections.Generic.IEnumerable<SanteDB.Core.Security.IPolicy> GetPolicies(){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get a specific policy
+	/// </summary>
+	public SanteDB.Core.Security.IPolicy GetPolicy(System.String policyOid){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Adds the specified policies to the specified securable object
+	/// </summary>
+	public void AddPolicies(System.Object securable,SanteDB.Core.Model.Security.PolicyGrantType rule,System.Security.Principal.IPrincipal principal,System.String[] policyOids){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets the policy instance for the specified object
+	/// </summary>
+	public SanteDB.Core.Security.IPolicyInstance GetPolicyInstance(System.Object securable,System.String policyOid){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Removes the specified policies from the user account
+	/// </summary>
+	public void RemovePolicies(System.Object securable,System.Security.Principal.IPrincipal principal,System.String[] oid){
+		throw new System.NotImplementedException();
+	}
+}
+```

@@ -455,3 +455,40 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyDaemonService : SanteDB.Core.Services.IDaemonService { 
+	public String ServiceName => "My own IDaemonService service";
+	/// <summary>
+	/// Fired when the daemon is starting
+	/// </summary>
+	public event System.EventHandler Starting;
+	/// <summary>
+	/// Fired when the daemon is started
+	/// </summary>
+	public event System.EventHandler Started;
+	/// <summary>
+	/// Fired when the daemon is stopping
+	/// </summary>
+	public event System.EventHandler Stopping;
+	/// <summary>
+	/// Fired when the daemon has stopped
+	/// </summary>
+	public event System.EventHandler Stopped;
+	/// <summary>
+	/// True when daemon is running
+	/// </summary>
+	public System.Boolean IsRunning {
+		get;
+	}
+	public System.Boolean Start(){
+		throw new System.NotImplementedException();
+	}
+	public System.Boolean Stop(){
+		throw new System.NotImplementedException();
+	}
+}
+```

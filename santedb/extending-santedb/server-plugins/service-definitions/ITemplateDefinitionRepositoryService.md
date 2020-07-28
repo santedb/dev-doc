@@ -22,3 +22,18 @@ Represents a local metadata repository service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyTemplateDefinitionRepositoryService : SanteDB.Core.Services.ITemplateDefinitionRepositoryService { 
+	public String ServiceName => "My own ITemplateDefinitionRepositoryService service";
+	/// <summary>
+	/// Get tempate definition
+	/// </summary>
+	public SanteDB.Core.Model.DataTypes.TemplateDefinition GetTemplateDefinition(System.String mnemonic){
+		throw new System.NotImplementedException();
+	}
+}
+```

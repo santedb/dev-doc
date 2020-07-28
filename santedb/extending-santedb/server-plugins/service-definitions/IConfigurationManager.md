@@ -49,3 +49,42 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyConfigurationManager : SanteDB.Core.Services.IConfigurationManager { 
+	public String ServiceName => "My own IConfigurationManager service";
+	/// <summary>
+	/// Get the configuration object
+	/// </summary>
+	public SanteDB.Core.Configuration.SanteDBConfiguration Configuration {
+		get;
+	}
+	public T GetSection<T>(){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets the specified application setting
+	/// </summary>
+	public System.String GetAppSetting(System.String key){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get the specified connection string
+	/// </summary>
+	public SanteDB.Core.Configuration.Data.ConnectionString GetConnectionString(System.String key){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Set the specified application setting
+	/// </summary>
+	public void SetAppSetting(System.String key,System.String value){
+		throw new System.NotImplementedException();
+	}
+	public void Reload(){
+		throw new System.NotImplementedException();
+	}
+}
+```

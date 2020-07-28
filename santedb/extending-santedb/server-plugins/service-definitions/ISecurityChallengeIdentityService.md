@@ -21,3 +21,26 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security;
+/// Other usings here
+public class MySecurityChallengeIdentityService : SanteDB.Core.Security.ISecurityChallengeIdentityService { 
+	public String ServiceName => "My own ISecurityChallengeIdentityService service";
+	/// <summary>
+	/// Fired prior to an authentication event
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatingEventArgs> Authenticating;
+	/// <summary>
+	/// Fired after an authentication decision being made
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Security.Services.AuthenticatedEventArgs> Authenticated;
+	/// <summary>
+	/// Authenticates the specified user with a challenge key and response
+	/// </summary>
+	public System.Security.Principal.IPrincipal Authenticate(System.String userName,System.Guid challengeKey,System.String response,System.String tfaSecret){
+		throw new System.NotImplementedException();
+	}
+}
+```

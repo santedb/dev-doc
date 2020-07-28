@@ -21,3 +21,24 @@ Represents a repository service for managing assigning authorities.
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyAssigningAuthorityRepositoryService : SanteDB.Core.Services.IAssigningAuthorityRepositoryService { 
+	public String ServiceName => "My own IAssigningAuthorityRepositoryService service";
+	/// <summary>
+	/// Get by domain
+	/// </summary>
+	public SanteDB.Core.Model.DataTypes.AssigningAuthority Get(System.String domain){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get by domain
+	/// </summary>
+	public SanteDB.Core.Model.DataTypes.AssigningAuthority Get(System.Uri uri){
+		throw new System.NotImplementedException();
+	}
+}
+```

@@ -63,3 +63,18 @@ Plaintext password generator service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security.Services;
+/// Other usings here
+public class MyPasswordHashingService : SanteDB.Core.Security.Services.IPasswordHashingService { 
+	public String ServiceName => "My own IPasswordHashingService service";
+	/// <summary>
+	/// Compute the password hash
+	/// </summary>
+	public System.String ComputeHash(System.String password){
+		throw new System.NotImplementedException();
+	}
+}
+```

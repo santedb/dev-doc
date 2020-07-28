@@ -35,3 +35,24 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security.Services;
+/// Other usings here
+public class MyPolicyEnforcementService : SanteDB.Core.Security.Services.IPolicyEnforcementService { 
+	public String ServiceName => "My own IPolicyEnforcementService service";
+	/// <summary>
+	/// Demand access to the policy
+	/// </summary>
+	public void Demand(System.String policyId){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Demand access to the policy
+	/// </summary>
+	public void Demand(System.String policyId,System.Security.Principal.IPrincipal principal){
+		throw new System.NotImplementedException();
+	}
+}
+```

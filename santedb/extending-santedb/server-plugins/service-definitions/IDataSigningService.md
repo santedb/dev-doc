@@ -21,3 +21,30 @@ Default data signature service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security;
+/// Other usings here
+public class MyDataSigningService : SanteDB.Core.Security.IDataSigningService { 
+	public String ServiceName => "My own IDataSigningService service";
+	/// <summary>
+	/// Get the siganture algorithm this service would use to sign w/the specified key
+	/// </summary>
+	public System.String GetSignatureAlgorithm(System.String keyId){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Signs the specified data using the service's configured signing key
+	/// </summary>
+	public System.Byte[] SignData(System.Byte[] data,System.String keyId){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Verifies the digital signature of the data
+	/// </summary>
+	public System.Boolean Verify(System.Byte[] data,System.Byte[] signature,System.String keyId){
+		throw new System.NotImplementedException();
+	}
+}
+```

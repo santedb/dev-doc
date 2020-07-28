@@ -23,3 +23,24 @@ Local patient repository service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyPatientRepositoryService : SanteDB.Core.Services.IPatientRepositoryService { 
+	public String ServiceName => "My own IPatientRepositoryService service";
+	/// <summary>
+	/// Merges two patients together
+	/// </summary>
+	public SanteDB.Core.Model.Roles.Patient Merge(SanteDB.Core.Model.Roles.Patient survivor,SanteDB.Core.Model.Roles.Patient victim){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Un-merges two patients from each other
+	/// </summary>
+	public SanteDB.Core.Model.Roles.Patient UnMerge(SanteDB.Core.Model.Roles.Patient patient,System.Guid versionKey){
+		throw new System.NotImplementedException();
+	}
+}
+```

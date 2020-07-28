@@ -21,3 +21,18 @@ Tag persistence service for act
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyTagPersistenceService : SanteDB.Core.Services.ITagPersistenceService { 
+	public String ServiceName => "My own ITagPersistenceService service";
+	/// <summary>
+	/// Save tag to source key
+	/// </summary>
+	public void Save(System.Guid sourceKey,SanteDB.Core.Model.Interfaces.ITag tag){
+		throw new System.NotImplementedException();
+	}
+}
+```

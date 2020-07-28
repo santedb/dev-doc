@@ -36,3 +36,57 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyDataCachingService : SanteDB.Core.Services.IDataCachingService { 
+	public String ServiceName => "My own IDataCachingService service";
+	/// <summary>
+	/// Item was added to cache
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs> Added;
+	/// <summary>
+	/// Item was updated from cache
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs> Updated;
+	/// <summary>
+	/// Item was removed from cache
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Services.DataCacheEventArgs> Removed;
+	/// <summary>
+	/// Gets the current size of the cache
+	/// </summary>
+	public System.Int64 Size {
+		get;
+	}
+	/// <summary>
+	/// Get the specified cache item
+	/// </summary>
+	public TData GetCacheItem<TData>(System.Guid key){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets the specified cache item
+	/// </summary>
+	public System.Object GetCacheItem(System.Guid key){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Adds the specified item to the cache
+	/// </summary>
+	public void Add(SanteDB.Core.Model.IdentifiedData data){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Removes an object from the cache
+	/// </summary>
+	public void Remove(System.Guid key){
+		throw new System.NotImplementedException();
+	}
+	public void Clear(){
+		throw new System.NotImplementedException();
+	}
+}
+```

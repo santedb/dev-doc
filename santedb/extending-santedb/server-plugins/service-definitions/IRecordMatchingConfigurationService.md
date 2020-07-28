@@ -49,3 +49,30 @@ File based match configuration provider
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyRecordMatchingConfigurationService : SanteDB.Core.Services.IRecordMatchingConfigurationService { 
+	public String ServiceName => "My own IRecordMatchingConfigurationService service";
+	/// <summary>
+	/// Gets the names of configurations in this provider
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<System.String> Configurations {
+		get;
+	}
+	/// <summary>
+	/// Get the specified named configuration
+	/// </summary>
+	public SanteDB.Core.Services.IRecordMatchingConfiguration GetConfiguration(System.String name){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Saves the specified configuration to the configuration service
+	/// </summary>
+	public SanteDB.Core.Services.IRecordMatchingConfiguration SaveConfiguration(SanteDB.Core.Services.IRecordMatchingConfiguration configuration){
+		throw new System.NotImplementedException();
+	}
+}
+```

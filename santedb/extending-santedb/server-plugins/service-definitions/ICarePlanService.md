@@ -22,3 +22,42 @@ Represents a care plan service that can bundle protocol acts together
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyCarePlanService : SanteDB.Core.Services.ICarePlanService { 
+	public String ServiceName => "My own ICarePlanService service";
+	/// <summary>
+	/// Gets the list of protocols which can be or should be used to create the care plans
+	/// </summary>
+	public System.Collections.Generic.List<SanteDB.Core.Protocol.IClinicalProtocol> Protocols {
+		get;
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p,System.Boolean asEncounters){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p,System.Boolean asEncounters,System.Collections.Generic.IDictionary<System.String,System.Object> parameters){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public SanteDB.Core.Model.Acts.CarePlan CreateCarePlan(SanteDB.Core.Model.Roles.Patient p,System.Boolean asEncounters,System.Collections.Generic.IDictionary<System.String,System.Object> parameters,System.Guid[] protocols){
+		throw new System.NotImplementedException();
+	}
+}
+```

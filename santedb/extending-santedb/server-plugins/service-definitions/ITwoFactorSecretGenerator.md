@@ -21,3 +21,27 @@ Represents a TFA secret generator which uses the server's clock
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security.Services;
+/// Other usings here
+public class MyTwoFactorSecretGenerator : SanteDB.Core.Security.Services.ITwoFactorSecretGenerator { 
+	public String ServiceName => "My own ITwoFactorSecretGenerator service";
+	/// <summary>
+	/// Gets the name of the TFA generator
+	/// </summary>
+	public System.String Name {
+		get;
+	}
+	public System.String GenerateTfaSecret(){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Validates the secret
+	/// </summary>
+	public System.Boolean Validate(System.String secret){
+		throw new System.NotImplementedException();
+	}
+}
+```

@@ -22,3 +22,36 @@ Represents a thread pool which is implemented separately from the default .net
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyThreadPoolService : SanteDB.Core.Services.IThreadPoolService { 
+	public String ServiceName => "My own IThreadPoolService service";
+	/// <summary>
+	/// Queues the specified action into the worker pool
+	/// </summary>
+	public void QueueUserWorkItem(System.Action<System.Object> action){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Queues the specified action into the worker pool
+	/// </summary>
+	public void QueueUserWorkItem(System.Action<System.Object> action,System.Object parm){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Queues the specified action into the worker pool
+	/// </summary>
+	public void QueueUserWorkItem(System.TimeSpan timeout,System.Action<System.Object> action,System.Object parm){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Creates a normal thread which is not in the pool
+	/// </summary>
+	public void QueueNonPooledWorkItem(System.Action<System.Object> action,System.Object parm){
+		throw new System.NotImplementedException();
+	}
+}
+```

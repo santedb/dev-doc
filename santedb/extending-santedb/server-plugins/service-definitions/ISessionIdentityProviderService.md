@@ -21,3 +21,24 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MySessionIdentityProviderService : SanteDB.Core.Services.ISessionIdentityProviderService { 
+	public String ServiceName => "My own ISessionIdentityProviderService service";
+	/// <summary>
+	/// Authenticate based on session
+	/// </summary>
+	public System.Security.Principal.IPrincipal Authenticate(SanteDB.Core.Security.ISession session){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets an un-authenticated principal from the specified session
+	/// </summary>
+	public System.Security.Principal.IIdentity[] GetIdentities(SanteDB.Core.Security.ISession session){
+		throw new System.NotImplementedException();
+	}
+}
+```

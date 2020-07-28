@@ -21,3 +21,15 @@ Represents a generic resource repository factory
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyRepositoryServiceFactory : SanteDB.Core.Services.IRepositoryServiceFactory { 
+	public String ServiceName => "My own IRepositoryServiceFactory service";
+	public SanteDB.Core.Services.IRepositoryService<T> CreateRepository<T>(){
+		throw new System.NotImplementedException();
+	}
+}
+```

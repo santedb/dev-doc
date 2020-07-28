@@ -21,3 +21,32 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MySubscriptionExecutor : SanteDB.Core.Services.ISubscriptionExecutor { 
+	public String ServiceName => "My own ISubscriptionExecutor service";
+	/// <summary>
+	/// Occurs when queried.
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Event.QueryResultEventArgs<SanteDB.Core.Model.IdentifiedData>> Executed;
+	/// <summary>
+	/// Occurs when querying.
+	/// </summary>
+	public event System.EventHandler<SanteDB.Core.Event.QueryRequestEventArgs<SanteDB.Core.Model.IdentifiedData>> Executing;
+	/// <summary>
+	/// Executes the specified subscription mechanism
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<System.Object> Execute(System.Guid subscriptionKey,SanteDB.Core.Model.Query.NameValueCollection parameters,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Executes the specified subscription mechanism
+	/// </summary>
+	public System.Collections.Generic.IEnumerable<System.Object> Execute(SanteDB.Core.Model.Subscription.SubscriptionDefinition subscription,SanteDB.Core.Model.Query.NameValueCollection parameters,System.Int32 offset,System.Nullable<System.Int32> count,System.Int32& totalResults,System.Guid queryId){
+		throw new System.NotImplementedException();
+	}
+}
+```

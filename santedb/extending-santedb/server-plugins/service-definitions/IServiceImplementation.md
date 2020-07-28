@@ -2307,3 +2307,18 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyServiceImplementation : SanteDB.Core.Services.IServiceImplementation { 
+	public String ServiceName => "My own IServiceImplementation service";
+	/// <summary>
+	/// Gets the service name
+	/// </summary>
+	public System.String ServiceName {
+		get;
+	}
+}
+```

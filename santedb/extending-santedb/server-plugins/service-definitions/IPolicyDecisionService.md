@@ -21,3 +21,24 @@ Local policy decision service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Security.Services;
+/// Other usings here
+public class MyPolicyDecisionService : SanteDB.Core.Security.Services.IPolicyDecisionService { 
+	public String ServiceName => "My own IPolicyDecisionService service";
+	/// <summary>
+	/// Make a simple policy decision for a specific securable
+	/// </summary>
+	public SanteDB.Core.Security.PolicyDecision GetPolicyDecision(System.Security.Principal.IPrincipal principal,System.Object securable){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get a policy decision outcome (i.e. make a policy decision)
+	/// </summary>
+	public SanteDB.Core.Model.Security.PolicyGrantType GetPolicyOutcome(System.Security.Principal.IPrincipal principal,System.String policyId){
+		throw new System.NotImplementedException();
+	}
+}
+```

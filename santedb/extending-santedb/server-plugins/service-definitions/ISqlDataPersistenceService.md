@@ -21,3 +21,24 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MySqlDataPersistenceService : SanteDB.Core.Services.ISqlDataPersistenceService { 
+	public String ServiceName => "My own ISqlDataPersistenceService service";
+	/// <summary>
+	/// Text that identifies the type of database system that is running
+	/// </summary>
+	public System.String InvariantName {
+		get;
+	}
+	/// <summary>
+	/// Executes the arbitrary SQL
+	/// </summary>
+	public void ExecuteNonQuery(System.String sql){
+		throw new System.NotImplementedException();
+	}
+}
+```

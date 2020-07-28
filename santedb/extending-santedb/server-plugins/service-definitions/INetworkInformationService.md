@@ -21,3 +21,55 @@ Default network information service
 		...
 	</serviceProviders>
 ```
+## Example
+```csharp
+/// Example Implementation
+using SanteDB.Core.Services;
+/// Other usings here
+public class MyNetworkInformationService : SanteDB.Core.Services.INetworkInformationService { 
+	public String ServiceName => "My own INetworkInformationService service";
+	/// <summary>
+	/// Fired when the network status changes
+	/// </summary>
+	public event System.EventHandler NetworkStatusChanged;
+	/// <summary>
+	/// Gets whether the network is available
+	/// </summary>
+	public System.Boolean IsNetworkAvailable {
+		get;
+	}
+	/// <summary>
+	/// Gets whether the network is connected.
+	/// </summary>
+	public System.Boolean IsNetworkConnected {
+		get;
+	}
+	/// <summary>
+	/// Returns true if the network is WIFI
+	/// </summary>
+	public System.Boolean IsNetworkWifi {
+		get;
+	}
+	public System.Collections.Generic.IEnumerable<SanteDB.Core.Services.NetworkInterfaceInfo> GetInterfaces(){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Pings the specified host
+	/// </summary>
+	public System.Int64 Ping(System.String hostName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Perform a DNS lookup
+	/// </summary>
+	public System.String Nslookup(System.String address){
+		throw new System.NotImplementedException();
+	}
+	public System.String GetHostName(){
+		throw new System.NotImplementedException();
+	}
+	public System.String GetMachineName(){
+		throw new System.NotImplementedException();
+	}
+}
+```
