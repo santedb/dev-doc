@@ -15,7 +15,7 @@ Represents a query repository service which can find lean queries
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

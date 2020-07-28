@@ -27,7 +27,7 @@ Represents a local regex password validator
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security.Services;

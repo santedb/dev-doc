@@ -27,7 +27,7 @@ Tag persistence service for act
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

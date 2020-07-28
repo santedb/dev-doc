@@ -16,7 +16,7 @@ Represents a repository service wrapping an extended persistence service
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

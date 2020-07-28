@@ -27,7 +27,7 @@ Rendering service which renders reports locally
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.BI.Services;

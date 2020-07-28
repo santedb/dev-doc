@@ -37,7 +37,7 @@ Represents a care plan service that can bundle protocol acts together
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

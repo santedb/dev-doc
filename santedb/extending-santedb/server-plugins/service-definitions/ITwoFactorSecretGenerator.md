@@ -34,7 +34,7 @@ Represents a TFA secret generator which uses the server's clock
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security.Services;

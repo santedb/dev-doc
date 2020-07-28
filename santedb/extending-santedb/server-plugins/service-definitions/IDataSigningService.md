@@ -29,7 +29,7 @@ Default data signature service
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security;

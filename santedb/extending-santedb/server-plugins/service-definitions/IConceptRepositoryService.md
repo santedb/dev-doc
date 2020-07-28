@@ -36,7 +36,7 @@ Represents a service which is responsible for the
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

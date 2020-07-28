@@ -29,7 +29,7 @@ Represents a simple patch service which can calculate patches and apply them
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

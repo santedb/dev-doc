@@ -9,7 +9,7 @@ Represents an implementation of a repository which loads subscription definition
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

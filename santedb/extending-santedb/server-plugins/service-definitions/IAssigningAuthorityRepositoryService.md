@@ -28,7 +28,7 @@ Represents a repository service for managing assigning authorities.
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

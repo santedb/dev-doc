@@ -31,7 +31,7 @@ Represents a thread pool which is implemented separately from the default .net
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

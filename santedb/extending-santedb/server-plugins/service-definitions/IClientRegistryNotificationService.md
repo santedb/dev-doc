@@ -17,7 +17,7 @@ Represents a client registry notification service.
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

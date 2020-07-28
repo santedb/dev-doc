@@ -24,7 +24,7 @@ Repreents a repository which notifies of changes
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

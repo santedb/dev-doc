@@ -42,7 +42,7 @@ TODO: Document this
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security.Services;

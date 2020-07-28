@@ -21,7 +21,7 @@ Represents an identity provider that allows for elevation
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security.Services;

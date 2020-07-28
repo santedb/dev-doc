@@ -42,7 +42,7 @@ Represents a security repository service that uses the direct local services
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

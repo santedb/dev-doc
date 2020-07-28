@@ -15,7 +15,7 @@ Represents a repository that can validate
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

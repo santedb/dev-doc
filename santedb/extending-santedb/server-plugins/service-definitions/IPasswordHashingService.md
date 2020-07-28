@@ -69,7 +69,7 @@ Plaintext password generator service
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security.Services;

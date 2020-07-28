@@ -15,7 +15,7 @@ Represents a barcode generator
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Api.Services;

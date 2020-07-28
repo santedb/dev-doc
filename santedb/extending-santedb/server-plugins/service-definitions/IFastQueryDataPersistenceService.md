@@ -15,7 +15,7 @@ Data persistence service lean mode
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

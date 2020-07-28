@@ -33,7 +33,7 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

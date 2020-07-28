@@ -36,7 +36,7 @@ Represents the default implementation of the timer
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Jobs;

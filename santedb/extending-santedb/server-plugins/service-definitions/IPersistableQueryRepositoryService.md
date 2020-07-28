@@ -15,7 +15,7 @@ Persistable query provider is an extensable interface which can perform a query 
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

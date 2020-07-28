@@ -30,7 +30,7 @@ Represents an audit repository which stores and queries audit data.
 		...
 	</serviceProviders>
 ```
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Security.Services;

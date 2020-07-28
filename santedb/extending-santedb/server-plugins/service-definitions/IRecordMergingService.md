@@ -30,7 +30,7 @@ Represents a service which appropriately merges / unmerges records
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;

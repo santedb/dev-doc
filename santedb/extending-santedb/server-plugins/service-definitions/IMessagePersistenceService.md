@@ -22,7 +22,7 @@ Identifies a structure for message persistence service implementations
 
 None
 
-## Example
+## Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;
