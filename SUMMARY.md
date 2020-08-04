@@ -145,6 +145,7 @@
       * [Reports](santedb/extending-santedb/business-intelligence-bi-assets/bi-asset-definitions/reports.md)
     * [BI Render Controls](santedb/extending-santedb/business-intelligence-bi-assets/bi-render-controls.md)
   * [Service APIs](santedb/extending-santedb/service-apis/README.md)
+    * [OpenID Connect](santedb/extending-santedb/service-apis/openid-connect.md)
     * [Patching](santedb/extending-santedb/service-apis/patching.md)
 * [HIE & Interoperability](santedb/hie-and-interoperability.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
