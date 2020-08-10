@@ -184,6 +184,7 @@
 ## Knowledgebase
 
 * [Knowledgebase](knowledgebase/sdb-kb/README.md)
+  * [When sending a National Scoped ID in PID-19 \(SSN\) you receive "AuthorityUuid" missing error](knowledgebase/sdb-kb/when-sending-a-national-scoped-id-in-pid-19-ssn-you-receive-authorityuuid-missing-error.md)
   * [After Installing dCDR you receive an error on SecurityUser](knowledgebase/sdb-kb/after-installing-dcdr-you-receive-an-error-on-securityuser.md)
   * [When logging into the dCDR you are immediately logged back out](knowledgebase/sdb-kb/kb016-when-logging-into-the-dcdr-you-are-immediately-logged-back-out.md)
   * [PostgreSQL connections fail with block message](knowledgebase/sdb-kb/kb008-postgresql-connections-fail-with-block-message.md)
