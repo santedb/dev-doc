@@ -184,6 +184,7 @@
 ## Knowledgebase
 
 * [Knowledgebase](knowledgebase/sdb-kb/README.md)
+  * [Upgrading Gateway to SanteDB Langley \(v2.0.30+\) from SanteDB Kelowna and earlier](knowledgebase/sdb-kb/upgrading-gateway-to-santedb-langley-v2.0.30+-from-santedb-kelowna-and-earlier.md)
   * [When sending a National Scoped ID in PID-19 \(SSN\) you receive "AuthorityUuid" missing error](knowledgebase/sdb-kb/when-sending-a-national-scoped-id-in-pid-19-ssn-you-receive-authorityuuid-missing-error.md)
   * [After Installing dCDR you receive an error on SecurityUser](knowledgebase/sdb-kb/after-installing-dcdr-you-receive-an-error-on-securityuser.md)
   * [When logging into the dCDR you are immediately logged back out](knowledgebase/sdb-kb/kb016-when-logging-into-the-dcdr-you-are-immediately-logged-back-out.md)
