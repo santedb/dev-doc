@@ -50,7 +50,7 @@ Informational versions are usually tied to milestones or date ranges. Typically 
 * Iqaluit - 1.100 - 1.119 
 * Jasper - 2.0.0 - 2.0.9 
   * Upgrade to .NET Standard and .NET Framework 4.8
-* Kelowna - 2.0.10 - 2.0.59
+* Kelowna - 2.0.10 - 2.0.29
   * Performance Enhancements to the Query Engine
   * Refactoring of IDaemonServices to IJob \(where appropriate\)
   * Storage of Data Quality Rules in Database \(instead of configuration files\)
@@ -58,13 +58,12 @@ Informational versions are usually tied to milestones or date ranges. Typically 
   * Integration of SQLite SpellFix plugin into the dCDR engine
   * Integration of OpenAPI into dCDR
   * Support for virtual resources in the PAK files
-* Langley - 2.0.60 - 2.0.99
-  * Storage of Matching Rules in Database rather than file-based storage
+* Langley - 2.0.30 - 2.0.49
   * Integration of Matching Engine \(SIM mode\) into dCDR
   * Integration of FHIR into dCDR
   * Integration of diagnostic probes UI on dashboard
   * Support OBO \(on-behalf-of\), OAU \(user auth org\) claims and full support for customizing server OpenID connect login interface.
-* Montreal - 2.0.100 - 2.0.159
+* Montreal - 2.0.50 - 2.0.069
   * Support for Razor \(CSHTML\) pages in the Applet Rendering / Packager
   * Enhancements to MDM performance \(refactor of query translation to use pure native Expression trees\)
   * BI Investigation Tooling for Query/Report authoring in panel
