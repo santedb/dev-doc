@@ -146,7 +146,11 @@
     * [BI Render Controls](santedb/extending-santedb/business-intelligence-bi-assets/bi-render-controls.md)
   * [Service APIs](santedb/extending-santedb/service-apis/README.md)
     * [OpenID Connect](santedb/extending-santedb/service-apis/openid-connect.md)
-    * [Patching](santedb/extending-santedb/service-apis/patching.md)
+    * [Business Intelligence Services \(BIS\)](santedb/extending-santedb/service-apis/business-intelligence-services-bis.md)
+    * [Administration Management Interface \(AMI\)](santedb/extending-santedb/service-apis/administration-management-interface-ami.md)
+    * [Health Data Service Interface \(HDSI\)](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/README.md)
+      * [HDSI Query Syntax](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)
+      * [Patching](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/patching.md)
 * [HIE & Interoperability](santedb/hie-and-interoperability.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
 
