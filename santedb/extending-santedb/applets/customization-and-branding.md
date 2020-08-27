@@ -8,7 +8,7 @@ You can override any textual elements in SanteDB by setting the priority on the 
 
 ```markup
 <strings lang="en">
-    <string key="ui.title" priority="1">My Custon SanteDB App</string>
+    <string key="ui.title" priority="1">My Custom SanteDB App</string>
 ```
 
 ### Overriding UI Elements

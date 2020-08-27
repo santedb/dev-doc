@@ -61,7 +61,7 @@ To create a production \(optimized\) applet:
 5. Join your SanteDB HDS server with the disconnected client
    1. Your IMS server may not start or may refuse to applets signed from third party keys. If this is the case add the thumbprint of your signing key to &lt;trustedPublishers&gt;
    2. The disconnected client may warn that the application is from an unknown publisher
-   3. Note that contents of the controller files are minified, so running `sdb-dcc --debug` will require un-minification tools to debug.
+   3. Note that contents of the controller files are minified, so running `sdb-ade` will require un-minification tools to debug.
 
 ## Publishing Your Applet
 

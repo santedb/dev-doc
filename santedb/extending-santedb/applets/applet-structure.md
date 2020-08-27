@@ -93,7 +93,7 @@ Certain plugins built into SanteDB will look for particular files to be placed i
 | :--- | :--- | :--- |
 | .ref/ | Compiler | Any folders beginning with a . are ignored. The .ref directory is typically used to store references for code-completion. |
 | bi/ | Business Intelligence | The bi definitions folder is scanned by the Business Intelligence service on startup, and BI assets are registered for use \(for reporting, creating FHIR MeasureReports, executing ad-hoc data queries, etc.\) |
-| data/ | Dataset Installer | The data folder is scanned on startup by the dataset installer and any dataset files present in this folder are installed to the server's database. |
+| dataset/ | Dataset Installer | The data folder is scanned on startup by the dataset installer and any dataset files present in this folder are installed to the server's database. |
 | model/ | View Model | The view models folder contains view model definitions which are used to deep-load data. |
 | protocols/ | Clinical Decision Support | The protocols folder is scanned by the clinical decision support engine and provides the master list of protocols to be executed by the CDSS engine. |
 | rules/ | Business Rules Engine | The rules folder is scanned by the JavaScript BRE engine. This engine is a server-side \(and client side\) ECMA5 environment. This ensures that business rules are executed in the same way on the server and client. |
