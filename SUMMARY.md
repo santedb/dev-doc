@@ -72,6 +72,8 @@
     * [JavaScript API Reference](http://santesuite.org/assets/doc/js/santedb/)
   * [.NET Plugins](santedb/extending-santedb/server-plugins/README.md)
     * [Implementing .NET Features](santedb/extending-santedb/server-plugins/implementing-.net-features/README.md)
+      * [Configuration](santedb/extending-santedb/server-plugins/implementing-.net-features/configuration.md)
+      * [Passive Services](santedb/extending-santedb/server-plugins/implementing-.net-features/passive-services.md)
       * [Daemon Services](santedb/extending-santedb/server-plugins/implementing-.net-features/daemon-services.md)
     * [Plugin Metadata](santedb/extending-santedb/server-plugins/plugin-metadata.md)
     * [Database Patching](santedb/extending-santedb/server-plugins/database-patching.md)
