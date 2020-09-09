@@ -25,6 +25,8 @@ The following parameters are supported by the applet compiler:
 | compression | Changes the compression algorithm from DEFLATE to an alternate method \(lzma, gzip, bzip2, defalte\) | --compression=lzma |
 | compose | If your manifest file is an applet solution \(a bundle of other applets\), then this command will compose the solution pak file. | --compose=mysln.xml |
 | install | Instructs the pakman tool to place the output file into its reference cache. | --install |
+| dcdr | Instructs the pakman tool to create a branded SanteDB mobile application \(APK\) and dCDR installation package \(Requires Visual Studio, Inno Setup and Xamarin\)  | --dcdr |
+| msbuild | Specifies the path to the MSBuild instance you want to use. \(By default the tool will scan your C:\Program Files\Microsoft Visual Studio\\* directory for an MSBuild executable\) | --msbuild="path" |
 
 ## **Packaging your Applet**
 
