@@ -153,7 +153,7 @@ To create a production \(optimized\) applet:
    2. The disconnected client may warn that the application is from an unknown publisher
    3. Note that contents of the controller files are minified, so running `sdb-ade` will require un-minification tools to debug.
 
-## Bundling dCDR Executables
+## Bundling Branded dCDR Assets
 
 The pakman tool can produce executable files native to the operating systems that the dCDR supports. By specifying the `--dcdr` parameter in conjunction with `--compose`, the pakman tool will produce branded assets.
 
