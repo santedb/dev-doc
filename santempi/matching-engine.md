@@ -243,3 +243,58 @@ You can also instruct the matching engine to only run or consider an attribute i
 Note: Since the property path for both attributes are the same \(address\) the scoring engine will consider these two properties related, and will execute them as pairs. For example, if a patient has both a VacationHome and a Home address this configuration will consider VacationHome as one address for both attributes and Home. If using **address.component\[State\].value and address.component\[City\].value** instead then the scoring algorithm would treat these as two different property paths.
 {% endhint %}
 
+#### Partial Scoring
+
+It is possible to apply a partial score to a match attribute. The understand why this may be beneficial, consider the match attribute configuration based on the Double-Metaphone code of a patient's name:
+
+```markup
+<attribute property="name" u="0.15" m="0.6" whenNull="ignore" required="false">
+      <assert op="eq">
+        <transform name="namepart_extract">
+          <args>
+            <string>Given</string>
+          </args>
+        </transform>
+        <transform name="dmetaphone"/>
+      </assert>
+    </attribute>
+```
+
+Under such a configuration, a patient with the name **Kimberly** may be compared to existing patients as illustrated in the table below:
+
+| Name | Gender | DOB | Address |
+| :--- | :--- | :--- | :--- |
+| Kimberleigh Smith | F | 1992-01-12 | 123 Main Street |
+| Kimberly Smith | F | 1992-01-15 | 321 Brant Street |
+| Kimber Smith | F | 1992-01-10 | 222 West Street |
+
+When evaluating a match the a attribute configuration will generate the Double Metaphone code of **KMPR** for all of these records, even though the candidate being considered doesn't match. Here it may be important to configure a partial score based on the levenshtein string difference between the original names and applying the percentage of difference to the calculated match score.
+
+```markup
+<attribute property="name" u="0.15" m="0.6" whenNull="ignore" required="false">
+      <assert op="eq">
+        <transform name="namepart_extract">
+          <args>
+            <string>Given</string>
+          </args>
+        </transform>
+        <transform name="dmetaphone"/>
+      </assert>
+      <partialWeight name="similarity">
+        <transform name="namepart_extract" source="attribute">
+          <args>
+            <string>Given</string>
+          </args>
+        </transform>
+      </partialWeight>
+</attribute>
+```
+
+Here, the matching engine would alter the given scores for each of the patients under consideration:
+
+| Name | namepart\_extract | dmetaphone | assertion | similarity | Score |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Kimberleigh Smith | Kimberleigh | KMPR | PASS | 0.429 | 42% of match score |
+| Kimberly Smith | Kimberly | KMPR | PASS | 1.0 | 100% of match score |
+| Kimber Smith | Kimber | KMPR | PASS | 0.715 | 71.5% of match score |
+
