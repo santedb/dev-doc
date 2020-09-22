@@ -119,6 +119,49 @@ Scoring is configured in the &lt;scoring&gt; section which applies to one or mor
 
 Here the configuration is instructing the matching engine to consider genderConcept of record A \(new object\) and record B \(the existing object\), and the values must exactly match.
 
+#### Handling Missing Data
+
+There can occur instances of either the inbound record or the source records from the database which are missing the specified attribute. When this is the case the attribute's `whenNull` attribute controls the behavior of the evaluation of that attribute. The behaviors are:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">@whenNull</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">match</td>
+      <td style="text-align:left">When the value is null in A or B, treat the attribute as a &quot;match&quot;
+        <br
+        />(i.e. assume the missing data matches)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nonmatch</td>
+      <td style="text-align:left">
+        <p>When the value is null in either A or B, treat the attribute as a non-match</p>
+        <p>(i.e. assume the missing data would not match)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ignore</td>
+      <td style="text-align:left">When the value is null in A or B, don&apos;t evaluate the attribute.
+        <br
+        />(i.e. neither the non-match or match scores should be considered)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">disqualify</td>
+      <td style="text-align:left">
+        <p>When the value is null in A or B disqualify the entire record from consideration</p>
+        <p>(i.e. it doesn&apos;t matter what the other attribute scores are, the
+          record is considered</p>
+        <p>not a match)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 #### Transforming Data
 
 You can instruct the matching classification stage to transform the data on record A and record B prior to evaluating an assertion. This is done with a transform, for example, if we wanted to only compare the week of birth we could use this configuration:
