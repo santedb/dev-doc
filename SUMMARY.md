@@ -158,6 +158,7 @@
       * [API Responses](santedb/extending-santedb/service-apis/administration-management-interface-ami/api-responses.md)
       * [AMI Query Syntax](santedb/extending-santedb/service-apis/administration-management-interface-ami/ami-query-syntax.md)
     * [Health Data Service Interface \(HDSI\)](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/README.md)
+      * [Digitally Signed Visual Code API](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/digitally-signed-visual-code-api.md)
       * [HTTP Request Verbs](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/http-request-verbs.md)
       * [HDSI Query Syntax](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)
       * [API Responses](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/api-responses.md)
