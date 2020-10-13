@@ -151,7 +151,15 @@ Host: demo.openiz.org:8080
 
 ### Get Resource Headers \(HEAD\)
 
-The HEAD operation 
+The HEAD operation in SanteDB executes the specified search / retrieve specified on the request, and returns only the headers for that operation. This operation is typically used where response payloads may consume bandwidth unnecessary. Examples of uses of the HEAD operation in practice in SanteDB are:
+
+* Querying the /ami/applet interface to determine if an applet has been updated
+* Querying a resource or subscription to determine the last ETag and whether the ETag matches the last downloaded ETag.
+* Querying log files to determine their last date of update
+
+{% hint style="info" %}
+Instead of executing separate HEAD and then GET operations, you can use the conditional HTTP headers which will return 304 if not modified \(and will save a roundtrip to the server\).
+{% endhint %}
 
 ### Get Resource History \(GET\)
 
@@ -163,11 +171,34 @@ The HEAD operation
 
 ### Lock Resource \(LOCK\)
 
+The HTTP LOCK operation in SanteDB is typically used to obtain an exclusive lock on an object, or to lock an object which supports lockout. When using the LOCK HTTP verb against a security resource, any access to that security resource \(such as user, device, or application\) will be prohibited.
+
+When running a LOCK operation against a regular resource on the HDSI, the principal which obtained the lock will be the only principal which is permitted to update the specified resource. This method is useful when you wish to prevent concurrent updates of a single resource. 
+
+For example, to block concurrent editing of a patient, the user interface can lock the resource:
+
+```text
+LOCK /Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+Host: demo.openiz.org:8080
+```
+
+Any attempt to perform a PUT, POST, or DELETE against the patient from an authenticated client which is not the client which obtained the lock will result in an HTTP 409 Conflict response error.
+
 ### Unlock Resource \(UNLOCK\)
+
+The HTTP UNLOCK operation in SanteDB is used to release a lock on an object, or to release an authentication lock on a security resource \(such as unlocking a user's account\). 
+
+When used on an HDSI resource, the UNLOCK operation will permit the general editing of the resource which was previously locked. 
 
 ### Get Service Parameters \(OPTIONS\)
 
 ### Ping Service Availability \(PING\)
+
+The PING operation is a non-standard HTTP verb which is used by the application layer \(on the dCDR\) to determine if the central iCDR server is available. The dCDR also uses the returned Date header to calculate the drift between its own clock and the server.
+
+The date drift functionality is implemented as widespread NTP services are sometimes not available in all environments. 
+
+The response to a PING is an HTTP 204 \(No Content\) response with general service headers such as the server version, the server time, etc.
 
 ## Associated Resources
 
