@@ -1,4 +1,4 @@
-# Digitally Signed Visual Code API
+# Visual Resource Pointer API
 
 SanteDB provides two special services which can be used to generate digitally signed visual codes. These codes can then be used by the resolution APIs to directly link to a discrete record on the SanteDB iCDR or dCDR services.
 
