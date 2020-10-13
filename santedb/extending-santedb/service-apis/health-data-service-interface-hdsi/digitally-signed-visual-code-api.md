@@ -35,6 +35,10 @@ Location: http://example.com/hdsi/Patient/{uuid}/_history/{uuid}
 
 It is expected that callers will use the HTTP GET to GET the resulting location from the iCDR or dCDR server.
 
+{% hint style="info" %}
+Visual codes will only ever resolve to a single resource. This means codes which represent multiple patients, substance administrations, locations, materials, etc. are considered invalid by the API and return a 500 error.
+{% endhint %}
+
 ## Visual Code Specification 
 
 The default visual code generator in SanteDB iCDR and dCDR is a structured QR code containing an RFC7515 payload. A sample of a resource pointer code is:
