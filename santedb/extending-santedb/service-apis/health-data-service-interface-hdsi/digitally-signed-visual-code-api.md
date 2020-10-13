@@ -66,7 +66,11 @@ The algorithm used to sign the visual code is the ALG header. The two supported 
 * HS256 -&gt; HMAC signature based on a shared secret key between the generator and the reader.
 * RS256 -&gt; Uses RSA encryption to encrypt the SHA256 generated hash of the payload. The generator uses a private key to encrypt the payload hash, whilst the reader uses a public key to decrypt and verify the hash.
 
-The algorithm header in SanteDB is dictated by the type of key used to sign the payload. SanteDB will not permit the use of any hashing algorithm. The algorithm configured for the specified KEY header must be used.
+The algorithm header in SanteDB is dictated by the type of key used to sign the payload. SanteDB will not permit the use of any hashing algorithm, the algorithm specified in the **ALG** header must match the configured algorithm for the key in the **KEY** header. 
+
+{% hint style="info" %}
+When designing your SanteDB solution, it is recommended you do not use jwsdefault key, rather, you should create your own named key and configured the JWS resource pointer to leverage that key. This allows for specifying different keys for different programmes / consumer applications.
+{% endhint %}
 
 #### TYP Header
 
