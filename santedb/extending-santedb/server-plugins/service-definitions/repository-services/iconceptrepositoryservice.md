@@ -105,3 +105,34 @@ public class MyConceptRepositoryService : SanteDB.Core.Services.IConceptReposito
 }
 ```
 
+## Usage Examples
+
+### Lookup Reference Term From Concept
+
+This example is particularly useful for those who are looking to convert an internal property \(in the example GenderConcept\) into a wire-level code system \(in the example: HL7 v2 Administrative Sex\).
+
+```csharp
+var conceptRepository = ApplicationServiceContext.Current.GetService<IConceptRepositoryService>();
+
+// Map to HL7 Gender code
+var hl7Code = conceptRepository.GetConceptReferenceTerm(patient.GenderConceptKey.GetValueOrDefault(), "1.3.6.1.4.1.33349.3.1.5.9.3.200.1");
+
+// Map to FHIR Gender Code
+var fhirCode = conceptRepository.GetConceptReferenceTerm(patient.GenderConceptKey.GetValueOrDefault(), "http://hl7.org/fhir/administrative-gender");
+```
+
+### Lookup Concept from Reference Term
+
+This example illustrates using the concept repository to translate a wire-level code from HL7 FHIR to an internal concept.
+
+```csharp
+var conceptRepository = ApplicationServiceContext.Current.GetService<IConceptRepositoryService>();
+
+// From FHIR simple coding
+var genderConcept = conceptRepository.FindConceptsByReferenceTerm(resource.Gender.Value, "http://hl7.org/fhir/administrative-gender");
+
+// From FHIR codeable concept
+var coding = resource.MaritalStatus.Coding.First();
+var marriageStatus = conceptRepository.FindConceptsByReferenceTerm(coding.Code.Value, coding.System);
+```
+

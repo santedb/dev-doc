@@ -1,6 +1,6 @@
 # Editing Identifiers
 
-Identifiers can be edited within the administrative portal if and only if:
+Identifiers can be edited within the administrative portal if :
 
 * The portal has direct authority to edit the identifier type or the identifier can be globally assigned.
 * The identifier type is scoped in a way that it can be assigned to a ROT
