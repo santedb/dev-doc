@@ -84,7 +84,7 @@ Finally, attach the business rule functions to the SanteDB triggers. The example
 
 ```javascript
 // Bind the business rules
-SanteDBBre.AddBusinessRule("PatientMaster", "BeforeInsert", { "deceasedDate": "null" }, appendPatientID);
+SanteDBBre.AddBusinessRule("elb.rule.id", "PatientMaster", "BeforeInsert", { "deceasedDate": "null" }, appendPatientID);
 ```
 
 ### Register the Identifier Generator

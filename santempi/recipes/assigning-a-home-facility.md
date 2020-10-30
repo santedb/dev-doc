@@ -60,6 +60,6 @@ function appendRegisteringFacility(patient) {
 Finally, add the business rule to the BeforeInsert method on the patient.
 
 ```javascript
-SanteDBBre.AddBusinessRule("Patient", "BeforeInsert", { "deceasedDate" : "null"}, appendRegisteringFacility);
+SanteDBBre.AddBusinessRule("elb.rule.home_fac", "Patient", "BeforeInsert", { "deceasedDate" : "null"}, appendRegisteringFacility);
 ```
 

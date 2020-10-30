@@ -47,7 +47,7 @@ Business rules are loaded from the rules/ folder of your applet. This tutorial w
 2. We need to call the SanteDBBre.AddBusinessRule\(\) function to register our rule, we're subscribing to "Patient"s.
 
    ```javascript
-   SanteDBBre.AddBusinessRule("Patient", "BeforeInsert", [], function(patient) {
+   SanteDBBre.AddBusinessRule("id", "Patient", "BeforeInsert", [], function(patient) {
 
    });
    ```
@@ -57,7 +57,7 @@ Business rules are loaded from the rules/ folder of your applet. This tutorial w
 3. Next, we want to add a tag to this patient object, this is done using the standard SanteDB JavaScript bridge functionality you write your regular applet controller code in:
 
    ```javascript
-   SanteDBBre.AddBusinessRule("Patient", "BeforeInsert", [], function(patient) {
+   SanteDBBre.AddBusinessRule("my_patient_rule", "Patient", "BeforeInsert", [], function(patient) {
 
        patient.tag = patient.tag || {};
        // ensure the rule has not been run
@@ -71,7 +71,7 @@ Business rules are loaded from the rules/ folder of your applet. This tutorial w
 4. Next, we may want to add a rule for AfterUpdate which clears this tag or sets the status to reviewed \(note: since AfterUpdate is called after the data is committed, we have to manually save. We could call SanteDB.resources.patient.saveAsync\(\) however that would result in a new version. For tagging we can use the built-in SaveTags function\)
 
    ```javascript
-    SanteDBBre.AddBusinessRule("Patient", "AfterUpdate", [], function(patient) {
+    SanteDBBre.AddBusinessRule("my_patient_rule", "Patient", "AfterUpdate", [], function(patient) {
 
         patient.tag = patient.tag || {};
 
@@ -92,7 +92,7 @@ Another operation that can be injected into the SanteDB logic is resource valida
 For example, if we want to prevent patients from being saved without a date of birth or gender, we could write a simple validator:
 
 ```javascript
-SanteDBBre.AddValidator("Patient", function(patient) {
+SanteDBBre.AddValidator("my_patient_validator", "Patient", function(patient) {
     var issues = [];
 
     if(!patient.dateOfBirth)

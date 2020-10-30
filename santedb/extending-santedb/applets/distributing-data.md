@@ -48,5 +48,17 @@ The following objects are supported on the dataset:
 * IdentifierType
 * AssigningAuthority
 
+### Generating a Dataset File
 
+You can generate a dataset from existing data in the SanteDB server by using the SanteDB Administration Console \(sdbac\) application. To do this you will use the `cdr.query` command, which is illustrated below to produce a dataset of all concepts in the FamilyMember concept set:
+
+```markup
+cdr.query -r Concept conceptSet.mnemonic=FamilyMember --dataset > output.dataset
+```
+
+You can now easily modify the existing concepts from within the dataset.
+
+{% hint style="info" %}
+You can use the user interfaces setup your data and then run the above CDR query to generate a related dataset. This makes your data portable to other SanteDB instances.
+{% endhint %}
 

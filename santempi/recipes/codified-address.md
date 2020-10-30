@@ -87,6 +87,6 @@ function appendAddress(patient) {
 Finally, add the business rule to the BeforeInsert method on the patient.
 
 ```javascript
-SanteDBBre.AddBusinessRule("Patient", "BeforeInsert", { "deceasedDate" : "null"}, appendAddress);
+SanteDBBre.AddBusinessRule("elb.rule.addr", "Patient", "BeforeInsert", { "deceasedDate" : "null"}, appendAddress);
 ```
 
