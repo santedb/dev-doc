@@ -92,5 +92,23 @@ The caching services are responsible for providing rapid access to cached object
 The object-relational-model providers are specialized classes which are used \(optionally\) by services which must directly interact with database software, however require abstraction on the persistence technology. ORM providers which exist in SanteDB include: PostgreSQL, Firebird, and SQLite, and are responsible for:
 
 * Translating object/relational LINQ queries into appropriate SQL syntax for the storage technology
-* * Postgre
+* Mapping logical keywords and operators to physical operators in SQL \(for example: .Contains\(\) becomes ILIKE in PostgreSQL but LIKE in Firebird\)
+* Committing and rolling back transactions with the database provider
+* Constructing dynamic SQL operations for result sets for order, count, etc.
+
+### Business Intelligence Services
+
+The BI services in SanteDB are responsible for interacting with the ORM providers to execute business intelligence assets \(queries, views, parameters, reports, etc.\) directly with the various connected SQL databases for the service.
+
+### Synchronization Services
+
+Synchronization services are responsible for integrating the SanteDB iCDR and dCDR with upstream services. These services:
+
+* Manage the inbound/outbound and dead letter queues for synchronizations
+* Interact with the persistence layer \(bypassing business rules which may already be executed\) directly
+* Manage the retry and conflict resolution notifications process
+
+### Additional Services
+
+SanteDB contains hundreds of service contracts for various system tasks which are not covered at a high level on this page. These services can be found on the [Service Definitions](../extending-santedb/server-plugins/service-definitions/) page.
 
