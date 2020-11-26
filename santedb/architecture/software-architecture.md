@@ -4,7 +4,7 @@ The SanteDB iCDR, dCDR and its related components are designed in a modular fash
 
 ## Service Architecture
 
-SanteDB uses the strategy pattern \([https://en.wikipedia.org/wiki/Strategy\_pattern](https://en.wikipedia.org/wiki/Strategy_pattern)\) via the IServiceProvider instance called  the ApplicationContext. The application context is responsible for loading the appropriate implementation \(or provider\) of a particular strategy \(or contract\) based on the configuration of the environment. 
+SanteDB uses the service locator pattern \([https://en.wikipedia.org/wiki/Service\_locator\_pattern](https://en.wikipedia.org/wiki/Service_locator_pattern)\) via the IServiceProvider instance called  the ApplicationContext. The application context is responsible for loading the appropriate implementation \(or provider\) of a particular strategy \(or contract\) based on the configuration of the environment. 
 
 Take, for example, the auditing which is implemented as:
 
@@ -17,6 +17,10 @@ Here, the SecretClass instance relies on the contract IRepositoryService, which 
 This means that the implementer of SecretClass doesn't need to worry about which audit service is being used, it merely executes the business function for auditing.
 
 This service pattern, and the fact the solution is implemented in .NET Standard, means that most service implementations can be used in the iCDR and dCDR environments without re-compiling.
+
+{% hint style="info" %}
+Dependency Injection from the ApplicationServiceContext is being implemented and should be available in future releases of SanteDB's core libraries.
+{% endhint %}
 
 ## Service Relationships
 
