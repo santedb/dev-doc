@@ -83,8 +83,14 @@ The data persistence services are typically the "last place" where services in S
 * Transactional control of the underlying storage technology \(commit, rollback, etc.\)
 * Managing and interacting with the caching services to reduce load on the persistence technology
 
+### Caching Services
 
+The caching services are responsible for providing rapid access to cached objects, these services \(like REDIS or Memory Caching\) reduce load on the persistence layer as they typically provide rapid, non-relational access to models in the information object.
 
+### ORM Providers
 
+The object-relational-model providers are specialized classes which are used \(optionally\) by services which must directly interact with database software, however require abstraction on the persistence technology. ORM providers which exist in SanteDB include: PostgreSQL, Firebird, and SQLite, and are responsible for:
 
-* 
+* Translating object/relational LINQ queries into appropriate SQL syntax for the storage technology
+* * Postgre
+
