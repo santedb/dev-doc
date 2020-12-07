@@ -108,4 +108,18 @@ The `Saving` and `Inserting` events of the repository service are subscribed on 
 * The instances are validated through OnPrePersistenceValidate\(\) method. Here the process ensures:
   * The caller is not attempting to update a MASTER record. If it is, the appropriate LOCAL for that principal is exchanged.
   * If the caller is attempting to create a RECORD OF TRUTH , it has appropriate permission to do so
+* The Saving\(\) and Inserting\(\) event handlers are called next. These methods:
+  * Call the matching service and attempt to establish whether the LOCAL is a candidate for an existing record
+  * Appropriately obsolete/create resource links between the objects.
+  * Cancels the caller \(i.e. overwrites the default call path\)
+  * Returns a BUNDLE which is treated as a transaction on the persistence layer.
+
+#### Data Query / Retrieval Operations
+
+When a repository's `Find()` or `Get()` methods are called the repository will call the `Retrieving` and `Querying` event handlers. The MDM resource listener for that repository will perform the following operations:
+
+* Cancel the default path of the repository
+* Re-write the HDSI expression tree to query attributes related to the ROT or a LOCAL
+
+The resource listener also subscribes to the Retrieved and Queried event handlers where any local objects which were fetched from the underlying data persistence layer are synthesized using their MASTER links \(and appropriate policies applied\).
 
