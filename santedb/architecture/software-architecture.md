@@ -6,7 +6,7 @@ The SanteDB iCDR, dCDR and its related components are designed in a modular fash
 
 The overall architecture of the SanteDB iCDR and dCDR repositories illustrated below along with some of the service classifications.
 
-![](../../.gitbook/assets/image%20%28178%29.png)
+![](../../.gitbook/assets/image%20%28183%29.png)
 
 ## Service Architecture
 
