@@ -2,6 +2,12 @@
 
 The SanteDB iCDR, dCDR and its related components are designed in a modular fashion. These modules are intended to maximize code reuse, and provide consistent services across the iCDR and dCDR environments. 
 
+## Software Component / Services
+
+The overall architecture of the SanteDB iCDR and dCDR repositories illustrated below along with some of the service classifications.
+
+![](../../.gitbook/assets/image%20%28178%29.png)
+
 ## Service Architecture
 
 SanteDB uses the service locator pattern \([https://en.wikipedia.org/wiki/Service\_locator\_pattern](https://en.wikipedia.org/wiki/Service_locator_pattern)\) via the IServiceProvider instance called  the ApplicationContext. The application context is responsible for loading the appropriate implementation \(or provider\) of a particular strategy \(or contract\) based on the configuration of the environment. 
