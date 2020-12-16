@@ -228,3 +228,47 @@ After acquiring the PFX signed by the community you can use the --sign option to
    3. Your organization is in good standing with the community.
 4. If the community reviewers are satisfied your applet meets the criteria, the community will provide a secondary signature \(SanteDB VERIFIED Signature\) to the PAK file and will upload the PAK to the SanteSuite applet store. 
 
+## Package Repositories
+
+The PakMan tool will pull solution dependencies when the --compose option is used from the following sources:
+
+* The local cache of packages 
+  * On Windows : %localappdata%\.santedb-sdk 
+  * On Unix : ~/.local/.santedb-sdk
+* Any configured external repositories in the pakman.config file
+  * On Windows : %appdata%\santedb\sdk
+  * On Unix: ~/.config/santedb/sdk
+
+Repositories can be local \(for development\) or remote \(for production\).
+
+### Repository Configuration
+
+To configure the package repository edit/create the pakman.config file in the appropriate configuration directory, for example, to configure the master repository at https://packages.santesuite.net :
+
+```markup
+<?xml version="1.0"?>
+<PakManConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://santedb.org/pakman">
+  <repositories>
+    <add>file://~/dev-repo</add>
+  	<add>https://packages.santesuite.net</add>
+  </repositories>
+</PakManConfig>
+```
+
+### Publishing to a Repository
+
+To publish to a repository you will need to obtain a publisher credential. You should then add this credential to your configuration file:
+
+```markup
+<add username="myser" password="MyPassword">https://packages.santesuite.net</add>
+```
+
+When packaging your applet you will specify the publish option:
+
+```markup
+pakman --compile --source=~/myproject --optimize --keyFile=XXXXX --embedCert
+       --output=~/myproject/.bin/myproject.pak --publish --publish-server=URL
+```
+
+This will package your application and then push the packaged application to the remote repository.
+
