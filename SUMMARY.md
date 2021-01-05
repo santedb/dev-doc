@@ -7,6 +7,7 @@
 * [About SanteDB](santedb/santedb/README.md)
   * [SanteDB Versioning](santedb/santedb/santedb-versioning.md)
   * [SanteDB History](santedb/santedb/santedb-history.md)
+  * [SanteDB Solutions](santedb/santedb/santedb-solutions.md)
 * [Architecture](santedb/architecture/README.md)
   * [Software Architecture](santedb/architecture/software-architecture.md)
   * [Data & Information Architecture](santedb/architecture/data-and-information-architecture/README.md)
