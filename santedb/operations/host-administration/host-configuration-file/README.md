@@ -57,10 +57,10 @@ At minimum, your configuration file should contain/use the following configurati
 
 ## Configuration Sections
 
-* DiagnosticsConfigurationSection
-* AppletConfigurationSection
-* ApplicationServiceContextConfigurationSection
-* DataConfigurationSection
+* [DiagnosticsConfigurationSection](diagnostics-configuration.md)
+* [AppletConfigurationSection](applet-configuration.md)
+* [ApplicationServiceContextConfigurationSection](application-service-context-configuration.md)
+* [DataConfigurationSection](data-configuration.md)
 * MemoryCacheConfigurationSection
 * RestConfigurationSection
 * ClaimsAuthorizationConfigurationSection
