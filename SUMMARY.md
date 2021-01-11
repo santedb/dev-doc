@@ -175,6 +175,9 @@
       * [API Responses](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/api-responses.md)
       * [Visual Resource Pointer API](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/digitally-signed-visual-code-api.md)
       * [Patching](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/patching.md)
+    * [Examples](santedb/extending-santedb/service-apis/examples/README.md)
+      * [Obtaining A Session](santedb/extending-santedb/service-apis/examples/obtaining-a-session.md)
+      * [Connecting to the FHIR API](santedb/extending-santedb/service-apis/examples/connecting-to-the-fhir-api.md)
 * [HIE & Interoperability](santedb/hie-and-interoperability.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
 
