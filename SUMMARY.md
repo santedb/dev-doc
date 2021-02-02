@@ -59,6 +59,7 @@
     * [Audit Repository](santedb/operations/security-administration/audit-repository.md)
 * [Extending SanteDB](santedb/extending-santedb/README.md)
   * [Applets](santedb/extending-santedb/applets/README.md)
+    * [Getting Started](santedb/extending-santedb/applets/getting-started.md)
     * [JavaScript API](santedb/extending-santedb/applets/javascript-api.md)
     * [Business Intelligence Assets](santedb/extending-santedb/applets/business-intelligence-bi-assets/README.md)
       * [BI Asset Definitions](santedb/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/README.md)
