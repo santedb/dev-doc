@@ -39,12 +39,12 @@ All extensions are in the http://santedb.org/extensions URL base.
 
 | URL | Type | Use |
 | :--- | :--- | :--- |
-| [/core/jpegPhoto](http://santedb.org/extensions/core/jpegPhoto) | Binary | Stores a JPG photograph of an entity/act |
-| [/core/originalDate](http://santedb.org/extensions/core/originalDate) | Date | Stores the original or amended date an action was supposed to occur. |
-| [/core/contactRole](http://santedb.org/extensions/core/contactRole) | Dictionary |  |
-| [/core/detectedIssu](http://santedb.org/extensions/core/detectedIssu)e | Dictionary | A structured list of business rules/data quality issues that were detected with an object. |
-| [/stock/contrib/gs1/estimatedDeliveryDate](http://santedb.org/extensions/stock/contrib/gs1/estimatedDeliveryDate) | Date | The original time \(from the sender of a GS1 message\) of estimated delivery date of an object. |
-| [/stock/contrib/gs1/shipmentDate](http://santedb.org/extensions/stock/contrib/gs1/shipmentDate) | Date | The original shipment date of an action |
+| /core/jpegPhoto | Binary | Stores a JPG photograph of an entity/act |
+| /core/originalDate | Date | Stores the original or amended date an action was supposed to occur. |
+| /core/contactRole | Dictionary |  |
+| /core/detectedIssue | Dictionary | A structured list of business rules/data quality issues that were detected with an object. |
+| /stock/contrib/gs1/estimatedDeliveryDate | Date | The original time \(from the sender of a GS1 message\) of estimated delivery date of an object. |
+| /stock/contrib/gs1/shipmentDate | Date | The original shipment date of an action |
 | /stock/contrib/gs1/packgingType | String | The type of packaging \(crate, box, etc.\) from the GS1 sender |
 
 You can register your own extensions by using the [HDSI interface](../../extending-santedb/service-apis/health-data-service-interface-hdsi/) and POSTing a new ExtensionType resource.
