@@ -27,6 +27,7 @@
         * [Class Codes](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities/class-codes.md)
         * [Data Dictionary](santedb/architecture/data-and-information-architecture/conceptual-data-model/entities/data-dictionary.md)
       * [Null Reasons](santedb/architecture/data-and-information-architecture/conceptual-data-model/null-reasons.md)
+    * [Extended Data](santedb/architecture/data-and-information-architecture/extended-data.md)
   * [Security Architecture](santedb/architecture/security-architecture.md)
   * [Data Storage Patterns](santedb/architecture/data-storage-patterns/README.md)
     * [Master Data Storage](santedb/architecture/data-storage-patterns/master-data-storage.md)
