@@ -10,7 +10,14 @@ The overall architecture of the SanteDB iCDR and dCDR repositories illustrated b
 
 ## Service Architecture
 
-SanteDB uses the service locator pattern \([https://en.wikipedia.org/wiki/Service\_locator\_pattern](https://en.wikipedia.org/wiki/Service_locator_pattern)\) via the IServiceProvider instance called  the ApplicationContext. The application context is responsible for loading the appropriate implementation \(or provider\) of a particular strategy \(or contract\) based on the configuration of the environment. 
+There are two methods of using services in SanteDB:
+
+* Service Locator Pattern \([https://en.wikipedia.org/wiki/Service\_locator\_pattern](https://en.wikipedia.org/wiki/Service_locator_pattern)\) - Whereby service instances are located at runtime
+* Dependency Injection Pattern \([https://en.wikipedia.org/wiki/Dependency\_injection](https://en.wikipedia.org/wiki/Dependency_injection)\) - Whereby services instances are injected into the class when constructed.
+
+### Service Locator Pattern
+
+SanteDB classically used the service locator pattern via the IServiceProvider instance called  the ApplicationContext. The application context is responsible for loading the appropriate implementation \(or provider\) of a particular strategy \(or contract\) based on the configuration of the environment. 
 
 Take, for example, the auditing which is implemented as:
 
@@ -24,9 +31,9 @@ This means that the implementer of SecretClass doesn't need to worry about which
 
 This service pattern, and the fact the solution is implemented in .NET Standard, means that most service implementations can be used in the iCDR and dCDR environments without re-compiling.
 
-{% hint style="info" %}
-Dependency Injection from the ApplicationServiceContext is being implemented and should be available in future releases of SanteDB's core libraries.
-{% endhint %}
+### Dependency Injection
+
+Services can also use dependency injection pattern. In this pattern, the service's constructor defines the dependent services which are required for the service implementation to function. The ApplicationContext will inject the current service implementations into the instance on construction.
 
 ## Service Relationships
 
