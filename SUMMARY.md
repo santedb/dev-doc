@@ -48,6 +48,8 @@
       * [Applet Configuration](santedb/operations/host-administration/host-configuration-file/applet-configuration.md)
       * [Diagnostics Configuration](santedb/operations/host-administration/host-configuration-file/diagnostics-configuration.md)
     * [SanteDB iCDR](santedb/operations/host-administration/santedb-icdr.md)
+    * [SanteDB iCDR Admin Console](santedb/operations/host-administration/santedb-icdr-admin-console/README.md)
+      * [User Administration](santedb/operations/host-administration/santedb-icdr-admin-console/user-administration.md)
   * [Reference Data Administration](santedb/operations/reference-data-administration.md)
   * [Concept Dictionary Administration](santedb/operations/concept-dictionary-administration.md)
   * [Security Administration](santedb/operations/security-administration/README.md)
