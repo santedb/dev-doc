@@ -1,5 +1,9 @@
 # Installing a Development / Demo Environment
 
+{% hint style="info" %}
+This process is documented on the SanteDB YouTube Channel at [https://www.youtube.com/watch?v=xhIWK8hd7KI](https://www.youtube.com/watch?v=xhIWK8hd7KI)
+{% endhint %}
+
 If you'd like to give SanteDB a try, or if you're developing plugins for SanteDB you can use the quick configuration method. The quick configuration method will install SanteDB, register relevant services, open firewall ports, and install a sample dataset for a fake country called Elbonia.
 
 {% hint style="info" %}

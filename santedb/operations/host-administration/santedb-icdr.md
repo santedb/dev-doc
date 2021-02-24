@@ -11,7 +11,7 @@ This process can be used to operate one or more IMS services.
 
 ### Configuration of Host
 
-When you install the SanteDB iCDR server, the application \(by default\) has no configuration file. The default configuration file is `santedb.config.xml` , this file can be created by running `ConfigTool.exe` \([as illustrated here](../../installation/santedb-server/configuration/#guided-configuration)\) or by copying one of the sample files. The sample configuration files are:
+When you install the SanteDB iCDR server, the application \(by default\) has no configuration file. The default configuration file is `santedb.config.xml` , this file can be created by running `ConfigTool.exe` \([as illustrated here]()\) or by copying one of the sample files. The sample configuration files are:
 
 * santedb.config.psql.xml - A basic configuration file which is setup to run with PostgreSQL server.
 * santedb.config.fbsql.xml - A basic configuration file which is designed to operate with Firebird databases \(Windows only\)
