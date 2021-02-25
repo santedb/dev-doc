@@ -38,7 +38,7 @@
   * [Disconnected Gateway](santedb/installation/disconnected-gateway/README.md)
     * [App Settings](santedb/installation/disconnected-gateway/app-settings.md)
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
-    * [Virtual Appliances]()
+    * [Virtual Appliances](santedb/installation/santedb-server/virtual-appliances.md)
     * [Installing a Development / Demo Environment](santedb/installation/santedb-server/installing-a-development-demo-environment.md)
 * [Operations](santedb/operations/README.md)
   * [Host Administration](santedb/operations/host-administration/README.md)
