@@ -40,6 +40,8 @@
   * [SanteDB Server](santedb/installation/santedb-server/README.md)
     * [Virtual Appliances](santedb/installation/santedb-server/virtual-appliances.md)
     * [Installing a Development / Demo Environment](santedb/installation/santedb-server/installing-a-development-demo-environment.md)
+  * [Installation Qualification](santedb/installation/installation-qualification/README.md)
+    * [FHIR Interface Validation](santedb/installation/installation-qualification/fhir-interface-validation.md)
 * [Operations](santedb/operations/README.md)
   * [Host Administration](santedb/operations/host-administration/README.md)
     * [Host Configuration File](santedb/operations/host-administration/host-configuration-file/README.md)
