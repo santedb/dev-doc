@@ -1,2 +1,0 @@
-# FHIR Interface Validation
-
