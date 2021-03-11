@@ -4,7 +4,7 @@ description: >-
   SanteDB supports.
 ---
 
-# SanteDB Server
+# SanteDB iCDR Server
 
 ## Minimum Requirements
 

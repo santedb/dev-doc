@@ -3,7 +3,7 @@
 The AppletConfigurationSection is responsible for configuring the applet loading and validation process. The configuration is illustrated below.
 
 ```markup
-  <section xsi:type="AppletConfigurationSection" \
+  <section xsi:type="AppletConfigurationSection" 
     appletDirectory=".\applets" 
     allowUnsignedApplets="true">
     <trustedPublishers>

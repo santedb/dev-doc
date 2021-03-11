@@ -1,4 +1,4 @@
-# Data Configuration
+# Database Connections
 
 The DataConfigurationSection is used to control the internal connection strings used by the iCDR or the dCDR.
 

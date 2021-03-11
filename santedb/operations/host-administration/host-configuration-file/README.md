@@ -1,4 +1,4 @@
-# Host Configuration File
+# Host Configuration
 
 The overall configuration file structure is illustrated in the code block below:
 
