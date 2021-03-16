@@ -187,7 +187,8 @@
     * [Examples](santedb/extending-santedb/service-apis/examples/README.md)
       * [Obtaining A Session](santedb/extending-santedb/service-apis/examples/obtaining-a-session.md)
       * [Connecting to the FHIR API](santedb/extending-santedb/service-apis/examples/connecting-to-the-fhir-api.md)
-* [HIE & Interoperability](santedb/hie-and-interoperability.md)
+* [HIE & Interoperability](santedb/hie-and-interoperability/README.md)
+  * [Instant OpenHIE](santedb/hie-and-interoperability/instant-openhie.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
 
 ## SanteMPI
