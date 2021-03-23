@@ -45,5 +45,19 @@ SDB_CACHE_REDIS_SERVER=sdb-redis:6379
 SDB_CACHE_EXPIRE=PT1H
 ```
 
+### Advanced Configurations
+
+You can import additional configuration files and/or use the XML configuration subsystem by creating a new container which is based off the `santedb-icdr` docker image and including additional configuration files. To do this, collect your configuration file as `myconfig.xml` in a directory and create a new Dockerfile which starts using this as configuration file:
+
+```elixir
+FROM santedb-icdr:latest
+RUN mkdir /myproject
+COPY myconfig.xml /myproject/myconfig.xml
+WORKDIR /santedb
+EXPOSE 2100/tcp
+EXPOSE 8080/tcp
+CMD ["mono","/santedb/SanteDB.Docker.Server.exe","/myproject/myconfig.xml"]
+```
+
 
 
