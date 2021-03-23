@@ -39,6 +39,7 @@
     * [App Settings](santedb/installation/disconnected-gateway/app-settings.md)
   * [SanteDB iCDR Server](santedb/installation/santedb-server/README.md)
     * [Virtual Appliances](santedb/installation/santedb-server/virtual-appliances.md)
+    * [Docker Containers](santedb/installation/santedb-server/docker-containers.md)
     * [Installing a Development / Demo Environment](santedb/installation/santedb-server/installing-a-development-demo-environment.md)
   * [Installation Qualification](santedb/installation/installation-qualification/README.md)
     * [Master Patient Index / Client Registry](santedb/installation/installation-qualification/fhir-interface-validation/README.md)
@@ -187,8 +188,7 @@
     * [Examples](santedb/extending-santedb/service-apis/examples/README.md)
       * [Obtaining A Session](santedb/extending-santedb/service-apis/examples/obtaining-a-session.md)
       * [Connecting to the FHIR API](santedb/extending-santedb/service-apis/examples/connecting-to-the-fhir-api.md)
-* [HIE & Interoperability](santedb/hie-and-interoperability/README.md)
-  * [Instant OpenHIE](santedb/hie-and-interoperability/instant-openhie.md)
+* [HIE & Interoperability](santedb/hie-and-interoperability.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
 
 ## SanteMPI
