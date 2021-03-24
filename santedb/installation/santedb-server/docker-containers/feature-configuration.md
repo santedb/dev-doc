@@ -2,8 +2,6 @@
 
 ## Core Services \(Recommended\)
 
-LOG;DATA\_POLICY;AUDIT\_REPO;ADO;PUBSUB\_ADO;RAMCACHE;SEC;SWAGGER;OPENID;FHIR;HL7;HDSI;AMI;BIS
-
 ### Diagnostic Logging
 
 The diagnostic logging feature allows for logging to files, the console, or even via the trace writer in Mono. These settings provide access to the [Diagnostics Configuration ](../../../operations/host-administration/host-configuration-file/diagnostics-configuration.md)subsystem. 
@@ -172,6 +170,8 @@ SDB_BIS_AUTH=TOKEN|BASIC|NONE
 # Enables or disables CORS
 SDB_BIS_CORS=true|false
 ```
+
+## Optional Services
 
 ### HL7 Fast Health Interoperability Resources \(FHIR\)
 
