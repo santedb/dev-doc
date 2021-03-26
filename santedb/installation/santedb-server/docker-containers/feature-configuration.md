@@ -240,18 +240,54 @@ SDB_FEATURE=...;PUBSUB_ADO;...
 SDB_PUBSUB_ADO_RW_CONNECTION=connectionString
 ```
 
+### Record Matching Plugin
+
+The record matching plugin registers the [SanteDB Matcher ](../../../../santempi/matching-engine/)plugin in the container. This service is used by other services to match and/or merge data.
+
+```text
+SDB_FEATURE=...;MATCHING;...
+SDB_MATCHING_MODE=WEIGHTED|SIMPLE
+```
+
+The matching modes supported are:
+
+* SIMPLE: Simple matching only performs block operations against the database, and performs no scoring. This mode is useful when your duplication detection is light. Records are given a score of 0.0 \(not match\) or 1.0 \(match\)
+* WEIGHTED: Weighted matching uses the SanteDB Matching plugin to perform scoring. 
+
+When composing your own image from SanteMPI you can copy match configurations to the ./match directory:
+
+```text
+FROM santesuite/santedb-mpi:latest
+COPY ./my_match_config.xml /santedb/match/my_match_config.xml
+```
+
 ### Master Data Management & Record Linking
 
 The MDM feature sets up the MDM resource persistence strategy and subscribes one or more resources to one or more match configurations.
 
+{% hint style="info" %}
+When enabling the MDM service, you must also enable the MATCHING service.
+{% endhint %}
+
 ```text
 SDB_FEATURE=...;MDM;...
-
+SDB_MDM_RESOURCE=Resource=Configuration;Resource=Configuration
+SDB_MDM_AUTO_MERGE=true|false
 ```
 
-### Email / Notification Settings
+The supported resources for MDM management are:
 
-### RFC3881 / DICOM Audit Shipping
+| Resource | Description |
+| :--- | :--- |
+| Person | Places any entity of type Person or its subclasses \(Provider / Patient\) under MDM storage management. |
+| Patient | Places any entity of type Patient into MDM storage management. This is useful for Master Patient Index or Client Registry scenarios. |
+| Provider | Places any entity of type Provider into MDM storage management. This is useful for centralized Provider Registries. |
+| Material | Places any entity of Material or ManufacturedMaterial into MDM storage management. This includes kinds and instances of materials. Useful for centralized product registries. |
+| ManufacturedMaterial | Places only ManufacturedMaterials into MDM storage management. |
+| Place | Places the Place resource into MDM storage management. This is useful for centralized Geographic or Facility Registries |
+| Organization | Organizations \(such as companies, government agencies, etc.\) in MDM control. |
+
+
 
 
 
