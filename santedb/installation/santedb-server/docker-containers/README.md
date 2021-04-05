@@ -62,5 +62,37 @@ EXPOSE 8080/tcp
 CMD ["mono","/santedb/SanteDB.Docker.Server.exe","/myproject/myconfig.xml"]
 ```
 
+### Adding Sample Data
+
+You can quickly add test/sample data by copying [dataset files](../../../extending-santedb/applets/distributing-data.md) into the `/santedb/data` directory of the docker container. These dataset files can be generated from the `sdbac` command prompt with the `cdr.query` command to produce dataset files.
+
+For example, to initialize an MPI with sample assigning authorities for a particular use case, create a new dataset file containing the assigning authorities:
+
+```markup
+<?xml version="1.0"?>
+<dataset id="Elbonia Identity Domains" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://santedb.org/data">
+  <!-- National Health Identifier -->
+  <insert skipIfError="false" skipIfExists="true">
+    <AssigningAuthority xmlns="http://santedb.org/model">
+      <name>Elbonia</name>
+      <domainName>MOH_NHID</domainName>
+      <oid>1.3.6.1.4.1.52820.5.0.1.1.1</oid>
+      <url>http://mpi.moh.gov.elb/identity/moh/nhid</url>
+      <isUnique>true</isUnique>
+      <validation>^\d{12}$</validation>
+      <scope>bacd9c6f-3fa9-481e-9636-37457962804d</scope>
+    </AssigningAuthority>
+  </insert>
+</dataset>
+```
+
+The file would be copied into the /santedb/data directory of the santedb-mpi or santedb-icdr container with the following Dockerfile.
+
+```markup
+FROM santedb-icdr:latest
+COPY identity_domains.dataset /santedb/data/identity_domains.dataset
+CMD ["mono","/santedb/SanteDB.Docker.Server.exe"]
+```
+
 
 
