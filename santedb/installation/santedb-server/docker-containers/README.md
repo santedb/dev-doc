@@ -114,9 +114,17 @@ The file would be copied into the /santedb/data directory of the santedb-mpi or 
 
 ```markup
 FROM santedb-icdr:latest
-COPY identity_domains.dataset /santedb/data/identity_domains.dataset
-CMD ["mono","/santedb/SanteDB.Docker.Server.exe"]
+COPY custom.dataset /santedb/data/custom.dataset
 ```
 
+### Packaging Custom Business Rules
 
+You can package [business rules](../../../extending-santedb/applets/business-rules.md), [business intelligence](../../../extending-santedb/applets/business-intelligence-bi-assets/), and other [asset files](../../../extending-santedb/applets/assets/) into your docker container by simply composing them into a PAK file and including them in the /santedb/applets/ directory.
+
+```markup
+FROM santedb-icdr:latest
+COPY custom.pak /santedb/applets/custom.pak
+```
+
+Upon load, the SanteDB iCDR server will load your package files and will load any business rules files required.
 
