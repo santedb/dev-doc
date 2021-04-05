@@ -66,7 +66,7 @@ CMD ["mono","/santedb/SanteDB.Docker.Server.exe","/myproject/myconfig.xml"]
 
 You can quickly add test/sample data by copying [dataset files](../../../extending-santedb/applets/distributing-data.md) into the `/santedb/data` directory of the docker container. These dataset files can be generated from the `sdbac` command prompt with the `cdr.query` command to produce dataset files.
 
-For example, to initialize an MPI with sample assigning authorities for a particular use case, create a new dataset file containing the assigning authorities:
+For example, to initialize an MPI with an identity domain, and an organization with a custom policy, for a particular use case, create a new dataset file containing the identity domain, organization and custom policy:
 
 ```markup
 <?xml version="1.0"?>
@@ -83,6 +83,30 @@ For example, to initialize an MPI with sample assigning authorities for a partic
       <scope>bacd9c6f-3fa9-481e-9636-37457962804d</scope>
     </AssigningAuthority>
   </insert>
+  <update insertIfNotExists="true">
+    <Organization xmlns="http://santedb.org/model">
+      <id>fae7b5fb-ea49-4460-9149-f0952efe572a</id>
+      <classConcept>7c08bd55-4d42-49cd-92f8-6388d6c4183f</classConcept>
+      <determinerConcept>f29f08de-78a7-4a5e-aeaf-7b545ba19a09</determinerConcept>
+      <statusConcept>c8064cbd-fa06-4530-b430-1a52f1530c27</statusConcept>
+	    <industryConcept>fdeb2e4e-9e02-4ce3-ab69-cece5ffdee20</industryConcept>
+      <name>
+        <use>1ec9583a-b019-4baa-b856-b99caf368656</use>
+        <component>
+          <value>Elbonia National Health Insurnace Corporation</value>
+        </component>
+      </name>
+    </Organization>
+  </update>  
+  <update insertIfNotExists="true">
+    <SecurityPolicy xmlns="http://santedb.org/model">
+      <id>fd8c0e00-82fb-11eb-8dcd-0242ac130004</id>
+      <name>Elbonia Parlimentarian Health Record VIP Access Policy</name>
+      <oid>2.25.40394829382872728372832</oid>
+      <isPublic>true</isPublic>
+      <canOverride>false</canOverride>
+    </SecurityPolicy>
+  </update>  
 </dataset>
 ```
 
