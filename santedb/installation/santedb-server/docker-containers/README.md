@@ -48,7 +48,43 @@ SDB_CACHE_REDIS_SERVER=sdb-redis:6379
 SDB_CACHE_EXPIRE=PT1H
 ```
 
-### Advanced Configurations
+### Minimal Application 
+
+You can compose a minimal application with either the SanteDB-ICDR or SanteMPI instance using a docker-compose.yml file as shown.
+
+```yaml
+version: "3.3"
+
+services:
+  db:
+    image: postgres
+    container_name: sdb-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: santedb
+      POSTGRES_PASSWORD: SanteDB123
+    restart: always
+
+  santedb:
+    image: santesuite/santedb-icdr:2.1.3
+    container_name: santedb-icdr
+    environment:
+      - SDB_FEATURE=LOG;DATA_POLICY;AUDIT_REPO;ADO;PUBSUB_ADO;RAMCACHE;SEC;SWAGGER;OPENID;FHIR;HL7;HDSI;AMI;BIS
+      - SDB_DB_MAIN=server=sdb-postgres;port=5432; database=santedb; user id=santedb; password=SanteDB123; pooling=true; MinPoolSize=5; MaxPoolSize=15; Timeout=60;
+      - SDB_DB_AUDIT=server=sdb-postgres;port=5432; database=auditdb; user id=santedb; password=SanteDB123; pooling=true; MinPoolSize=5; MaxPoolSize=15; Timeout=60;
+      - SDB_DB_MAIN_PROVIDER=Npgsql
+      - SDB_DB_AUDIT_PROVIDER=Npgsql
+      - SDB_DELAY_START=1000
+    ports:
+      - "8080:8080"
+      - "2100:2100"
+    depends_on:
+      - db
+    restart: always
+```
+
+## Advanced Configurations
 
 You can import additional configuration files and/or use the XML configuration subsystem by creating a new container which is based off the `santedb-icdr` docker image and including additional configuration files. To do this, collect your configuration file as `myconfig.xml` in a directory and create a new Dockerfile which starts using this as configuration file:
 
