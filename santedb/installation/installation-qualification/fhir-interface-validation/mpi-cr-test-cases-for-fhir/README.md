@@ -12,7 +12,7 @@ SanteMPI acts as a custodian of patient master identities, as such it is importa
   * [Patient Identity Cross Referencing for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
   * [Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)  
 
-## Patient Registration Cases
+## Patient Registration Test Cases
 
 The test cases which involve the merging/creation/updating of patient can be submitted to SanteMPI in three ways. The create tests only specify the contents of a bundle/patient being tested, and do not include any wrapper \(such as MessageHeader\) specifications. 
 
@@ -128,7 +128,7 @@ Unfortunately some of the specified behaviors in PMIR are not fully compatible w
 
 #### Related Person in the &lt;link&gt; element
 
-SanteDB reserves the seealso relationship type to distinguish between objects which are equivalent in some way with the focal patient. When adding mother's or other persons information, it is recommended to use the native FHIR expression for these, namely, the RelatedPerson points at the patient to which they are related. For example:
+Section 3.93.4.1.2.5 describes a mechanism for linking `Patient` to `RelatedPerson`using the link mechanism on the `Patient` resource. Unfortunately, SanteDB reserves the link and seealso relationship types to distinguish between objects which are equivalent in some way \(i.e. Patient&gt;Patient, or Person&gt;Person\). When adding mother's or other person's information, it is recommended to use the native FHIR expression for these, namely, the `RelatedPerson` pointing at the `Patient` to which they are related via the `patient/reference` attribute. For example:
 
 ```javascript
 {
