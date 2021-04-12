@@ -95,7 +95,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
 
 | Requirement | Option | Description |
 | :--- | :--- | :--- |
-| MUST | PMIR Only | Reject the message with response.code = ok |
+| MUST | PMIR Only | Return MessageHeader with response.code = ok |
 | MUST |  | Return HTTP response code 201 Created |
 | SHOULD |  | Include created patient object in response |
 | SHOULD |  | Indicate the identifier of the created patient with URL |
@@ -158,7 +158,7 @@ The test harness registers a patient using the URL representation of the system 
 
 | Requirement | Option | Description |
 | :--- | :--- | :--- |
-| MUST | PMIR Only | Reject the message with response.code = ok |
+| MUST | PMIR Only | Return MessageHeader with response.code = ok |
 | MUST |  | Return HTTP response code 201 Created |
 | SHOULD |  | Include created patient object in response |
 | SHOULD |  | Indicate the identifier of the created patient with URL |

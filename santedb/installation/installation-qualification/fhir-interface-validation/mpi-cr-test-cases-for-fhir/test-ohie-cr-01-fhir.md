@@ -77,7 +77,7 @@ The test harness sends a patient which ahs a mal-formed identifier entry which i
 
 | Requirement | Option | Description |
 | :--- | :--- | :--- |
-| MUST | PMIR Only | Reject the message with response.code = fatal-error |
+| MUST | PMIR Only | Return MessageHeader with response.code = fatal-error |
 | MUST |  | Include an OperationOutcome entry in response |
 | MUST |  | Indicate that the resource failed validation. |
 | MUST |  | Carry an HTTP response code in the 400 series |
