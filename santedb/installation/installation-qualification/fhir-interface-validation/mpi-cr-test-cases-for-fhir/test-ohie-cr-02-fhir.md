@@ -18,7 +18,7 @@ Create an AssigningAuthority domain which has the following attributes:
 
 * URL of http://ohie.org/test/test
 * OID of 1.3.6.1.4.1.52820.3.72.5.9.1
-* Device TEST-HARNESS-A with authoritative source for identifiers
+* Device TEST-HARNESS with authoritative source for identifiers
 
 #### SanteMPI Seed Data
 
