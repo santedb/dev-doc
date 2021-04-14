@@ -84,6 +84,72 @@ services:
     restart: always
 ```
 
+### Useful Volumes
+
+Some directories in the docker image are useful for development purposes. For example, you can configure a volume which exposes a common configuration file set, or common applets. The volumes which can be expose \(and their directories\) can be done via:
+
+```yaml
+services:
+
+   # ... truncated for space ...
+   
+   santedb:
+      image: santesuite/santedb-icdr:2.1.3
+      # .. truncated ...
+      volumes:
+         - santedb-data:/santedb/data
+
+volumes:
+   santedb-data:
+```
+
+The volumes which are of use for exposing to the host docker environment are:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Path</th>
+      <th style="text-align:left">Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">/santedb/data</td>
+      <td style="text-align:left">
+        <p>Used for seeding data into the SanteDB instance. For example</p>
+        <p>if you have a development environment where you&apos;d like the same data</p>
+        <p>seeded into the database on startup you can use this option.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">/santedb/config</td>
+      <td style="text-align:left">
+        <p>Used for direct access to the configuration files. You should use this
+          option</p>
+        <p>if the environment variables for the docker instance are too restrictive.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">/santedb/applets</td>
+      <td style="text-align:left">
+        <p>Used for loading applet files which contain user interfaces, BI reports,</p>
+        <p>business rules, CDSS rules, etc. These applets should be digitally signed</p>
+        <p>PAK files.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">/santedb/match</td>
+      <td style="text-align:left">
+        <p>Stores the match configuration files for the SanteDB matching engine.
+          These</p>
+        <p>match configuration files control the weight, blocking, and classification
+          subsystem</p>
+        <p>for the default match algorithm.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Advanced Configurations
 
 You can import additional configuration files and/or use the XML configuration subsystem by creating a new container which is based off the `santedb-icdr` docker image and including additional configuration files. To do this, collect your configuration file as `myconfig.xml` in a directory and create a new Dockerfile which starts using this as configuration file:
