@@ -28,6 +28,10 @@ SELECT REG_PATCH('YOUR_PATCH_ID');
 COMMIT;
 ```
 
+{% hint style="info" %}
+When writing FirebirdSQL patches you should add FROM RDB$DATABASE to the ck\_patch and reg patch functions.
+{% endhint %}
+
 The SanteDB updater config tool will read these manifests and allow the system administrator an option to install your patches to their database.
 
 The schema is as follows:
@@ -84,4 +88,8 @@ The schema is as follows:
     </tr>
   </tbody>
 </table>
+
+### Auto-Deploy of Patches
+
+You should set your SQL file's compile action to `EmbeddedResource` in your plugin. Upon service start \(on Windows, Linux, Android, or Docker\) your SQL patch file will be executed and the database migrated.
 
