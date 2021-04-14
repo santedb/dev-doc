@@ -84,7 +84,7 @@ services:
     restart: always
 ```
 
-### Useful Volumes
+### Volumes
 
 Some directories in the docker image are useful for development purposes. For example, you can configure a volume which exposes a common configuration file set, or common applets. The volumes which can be expose \(and their directories\) can be done via:
 
