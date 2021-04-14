@@ -141,6 +141,15 @@ SanteDB's core plugins affix tags to objects based on the plugins enabled and th
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">$pep.method</td>
+      <td style="text-align:left">hash | hide | redact</td>
+      <td style="text-align:left">
+        <p>When present in a resource, informs the caller that the policy</p>
+        <p>enforcement service took destructive action on the resource</p>
+        <p>using the specified privacy enforcement method.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left">$bre.error</td>
       <td style="text-align:left">String</td>
       <td style="text-align:left">
