@@ -11,3 +11,11 @@
 
 All BI assets are defined in XML in the **http://santedb.org/bi** namespace. The schema for this namespace is in the Schema\ directory of your SanteDB installation.
 
+### Uses of BI Assets
+
+It is recommended to use BI assets for reports within your applet as these components are available via a multitude of interfaces. For example, defining a BI View for "Registered Patients by Gender" would expose this data via:
+
+* The REST API as JSON - Meaning third party applications can consume the data directly
+* User Interfaces as Report - Meaning the UI can use the same data to construct charts, tables, etc.
+* FHIR Measure Report - Meaning that FHIR services can obtain the data from the view as  a measure report \(In the roadmap\)
+
