@@ -147,6 +147,10 @@ SanteDB's core plugins affix tags to objects based on the plugins enabled and th
         <p>When present in a resource, informs the caller that the policy</p>
         <p>enforcement service took destructive action on the resource</p>
         <p>using the specified privacy enforcement method.</p>
+        <p><b>Note: </b>The $pep.method of hide on a resource indicates
+          <br />that part of the resource was hidden (usually identifiers)</p>
+        <p>if the entire resource is hidden, then the tag wouldn&apos;t appear</p>
+        <p>on a resource tag.</p>
       </td>
     </tr>
     <tr>
