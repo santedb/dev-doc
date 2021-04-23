@@ -12,7 +12,7 @@ Because many core SanteDB components \(including your service implementations\) 
 Install-Package SanteDB.Server.TestFramework
 ```
 
-### Setting up the TestApplicationContext
+## Setting up the TestApplicationContext
 
 The TestApplicationContext should be initialized in a common place. Below provides an example of a TestClass which initializes a TestApplicationContext.
 
@@ -20,22 +20,22 @@ The TestApplicationContext should be initialized in a common place. Below provid
 using SanteDB.Core;
 using SanteDB.Core.TestFramework;
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace MyTest {
-    [TestClass]
+    [TestFixture]
     public class MyTestClass
     {
-        [ClassInitialize]
-        public static void Initialize(TestContext context) {
+        [Setup]
+        public void Initialize() {
             
             // Init test context if needed
             if(ApplicationServiceContext.Current == null)
             {
-                // Instructs the TestApplicationContext where to load TestConfig.xml
-                TestApplicationContext.TestAssembly = typeof(MyTestClass).Assembly;
-                // Initialize
-                TestApplicationContext.Initialize(context.DeploymentDirectory);
+                // Forces .NET To load the FirebirdSQL API
+                var p = FirebirdSql.Data.FirebirdClient.FbCharset.Ascii;
+                TestApplicationContext.TestAssembly = typeof(TestOpenHIEPixPdq).Assembly;
+                TestApplicationContext.Initialize(TestContext.CurrentContext.TestDirectory);
             }
         }
     }
@@ -70,14 +70,14 @@ If your unit test requires accessing or interacting with the SanteDB data store 
 using SanteDB.Core;
 using SanteDB.Core.TestFramework;
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace MyTest {
-    [TestClass]
+    [TestFixture]
     public class MyTestClass : DataTest
     {
-        [ClassInitialize]
-        public static void Initialize(TestContext context) {
+        [Setup]
+        public void Initialize() {
             
             // Init test context if needed
             if(ApplicationServiceContext.Current == null)
@@ -85,10 +85,16 @@ namespace MyTest {
                 // Instructs the TestApplicationContext where to load TestConfig.xml
                 TestApplicationContext.TestAssembly = typeof(MyTestClass).Assembly;
                 // Initialize
-                TestApplicationContext.Initialize(context.DeploymentDirectory);
+                TestApplicationContext.Initialize(TestContext.CurrentContext.TestDirectory);
             }
         }
     }
 }
 ```
+
+### Execution Environment
+
+If you're using the data persistence services, you will need to ensure that the Visual Studio test runner \(or the NUnit tool\) is running in x64 mode. In Visual Studio, this requires selecting Test -&gt; Processor Architecture -&gt; x64.
+
+![](../../../.gitbook/assets/image%20%28199%29.png)
 
