@@ -41,6 +41,7 @@
   * [SanteDB iCDR Server](santedb/installation/santedb-server/README.md)
     * [Virtual Appliances](santedb/installation/santedb-server/virtual-appliances.md)
     * [Docker Containers](santedb/installation/santedb-server/docker-containers/README.md)
+      * [Adding Sample Data](santedb/installation/santedb-server/docker-containers/adding-sample-data.md)
       * [Feature Configuration](santedb/installation/santedb-server/docker-containers/feature-configuration.md)
     * [Installing a Development / Demo Environment](santedb/installation/santedb-server/installing-a-development-demo-environment.md)
   * [Installation Qualification](santedb/installation/installation-qualification/README.md)
