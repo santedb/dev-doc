@@ -51,6 +51,7 @@
         * [TEST: OHIE-CR-02-FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-02-fhir.md)
         * [TEST: OHIE-CR-03-FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-03-fhir.md)
         * [TEST: OHIE-CR-04-FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-04-fhir.md)
+        * [TEST: OHIE-CR-05-FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-05-fhir.md)
 * [Operations](santedb/operations/README.md)
   * [Host Administration](santedb/operations/host-administration/README.md)
     * [Host Configuration](santedb/operations/host-administration/host-configuration-file/README.md)

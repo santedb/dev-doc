@@ -34,7 +34,7 @@ Create an AssigningAuthority domain which has the following attributes:
       <id>DE5BEC1E-8C41-4FF1-8E65-A39AC1DDAE60</id>
       <!-- Secret: TEST_HARNESS -->
       <applicationSecret>b5547020757c0efa3f320fbd2a0c43d0628e19b8cd81652523b87d31fc54f5ec</applicationSecret>
-      <name>TEST_HARNESS_A</name>
+      <name>TEST_HARNESS_FHIR_A</name>
     </SecurityApplication>
   </insert>
   <!-- TEST -->
@@ -67,7 +67,7 @@ Create an AssigningAuthority domain which has the following attributes:
       <id>58275680-5129-4832-9668-131F76E8DFB6</id>
       <!-- Secret: TEST_HARNESS -->
       <applicationSecret>b5547020757c0efa3f320fbd2a0c43d0628e19b8cd81652523b87d31fc54f5ec</applicationSecret>
-      <name>TEST_HARNESS_B</name>
+      <name>TEST_HARNESS_FHIR_B</name>
     </SecurityApplication>
   </insert>
   <!-- TEST -->
@@ -83,7 +83,7 @@ Create an AssigningAuthority domain which has the following attributes:
   </insert>
 ```
 
-## Authenticate as TEST\_HARNESS\_A
+## Authenticate as TEST\_HARNESS\_FHIR\_A
 
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
@@ -112,7 +112,7 @@ The patient is being sent from a source with the expectation that the informatio
 ```javascript
 {
     "resourceType": "Patient",
-    "id": "ohie-cr-04-20-fhir",
+    "id": "ohie-cr-04-10-fhir",
     "active": true,
     "identifier": [
       {
@@ -161,7 +161,7 @@ The patient is being sent from a source with the expectation that the informatio
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=FHRA-0392|http://ohie.org/test/test_a HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHRA-0392 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -176,7 +176,7 @@ Authorization: bearer XXXXXXX
 | MUST |  | Have an identifier for FHRA-0392 in system http://ohie.org/test/test\_a |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
-## Authenticate as TEST\_HARNESS\_B
+## Authenticate as TEST\_HARNESS\_FHIR\_B
 
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-b account.
 
@@ -201,7 +201,7 @@ The test harness sends a registration message to the receiver, attempting to inc
 ```javascript
 {
     "resourceType": "Patient",
-    "id": "ohie-cr-04-30-fhir",
+    "id": "ohie-cr-04-20-fhir",
     "active": true,
     "identifier": [
       {
@@ -331,7 +331,7 @@ This mimics a use case where TEST B is registering a patient on a referral that 
 ```javascript
 {
     "resourceType": "Patient",
-    "id": "ohie-cr-04-20-fhir",
+    "id": "ohie-cr-04-30-fhir",
     "active": true,
     "identifier": [
       {
@@ -396,7 +396,7 @@ This mimics a use case where TEST B is registering a patient on a referral that 
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=FHRB-4736|http://ohie.org/test/test_b HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_b|FHRB-4736 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
