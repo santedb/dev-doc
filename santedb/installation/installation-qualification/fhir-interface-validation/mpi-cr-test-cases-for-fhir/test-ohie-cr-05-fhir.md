@@ -148,6 +148,10 @@ This test case does not use familial names to mimic contexts where only given na
           }
         ],
         "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "RelatedPerson/ohie-cr-05-10-fhir-mother"
       }
     }
   ]
@@ -269,6 +273,10 @@ The bundle portrayed is using type `history` and is intended to be tested as par
           }
         ],
         "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
       }
     },
     {
@@ -300,6 +308,10 @@ The bundle portrayed is using type `history` and is intended to be tested as par
             "type": "see-also"
           }
         ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient/ohie-cr-05-20-fhir-mother"
       }
     }
   ]
@@ -348,12 +360,12 @@ The bundle portrayed is using type `history` and is intended to be tested as par
   </tbody>
 </table>
 
-## Validate Newborn Patient Created
+## Validate Newborn Patient Created with Mother Related Person
 
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHR-4837&_include=RelatedPerson%3Apatient HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-4837&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -369,7 +381,24 @@ Authorization: bearer XXXXXXX
 | MUST |  | Have a RelatedPerson with identifier FHR-0844 for SARAH ABELS |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
-## Validate Mother Patient Created with Link
+## Validate Mother Patient Created 
 
+The test harness will query by the identifier of the mother to validate that the receiver created the mother record for a patient.
 
+```http
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-0844&_include=RelatedPerson%3Alink HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXXXX
+```
+
+### Expected Behaviour
+
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Accept the message with HTTP 200 OK |
+| MUST |  | Include a bundle with exactly 1 patient result. |
+| MUST |  | Contain the mother's patient details  \(name of SARAH ABELS\) |
+| MUST |  | Have an identifier for FHR-0844 in system http://ohie.org/test/test |
+| MUST |  | Have a RelatedPerson with identifier FHR-0844 for SARAH ABELS |
+| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
