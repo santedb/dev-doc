@@ -56,6 +56,8 @@
 * [Operations](santedb/operations/README.md)
   * [Host Administration](santedb/operations/host-administration/README.md)
     * [Host Configuration](santedb/operations/host-administration/host-configuration-file/README.md)
+      * [Service API Configuration](santedb/operations/host-administration/host-configuration-file/service-api-configuration/README.md)
+        * [REST Service Configuration](santedb/operations/host-administration/host-configuration-file/service-api-configuration/rest-service-configuration.md)
       * [Database Connections](santedb/operations/host-administration/host-configuration-file/data-configuration.md)
       * [Application Service Context Configuration](santedb/operations/host-administration/host-configuration-file/application-service-context-configuration.md)
       * [Applet Configuration](santedb/operations/host-administration/host-configuration-file/applet-configuration.md)
