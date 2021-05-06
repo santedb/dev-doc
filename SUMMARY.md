@@ -6,6 +6,7 @@
 
 * [About SanteDB](santedb/santedb/README.md)
   * [SanteDB Versioning](santedb/santedb/santedb-versioning.md)
+  * [Version 3.x Roadmap](santedb/santedb/version-3.x-roadmap.md)
   * [SanteDB History](santedb/santedb/santedb-history.md)
   * [SanteDB Solutions](santedb/santedb/santedb-solutions.md)
 * [Architecture](santedb/architecture/README.md)
@@ -104,6 +105,7 @@
     * [Applet Debugger](santedb/extending-santedb/applets/applet-debugger.md)
     * [JavaScript API Reference](http://santesuite.org/assets/doc/js/santedb/)
   * [.NET Plugins](santedb/extending-santedb/server-plugins/README.md)
+    * [Business Model Objects](santedb/extending-santedb/server-plugins/business-model-objects.md)
     * [Authoring Plugins](santedb/extending-santedb/server-plugins/authoring-plugins.md)
     * [Implementing .NET Features](santedb/extending-santedb/server-plugins/implementing-.net-features/README.md)
       * [Configuration](santedb/extending-santedb/server-plugins/implementing-.net-features/configuration.md)
