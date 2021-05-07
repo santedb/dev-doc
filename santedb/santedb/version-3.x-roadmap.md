@@ -4,7 +4,7 @@ SanteDB 1.x was a near direct refactor of the original OpenIZ core, which had co
 
 The SanteDB Version 3.x roadmap seeks to fully remove these patterns and re-implement many of the core services. However, this presents a problem in that it makes incremental change difficult, and will break the services. For this reason, much of the Version 3.x roadmap is currently in the design / wishlist phase.
 
-### Refactor I/O Calls to TAP Pattern
+## Refactor I/O Calls to TAP Pattern
 
 Currently all I/O calls, from the REST layer, to the data access layer are using legacy .NET patterns. This work items seeks to correct this by refactoring all I/O calls to the Task Async Pattern. This will require a complete refactoring of the following core components:
 
@@ -36,7 +36,7 @@ Unfortunately this refactor will change the service calls such that any existing
   * This would add allow existing plugins to continue to operate as normal, however would require any implementations of the existing services to be refactored to add async methods.
   * This has the same maintenance issues as the IAsyncX method
 
-### Refactor Persistence Layer
+## Refactor Persistence Layer
 
 {% hint style="info" %}
 The persistence layer refactor is currently underway and the code for these features can be found at: [https://github.com/santedb/santedb-server/tree/feature/nuado](https://github.com/santedb/santedb-server/tree/feature/nuado)
@@ -50,4 +50,24 @@ The persistence layer is quite messy, and sub-optimal. It was written \(as menti
   * At the persistence layer, only load direct associated properties that are commonly used directly. Refactor the current LoadState property to an internal value which allows the persistence layer to indicate a value was loaded and needn't be re-checked.
 * Refactor and clean up the query writer in OrmLite to use only LINQ mapping and expression tree mapping, rather than converting to/from the HTTP representation.
   * This would require a complete rewrite of the IQueryHack interfaces which currently allow for the optimization by manually creating SQL. Such an IQueryHack would need to be changed to accept an Expression&lt;T&gt; with the desired filters.
+
+## Add Complex Guard Expressions
+
+Currently within SanteDB, simple guard classifications can be done on a classifier property, for example:
+
+```text
+Patient?telecom[WorkPlace].value=john@johnstuff.com
+```
+
+However, there is a need to support more complex guard expressions wherein a full HDSI guard expression can be placed into the query builder. For example:
+
+```text
+Patient?telecom[type.mnemonic=EMAIL&use.mnemonic=WorkPlace].value=john@johnstuff.com
+```
+
+The requirements of this nested guard are:
+
+* The builder should be able to express simple guards \(the current format\) as the current LINQ translation of `Telecoms.Where(guard=>guard.UseConcept.Mnemonic == WorkPlace).Any()` 
+* The builder should be able to process the complex guards \(the new format\) as a similar LINQ expression of: `Telecoms.Where(guard=>guard.TypeConcept.Mnemonic == "EMAIL" && guard.UseConcept.Mnemonic == "WorkPlace").Any(v=>v.Value == "john@johnstuff.com")` 
+* The persistence layer and SQL translators will also need to be updated to support this type of expression
 
