@@ -196,6 +196,7 @@
       * [HDSI Query Syntax](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)
       * [API Responses](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/api-responses.md)
       * [Visual Resource Pointer API](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/digitally-signed-visual-code-api.md)
+      * [Matching Extensions for HDSI](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/matching-extensions-for-hdsi.md)
       * [Patching](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/patching.md)
     * [HL7 FHIR](santedb/extending-santedb/service-apis/hl7-fhir/README.md)
       * [Related Persons](santedb/extending-santedb/service-apis/hl7-fhir/related-persons.md)

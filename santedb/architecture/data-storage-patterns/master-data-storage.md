@@ -123,3 +123,99 @@ When a repository's `Find()` or `Get()` methods are called the repository will c
 
 The resource listener also subscribes to the Retrieved and Queried event handlers where any local objects which were fetched from the underlying data persistence layer are synthesized using their MASTER links \(and appropriate policies applied\).
 
+## Behaviors
+
+The following section outlines several common behaviors and patterns to assist in understanding how MDM works in SanteDB.
+
+### Case 1: New Object Registered
+
+When the CDR receives a request to create a new entity which is under MDM control, as shown below. 
+
+![](../../../.gitbook/assets/image%20%28220%29.png)
+
+1. The source record is issued a new UUID
+2. The MDM layer will attempt to determine if the source record matches any MASTER records that currently exist within the database \(using the resource merge configuration\).
+3. If no matching MDM MASTER is found, then the a new MASTER record is created and the SOURCE linked to the MASTER with its own UUID.
+   1. The relationship is indicated with RelationshipType MDM-MASTER
+   2. The classification of this relationship is AUTO
+
+![](../../../.gitbook/assets/image%20%28215%29.png)
+
+Any future queries based on the demographics will result in the MASTER\_A record being returned and synthesized from the source records according to the synthesization rules. 
+
+![](../../../.gitbook/assets/image%20%28214%29.png)
+
+### Case 2: Duplicate Object Created \(AutoLink Enabled\)
+
+When the CDR receives a registration request for a new object which is under MDM control, such as shown below:
+
+![](../../../.gitbook/assets/image%20%28213%29.png)
+
+1. The source record is issued as new UUID
+2. The IRecordMatchService is called with the specified configurations. If this process classifies a record as MATCH and AutoLink is turned on for that match configuration
+   1. The SORUCE is linked to the MASTER with relationship MDM-Master 
+   2. The classification of this relationship is AUTO
+   3. The weighting of the match is stored
+
+![](../../../.gitbook/assets/image%20%28223%29.png)
+
+A query for EID A123 would now result in a single result with the synthesized data from both sources and links to the sources where the data was obtained.  
+
+
+![](../../../.gitbook/assets/image%20%28216%29.png)
+
+### Case 3: Suspected Duplicate Object Created \(or AutoLink disabled\)
+
+When the CDR receives a request to create an object with similar attributes however as above, however:
+
+* The attribute score from the fuzzy matching engine falls below the threshold of a definite match, or
+* The automatic linking feature for the match configuration is disabled
+
+Such as the patient illustrated below.
+
+![](../../../.gitbook/assets/image%20%28218%29.png)
+
+The behavior is as follows:
+
+1. The SOURCE is issued a new UUID
+2. A new MASTER is created with a new UUID
+3. The SOURCE is linked to the new MASTER 
+   1. The relationship type is MDM-Master
+   2. The classification of the relationship is AUTO
+4. The SOURCE is linked to the suspected MASTER 
+   1. The relationship type is MDM-CandidateLocal
+   2. The classification of the relationship is AUTO
+   3. The score of the match is stored as the relationship strength
+
+![](../../../.gitbook/assets/image%20%28219%29.png)
+
+### Case 4: Object is Updated to Match MASTER
+
+When the CDR receives a request to update a source record, it does so against the source \(or if the update was attempted against the MASTER the SOURCE is created or located\). When this occurs, the matching is re-run and if determined that the records now match the relationships are re-calculated. 
+
+For example, given this update to SOURCE\_C.
+
+![](../../../.gitbook/assets/image%20%28222%29.png)
+
+The `SOURCE_C` record would be updated to match and the matching re-run, it may be determined that `SOURCE_C` is in fact the same person as `MASTER_A`
+
+![](../../../.gitbook/assets/image%20%28217%29.png)
+
+In this case, `SOURCE_C` is DETACHED from `MASTER_C` and then attached to `MASTER_A`.
+
+### Case 5: Manual Reconciliation
+
+The CDR also provides interfaces for manually reconciling candidate matches. Take for example, an instruction to reconcile `SOURCE_C` and `MASTER_A`.
+
+![](../../../.gitbook/assets/image%20%28224%29.png)
+
+In this method \(also known as a LOCAL&gt;MASTER merge\) the MDM-Candidate link is translated into a MDM-Master and the classification set to VERIFIED.
+
+![](../../../.gitbook/assets/image%20%28212%29.png)
+
+{% hint style="info" %}
+Any operation which removes all MDM-Master links from a MASTER record will result in the automatic obsolete of the MASTER record.
+{% endhint %}
+
+
+
