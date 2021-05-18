@@ -59,7 +59,7 @@ Next, you'll need to configure the SDK to use a server endpoint. This endpoint i
 We'll use the elbonia.santesuite.net server for our debugging. First we should launch the sdb-ade command which is the debugging tool for the dCDR:
 
 ```text
-sdb-ade --ref=santedb.admin.sln.pak --applet=applet-starter
+sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-applet-starter
 ```
 
 This command instructs the applet debugging environment to:
@@ -111,12 +111,12 @@ Upon completion you will be instructed to restart the application host. This is 
 
 ## Hello World!
 
-If you re-run the command `sdb-ade --ref=santedb.admin.sln.pak --applet=applet-starter` you'll notice that upon login you see the administrative panel. This is because the --ref= is instructing the SDK that your module is extending the admin panel. 
+If you re-run the command `sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-applet-starter` you'll notice that upon login you see the administrative panel. This is because the --ref= is instructing the SDK that your module is extending the admin panel. 
 
 To debug just the applet-starter applet you can instead reference just the core plugins:
 
 ```text
-sdb-ade --ref=santedb.core.sln.pak --applet=applet-starter
+sdb-ade --ref=santedb.core.sln.pak --applet=path-to-applet-starter
 ```
 
 The browser will launch with the basic login.html contents, which you can login with demoadmin/@Elbonia123.
@@ -192,7 +192,7 @@ This code:
 For an example of a more complex applet which extends the underlying administrative panel, you can clone the elb-mpi project and launch the debugger with that codebase:
 
 ```javascript
-sdb-ade --ref=santedb.admin.sln.pak --applet=elb-mpi
+sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-elb-mpi
 ```
 
 When launching this you should be presented with the Elbonia customizations of the MPI administrative panel.
