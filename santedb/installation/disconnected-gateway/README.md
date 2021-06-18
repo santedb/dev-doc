@@ -38,7 +38,7 @@ The installation wizard on the Windows installer simply requires pressing the Ne
 
 After installation is completed, you can configure the service:
 
-![](../../../.gitbook/assets/image%20%2871%29.png)
+![](../../../.gitbook/assets/image%20%2838%29%20%281%29.png)
 
 ## Configuration
 

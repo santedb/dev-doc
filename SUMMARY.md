@@ -199,6 +199,7 @@
       * [Matching Extensions for HDSI](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/matching-extensions-for-hdsi.md)
       * [Patching](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/patching.md)
     * [HL7 FHIR](santedb/extending-santedb/service-apis/hl7-fhir/README.md)
+      * [Extending FHIR Interfaces](santedb/extending-santedb/service-apis/hl7-fhir/extending-fhir-interfaces.md)
       * [Related Persons](santedb/extending-santedb/service-apis/hl7-fhir/related-persons.md)
     * [Examples](santedb/extending-santedb/service-apis/examples/README.md)
       * [Obtaining A Session](santedb/extending-santedb/service-apis/examples/obtaining-a-session.md)

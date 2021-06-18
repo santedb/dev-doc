@@ -30,16 +30,16 @@ The software requires at least mono version 5.x , so after installation you can 
 $ mono --version
 Mono JIT compiler version 6.12.0.90 (tarball Fri Sep  4 14:01:23 UTC 2020)
 Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
-	TLS:           __thread
-	SIGSEGV:       altstack
-	Notifications: epoll
-	Architecture:  amd64
-	Disabled:      none
-	Misc:          softdebug 
-	Interpreter:   yes
-	LLVM:          yes(610)
-	Suspend:       hybrid
-	GC:            sgen (concurrent by default)
+    TLS:           __thread
+    SIGSEGV:       altstack
+    Notifications: epoll
+    Architecture:  amd64
+    Disabled:      none
+    Misc:          softdebug 
+    Interpreter:   yes
+    LLVM:          yes(610)
+    Suspend:       hybrid
+    GC:            sgen (concurrent by default)
 ```
 
 After the mono project is installed, you can extract the provided tarball to a directory of convenience \(like /opt/santedb-sdk or /usr/local/santedb-sdk\). All commands in this tutorial on Linux should be prefixed with mono, so for example:
@@ -68,7 +68,7 @@ This command instructs the applet debugging environment to:
 2. Debug the applet-starter directory
 
 {% hint style="info" %}
-If you want to debug the core applets you can clone the https://github.com/santedb/applets directory and reference the solution file santedb.admin.sln.xml with --ref=&lt;path-to-applets&gt;/santedb.admin.sln.xml
+If you want to debug the core applets you can clone the [https://github.com/santedb/applets](https://github.com/santedb/applets) directory and reference the solution file santedb.admin.sln.xml with --ref=&lt;path-to-applets&gt;/santedb.admin.sln.xml
 {% endhint %}
 
 If successful you should see the initial configuration window.
@@ -103,7 +103,7 @@ You can continue setup by accepting the defaults for the other pages. Some confi
 
 * Turn down logging to Errors and Warnings if you value your sanity \(and you want performance similar to production\)
 * You can turn off optimization if you receive errors about GZIP CRC checksums \(there is a known issue certain server middleware\)
-* If you're using a proxy \(like fiddler\) for debugging you should enter the full proxy address and port \(for fiddler use http://localhost:8888\)
+* If you're using a proxy \(like fiddler\) for debugging you should enter the full proxy address and port \(for fiddler use [http://localhost:8888\](http://localhost:8888\)\)
 
 Upon completion you will be instructed to restart the application host. This is done by pressing CTRL+C in the sdb-ade window and restarting it.
 
@@ -111,7 +111,7 @@ Upon completion you will be instructed to restart the application host. This is 
 
 ## Hello World!
 
-If you re-run the command `sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-applet-starter` you'll notice that upon login you see the administrative panel. This is because the --ref= is instructing the SDK that your module is extending the admin panel. 
+If you re-run the command `sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-applet-starter` you'll notice that upon login you see the administrative panel. This is because the --ref= is instructing the SDK that your module is extending the admin panel.
 
 To debug just the applet-starter applet you can instead reference just the core plugins:
 
@@ -156,7 +156,7 @@ This code:
 * Renders the results in the bundle
 
 {% hint style="info" %}
-All HTML in SanteDB must be well-formed XHTML placed in the http://www.w3.org/1999/xhtml namespace. 
+All HTML in SanteDB must be well-formed XHTML placed in the [http://www.w3.org/1999/xhtml](http://www.w3.org/1999/xhtml) namespace.
 {% endhint %}
 
 We can then edit the index.js controller file to actually perform our search:
@@ -207,6 +207,4 @@ When launching this you should be presented with the Elbonia customizations of t
   * %localappdata%\log =&gt; Logs from the debugging environment
   * %localappdata%\SDBADE =&gt; Data files \(databases, preferences, etc.\)
   * %appdata%\SDBADE =&gt; Configuration files
-
-
 

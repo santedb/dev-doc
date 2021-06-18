@@ -30,7 +30,7 @@ No bar under the patient's summary header indicates that the data you're looking
 
 On the MDM dashboard tab of the dashboard will present you with three panels where you can edit key details about the multi-instance storage of information.
 
-![](../.gitbook/assets/image%20%28120%29.png)
+![](../.gitbook/assets/image%20%28135%29.png)
 
 ### Entity Relationship View
 

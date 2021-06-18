@@ -8,7 +8,7 @@ For example, if two clinics have sent records which have been linked together by
 
 Within the tool's **Master Data Management** tab you will see both locals listed.
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%28117%29.png)
 
 When you start editing a master record, you're establishing a record of truth for that record. You will be warned of this fact when editing the patient.
 
@@ -24,7 +24,7 @@ In the **Master Data Management** tab of the patient view this record will be in
 
 Records of Truth also appear in the **Entity Relationships** diagram for the record as a Record of Truth.
 
-![](../../.gitbook/assets/image%20%28103%29.png)
+![](../../.gitbook/assets/image%20%28103%29%20%281%29.png)
 
 Subsequent edits to the patient will result in edits to the record of truth. This fact will be indicated with an informational alert on editing.
 

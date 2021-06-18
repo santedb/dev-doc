@@ -8,7 +8,7 @@ Identifiers can be edited within the administrative portal if :
 
 To start the editing process, click the pencil icon on the **Identity** panel.
 
-![](../../.gitbook/assets/image%20%28134%29.png)
+![](../../.gitbook/assets/image%20%2814%29%20%281%29.png)
 
 ### Changing Identifiers
 

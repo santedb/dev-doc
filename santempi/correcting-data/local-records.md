@@ -18,5 +18,5 @@ If you edit a record in the dCDR which was sourced from another system \(like a 
 
 When the record is synchronized to the master server, however, the iCDR will only update the local record for the dCDR record. The iCDR will no longer have visibility into the data that was submitted by the source system in the clinic.
 
-![](../../.gitbook/assets/image%20%28117%29.png)
+![](../../.gitbook/assets/image%20%28117%29%20%281%29.png)
 
