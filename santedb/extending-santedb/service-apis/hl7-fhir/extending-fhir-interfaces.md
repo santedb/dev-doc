@@ -216,3 +216,13 @@ public class FavoriteColorExtensionHandler : IFhirExtensionHandler
 }
 ```
 
+Finally, SanteDB does not automatically enable all extensions, therefore it is required to register your extension handler in the messages portion of the FHIR configuration section.
+
+```markup
+<section xsi:type="FhirServiceConfigurationSection" restEndpoint="FHIR" >
+    <extensions>
+      <add>http://example.com/fhir/extensions/example</add>
+    </extensions>
+  </section>
+```
+
