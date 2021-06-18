@@ -166,7 +166,7 @@ public class FavoriteColorExtensionHandler : IFhirExtensionHandler
     /// <summary>
     /// Gets the URI of the extension which appears within a resource
     /// </summary>
-    public Uri Uri => new Uri("http://example.com/fhir/extensions/example");
+    public Uri Uri => new Uri("http://example.com/fhir/extensions/reviewState");
 
     /// <summary>
     /// Gets the URI of the profile that this extension is defined in 
@@ -221,7 +221,7 @@ Finally, SanteDB does not automatically enable all extensions, therefore it is r
 ```markup
 <section xsi:type="FhirServiceConfigurationSection" restEndpoint="FHIR" >
     <extensions>
-      <add>http://example.com/fhir/extensions/example</add>
+      <add>http://example.com/fhir/extensions/reviewState</add>
     </extensions>
   </section>
 ```
