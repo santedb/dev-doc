@@ -106,7 +106,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
 The test harness executes a query against the receiver using the URL version of the TEST domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=FHR-403|http://ohie.org/test/test HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-403 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -169,7 +169,7 @@ The test harness registers a patient using the URL representation of the system 
 The test harness executes a query against the receiver using the OID version of the TEST domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=FHR-403|urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1|FHR-403 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -183,4 +183,6 @@ Authorization: bearer XXXXXXX
 | MUST |  | Contain a patient for Uma Url |
 | MUST |  | Have an identifier for FHR-404 in system http://ohie.org/test/test |
 | SHOULD |  | Contain one or more link entries with type seealso |
+
+
 

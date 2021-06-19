@@ -11,6 +11,7 @@ This test is a combination of TEST-OHIE-CR05 and TEST-OHIE-CR07 from the HL7v2 t
 * [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
 * [HL7 FHIR RelatedPerson Resource](http://hl7.org/fhir/relatedperson.html)
 * [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
+* [Integrating The Health Enterprise Patient Demographics Query for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)
 
 ## Discussion
 
@@ -265,7 +266,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
         ],
         "name": [
           {
-            "use": "usual",
+            "use": "maiden",
             "family": "Abels",
             "given": [
               "Sarah"
@@ -400,5 +401,25 @@ Authorization: bearer XXXXXXX
 | MUST |  | Contain the mother's patient details  \(name of SARAH ABELS\) |
 | MUST |  | Have an identifier for FHR-0844 in system http://ohie.org/test/test |
 | MUST |  | Have a RelatedPerson with identifier FHR-0844 for SARAH ABELS |
+| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
+
+## Patient Demographics Query for Mobile Paediatric Query
+
+The test harness will execute a query on the patient resource and will validate that the client registry understands the extended `mothersMaidenName` parameter supplied.
+
+```http
+GET http://sut:8080/fhir/Patient?mothersMaidenName=Abels HTTP/1.1
+Authorization: bearer
+Accept: application/fhir+json
+```
+
+### Expected Behaviour
+
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Accept the message with HTTP 200 OK |
+| MUST |  | Include a bundle with exactly 1 patient result. |
+| MUST |  | Contain the child patient details |
+| MUST |  | Have an identifier for FHR-4837 in system http://ohie.org/test/test |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
