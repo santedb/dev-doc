@@ -4,7 +4,6 @@
 
 ## SanteDB
 
-* [End-User Instructions](santedb/end-user-instuctions.md)
 * [About SanteDB](santedb/santedb/README.md)
   * [SanteDB Versioning](santedb/santedb/santedb-versioning.md)
   * [Version 3.x Roadmap](santedb/santedb/version-3.x-roadmap.md)
@@ -34,6 +33,7 @@
   * [Privacy Architecture](santedb/architecture/privacy-architecture.md)
   * [Data Storage Patterns](santedb/architecture/data-storage-patterns/README.md)
     * [Master Data Storage](santedb/architecture/data-storage-patterns/master-data-storage.md)
+* [End-User Instructions](santedb/end-user-instuctions.md)
 * [Installation](santedb/installation/README.md)
   * [Releases](santedb/installation/releases.md)
   * [Planning & Preparation Work](santedb/installation/planning-and-preparation-work/README.md)
