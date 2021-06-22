@@ -56,7 +56,7 @@ Informational versions are usually tied to milestones or date ranges. Typically 
 * Langley - 2.0.30 - 2.0.49
 * Montreal - 2.0.50 - 2.0.069
 * Nanaimo - 2.0.70 - 2.0.89
-* Ontario - 2.0.90 - 2.0.109
+* Ottawa - 2.0.90 - 2.0.109
 * Pickering - 2.0.110 - 2.0.129
 
 ## 
