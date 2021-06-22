@@ -4,6 +4,7 @@
 
 ## SanteDB
 
+* [End-User Instructions](santedb/end-user-instuctions.md)
 * [About SanteDB](santedb/santedb/README.md)
   * [SanteDB Versioning](santedb/santedb/santedb-versioning.md)
   * [Version 3.x Roadmap](santedb/santedb/version-3.x-roadmap.md)
