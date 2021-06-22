@@ -175,7 +175,7 @@ This test case does not use familial names to mimic contexts where only given na
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-4956 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-4956&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
