@@ -86,7 +86,7 @@ When submitting this resource to the SanteDB FHIR interface, you will receive an
 
 Or you can manually register the Organization using the REST api and then including the logical identifier as the resource link:
 
-```text
+```javascript
 {
     "resourceType":"Patient",
     "name": [
