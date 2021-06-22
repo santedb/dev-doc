@@ -6,6 +6,11 @@ description: Patient Identity Feed - Blocks Inappropriate Assigner
 
 This test ensures that an assigner cannot inappropriately attempt to assign an authoritative \(official\) identity for a domain which it does not have appropriate authority to do so. 
 
+## References
+
+* [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
+* [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
+
 ## Discussion
 
 SanteMPI provides mechanisms for two types of identity domains:

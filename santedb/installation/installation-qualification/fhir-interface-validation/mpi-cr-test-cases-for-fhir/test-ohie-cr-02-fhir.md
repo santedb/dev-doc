@@ -6,6 +6,11 @@ description: Patient Identity Feed - Resolve Identity Domains
 
 This test is a modified version of OHIE-CR-02 test case for HL7v2. Whereas the HL7v2 PIX behavior is intended to map missing identity domains to an authority, this test ensures that the solution can map between URL and OID identity systems.
 
+## References
+
+* [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
+* [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
+
 ## Discussion
 
 Jurisdictional deployments often use a heterogenous mixture of standards and software. Some software, such as those using HL7v2 or HL7v3/CDA may use OIDs and/or named identity domains for patient identification, whereas FHIR based systems may prefer URLs. These tests ensure that the SanteMPI solution maintains a consistent mapping between OID based identity domains and URL based identity domains.

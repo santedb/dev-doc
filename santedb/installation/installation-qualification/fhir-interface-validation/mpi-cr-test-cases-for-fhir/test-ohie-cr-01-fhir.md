@@ -6,6 +6,11 @@ description: Mobile Patient Identity Feed - Invalid Registration Message
 
 This test validates that the MPI/Client Registry rejects a poorly formed message.
 
+## References
+
+* [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
+* [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
+
 ## Discussion
 
 The SanteMPI product solution, when configured properly, will perform basic validation in order to ensure that it can appropriately route and process FHIR registration messages to/from source systems. Because FHIR has very minimal requirements for patient information, this test merely ensures that minimal useful data is required including:

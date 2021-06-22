@@ -6,6 +6,11 @@ description: Patient Identity Feed - Blocks Unknown Identity Domain / Authority
 
 This test validates that the receiving system rejects messages which contain identifiers which belong to identity domains which are not configured on the receiver.
 
+## References
+
+* [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
+* [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
+
 ## Discussion
 
 The SanteMPI solution must have an understanding about identity domains for which patients may be assigned identifiers. This is how the CR/SanteMPI ensures that data is semantically correct, that the sender has proper authority over the identity domain, and how the SanteMPI solution can validate identifiers prior to persisting and matching.
