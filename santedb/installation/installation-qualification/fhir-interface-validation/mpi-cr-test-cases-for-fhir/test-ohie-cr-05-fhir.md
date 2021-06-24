@@ -77,7 +77,7 @@ grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_FHIR&client_secret=
 
 The test harness sends an authenticated request to create a child record with a mother's demographics as a simple related person.
 
-* Identifier FHR-4956 in http://ohie.org/test/test with use official
+* Identifier FHR-050 in http://ohie.org/test/test with use official
 * Name: WIN MINH
 * Gender: Male
 * DOB: 2017-04-03
@@ -103,7 +103,7 @@ This test case does not use familial names to mimic contexts where only given na
           {
             "use": "official",
             "system": "http://ohie.org/test/test",
-            "value": "FHR-4956"
+            "value": "FHR-050"
           }
         ],
         "name": [
@@ -175,7 +175,7 @@ This test case does not use familial names to mimic contexts where only given na
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-4956&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-050&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -198,14 +198,14 @@ The test harness sends an authenticated request to create a newborn record with 
 
 Patient \(Mother\) details:
 
-* Identifier `FHR-4837` in `http://ohie.org/test/test` with use `official`
+* Identifier `FHR-051` in `http://ohie.org/test/test` with use `official`
 * Name: SARAH ABELS
 * Gender: Female
 * DOB: 1984-05-25
 
 Newborn information:
 
-* Identifier `FHR-4837` in `http://ohie.org/test/test`
+* Identifier `FHR-052` in `http://ohie.org/test/test`
 * Gender: Female
 * DOB: 2021-04-25
 
@@ -228,7 +228,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
           {
             "use": "official",
             "system": "http://ohie.org/test/test",
-            "value": "FHR-4837"
+            "value": "FHR-052"
           }
         ],
         "gender": "female",
@@ -248,7 +248,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
           {
             "use": "official",
             "system": "http://ohie.org/test/test",
-            "value": "FHR-0844"
+            "value": "FHR-051"
           }
         ],
         "patient": {
@@ -289,7 +289,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
           {
             "use": "normal",
             "system": "http://ohie.org/test/test",
-            "value": "FHR-0844"
+            "value": "FHR-051"
           }
         ],
         "name": [
@@ -366,7 +366,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-4837&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-051&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -378,8 +378,8 @@ Authorization: bearer XXXXXXX
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result. |
 | MUST |  | Contain the nameless newborn patient details \(validated by Gender and DOB\) |
-| MUST |  | Have an identifier for FHR-4837 in system http://ohie.org/test/test |
-| MUST |  | Have a RelatedPerson with identifier FHR-0844 for SARAH ABELS |
+| MUST |  | Have an identifier for FHR-051 in system http://ohie.org/test/test |
+| MUST |  | Have a RelatedPerson with identifier FHR-052 for SARAH ABELS |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
 ## Validate Mother Patient Created 
@@ -387,7 +387,7 @@ Authorization: bearer XXXXXXX
 The test harness will query by the identifier of the mother to validate that the receiver created the mother record for a patient.
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-0844&_include=RelatedPerson%3Alink HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-052&_include=RelatedPerson%3Alink HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -399,8 +399,8 @@ Authorization: bearer XXXXXXX
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result. |
 | MUST |  | Contain the mother's patient details  \(name of SARAH ABELS\) |
-| MUST |  | Have an identifier for FHR-0844 in system http://ohie.org/test/test |
-| MUST |  | Have a RelatedPerson with identifier FHR-0844 for SARAH ABELS |
+| MUST |  | Have an identifier for FHR-052 in system http://ohie.org/test/test |
+| MUST |  | Have a RelatedPerson with identifier FHR-052 for SARAH ABELS |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
 ## Patient Demographics Query for Mobile Paediatric Query
@@ -420,6 +420,6 @@ Accept: application/fhir+json
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result. |
 | MUST |  | Contain the child patient details |
-| MUST |  | Have an identifier for FHR-4837 in system http://ohie.org/test/test |
+| MUST |  | Have an identifier for FHR-051 in system http://ohie.org/test/test |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 

@@ -42,7 +42,7 @@ The test harness sends a registration request to the receiver with `http://ohie.
     {
       "use": "usual",
       "system": "http://ohie.org/test/test_block",
-      "value": "XXX4049393",
+      "value": "030",
       "assigner": {
         "display": "Fake Domain"
       }
@@ -83,7 +83,7 @@ The test harness sends a registration request to the receiver with `urn:oid:1.3.
     {
       "use": "usual",
       "system": "urn:oid:1.3.6.1.4.1.52820.3.72.5.9.4",
-      "value": "XXX4049393",
+      "value": "031",
       "assigner": {
         "display": "Fake Domain"
       }

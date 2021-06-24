@@ -69,7 +69,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
 
 * Name: Olly Oid
 * Gender: male
-* Identifier: FHR-403 , system: urn:oid:1.3.6.1.4.1.52820.3.72.5.9.1
+* Identifier: FHR-020 , system: urn:oid:1.3.6.1.4.1.52820.3.72.5.9.1
 
 ```javascript
 {
@@ -79,7 +79,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
   "identifier": [
     {
       "system": "urn:oid:1.3.6.1.4.1.52820.3.72.5.9.1",
-      "value": "FHR-403"
+      "value": "FHR-020"
     }
   ],
   "name": [
@@ -111,7 +111,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
 The test harness executes a query against the receiver using the URL version of the TEST domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-403 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-020 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -132,7 +132,7 @@ The test harness registers a patient using the URL representation of the system 
 
 * Name: Uma Url
 * Gender: female
-* Identifier: FHR-404 , system: http://ohie.org/test/test
+* Identifier: FHR-021 , system: http://ohie.org/test/test
 
 ```javascript
 {
@@ -142,7 +142,7 @@ The test harness registers a patient using the URL representation of the system 
   "identifier": [
     {
       "system": "http://ohie.org/test/test",
-      "value": "FHR-404"
+      "value": "FHR-021"
     }
   ],
   "name": [
@@ -174,7 +174,7 @@ The test harness registers a patient using the URL representation of the system 
 The test harness executes a query against the receiver using the OID version of the TEST domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1|FHR-403 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1|FHR-021 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```

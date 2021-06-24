@@ -88,3 +88,101 @@ The test harness sends a patient which ahs a mal-formed identifier entry which i
 | MUST |  | Carry an HTTP response code in the 400 series |
 | SHOULD |  | Carry an HTTP response code of 422 |
 
+## Invalid / Unknown Reference
+
+This test will ensure that the client registry rejects a message \(such as a transaction or PMIR bundle\) where a target of a relationship is unknown. 
+
+{% hint style="info" %}
+This test attempts to establish whether the Client Registry is capable of maintaining referential integrity between resources. This is important as, when configuring matching, data which is linked must be available to the matching engine at all times and missing or broken link data may result in partial / useless records.
+{% endhint %}
+
+```javascript
+{
+  "resourceType": "Patient",
+  "id": "1",
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "JOHNSTON",
+      "given": [
+        "ROBERT"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "use": "home"
+    },
+    {
+      "system": "phone",
+      "value": "(712) 767-0867",
+      "use": "home",
+      "rank": 1
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1983-02-05",
+  "deceasedBoolean": false,
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "line": [
+        "1220 Centennial Farm Road"
+      ],
+      "city": "ELLIOTT",
+      "state": "IA",
+      "postalCode": "51532"
+    }
+  ],
+  "managingOrganization" : {
+    "reference" : "Organization/3930293029302923"
+  }
+}
+```
+
+### Expected Behaviour
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left">PMIR Only</td>
+      <td style="text-align:left">Return MessageHeader with response.code = fatal-error</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Include an OperationOutcome entry in response</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Indicate that the resource failed validation and/or that the reason for</p>
+        <p>rejection was an unresolvable reference.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Carry an HTTP response code in the 400 series</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Carry an HTTP response code of 422 or 404</td>
+    </tr>
+  </tbody>
+</table>
+
+## 
+

@@ -105,7 +105,7 @@ grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TES
 
 The test harness sends an authenticated request to create a new patient with a new identifier in TEST\_A domain. Patient details:
 
-* Identifier `FHRA-0392` in `http://ohie.org/test/test_a` with use `official`
+* Identifier `FHRA-040` in `http://ohie.org/test/test_a` with use `official`
 * Name: JENNIFER JONES
 * Gender: Female
 * DOB: 1984-01-25
@@ -131,7 +131,7 @@ The patient is being sent from a source with the expectation that the informatio
           ]
         },
         "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-0392",
+        "value": "FHRA-040",
         "assigner": {
           "display": "Test Harness A Patient Identity"
         }
@@ -166,7 +166,7 @@ The patient is being sent from a source with the expectation that the informatio
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHRA-0392 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHRA-040 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -198,7 +198,7 @@ grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_B&client_secret=TES
 
 The test harness sends a registration message to the receiver, attempting to incorrectly register a new official identifier in the TEST\_A domain \(an identity domain for which it does not have authority to assign new identities\).
 
-* Identifier `FHRB-4938` in `http://ohie.org/test/test_b` with use `offical`
+* Identifier `FHRB-041` in `http://ohie.org/test/test_b` with use `offical`
 * Name: JENNIFER DOE
 * Gender: Female
 * DOB: 1989-01-25
@@ -220,7 +220,7 @@ The test harness sends a registration message to the receiver, attempting to inc
           ]
         },
         "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-4938",
+        "value": "FHRA-041",
         "assigner": {
           "display": "Test Harness A Patient Identity"
         }
@@ -311,7 +311,7 @@ If the receiver is operating in a mode that is lenient for identity domains, it 
       <td style="text-align:left">SHOULD</td>
       <td style="text-align:left"></td>
       <td style="text-align:left">
-        <p>Return the created patient with the identifier FHRB-4938 with use</p>
+        <p>Return the created patient with the identifier FHRB-041 with use</p>
         <p>set to usual/secondary and/or an extension indicating the identifier</p>
         <p>is informative.</p>
       </td>
@@ -327,8 +327,8 @@ The test harness sends a registration for a new patient in its own identity doma
 This mimics a use case where TEST B is registering a patient on a referral that came from TEST A or where TEST A is, in fact, a health insurance number or some other identifier domain from an official source.
 {% endhint %}
 
-* Identifier `FHRB-4736` in `http://ohie.org/test/test_b` with use `official`
-* Identifier `FHRA-0392` in `http://ohie.org/test/test_a` with use `usual`
+* Identifier `FHRB-042` in `http://ohie.org/test/test_b` with use `official`
+* Identifier `FHRA-040` in `http://ohie.org/test/test_a` with use `usual`
 * Name: JENNIFER JONES
 * Gender: Female
 * DOB: 1984-01-25
@@ -350,7 +350,7 @@ This mimics a use case where TEST B is registering a patient on a referral that 
           ]
         },
         "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-0392",
+        "value": "FHRA-040",
         "assigner": {
           "display": "Test Harness A Patient Identity"
         }
@@ -366,7 +366,7 @@ This mimics a use case where TEST B is registering a patient on a referral that 
           ]
         },
         "system": "http://ohie.org/test/test_b",
-        "value": "FHRB-4736",
+        "value": "FHRB-042",
         "assigner": {
           "display": "Test Harness B Patient Identity"
         }
@@ -401,7 +401,7 @@ This mimics a use case where TEST B is registering a patient on a referral that 
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_b|FHRB-4736 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_b|FHRB-042 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```

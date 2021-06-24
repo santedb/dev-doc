@@ -1,3 +1,7 @@
+---
+description: Patient Identity Cross Referencing
+---
+
 # TEST: OHIE-CR-06-FHIR
 
 This test ensures that the receiver registers patients in two different identity domains \(`TEST_A`and `TEST_B` \) and ensures that the receiver can appropriately cross reference the two identifiers in the identity domains using the IHE Patient Identity Cross Referencing \(PIXm\) transactions.
@@ -56,7 +60,7 @@ grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TES
 The test harness sends an IHE PIXm query for a patient with identifier FHIRA-8767 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-8767 HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-060 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -74,8 +78,8 @@ Accept: application/fhir+json
 
 The test harness sends an authenticated request to create a new patient with a new identifier in TEST\_A domain. Patient details:
 
-* Identifier `FHRA-8767` in `http://ohie.org/test/test_a` with use `official`
-* Identifier `SM093839283` in `http://ohie.org/test/nid` 
+* Identifier `FHRA-061` in `http://ohie.org/test/test_a` with use `official`
+* Identifier `NID061` in `http://ohie.org/test/nid` 
 * Name: JIM SMITH
 * Gender: Male
 * DOB: 1984-05-25
@@ -97,7 +101,7 @@ The test harness sends an authenticated request to create a new patient with a n
           ]
         },
         "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-8767",
+        "value": "FHRA-061",
         "assigner": {
           "display": "Test Harness A Patient Identity"
         }
@@ -105,7 +109,7 @@ The test harness sends an authenticated request to create a new patient with a n
       {
         "use":"usual",
         "system": "http://ohie.org/test/nhid",
-        "value":"SM093839283"
+        "value":"NID061"
       }
     ],
     "name": [
@@ -137,7 +141,7 @@ The test harness sends an authenticated request to create a new patient with a n
 The test harness sends an IHE PIXm query for a patient with identifier FHIRA-8767 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-8767 HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-061 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -199,8 +203,8 @@ grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_B&client_secret=TES
 
 The test harness sends an authenticated request to create a new patient with a new identifier in TEST\_B domain. Patient details:
 
-* Identifier `FHRB-87` in `http://ohie.org/test/test_b` with use `official`
-* Identifier `SM093839283` in `http://ohie.org/test/nid` 
+* Identifier `FHRB-062` in `http://ohie.org/test/test_b` with use `official`
+* Identifier `NID061` in `http://ohie.org/test/nid` 
 * Name: JIM SMITH
 * Gender: Male
 
@@ -221,7 +225,7 @@ The test harness sends an authenticated request to create a new patient with a n
           ]
         },
         "system": "http://ohie.org/test/test_b",
-        "value": "FHRA-87",
+        "value": "FHRB-062",
         "assigner": {
           "display": "Test Harness B Patient Identity"
         }
@@ -229,7 +233,7 @@ The test harness sends an authenticated request to create a new patient with a n
       {
         "use":"usual",
         "system": "http://ohie.org/test/nhid",
-        "value":"SM093839283"
+        "value":"NID061"
       }
     ],
     "name": [
@@ -257,10 +261,10 @@ The test harness sends an authenticated request to create a new patient with a n
 
 ## Execute PIXm Query Patient using NID for TEST\_A
 
-The test harness sends an IHE PIXm query for a patient with identifier SM093839283 to the receiver and explicitly requests a resolve to TEST\_A.
+The test harness sends an IHE PIXm query for a patient with identifier NID061 to the receiver and explicitly requests a resolve to TEST\_A.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/nid|SM093839283&targetDomain=http://ohie.org/test/test_a HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/nid|NID061&targetDomain=http://ohie.org/test/test_a HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -289,7 +293,7 @@ Accept: application/fhir+json
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Have one parameter carrying the identifier FHRA-8767 in <code>TEST_A</code>
+      <td style="text-align:left">Have one parameter carrying the identifier FHRA-061 in <code>TEST_A</code>
       </td>
     </tr>
     <tr>
@@ -308,7 +312,7 @@ Accept: application/fhir+json
 The test harness sends an IHE PIXm query for a patient with identifier FHRB-87 to the receiver asking for identities in TEST\_X.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_b|FHRB-87&targetDomain=http://ohie.org/test/test_x HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_b|FHRB-062&targetDomain=http://ohie.org/test/test_x HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
