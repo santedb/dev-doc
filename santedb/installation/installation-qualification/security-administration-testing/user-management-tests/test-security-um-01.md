@@ -14,7 +14,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Pre-Conditions / Setup
 
-Each of the tabs below \(corresponding to a form section\) contain a table that summarizes the values being input in the form required to create a new user.
+Each of the tabs below \(corresponding to a form section\) contain a table that summarizes valid possible values being input in the form required to create a new user.
 
 {% tabs %}
 {% tab title="Core Properties" %}
