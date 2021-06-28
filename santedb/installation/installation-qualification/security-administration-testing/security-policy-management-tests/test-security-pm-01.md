@@ -18,7 +18,7 @@ A user should have been logged in and have the right to create a policy.
 
 ## Actions/Steps
 
-1- Click the Create button  
+1- Click the **Create** button  
 
 ![](../../../../../.gitbook/assets/1%20%283%29.jpg)
 
