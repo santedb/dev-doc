@@ -6,20 +6,23 @@
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new application.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+A user should have been logged in and have the right to create an application.
 
 ## Actions/Steps
+
+1- Click the Create button  
+
+![](../../../../../.gitbook/assets/1%20%284%29.jpg)
 
 
 
 ## Expected Behaviour
 
-| Requirement | Description |
-| :--- | :--- |
-| MUST |  |
-| MUST NOT |  |
+1- Should navigate to the new Create Application page.
+
+![](../../../../../.gitbook/assets/2%20%281%29.jpg)
 
