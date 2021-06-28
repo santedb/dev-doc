@@ -18,9 +18,9 @@ A user should have been logged in and have the right to create an application.
 
 ![](../../../../../.gitbook/assets/1%20%284%29.jpg)
 
-2- Fill out the fields appropriately and click the Save button. \(keep in mind that  1-Name field is a required field and MUST be filled 2-Sofware Name should be filled too or  there would be a business rule violation error although the application is created anyways \) 
+2- Fill out the fields appropriately and click the **Save** button. \(Name field is a required field and MUST be filled \)
 
-![](../../../../../.gitbook/assets/3%20%287%29.jpg)
+![](../../../../../.gitbook/assets/3%20%2810%29.jpg)
 
 ## Expected Behaviour
 
@@ -31,7 +31,7 @@ A user should have been logged in and have the right to create an application.
 2-
 
 * Should momentarily display success message in the top right corner
-* When navigating to the Application Management List page, Should appear New Application\(**Create-Application-Test7**\) **** in the table of applications on the List page with Application Name matching that put in the form required to create a new application.
+* When navigating to the Applications/List page, Should appear New Application\(**Create-Application-Test7**\) **** in the list of applications.
 
 ![](../../../../../.gitbook/assets/4%20%282%29.jpg)
 
