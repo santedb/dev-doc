@@ -14,7 +14,7 @@ A user should have been logged in and have the right to lock an application.
 
 ## Actions/Steps
 
-1- Click the Lock button
+1- Click the **Lock** button
 
 ![](../../../../../.gitbook/assets/6%20%281%29.jpg)
 
