@@ -22,7 +22,7 @@ A user should have been logged in and have the right to create a policy.
 
 ![](../../../../../.gitbook/assets/1%20%283%29.jpg)
 
-2- Fill out the OID field and Name field \( since they are required fields \) and click the Save button.
+2- Fill out the fields appropriately, \(keep in mind that  OID field and Name field are required fields \) and click the Save button.
 
 ![](../../../../../.gitbook/assets/3%20%285%29.jpg)
 
