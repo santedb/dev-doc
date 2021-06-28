@@ -14,7 +14,7 @@ A user should have been logged in and have the right to create an application.
 
 ## Actions/Steps
 
-1- Click the Create button  
+1- Click the **Create** button  
 
 ![](../../../../../.gitbook/assets/1%20%284%29.jpg)
 
@@ -31,7 +31,7 @@ A user should have been logged in and have the right to create an application.
 2-
 
 * Should momentarily display success message in the top right corner
-* When navigate to Application Management List page, Should appear New Application\(**Create-Application-Test7**\) **** in the table of applications on the List page with Application Name matching that put in the form required to create a new application.
+* When navigating to the Application Management List page, Should appear New Application\(**Create-Application-Test7**\) **** in the table of applications on the List page with Application Name matching that put in the form required to create a new application.
 
 ![](../../../../../.gitbook/assets/4%20%282%29.jpg)
 
