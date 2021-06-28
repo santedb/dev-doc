@@ -61,6 +61,7 @@
         * [TEST: SECURITY-AM-01](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/test-security-am-01.md)
         * [TEST: SECURITY-AM-04](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/test-security-am-04.md)
         * [TEST: SECURITY-AM-05](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/untitled.md)
+        * [TEST: SECURITY-AM-06](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/test-security-am-06.md)
       * [Audit Repository Tests](santedb/installation/installation-qualification/security-administration-testing/audit-repository-tests/README.md)
         * [TEST: SECURITY-AR-01](santedb/installation/installation-qualification/security-administration-testing/audit-repository-tests/test-security-ar-01.md)
     * [Master Patient Index / Client Registry](santedb/installation/installation-qualification/fhir-interface-validation/README.md)
