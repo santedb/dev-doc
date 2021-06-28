@@ -55,6 +55,7 @@
         * [TEST: SECURITY-PM-01](santedb/installation/installation-qualification/security-administration-testing/security-policy-management-tests/test-security-pm-01.md)
       * [Device Management Tests](santedb/installation/installation-qualification/security-administration-testing/device-management-tests/README.md)
         * [TEST: SECURITY-DM-01](santedb/installation/installation-qualification/security-administration-testing/device-management-tests/test-security-dm-01.md)
+        * [TEST: SECURITY-DM-02](santedb/installation/installation-qualification/security-administration-testing/device-management-tests/test-security-dm-02.md)
       * [Application Management Tests](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/README.md)
         * [TEST: SECURITY-AM-01](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/test-security-am-01.md)
         * [TEST: SECURITY-AM-02](santedb/installation/installation-qualification/security-administration-testing/application-management-tests/test-security-am-02.md)
