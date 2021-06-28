@@ -28,7 +28,7 @@ A user should have been logged in and have the right to delete an application.
 
 ![](../../../../../.gitbook/assets/15%20%282%29.jpg)
 
-2- Deleted application \(Create-Application-Test\) Should disappear from the applications list page.
+2- Deleted application \(Create-Application-Test\) Should disappear from the Applications/List page.
 
 ![](../../../../../.gitbook/assets/17%20%281%29.jpg)
 
