@@ -6,15 +6,17 @@
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new device .
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+A user should have been logged in and have the right to create a device.
 
 ## Actions/Steps
 
+1- Click the **Create** button
 
+![](../../../../../.gitbook/assets/1%20%286%29.jpg)
 
 ## Expected Behaviour
 
