@@ -19,13 +19,11 @@ Here, if the user is granted all MDM : 1.3.6.1.4.1.33349.3.1.5.9.2.6 , and a fun
 
 ## Creating A New Policy
 
-If you wanted to create a new policy, for example, to control access to HIV records, you could select the **Create**  button. 
+If you wanted to create a new policy, for example, to control access to HIV records, you could select the **Create** button. 
 
 ![](../../../.gitbook/assets/1%20%282%29.jpg)
 
-You'll then be presented with the new policy ID screen:
-
-![](../../../.gitbook/assets/image%20%28129%29.png)
+You'll then be presented with the new policy ID screen. Fill out the fields appropriately and click the **Save** button.\(The OID and Name fields are required and must be filled out\)
 
 {% hint style="info" %}
 Carefully plan out our policy OIDs, it is important to keep in mind the hierarchy of the policy enforcement system in SanteDB so you don't accidentally allow a particular group access to a confidential record.
@@ -40,6 +38,10 @@ Override Option
 
 when an app/device/user has the ELEVATE grant on a policy for example "Access HIV ART Number" , the system will by default throw an error and deny access. If the user is assigned GRANT on the " Override" policy and the policy itself has "Override" , then then the user/app may prompt the user for a purpose of use , their username and password and then they can re-authenticate themselves requesting permission to that policy.
 {% endhint %}
+
+
+
+![](../../../.gitbook/assets/createpolicyform.png)
 
 Once created, your policy can be assigned to any device, group, or application. For example, if you wanted to DENY access to HIV records you would do so in the UI. Any records tagged with this policy would be disclosed, masked, or not disclosed based on the policy permission you've set.
 
