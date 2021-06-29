@@ -8,11 +8,11 @@ If you wanted to create a new device, you could select the **Create** button.
 
 You'll then be presented with the new Create Device screen. Fill out the fields appropriately \( Name, Model Name, and Operating System are required fields and must be filled out\) and click the **Save** button.
 
-![](../../../.gitbook/assets/4%20%284%29.jpg)
-
 
 
 Once created:
+
+![](../../../.gitbook/assets/4%20%284%29.jpg)
 
 * The device can be locked/unlocked
 * Device Secret can be changed\(reset\)
