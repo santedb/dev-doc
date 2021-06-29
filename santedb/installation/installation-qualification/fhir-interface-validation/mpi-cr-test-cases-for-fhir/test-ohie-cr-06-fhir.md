@@ -25,8 +25,6 @@ Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-04
 
 The NID domain is a sample domain which is being used to simulate a globally assignable national identifier \(such as a citizen card, etc.\) which can be used by the receiver to eliminate fuzzy matching from this test case. 
 
-
-
 ```markup
 <dataset id="NID Domain" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://santedb.org/data">
   <!-- TEST -->

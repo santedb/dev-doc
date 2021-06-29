@@ -103,3 +103,32 @@ Or you can manually register the Organization using the REST api and then includ
 }
 ```
 
+### FHIR References
+
+In FHIR a `Reference` object is used to link two resources together in a role. This is similar to SanteDB's `EntityRelationship` class, with the limitation that `EntityRelationship` does not permit the linking of objects which are not stored within the SanteDB instance. 
+
+#### Reference By UUID
+
+Referencing an object by UUID is the most preferred mechanism of resource referencing. Resources which are linked by UUID are first cross referenced in the current processing scope \(the bundle\), followed by database linkage. Reference by UUID is commonly represented as:
+
+```javascript
+"someReference" : {
+     "reference" : "Patient/bcddb6c7-2892-4b61-aec6-0dbdd718b792"
+}
+```
+
+However, the following, alternate form of reference link is also permitted:
+
+```javascript
+"someReference" : {
+     "type" : "Patient",
+     "identifier": {
+          "value": "bcddb6c7-2892-4b61-aec6-0dbdd718b792"
+     }
+}
+```
+
+#### Reference Bundle Object
+
+Referencing an object which is being processed within the same scope is also permitted. The 
+

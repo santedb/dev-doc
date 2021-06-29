@@ -4,14 +4,14 @@ description: Full Patient Registration
 
 # TEST: OHIE-CR-07-FHIR
 
-This test ensures that the Client Registry can properly store key fields related to patient demographics fields, and faithfully return them on subsequent queries using the fields stored within the CR.
+This test ensures that the Client Registry can properly store key fields related to patient demographics fields, and faithfully return them on subsequent queries using the fields stored within the CR ensuring that the CR properly supports the PDQm query parameters.
 
 ## References
 
 * [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
 * [HL7 FHIR RelatedPerson Resource](http://hl7.org/fhir/relatedperson.html)
 * [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
-* [Integrating the Health Enterprise Patient Demographics Query for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
+* [Integrating the Health Enterprise Patient Demographics Query for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)
 
 ## Discussion
 
@@ -23,7 +23,7 @@ The IHE PDQm transaction is used in scenarios where demographics fields are used
 
 ## Pre-Conditions
 
-Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-02](test-ohie-cr-02-fhir.md#pre-conditions-setup) have been run.
+Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-02](test-ohie-cr-02-fhir.md#pre-conditions-setup) and [TEST: OHIE-CR-06](test-ohie-cr-06-fhir.md) have been run.
 
 ### Create ORGs Domain
 
@@ -113,6 +113,105 @@ Additionally, the message has registration information for Flynn's insurance pro
   "type": "history",
   "entry": [
     {
+      "fullUrl": "Organization/ohie-cr-07-10-fhir-acme",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ohie-cr-07-10-fhir-acme",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://ohie.org/test/orgs",
+            "value": "FHR-072"
+          }
+        ],
+        "name": "ACME Insurance Providers Corp.",
+        "address": [
+          {
+            "use": "work",
+            "type": "physical",
+            "text": "321 James St. North Hamilton, Ontario, Canada, L8K5X2",
+            "line": [
+              "321 James St. North"
+            ],
+            "city": "Hamilton",
+            "state": "ON",
+            "postalCode": "L8K5X2",
+            "country": "CA"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization/ohie-cr-07-fhir-acme"
+      }
+    },
+    {
+      "fullUrl": "Organization/ohie-cr-07-fhir-mgr",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ohie-cr-07-fhir-mgr",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://ohie.org/test/orgs",
+            "value": "FHR-073"
+          }
+        ],
+        "name": "University Medical Centre"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization/ohie-cr-07-fhir-mgr"
+      }
+    },
+    {
+      "fullUrl": "Practitioner/ohie-cr-07-fhir-pract",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "ohie-cr-07-fhir-pract",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://ohie.org/test/practs",
+            "value": "FHR-074"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "Profile",
+            "prefix": [ "Dr" ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+19054854858",
+            "use": "mobile"
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "type": "both",
+            "text": "Unit 493, 5 West 9th Ave. Grimsby, Ontario, Canada",
+            "line": [
+              "5 West 9th Ave.",
+              "Unit 493"
+            ],
+            "city": "Grimsby",
+            "state": "ON",
+            "postalCode": "L4N3N4",
+            "country": "CA"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner/ohie-cr-07-fhir-pract"
+      }
+    },
+    {
       "fullUrl": "Patient/ohie-cr-07-10-fhir-flyn",
       "resource": {
         "resourceType": "Patient",
@@ -123,11 +222,6 @@ Additionally, the message has registration information for Flynn's insurance pro
             "use": "official",
             "system": "http://ohie.org/test/test",
             "value": "FHR-070"
-          },
-          {
-            "use": "official",
-            "system": "http://ohie.org/test/nid",
-            "value": "NID070"
           }
         ],
         "name": [
@@ -253,7 +347,7 @@ Additionally, the message has registration information for Flynn's insurance pro
               }
             ],
             "organization": {
-              "reference": "Organization/ohie-cr-07-fhir-acme",
+              "reference": "Organization/ohie-cr-07-10-fhir-acme",
               "display": "ACME Insurance Corp."
             }
           }
@@ -305,7 +399,7 @@ Additionally, the message has registration information for Flynn's insurance pro
         "id": "ohie-cr-07-10-fhir-wife",
         "identifier": [
           {
-            "use": "official",
+            "use": "usual",
             "system": "http://ohie.org/test/test",
             "value": "FHR-071"
           }
@@ -319,22 +413,6 @@ Additionally, the message has registration information for Flynn's insurance pro
               {
                 "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                 "code": "WIFE"
-              }
-            ]
-          },
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                "code": "C"
-              }
-            ]
-          },
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                "code": "N"
               }
             ]
           }
@@ -376,109 +454,305 @@ Additionally, the message has registration information for Flynn's insurance pro
         "method": "POST",
         "url": "RelatedPerson/ohie-cr-07-10-fhir-wife"
       }
-    },
-    {
-      "fullUrl": "Organization/ohie-cr-07-fhir-acme",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "ohie-cr-07-fhir-acme",
-        "identifier": [
-          {
-            "use": "normal",
-            "system": "http://ohie.org/test/orgs",
-            "value": "FHR-072"
-          }
-        ],
-        "name": "ACME Insurance Providers Corp.",
-        "address": [
-          {
-            "use": "work",
-            "type": "physical",
-            "text": "321 James St. North Hamilton, Ontario, Canada, L8K5X2",
-            "line": [
-              "321 James St. North"
-            ],
-            "city": "Hamilton",
-            "state": "ON",
-            "postalCode": "L8K5X2",
-            "country": "CA"
-          }
-        ]
-      },
-      "request": {
-        "method": "POST",
-        "url": "Organization/ohie-cr-07-fhir-acme"
-      }
-    },
-    {
-      "fullUrl": "Organization/ohie-cr-07-fhir-mgr",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "ohie-cr-07-fhir-mgr",
-        "identifier": [
-          {
-            "use": "normal",
-            "system": "http://ohie.org/test/orgs",
-            "value": "FHR-073"
-          }
-        ],
-        "name": "University Medical Centre"
-      },
-      "request": {
-        "method": "POST",
-        "url": "Organization/ohie-cr-07-fhir-mgr"
-      }
-    },
-    {
-      "fullUrl": "Parctitioner/ohie-cr-07-fhir-pract",
-      "resource": {
-        "resourceType": "Practitioner",
-        "id": "ohie-cr-07-fhir-pract",
-        "identifier": [
-          {
-            "use": "normal",
-            "system": "http://ohie.org/test/practs",
-            "value": "FHR-074"
-          }
-        ],
-        "name": [
-          {
-            "use": "usual",
-            "family": "Profile",
-            "prefix": [ "Dr" ]
-          }
-        ],
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "+19054854858",
-            "use": "mobile"
-          }
-        ],
-        "address": [
-          {
-            "use": "work",
-            "type": "both",
-            "text": "Unit 493, 5 West 9th Ave. Grimsby, Ontario, Canada",
-            "line": [
-              "5 West 9th Ave.",
-              "Unit 493"
-            ],
-            "city": "Grimsby",
-            "state": "ON",
-            "postalCode": "L4N3N4",
-            "country": "CA"
-          }
-        ]
-      },
-      "request": {
-        "method": "POST",
-        "url": "Organization/ohie-cr-07-fhir-pract"
-      }
     }
+
   ]
 }
 ```
 
+### Expected Behaviour
 
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST | PMIR Only | Return MessageHeader with response.code = ok |
+| MUST |  | Return HTTP code of 201 Created |
+| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
+| SHOULD |  | Include a Patient entry in response containing created patient |
+| SHOULD |  | Include a link to the master identity with code refer  |
+
+## Query By Patient Identifier
+
+The test harness issues a query for patient demographics using the Patient's NID identifier
+
+```http
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/nid|NID071 HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+**Alternate**: The test harness issues a query for patient demographics using only NID identifier
+
+```http
+GET http://sut:8080/fhir/Patient?identifier=NID071 HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return a bundle in JSON format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return HTTP code of 200</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Contain a bundle with exactly 1 result</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Match full demographics details outlined in Registration step</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Return the master identity and have links to the local identities</p>
+        <p>in one or more <code>link</code> elements</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Query By Patient Name
+
+The test harness issues a query for patient demographics using the Patient's family and given names.
+
+```http
+GET http://sut:8080/fhir/Patient?family=Profile&given=Flynn HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+**Alternate**: The test harness issues a query for patient using an exact modifier 
+
+```http
+GET http://sut:8080/fhir/Patient?family=Profile&given:exact=Flynn HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return a bundle in JSON format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return HTTP code of 200 Created</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Contain a bundle with exactly 1 result</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Match full demographics details outlined in Registration step</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Return the master identity and have links to the local identities</p>
+        <p>in one or more <code>link</code> elements</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Query By Approximate Birthdate
+
+The test harness sends a query to the client registry requests results based on a given birth date.
+
+```http
+GET http://sut:8080/fhir/Patient?birthdate=ap1982 HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return a bundle in JSON format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return HTTP code of 200</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Contain a result within the bundle with identifier matching NID071</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Patient must match demographics details outlined in Registration step</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Return the master identity and have links to the local identities</p>
+        <p>in one or more <code>link</code> elements</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Query By Combination of Parameters 
+
+{% hint style="info" %}
+This test is equivalent to OHIE-CR-15
+{% endhint %}
+
+The test harness sends a query to the client registry requests results based on a given birth date, family name, and given name .
+
+### Query By Name and Date Of Birth
+
+```http
+GET http://sut:8080/fhir/Patient?birthdate=ap1982&given=Flynn&family=Profile HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Query By Gender and Family Name
+
+```http
+GET http://sut:8080/fhir/Patient?gender=female&family=Profile HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Query By Gender and Date Of Birth
+
+```http
+GET http://sut:8080/fhir/Patient?gender=female&birthdate=1982-03-02 HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return a bundle in JSON format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return HTTP code of 200</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Contain exactly 1 result within the bundle with identifier matching NID071</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Patient must match demographics details outlined in Registration step</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Return the master identity and have links to the local identities</p>
+        <p>in one or more <code>link</code> elements</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## No-Result Queries
+
+This test step ensures that the demographics query provider behaves appropriately when no results are found. The test harness sends a query for demographics which results in no matches:
+
+```http
+GET http://sut:8080/fhir/Patient?gender=other&family=Profile HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Return a bundle in JSON format |
+| MUST |  | Return HTTP code of 200  |
+| MUST |  | Contain exactly 0 entry elements |
+| MUST |  | Contain a `total` element with value 0 |
+
+## Restricting Domains Returned
+
+This step ensures that the PDQm provider implements the behavior described in `3.78.4.1.2.4`. The test harness sends a PDQm query and requests domains returned, and ensures that the SUT removes non-compatible domains.
+
+```http
+GET http://sut:8080/fhir/Patient?identifier=NID071&identifier=http://ohie.org/test/nid| HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Return a bundle in JSON format |
+| MUST |  | Return HTTP code of 200  |
+| MUST |  | Contain exactly 1 entry elements  |
+| MUST |  | Entry element must contain exactly 1 identifier with value `NID071` |
+| MUST  |  | Entry element must not contain the TEST domain value of `FHR-071` |
+| MUST |  | Contain a `total` element with value 0 |
 

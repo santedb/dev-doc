@@ -12,6 +12,8 @@ SanteMPI acts as a custodian of patient master identities, as such it is importa
   * [Patient Identity Cross Referencing for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
   * [Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)  
 
+All implementations of FHIR interfaces in SanteDB are subject to the [FHIR Implementation Notes ](../../../../extending-santedb/service-apis/hl7-fhir/#fhir-implementation)provided, including limitations on `fullUrl` , identifiers, and offsite resources. 
+
 ## Patient Registration Test Cases
 
 The test cases which involve the merging/creation/updating of patient can be submitted to SanteMPI in three ways. The create tests only specify the contents of a bundle/patient being tested, and do not include any wrapper \(such as MessageHeader\) specifications. 
