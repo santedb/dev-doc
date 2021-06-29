@@ -2,11 +2,17 @@
 
 ## Purpose of Audits
 
-Auditing represents official inspection of user accounts. SanteSuite logs timestamped events that occur when actors \('device; user'/'user; device'\) perform actions \(execute/create/read/update/delete\) within the application resulting in various outcomes \('Success'/'Minor/Moderate Fail'/'Serious Fail'/etc.\). 
+Auditing represents official inspection of user accounts. SanteSuite logs **timestamped** **events** that occur when **actors** perform **actions** within the application that may result in various **outcomes**. 
 
 ![](../../../.gitbook/assets/purpose_highlight.png)
 
 ## Reviewing Audits
+
+Audits can be sorted and filtered by:
+
+* **Action** - can be Execute, Create, Read, Update, Delete depending on an event action.
+* **Event** - can be Security Alert, Authentication, Import Data, Export Data, or Query depending on what an actor does in the application that is being logged for auditing.
+* **Outcome** - can be Success, Minor/Moderate Fail, Serious Fail, ui.model.audit.outcome.epic
 
 Additional details are provided when viewing an audited event \(by clicking a 'View' button in the 'Actions' column\) with details about the:
 
@@ -19,17 +25,41 @@ Additional details are provided when viewing an audited event \(by clicking a 'V
 
 ### Event Information
 
-
+| Label | Description |
+| :--- | :--- |
+| EID |  |
+| Action |  |
+| Event |  |
+| Timestamp |  |
+| Outcome |  |
+| Process |  |
+| Source |  |
 
 ### Network
 
+![Diagram showing direction of data transfer between user and device during an execute action.](../../../.gitbook/assets/network_execute.png)
 
+![Diagram showing direction of data transfer between user and device during a read action.](../../../.gitbook/assets/network_read.png)
+
+| Label | Description |
+| :--- | :--- |
+| URL |  |
 
 ### Users & Computers
 
-
+| Label | Description |
+| :--- | :--- |
+| User Name |  |
+| Machine |  |
+| R |  |
+| Roles |  |
 
 ### Data & Objects
 
-
+| Label | Description |
+| :--- | :--- |
+| Type |  |
+| LC |  |
+| Role |  |
+| ID |  |
 
