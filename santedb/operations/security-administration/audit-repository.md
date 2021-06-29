@@ -6,6 +6,8 @@ Auditing represents official inspection of user accounts. SanteSuite logs timest
 
 ![](../../../.gitbook/assets/purpose_highlight.png)
 
+## Reviewing Audits
+
 Additional details are provided when viewing an audited event \(by clicking a 'View' button in the 'Actions' column\) with details about the:
 
 1. Event Information
@@ -14,8 +16,6 @@ Additional details are provided when viewing an audited event \(by clicking a 'V
 4. Data & Objects
 
 ![](../../../.gitbook/assets/purpose_highlight2.png)
-
-## Reviewing Audits
 
 ### Event Information
 
