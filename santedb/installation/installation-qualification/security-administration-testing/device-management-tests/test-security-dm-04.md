@@ -18,7 +18,7 @@ A user should have been logged in and have the right to delete a device.
 
 ![](../../../../../.gitbook/assets/11%20%281%29.jpg)
 
-2- - Click  **Ok** to confirm the delete.
+2- Click  **Ok** to confirm the delete.
 
 ![](../../../../../.gitbook/assets/12-1.jpg)
 
