@@ -10,11 +10,11 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Pre-Conditions / Setup
 
- A user should have been logged in and have the right to delete an application.
+ A user should have been logged in and have the right to undelete an application.
 
 ## Actions/Steps
 
-1- Navigate to the applications list page and click the **Show Deleted** button
+1- Navigate to the Applications/List page and click the **Show Deleted** button
 
 ![](../../../../../.gitbook/assets/17.jpg)
 
@@ -39,7 +39,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 3-
 
 * The undeleted application \(Create-Application-Test \) should disappear from the deleted applications list page 
-* The undeleted application \(Create-Application-Test\) should reappear on the applications list page.
+* The undeleted application \(Create-Application-Test\) should reappear on the Applications/List page.
 
 ![](../../../../../.gitbook/assets/18-4.jpg)
 
