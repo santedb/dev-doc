@@ -6,9 +6,9 @@ If you wanted to create a new application, you could select the **Create** butto
 
 ![](../../../.gitbook/assets/1%20%281%29.jpg)
 
- You'll then be presented with the new Create Application screen:
+ You'll then be presented with the new Create Application screen. Fill out the fields appropriately and click the **Save** button. \( Name and Sofware Name are required fields and must be filled out\).
 
-![](../../../.gitbook/assets/3%20%282%29.jpg)
+![](../../../.gitbook/assets/3%20%2812%29.jpg)
 
   
 Once created:‌
@@ -35,7 +35,7 @@ In order to assign a policy to an application you should click the **Edit** butt
 ![](../../../.gitbook/assets/8.jpg)
 
   
-then go to the **Associated Policies** tab, choose the policy you wish to add from the **drop-down list ,** and click the **+** button**:**
+then go to the **Associated Policies** tab, choose the policy you wish to add from the drop-down list, and click the **+** button**:**
 
 ![](../../../.gitbook/assets/10%20%282%29.jpg)
 
@@ -45,7 +45,7 @@ In order to delete an application you should click the **Delete** button:
 
 ![](../../../.gitbook/assets/6-1.jpg)
 
-To un-delete , click the **Show Deleted** button to go to the deleted applicatins screen and then click the **Un-Delete** button.
+To un-delete, click the **Show Deleted** button to go to the deleted applicatins screen and then click the **Un-Delete** button.
 
 ![](../../../.gitbook/assets/13.jpg)
 
