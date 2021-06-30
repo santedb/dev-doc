@@ -14,5 +14,19 @@ The santedb administration console can be used to maintain a remote SanteDB serv
 
 ![](../../../.gitbook/assets/image%20%285%29.png)
 
-The sdbac tooling is described in more detail on the administration console page.
+The sdbac tooling is described in more detail on the [administration console](../host-administration/santedb-icdr-admin-console/) page.
+
+To quickly access the administration console for executing sdbac commands in a [demo environment](../../installation/santedb-server/installing-a-development-demo-environment.md), follow these steps:
+
+1. Download the latest .zip release of sdbac from [https://github.com/santedb/santedb-server/releases](https://github.com/santedb/santedb-server/releases) and unzip the contents into any directory.
+2. Open a command prompt instance as an administrator and change the current working directory to where the unzipped contents of sdbac have been stored.
+3. Execute the command: 
+
+```text
+sdbac -r elbonia.santesuite.net --port=8443 --tls
+```
+
+{% hint style="info" %}
+Use credentials for the [demo environment](../../installation/santedb-server/installing-a-development-demo-environment.md) \(Administrator/Mohawk123\).
+{% endhint %}
 
