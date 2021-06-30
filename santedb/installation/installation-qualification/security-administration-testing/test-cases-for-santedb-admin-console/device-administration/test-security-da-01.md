@@ -22,7 +22,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Expected Behaviour
 
-1- Should appear a message showing the device secret followed by "CREATE &lt;device name&gt;".
+1- Should appear a "Device Secret" followed by "CREATE &lt;device name&gt;".
 
 ```text
 > device.add Create-Device-Test-11
