@@ -107,7 +107,7 @@
       * [Application Management](santedb/operations/security-administration/end-user-guide/application-management.md)
       * [Deleted Records](santedb/operations/security-administration/end-user-guide/deleted-records.md)
       * [Audit Repository](santedb/operations/security-administration/end-user-guide/audit-repository.md)
-    * [Administration Console Guide](santedb/operations/security-administration/administration-console-guide/README.md)
+    * [Admin Console Guide](santedb/operations/security-administration/administration-console-guide/README.md)
       * [User Management](santedb/operations/security-administration/administration-console-guide/user-management.md)
       * [Group / Role Management](santedb/operations/security-administration/administration-console-guide/group-role-management.md)
       * [Security Policy Management](santedb/operations/security-administration/administration-console-guide/security-policy-management.md)

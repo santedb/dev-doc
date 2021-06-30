@@ -1,2 +1,2 @@
-# Administration Console Guide
+# Admin Console Guide
 
