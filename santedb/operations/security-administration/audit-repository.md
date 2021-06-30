@@ -27,13 +27,13 @@ Additional details are provided when viewing an audited event \(by clicking a 'V
 
 | Label | Description |
 | :--- | :--- |
-| EID | Event ID. |
-| Action | Operation triggering the event; can be either _execute, create, read, update, delete_. |
-| Event | Security code representing the event triggered by an action; can be either _Security Alert, Authentication, Import Data, Export Data,_ _query_. |
-| Timestamp | Datetime of the event. |
-| Outcome | Result of the action triggering the event; can be either _Success, Minor/Moderate Fail, Serious Fail, ui.model.audit.outcome.epic._ |
-| Process | Name of the SanteDB process and corresponding process ID handling the event. |
-| Source |  |
+| **EID** | Event ID. |
+| **Action** | Operation triggering the event; can be either _execute, create, read, update, delete_. |
+| **Event** | Security code representing the event triggered by an action; can be either _Security Alert, Authentication, Import Data, Export Data,_ _query_. |
+| **Timestamp** | Datetime of the event. |
+| **Outcome** | Result of the action triggering the event; can be either _Success, Minor/Moderate Fail, Serious Fail, ui.model.audit.outcome.epic._ |
+| **Process** | Name of the SanteDB process and corresponding process ID handling the event. |
+| **Source** |  |
 
 ### Network
 
@@ -45,23 +45,23 @@ The following network diagrams show how each may differ depending on the event a
 
 | Label | Description |
 | :--- | :--- |
-| URL |  |
+| **URL** |  |
 
 ### Users & Computers
 
 | Label | Description |
 | :--- | :--- |
-| User Name | Name of the user that triggered the event with an action. |
-| Machine | Name of the device where the event was triggered from. |
-| R |  |
-| Roles | Name\(s\) of any roles associated with the User that triggered the event. |
+| **User Name** | Name of the user that triggered the event with an action. |
+| **Machine** | Name of the device where the event was triggered from. |
+| **R** |  |
+| **Roles** | Name\(s\) of any roles associated with the User that triggered the event. |
 
 ### Data & Objects
 
 | Label | Description |
 | :--- | :--- |
-| Type |   |
-| LC |  |
-| Role |  |
-| ID |  |
+| **Type** |   |
+| **LC** |  |
+| **Role** |  |
+| **ID** |  |
 
