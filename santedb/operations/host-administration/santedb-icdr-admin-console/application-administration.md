@@ -21,7 +21,7 @@ a9ada8ae-9cbd-11eb-be65-00155d640b09   test-new3                                
 
 ## Adding Applications
 
-You can add an application to the iCDR instance using the application.add command and specifying the application name.
+You can add an application to the iCDR instance using the application.add command and specifying the name you wish to give to the application.
 
 ```text
 > application.add Create-Application-Test-10
