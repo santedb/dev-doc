@@ -190,7 +190,7 @@ The `santedb-icdr` container is the generic ICDR instance for SanteDB, however S
 
 In order to run a minimal SanteMPI application, you can exchange `santedb-icdr` with the `santedb-mpi` image, and apply the appropriate service configuration.
 
-```markup
+```yaml
 version: "3.3"
 
 services:
