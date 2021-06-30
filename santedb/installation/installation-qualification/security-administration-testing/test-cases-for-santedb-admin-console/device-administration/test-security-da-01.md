@@ -28,7 +28,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Expected Behaviour
 
-1- Should appear a "Device Secret: ..." followed by "CREATE &lt;device name&gt;".
+1- Should show : "Device Secret: ..." followed by "CREATE &lt;device name&gt;".
 
 ```text
 > device.add Create-Device-Test-11
@@ -37,7 +37,7 @@ CREATE Create-Device-Test-11
 >
 ```
 
-2- Should appear the newly created device \("Create-Device-Test-11"\) in the list of devices.
+2- Should the newly created device appear\("Create-Device-Test-11"\) on the list of devices.
 
 ```text
 > device.list
