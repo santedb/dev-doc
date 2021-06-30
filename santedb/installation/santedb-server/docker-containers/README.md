@@ -186,3 +186,45 @@ The `santedb-icdr` container is the generic ICDR instance for SanteDB, however S
 * `santedb-mpi` : SanteDB + SanteMPI plugins pre-deployed
 * `santedb-guard` : SanteDB + SanteGuard plugins pre-deployed
 
+### SanteMPI Application
+
+In order to run a minimal SanteMPI application, you can exchange `santedb-icdr` with the `santedb-mpi` image, and apply the appropriate service configuration.
+
+```markup
+version: "3.3"
+
+services:
+  db:
+    image: postgres
+    container_name: sdb-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: santedb
+      POSTGRES_PASSWORD: SanteDB123
+    restart: always
+
+  santedb:
+    image: santesuite/santedb-mpi:latest
+    container_name: santedb-mpi
+    environment:
+      - SDB_FEATURE=LOG;DATA_POLICY;AUDIT_REPO;ADO;PUBSUB_ADO;RAMCACHE;SEC;SWAGGER;OPENID;FHIR;HL7;HDSI;AMI;BIS;MDM;MATCHING;IHE_PIXM;IHE_PDQM;IHE_PMIR
+      - SDB_MATCHING_MODE=WEIGHTED
+      - SDB_MDM_RESOURCE=Patient=org.santedb.matching.patient.default
+      - SDB_MDM_AUTO_MERGE=false
+      - SDB_DB_MAIN=server=sdb-postgres;port=5432; database=santedb; user id=santedb; password=SanteDB123; pooling=true; MinPoolSize=5; MaxPoolSize=15; Timeout=60;
+      - SDB_DB_AUDIT=server=sdb-postgres;port=5432; database=auditdb; user id=santedb; password=SanteDB123; pooling=true; MinPoolSize=5; MaxPoolSize=15; Timeout=60;
+      - SDB_DB_MAIN_PROVIDER=Npgsql
+      - SDB_DB_AUDIT_PROVIDER=Npgsql
+      - SDB_DATA_POLICY_ACTION=HIDE
+      - SDB_DELAY_START=5000
+    ports:
+      - "8080:8080"
+      - "2100:2100"
+    depends_on:
+      - db
+    restart: always
+```
+
+
+
