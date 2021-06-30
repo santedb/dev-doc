@@ -287,7 +287,31 @@ The supported resources for MDM management are:
 | Place | Places the Place resource into MDM storage management. This is useful for centralized Geographic or Facility Registries |
 | Organization | Organizations \(such as companies, government agencies, etc.\) in MDM control. |
 
+## SanteMPI Features
 
+You can enable specific SanteMPI features by enabling the `IHE_*` interfaces on the `santedb-mpi` container.
 
+### IHE PIX for Mobile
 
+To enable the `$ihe-pix` operation in the container:
+
+```text
+SDB_FEATURE=...;IHE_PIXM;...
+```
+
+### IHE PDQ for Mobile
+
+To enable the PDQm behaviors on the `/Patient` resource:
+
+```text
+SDB_FEATURE=...;IHE_PDQM;...
+```
+
+### IHE PMIR Feature
+
+To enable the `urn:ihe:iti:pmir:2019:patient-feed` operation:
+
+```text
+SDB_FEATURE=...;IHE_PMIR;...
+```
 

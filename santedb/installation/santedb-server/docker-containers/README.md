@@ -179,3 +179,10 @@ COPY custom.pak /santedb/applets/custom.pak
 
 Upon load, the SanteDB iCDR server will load your package files and will load any business rules files required.
 
+## Other Containers
+
+The `santedb-icdr` container is the generic ICDR instance for SanteDB, however SanteSuite provides other containers which are pre-configured with the necessary plugins for those functions:
+
+* `santedb-mpi` : SanteDB + SanteMPI plugins pre-deployed
+* `santedb-guard` : SanteDB + SanteGuard plugins pre-deployed
+
