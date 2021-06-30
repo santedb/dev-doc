@@ -2,7 +2,7 @@
 
 ## References
 
-* [Application Management](../../../../operations/security-administration/application-management.md)
+* [Application Management](../../../../operations/security-administration/end-user-guide/application-management.md)
 
 ## Discussion
 

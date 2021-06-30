@@ -6,11 +6,11 @@ description: Testing the successful creation of a new user.
 
 ## References
 
-* [User Management](../../../../operations/security-administration/user-management.md)
+* [User Management](../../../../operations/security-administration/end-user-guide/user-management.md)
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](../../../../operations/security-administration/user-management.md) page.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](../../../../operations/security-administration/end-user-guide/user-management.md) page.
 
 ## Pre-Conditions / Setup
 

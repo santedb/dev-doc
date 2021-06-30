@@ -2,7 +2,7 @@
 
 ## References
 
-* [Device Management](../../../../operations/security-administration/device-management.md)
+* [Device Management](../../../../operations/security-administration/end-user-guide/device-management.md)
 
 ## Discussion
 

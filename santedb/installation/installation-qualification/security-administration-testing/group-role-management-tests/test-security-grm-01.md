@@ -2,7 +2,7 @@
 
 ## References
 
-* [Group / Role Management](../../../../operations/security-administration/group-role-management.md)
+* [Group / Role Management](../../../../operations/security-administration/end-user-guide/group-role-management.md)
 
 ## Discussion
 

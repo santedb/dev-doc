@@ -2,7 +2,7 @@
 
 ## References
 
-* [Audit Repository](../../../../operations/security-administration/audit-repository.md)
+* [Audit Repository](../../../../operations/security-administration/end-user-guide/audit-repository.md)
 
 ## Discussion
 
