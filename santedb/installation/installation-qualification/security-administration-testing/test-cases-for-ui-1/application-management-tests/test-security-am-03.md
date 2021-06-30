@@ -2,7 +2,7 @@
 
 ## References
 
-* [Application Management](../../../../operations/security-administration/application-management.md)
+* [Application Management](../../../../../operations/security-administration/application-management.md)
 
 ## Discussion
 
@@ -16,19 +16,19 @@ A user should have been logged in and have the right to unlock an application.
 
 1- Click the **Unlock** button
 
-![](../../../../../.gitbook/assets/10%20%283%29.jpg)
+![](../../../../../../.gitbook/assets/10%20%283%29.jpg)
 
 2- Click  **Ok** to confirm the unlock.
 
-![](../../../../../.gitbook/assets/12%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/12%20%281%29.jpg)
 
 ## Expected Behaviour
 
 1- Should display a message asking to confirm the unlock.
 
-![](../../../../../.gitbook/assets/11.jpg)
+![](../../../../../../.gitbook/assets/11.jpg)
 
 2- Should appear the Status of the application changed to Active.
 
-![](../../../../../.gitbook/assets/13%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/13%20%281%29.jpg)
 

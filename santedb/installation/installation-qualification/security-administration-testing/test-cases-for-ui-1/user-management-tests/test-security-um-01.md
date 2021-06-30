@@ -6,11 +6,11 @@ description: Testing the successful creation of a new user.
 
 ## References
 
-* [User Management](../../../../operations/security-administration/user-management.md)
+* [User Management](../../../../../operations/security-administration/user-management.md)
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](../../../../operations/security-administration/user-management.md) page.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](../../../../../operations/security-administration/user-management.md) page.
 
 ## Pre-Conditions / Setup
 
@@ -51,7 +51,7 @@ Each of the tabs below \(corresponding to a form section\) contain a table that 
 ## Expected Behaviour
 
 * Navigate to User Management Index page.
-* Momentarily display success message in top right corner: ![](../../../../../.gitbook/assets/user_successtoast.png) 
+* Momentarily display success message in top right corner: ![](../../../../../../.gitbook/assets/user_successtoast.png) 
 * New user \(**ClinicalStaffUser123**\) ****should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
 
 

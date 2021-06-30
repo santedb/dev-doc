@@ -2,7 +2,7 @@
 
 ## References
 
-* [Application Management](../../../../operations/security-administration/application-management.md)
+* [Application Management](../../../../../operations/security-administration/application-management.md)
 
 ## Discussion
 
@@ -16,19 +16,19 @@ A user should have been logged in and have the right to delete an application.
 
 1- Click the **Delete** button
 
-![](../../../../../.gitbook/assets/14%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/14%20%281%29.jpg)
 
 2- Click  **Ok** to confirm the delete.
 
-![](../../../../../.gitbook/assets/16%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/16%20%281%29.jpg)
 
 ## Expected Behaviour
 
 1- Should display a message asking to confirm the delete.
 
-![](../../../../../.gitbook/assets/15%20%282%29.jpg)
+![](../../../../../../.gitbook/assets/15%20%282%29.jpg)
 
 2- Deleted application \(Create-Application-Test\) Should disappear from the Applications/List page.
 
-![](../../../../../.gitbook/assets/17%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/17%20%281%29.jpg)
 

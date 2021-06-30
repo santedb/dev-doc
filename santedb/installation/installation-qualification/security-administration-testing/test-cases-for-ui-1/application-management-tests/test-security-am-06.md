@@ -2,7 +2,7 @@
 
 ## References
 
-* [Application Management](../../../../operations/security-administration/application-management.md)
+* [Application Management](../../../../../operations/security-administration/application-management.md)
 
 ## Discussion
 
@@ -16,19 +16,19 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Edit** button.
 
-![](../../../../../.gitbook/assets/19%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/19%20%281%29.jpg)
 
 2- Choose the to be added policy \( for example: Create Local Users \) from the dropdown list and click the **+** button.
 
-![](../../../../../.gitbook/assets/20%20%281%29.jpg)
+![](../../../../../../.gitbook/assets/20%20%281%29.jpg)
 
 ## Expected Behaviour
 
 1- Should navigate to the Applications/Edit Application page.
 
-![](../../../../../.gitbook/assets/20%20%282%29.jpg)
+![](../../../../../../.gitbook/assets/20%20%282%29.jpg)
 
 2- Assigned policy \( Create Local Users \) should appear under the Associated Policies tab.
 
-![](../../../../../.gitbook/assets/21.jpg)
+![](../../../../../../.gitbook/assets/21.jpg)
 

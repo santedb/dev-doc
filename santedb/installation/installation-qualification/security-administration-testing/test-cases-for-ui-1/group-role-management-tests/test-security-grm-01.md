@@ -1,8 +1,8 @@
-# TEST: SECURITY-AR-01
+# TEST: SECURITY-GRM-01
 
 ## References
 
-* [Audit Repository](../../../../operations/security-administration/audit-repository.md)
+* [Group / Role Management](../../../../../operations/security-administration/group-role-management.md)
 
 ## Discussion
 
