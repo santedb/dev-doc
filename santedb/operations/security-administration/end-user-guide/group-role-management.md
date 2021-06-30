@@ -32,18 +32,6 @@ To assign a new policy to a group, search for the policy and press the add butto
 
 ![](../../../../.gitbook/assets/image%20%2825%29.png)
 
-#### Determining Effective Permissions
-
-You can determine effective permissions on a particular user by running the SanteDB Administration console and typing:
-
-```text
-user.info <<USERNAME>>
-```
-
-Which will produce a list of effective permissions for that user:
-
-![](../../../../.gitbook/assets/image%20%2834%29.png)
-
 ### Managing Users in Groups
 
 Managing user memberships in a group is done the same was as managing policies. You can add or remove users to/from a group using the Members portion of the edit group panel
