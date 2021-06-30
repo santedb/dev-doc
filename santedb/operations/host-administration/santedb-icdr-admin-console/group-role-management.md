@@ -1,4 +1,4 @@
-# Group / Role Management
+# Group / Role Administration
 
 ## Determining Effective Permissions
 

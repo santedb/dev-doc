@@ -6,7 +6,7 @@ description: Testing the successful creation of a new policy.
 
 ## References
 
-* [Security Policy Management](../../../../operations/security-administration/end-user-guide/security-policy-management.md)
+* [Security Policy Management](../../../../operations/security-administration/security-policy-management.md)
 
 ## Discussion
 
