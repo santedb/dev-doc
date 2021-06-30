@@ -1,4 +1,4 @@
-# TEST: SECURITY-DA-01
+# TEST: SECURITY-DA-02
 
 ## References
 
@@ -6,7 +6,7 @@
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console when adding a new device using the console commands.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new device.
 
 ## Pre-Conditions / Setup
 
