@@ -37,7 +37,7 @@ Should have the iCDR administrative console open and logged in successfully.
 >
 ```
 
-2- Should appear some value for "Lockout" row.
+2- Should appear  "Lockout" row with some value.
 
 ```text
 > device.info Create-Device-Test
