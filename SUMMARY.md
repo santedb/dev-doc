@@ -34,6 +34,7 @@
   * [Data Storage Patterns](santedb/architecture/data-storage-patterns/README.md)
     * [Master Data Storage](santedb/architecture/data-storage-patterns/master-data-storage.md)
 * [Installation](santedb/installation/README.md)
+  * [SanteDB within Instant OpenHIE](santedb/installation/santedb-within-instant-openhie.md)
   * [Releases](santedb/installation/releases.md)
   * [Planning & Preparation Work](santedb/installation/planning-and-preparation-work/README.md)
     * [Deployment Patterns](santedb/installation/planning-and-preparation-work/deployment-patterns.md)
