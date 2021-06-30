@@ -6,7 +6,7 @@
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console when creating a new device using the console commands.
+This is a basic test to demonstrate the Admin Console when adding a new device using the console commands.
 
 ## Pre-Conditions / Setup
 
