@@ -93,6 +93,7 @@
     * [SanteDB iCDR](santedb/operations/host-administration/santedb-icdr.md)
     * [SanteDB iCDR Admin Console](santedb/operations/host-administration/santedb-icdr-admin-console/README.md)
       * [User Administration](santedb/operations/host-administration/santedb-icdr-admin-console/user-administration.md)
+      * [Policy Administration](santedb/operations/host-administration/santedb-icdr-admin-console/policy-administration.md)
       * [Application Administration](santedb/operations/host-administration/santedb-icdr-admin-console/application-administration.md)
       * [Device Administration](santedb/operations/host-administration/santedb-icdr-admin-console/untitled.md)
   * [Reference Data Administration](santedb/operations/reference-data-administration.md)
