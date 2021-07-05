@@ -1,5 +1,9 @@
 # Application Management
 
+## Application Identity
+
+When an authentication request is made against the Access Control System, depending on the type of authentication request the ACS will call the identity providers to authenticate the identity information provided.
+
 ## Creating A New Application
 
 If you wanted to create a new application, you could select the **Create** button.
