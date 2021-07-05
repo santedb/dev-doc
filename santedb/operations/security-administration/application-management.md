@@ -17,7 +17,7 @@ If you wanted to create a new application, you could select the **Create** butto
   
 Once created:‌
 
-* The apllication can be locked/unlocked
+* The application can be locked/unlocked
 * A policy can be assigned to the application
 * The application can be deleted/undeleted
 
