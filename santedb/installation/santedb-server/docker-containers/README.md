@@ -34,6 +34,26 @@ SDB_FEATURE=AUDIT_SHIPPING;ADO;AUDIT_REPO
 
 The features which are available for the default SanteDB docker container are:
 
+| Code | Feature |
+| :--- | :--- |
+| LOG | Core data logging \(see: [Configuration Notes](feature-configuration.md#diagnostic-logging)\) |
+| DATA\_POLICY | Data privacy enforcement \(see: [Configuration Notes](feature-configuration.md#data-privacy-controls)\) |
+| AUDIT\_REPO | Internal security audit repository \(see: [Configuration Notes](feature-configuration.md#audit-repository)\) |
+| ADO | Core Application Data Objects \(ADO.NET\) data persistence \(see: [Configuration Notes](feature-configuration.md#ado-data-storage)\) |
+| PUBSUB\_ADO | Publish / Subscribe Subsystem \(see: [Configuration Notes](feature-configuration.md#publish-subscribe-functions)\) |
+| RAMCACHE | In-Process Memory Cache \(see: [Configuration Notes](feature-configuration.md#in-memory-caching)\) |
+| REDIS | REDIS based shared cache \(see: [Configuration Notes](feature-configuration.md#redis-caching)\) |
+| SEC | Core Security Functions \(PIP, PDP, PEP\) |
+| SWAGGER | OpenAPI / Swagger Metadata Endpoint \(see: Configuration Notes\) |
+| OPENID | OAUTH 2.0 / OpenID IdP Provider \(see: [Configuration Notes](feature-configuration.md#openid-connect-idp)\) |
+| MDM | Master Data Management Functions \(see: [Configuration Notes](feature-configuration.md#master-data-management-and-record-linking)\) |
+| FHIR | HL7 FHIR Endpoint \(see: [Configuration Notes](feature-configuration.md#hl7-fast-health-interoperability-resources-fhir)\) |
+| HL7 | HL7 Version 2.x Endpoint \(see: [Configuration Notes](feature-configuration.md#hl7-version-2-x)\) |
+| HDSI | Core Health Data Service Interface \(see: [Configuration Notes](feature-configuration.md#core-health-data-service-interface)\) |
+| AMI | Administrative Management Interface \(see: [Configuration Notes](feature-configuration.md#core-administrative-management-interface)\) |
+| BIS | Business Intelligence \(reporting/query set/etc.\) interface \(see: [Configuration Notes](feature-configuration.md#core-business-intelligence-interfaces)\) |
+| MATCHING | Internal SanteDB Matching Engine \(see: [Configuration Notes](feature-configuration.md#record-matching-plugin)\) |
+
 ### Database Connections
 
 The location of your PostgreSQL server, and the database to use for the container can be specified with the connection string environment variables: 
@@ -237,6 +257,14 @@ services:
       - db
     restart: always
 ```
+
+The SanteMPI container adds the following plugins to SanteDB which can be enabled/disabled with `SDB_FEATURE`:
+
+| Code | Feature |
+| :--- | :--- |
+| IHE\_PDQM | Enables the Patient Demographics Query for Mobile query parameters and extensions. |
+| IHE\_PIXM | Enables the Patient Identity Cross Reference \(`$ihe-pix`\) FHIR operation |
+| IHE\_PMIR | Enables the Patient Master Identity Registry function \(`urn:ihe:iti:pmir:2019:patient-feed` \) FHIR message |
 
 
 
