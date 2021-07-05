@@ -46,7 +46,7 @@ The parameters for "**device.add"** are:
 
 ## Locking/Unlocking Devices
 
-To lock or unlock a device, the "**device.lock"** command is used specifying whether the lock should be set or unset.
+To lock or unlock a device, the "**device.lock"** command with our without the "**-l**" flag to specify whether the lock should be set or unset.
 
 To lock the device "Create-Device-Test":
 
