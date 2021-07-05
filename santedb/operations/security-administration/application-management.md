@@ -2,7 +2,7 @@
 
 ## Application Identity
 
-When an authentication request is made against the Access Control System, depending on the type of authentication request the ACS will call the identity providers to authenticate the identity information provided.
+Application Identity is defined as identity of scope of grants permitted to the application and is explained further in the 'Principals and Identities' section from [Security Architecture](../../architecture/security-architecture.md) .
 
 ## Creating A New Application
 
