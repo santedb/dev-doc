@@ -12,6 +12,18 @@ The docker containers all use the mono:latest as their root container.
 
 ## Configuring the Docker Containers
 
+### Container Directory/File Structures
+
+The container structure is as follows:
+
+* `/santedb` - Directory which contains the application code for SanteDB
+* `/santedb/docker.lastconfig` - The configuration file \(in XML form\) which represents the computed configuration file for the last run of the docker host.
+* `/santedb/data` - Data seeding directory in Dataset format
+* `/santedb/data/fhir` - Data seeding for FHIR files \(JSON or XML\)
+* `/santedb/applets` - Application directory \(where compile applets files should be\)
+* `/santedb/match` - Directory for match configuration source files
+* `/var/log/santedb_yyyyMMdd.log` - SanteDB log file for current date
+
 ### Enabling or Disabling Features
 
 The docker containers are configured using environment variables. Features can be turned on/off using the environment variable SDB\_FEATURE environment variable, for example, to enable the core features and ATNA audit shipping:
