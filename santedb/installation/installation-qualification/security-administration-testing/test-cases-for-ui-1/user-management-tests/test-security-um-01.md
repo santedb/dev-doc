@@ -14,7 +14,12 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Pre-Conditions / Setup
 
-Each of the tabs below \(corresponding to a form section\) contain a table that summarizes valid possible values being input in the form required to create a new user.
+1. User must be logged into an account with policies granted for creating users.
+2. Navigate to **Administration Panel / Security / Users / Index**.
+
+{% hint style="info" %}
+Each of the tabs below \(corresponding to a form section\) contain a table that summarizes valid possible values for the form to create a new user.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Core Properties" %}
@@ -46,11 +51,29 @@ Each of the tabs below \(corresponding to a form section\) contain a table that 
 
 ## Actions/Steps
 
+    1. Click the **Create** button to navigate from **Administration Panel / Security / Users / Index** to **Administration Panel / Security / Users / Create User**.
 
+![](../../../../../../.gitbook/assets/test1_createbutton.png) 
+
+    2. Enter valid text into the **Core Properties** drop-down form group.
+
+![](../../../../../../.gitbook/assets/test1_coreproperties.png)
+
+    3. Enter valid text into the **Security Properties** drop-down form group.
+
+![](../../../../../../.gitbook/assets/test1_securityproperties.png)
+
+    4. Enter valid text into the **Demographic Properties** drop-down form group.
+
+![](../../../../../../.gitbook/assets/test1_demographicproperties.png)
+
+    5. Click the **Save** button.
+
+    ![](../../../../../../.gitbook/assets/test1_savebutton.png) 
 
 ## Expected Behaviour
 
-* Navigate to User Management Index page.
+* Automatically navigate to the **Administration Panel / Security / Users / Index** page.
 * Momentarily display success message in top right corner: ![](../../../../../../.gitbook/assets/user_successtoast.png) 
 * New user \(**ClinicalStaffUser123**\) ****should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
 
