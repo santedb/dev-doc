@@ -1,6 +1,6 @@
 # Policy Administration
 
-You can use the iCDR administrative console to list policies and assign policies to objects within the iCDR instance.
+You can use the iCDR administrative console to list policies and assign policies to objects within the iCDR instance. Creating new policies needs to be done through the UI. For more information visit [Security Policy Management](../../security-administration/security-policy-management.md).
 
 ### Viewing Policies
 
