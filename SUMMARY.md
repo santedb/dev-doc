@@ -91,6 +91,7 @@
           * [TEST: SECURITY-AA-03](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/test-security-aa-03.md)
           * [TEST: SECURITY-AA-04](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/test-security-aa-04.md)
           * [TEST: SECURITY-AA-05](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/test-security-aa-05.md)
+          * [TEST: SECURITY-AA-06](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/test-security-aa-06.md)
     * [Master Patient Index / Client Registry](santedb/installation/installation-qualification/fhir-interface-validation/README.md)
       * [MPI/CR Test Cases for HL7v2](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-hl7v2.md)
       * [MPI/CR Test Cases for FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/README.md)
