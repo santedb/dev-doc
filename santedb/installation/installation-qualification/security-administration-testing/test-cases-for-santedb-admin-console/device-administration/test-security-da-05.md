@@ -35,7 +35,7 @@ Should have the iCDR administrative console open and logged in successfully.
 >
 ```
 
-2- Should  the deleted device disappear \("Create-Device-Test"\) from the list of devices.
+2- Should  the deleted device  \("Create-Device-Test"\) disappear from the list of devices.
 
 ```text
 > device.list
