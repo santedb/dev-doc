@@ -30,6 +30,8 @@ CREATE Create-Application-Test-10
 >
 ```
 
+The parameters 
+
 ## Locking/Unlocking Applications
 
 To lock or unlock an application, the application.lock command is used specifying whether the lock should be set or unset.
