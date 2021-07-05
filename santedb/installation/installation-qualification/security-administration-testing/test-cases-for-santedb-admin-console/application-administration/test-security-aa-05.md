@@ -35,7 +35,7 @@ Should have the iCDR administrative console open and logged in successfully.
 >
 ```
 
-2- Should  the deleted appliction disappear \("Create-Application-Test"\) from the list of applications.
+2- Should  the deleted appliction \("Create-Application-Test"\)  disappear from the list of applications.
 
 ```text
 > application.list
