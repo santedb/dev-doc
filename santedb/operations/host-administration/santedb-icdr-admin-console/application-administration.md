@@ -78,6 +78,10 @@ To undelete the application "Create-Application-Test":
 > application.undel Create-Application-Test
 ```
 
+## Assigning Policies to an Application
+
+To assign a policy to an application please visit 'Assigning Policies' section of [Policy Administration](policy-administration.md).
+
 ## Application Info View
 
 You can get extended information about a particular application by using the "**application.info**" command and specifying the application name. For example, to get information about the application Create-Application-Test:
