@@ -75,3 +75,22 @@ FHIR resources can be in JSON or in XML format, and are simply placed in the dir
 Seeding data via FHIR requires at least version 2.1.11 of the iCDR FHIR plugin.
 {% endhint %}
 
+## Deploying on Container
+
+You can deploy either dataset files or FHIR files onto your running iCDR container by either including the files in a custom `Dockerfile` such as:
+
+```text
+FROM santedb-icdr:latest
+COPY patients.json /santedb/data/fhir/patients.json
+COPY identity.dataset /santedb/data/identity.dataset
+```
+
+Alternately , you can mount the `/santedb/data` directory as a volume for your container and copy the files, or you can use a command line interface and `docker cp` such as:
+
+```text
+docker cp patients.json santedb-icdr:/santedb/data
+docker cp identity.dataset santedb-icdr:/santedb/data
+```
+
+
+
