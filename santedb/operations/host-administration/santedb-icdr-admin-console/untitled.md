@@ -1,6 +1,6 @@
 # Device Administration
 
-You can use the iCDR administrative console to create, list, lock, unlock and get information about devices within the iCDR instance. Changing a device secret needs to be done through the UI. For more information visit [Device Management](../../security-administration/device-management.md). 
+You can use the iCDR administrative console to create, list, lock, unlock and get information about devices within the iCDR instance. Changing a device secret needs to be done through the UI. For more information visit 'Changing Device Secret' section of  [Device Management](../../security-administration/device-management.md). 
 
 ### Viewing Devices
 
@@ -77,6 +77,10 @@ To undelete the device "Create-Device-Test":
 ```text
 > device.undel Create-Device-Test
 ```
+
+## Assigning Policies to a Device
+
+To assign a policy to a device please visit 'Assigning Policies' section of [Policy Administration](policy-administration.md).
 
 ## Device Info View
 
