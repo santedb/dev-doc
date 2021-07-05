@@ -46,7 +46,7 @@ The parameters for "**application.add"** are:
 
 ## Locking/Unlocking Applications
 
-To lock or unlock an application, the "**application.lock"** command is used specifying whether the lock should be set or unset.
+To lock or unlock an application, the "**application.lock"** command with our without the "**-l**" flag to specify whether the lock should be set or unset.
 
 To lock the application "Create-Application-Test":
 
