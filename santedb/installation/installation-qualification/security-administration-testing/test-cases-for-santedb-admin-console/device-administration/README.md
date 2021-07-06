@@ -1,2 +1,2 @@
-# Device Administration
+# Device Administration Tests
 
