@@ -1,12 +1,12 @@
 ---
-description: Testing the appearance of the modal viewed with Audit Event Details.
+description: Testing successful un-deletion of a group that has previously been deleted.
 ---
 
-# TEST: SECURITY-AR-01
+# TEST: SECURITY-GRM-15
 
 ## References
 
-* [Audit Repository](../../../../../operations/security-administration/audit-repository.md)
+* [Group / Role Management](../../../../../operations/security-administration/group-role-management.md)
 
 ## Discussion
 
@@ -21,9 +21,4 @@ description: Testing the appearance of the modal viewed with Audit Event Details
 
 
 ## Expected Behaviour
-
-| Requirement | Description |
-| :--- | :--- |
-| MUST |  |
-| MUST NOT |  |
 

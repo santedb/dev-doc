@@ -1,8 +1,8 @@
 ---
-description: Testing the appearance of the modal viewed with Audit Event Details.
+description: Testing the Search field for Audit Events.
 ---
 
-# TEST: SECURITY-AR-01
+# TEST: SECURITY-AR-05
 
 ## References
 
@@ -21,9 +21,4 @@ description: Testing the appearance of the modal viewed with Audit Event Details
 
 
 ## Expected Behaviour
-
-| Requirement | Description |
-| :--- | :--- |
-| MUST |  |
-| MUST NOT |  |
 

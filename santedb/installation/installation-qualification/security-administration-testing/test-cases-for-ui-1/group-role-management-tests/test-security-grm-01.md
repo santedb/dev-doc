@@ -1,4 +1,8 @@
-# TEST: SECURITY-GRM-01
+---
+description: Testing the attempted creation of a Group with required fields missing.
+---
+
+# TEST: SECURITY-GRM-02
 
 ## References
 

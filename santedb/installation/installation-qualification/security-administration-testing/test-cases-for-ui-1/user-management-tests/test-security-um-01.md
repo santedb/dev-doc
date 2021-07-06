@@ -1,5 +1,5 @@
 ---
-description: Testing the successful creation of a new user.
+description: Testing the successful creation of a new user with all properties specified.
 ---
 
 # TEST: SECURITY-UM-01

@@ -1,8 +1,10 @@
 ---
-description: Testing the appearance of the modal viewed with Audit Event Details.
+description: >-
+  Testing the filter for audit events based on either Event type, Action type,
+  or Outcome type.
 ---
 
-# TEST: SECURITY-AR-01
+# TEST: SECURITY-AR-04
 
 ## References
 
@@ -21,9 +23,4 @@ description: Testing the appearance of the modal viewed with Audit Event Details
 
 
 ## Expected Behaviour
-
-| Requirement | Description |
-| :--- | :--- |
-| MUST |  |
-| MUST NOT |  |
 

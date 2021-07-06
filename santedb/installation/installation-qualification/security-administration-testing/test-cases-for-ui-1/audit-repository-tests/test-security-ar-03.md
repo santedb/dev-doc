@@ -1,8 +1,10 @@
 ---
-description: Testing the appearance of the modal viewed with Audit Event Details.
+description: >-
+  Testing a User Name link to view a previously deleted user/device from the
+  Users & Computers section within Audit Event Details.
 ---
 
-# TEST: SECURITY-AR-01
+# TEST: SECURITY-AR-03
 
 ## References
 
@@ -21,9 +23,4 @@ description: Testing the appearance of the modal viewed with Audit Event Details
 
 
 ## Expected Behaviour
-
-| Requirement | Description |
-| :--- | :--- |
-| MUST |  |
-| MUST NOT |  |
 
