@@ -14,7 +14,7 @@ description: >-
 
 ## Discussion
 
-The Username textbox has UI that prevents Username re-use that is supportive of user un-deletion that is included within the architecture of SanteSuite. 
+The Username textbox has UI that prevents Username re-use that is supportive of user un-deletion included within the architecture of SanteSuite. 
 
 ## Pre-Conditions / Setup
 

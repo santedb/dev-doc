@@ -12,29 +12,14 @@ description: >-
 
 ## Discussion
 
-## Pre-Conditions / Setup
-
-1. User must be logged into an account with policies granted for creating users.
-2. Navigate to **Administration Panel / Security / Users / Create User** by clicking the **Create** button on the **Administration Panel / Security / Users / Index** page.
-
-## Actions/Steps
-
-1. Click the **Save** button.   
-
-## Expected BehaviourReferences
-
-* [User Management](../../../../../operations/security-administration/user-management.md)
-
-## Discussion
+A valid email address must be used if it is supplied during user creation. Users should be prompted when an email address is not valid and prevented from creating new users with an invalid email address.
 
 ## Pre-Conditions / Setup
 
 1. User must be logged into an account with policies granted for creating users.
 2. Navigate to **Administration Panel / Security / Users / Create User** by clicking the **Create** button on the **Administration Panel / Security / Users / Index** page.
 
-## Actions/Steps
-
-1. Click the **Save** button.   
+## Actions/Steps 
 
 ## Expected Behaviour
 

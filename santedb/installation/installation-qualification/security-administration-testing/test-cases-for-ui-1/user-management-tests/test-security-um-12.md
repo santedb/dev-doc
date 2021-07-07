@@ -12,6 +12,8 @@ description: >-
 
 ## Discussion
 
+A valid phone number must be used if it is supplied during user creation. Users should be prompted when a phone number is not valid and prevented from creating new users with an invalid phone number.
+
 ## Pre-Conditions / Setup
 
 1. User must be logged into an account with policies granted for creating users.
@@ -19,7 +21,7 @@ description: >-
 
 ## Actions/Steps
 
-1. Click the **Save** button.   
+   
 
 ## Expected Behaviour
 
