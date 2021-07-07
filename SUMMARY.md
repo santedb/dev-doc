@@ -110,6 +110,7 @@
           * [TEST: SECURITY-GRM-15](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/group-role-management-tests/test-security-grm-15.md)
         * [Security Policy Management Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/security-policy-management-tests/README.md)
           * [TEST: SECURITY-PM-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/security-policy-management-tests/test-security-pm-01.md)
+          * [TEST: SECURITY-PM-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/security-policy-management-tests/test-security-pm-02.md)
         * [Device Management Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/README.md)
           * [TEST: SECURITY-DM-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/test-security-dm-01.md)
           * [TEST: SECURITY-DM-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/test-security-dm-02.md)
