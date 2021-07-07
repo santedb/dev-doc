@@ -25,7 +25,7 @@ The optional filter parameters for policy.list are.
 
 ## Assigning Policies
 
-You can assign security policies to devices, roles, and/or applications by using "**policy.assign**" command,  specifying parameters.
+You can assign security policies to devices, roles, and/or applications by using "**policy.assign**" command,  followed by specifying parameters.
 
 | Parameter | Description |
 | :--- | :--- |
@@ -35,10 +35,24 @@ You can assign security policies to devices, roles, and/or applications by using
 | -e or --rule | The action to take \(0/deny, 1/elevate, 2/grant\) |
 | -p or --policy | The policy\(ies\) to apply |
 
+{% hint style="info" %}
+The object parameter \( role or application or device \) is required. 
+
+The policy parameter is required.
+
+The action parameter \("-r" or "--rule"\) specifies the action to take and by default is set to 0 \(Deny\) if is not specified.
+{% endhint %}
+
 **Example:**
 
 ```text
-> policy.assign -a Create-Application-Test -e 0  -p 1.3.6.1.4.1.33349.3.1.5.9.2.999
+> policy.assign -a Create-Application-Test -e 2 -p 1.3.6.1.4.1.33349.3.1.5.9.2.999
+Grant: Override Disclosure TO Create-Application-Test
+>
+```
+
+```text
+> policy.assign -a Create-Application-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999
 Deny: Override Disclosure TO Create-Application-Test
 >
 ```
