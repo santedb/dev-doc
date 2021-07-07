@@ -1,3 +1,9 @@
+---
+description: >-
+  Testing the unsuccessful creation of a new policy when OID and Name fields
+  missing.
+---
+
 # TEST: SECURITY-PM-02
 
 ## References
