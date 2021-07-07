@@ -1,3 +1,7 @@
+---
+description: Testing the successful creation of a new policy.
+---
+
 # TEST: SECURITY-DM-01
 
 ## References
@@ -8,9 +12,10 @@
 
 This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new device.
 
-## Pre-Conditions / Setup
+## **Pre-Conditions / Setup**
 
-A user should have been logged in and have the right to create a device.
+1. User must be logged into an account with policies granted for creating devices.
+2. Navigate to **Administration Panel / Security / Devices / Devices**.
 
 ## Actions/Steps
 

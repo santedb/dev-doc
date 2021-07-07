@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new policy leaving the OID field blank.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new policy leaving the OID and Name fields blank.
 
 
 
