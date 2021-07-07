@@ -23,7 +23,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ![](../../../../../../.gitbook/assets/1%20%283%29.jpg)
 
-2- Fill out the fields appropriately and click the Save button.\(keep in mind that  OID field and Name field are required fields \) 
+2- Fill out the fields appropriately and click the **Save** button.\(keep in mind that  OID field and Name field are required fields \) 
 
 ![](../../../../../../.gitbook/assets/3%20%285%29.jpg)
 
