@@ -23,11 +23,17 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 2- Leave OID filed and Name field blank and click the **Save** button.\( OID field and Name field are required fields \) 
 
+![](../../../../../../.gitbook/assets/dnld2.jpg)
+
 ## Expected Behaviour
 
 1- Should navigate to the new Create Policy page.
 
 ![](../../../../../../.gitbook/assets/dnld1.jpg)
+
+2- Should show an error message below OID field and Name field indicating that required field is missing.
+
+![](../../../../../../.gitbook/assets/2%20%283%29.jpg)
 
  
 
