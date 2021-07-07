@@ -1,4 +1,4 @@
-# TEST: SECURITY-PA-02
+# TEST: SECURITY-PA-03
 
 ## References
 
@@ -6,7 +6,7 @@
 
 ## Discussion
 
-This is a basic test to demonstrate that the Admin Console commands operate correctly when assigning policies to a device.
+This is a basic test to demonstrate that the Admin Console commands operate correctly when assigning policies to an application.
 
 ## Pre-Conditions / Setup
 
@@ -14,43 +14,43 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by object parameter:"**-d" \(**or **"--device"\)** followed ****by the device\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) to apply followed by "**-e**" \(or "**--rule**"\) followed by the action to take \(0/deny, 1/elevate, 2/grant\).
+1- Use the "**policy.assign**" command followed by object parameter:"**-a" \(**or **"--application"\)** followed ****by the application\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) to apply followed by "**-e**" \(or "**--rule**"\) followed by the action to take \(0/deny, 1/elevate, 2/grant\).
 
 {% hint style="info" %}
 If you don't specify the action to take \("e" or "--rule" parameter\) then the default action would be "deny".
 {% endhint %}
 
 ```text
-> policy.assign -d Create-Device-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 2
+> policy.assign -a Create-Application-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 1
 ```
 
-2- **Test Validation**: Use "**device.info**" command followed by device name.
+2- **Test Validation**: Use "**application.info**" command followed by application name.
 
 ```text
-> device.info Create-Device-Test
+> application.info Create-Application-Test
 ```
 
 ## Expected Behaviour
 
-1- Should appear "the action \(Deny or Elevate or Grant\)"  followed by "policy name" followed by "device name".
+1- Should appear "the action \(Deny or Elevate or Grant\)"  followed by "policy name" followed by "application name".
 
 ```text
-> policy.assign -d Create-Device-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 2
-Grant: Override Disclosure TO Create-Device-Test
+> policy.assign -a Create-Application-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 1
+Elevate: Override Disclosure TO Create-Application-Test
 >
 ```
 
 2- Should the assigned policy \("Override Disclosure"\) appear in the Effective Policies row:
 
 ```text
-> device.info Create-Device-Test
-Name: Create-Device-Test
-SID: d73a8f8c-d361-11eb-8248-00155d640b09
-Invalid Auth: 0
-Lockout: 9999-12-21T18:59:59.9999990-05:00
-Last Auth: 2021-06-22T10:41:38.7150000-04:00
-Created: 2021-06-22T09:57:54.1080000-04:00 (demoadmin)
-Updated: 2021-07-05T03:43:51.5914870-04:00 (demoadmin)
+> application.info Create-Application-Test
+Name: Create-Application-Test
+SID: a01a3472-d36f-11eb-8248-00155d640b09
+Invalid Auth:
+Lockout:
+Last Auth:
+Created: 2021-06-22T11:36:34.5714130-04:00 (demoadmin)
+Updated: 2021-07-05T03:17:09.1743860-04:00 (demoadmin)
         Effective Policies:
                 Unrestricted All [1.3.6.1.4.1.33349.3.1.5.9.2] : --- (default DENY)
                 Unrestricted Administrative Function [1.3.6.1.4.1.33349.3.1.5.9.2.0] : --- (default DENY)
@@ -67,7 +67,7 @@ Updated: 2021-07-05T03:43:51.5914870-04:00 (demoadmin)
                 Create Role [1.3.6.1.4.1.33349.3.1.5.9.2.0.2] : --- (default DENY)
                 Alter Role [1.3.6.1.4.1.33349.3.1.5.9.2.0.3] : --- (default DENY)
                 Create Identity [1.3.6.1.4.1.33349.3.1.5.9.2.0.4] : --- (default DENY)
-                Create Local Users [1.3.6.1.4.1.33349.3.1.5.9.2.0.4.1] : Grant (explicit)
+                Create Local Users [1.3.6.1.4.1.33349.3.1.5.9.2.0.4.1] : --- (default DENY)
                 Create Device [1.3.6.1.4.1.33349.3.1.5.9.2.0.5] : --- (default DENY)
                 Create Application [1.3.6.1.4.1.33349.3.1.5.9.2.0.6] : --- (default DENY)
                 Administer Concept Dictionary [1.3.6.1.4.1.33349.3.1.5.9.2.0.7] : --- (default DENY)
@@ -112,7 +112,7 @@ Updated: 2021-07-05T03:43:51.5914870-04:00 (demoadmin)
                 Merge MDM Master [1.3.6.1.4.1.33349.3.1.5.9.2.6.3] : --- (default DENY)
                 Special Security Elevation [1.3.6.1.4.1.33349.3.1.5.9.2.600] : Elevate (explicit)
                 Change Security Challenge Question [1.3.6.1.4.1.33349.3.1.5.9.2.600.1] : Elevate (inherited from Special Security Elevation)
-                Override Disclosure [1.3.6.1.4.1.33349.3.1.5.9.2.999] : Grant (explicit)
+                Override Disclosure [1.3.6.1.4.1.33349.3.1.5.9.2.999] : Elevate (explicit)
                 Restricted Information [1.3.6.1.4.1.33349.3.1.5.9.3] : --- (default DENY)
                 Create-Policy-Test [1.3.6.1.4.1.3349.3.1.5.9.2.99.4] : --- (default DENY)
                 Testy Mctesterson [1.3.6.1.4.1.66666.3.1.5.9.2.0.14] : --- (default DENY)
