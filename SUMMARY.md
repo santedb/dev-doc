@@ -119,6 +119,7 @@
           * [TEST: SECURITY-DM-05](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/test-security-dm-05.md)
           * [TEST: SECURITY-DM-06](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/test-security-dm-06.md)
           * [TEST: SECURITY-DM-07](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/test-security-dm-07.md)
+          * [TEST: SECURITY-DM-08](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/device-management-tests/test-security-dm-08.md)
         * [Application Management Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/README.md)
           * [TEST: SECURITY-AM-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-01.md)
           * [TEST: SECURITY-AM-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-02.md)
