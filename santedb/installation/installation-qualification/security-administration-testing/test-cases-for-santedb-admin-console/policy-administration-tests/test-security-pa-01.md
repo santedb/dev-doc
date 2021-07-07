@@ -2,7 +2,7 @@
 
 ## References
 
-* [Policy Administration](../../../../operations/host-administration/santedb-icdr-admin-console/policy-administration.md)
+* [Policy Administration](../../../../../operations/host-administration/santedb-icdr-admin-console/policy-administration.md)
 
 ## Discussion
 
