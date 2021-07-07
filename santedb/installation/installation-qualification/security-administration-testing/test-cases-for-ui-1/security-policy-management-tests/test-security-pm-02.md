@@ -21,5 +21,13 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ![](../../../../../../.gitbook/assets/1%20%287%29.jpg)
 
+2- Leave OID filed and Name field blank and click the **Save** button.\( OID field and Name field are required fields \) 
+
+## Expected Behaviour
+
+1- Should navigate to the new Create Policy page.
+
+![](../../../../../../.gitbook/assets/dnld1.jpg)
+
  
 
