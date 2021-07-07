@@ -40,7 +40,7 @@ The object parameter \( role or application or device \) is required.
 
 The policy parameter is required.
 
-The action parameter \("-e" or "--rule"\) specifies the action to take and by default is set to 0 \(Deny\) if is not specified.
+The action parameter \("-e" or "--rule"\) specifies the action to take and by default is set to 0 \(Deny\) if not specified.
 {% endhint %}
 
 **Example:**
