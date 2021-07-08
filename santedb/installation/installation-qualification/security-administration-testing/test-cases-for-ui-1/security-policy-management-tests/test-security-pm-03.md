@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button
 
-![](../../../../../../.gitbook/assets/1%20%2810%29.jpg)
+![](../../../../../../.gitbook/assets/1%20%2811%29.jpg)
 
 2- Fill out all the fields appropriately and use the incorrect format for OID field and click the **Save** button.
 
