@@ -1,3 +1,7 @@
+---
+description: Testing the successful adding a new security application.
+---
+
 # TEST: SECURITY-AA-02
 
 ## References
