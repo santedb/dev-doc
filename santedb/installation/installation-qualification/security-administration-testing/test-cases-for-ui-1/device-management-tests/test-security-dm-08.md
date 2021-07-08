@@ -1,6 +1,6 @@
 ---
 description: >-
-  Testing the unsuccessful creation of a new policy when Name, Model Name and
+  Testing the unsuccessful creation of a new device when Name, Model Name and
   Operating System fields are missing.
 ---
 
@@ -32,8 +32,6 @@ This is a basic test to demonstrate that the UI components appear and operate co
 ![](../../../../../../.gitbook/assets/3%20%2813%29.jpg)
 
 ## Expected Behaviour
-
-
 
 1- Should navigate to the new Create Device page.
 
