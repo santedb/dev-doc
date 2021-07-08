@@ -1,3 +1,7 @@
+---
+description: Testing the successful locking a security device.
+---
+
 # TEST: SECURITY-DA-03
 
 ## References
