@@ -1,3 +1,7 @@
+---
+description: Testing the successful locking a device.
+---
+
 # TEST: SECURITY-DM-02
 
 ## References
@@ -8,9 +12,10 @@
 
 This is a basic test to demonstrate that the UI components appear and operate correctly when locking an existing device.
 
-## Pre-Conditions / Setup
+## **Pre-Conditions / Setup**
 
-A user should have been logged in and have the right to lock a device.
+1. User must be logged into an account with policies granted for locking devices.
+2. Navigate to **Administration Panel / Security / Devices / Devices**.
 
 ## Actions/Steps
 
