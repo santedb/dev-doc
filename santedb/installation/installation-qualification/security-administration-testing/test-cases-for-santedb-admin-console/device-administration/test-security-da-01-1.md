@@ -1,3 +1,7 @@
+---
+description: Testing the successful listing of all security devices.
+---
+
 # TEST: SECURITY-DA-01
 
 ## References
