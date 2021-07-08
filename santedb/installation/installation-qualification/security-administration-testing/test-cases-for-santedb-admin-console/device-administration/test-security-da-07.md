@@ -1,3 +1,9 @@
+---
+description: >-
+  Testing the successful displaying of detailed information about a security
+  device.
+---
+
 # TEST: SECURITY-DA-07
 
 ## References
