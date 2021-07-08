@@ -1,3 +1,7 @@
+---
+description: Testing the successful unlocking a locked device.
+---
+
 # TEST: SECURITY-DM-03
 
 ## References
@@ -8,9 +12,10 @@
 
 This is a basic test to demonstrate that the UI components appear and operate correctly when unlocking a locked device.
 
-## Pre-Conditions / Setup
+## **Pre-Conditions / Setup**
 
-A user should have been logged in and have the right to unlock a device.
+1. User must be logged into an account with policies granted for unlocking devices.
+2. Navigate to **Administration Panel / Security / Devices / Devices**.
 
 ## Actions/Steps
 
