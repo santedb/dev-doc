@@ -1,3 +1,7 @@
+---
+description: Testing the successful adding a new security device.
+---
+
 # TEST: SECURITY-DA-02
 
 ## References
