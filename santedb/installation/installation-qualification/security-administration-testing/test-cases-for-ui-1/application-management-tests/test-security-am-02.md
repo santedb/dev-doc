@@ -1,3 +1,7 @@
+---
+description: Testing the successful locking an application.
+---
+
 # TEST: SECURITY-AM-02
 
 ## References
@@ -8,9 +12,10 @@
 
 This is a basic test to demonstrate that the UI components appear and operate correctly when locking an existing application.
 
-## Pre-Conditions / Setup
+## **Pre-Conditions / Setup**
 
-A user should have been logged in and have the right to lock an application.
+1. User must be logged into an account with policies granted for locking applications.
+2. Navigate to **Administration Panel / Security / Applications / List**.
 
 ## Actions/Steps
 
