@@ -1,6 +1,6 @@
 ---
 description: >-
-  Testing the unsuccessful creation of a new policy when OID and Name fields
+  Testing the unsuccessful creation of a new policy when OID and/or Name fields
   missing.
 ---
 
@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new policy leaving the OID and Name fields blank.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating a new policy leaving the OID and/or Name fields blank.
 
 
 
