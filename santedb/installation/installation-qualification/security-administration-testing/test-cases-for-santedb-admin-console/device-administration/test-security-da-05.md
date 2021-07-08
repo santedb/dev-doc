@@ -1,3 +1,7 @@
+---
+description: Testing the successful deleting a security device.
+---
+
 # TEST: SECURITY-DA-05
 
 ## References
