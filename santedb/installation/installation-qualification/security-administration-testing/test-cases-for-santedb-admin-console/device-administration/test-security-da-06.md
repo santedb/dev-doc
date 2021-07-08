@@ -1,3 +1,7 @@
+---
+description: Testing the successful undeleting a deleted security device.
+---
+
 # TEST: SECURITY-DA-06
 
 ## References
