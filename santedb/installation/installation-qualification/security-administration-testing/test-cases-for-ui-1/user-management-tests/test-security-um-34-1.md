@@ -1,8 +1,8 @@
 ---
-description: Testing the Reset Password button and prompt for a user.
+description: Testing successful un-deletion of a user that has previously been deleted.
 ---
 
-# TEST: SECURITY-UM-37
+# TEST: SECURITY-UM-34
 
 ## References
 

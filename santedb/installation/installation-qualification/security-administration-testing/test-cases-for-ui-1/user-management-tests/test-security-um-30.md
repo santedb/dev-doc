@@ -1,8 +1,7 @@
 ---
 description: >-
-  Testing the filter for a user's audited events based on either Event type,
-  Action type, or Outcome type found within the User Activity tab while editing
-  a user's properties.
+  Testing appearance of the list of User object access Audit Events found while
+  editing a specific user's properties within the Audit Trail tab.
 ---
 
 # TEST: SECURITY-UM-30
@@ -10,17 +9,28 @@ description: >-
 ## References
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
+* [TEST: SECURITY-UM-01](test-security-um-01.md)
+* [TEST: SECURITY-UM-21](test-security-um-21.md)
 
 ## Discussion
+
+While editing a user account, the **Audit Trail** of events where the user object being edited was accessed can be reviewed and is represented by a table of Audit Events filtered based on user object access history.
 
 ## Pre-Conditions / Setup
 
 1. User must be logged into an account with policies granted for creating users.
-2. Navigate to **Administration Panel / Security / Users / Create User** by clicking the **Create** button on the **Administration Panel / Security / Users / Index** page.
+2. Follow the instructions from [TEST: SECURITY-UM-01](test-security-um-01.md) to create a new user -- applying any valid values for required fields.
+3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User** for the newly created user.
 
 ## Actions/Steps
 
-1. Click the **Save** button.   
+1. Click on the **Audit Trail** tab.
+
+![](../../../../../../.gitbook/assets/image%20%28297%29.png)
 
 ## Expected Behaviour
+
+* A table of Audit Events appears and is filtered to show events where the current user object was accessed.
+
+![](../../../../../../.gitbook/assets/image%20%28293%29.png)
 

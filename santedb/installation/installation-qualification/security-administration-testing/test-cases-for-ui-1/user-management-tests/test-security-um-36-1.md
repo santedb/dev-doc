@@ -1,8 +1,8 @@
 ---
-description: Testing the Reset Password button and prompt for a user.
+description: Testing the Unlock button for a locked user.
 ---
 
-# TEST: SECURITY-UM-37
+# TEST: SECURITY-UM-36
 
 ## References
 

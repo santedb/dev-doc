@@ -10,7 +10,7 @@ description: >-
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
-* [TEST: SECURITY-UM-39](test-security-um-33.md)
+* [TEST: SECURITY-UM-39](test-security-um-34-1.md)
 
 ## Discussion
 
@@ -19,7 +19,7 @@ The Username textbox has UI that prevents Username re-use that is supportive of 
 ## Pre-Conditions / Setup
 
 1. User must be logged into an account with policies granted for creating users.
-2. A non-deleted user must have been created previously with the name "ClinicalStaffUser123". See [TEST: SECURITY-UM-01](test-security-um-01.md) for user creation or [TEST: SECURITY-UM-39](test-security-um-33.md) for user un-deletion.
+2. A non-deleted user must have been created previously with the name "ClinicalStaffUser123". See [TEST: SECURITY-UM-01](test-security-um-01.md) for user creation or [TEST: SECURITY-UM-39](test-security-um-34-1.md) for user un-deletion.
 3. Navigate to **Administration Panel / Security / Users / Create User** by clicking the **Create** button on the **Administration Panel / Security / Users / Index** page.
 
 ## Actions/Steps

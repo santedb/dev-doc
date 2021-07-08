@@ -1,7 +1,7 @@
 ---
 description: >-
-  Testing editing User Profile textboxes from the Contact Info tab with valid
-  values.
+  Testing editing User Profile textboxes from the Contact Info tab with a valid
+  value.
 ---
 
 # TEST: SECURITY-UM-27
@@ -46,7 +46,11 @@ SanteSuite user accounts can be edited to hold extended **Contact Info** that pr
 
 ## Expected Behaviour
 
-* The **Profile** card should be updated to show the new **Contact Info**
+* A toast message appears in the top-right corner of the window stating "User updated successfully" when the steps above are followed correctly.
+
+![](../../../../../../.gitbook/assets/image%20%28269%29.png)
+
+* The **Profile** card should be updated to show the new **Contact Info**.
 
 ![](../../../../../../.gitbook/assets/image%20%28288%29.png)
 
