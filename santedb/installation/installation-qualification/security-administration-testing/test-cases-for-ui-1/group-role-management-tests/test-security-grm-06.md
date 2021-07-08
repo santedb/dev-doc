@@ -4,7 +4,7 @@ description: >-
   group's Assigned Policies.
 ---
 
-# TEST: SECURITY-GRM-06
+# TEST: SECURITY-GRM-08
 
 ## References
 

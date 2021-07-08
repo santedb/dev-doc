@@ -2,7 +2,7 @@
 description: Testing the Name textbox with a duplicate non-deleted group.
 ---
 
-# TEST: SECURITY-GRM-03
+# TEST: SECURITY-GRM-05
 
 ## References
 

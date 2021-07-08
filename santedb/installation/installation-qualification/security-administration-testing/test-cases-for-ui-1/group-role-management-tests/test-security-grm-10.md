@@ -4,7 +4,7 @@ description: >-
   Assigned Policies.
 ---
 
-# TEST: SECURITY-GRM-10
+# TEST: SECURITY-GRM-12
 
 ## References
 

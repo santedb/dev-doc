@@ -21,15 +21,15 @@ After a user record has been deleted, it is not permanently destroyed. Deleted u
 
 1. While the **Show Deleted** button is toggled \(darkened\), deleted users can be un-deleted by clicking the **Un-Delete** button corresponding to the user to be recovered.
 
-![](../../../../../../.gitbook/assets/image%20%28295%29.png)
+![](../../../../../../.gitbook/assets/image%20%28297%29.png)
 
 2. Click the **OK** button on the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28324%29.png)
+![](../../../../../../.gitbook/assets/image%20%28330%29.png)
 
 ## Expected Behaviour
 
 * Table is reloaded to show un-deleted users and should include the user that was just reactivated \(e.g. "ClinicalStaffUser123"\).
 
-![](../../../../../../.gitbook/assets/image%20%28318%29.png)
+![](../../../../../../.gitbook/assets/image%20%28324%29.png)
 

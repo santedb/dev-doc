@@ -23,16 +23,16 @@ SanteSuite users cannot be permanently destroyed. Deleting a user means that it 
 
 1. Click the **Delete** button in the same row as the user to be deleted.
 
-![](../../../../../../.gitbook/assets/image%20%28306%29.png)
+![](../../../../../../.gitbook/assets/image%20%28308%29.png)
 
 2. Click the **OK** button on the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28319%29.png)
+![](../../../../../../.gitbook/assets/image%20%28325%29.png)
 
 ## Expected Behaviour
 
 * Deleted user should be removed from the list after it reloads and is added to the list of deleted users.
-* Clicking the **Show Deleted** button should toggle \(darkened button\) the list of deleted users and include the one that was just deleted \(e.g. "ClinicalStaffUser123" in this case\).
+* Clicking the **Show Deleted** button should toggle \(darkened button\) the list of deleted users and should include the user that was just deleted \(e.g. "ClinicalStaffUser123" in this case\).
 
-![](../../../../../../.gitbook/assets/image%20%28300%29.png)
+![](../../../../../../.gitbook/assets/image%20%28302%29.png)
 

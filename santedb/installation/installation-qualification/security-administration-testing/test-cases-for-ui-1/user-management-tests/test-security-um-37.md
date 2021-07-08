@@ -23,7 +23,7 @@ A user's password can be reset by accessing a modal from the Users list.
 
 1. Click the **Reset Pwd** button corresponding to the user whos password is being reset \(e.g. "ClinicalStaffUser123"\).
 
-![](../../../../../../.gitbook/assets/image%20%28317%29.png)
+![](../../../../../../.gitbook/assets/image%20%28323%29.png)
 
 ## Expected Behaviour
 

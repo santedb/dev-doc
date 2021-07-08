@@ -2,7 +2,7 @@
 description: Testing the removal of a Policy while editing a group's Assigned Policies.
 ---
 
-# TEST: SECURITY-GRM-09
+# TEST: SECURITY-GRM-11
 
 ## References
 

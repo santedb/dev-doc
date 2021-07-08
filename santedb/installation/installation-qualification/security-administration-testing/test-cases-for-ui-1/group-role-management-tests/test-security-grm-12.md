@@ -2,7 +2,7 @@
 description: Testing the removal of a member while editing a group's Members.
 ---
 
-# TEST: SECURITY-GRM-12
+# TEST: SECURITY-GRM-14
 
 ## References
 

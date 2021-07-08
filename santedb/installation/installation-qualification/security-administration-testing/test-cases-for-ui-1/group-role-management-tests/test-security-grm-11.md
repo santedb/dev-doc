@@ -2,7 +2,7 @@
 description: Testing the addition of a Member while editing a group's Members.
 ---
 
-# TEST: SECURITY-GRM-11
+# TEST: SECURITY-GRM-13
 
 ## References
 

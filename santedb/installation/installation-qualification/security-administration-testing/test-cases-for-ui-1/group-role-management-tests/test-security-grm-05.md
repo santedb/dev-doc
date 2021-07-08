@@ -4,7 +4,7 @@ description: >-
   Properties.
 ---
 
-# TEST: SECURITY-GRM-05
+# TEST: SECURITY-GRM-07
 
 ## References
 
