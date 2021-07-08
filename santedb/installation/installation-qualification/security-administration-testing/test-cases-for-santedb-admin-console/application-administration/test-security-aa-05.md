@@ -1,3 +1,7 @@
+---
+description: Testing the successful deleting a security application.
+---
+
 # TEST: SECURITY-AA-05
 
 ## References
