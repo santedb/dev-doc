@@ -1,3 +1,7 @@
+---
+description: Testing the successful assigning a policy to a device.
+---
+
 # TEST: SECURITY-DM-06
 
 ## References
@@ -8,9 +12,10 @@
 
 This is a basic test to demonstrate that the UI components appear and operate correctly when assigning a policy to an existing device.
 
-## Pre-Conditions / Setup
+## **Pre-Conditions / Setup**
 
-A user should have been logged in and have the right to assign a policy to a device
+1. User must be logged into an account with policies granted for assigning policies to devices.
+2. Navigate to **Administration Panel / Security / Devices / Devices**.
 
 ## Actions/Steps
 
