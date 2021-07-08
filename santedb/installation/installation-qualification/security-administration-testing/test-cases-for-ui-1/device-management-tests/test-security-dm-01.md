@@ -1,5 +1,5 @@
 ---
-description: Testing the successful creation of a new policy.
+description: Testing the successful creation of a new device.
 ---
 
 # TEST: SECURITY-DM-01
