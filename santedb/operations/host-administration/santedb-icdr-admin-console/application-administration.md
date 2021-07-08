@@ -28,6 +28,10 @@ The optional filter parameters for "**application.list"** are:
 
 You can add an application to the iCDR instance using the "**application.add"** command and specifying the name you wish to give to the application.
 
+{% hint style="info" %}
+Application secret is shown after creation so that it can be copied and saved since it's not accessible later.
+{% endhint %}
+
 ```text
 > application.add Create-Application-Test-10
 Application secret: D540A5CBB247

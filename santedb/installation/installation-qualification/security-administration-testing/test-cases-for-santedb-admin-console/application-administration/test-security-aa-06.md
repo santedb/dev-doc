@@ -1,3 +1,7 @@
+---
+description: Testing the successful undeleting a deleted security application.
+---
+
 # TEST: SECURITY-AA-06
 
 ## References
