@@ -31,6 +31,8 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ![](../../../../../../.gitbook/assets/3%20%2814%29.jpg)
 
+## Expected Behaviour
+
 1- Should navigate to the new Create Application page.
 
 ![](../../../../../../.gitbook/assets/2%20%285%29.jpg)
