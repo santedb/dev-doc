@@ -1,3 +1,7 @@
+---
+description: Testing the successful unlocking a locked security application.
+---
+
 # TEST: SECURITY-AA-04
 
 ## References
