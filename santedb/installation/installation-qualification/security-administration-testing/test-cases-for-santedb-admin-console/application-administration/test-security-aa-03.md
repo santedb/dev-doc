@@ -1,3 +1,7 @@
+---
+description: Testing the successful locking a security application.
+---
+
 # TEST: SECURITY-AA-03
 
 ## References
