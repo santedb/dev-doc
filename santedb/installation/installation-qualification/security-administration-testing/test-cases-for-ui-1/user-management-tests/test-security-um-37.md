@@ -25,7 +25,7 @@ description: Testing the Reset Password button and prompt for a user.
 ## Expected Behaviour
 
 * A modal appears for resetting a user's password. 
-* Can reset the user's password by referring to step 3 of [TEST: SECURITY-UM-24](test-security-um-24.md) to supply valid **New/Confirm** **Passwords** in a similar password reset modal.
+* Can reset the user's password by referring to step 3 of [TEST: SECURITY-UM-24](test-security-um-24.md) and supply valid **New/Confirm** **Passwords** in a similar password reset modal.
 
 ![](../../../../../../.gitbook/assets/image%20%28290%29.png)
 
