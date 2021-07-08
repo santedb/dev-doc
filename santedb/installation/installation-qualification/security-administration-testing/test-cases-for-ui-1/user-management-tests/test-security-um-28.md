@@ -36,11 +36,11 @@ SanteSuite user accounts can be edited
 
 3. Click on the **Additional Info** tab.
 
-![](../../../../../../.gitbook/assets/image%20%28300%29.png)
+![](../../../../../../.gitbook/assets/image%20%28305%29.png)
 
 4. Select or enter a **Birthdate** and enter any **Primary Facility** or **Employer** value\(s\) similar to how it is done in [TEST: SECURITY-UM-16](test-security-um-16.md) and [TEST: SECURITY-UM-19](test-security-um-19.md).
 
-![](../../../../../../.gitbook/assets/image%20%28306%29.png)
+![](../../../../../../.gitbook/assets/image%20%28311%29.png)
 
 5. Click the green checkmark to save the **Contact Info** field\(s\) modified.
 
@@ -54,5 +54,5 @@ SanteSuite user accounts can be edited
 
 * The **Profile** card should be updated to show any changes to **Birthdate**, **Language\(s\)**, **Employer**, or **Primary Facility**.
 
-![](../../../../../../.gitbook/assets/image%20%28303%29.png)
+![](../../../../../../.gitbook/assets/image%20%28308%29.png)
 

@@ -21,16 +21,16 @@ Users with a Status of Locked can be updated with a Status of Active.
 
 1. Click on the **Unlock** button corresponding to the user meant to be unlocked \(e.g. "ClinicalStyaffUser123"\).
 
-![](../../../../../../.gitbook/assets/image%20%28313%29.png)
+![](../../../../../../.gitbook/assets/image%20%28320%29.png)
 
 2. Click the **OK** button in the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28318%29.png)
+![](../../../../../../.gitbook/assets/image%20%28325%29.png)
 
 ## Expected Behaviour
 
 * Status of the user that was locked changes to **Active.**
 * **Unlock** button changes to a **Lock** button.
 
-![](../../../../../../.gitbook/assets/image%20%28293%29.png)
+![](../../../../../../.gitbook/assets/image%20%28296%29.png)
 

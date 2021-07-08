@@ -11,7 +11,7 @@ description: Testing attempted creation of a new user with required properties m
 
 ## Discussion
 
-Some of the properties are specifically required to successfully create a new user. This test verifies that the correct required fields have a prompt with a validation message when the following fields are not specified:
+Some user properties are specifically required to successfully create a new user. This test verifies required fields have a prompt with a validation message. Required fields are:
 
 * Username
 * Role\(s\)

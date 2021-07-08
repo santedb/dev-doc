@@ -23,16 +23,16 @@ Users can be updated with a Status of Locked \(for a maximum amount of time\).
 
 1.  Click the **Lock** button corresponding to a user with a Status of Active to be locked \(e.g. "ClinicalStaffUser123"\).
 
-![](../../../../../../.gitbook/assets/image%20%28295%29.png)
+![](../../../../../../.gitbook/assets/image%20%28298%29.png)
 
 2. Click the **OK** button on the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28320%29.png)
+![](../../../../../../.gitbook/assets/image%20%28327%29.png)
 
 ## Expected Behaviour
 
 * Status of the user that was unlocked changes to **Locked.**
 * **Lock** button changes to an **Unlock** button.
 
-![](../../../../../../.gitbook/assets/image%20%28316%29.png)
+![](../../../../../../.gitbook/assets/image%20%28323%29.png)
 

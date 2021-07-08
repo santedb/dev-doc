@@ -10,15 +10,38 @@ description: Testing the successful creation of a Group with all properties spec
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new groups on the [Group / Role Management](../../../../../operations/security-administration/group-role-management.md) page.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. User must be logged into an account with policies granted for creating groups.
+2. Navigate to **Administration Panel / Security / Groups / Index**. 
 
 ## Actions/Steps
 
+1. Click the **Create** button.
 
+![](../../../../../../.gitbook/assets/image%20%28293%29.png)
+
+2. Enter a valid **Name** for the group \(non-duplicate\).
+
+![](../../../../../../.gitbook/assets/image%20%28328%29.png)
+
+3. Optionally enter a **Description** \(max. 2048 characters\).
+
+![](../../../../../../.gitbook/assets/image%20%28312%29.png)
+
+4. Click the **Save** button.
+
+![](../../../../../../.gitbook/assets/image%20%28302%29.png)
 
 ## Expected Behaviour
+
+* Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
+
+![](../../../../../../.gitbook/assets/image%20%28291%29.png)
+
+* Page is redirected to **Administration Panel / Security / Groups / Edit Group** for the new group create successfully.
+
+![](../../../../../../.gitbook/assets/image%20%28301%29.png)
 
