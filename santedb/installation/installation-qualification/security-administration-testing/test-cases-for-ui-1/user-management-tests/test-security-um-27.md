@@ -1,6 +1,6 @@
 ---
 description: >-
-  Testing editing User Profile textboxes from the Contact Info tab with invalid
+  Testing editing User Profile textboxes from the Contact Info tab with valid
   values.
 ---
 
@@ -9,17 +9,44 @@ description: >-
 ## References
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
+* [TEST: SECURITY-UM-01](test-security-um-01.md)
+* [TEST: SECURITY-UM-21](test-security-um-21.md)
 
 ## Discussion
+
+SanteSuite user accounts can be edited to hold extended **Contact Info** that provides more than a single email and/or phone number.
 
 ## Pre-Conditions / Setup
 
 1. User must be logged into an account with policies granted for creating users.
-2. Navigate to **Administration Panel / Security / Users / Create User** by clicking the **Create** button on the **Administration Panel / Security / Users / Index** page.
+2. Follow the instructions from [TEST: SECURITY-UM-01](test-security-um-01.md) to create a new user -- applying any valid values for required fields.
+3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User** for the newly created user.
 
 ## Actions/Steps
 
-1. Click the **Save** button.   
+1. Click the **User Profile** tab.
+
+![](../../../../../../.gitbook/assets/image%20%28265%29.png)
+
+2. Click the pencil in the top right-hand corner of the **Profile** card to edit the properties. 
+
+![](../../../../../../.gitbook/assets/image%20%28272%29.png)
+
+3. Click the **Contact info** tab.
+
+![](../../../../../../.gitbook/assets/image%20%28286%29.png)
+
+4. Click the toggle for an available Contact Info field to select either an email address or phone number and input the email address or phone number into the corresponding textbox.
+
+![](../../../../../../.gitbook/assets/image%20%28289%29.png)
+
+5. Click the green checkmark to save the **Contact Info** field\(s\) modified.
+
+![](../../../../../../.gitbook/assets/image%20%28264%29.png)
 
 ## Expected Behaviour
+
+* The **Profile** card should be updated to show the new **Contact Info**
+
+![](../../../../../../.gitbook/assets/image%20%28288%29.png)
 
