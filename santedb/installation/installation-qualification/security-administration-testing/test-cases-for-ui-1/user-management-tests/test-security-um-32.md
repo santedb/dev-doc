@@ -6,8 +6,6 @@ description: >-
 
 # TEST: SECURITY-UM-32
 
-
-
 ## References
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
