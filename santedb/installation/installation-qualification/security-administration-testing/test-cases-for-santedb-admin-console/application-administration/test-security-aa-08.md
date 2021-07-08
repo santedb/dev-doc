@@ -28,3 +28,5 @@ Should have the iCDR administrative console open and logged in successfully.
 
  1- Should display the list of all "locked" security applications in the SanteDB instance .
 
+### _**This page needs to update after the bug issue is resolved.**_
+
