@@ -43,5 +43,5 @@ Entries in the table being filtered here are subject to change very frequently.
 * The **Detailed Audit Log** table should be updated between each of steps 1, 2, and 3 to reflect the filter that has been applied.
 * The final result should filter all 3 of the **Action**, **Event**, and **Outcome** columns. 
 
-![](../../../../../../.gitbook/assets/image%20%28328%29.png)
+![](../../../../../../.gitbook/assets/image%20%28329%29.png)
 

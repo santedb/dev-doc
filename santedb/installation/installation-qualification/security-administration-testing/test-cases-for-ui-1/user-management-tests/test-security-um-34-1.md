@@ -25,7 +25,7 @@ After a user record has been deleted, it is not permanently destroyed. Deleted u
 
 2. Click the **OK** button on the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28330%29.png)
+![](../../../../../../.gitbook/assets/image%20%28331%29.png)
 
 ## Expected Behaviour
 

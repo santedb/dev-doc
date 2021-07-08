@@ -26,7 +26,7 @@ While editing a user account, the **User Activity** can be reviewed and is repre
 
 1. Click the **User Activity** tab.
 
-![](../../../../../../.gitbook/assets/image%20%28336%29.png)
+![](../../../../../../.gitbook/assets/image%20%28337%29.png)
 
 ## Expected Behaviour
 

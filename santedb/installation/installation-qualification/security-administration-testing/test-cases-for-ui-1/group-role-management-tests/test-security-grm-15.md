@@ -31,7 +31,7 @@ After a group record has been deleted, it is not permanently destroyed. Deleted 
 
 * Table is reloaded to show deleted groups and should no longer include the group that was just reactivated \(e.g. "Muddsville"\).
 
-![](../../../../../../.gitbook/assets/image%20%28334%29.png)
+![](../../../../../../.gitbook/assets/image%20%28335%29.png)
 
 * After toggling back to the un-deleted groups, the reactivated group should appear there.
 

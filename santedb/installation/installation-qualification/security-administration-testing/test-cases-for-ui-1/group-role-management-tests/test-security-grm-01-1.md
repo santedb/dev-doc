@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 2. Enter a valid **Name** for the group \(non-duplicate\).
 
-![](../../../../../../.gitbook/assets/image%20%28335%29.png)
+![](../../../../../../.gitbook/assets/image%20%28336%29.png)
 
 3. Optionally enter a **Description** \(max. 2048 characters\).
 

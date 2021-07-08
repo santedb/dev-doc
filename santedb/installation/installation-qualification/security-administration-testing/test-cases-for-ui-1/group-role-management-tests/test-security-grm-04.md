@@ -7,18 +7,29 @@ description: Testing the Name textbox with a duplicate deleted group.
 ## References
 
 * [Group / Role Management](../../../../../operations/security-administration/group-role-management.md)
+* [TEST: SECURITY-GRM-03](test-security-grm-03-1.md)
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+Groups cannot be created with a duplicate **Name** matching a deleted group.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Follow instructions from [TEST: SECURITY-GRM-03](test-security-grm-03-1.md) to delete a group.
 
 ## Actions/Steps
 
+1. Click the **Create** button.
 
+![](../../../../../../.gitbook/assets/image%20%28295%29.png)
+
+2. Enter invalid **Name** for the group \(duplicate; e.g. "Muddsville"\).
 
 ## Expected Behaviour
+
+* No group should be created.
+* Remain on **Administration Panel / Security / Groups / Create Group** page.
+* Display a prompt below the required **Name** textbox with a validation message as follows:
+
+![](../../../../../../.gitbook/assets/image%20%28328%29.png)
 

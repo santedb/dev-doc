@@ -26,7 +26,7 @@ Only one group property is specifically required from user input during new grou
 
 2. Click the **Save** button.
 
-![](../../../../../../.gitbook/assets/image%20%28337%29.png)
+![](../../../../../../.gitbook/assets/image%20%28338%29.png)
 
 ## Expected Behaviour
 

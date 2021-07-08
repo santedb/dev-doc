@@ -25,7 +25,7 @@ Users with a Status of Locked can be updated with a Status of Active.
 
 2. Click the **OK** button in the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28331%29.png)
+![](../../../../../../.gitbook/assets/image%20%28332%29.png)
 
 ## Expected Behaviour
 
