@@ -1,3 +1,7 @@
+---
+description: Testing the successful listing of all security applications.
+---
+
 # TEST: SECURITY-AA-01
 
 ## References
