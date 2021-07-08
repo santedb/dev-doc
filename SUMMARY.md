@@ -125,6 +125,7 @@
           * [TEST: SECURITY-AM-05](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/untitled.md)
           * [TEST: SECURITY-AM-06](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-06.md)
           * [TEST: SECURITY-AM-07](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-07.md)
+          * [TEST: SECURITY-AM-08](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-08.md)
         * [Audit Repository Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/audit-repository-tests/README.md)
           * [TEST: SECURITY-AR-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/audit-repository-tests/test-security-ar-01.md)
           * [TEST: SECURITY-AR-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/audit-repository-tests/test-security-ar-02.md)
