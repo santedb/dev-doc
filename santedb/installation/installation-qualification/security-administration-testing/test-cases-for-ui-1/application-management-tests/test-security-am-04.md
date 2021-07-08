@@ -1,3 +1,7 @@
+---
+description: Testing the successful deleting an application.
+---
+
 # TEST: SECURITY-AM-04
 
 ## References
@@ -10,7 +14,10 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Pre-Conditions / Setup
 
-A user should have been logged in and have the right to delete an application.
+1. User must be logged into an account with policies granted for locking applications.
+2. Navigate to **Administration Panel / Security / Applications / List**
+
+
 
 ## Actions/Steps
 
