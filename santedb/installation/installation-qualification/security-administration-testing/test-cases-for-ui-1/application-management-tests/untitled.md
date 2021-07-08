@@ -14,7 +14,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Pre-Conditions / Setup
 
-1. User must be logged into an account with policies granted for locking applications.
+1. User must be logged into an account with policies granted for undeleting applications.
 2. Navigate to **Administration Panel / Security / Applications / List**.
 
 ## Actions/Steps
