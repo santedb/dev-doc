@@ -10,7 +10,7 @@ description: >-
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
-* [TEST: SECURITY-UM-38](test-security-um-38.md) 
+* [TEST: SECURITY-UM-38](test-security-um-32.md) 
 
 ## Discussion
 
@@ -19,7 +19,7 @@ The Username textbox has UI that prevents Username re-use that is supportive of 
 ## Pre-Conditions / Setup
 
 1. User must be logged into an account with policies granted for creating users.
-2. A deleted user must have been created previously with the name "ClinicalStaffUser123". See [TEST: SECURITY-UM-01](test-security-um-01.md) for user creation and [TEST: SECURITY-UM-38](test-security-um-38.md) for user deletion.
+2. A deleted user must have been created previously with the name "ClinicalStaffUser123". See [TEST: SECURITY-UM-01](test-security-um-01.md) for user creation and [TEST: SECURITY-UM-38](test-security-um-32.md) for user deletion.
 3. Navigate to **Administration Panel / Security / Users / Create User** by clicking the **Create** button on the **Administration Panel / Security / Users / Index** page.
 
 ## Actions/Steps
@@ -28,7 +28,7 @@ The Username textbox has UI that prevents Username re-use that is supportive of 
 
 ![](../../../../../../.gitbook/assets/image%20%28210%29.png)
 
-2. Enter a Username that is a duplicate of an existing deleted user in the **Username** textbox  \(e.g. "ClinicalStaffUser123" after [TEST: SECURITY-UM-01](test-security-um-01.md) and [TEST: SECURITY-UM-38](test-security-um-38.md)\).
+2. Enter a Username that is a duplicate of an existing deleted user in the **Username** textbox  \(e.g. "ClinicalStaffUser123" after [TEST: SECURITY-UM-01](test-security-um-01.md) and [TEST: SECURITY-UM-38](test-security-um-32.md)\).
 
 ## Expected Behaviour
 

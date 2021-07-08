@@ -1,7 +1,5 @@
 ---
-description: >-
-  Testing editing textboxes from the Contact Info tab within the User Profile
-  tab with invalid values.
+description: Testing the successful deletion of a user.
 ---
 
 # TEST: SECURITY-UM-32

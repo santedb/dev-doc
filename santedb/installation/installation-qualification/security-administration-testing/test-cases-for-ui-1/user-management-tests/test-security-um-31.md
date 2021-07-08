@@ -1,7 +1,7 @@
 ---
 description: >-
-  Testing editing textboxes from the Contact Info tab within the User Profile
-  tab with valid values.
+  Testing appearance of the list of object access Audit Events found while
+  editing a specific user's properties within the Audit Trail tab.
 ---
 
 # TEST: SECURITY-UM-31

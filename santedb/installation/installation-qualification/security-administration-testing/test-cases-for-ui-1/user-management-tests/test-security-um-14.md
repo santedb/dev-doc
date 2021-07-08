@@ -13,7 +13,7 @@ description: >-
 
 ## Discussion
 
-New users being created can be assigned multiple given names in the **Family Name** textbox. 
+New users being created can be assigned multiple family names in the **Family Name** textbox. 
 
 ## Pre-Conditions / Setup
 

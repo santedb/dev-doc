@@ -1,7 +1,7 @@
 ---
 description: >-
-  Testing textbox visibility from the Address tab within the User Profile tab
-  after changing Address Type.
+  Testing editing User Profile textboxes from the Additional Info tab with valid
+  values.
 ---
 
 # TEST: SECURITY-UM-28

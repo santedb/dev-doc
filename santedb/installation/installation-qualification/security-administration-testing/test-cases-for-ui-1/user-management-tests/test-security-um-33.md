@@ -1,7 +1,5 @@
 ---
-description: >-
-  Testing editing textboxes from the Additional Details tab within the User
-  Profile tab with valid values.
+description: Testing successful un-deletion of a user that has previously been deleted.
 ---
 
 # TEST: SECURITY-UM-33

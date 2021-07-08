@@ -1,8 +1,5 @@
 ---
-description: >-
-  Testing the filter for a user's audited events based on either Event type,
-  Action type, or Outcome type found within the User Activity tab while editing
-  a user's properties.
+description: Testing the Reset Password button and prompt for a user.
 ---
 
 # TEST: SECURITY-UM-36

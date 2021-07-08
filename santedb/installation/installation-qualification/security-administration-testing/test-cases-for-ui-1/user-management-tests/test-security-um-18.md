@@ -9,8 +9,12 @@ description: >-
 ## References
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
+* [TEST: SECURITY-UM-01](test-security-um-01.md)
+* [TEST: SECURITY-UM-15](test-security-um-15.md)
 
 ## Discussion
+
+While creating new users, any Employer being added to a new user's profile must be one that exists as an option from the static list of all employers.
 
 ## Pre-Conditions / Setup
 
@@ -19,7 +23,11 @@ description: >-
 
 ## Actions/Steps
 
-1. Click the **Save** button.   
+1. Follow the same actions/steps from [TEST: SECURITY-UM-15](test-security-um-15.md), but use the **Employer** textbox and a corresponding invalid value \(e.g. "NOT\_AN\_EMPLOYER"\) instead of the **Primary Facility** textbox and a corresponding invalid value.   
 
 ## Expected Behaviour
+
+* The dropdown of possible existing employers should only have a single disabled option that simply prompts users: "No results found".
+
+![](../../../../../../.gitbook/assets/image%20%28262%29.png)
 

@@ -9,8 +9,11 @@ description: >-
 ## References
 
 * [User Management](../../../../../operations/security-administration/user-management.md)
+* [TEST: SECURITY-UM-01](test-security-um-01.md)
 
 ## Discussion
+
+While creating new users, any **Primary Facility** being added to a new user's profile must be one that exists as an option from the static list of all primary facilities.
 
 ## Pre-Conditions / Setup
 
@@ -19,7 +22,15 @@ description: >-
 
 ## Actions/Steps
 
-1. Click the **Save** button.   
+1. Select the **Primary Facility** textbox within the **Demographic Properties** section.
+
+![](../../../../../../.gitbook/assets/image%20%28243%29.png)
+
+2. Enter a string value that does not match any existing **Primary Facility** from the dropdown.
 
 ## Expected Behaviour
+
+* The dropdown of possible existing primary facilities should only have a single disabled option that simply prompts users: "No results found".
+
+![](../../../../../../.gitbook/assets/image%20%28246%29.png)
 
