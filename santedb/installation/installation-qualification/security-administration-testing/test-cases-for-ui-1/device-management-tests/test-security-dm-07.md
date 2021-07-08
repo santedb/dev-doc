@@ -1,3 +1,7 @@
+---
+description: Testing the successful resetting a device's secret.
+---
+
 # TEST: SECURITY-DM-07
 
 ## References
@@ -8,9 +12,10 @@
 
 This is a basic test to demonstrate that the UI components appear and operate correctly when resetting a device's secret.
 
-## Pre-Conditions / Setup
+## **Pre-Conditions / Setup**
 
- A user should have been logged in and have the right to change a device secret.
+1. User must be logged into an account with policies granted for resetting devices secrets.
+2. Navigate to **Administration Panel / Security / Devices / Devices**.
 
 ## Actions/Steps
 
