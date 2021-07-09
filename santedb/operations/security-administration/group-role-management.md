@@ -1,6 +1,6 @@
 # Group / Role Management
 
-Users may be placed into one or more groups in the SanteDB system . A group \(or role\) represents a functional responsibility that a user has plays within the system. For example, you may create a security group for CLINICAL\_STAFF, and another group for HIV\_PHYSICIANS. You can then assign policies to each group.
+Users may be placed into one or more groups in the SanteDB system. A group \(or role\) represents a functional responsibility that a user has plays within the system. The administrative portal provides several key functions related to the administration of groups. For example, you may create a security group for CLINICAL\_STAFF, and another group for HIV\_PHYSICIANS. You can then assign policies to each group. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the [Group / Role Administration](../host-administration/santedb-icdr-admin-console/group-role-management.md) page.
 
 ## Reviewing Groups
 

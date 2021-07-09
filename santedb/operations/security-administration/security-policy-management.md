@@ -1,6 +1,6 @@
 # Security Policy Management
 
-As mentioned in the SanteDB architecture, SanteDB provides a robust policy infrastructure. This policy infrastructure can describe policies which a user account must be granted in order to execute an action \(permission policies\) or to access a particular piece of data within the database structure. 
+As mentioned in the SanteDB architecture, SanteDB provides a robust policy infrastructure. This policy infrastructure can describe policies which a user account must be granted in order to execute an action \(permission policies\) or to access a particular piece of data within the database structure. The administrative portal provides several key functions related to the administration of policies. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the [Policy Administration](../host-administration/santedb-icdr-admin-console/policy-administration.md) page.
 
 ## Reviewing Policies
 

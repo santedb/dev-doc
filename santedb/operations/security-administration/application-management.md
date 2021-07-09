@@ -1,5 +1,7 @@
 # Application Management
 
+The administrative portal provides several key functions related to the administration of applications. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the  page.
+
 ## Application Identity
 
 Application Identity is defined as identity of scope of grants permitted to the application and is explained further in the 'Principals and Identities' section from [Security Architecture](../../architecture/security-architecture.md) .

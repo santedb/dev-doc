@@ -1,6 +1,6 @@
 # User Management
 
-The administrative portal provides several key functions related to the administration of users. 
+The administrative portal provides several key functions related to the administration of users. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the [User Administration](../host-administration/santedb-icdr-admin-console/user-administration.md) page.
 
 ## Reviewing User Accounts
 

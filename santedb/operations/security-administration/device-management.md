@@ -1,5 +1,7 @@
 # Device Management
 
+The administrative portal provides several key functions related to the administration of devices. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the  [Device Administration](../host-administration/santedb-icdr-admin-console/untitled.md) page.
+
 ## Creating A New Device
 
 If you wanted to create a new device, you could select the **Create** button. 
