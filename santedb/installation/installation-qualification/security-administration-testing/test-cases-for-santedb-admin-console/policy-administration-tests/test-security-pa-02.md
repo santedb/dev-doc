@@ -1,3 +1,7 @@
+---
+description: Testing the successful assigning a policy to a device.
+---
+
 # TEST: SECURITY-PA-02
 
 ## References
