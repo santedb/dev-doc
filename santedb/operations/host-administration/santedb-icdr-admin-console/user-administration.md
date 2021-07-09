@@ -21,6 +21,7 @@ The optional filter parameters for `user.list` are.
 
 | Parameter | Description | Example |
 | :--- | :--- | :--- |
+| `-a` | Shows obsolete non-active status users. | `user.list -a` |
 | `-h` | Shows only HUMAN users and hides system users. | `user.list -h` |
 | `-s` | Shows only SYSTEM users and hides human users. | `user.list -s` |
 | `-u` | Filters by a specific user name pattern | `user.list -u Bob` |
