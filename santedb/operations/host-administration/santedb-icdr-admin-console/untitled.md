@@ -2,9 +2,9 @@
 
 You can use the iCDR administrative console to create, list, lock, unlock and get information about devices within the iCDR instance. Changing a device secret needs to be done through the UI. For more information visit 'Changing Device Secret' section of  [Device Management](../../security-administration/device-management.md). 
 
-### Viewing Devices
+## Viewing Devices
 
-You can view devices in the system using the device.list command, specifying optional filter paramters.
+You can view devices in the system using the `device.list` command, specifying optional filter paramters.
 
 ```text
 > device.list
@@ -17,17 +17,17 @@ b1006a6c-d514-11eb-8248-00155d640b09   testDevice                               
 959617ca-d2af-11eb-8248-00155d640b09   Debugee-0060739CE9C9     2021-06-22T09:27:35...                        0    *
 ```
 
-The optional filter parameters for "**device.list"** are:
+The optional filter parameters for `device.list` ****are:
 
 | Parameter | Description |
 | :--- | :--- |
-| -l | Filter on locked status |
-| -a | Include non-active devices |
+| `-l` | Filter on locked status |
+| `-a` | Include non-active devices |
 |  |  |
 
 ## Adding Devices
 
-You can add a device to the iCDR instance using the "**device.add"** command and specifying the name you wish to give to the device:
+You can add a device to the iCDR instance using the `device.add` command and specifying the name you wish to give to the device:
 
 ```text
 > device.add Create-Device-Test-10
@@ -36,17 +36,17 @@ CREATE Create-Device-Test-10
 >
 ```
 
-The parameters for "**device.add"** are:
+The parameters for `device.add` are:
 
 | Parameter | Description |
 | :--- | :--- |
-| -s | The device secret to set |
-| -g | The policies to grant the device |
-| -d | The policies to deny the device |
+| `-s` | The device secret to set |
+| `-g` | The policies to grant the device |
+| `-d` | The policies to deny the device |
 
 ## Locking/Unlocking Devices
 
-To lock or unlock a device, the "**device.lock"** command with our without the "**-l**" flag to specify whether the lock should be set or unset.
+To lock or unlock a device, the `device.lock` command with our without the `-l` flag to specify whether the lock should be set or unset.
 
 To lock the device "Create-Device-Test":
 
@@ -62,7 +62,7 @@ To unlock the device "Create-Device-Test":
 
 ## Deleting/Undeleting Devices
 
-To delete a device, the "**device.de**l" command is used specifiying the device name.
+To delete a device, the **`device.del`** command is used specifiying the device name.
 
 To delete the device "Create-Device-Test":
 
@@ -70,7 +70,7 @@ To delete the device "Create-Device-Test":
 > device.del Create-Device-Test
 ```
 
-To undelete a device, the "**device.undel"** command is used specifying the device name.
+To undelete a device, the `device.undel` command is used specifying the device name.
 
 To undelete the device "Create-Device-Test":
 
@@ -84,7 +84,7 @@ To assign a policy to a device please visit 'Assigning Policies' section of [Pol
 
 ## Device Info View
 
-You can get extended information about a particular device by using the "**device.info"** command and specifying the device name. For example, to get information about the device Create-Device-Test:
+You can get extended information about a particular device by using the `device.info` command and specifying the device name. For example, to get information about the device Create-Device-Test:
 
 ```text
 > device.info Create-Device-Test

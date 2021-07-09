@@ -2,9 +2,9 @@
 
 You can use the iCDR administrative console to create, list, lock and get information about users within the iCDR instance.
 
-### Viewing Users
+## Viewing Users
 
-You can view users in the system using the user.list command, specifying optional filter paramters.
+You can view users in the system using the `user.list` command, specifying optional filter parameters.
 
 ```text
 > user.list
@@ -17,17 +17,17 @@ c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                
 54558ca3-c093-11ea-9f6f-00155d640b09   Bob                                             9999-12-21T18:59:59... 0    *
 ```
 
-The optional filter parameters for user.list are.
+The optional filter parameters for `user.list` are.
 
 | Parameter | Description | Example |
 | :--- | :--- | :--- |
-| -h | Shows only HUMAN users and hides system users. | user.list -h |
-| -s | Shows only SYSTEM users and hides human users. | user.list -s |
-| -u | Filters by a specific user name pattern | user.list -u Bob |
+| `-h` | Shows only HUMAN users and hides system users. | `user.list -h` |
+| `-s` | Shows only SYSTEM users and hides human users. | `user.list -s` |
+| `-u` | Filters by a specific user name pattern | `user.list -u Bob` |
 
-### Adding Users
+## Adding Users
 
-You can add a user to the iCDR instance using the user.add command:
+You can add a user to the iCDR instance using the `user.add` command:
 
 ```text
 > user.add -r CLINICAL_STAFF -u console -e user@user.com -p @Testing123
@@ -46,14 +46,14 @@ ERR: Exception has been thrown by the target of an invocation.
 
 | Parameter | Description | Example |
 | :--- | :--- | :--- |
-| -r | The role\(s\) to assign the user | -r CLINICAL\_STAFF -r VIP |
-| -u | The username of the user | -u BOB |
-| -e | The security e-mail address of the user | -e foo@foo.com |
-| -p | The initial password to set for the user |  |
+| `-r` | The role\(s\) to assign the user | `-r CLINICAL_STAFF -r VIP` |
+| `-u` | The username of the user | `-u BOB` |
+| `-e` | The security e-mail address of the user | `-e foo@foo.com` |
+| `-p` | The initial password to set for the user | `-p P@ssw0rd` |
 
-### Locking Users
+## Locking Users
 
-To lock or unlock a user, the user.lock command is used specifying whether the lock should be set or unset.
+To lock or unlock a user, the `user.lock` command is used specifying whether the lock should be set or unset.
 
 To unlock the user bob:
 
@@ -67,9 +67,9 @@ To lock the user bob:
 user.lock -l bob
 ```
 
-### User Info View
+## User Info View
 
-You can get extended information about a particular user by using the user.info command and specifying the username. For example, to get information about user bob:
+You can get extended information about a particular user by using the `user.info` command and specifying the username. For example, to get information about user bob:
 
 ```text
 > user.info allison

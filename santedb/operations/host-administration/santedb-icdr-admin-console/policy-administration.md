@@ -2,9 +2,9 @@
 
 You can use the iCDR administrative console to list policies and assign policies to objects within the iCDR instance. Creating new policies needs to be done through the UI. For more information visit [Security Policy Management](../../security-administration/security-policy-management.md).
 
-### Viewing Policies
+## Viewing Policies
 
-You can view all security policies configured on the server using the "**policy.list**" command, specifying optional filter parameters.
+You can view all security policies configured on the server using the `policy.list` command, specifying optional filter parameters.
 
 ```text
 > policy.list
@@ -16,31 +16,31 @@ a14d0096-d62a-11eb-8248-00155d640b09   Create-Policy-Test                     1.
 598c0e00-82fb-11eb-8dcd-0242ac130006   Delete PubSub Subscriptions            1.3.6.1.4.1.33349.3.1.5.9.2.0.14.3        
 ```
 
-The optional filter parameters for policy.list are.
+The optional filter parameters for `policy.list` are.
 
 | Parameter | Description | Example |
 | :--- | :--- | :--- |
-| -n | List policies with specified name | policy.list -n test |
-| -o | List policies with specified OID pattern | policy.list -o 1.3.6.1.4.1.33349 |
+| `-n` | List policies with specified name | `policy.list -n test` |
+| `-o` | List policies with specified OID pattern | `policy.list -o 1.3.6.1.4.1.33349` |
 
 ## Assigning Policies
 
-You can assign security policies to devices, roles, and/or applications by using "**policy.assign**" command,  followed by specifying parameters.
+You can assign security policies to devices, roles, and/or applications by using `policy.assign` command,  followed by specifying parameters.
 
 | Parameter | Description |
 | :--- | :--- |
-| -r or --role | The role\(s\) to assign the policy to |
-| -a or --application | The application\(s\) to assign the policy to |
-| -d or --device | The device\(s\) to assign the policy to |
-| -e or --rule | The action to take \(0/deny, 1/elevate, 2/grant\) |
-| -p or --policy | The policy\(ies\) to apply |
+| `-r` or `--role` | The role\(s\) to assign the policy to |
+| `-a` or `--application` | The application\(s\) to assign the policy to |
+| `-d` or `--device` | The device\(s\) to assign the policy to |
+| `-e` or `--rule` | The action to take \(0/deny, 1/elevate, 2/grant\) |
+| `-p` or `--policy` | The policy\(ies\) to apply |
 
 {% hint style="info" %}
 The object parameter \( role or application or device \) is required. 
 
 The policy parameter is required.
 
-The action parameter \("-e" or "--rule"\) specifies the action to take and by default is set to 0 \(Deny\) if not specified.
+The action parameter \(`-e` or `--rule`\) specifies the action to take and by default is set to 0 \(Deny\) if not specified.
 {% endhint %}
 
 **Example:**

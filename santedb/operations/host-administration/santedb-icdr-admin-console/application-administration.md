@@ -2,9 +2,9 @@
 
 You can use the iCDR administrative console to create, list, lock, unlock and get information about applications within the iCDR instance.
 
-### Viewing Applications
+## Viewing Applications
 
-You can view applications in the system using the "**application.list**" command, specifying optional filter paramters.
+You can view applications in the system using the `application.list` command, specifying optional filter paramters.
 
 ```text
 > application.list
@@ -17,16 +17,16 @@ bc8221bc-9cbd-11eb-be65-00155d640b09   test-new4                                
 a9ada8ae-9cbd-11eb-be65-00155d640b09   test-new3                                                              0    *
 ```
 
-The optional filter parameters for "**application.list"** are:
+The optional filter parameters for `application.list` ****are:
 
 | Parameter | Description |
 | :--- | :--- |
-| -l | Filter on locked status |
-| -a | Include non-active application |
+| `-l` | Filter on locked status |
+| `-a` | Include non-active application |
 
 ## Adding Applications
 
-You can add an application to the iCDR instance using the "**application.add"** command and specifying the name you wish to give to the application.
+You can add an application to the iCDR instance using the `application.add` command and specifying the name you wish to give to the application.
 
 {% hint style="info" %}
 Application secret is shown after creation so that it can be copied and saved since it's not accessible later.
@@ -39,18 +39,18 @@ CREATE Create-Application-Test-10
 >
 ```
 
-The parameters for "**application.add"** are:
+The parameters for `application.add` are:
 
 | Parameter | Description |
 | :--- | :--- |
-| -s | The application secret to set |
-| -g | The policies to grant deny application |
-| -d | The policies to deny the application |
-| -n | A description/note to add to the application |
+| `-s` | The application secret to set |
+| `-g` | The policies to grant deny application |
+| `-d` | The policies to deny the application |
+| `-n` | A description/note to add to the application |
 
 ## Locking/Unlocking Applications
 
-To lock or unlock an application, the "**application.lock"** command with our without the "**-l**" flag to specify whether the lock should be set or unset.
+To lock or unlock an application, the `application.lock` command with our without the `-l` flag to specify whether the lock should be set or unset.
 
 To lock the application "Create-Application-Test":
 
@@ -66,7 +66,7 @@ To unlock the application "Create-Application-Test":
 
 ## Deleting/Undeleting Applications
 
-To delete an application, the "**application.del"** command is used specifiying the application name.
+To delete an application, the `application.del` command is used specifiying the application name.
 
 To delete the application "Create-Application-Test":
 
@@ -74,7 +74,7 @@ To delete the application "Create-Application-Test":
 > application.del Create-Application-Test
 ```
 
-To undelete an application, the "**application.undel"** command is used specifying the application name.
+To undelete an application, the `application.undel` command is used specifying the application name.
 
 To undelete the application "Create-Application-Test":
 
@@ -88,7 +88,7 @@ To assign a policy to an application please visit 'Assigning Policies' section o
 
 ## Application Info View
 
-You can get extended information about a particular application by using the "**application.info**" command and specifying the application name. For example, to get information about the application Create-Application-Test:
+You can get extended information about a particular application by using the `application.info` command and specifying the application name. For example, to get information about the application Create-Application-Test:
 
 ```text
 > application.info Create-Application-Test
