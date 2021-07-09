@@ -1,8 +1,8 @@
 ---
-description: Testing the user.list command without specifying additional parameters.
+description: Testing the user.list command with the optional -u parameter specified.
 ---
 
-# TEST: SECURITY-UA-01
+# TEST: SECURITY-UA-02
 
 ## References
 
@@ -12,7 +12,7 @@ description: Testing the user.list command without specifying additional paramet
 
 ## Discussion
 
-The `user.list` command is for listing users.
+The `user.list` command is for listing users and the `-u` parameter is used to specify a username.
 
 ## Pre-Conditions / Setup
 
@@ -20,7 +20,7 @@ The `user.list` command is for listing users.
 
 ## Actions/Steps
 
-1. Execute the `user.list` command.
+1. Execute the `user.list` command with the.
 
 ```text
 user.list
