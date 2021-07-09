@@ -1,3 +1,7 @@
+---
+description: Testing the successful assigning of a policy to an application.
+---
+
 # TEST: SECURITY-PA-03
 
 ## References
