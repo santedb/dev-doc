@@ -20,7 +20,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use "**application.add**" command followed by a name you wish to give to the new application \(for instance "Application-Create-SDBAC5"\) followed by  "**-d**" parameter followed by the policy OID you want to deny the application \(for example 1.3.6.1.4.1.33349.3.1.5.9.2.999 \(Override Disclosure\)\)
+1- Use "**application.add**" command followed by a name you wish to give to the new application \(for instance "Create-Application-SDBAC5"\) followed by  "**-d**" parameter followed by the policy OID you want to deny the application \(for example 1.3.6.1.4.1.33349.3.1.5.9.2.999 \(Override Disclosure\)\)
 
 ```text
 > application.add Create-Application-SDBAC5 -d 1.3.6.1.4.1.33349.3.1.5.9.2.999
