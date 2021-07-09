@@ -165,6 +165,7 @@
           * [TEST: SECURITY-DA-11](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/device-administration/test-security-da-11.md)
           * [TEST: SECURITY-DA-12](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/device-administration/test-security-da-12.md)
           * [TEST: SECURITY-DA-13](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/device-administration/test-security-da-13.md)
+          * [TEST: SECURITY-DA-14](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/device-administration/test-security-da-14.md)
         * [Application Administration Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/README.md)
           * [TEST: SECURITY-AA-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/test-security-aa-01.md)
           * [TEST: SECURITY-AA-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/application-administration/test-security-aa-02.md)
