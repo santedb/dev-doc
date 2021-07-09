@@ -1,7 +1,5 @@
 ---
-description: >-
-  Testing the successful adding a new security device and setting application
-  secret.
+description: Testing the successful adding a new security device and setting device secret.
 ---
 
 # TEST: SECURITY-DA-10
@@ -12,7 +10,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application and setting application secret.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device and setting device secret.
 
 ## Pre-Conditions / Setup
 
