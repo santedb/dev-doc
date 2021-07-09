@@ -22,6 +22,10 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Use "**application.list**" command followed by "**-a**"  parameter.
 
+```text
+> application.list -a
+```
+
 ## Expected Behaviour
 
  1- Should display the list of all security applications \(Including non-active applications\) in the SanteDB instance .
