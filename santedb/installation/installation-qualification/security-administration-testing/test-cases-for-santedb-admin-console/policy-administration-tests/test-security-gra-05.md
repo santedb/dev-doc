@@ -1,4 +1,4 @@
-# TEST: SECURITY-GRA-05
+# TEST: SECURITY-PA-05
 
 ## References
 
