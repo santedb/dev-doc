@@ -8,7 +8,7 @@ Auditing represents official inspection of user accounts. SanteSuite logs **time
 
 ## Reviewing Audits
 
-Audits can be sorted and filtered by:
+Audits can be filtered by:
 
 * **Action** - can be Execute, Create, Read, Update, Delete depending on an event action.
 * **Event** - can be Security Alert, Authentication, Import Data, Export Data, or Query depending on what an actor does in the application that is being logged for auditing.
