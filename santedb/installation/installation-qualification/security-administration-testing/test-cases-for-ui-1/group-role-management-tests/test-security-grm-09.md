@@ -7,18 +7,29 @@ description: Testing the removal of a Policy while editing a group's Assigned Po
 ## References
 
 * [Group / Role Management](../../../../../operations/security-administration/group-role-management.md)
+* [TEST: SECURITY-GRM-08](test-security-grm-06.md)
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+A **Policy** is removable from a group.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Follow the instructions from [TEST: SECURITY-GRM-08](test-security-grm-06.md) to create a group and assign a policy.
 
 ## Actions/Steps
 
+1. Click the **Remove** button corresponding to the **Policy** to be removed.
 
+![](../../../../../../.gitbook/assets/image%20%28369%29.png)
+
+2. Click the **OK** button on the confirmation prompt appearing briefly in the browser.
+
+![](../../../../../../.gitbook/assets/image%20%28358%29.png)
 
 ## Expected Behaviour
+
+* The specific **Policy** removed should not appear in the list after it is reloaded.
+
+![](../../../../../../.gitbook/assets/image%20%28359%29.png)
 

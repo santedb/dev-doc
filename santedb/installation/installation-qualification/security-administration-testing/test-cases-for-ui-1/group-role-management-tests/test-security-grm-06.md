@@ -9,18 +9,43 @@ description: >-
 ## References
 
 * [Group / Role Management](../../../../../operations/security-administration/group-role-management.md)
+* [TEST: SECURITY-GRM-01](test-security-grm-01-1.md)
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+A **Policy** may be added to a group which is applied to group members.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Follows the instructions from [TEST: SECURITY-GRM-01](test-security-grm-01-1.md) to create a group to be edited.
+2. After a group is created, the user is automatically brought to the corresponding **Administration Panel / Security / Groups / Edit Group** page.
 
 ## Actions/Steps
 
+ 1. Select the **Add** dropdown within the **Assigned Policies** panel.
 
+![](../../../../../../.gitbook/assets/image%20%28342%29.png)
+
+2. Select a **Policy** \(e.g. "Create Local Users"\) from the dropdown to be added to the list of **Assigned Policies**.
+
+![](../../../../../../.gitbook/assets/image%20%28348%29.png)
+
+3. Click on the plus sign \(**+**\) to add the selected policy.
+
+![](../../../../../../.gitbook/assets/image%20%28371%29.png)
+
+4. Click the **Save** button after the selected **Policy** is added to the list of **Assigned Policies**.
+
+![](../../../../../../.gitbook/assets/image%20%28361%29.png)
 
 ## Expected Behaviour
+
+* The explicitly added **Policy** \(e.g. "Create Local Users"\) is saved to the list of **Assigned Policies** with a **Permission** value of **Grant** selected by default \(darkened button\).
+* Dropdown of policies in the **Add** field has its last selection cleared.
+
+![](../../../../../../.gitbook/assets/image%20%28345%29.png)
+
+* Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
+
+![](../../../../../../.gitbook/assets/image%20%28367%29.png)
 

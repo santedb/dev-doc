@@ -9,18 +9,32 @@ description: >-
 ## References
 
 * [Group / Role Management](../../../../../operations/security-administration/group-role-management.md)
+* [TEST: SECURITY-GRM-01](test-security-grm-01-1.md)
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+The **Decription** field is the only **Core Property** that can be edited for an existing group. ****
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Follows the instructions from [TEST: SECURITY-GRM-01](test-security-grm-01-1.md) to create a group to be edited.
+2. After a group is created, the user is automatically brought to the corresponding **Administration Panel / Security / Groups / Edit Group** page.
 
 ## Actions/Steps
 
+1. Change the **Description** text area.
 
+![](../../../../../../.gitbook/assets/image%20%28343%29.png)
+
+2. Click the **Save** button.
+
+![](../../../../../../.gitbook/assets/image%20%28361%29.png)
 
 ## Expected Behaviour
+
+* Remain on **Administration Panel / Security / Groups / Edit Group** page.
+* Changes are saved.
+* Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
+
+![](../../../../../../.gitbook/assets/image%20%28367%29.png)
 

@@ -26,7 +26,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Expected Behaviour
 
-1- Should show : "CREATE &lt;applican name&gt;". 
+1- Should show : "CREATE &lt;device name&gt;". 
 
 {% hint style="info" %}
 In this case the Device Secret is not displayed as usually it is after creating a device since the secret is what we have set after "-s" parameter.
