@@ -23,11 +23,11 @@ After a **Policy** is added to the list of **Assigned Policies**, its **Permissi
 
 1. Toggle **Permission** to **Denied**, corresponding to the **Policy** having denied permission**.**
 
-![](../../../../../../.gitbook/assets/image%20%28373%29.png)
+![](../../../../../../.gitbook/assets/image%20%28387%29.png)
 
 2. Click the **Save** button.
 
-![](../../../../../../.gitbook/assets/image%20%28361%29.png)
+![](../../../../../../.gitbook/assets/image%20%28372%29.png)
 
 ## Expected Behaviour
 

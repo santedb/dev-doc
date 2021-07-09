@@ -22,18 +22,18 @@ A **Member** may be added to a group, to whom assigned policies are applied.
 
 1. Select the **Add** dropdown within the **Members** panel.
 
-![](../../../../../../.gitbook/assets/image%20%28368%29.png)
+![](../../../../../../.gitbook/assets/image%20%28380%29.png)
 
 2. Select a **Member** \(e.g. "demoadmin"\) from the dropdown to be added to the list of **Members**.
 
-![](../../../../../../.gitbook/assets/image%20%28360%29.png)
+![](../../../../../../.gitbook/assets/image%20%28369%29.png)
 
 ## Expected Behaviour
 
 * The assigned **Member** \(e.g. "demoadmin"\) is saved to the list of **Members**.
 * Dropdown of policies in the **Add** field has its last selection cleared.
 
-![](../../../../../../.gitbook/assets/image%20%28351%29.png)
+![](../../../../../../.gitbook/assets/image%20%28355%29.png)
 
 {% hint style="info" %}
 No need to click the **Save** button to updated the role successfully.

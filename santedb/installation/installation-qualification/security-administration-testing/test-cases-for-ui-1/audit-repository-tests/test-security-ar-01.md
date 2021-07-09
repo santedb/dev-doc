@@ -1,5 +1,5 @@
 ---
-description: Testing the appearance of the modal viewed with Audit Event Details.
+description: Testing the appearance of the modal viewed showing Audit Event Details.
 ---
 
 # TEST: SECURITY-AR-01
@@ -10,20 +10,26 @@ description: Testing the appearance of the modal viewed with Audit Event Details
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+The details of each event from the **Audit Repository** can be viewed.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository** events.
+2. Navigate to the **Administration Panel / Security / Audit Log / List**. 
+
+{% hint style="warning" %}
+Entries in the table being filtered here are subject to change very frequently.
+{% endhint %}
 
 ## Actions/Steps
 
+ 1. Click on the **View** button corresponding to an Audit Event for which details need to be viewed.
 
+![](../../../../../../.gitbook/assets/image%20%28379%29.png)
 
 ## Expected Behaviour
 
-| Requirement | Description |
-| :--- | :--- |
-| MUST |  |
-| MUST NOT |  |
+* A modal with **Audit Event Details** should appear over the page with 4 panels \(**Event Information**, **Network**, **Users & Computers**, and **Data & Objects**\).
+
+![](../../../../../../.gitbook/assets/image%20%28365%29.png)
 

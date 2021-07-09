@@ -21,15 +21,15 @@ A **Policy** is removable from a group.
 
 1. Click the **Remove** button corresponding to the **Policy** to be removed.
 
-![](../../../../../../.gitbook/assets/image%20%28369%29.png)
+![](../../../../../../.gitbook/assets/image%20%28381%29.png)
 
 2. Click the **OK** button on the confirmation prompt appearing briefly in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28358%29.png)
+![](../../../../../../.gitbook/assets/image%20%28367%29.png)
 
 ## Expected Behaviour
 
 * The specific **Policy** removed should not appear in the list after it is reloaded.
 
-![](../../../../../../.gitbook/assets/image%20%28359%29.png)
+![](../../../../../../.gitbook/assets/image%20%28368%29.png)
 

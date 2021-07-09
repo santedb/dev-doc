@@ -8,19 +8,39 @@ description: >-
 
 ## References
 
-* [Audit Repository](../../../../../operations/security-administration/audit-repository.md)
+* [User Management](../../../../../operations/security-administration/user-management.md)
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+A user's **Detailed Audit Log** may be filtered using 3 dropdowns to choose from static lists of ****a possible **Actions**, **Events**, or **Outcomes**.
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository** events.
+2. Navigate to the **Administration Panel / Security / Audit Log / List**.
+
+{% hint style="warning" %}
+Entries in the table being filtered here are subject to change very frequently.
+{% endhint %}
 
 ## Actions/Steps
 
+1. Select any option from the **Actions** dropdown.
 
+![](../../../../../../.gitbook/assets/image%20%28314%29.png)
+
+2. Select any option from the **Events** dropdown.
+
+![](../../../../../../.gitbook/assets/image%20%28301%29.png)
+
+3. Select any option from the **Outcomes** dropdown.
+
+![](../../../../../../.gitbook/assets/image%20%28294%29.png)
 
 ## Expected Behaviour
+
+* The **Audit Log** table should be updated between each of steps 1, 2, and 3 to reflect the filter that has been applied.
+* The final result should filter all 3 of the **Action**, **Event**, and **Outcome** columns. 
+
+![](../../../../../../.gitbook/assets/image%20%28357%29.png)
 

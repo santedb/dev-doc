@@ -21,7 +21,7 @@ A **Member** is removable from a group.
 
  1. Click on the **Remove** button on a **Member** to be removed from a **Group/Role** that has been created.
 
-![](../../../../../../.gitbook/assets/image%20%28354%29.png)
+![](../../../../../../.gitbook/assets/image%20%28361%29.png)
 
 2. Click the **OK** button on the confirmation prompt appearing in the browser.
 
@@ -31,11 +31,11 @@ A **Member** is removable from a group.
 
 * The specific **Member** removed should not appear in the list after it is reloaded.
 
-![](../../../../../../.gitbook/assets/image%20%28353%29.png)
+![](../../../../../../.gitbook/assets/image%20%28359%29.png)
 
 * Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
 
-  ![](../../../../../../.gitbook/assets/image%20%28367%29.png)
+  ![](../../../../../../.gitbook/assets/image%20%28378%29.png)
 
 {% hint style="info" %}
 No need to click the **Save** button to updated the role successfully.

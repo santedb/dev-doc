@@ -10,15 +10,28 @@ description: Testing the Search field for Audit Events.
 
 ## Discussion
 
-\[Briefly talk about the test being conducted and some more details that may need to be known\]
+The **Audit Log** can be filtered using a Search string matching substrings of any **Actor** involved
 
 ## Pre-Conditions / Setup
 
-\[Talk about any conditions that you can think of which need to be addressed with respect to being in a state prepared for the test being done\]
+1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository** events.
+2. Navigate to the **Administration Panel / Security / Audit Log / List**. 
+
+{% hint style="warning" %}
+Entries in the table being filtered here are subject to change very frequently.
+{% endhint %}
 
 ## Actions/Steps
 
+1. Select the search bar at the top-right corner of the **Administration Panel / Security / Audit Log / List** page.
 
+![](../../../../../../.gitbook/assets/image%20%28385%29.png)
+
+2. Enter an actor's name \(**User**/**Device**\) that appears in the Audit Log.
 
 ## Expected Behaviour
+
+* The table of audit events should be filtered to show only those involving the actor being searched.
+
+![](../../../../../../.gitbook/assets/image%20%28366%29.png)
 
