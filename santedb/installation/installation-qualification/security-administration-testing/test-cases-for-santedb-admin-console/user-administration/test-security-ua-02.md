@@ -1,5 +1,7 @@
 ---
-description: Testing the user.list command with the optional -u parameter specified.
+description: >-
+  Testing the user.list command with the optional -u parameter specified such
+  that a user is found successfully.
 ---
 
 # TEST: SECURITY-UA-02
@@ -17,13 +19,14 @@ The `user.list` command is for listing users and the `-u` parameter is used to s
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
+2. A user must be created for a username to be tested as a `-u` parameter \(e.g. "demoadmin"\).
 
 ## Actions/Steps
 
-1. Execute the `user.list` command with the.
+1. Execute the `user.list` command and specify `demoadmin` ****for the `-u` parameter.
 
 ```text
-user.list
+user.list -u demoadmin
 ```
 
 ## Expected Behaviour
@@ -31,23 +34,8 @@ user.list
 * The Admin Console output should appear similarly to the following:
 
 ```text
-> user.list
+> user.list -u demoadmin
 SID                                    Name                     Last Auth              Lockout                ILA  A
-c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                                              0    *
-fadca076-3690-4a6e-af9e-f1cd68e8c7e8   SYSTEM                                                                 0    *
-54558ca2-c093-11ea-9f6f-00155d640b09   Administrator            2021-07-09T10:08:38...                        0    *
 2a348c6e-c158-11ea-9f6f-00155d640b09   demoadmin                2021-07-09T08:30:59...                        0    *
-f3ace62a-dda6-11eb-bbad-eb1f1d969e16   ClinicalStaffUser123     2021-07-04T21:58:45...                        0    *
-54558ca3-c093-11ea-9f6f-00155d640b09   Bob                                             9999-12-21T18:59:59... 0    *
-25a4f67a-df20-11eb-bbad-eb1f1d969e16   UserTest01                                                             0    *
-52c42172-df1a-11eb-bbad-eb1f1d969e16   ClinicalStaffUser12                                                    0    *
-a762c780-df18-11eb-bbad-eb1f1d969e16   ClinicalStaffUser11                                                    0    *
-54558ca4-c093-11ea-9f6f-00155d640b09   Allison                  2021-02-15T21:00:31... 2021-03-15T10:15:36... 9    *
-3dd0d1c6-75ba-11eb-b733-00155d640b09   Dr_Quinn                 2021-02-19T20:34:06...                        0    *
-98d6e9fc-7493-11eb-b733-00155d640b09   console                                                                0    *
 ```
-
-{% hint style="warning" %}
-Users listed above may not match exactly what is seen by others -- as new users are created.
-{% endhint %}
 
