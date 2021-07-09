@@ -37,7 +37,7 @@ Additional details are provided when viewing an audited event \(by clicking a 'V
 
 ### Network
 
-The following network diagrams show how each may differ depending on the event action: 
+The following network diagrams demonstrate differences depending on the event action: 
 
 ![Diagram showing direction of data transfer between user and device during an execute action.](../../../.gitbook/assets/network_execute.png)
 
