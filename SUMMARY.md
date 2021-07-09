@@ -137,6 +137,7 @@
         * [User Administration Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/user-administration/README.md)
           * [TEST: SECURITY-UA-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/user-administration/test-security-ua-01.md)
           * [TEST: SECURITY-UA-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/user-administration/test-security-ua-02.md)
+          * [TEST: SECURITY-UA-03](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/user-administration/test-security-ua-03.md)
         * [Group / Role Administration Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/README.md)
           * [TEST: SECURITY-GRA-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-01.md)
           * [TEST: SECURITY-GRA-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-02.md)
