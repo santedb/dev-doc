@@ -1,3 +1,7 @@
+---
+description: Testing the successful assigning of a policy to a role.
+---
+
 # TEST: SECURITY-PA-04
 
 ## References
