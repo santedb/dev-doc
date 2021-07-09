@@ -1,3 +1,9 @@
+---
+description: >-
+  Testing the successful assigning a policy to a role not specifying the action
+  to take.
+---
+
 # TEST: SECURITY-PA-05
 
 ## References
