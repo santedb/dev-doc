@@ -13,12 +13,12 @@ description: Testing the user.list command with the optional -h flag specified.
 
 ## Discussion
 
-The `user.list` command is for listing users and the `-h` flag is used to specify a filter for only human users.
+The `user.list` command is for listing users and the `-h` flag is used to specify a filter for only **human** users, i.e. users not created by the **SYSTEM**.
 
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. A user must be created for a username to be tested as a `-u` parameter \(e.g. assume "NOT\_A\_USER" has not been created yet for this test or refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to find out what usernames are still available\).
+2. A human \(non-system\) user must be created to test the `-h` flag.
 
 ## Actions/Steps
 
