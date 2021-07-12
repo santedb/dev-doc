@@ -19,10 +19,10 @@ a9ada8ae-9cbd-11eb-be65-00155d640b09   test-new3                                
 
 The optional filter parameters for `application.list` ****are:
 
-| Parameter | Description |
-| :--- | :--- |
-| `-l` | Filter on locked status |
-| `-a` | Include non-active application |
+| Parameter | Description | Example |
+| :--- | :--- | :--- |
+| `-l` | Filter on locked status | `application.list -l` |
+| `-a` | Include non-active application | `application.list -a` |
 
 ## Adding Applications
 
@@ -41,12 +41,12 @@ CREATE Create-Application-Test-10
 
 The parameters for `application.add` are:
 
-| Parameter | Description |
-| :--- | :--- |
-| `-s` | The application secret to set |
-| `-g` | The policies to grant deny application |
-| `-d` | The policies to deny the application |
-| `-n` | A description/note to add to the application |
+| Parameter | Description | Example |
+| :--- | :--- | :--- |
+| `-s` | The application secret to set | `application.add -s s3Cre+` |
+| `-g` | The policies to grant deny application | `application.add -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d` | The policies to deny the application | `application.add -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-n` | A description/note to add to the application | `application.add -n SPECIAL_APPLICATION_NOTE` |
 
 ## Locking/Unlocking Applications
 

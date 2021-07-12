@@ -19,11 +19,10 @@ b1006a6c-d514-11eb-8248-00155d640b09   testDevice                               
 
 The optional filter parameters for `device.list` ****are:
 
-| Parameter | Description |
-| :--- | :--- |
-| `-l` | Filter on locked status |
-| `-a` | Include non-active devices |
-|  |  |
+| Parameter | Description | Example |
+| :--- | :--- | :--- |
+| `-l` | Filter on locked status | `device.list -l` |
+| `-a` | Include non-active devices | `device.list -a` |
 
 ## Adding Devices
 
@@ -38,11 +37,11 @@ CREATE Create-Device-Test-10
 
 The parameters for `device.add` are:
 
-| Parameter | Description |
-| :--- | :--- |
-| `-s` | The device secret to set |
-| `-g` | The policies to grant the device |
-| `-d` | The policies to deny the device |
+| Parameter | Description | Example |
+| :--- | :--- | :--- |
+| `-s` | The device secret to set | `device.add -s s3Cre+` |
+| `-g` | The policies to grant the device | `device.add -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d` | The policies to deny the device | `device.add -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
 
 ## Locking/Unlocking Devices
 
