@@ -7,55 +7,25 @@ description: Testing the role.info command with no parameters specified.
 ## References
 
 * [Group / Role Administration](../../../../../operations/host-administration/santedb-icdr-admin-console/group-role-management.md)
-* [User Administration](../../../../../operations/host-administration/santedb-icdr-admin-console/user-administration.md)
+* [Security Administration](../../../../../operations/security-administration/#demo-environment) 
+* [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/)
 
 ## Discussion
 
-This is a basic test to demonstrate that the Admin Console commands operate correctly when changing roles for a user.
+The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 
 ## Pre-Conditions / Setup
 
-Should have the iCDR administrative console open and logged in successfully.
+1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
+2. A role must be created and have status changed to non-active \(i.e. delete the role\) for testing the `-` flag to show the non-active user.
 
 ## Actions/Steps
 
-1- Use the "**user.roles**" command followed by "**-u"** followed ****by the username of the user \(for example: Bob\) followed by "**-r**" followed by the role/s to assign to the user.
+1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-> user.roles -u Bob -r Create-Role-Test
-```
-
-2- **Test Validation**: Use "**user.info**" command  followed by user name.
-
-```text
-> user.info Bob
+role. -
 ```
 
 ## Expected Behaviour
-
-1- Should 
-
-```text
-> user.roles -u Bob -r Create-Role-Test
->
-```
-
-2- Should appear  "Roles" row with the value : &lt;the role you assigned&gt;
-
-```text
-> user.info Bob
-Name: Bob
-SID: 54558ca3-c093-11ea-9f6f-00155d640b09
-Email: bob@marc-hi.ca
-Phone: tel:+19055751212;ext=4085
-Invalid Logins: 0
-Lockout:
-Last Login:
-Created: 2020-07-07T16:49:19.5797190-04:00 (SYSTEM)
-Updated: 2021-07-06T17:52:37.4082400-04:00 (Administrator)
-Roles: Create-Role-Test
-        Effective Policies:
-```
-
-
 
