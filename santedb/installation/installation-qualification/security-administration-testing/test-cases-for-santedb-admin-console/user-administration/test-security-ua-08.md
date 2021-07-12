@@ -1,7 +1,5 @@
 ---
-description: >-
-  Testing the user.add command with a non-existing user and without specifying
-  additional parameters.
+description: Testing the user.add command with no parameters specified.
 ---
 
 # TEST: SECURITY-UA-08

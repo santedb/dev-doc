@@ -1,3 +1,7 @@
+---
+description: Testing the role.add command with no parameters specified.
+---
+
 # TEST: SECURITY-GRA-06
 
 ## References

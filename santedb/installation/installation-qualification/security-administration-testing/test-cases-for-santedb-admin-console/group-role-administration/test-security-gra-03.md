@@ -1,3 +1,7 @@
+---
+description: Testing the role.info command with no parameters specified.
+---
+
 # TEST: SECURITY-GRA-03
 
 ## References

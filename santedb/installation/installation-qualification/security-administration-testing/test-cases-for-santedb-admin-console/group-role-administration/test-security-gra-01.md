@@ -1,3 +1,7 @@
+---
+description: Testing the role.list command with no parameters specified.
+---
+
 # TEST: SECURITY-GRA-01
 
 ## References

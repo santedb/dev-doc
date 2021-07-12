@@ -1,7 +1,5 @@
 ---
-description: >-
-  Testing the user.add command with a non-existing user and while specifying the
-  -p parameter.
+description: Testing the user.add command with existing role with -r parameter only.
 ---
 
 # TEST: SECURITY-UA-10

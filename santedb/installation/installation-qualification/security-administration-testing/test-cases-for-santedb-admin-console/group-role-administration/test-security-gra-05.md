@@ -1,3 +1,7 @@
+---
+description: Testing the role.info command with a existing role specified as -a flag.
+---
+
 # TEST: SECURITY-GRA-05
 
 ## References

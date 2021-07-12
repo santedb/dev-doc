@@ -1,3 +1,7 @@
+---
+description: Testing the role.list command with -a flag specified.
+---
+
 # TEST: SECURITY-GRA-02
 
 ## References
