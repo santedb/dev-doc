@@ -39,9 +39,9 @@ The parameters for `device.add` are:
 
 | Parameter | Description | Example |
 | :--- | :--- | :--- |
-| `-s` | The device secret to set | `device.add -s s3Cre+` |
-| `-g` | The policies to grant the device | `device.add -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-d` | The policies to deny the device | `device.add -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-s` | The device secret to set | `device.add <device_name> -s s3CreT` |
+| `-g` | The policies to grant the device | `device.add <device_name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d` | The policies to deny the device | `device.add <device_name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
 
 ## Locking/Unlocking Devices
 

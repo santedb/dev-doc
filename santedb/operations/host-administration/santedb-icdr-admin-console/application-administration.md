@@ -43,10 +43,10 @@ The parameters for `application.add` are:
 
 | Parameter | Description | Example |
 | :--- | :--- | :--- |
-| `-s` | The application secret to set | `application.add -s s3Cre+` |
-| `-g` | The policies to grant deny application | `application.add -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-d` | The policies to deny the application | `application.add -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-n` | A description/note to add to the application | `application.add -n SPECIAL_APPLICATION_NOTE` |
+| `-s` | The application secret to set | `application.add <application_name> -s s3CreT` |
+| `-g` | The policies to grant deny application | `application.add <application_name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d` | The policies to deny the application | `application.add <application_name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-n` | A description/note to add to the application | `application.add <application_name> -n SPECIAL_APPLICATION_NOTE` |
 
 ## Locking/Unlocking Applications
 
