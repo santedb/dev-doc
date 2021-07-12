@@ -21,7 +21,7 @@ The `user.list` command is for listing users and the `-a` parameter is used to f
 
 ## Actions/Steps
 
-1. Execute the `user.list` command and specify `demoadmin` ****for the `-a` parameter.
+1. Execute the `user.list` command with the `-a` flag.
 
 ```text
 user.list -a

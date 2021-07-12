@@ -22,7 +22,7 @@ The `user.list` command is for listing users and the `-h` flag is used to specif
 
 ## Actions/Steps
 
-1. Execute the `user.list` command and add the `-h` flag.
+1. Execute the `user.list` command with the `-h` flag.
 
 ```text
 user.list -h
