@@ -130,5 +130,34 @@ However, the following, alternate form of reference link is also permitted:
 
 #### Reference Bundle Object
 
-Referencing an object which is being processed within the same scope is also permitted. The 
+Referencing an object which is being processed within the same scope is also permitted. The reference is subject to the following limitations:
+
+1. The `reference` property must exactly match the `fullUrl` property in the bundle
+2. The `reference` objects must exist **in order** , i.e. a `RelatedPerson` which has a reference of `Patient/1` must exist **after** the `Patient` ****with `fullUrl` of `Patient/1` in the bundle
+3. No circular references are permitted \(i.e. `Patient/2` with `link` to `RelatedPerson/1` with a link to `Patient/1` which in-turn links to `Patient/2` \)
+
+```javascript
+"entry": [
+  {
+    "fullUrl": "Patient/1",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "1",
+      ...
+    }
+  },
+  {
+    "fullUrl": "RelatedPerson/1",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "1",
+      "patient": {
+        "reference": "Patient/1"
+      },
+      ...
+    }
+  }
+```
+
+
 
