@@ -33,7 +33,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 1. Execute the `user.add` command with `-r` parameter specified as an existing role and `-u` parameter specified as a non-existing username.
 
 ```text
-user.add -r USERS -u TestUser123
+user.add -r <existing role> -u <non-existing username>
 ```
 
 ## Expected Behaviour

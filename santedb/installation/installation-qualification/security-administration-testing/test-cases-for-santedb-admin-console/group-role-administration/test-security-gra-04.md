@@ -31,7 +31,7 @@ The `role.info` command is for listing a specific role's information and effecti
 1. Execute the `role.info` command with `-r` parameter specified as a non-existing role.
 
 ```text
-role.info -r not_a_role
+role.info -r <non-existing role>
 ```
 
 ## Expected Behaviour

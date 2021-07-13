@@ -33,6 +33,8 @@ user.roles
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.roles
+ERR: Exception has been thrown by the target of an invocation.
+        1:Must specify a user
 ```
 

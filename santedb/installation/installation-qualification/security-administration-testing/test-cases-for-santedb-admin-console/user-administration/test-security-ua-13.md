@@ -36,7 +36,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 1. Execute the `user.add` command with `-r` parameter specified as an existing role, `-u` parameter specified as a non-existing username, and `-u` parameter specified as weak password.
 
 ```text
-user.add -r USERS -u <new user name> -p NotSecure
+user.add -r <existing role> -u <new user name> -p NotSecure
 ```
 
 ## Expected Behaviour

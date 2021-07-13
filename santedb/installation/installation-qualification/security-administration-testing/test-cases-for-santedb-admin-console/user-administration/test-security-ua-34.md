@@ -32,7 +32,7 @@ The `user.password` command is for changing a specific users password.
 1. Execute the `user.password` command with `-u` parameter specified as an existing username and `-p` parameter specified as a weak password.
 
 ```text
-user.password -u demoadmin -p NotSecure
+user.password -u <existing username> -p NotSecure
 ```
 
 ## Expected Behaviour
@@ -40,6 +40,14 @@ user.password -u demoadmin -p NotSecure
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.password -u demoadmin -p NotSecure
+E:System.Net.WebException: The remote server returned an error: (422) Unprocessable Entity.
+   at SanteDB.Server.Core.Http.RestClient.InvokeInternal[TBody,TResult](String method, String url, String contentType, WebHeaderCollection requestHeaders, WebHeaderCollection& responseHeaders, TBody body, NameValueCollection query)
+E:Error invoking HTTP: The remote server returned an error: (422) Unprocessable Entity.
+ERR: Exception has been thrown by the target of an invocation.
+        1:The remote server returned an error: (422) Unprocessable Entity.
+                REMOTE: Exception of type 'SanteDB.Core.Exceptions.DetectedIssueException' was thrown.
+                REMOTE: RULE: Error Password does not meet complexity requirements
+        2:The remote server returned an error: (422) Unprocessable Entity.
 ```
 

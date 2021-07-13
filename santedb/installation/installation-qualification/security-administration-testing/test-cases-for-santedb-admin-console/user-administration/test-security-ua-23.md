@@ -30,7 +30,7 @@ The `user.undel` command is for re-activating de-activated users \(effectively u
 1. Execute the `user.undel` command with `-u` parameter specified as an existing and deleted username.
 
 ```text
-user.undel -u demoadmin
+user.undel -u <deleted username>
 ```
 
 ## Expected Behaviour

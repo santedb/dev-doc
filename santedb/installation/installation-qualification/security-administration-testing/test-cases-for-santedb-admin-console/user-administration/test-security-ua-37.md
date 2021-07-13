@@ -39,6 +39,8 @@ user.roles -u <new user name>
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.roles -u TestUser5678
+ERR: Exception has been thrown by the target of an invocation.
+        1:User TestUser5678 not found
 ```
 

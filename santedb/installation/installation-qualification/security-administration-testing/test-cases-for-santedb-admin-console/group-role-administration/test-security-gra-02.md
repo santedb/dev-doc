@@ -31,9 +31,15 @@ role.list -a
 
 ## Expected Behaviour
 
-* Admin Console output should appear as follows:
+* Admin Console output should appear similar to the following:
 
 ```text
-
+> role.list -a
+SID                                    Name                 Description                                      A
+97ba3b52-811b-11eb-b733-00155d640b09   Test                 TEst
 ```
+
+{% hint style="warning" %}
+De-activated roles listed here may be outdated in the future and the list is subject to change.
+{% endhint %}
 

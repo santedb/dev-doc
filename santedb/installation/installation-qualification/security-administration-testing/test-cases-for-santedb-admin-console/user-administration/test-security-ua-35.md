@@ -31,7 +31,7 @@ The `user.password` command is for changing a specific users password.
 1. Execute the `user.password` command with `-u` parameter specified as an existing username and `-p` parameter specified as a sufficiently strong password.
 
 ```text
-user.password -u demoadmin -p M0r3SeCuRe!
+user.password -u <existing username> -p M0r3SeCuRe!
 ```
 
 ## Expected Behaviour
@@ -39,6 +39,9 @@ user.password -u demoadmin -p M0r3SeCuRe!
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.password -u TestUser123 -p M0r3SeCuRe!
+>
 ```
+
+* //TODO: Need a way to check password changes for created users - bug filed. 
 

@@ -31,7 +31,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 1. Execute the `user.add` command with `-r` parameter specified as a non-existing role. 
 
 ```text
-user.add -r not_a_role
+user.add -r <non-existing role>
 ```
 
 ## Expected Behaviour

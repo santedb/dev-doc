@@ -35,7 +35,7 @@ The `user.roles` command is for assigning roles to a user.
 1. Execute the `user.roles` command with `-u` parameter specified as an existing user and `-r` parameter specified as a non-existing role.
 
 ```text
-user.roles -u demoadmin -r not_a_role
+user.roles -u <existing username> -r <non-existing role>
 ```
 
 ## Expected Behaviour
@@ -43,6 +43,8 @@ user.roles -u demoadmin -r not_a_role
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.roles -u TestUser123 -r not_a_role
+ERR: Exception has been thrown by the target of an invocation.
+        1:The specified roles do not exit. Roles are case sensitive
 ```
 

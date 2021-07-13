@@ -33,6 +33,8 @@ user.password
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.password
+ERR: Exception has been thrown by the target of an invocation.
+        1:Must specify a user
 ```
 

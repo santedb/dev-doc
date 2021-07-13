@@ -31,7 +31,7 @@ The `user.roles` command is for assigning roles to a user.
 1. Execute the `user.roles` command with `-u` parameter specified as an existing user.
 
 ```text
-user.roles -u demoadmin
+user.roles -u <existing username>
 ```
 
 ## Expected Behaviour
@@ -39,6 +39,8 @@ user.roles -u demoadmin
 * Admin Console output should appear as follows:
 
 ```text
-
+> user.roles -u TestUser123
+ERR: Exception has been thrown by the target of an invocation.
+        1:The specified roles do not exit. Roles are case sensitive
 ```
 
