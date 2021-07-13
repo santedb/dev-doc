@@ -11,6 +11,8 @@ description: >-
 * [User Administration](../../../../../operations/host-administration/santedb-icdr-admin-console/user-administration.md)
 * [Security Administration](../../../../../operations/security-administration/#demo-environment) 
 * [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/)
+* [TEST: SECURITY-UA-02](test-security-ua-02.md)
+* [TEST: SECURITY-UA-03](test-security-ua-03.md)
 
 ## Discussion
 
@@ -21,11 +23,11 @@ The `user.undel` command is for re-activating de-activated users \(effectively u
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. A user must be created and have status changed to non-active \(i.e. delete the user\) for testing the `-` flag to show the non-active user.
+2. See [TEST: SECURITY-UA-02](test-security-ua-02.md) or [TEST: SECURITY-UA-03](test-security-ua-03.md) for checking if a username does not exist.
 
 ## Actions/Steps
 
-1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
+1. Execute the `user.undel` command with the `-u` parameter specified as a non-existing username.
 
 ```text
 user.undel -u <new user name>
