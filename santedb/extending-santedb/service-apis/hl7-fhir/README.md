@@ -39,7 +39,12 @@ There are several reasons that SanteDB doesn't store this information:
 
 ### Offsite Resource Links
 
-In FHIR, it is possible to link to clinical data hosted offsite, or on another server. There are several reasons why this is a bad practice \(including remote server outages, data integrity, etc.\). 
+In FHIR, it is possible to link to clinical data hosted offsite, or on another server. There are several reasons why this is a bad practice:
+
+* Internal processes within SanteDB wouldn't have information necessary to action the object \(such as matching, de-duplication, etc.\)
+* There would be no way for the dCDR instances to actually acquire the information to populate the user interface since offsite references **assume** that an internet connection is available to fetch the resource
+* There is an assumption made that the offsite server will be accessible at all times from all clients which may consume the information, this is often not the case.
+* There is a dependency on another system to be present, the identifier / resource to be valid \(not removed as part of a merge/move operation, etc.\)
 
 Consider the following request to create a patient
 
@@ -57,12 +62,32 @@ Consider the following request to create a patient
 }
 ```
 
-When submitting this resource to the SanteDB FHIR interface, you will receive an error indicating that the managing organization is not known to SanteDB. You can resolve this by either including the organization information in the submission:
+When submitting this resource to the SanteDB FHIR interface, you will receive an error indicating that the managing organization is not known to SanteDB. 
+
+```javascript
+{
+   "resourceType": "OperationOutcome",
+   "id": "8441e711-6d63-426c-95b6-c3289f9866a7",
+   "issue": [            {
+      "severity": "error",
+      "code": "exception",
+      "diagnostics": "Could not find http://some-other-registry.org/fhir/Organization/123 as a previous entry in this submission. Cannot resolve from database unless reference is either urn:uuid:UUID or Type/UUID"
+   }]
+}
+```
+
+You can resolve this by either including the organization information in the submission:
 
 ```javascript
 {
     "resourceType" : "Bundle",
     "entry" : [
+        {
+            "fullUrl" : "http://some-other-registry.org/fhir/Organization/123",
+            "resource" : {
+                // data fetched from Organization
+            }
+        },
         {
             "fullUrl" : "http://example.com/fhir/Patient/3",
             "resource": {
@@ -76,18 +101,12 @@ When submitting this resource to the SanteDB FHIR interface, you will receive an
                     "reference" : "http://some-other-registry.org/fhir/Organization/123"
                 }
             }
-        },
-        {
-            "fullUrl" : "http://some-other-registry.org/fhir/Organization/123",
-            "resource" : {
-                // data fetched from Organization
-            }
         }
     ]
 }
 ```
 
-Or you can manually register the Organization using the REST api and then including the logical identifier as the resource link:
+Or you can manually register the Organization using the REST api and then including the logical identifier as the resource link or UUID within SanteDB's database:
 
 ```javascript
 {
