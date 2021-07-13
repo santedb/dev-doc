@@ -36,3 +36,9 @@ user.password -u demoadmin -p M0r3SeCuRe!
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

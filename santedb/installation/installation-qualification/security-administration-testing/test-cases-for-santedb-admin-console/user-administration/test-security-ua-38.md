@@ -36,3 +36,9 @@ user.roles -u demoadmin
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

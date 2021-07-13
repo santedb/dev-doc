@@ -35,3 +35,9 @@ user.lock -u demoadmin -l
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

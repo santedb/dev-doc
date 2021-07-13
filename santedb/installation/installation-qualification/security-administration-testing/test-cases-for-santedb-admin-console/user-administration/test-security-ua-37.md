@@ -36,3 +36,9 @@ user.roles -u <new user name>
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

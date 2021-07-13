@@ -37,3 +37,9 @@ user.password -u demoadmin -p NotSecure
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

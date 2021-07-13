@@ -41,3 +41,9 @@ user.add -r USERS -u <new user name> -p NotSecure
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

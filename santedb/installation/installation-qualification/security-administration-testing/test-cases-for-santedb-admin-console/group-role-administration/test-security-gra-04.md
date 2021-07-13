@@ -36,5 +36,11 @@ role.info -r not_a_role
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+
 
 

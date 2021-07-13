@@ -41,3 +41,9 @@ role.add -r <new role name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999 -g 1.3.6.1.4.1.33
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

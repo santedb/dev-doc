@@ -32,7 +32,7 @@ user.list -s
 
 ## Expected Behaviour
 
-* The Admin Console output should appear similarly to the following:
+* Admin Console output should appear similarly to the following:
 
 ```text
 > user.list -s

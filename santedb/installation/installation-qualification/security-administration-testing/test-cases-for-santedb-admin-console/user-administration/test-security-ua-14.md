@@ -40,3 +40,18 @@ user.add -r USERS -u <new user name> -p M0r3SeCuRe!
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+> user.add -r USERS -u TestUser123 -p M0r3SeCuRe!
+>
+```
+
+* Check for the user that was just created:
+
+```text
+> user.list -u TestUser123
+SID                                    Name                     Last Auth              Lockout                ILA  A
+6f25da3a-e3da-11eb-bbaf-eb1f1d969e16   TestUser123                                                            0    *
+```
+

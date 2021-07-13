@@ -39,3 +39,9 @@ role.add -r <new role name> -g 1234567890
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+

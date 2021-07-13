@@ -40,3 +40,9 @@ role.add -r <new role name> -n SPECIAL_ROLE_NOTE
 
 ## Expected Behaviour
 
+* Admin Console output should appear as follows:
+
+```text
+
+```
+
