@@ -16,7 +16,7 @@ description: >-
 
 ## Discussion
 
-The `user.undel` command is for re-activating de-activated users \(effectively un-deleting the user\) and has a single `-u` parameter for specifying username of user to un-delete.
+The `user.undel` command is for re-activating de-activated users \(effectively un-deleting the user\) and has a single `-u` parameter for specifying **username** of user to un-delete.
 
 * An exception is thrown when a non-existing username is specified.
 

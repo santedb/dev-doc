@@ -18,7 +18,7 @@ description: >-
 
 The `role.info` command is for listing a specific role's information and effective policies. 
 
-* The `-r` parameter is used to specify which role to display information and effective policies from. 
+* The `-r` parameter is used to specify which **role** to display information and effective policies from. 
 * An exception is thrown when an invalid \(non-existing\) role is specified.
 
 ## Pre-Conditions / Setup

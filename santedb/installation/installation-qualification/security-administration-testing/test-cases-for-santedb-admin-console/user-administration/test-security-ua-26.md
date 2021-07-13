@@ -16,7 +16,7 @@ description: >-
 
 ## Discussion
 
-The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a username.
+The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a **username**.
 
 * An exception is thrown when a non-existing username is specified.
 

@@ -18,7 +18,7 @@ description: >-
 
 The `user.lock` command is for locking or unlocking existing users.
 
-* The `-u` parameter is used to specify a user to **lock** whenever the `-l` flag is specified.
+* The `-u` parameter is used to specify a **username** of the user to **lock** whenever the `-l` flag is specified.
 
 ## Pre-Conditions / Setup
 

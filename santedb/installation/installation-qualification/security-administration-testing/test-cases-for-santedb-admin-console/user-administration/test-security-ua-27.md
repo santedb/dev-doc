@@ -14,7 +14,7 @@ description: Testing the user.info command with existing username provided as -u
 
 ## Discussion
 
-The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a username.
+The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a **username**.
 
 ## Pre-Conditions / Setup
 

@@ -18,8 +18,8 @@ description: >-
 
 The `user.password` command is for changing a specific users password. 
 
-* The `-u` parameter is used to specify which user's password to change. 
-* The `-p`  parameter is used to specify a password that must pass strength validation.
+* The `-u` parameter is used to specify the **username** of which user's password to change. 
+* The `-p`  parameter is used to specify a **password** that must pass strength validation.
 * An exception is thrown when an invalid \(weak\) password is specified.
 
 ## Pre-Conditions / Setup

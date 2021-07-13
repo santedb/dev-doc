@@ -16,7 +16,7 @@ description: Testing the role.add command with existing role provided as -r para
 
 The `role.add` command is for adding new users and has 1 required parameter that must pass validation: **role**. 
 
-* The `-r` parameter is used to specify which role to display information and effective policies from.
+* The `-r` parameter is used to specify which **role** to display information and effective policies from.
 
 ## Pre-Conditions / Setup
 

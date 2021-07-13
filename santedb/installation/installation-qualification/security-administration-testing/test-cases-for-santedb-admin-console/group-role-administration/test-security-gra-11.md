@@ -20,9 +20,9 @@ description: >-
 
 The `role.add` command is for adding new users and has 1 required parameter that must pass validation: **role**. 
 
-* The `-r` parameter is used to specify which role to display information and effective policies from.
-* The `-g` parameter is used to specify which policy to explicitly grant the new role being added.
-* The `-d` parameter is used to specify which policy to explicitly deny the new role being added.
+* The `-r` parameter is used to specify which **role** to display information and effective policies from.
+* The `-g` parameter is used to specify which **policy** to explicitly grant the new role being added.
+* The `-d` parameter is used to specify which **policy** to explicitly deny the new role being added.
 * An exception is thrown when a duplicate policy is both granted and denied in the same command.
 
 ## Pre-Conditions / Setup

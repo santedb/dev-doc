@@ -12,7 +12,7 @@ description: Testing the user.del command with no parameters specified.
 
 ## Discussion
 
-The `user.del` command is for de-activating users \(effectively deleting the user\) and has a single `-u` parameter for specifying username of user to delete. 
+The `user.del` command is for de-activating users \(effectively deleting the user\) and has a single `-u` parameter for specifying **username** of user to delete. 
 
 * An exception is thrown when no username is specified.
 

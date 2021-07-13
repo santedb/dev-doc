@@ -12,7 +12,7 @@ description: Testing the user.info command with no parameters specified.
 
 ## Discussion
 
-The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a username.
+The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a **username**.
 
 * An exception is thrown when no parameter is specified.
 

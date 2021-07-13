@@ -14,7 +14,7 @@ description: Testing the role.list command with -a flag specified.
 
 The `role.list` command is for listing groups/roles. 
 
-* The `-a` flag is used to filter for roles that are de-activated \(deleted\).
+* The `-a` flag is used to filter for **roles** that are de-activated \(deleted\).
 
 ## Pre-Conditions / Setup
 
