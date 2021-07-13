@@ -20,19 +20,22 @@ When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl` 
             "fullUrl" : "http://example.com/fhir/Patient/3",
             "resource": {
                 "resourceType" : "Patient",
-                "id" : 3
+                "id" : "3"
             }
         }
     ]
 ```
 
-In SanteDB this fullUrl is replaced with the internal URL on the SanteDB server once submitted. The FHIR message processor only keeps track of `http://example.com/fhir/Patient/3` in order to resolve references within the same message transaction. 
+In SanteDB this fullUrl is replaced with the internal URL on the SanteDB server once submitted. For example, after submission `Patient/3` would carry a `fullUrl` of `http://santedb_server/fhir/Patient/95569551-5abd-4484-be52-4c6986c4beb7` and an `id` of `95569551-5abd-4484-be52-4c6986c4beb7` . 
 
-Furthermore, the id element \(valued with 3 in the example\) is also not stored, and is only used to resolve entities within the transient submission.
+The FHIR message processor only tracks `http://example.com/fhir/Patient/3` in order to resolve references within the same message transaction, this is not stored in the database unless the identifier is a UUID in which case the `id` element will be used as the suggested UUID for inserting the patient \(i.e. update if the UUID exists, or use the UUID if it doesn't\). 
 
-{% hint style="info" %}
-There is a discussion within the SanteDB development community on whether original URLs and identifiers should be stored in a non-unique identity domain on the SanteDB server or as a tag. 
-{% endhint %}
+There are several reasons that SanteDB doesn't store this information:
+
+1. The `fullUrl` may be a fully qualified URL, may be an OID, a UUID, or a relative URL which have different semantic meanings in the iCDR instance.
+2. It is nearly impossible to determine if any random client is sending`id` from the perspective of itself \(i.e. my internal reference for this record is X and I am sharing it with the server\), or if it is from the perspective of the iCDR \(i.e. I have fetched this resource from you and am using your identifier\). 
+3. Simple structured identifiers and fullUrls have no concrete meaning , for example `SYSTEM_A` sending a `Patient` with a relative URL of`Patient/1` and `SYSTEM_B` sending `Patient/1`. The actual record being updated cannot be reliably resolved with ID `1` or even `Patient/1` so mis-identification is a serious risk.
+4. While it would be possible to store the `fullUrl` for an object stored as a bundle, objects submitted via simple `POST` operations via REST to the SanteDB iCDR instance would not have this contextual identifier, and would merely carry an `id` element, making referencing the object impossible.
 
 ### Offsite Resource Links
 
