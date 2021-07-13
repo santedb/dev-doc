@@ -159,5 +159,248 @@ Referencing an object which is being processed within the same scope is also per
   }
 ```
 
+### Re-Submission of Unidentified Resources
+
+Whenever a client system submits an unidentified resource to the SanteDB iCDR FHIR interface, SanteDB will create a new copy of that resource and generate a unique UUID for it. An unidentified resource is a resource which lacks any of:
+
+* A full UUID as the `id` element of the resource
+* A business identifier in the `identifier` element of the resource within a uniquely generated identity domain
+
+For example, consider the registration of a patient and a related person:
+
+```javascript
+"entry": [
+    {
+      "fullUrl": "Patient/1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1",
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "JOHN"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2017-04-03"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient/1"
+      }
+    },
+    {
+      "fullUrl": "RelatedPerson/1",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "1",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "MTH"
+              }
+            ]
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "MARY"
+            ]
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "RelatedPerson/1"
+      }
+    }
+```
+
+Upon sending this bundle to the server, the iCDR will create a new `Patient` \(example: `Patient/UUIDA`\) and a new `Person` \(example: `Person/UUIDB`\) which is related via an `EntityRelationship`. If a client re-submits this exact bundle, the iCDR will \(once again\) register a new `Patient` \(example: `Patient/UUIDC` \) and a new `Person` \(example: `Person/UUIDD`\).
+
+If, however only one of the resources contained a reliable identifier, such as the patient in this example:
+
+```javascript
+"entry": [
+    {
+      "fullUrl": "Patient/1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1",
+        "identifier": [
+          {
+            "system":"http://santedb.org/unique_domain",
+            "value":"FHR-4040"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "JOHN"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2017-04-03"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient/1"
+      }
+    },
+    {
+      "fullUrl": "RelatedPerson/1",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "1",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "MTH"
+              }
+            ]
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "given": [
+              "MARY"
+            ]
+          }
+        ],
+        "gender": "female"
+      },
+      "request": {
+        "method": "POST",
+        "url": "RelatedPerson/1"
+      }
+    }
+```
+
+Then the behavior is modified such that an initial submission results in a `Patient` with business identifier `FHR-4040` \(example: `Patient/UUIDA`\) and a `Person` \(example: `Person/UUIDB`\) related to one another via an `EntityRelationship`.
+
+If the client resubmits this bundle, the CDR is able to cross-reference the `Patient` \(as it has a business identifier of `FHR-4040`\) and would perform an update \(on `Patient/UUIDA`\) however since the `RelatedPerson` cannot be reliably referenced to a known object, a new `Person` would be created \(example: `Person/UUIDC`\) related to the `Patient` via an `EntityRelationship`.
+
+The end state of this message would be:
+
+* `Patient/UUIDA` exists with business identifier `FHR-4040`
+* `Person/UUIDB` exists and is related via `EntityRelationship` as the `MOTHER` of `Patient/UUIDA`
+* `Person/UUIDC` exists and is related via `EntityRelationship` as the `MOTHER` of `Patient/UUIDA`
+
+The recommended manner to submit this bundle would be to either give both `Patient` and `RelatedPerson` a reliable business identifier:
+
+```javascript
+"entry": [
+    {
+      "fullUrl": "Patient/1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1",
+        "identifier": [
+          {
+            "system":"http://santedb.org/unique_domain",
+            "value":"FHR-4040"
+          }
+        ],
+        ...
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient/1"
+      }
+    },
+    {
+      "fullUrl": "RelatedPerson/1",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "1",
+        "patient": {
+          "reference": "Patient/1"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "MTH"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system":"http://santedb.org/unique_domain",
+            "value":"FHR-4041"
+          }
+        ]
+        ...
+      },
+      "request": {
+        "method": "POST",
+        "url": "RelatedPerson/1"
+      }
+    }
+```
+
+Or to give each a UUID as their identifier:
+
+```javascript
+"entry": [
+    {
+      "fullUrl": "Patient/32bdc53f-0908-4e47-990b-43484ffc78bc",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "32bdc53f-0908-4e47-990b-43484ffc78bc",
+        ...
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient/32bdc53f-0908-4e47-990b-43484ffc78bc"
+      }
+    },
+    {
+      "fullUrl": "RelatedPerson/95569551-5abd-4484-be52-4c6986c4beb7",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "95569551-5abd-4484-be52-4c6986c4beb7",
+        "patient": {
+          "reference": "Patient/32bdc53f-0908-4e47-990b-43484ffc78bc"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "MTH"
+              }
+            ]
+          }
+        ]
+        ...
+      },
+      "request": {
+        "method": "POST",
+        "url": "RelatedPerson/95569551-5abd-4484-be52-4c6986c4beb7"
+      }
+    }
+```
+
 
 
