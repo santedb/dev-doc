@@ -30,9 +30,11 @@ role.info
 
 ## Expected Behaviour
 
-* Admin Console output should appear as follows:
+* Admin Console output should appear similar to the following:
 
 ```text
-
+> role.info
+ERR: Exception has been thrown by the target of an invocation.
+        1:Must specify a role
 ```
 

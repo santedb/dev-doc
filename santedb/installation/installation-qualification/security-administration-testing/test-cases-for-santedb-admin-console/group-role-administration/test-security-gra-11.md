@@ -18,7 +18,7 @@ description: >-
 
 ## Discussion
 
-The `role.add` command is for adding new users and has 1 required parameter that must pass validation: **role**. 
+The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**. 
 
 * The `-r` parameter is used to specify which **role** to display information and effective policies from.
 * The `-g` parameter is used to specify which **policy** to explicitly grant the new role being added.
@@ -41,9 +41,17 @@ role.add -r <new role name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999 -g 1.3.6.1.4.1.33
 
 ## Expected Behaviour
 
-* Admin Console output should appear as follows:
+* Admin Console output should appear similar to the following:
 
 ```text
-
+> role.add -r TestRole03 -d 1.3.6.1.4.1.33349.3.1.5.9.2.999 -g 1.3.6.1.4.1.33349.3.1.5.9.2.999
+E:System.Net.WebException: The remote server returned an error: (422) Unprocessable Entity.
+   at SanteDB.Server.Core.Http.RestClient.InvokeInternal[TBody,TResult](String method, String url, String contentType, WebHeaderCollection requestHeaders, WebHeaderCollection& responseHeaders, TBody body, NameValueCollection query)
+E:Error invoking HTTP: The remote server returned an error: (422) Unprocessable Entity.
+ERR: Exception has been thrown by the target of an invocation.
+        1:The remote server returned an error: (422) Unprocessable Entity.
+                REMOTE: Exception of type 'SanteDB.Core.Exceptions.DetectedIssueException' was thrown.
+                REMOTE: RULE: Error 23505: duplicate key value violates unique constraint "sec_pol_rol_assoc_pol_rol_idx"
+        2:The remote server returned an error: (422) Unprocessable Entity.
 ```
 

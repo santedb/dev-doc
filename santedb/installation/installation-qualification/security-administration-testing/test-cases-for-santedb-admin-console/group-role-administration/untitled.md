@@ -12,7 +12,7 @@ description: Testing the role.add command with no parameters specified.
 
 ## Discussion
 
-The `role.add` command is for adding new users and has 1 required parameter that must pass validation: **role**. 
+The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**. 
 
 * An exception should be thrown when no parameters are specified.
 
@@ -33,6 +33,14 @@ role.add
 * Admin Console output should appear as follows:
 
 ```text
-
+> role.add
+E:System.Net.WebException: The remote server returned an error: (422) Unprocessable Entity.
+   at SanteDB.Server.Core.Http.RestClient.InvokeInternal[TBody,TResult](String method, String url, String contentType, WebHeaderCollection requestHeaders, WebHeaderCollection& responseHeaders, TBody body, NameValueCollection query)
+E:Error invoking HTTP: The remote server returned an error: (422) Unprocessable Entity.
+ERR: Exception has been thrown by the target of an invocation.
+        1:The remote server returned an error: (422) Unprocessable Entity.
+                REMOTE: Exception of type 'SanteDB.Core.Exceptions.DetectedIssueException' was thrown.
+                REMOTE: RULE: Error 23502: null value in column "rol_name" violates not-null constraint
+        2:The remote server returned an error: (422) Unprocessable Entity.
 ```
 

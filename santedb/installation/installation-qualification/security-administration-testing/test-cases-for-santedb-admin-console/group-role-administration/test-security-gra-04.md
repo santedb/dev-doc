@@ -36,10 +36,12 @@ role.info -r <non-existing role>
 
 ## Expected Behaviour
 
-* Admin Console output should appear as follows:
+* Admin Console output should appear similar to the following:
 
 ```text
-
+> role.info -r not_a_role
+ERR: Exception has been thrown by the target of an invocation.
+        1:Role not_a_role not found
 ```
 
 
