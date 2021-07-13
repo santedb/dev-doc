@@ -35,7 +35,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 ## Actions/Steps
 
-1. Execute the `user.add` command with the `-r` parameter specified as an existing role, `-u` parameter specified as a non-existing username, and `-u` parameter specified as sufficiently strong password. Add optional `-e` parameter with invalid email format.
+1. Execute the `user.add` command with `-r` parameter specified as an existing role, `-u` parameter specified as a non-existing username, and `-u` parameter specified as sufficiently strong password. Add optional `-e` parameter with invalid email format.
 
 ```text
 user.add -r USERS -u <new user name> -p M0r3SeCuRe! -e not_an_email

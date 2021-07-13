@@ -9,6 +9,8 @@ description: Testing the user.info command with existing username provided as -u
 * [User Administration](../../../../../operations/host-administration/santedb-icdr-admin-console/user-administration.md)
 * [Security Administration](../../../../../operations/security-administration/#demo-environment) 
 * [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/)
+* [TEST: SECURITY-UA-02](test-security-ua-02.md)
+* [TEST: SECURITY-UA-03](test-security-ua-03.md)
 
 ## Discussion
 
@@ -17,11 +19,11 @@ The `user.info` command is for listing information about a user account and effe
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. A user must be created and have status changed to non-active \(i.e. delete the user\) for testing the `-` flag to show the non-active user.
+2. See [TEST: SECURITY-UA-02](test-security-ua-02.md) or [TEST: SECURITY-UA-03](test-security-ua-03.md) for checking if a username exists.
 
 ## Actions/Steps
 
-1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
+1. Execute the `user.info` command with `-u` parameter specified as an existing username.
 
 ```text
 user.info -u demoadmin

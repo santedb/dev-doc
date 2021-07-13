@@ -27,7 +27,7 @@ The `user.del` command is for de-activating users \(effectively deleting the use
 
 ## Actions/Steps
 
-1. Execute the `user.del` command with the `-u` parameter specified as an existing and active username.
+1. Execute the `user.del` command with `-u` parameter specified as an existing and active username.
 
 ```text
 user.del -u demoadmin

@@ -27,7 +27,7 @@ The `user.undel` command is for re-activating de-activated users \(effectively u
 
 ## Actions/Steps
 
-1. Execute the `user.undel` command with the `-u` parameter specified as an existing and undeleted username.
+1. Execute the `user.undel` command with `-u` parameter specified as an existing and undeleted username.
 
 ```text
 user.undel -u <undeleted user>
