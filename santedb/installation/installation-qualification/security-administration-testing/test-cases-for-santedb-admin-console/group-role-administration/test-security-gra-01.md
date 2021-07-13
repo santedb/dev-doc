@@ -12,7 +12,7 @@ description: Testing the role.list command with no parameters specified.
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.list` command is for listing groups/roles.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +24,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.list
 ```
 
 ## Expected Behaviour

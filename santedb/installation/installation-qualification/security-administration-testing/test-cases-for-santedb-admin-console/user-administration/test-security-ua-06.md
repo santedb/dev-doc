@@ -12,7 +12,9 @@ description: Testing the user.list command with the optional -a flag specified.
 
 ## Discussion
 
-The `user.list` command is for listing users and the `-a` parameter is used to filter users and show only **non-active** \(deleted\) users.
+The `user.list` command is for listing users. 
+
+* The `-a` parameter is used to filter users and show only **non-active** \(deleted\) users.
 
 ## Pre-Conditions / Setup
 

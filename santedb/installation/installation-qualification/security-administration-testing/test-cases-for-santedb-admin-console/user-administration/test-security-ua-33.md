@@ -14,7 +14,10 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.password` command is for changing a specific users password. 
+
+* The `-u` parameter is used to specify the username of the user who's password will change. 
+* An exception is thrown when the username specified does not exist. 
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +29,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.password -u <new user name>
 ```
 
 ## Expected Behaviour

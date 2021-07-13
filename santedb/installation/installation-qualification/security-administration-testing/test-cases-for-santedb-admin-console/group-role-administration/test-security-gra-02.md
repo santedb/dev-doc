@@ -12,7 +12,9 @@ description: Testing the role.list command with -a flag specified.
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.list` command is for listing groups/roles. 
+
+* The `-a` flag is used to filter for roles that are de-activated \(deleted\).
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +26,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.list -a
 ```
 
 ## Expected Behaviour

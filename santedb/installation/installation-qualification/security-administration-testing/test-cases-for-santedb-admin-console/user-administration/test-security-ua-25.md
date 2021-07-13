@@ -12,7 +12,9 @@ description: Testing the user.info command with no parameters specified.
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a username.
+
+* An exception is thrown when no parameter is specified.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +26,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.info
 ```
 
 ## Expected Behaviour

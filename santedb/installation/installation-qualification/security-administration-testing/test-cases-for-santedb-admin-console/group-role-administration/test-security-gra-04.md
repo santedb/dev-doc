@@ -1,5 +1,7 @@
 ---
-description: Testing the role.info command with a non-existing role specified as -a flag.
+description: >-
+  Testing the role.info command with a non-existing role specified as -r
+  parameter.
 ---
 
 # TEST: SECURITY-GRA-04
@@ -12,7 +14,10 @@ description: Testing the role.info command with a non-existing role specified as
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.info` command is for listing a specific role's information and effective policies. 
+
+* The `-r` parameter is used to specify which role to display information and effective policies from. 
+* An exception is thrown when an invalid \(non-existing\) role is specified.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +29,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.info -r not_a_role
 ```
 
 ## Expected Behaviour

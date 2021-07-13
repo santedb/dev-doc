@@ -14,7 +14,9 @@ description: >-
 
 ## Discussion
 
-The `user.list` command is for listing users and the `-u` parameter is used to specify a username.
+The `user.list` command is for listing users. 
+
+* The `-u` parameter is used to specify a username to filter the list with.
 
 ## Pre-Conditions / Setup
 

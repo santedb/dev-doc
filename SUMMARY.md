@@ -188,6 +188,8 @@
           * [TEST: SECURITY-GRA-10](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-10.md)
           * [TEST: SECURITY-GRA-11](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-11.md)
           * [TEST: SECURITY-GRA-12](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-12.md)
+          * [TEST: SECURITY-GRA-13](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-13.md)
+          * [TEST: SECURITY-GRA-14](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/group-role-administration/test-security-gra-14.md)
         * [Policy Administration Tests](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/policy-administration-tests/README.md)
           * [TEST: SECURITY-PA-01](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/policy-administration-tests/test-security-pa-01.md)
           * [TEST: SECURITY-PA-02](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-santedb-admin-console/policy-administration-tests/test-security-pa-02.md)

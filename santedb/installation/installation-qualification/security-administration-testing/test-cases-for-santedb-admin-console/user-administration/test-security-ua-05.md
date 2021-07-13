@@ -13,7 +13,9 @@ description: Testing the user.list command with the optional -s flag specified.
 
 ## Discussion
 
-The `user.list` command is for listing users and the `-s` flag is used to specify a filter for only users created by the **SYSTEM** user.
+The `user.list` command is for listing users. 
+
+* The `-s` flag is used to specify a filter for only users created by the **SYSTEM** user.
 
 ## Pre-Conditions / Setup
 

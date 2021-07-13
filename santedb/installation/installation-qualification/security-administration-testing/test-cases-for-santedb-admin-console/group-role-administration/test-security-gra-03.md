@@ -12,7 +12,9 @@ description: Testing the role.info command with no parameters specified.
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.info` command is for listing a specific role's information and effective policies with 1 required parameter that must pass validation: **role**. 
+
+* An exception is thrown when no role is specified.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +26,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.info
 ```
 
 ## Expected Behaviour

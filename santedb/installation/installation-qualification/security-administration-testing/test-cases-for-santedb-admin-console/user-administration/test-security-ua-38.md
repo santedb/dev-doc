@@ -14,7 +14,10 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.roles` command is for assigning roles to a user. 
+
+* The `-u` parameter is used to specify which user to assign roles to. 
+* An exception is thrown when no role is specified.
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +29,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.roles -u demoadmin
 ```
 
 ## Expected Behaviour

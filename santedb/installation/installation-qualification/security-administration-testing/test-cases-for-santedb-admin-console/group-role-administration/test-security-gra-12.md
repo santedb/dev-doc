@@ -1,7 +1,7 @@
 ---
 description: >-
   Testing the role.add command with non-existing role provided as -r parameter
-  and descripton/note provided as -n parameter.
+  non-existing policy specified as -g parameter.
 ---
 
 # TEST: SECURITY-GRA-12
@@ -14,7 +14,11 @@ description: >-
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.add` command is for adding new users and has 1 required parameter that must pass validation: **role**. 
+
+* The `-r` parameter is used to specify which role to display information and effective policies from.
+* The `-g` parameter is used to specify which policy to explicitly grant the new role being added.
+* An exception is thrown when a non-existing policy is specified.
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +30,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.add -r <new role name> -g 1234567890
 ```
 
 ## Expected Behaviour

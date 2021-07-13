@@ -1,5 +1,5 @@
 ---
-description: Testing the role.info command with a existing role specified as -a flag.
+description: Testing the role.info command with a existing role specified as -r parameter.
 ---
 
 # TEST: SECURITY-GRA-05
@@ -12,7 +12,7 @@ description: Testing the role.info command with a existing role specified as -a 
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.info` command is for listing a specific role's information and effective policies. The `-r` parameter is used to specify which role to display information and effective policies from.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +24,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.info -r <existing role name>
 ```
 
 ## Expected Behaviour

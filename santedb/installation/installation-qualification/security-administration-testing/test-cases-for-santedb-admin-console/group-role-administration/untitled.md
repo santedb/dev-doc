@@ -12,7 +12,9 @@ description: Testing the role.add command with no parameters specified.
 
 ## Discussion
 
-The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `role.add` command is for adding new users and has 1 required parameter that must pass validation: **role**. 
+
+* An exception should be thrown when no parameters are specified.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +26,7 @@ The `role.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-role. -
+role.add
 ```
 
 ## Expected Behaviour

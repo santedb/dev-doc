@@ -14,7 +14,7 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.del` command is for de-activating users \(effectively deleting the user\) and has a single `-u` parameter for specifying username of user to delete. 
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +26,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.del -u demoadmin
 ```
 
 ## Expected Behaviour

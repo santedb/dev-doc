@@ -12,7 +12,9 @@ description: Testing the user.roles command with no parameters specified.
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.roles` command is for assigning roles to a user. 
+
+* An exception is thrown when no parameters are specified.
 
 ## Pre-Conditions / Setup
 
@@ -24,7 +26,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.roles
 ```
 
 ## Expected Behaviour

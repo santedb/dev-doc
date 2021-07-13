@@ -14,7 +14,7 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.undel` command is for re-activating de-activated users \(effectively un-deleting the user\) and has a single `-u` parameter for specifying username of user to un-delete.
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +26,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.undel -u demoadmin
 ```
 
 ## Expected Behaviour

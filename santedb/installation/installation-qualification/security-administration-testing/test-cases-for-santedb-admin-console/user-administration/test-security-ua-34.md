@@ -14,7 +14,11 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.password` command is for changing a specific users password. 
+
+* The `-u` parameter is used to specify which user's password to change. 
+* The `-p`  parameter is used to specify a password that must pass strength validation.
+* An exception is thrown when an invalid \(weak\) password is specified.
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +30,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.password -u demoadmin -p NotSecure
 ```
 
 ## Expected Behaviour

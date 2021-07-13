@@ -15,7 +15,10 @@ description: >-
 
 ## Discussion
 
-The `user.list` command is for listing users and the `-u` parameter is used to specify a username. When the username does not match any existing user, an exception message is outputted.
+The `user.list` command is for listing users.
+
+* The `-u` parameter is used to specify a username. 
+* An exception is thrown when a non-existing username is specified.
 
 ## Pre-Conditions / Setup
 

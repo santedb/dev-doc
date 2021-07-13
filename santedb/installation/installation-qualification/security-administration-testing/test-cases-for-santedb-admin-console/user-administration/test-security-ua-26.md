@@ -14,7 +14,9 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.info` command is for listing information about a user account and effective permissions with a single `-u` parameter for specifying a username.
+
+* An exception is thrown when a non-existing username is specified.
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +28,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.info -u <new user name>
 ```
 
 ## Expected Behaviour

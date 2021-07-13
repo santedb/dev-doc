@@ -13,7 +13,9 @@ description: Testing the user.list command with the optional -h flag specified.
 
 ## Discussion
 
-The `user.list` command is for listing users and the `-h` flag is used to specify a filter for only **human** users, i.e. users not created by the **SYSTEM**.
+The `user.list` command is for listing users. 
+
+* The `-h` flag is used to specify a filter for only **human** users, i.e. users not created by the **SYSTEM**.
 
 ## Pre-Conditions / Setup
 

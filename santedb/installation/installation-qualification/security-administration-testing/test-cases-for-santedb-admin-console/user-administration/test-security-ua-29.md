@@ -14,7 +14,10 @@ description: >-
 
 ## Discussion
 
-The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
+The `user.lock` command is for locking or unlocking existing users. 
+
+* The `-u` parameter is used to specify a user to **unlock** whenever the `-l` flag is not specified.
+* An exception is thrown when a non-existing user is specified.
 
 ## Pre-Conditions / Setup
 
@@ -26,7 +29,7 @@ The `user.` command is for &lt;&gt; and the `-` parameter is used to &lt;&gt;.
 1. Execute the `user.` command with the `-` parameter specified as '&lt;&gt;'.
 
 ```text
-user. -
+user.lock -u <new user name>
 ```
 
 ## Expected Behaviour

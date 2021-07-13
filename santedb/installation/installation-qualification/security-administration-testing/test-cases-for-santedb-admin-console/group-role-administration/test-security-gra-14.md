@@ -1,11 +1,10 @@
 ---
 description: >-
   Testing the role.add command with non-existing role provided as -r parameter
-  and duplicate policy both denied and granted explicitly as -g and -d
-  parameters.
+  and descripton/note provided as -n parameter.
 ---
 
-# TEST: SECURITY-GRA-11
+# TEST: SECURITY-GRA-14
 
 ## References
 
@@ -20,7 +19,7 @@ The `role.add` command is for adding new users and has 1 required parameter that
 * The `-r` parameter is used to specify which role to display information and effective policies from.
 * The `-g` parameter is used to specify which policy to explicitly grant the new role being added.
 * The `-d` parameter is used to specify which policy to explicitly deny the new role being added.
-* An exception is thrown when a duplicate policy is both granted and denied in the same command.
+* The `-n` parameter is used to specify a description/note \(no spaces\). 
 
 ## Pre-Conditions / Setup
 
@@ -29,10 +28,10 @@ The `role.add` command is for adding new users and has 1 required parameter that
 
 ## Actions/Steps
 
-1. Execute the `role.` command with the `-` parameter specified as '&lt;&gt;'.
+1. Execute the `role.add` command with `-r` parameter specified with a new role name and `-`**n** parameter specified with a special note for the new role.
 
 ```text
-role.add -r <new role name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999 -g 1.3.6.1.4.1.33349.3.1.5.9.2.999 
+role.add -r <new role name> -n SPECIAL_ROLE_NOTE
 ```
 
 ## Expected Behaviour
