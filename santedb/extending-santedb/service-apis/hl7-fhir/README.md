@@ -139,7 +139,30 @@ Referencing an object by UUID is the most preferred mechanism of resource refere
 }
 ```
 
-However, the following, alternate form of reference link is also permitted:
+Alternately, if you're not picky about what the reference type is \(i.e. it could be any entity, but it is a known entity to SanteDB\) you can use a plain UUID reference:
+
+```javascript
+"someReference" : {
+     "reference" : "urn:uuid:bcddb6c7-2892-4b61-aec6-0dbdd718b792"
+}
+```
+
+You can also reference contained resources using a local reference:
+
+```javascript
+"contained": [
+    {
+        "resourceType":"RelatedPerson",
+        "id":"123"
+    }
+], 
+...
+"someReference": {
+    "reference":"#123"
+}
+```
+
+Business identifier references are also supported by the reference resolver:
 
 ```javascript
 "someReference" : {
