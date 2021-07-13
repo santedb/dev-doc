@@ -71,3 +71,7 @@ b81e78e0-8143-11eb-b733-00155d640b09   TestyMcTester        Test Group 1        
 43167dcb-6f77-4f37-8222-133e675b4434   CLINICAL_STAFF       Group for clinic staff                           *
 ```
 
+{% hint style="warning" %}
+Active roles listed here may be outdated in the future and the list is subject to change.
+{% endhint %}
+

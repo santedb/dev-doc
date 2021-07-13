@@ -48,6 +48,6 @@ a762c780-df18-11eb-bbad-eb1f1d969e16   ClinicalStaffUser11                      
 ```
 
 {% hint style="warning" %}
-Users listed above may not match exactly what is seen by others -- as new users are created.
+Users listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
 
