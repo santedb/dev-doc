@@ -342,7 +342,22 @@ This structure will indicate that a patient is admitted to hospital \(Sarah Smit
 
 ## Special Implementation Notes for Related Person
 
-* When querying a patient \(for example, querying for `?identifier=HL7-3` you can use `_revInclude=RelatedPerson:patient` to join a RelatedPerson instance, however the included `RelatedPerson` instance will be represented as a simple relationship.
-* It is not possible to perform a `_revInclude=Patient:link` on order to retrieve patient information about the `RelatedPerson` , this is because there is no relationship per-se between the `Person` and `Patient`, in SanteDB **they are the same resource**
+* When querying a patient which has a relationship with another patient \(for example, querying for `?identifier=HL7-3` \) you can use `_revInclude=RelatedPerson:patient` to join a RelatedPerson instance, however the included `RelatedPerson` instance will be represented as a simple relationship rather than a complex relationship.
+* It is not possible to perform a `_revInclude=Patient:link` on order to retrieve patient information about the `RelatedPerson` , this is because there is no relationship or link per-se between the `Person` and `Patient`, in SanteDB **they are the same resource**
 * The `id` and `fullUrl` of the `RelatedPerson` is the `id` property of the `EntityRelationship` rather than the `Person`. This is because in FHIR a `RelatedPerson` can have **exactly one** relationship to **exactly one** `Patient`, however in SanteDB RIM a `Person` can have **infinite** relationships to **infinite** `Patient` resources.
+* When querying directly for a `Patient`  instance on the FHIR interface, you may see one or more `link` properties such as listed below, this link information is provided to indicate there exists a relationship where the patient is a target of a relationship.
+
+```markup
+<link>
+      <other>
+         <reference value="RelatedPerson/26d3c0e4-730e-41eb-98a2-52b5ac97cd2c"/>
+         <display value="26d3c0e4-730e-41eb-98a2-52b5ac97cd2c"/>
+      </other>
+      <type value="seealso"/>
+   </link>
+```
+
+{% hint style="info" %}
+When MDM is enabled, the **Master/Golden** record is returned on queries, since no relationships can exists between a local to a master the master results will not return seealso links to RelatedPerson instances \(since they are not pointed at data\).
+{% endhint %}
 
