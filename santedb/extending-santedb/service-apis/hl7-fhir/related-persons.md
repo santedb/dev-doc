@@ -6,15 +6,108 @@ This page discusses the manner in which FHIR RelatedPerson resources are handled
 
 The CDR storage model support robust linkages between patients and persons. Some SanteDB services such as the Immunization Management Service \(IMS\) represent relationships between non-patient persons as a direct relationship between an instance of a Patient entity and a Person entity with a relationship type. 
 
-![](../../../../.gitbook/assets/image%20%28202%29.png)
+![Patient Baby Joe Smith has a mother \(MTH\) Person Sarah Smith](../../../../.gitbook/assets/image%20%28393%29.png)
 
 This example illustrates a simple non-patient entity \(Sarah Smith\) is the mother of a Patient \(Baby Joe Smith\).
 
 Additionally, the CDR also supports the direct linking of patient entities to other patient entities in relationships. The illustration below illustrates a patient entity \(Sarah Smith\) is the mother of Patient \(Baby Joe Smith\).
 
-![](../../../../.gitbook/assets/image%20%28207%29.png)
+![Patient Baby Joe Smith has a mother \(MTH\) Patient Sarah Smith](../../../../.gitbook/assets/image%20%28392%29.png)
+
+This relationship works because in SanteDB a Patient **is a** Person.
 
 ## FHIR Relationships
+
+In FHIR, the `RelatedPerson` resource is used to represent a related person. Unlike SanteDB's RIM model, FHIR's `RelatedPerson` maps to one of the following internal concepts in SanteDB:
+
+* A combination of `Person` and `EntityRelationship` where the `Person` may only contain one relationship to one `Patient`, or
+* An `EntityRelationship` only, where only the relationship type is expressed.
+
+A `RelatedPerson` represents a combination of `Person`and `EntityRelationship` when it is expressed as:
+
+```javascript
+{
+  "resourceType": "RelatedPerson",
+  "id": "123",
+  "patient": {
+    "reference": "Patient/321"
+  },
+  "relationship": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code": "MTH"
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "use": "usual",
+      "given": [
+        "SU MYAT LWIN"
+      ]
+    }
+  ],
+  "gender": "female"
+}
+```
+
+This condition is described in the section Simple Relationships on this page. However, a `RelatedPerson` is only an `EntityRelationship` when it is represented as:
+
+```javascript
+"entry": [
+  ...
+  {
+    "fullUrl": "RelatedPerson/123",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "123",
+      "patient": {
+        "reference": "Patient/ohie-cr-05-20-fhir-baby"
+      },
+      "relationship": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+              "code": "MTH"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullUrl": "Patient/123",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "123",
+      "name": [
+        {
+          "use": "maiden",
+          "given": [
+            "SU MYAT LWIN"
+          ]
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1984-05-25",
+      "link": [
+        {
+          "other": {
+            "reference":"RelatedPerson/123"
+          },
+          "type": "seealso"
+        }
+      ]
+    }
+  }
+]
+```
+
+The behavior of the iCDR is described in Complex Relationships in this page.
 
 ### Simple Relationships
 
@@ -22,13 +115,13 @@ The manner in which HL7 FHIR views patient relationships is reversed from the CD
 
 ![](../../../../.gitbook/assets/image%20%28203%29.png)
 
-In effect, the FHIR resource RelatedPerson is a mashup of a Person and an EntityRelationship, as the RelatedPerson contains elements of both objects.
+In effect, the FHIR resource `RelatedPerson` is a mashup of a `Person` and an `EntityRelationship`, as the `RelatedPerson` contains elements of both objects.
 
-![](../../../../.gitbook/assets/image%20%28205%29.png)
+![Relationships are Reversed from FHIR to SanteDB RIM](../../../../.gitbook/assets/image%20%28389%29.png)
 
 The CDR handles these relationship types automatically. When querying from FHIR with `_revInclude=RelatedPerson:patient` , the CDR will interpret either of these relationships and will construct the appropriate response messages for broadcasts and searches. 
 
-The CDR will treat the target of the personal relationship as a Person. Since the CDR support hierarchy and Patient is a Patient, this translation is transparent to the FHIR interface. The CDR treats the instance of RelatedPerson as the EntityRelationship instance between the two entities. The CDR's FHIR plugin will reverse the relationship to ensure that the FHIR RelatedPerson references is correctly associated.
+The CDR will treat the target of the personal relationship as a Person. Since the CDR support hierarchy and Patient is a Patient, this translation is transparent to the FHIR interface. The CDR treats the instance of `RelatedPerson` as the `EntityRelationship` instance between the two entities. The CDR's FHIR plugin will reverse the relationship to ensure that the FHIR `RelatedPerson` references is correctly associated.
 
 {% hint style="info" %}
 The reason the RelatedPerson is linked to the EntityRelationship is a single Person may have multiple relationships \(for example, a mother of two children\). However, in FHIR a RelatedPerson may only have a single relationship between a Person and a Patient.
@@ -120,7 +213,7 @@ And this FHIR message
 
 Will both result in this structure in the database.
 
-![](../../../../.gitbook/assets/image%20%28202%29%20%281%29.png)
+![FHIR structure mapped to the RIM](../../../../.gitbook/assets/image%20%28390%29.png)
 
 ### Complex Relationships
 
@@ -132,7 +225,7 @@ The HL7 FHIR processor on a read will not reproduce this when a patient is read 
 
 When creating or updating a related person in this manner the following structure is created in the RIM structure.
 
-![](../../../../.gitbook/assets/image%20%28201%29.png)
+![](../../../../.gitbook/assets/image%20%28391%29.png)
 
 This structure is also created from the HL7v2 process when an NK1 segment points at a previously registered PID segment. For example, the following HL7v2 structure also creates a similar structure as the FHIR interface.
 
@@ -201,17 +294,7 @@ This structure will indicate that a patient is admitted to hospital \(Sarah Smit
               }
             ]
           }
-        ],
-        "name": [
-          {
-            "use": "usual",
-            "family": "SMITH",
-            "given": [
-              "SARAH"
-            ]
-          }
-        ],
-        "gender": "female"
+        ]
       },
       "request": {
         "method": "POST",
@@ -257,15 +340,9 @@ This structure will indicate that a patient is admitted to hospital \(Sarah Smit
 }
 ```
 
-More complex relationships between patients and related persons are supported in the SanteDB CDR. For example, a single patient with two children in a FHIR bundle would be represented as:
+## Special Implementation Notes for Related Person
 
-![](../../../../.gitbook/assets/image%20%28204%29.png)
-
-If both RelatedPerson/1 and RelatedPerson/2 carry the same logical identifier in the &lt;identifier&gt; element of the RelatedPerson the structure illustrated below is created in the CDR since the "Person" the related-person 
-
-![](../../../../.gitbook/assets/image%20%28209%29.png)
-
-However if it is not possible to identify RelatedPerson/1 and RelatedPerson/2 as the same person, the structure created in the CDR will be as illustrated.
-
-![](../../../../.gitbook/assets/image%20%28211%29.png)
+* When querying a patient \(for example, querying for `?identifier=HL7-3` you can use `_revInclude=RelatedPerson:patient` to join a RelatedPerson instance, however the included `RelatedPerson` instance will be represented as a simple relationship.
+* It is not possible to perform a `_revInclude=Patient:link` on order to retrieve patient information about the `RelatedPerson` , this is because there is no relationship per-se between the `Person` and `Patient`, in SanteDB **they are the same resource**
+* The `id` and `fullUrl` of the `RelatedPerson` is the `id` property of the `EntityRelationship` rather than the `Person`. This is because in FHIR a `RelatedPerson` can have **exactly one** relationship to **exactly one** `Patient`, however in SanteDB RIM a `Person` can have **infinite** relationships to **infinite** `Patient` resources.
 
