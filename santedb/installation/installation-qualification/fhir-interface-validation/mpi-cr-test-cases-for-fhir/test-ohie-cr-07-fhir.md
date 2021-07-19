@@ -113,7 +113,7 @@ Additionally, the message has registration information for Flynn's insurance pro
   "type": "history",
   "entry": [
     {
-      "fullUrl": "Organization/ohie-cr-07-10-fhir-acme",
+      "fullUrl": "http://test.ohie.org/fhir/Organization/ohie-cr-07-10-fhir-acme",
       "resource": {
         "resourceType": "Organization",
         "id": "ohie-cr-07-10-fhir-acme",
@@ -143,10 +143,13 @@ Additionally, the message has registration information for Flynn's insurance pro
       "request": {
         "method": "POST",
         "url": "Organization/ohie-cr-07-fhir-acme"
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "Organization/ohie-cr-07-fhir-mgr",
+      "fullUrl": "http://test.ohie.org/fhir/Organization/ohie-cr-07-fhir-mgr",
       "resource": {
         "resourceType": "Organization",
         "id": "ohie-cr-07-fhir-mgr",
@@ -162,10 +165,13 @@ Additionally, the message has registration information for Flynn's insurance pro
       "request": {
         "method": "POST",
         "url": "Organization/ohie-cr-07-fhir-mgr"
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "Practitioner/ohie-cr-07-fhir-pract",
+      "fullUrl": "http://test.ohie.org/fhir/Practitioner/ohie-cr-07-fhir-pract",
       "resource": {
         "resourceType": "Practitioner",
         "id": "ohie-cr-07-fhir-pract",
@@ -209,10 +215,13 @@ Additionally, the message has registration information for Flynn's insurance pro
       "request": {
         "method": "POST",
         "url": "Practitioner/ohie-cr-07-fhir-pract"
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "Patient/ohie-cr-07-10-fhir-flyn",
+      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-07-10-fhir-flyn",
       "resource": {
         "resourceType": "Patient",
         "id": "ohie-cr-07-10-fhir-flyn",
@@ -347,7 +356,7 @@ Additionally, the message has registration information for Flynn's insurance pro
               }
             ],
             "organization": {
-              "reference": "Organization/ohie-cr-07-10-fhir-acme",
+              "reference": "http://test.ohie.org/fhir/Organization/ohie-cr-07-10-fhir-acme",
               "display": "ACME Insurance Corp."
             }
           }
@@ -378,22 +387,25 @@ Additionally, the message has registration information for Flynn's insurance pro
             "preferred": false
           }
         ],
-        "generalPractitioner": {
-          "reference": "Practitioner/ohie-cr-07-fhir-pract",
+        "generalPractitioner": [{
+          "reference": "http://test.ohie.org/fhir/Practitioner/ohie-cr-07-fhir-pract",
           "display": "Dr. Andrew Fudd"
-        },
+        }],
         "managingOrganization": {
-          "reference": "Organization/ohie-cr-07-fhir-mgr",
+          "reference": "http://test.ohie.org/fhir/Organization/ohie-cr-07-fhir-mgr",
           "display": "University Medical Centre"
         }
       },
       "request": {
         "method": "POST",
         "url": "Patient/ohie-cr-01-10-fhir-flyn"
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "RelatedPerson/ohie-cr-07-10-fhir-wife",
+      "fullUrl": "http://test.ohie.org/fhir/RelatedPerson/ohie-cr-07-10-fhir-wife",
       "resource": {
         "resourceType": "RelatedPerson",
         "id": "ohie-cr-07-10-fhir-wife",
@@ -405,7 +417,7 @@ Additionally, the message has registration information for Flynn's insurance pro
           }
         ],
         "patient": {
-          "reference": "Patient/ohie-cr-07-10-fhir-flyn"
+          "reference": "http://test.ohie.org/fhir/Patient/ohie-cr-07-10-fhir-flyn"
         },
         "relationship": [
           {
@@ -417,13 +429,13 @@ Additionally, the message has registration information for Flynn's insurance pro
             ]
           }
         ],
-        "name": {
+        "name": [{
           "use": "usual",
           "family": "Profile",
           "given": [
             "Allison"
           ]
-        },
+        }],
         "address": [
           {
             "use": "home",
@@ -453,6 +465,9 @@ Additionally, the message has registration information for Flynn's insurance pro
       "request": {
         "method": "POST",
         "url": "RelatedPerson/ohie-cr-07-10-fhir-wife"
+      },
+      "response": {
+        "status": "200"
       }
     }
 

@@ -94,7 +94,7 @@ This test case does not use familial names to mimic contexts where only given na
   "type": "history",
   "entry": [
     {
-      "fullUrl": "Patient/ohie-cr-05-10-fhir",
+      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-05-10-fhir",
       "resource": {
         "resourceType": "Patient",
         "id": "ohie-cr-05-10-fhir",
@@ -120,15 +120,18 @@ This test case does not use familial names to mimic contexts where only given na
       "request": {
         "method": "POST",
         "url": "Patient/ohie-cr-05-10-fhir"
+      },
+      "response": {
+        "status":"200"
       }
     },
     {
-      "fullUrl": "RelatedPerson/ohie-cr-05-10-fhir-mother",
+      "fullUrl": "http://test.ohie.org/fhir/RelatedPerson/ohie-cr-05-10-fhir-mother",
       "resource": {
         "resourceType": "RelatedPerson",
         "id": "ohie-cr-05-10-fhir-mother",
         "patient": {
-          "reference": "Patient/ohie-cr-05-10-fhir"
+          "reference": "http://test.ohie.org/fhir/Patient/ohie-cr-05-10-fhir"
         },
         "relationship": [
           {
@@ -153,6 +156,9 @@ This test case does not use familial names to mimic contexts where only given na
       "request": {
         "method": "POST",
         "url": "RelatedPerson/ohie-cr-05-10-fhir-mother"
+      },
+      "response": {
+        "status":"200"
       }
     }
   ]
@@ -219,7 +225,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
   "type": "history",
   "entry": [
     {
-      "fullUrl": "Patient/ohie-cr-05-20-fhir-baby",
+      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-05-20-fhir-baby",
       "resource": {
         "resourceType": "Patient",
         "id": "ohie-cr-05-20-fhir-baby",
@@ -237,10 +243,13 @@ The bundle portrayed is using type `history` and is intended to be tested as par
       "request": {
         "method": "POST",
         "url": "Patient/ohie-cr-05-20-fhir-baby"
+      },
+      "response": {
+        "status":"200"
       }
     },
     {
-      "fullUrl": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp",
+      "fullUrl": "http://test.ohie.org/fhir/RelatedPerson/ohie-cr-05-20-fhir-mother-rp",
       "resource": {
         "resourceType": "RelatedPerson",
         "id": "ohie-cr-05-20-fhir-mother-rp",
@@ -252,7 +261,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
           }
         ],
         "patient": {
-          "reference": "Patient/ohie-cr-05-20-fhir-baby"
+          "reference": "http://test.ohie.org/fhir/Patient/ohie-cr-05-20-fhir-baby"
         },
         "relationship": [
           {
@@ -278,16 +287,19 @@ The bundle portrayed is using type `history` and is intended to be tested as par
       "request": {
         "method": "POST",
         "url": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
+      },
+      "response": {
+        "status":"200"
       }
     },
     {
-      "fullUrl": "Patient/ohie-cr-05-20-fhir-mother",
+      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-05-20-fhir-mother",
       "resource": {
         "resourceType": "Patient",
         "id": "ohie-cr-05-20-fhir-mother",
         "identifier": [
           {
-            "use": "normal",
+            "use": "official",
             "system": "http://ohie.org/test/test",
             "value": "FHR-051"
           }
@@ -305,14 +317,19 @@ The bundle portrayed is using type `history` and is intended to be tested as par
         "birthDate": "1984-05-25",
         "link": [
           {
-            "other": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp",
-            "type": "see-also"
+            "other": {
+              "reference":"http://test.ohie.org/fhir/RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
+            },
+            "type": "seealso"
           }
         ]
       },
       "request": {
         "method": "POST",
         "url": "Patient/ohie-cr-05-20-fhir-mother"
+      },
+      "response": {
+        "status":"200"
       }
     }
   ]
