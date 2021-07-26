@@ -106,7 +106,7 @@ The test harness sends an authenticated request to create a new patient with a n
       },
       {
         "use":"usual",
-        "system": "http://ohie.org/test/nhid",
+        "system": "http://ohie.org/test/nid",
         "value":"NID061"
       }
     ],
@@ -230,7 +230,7 @@ The test harness sends an authenticated request to create a new patient with a n
       },
       {
         "use":"usual",
-        "system": "http://ohie.org/test/nhid",
+        "system": "http://ohie.org/test/nid",
         "value":"NID061"
       }
     ],
