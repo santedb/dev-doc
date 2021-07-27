@@ -18,7 +18,7 @@ The PMIR profile makes the assumption that the client is controlling the process
 
 It is generally bad practice to allow clients full control over merging/de-activating records on the server since this requires each client communicating with the PMIR service to properly implement and govern merges. SanteDB has three different types of merge:
 
-* LOCAL&gt;MASTER: In which a flagged candidate `LOCAL` record is reconciled and linked/merged with an appropriate `MASTER` record. Clients which make these calls are required to have the `Write MDM Master` permission.
+* LOCAL&gt;MASTER: In which a flagged candidate `LOCAL` record is reconciled and linked/merged with an appropriate `MASTER` record. Clients which make these calls are required to have the `Write MDM Master` permission. 
 * LOCAL&gt;LOCAL: In which a client indicates that a registration they have previously sent is a duplicate of another record they had previously sent. This action requires no special permissions and is the default method of using a `replaces` link.
 * MASTER&gt;MASTER: In which two golden or `MASTER` records are merged. This process includes the migration of all local references, and the record from truth from one master \(the victim\) to another \(the survivor\). Generally this merge is not permitted by clients unless the `Merge MDM Master` permissions is granted \(which is bad practice as it bypasses all governance controls on the server\).
 
@@ -36,7 +36,7 @@ Subsequent requests to query for a patient using `GREEN_TRIANGLE` would result i
 
 ## Pre-Conditions
 
-Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-02](test-ohie-cr-02-fhir.md#pre-conditions-setup) and [TEST: OHIE-CR-06](test-ohie-cr-06-fhir.md) have been run.
+Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-04](test-ohie-cr-04-fhir.md) and [TEST: OHIE-CR-06](test-ohie-cr-06-fhir.md) have been run.
 
 ## Authenticate as TEST\_HARNESS\_FHIR\_A
 

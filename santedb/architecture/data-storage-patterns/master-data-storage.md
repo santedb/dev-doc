@@ -217,5 +217,79 @@ In this method \(also known as a LOCAL&gt;MASTER merge\) the MDM-Candidate link 
 Any operation which removes all MDM-Master links from a MASTER record will result in the automatic obsolete of the MASTER record.
 {% endhint %}
 
+## Merging / Linking
 
+Callers can directly manipulate the relationships using the `IRepositoryService<EntityRelationship>` services to implement custom logic for merging and linking. By default the MDM layer registers `IRecordMergeService<T>` instances which implement a default behavior for external calls to MERGE data.
+
+| Victim Type | Survivor Type | No Permission | Write MDM | Merge MDM |
+| :--- | :--- | :--- | :--- | :--- |
+| LOCAL | LOCAL | Local Merge | Local Merge | Local Merge |
+| LOCAL | MASTER | Local Merge | Local/Master Relink | Local/Master Relink |
+| MASTER | MASTER | Local Merge | Local/Master Relink | Master Merge |
+|  |  |  |  |  |
+
+### Local/Master Re-Link
+
+A LOCAL&gt;MASTER link operation is initiated by calling `Merge()` in `IRecordMergeService<T>` , and passing a UUID of a MASTER record and the linked duplicate UUIDs that are either:
+
+* The explicit UUIDs of local records \(i.e. the UUID pointing at the local record\), or
+* The UUID of masters where the caller does not have `Merge MDM Master` permission
+
+This operation works by unlinking the local/duplicate record relationships \(of `MDM-Master` \) and re-establishing the link on the locals to the surviving master. This is a form of linking where neither the master nor the local records are merged. 
+
+For example, if a principal has `Write MDM Master` permission, and issues the following `ADT^A40` :
+
+```markup
+MSH|^~\&|TEST_HARNESS^^|TEST^^|CR1^^|MOH_CAAT^^|20141104174451|DEVICESECRET|ADT^A40^ADT_A39|TEST-CR-16-30|P|2.3.1
+EVN||20101020
+PID|||XXXXX^^^TEST||JONES^JENN^^^^^L||198401|F|||||||||||
+MRG|YYYYY^^^TEST
+```
+
+The process would be:
+
+* Load the record `XXXXX` in domain TEST \(MASTER\)
+* Load the record `YYYYY` in domain TEST \(MASTER\)
+* Call `Merge()` for MASTER&gt;MASTER
+* Client has `Write MDM Master` so record `XXXXX` remains the target of the merge.
+* Client does not have `Merge MDM Master` so record `YYYYY` is resolved to LOCAL record for TEST\_HARNESS at site TEST \(`LYYYY`\)
+* Merge proceeds as LOCAL&gt;MASTER
+  * `LYYYY` is disconnected from master `YYYY`
+  * `LYYYY` is attached to master `XXXX`
+  * If no further locals point at `YYYY` it is obsoleted.
+
+### Master Merge
+
+A MASTER to MASTER merge is the process whereby one master record is merged into another, and all associated LOCAL relationships are migrated to the survivor. Callers may only initiate a master merge when the principal carries the `Merge MDM Master` policy permission, otherwise an alternate merge strategy is used.
+
+{% hint style="info" %}
+Giving applications using the HL7v2 or HL7 FHIR interfaces permission for Merge MDM Master is not recommended as any use of a business identifier in those messages would result in a master merge, since the query stage loads master records on those interfaces.
+{% endhint %}
+
+The process for performing a master merge is:
+
+* Load record `XXXX` in domain TEST \(MASTER\)
+* Load record `YYYY` in domain TEST \(MASTER\)
+* Call `Merge()` for MASTER&gt;MASTER
+* Client has `Write MDM Master` so record `XXXX` remains target of merge
+* Client has `Merge MDM Master` so record `YYYY` remains source of merge
+* Merge proceeds:
+  * All `MDM-Master` associations previously pointing at `YYYY` are rewritten to `XXXX`
+  * All identifiers directly on `YYYY` master record are copied to `XXXX`
+  * `YYYY` is obsoleted 
+
+### Local Merge
+
+A local merge occurs when a source system indicates it has resolved duplicates in its own database issues an appropriate merge request to the iCDR. The local merge is the default operation whenever the caller is not granted explicit permission to perform MDM merges on the server. 
+
+The process for performing a local merge is:
+
+* Load record `XXXX` in domain TEST \(MASTER\)
+* Load record `YYYY` in domain TEST \(MASTER\)
+* Call `Merge()` for MASTER&gt;MASTER
+* Client does not have`Write MDM Master` so a local record for `XXXX` is resolved \(`LXXXX`\)
+* Client does not have `Merge MDM Master` so a local record for `YYYY` is resolved \(`LYYYY`\)
+* If `LYYYY` and `LXXXX` were resolved, then the merge occurs:
+  * The record `LYYYY` is obsoleted
+  * All identifiers from `LYYYY` are copied to `LXXXX` so that any query to `LYYYY` are resolved to the survivor
 
