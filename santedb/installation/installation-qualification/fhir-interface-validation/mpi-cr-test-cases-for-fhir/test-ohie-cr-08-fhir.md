@@ -22,6 +22,8 @@ It is generally bad practice to allow clients full control over merging/de-activ
 * LOCAL&gt;LOCAL: In which a client indicates that a registration they have previously sent is a duplicate of another record they had previously sent. This action requires no special permissions and is the default method of using a `replaces` link.
 * MASTER&gt;MASTER: In which two golden or `MASTER` records are merged. This process includes the migration of all local references, and the record from truth from one master \(the victim\) to another \(the survivor\). Generally this merge is not permitted by clients unless the `Merge MDM Master` permissions is granted \(which is bad practice as it bypasses all governance controls on the server\).
 
+These merge strategies and the conditions under which they are permitted are described in the [Master Data Management](../../../../architecture/data-storage-patterns/master-data-storage.md#merging-linking) architecture article.
+
 Furthermore SanteDB requires establishing ownership over a particular `LOCAL` record in order to determine if a source is permitted to merge two records. Generally, source `HOSPITAL_A` is only permitted to indicate merges of data only submitted from `HOSPITAL_A` and should not allow `HOSPITAL_B` records to be merged into `HOSPITAL_A`.
 
 Furthermore, the SanteDB implementation of merging behaves as described in `Chapter 3 - Patient Administration` in HL7 Version 2 \(see: `3.6.2.1.2`\). For example, if two patients from `HOSPITAL_A` are registered as illustrated below \(patient 1 with two identifiers and patient 2 with one\):
@@ -390,11 +392,9 @@ Alternately, the test harness may fetch/obtain the logical ID of the resource an
 
 | Requirement | Option | Description |
 | :--- | :--- | :--- |
-| MUST | PMIR Only | Return MessageHeader with response.code = ok |
+| MUST |  | Return MessageHeader with response.code = ok |
 | MUST |  | Return HTTP code of 200 OK |
-| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
-| SHOULD |  | Include a Patient entry in response containing merged \(deprecated\) patient |
-| SHOULD |  | Include a link to the master identity with code refer  |
+| SHOULD |  | Include an OperationOutcome entry in the response |
 
 ## Retrieve 
 
