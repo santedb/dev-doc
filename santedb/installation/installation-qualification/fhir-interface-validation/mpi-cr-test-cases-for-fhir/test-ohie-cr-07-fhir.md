@@ -490,7 +490,7 @@ Additionally, the message has registration information for Flynn's insurance pro
 The test harness issues a query for patient demographics using the Patient's NID identifier
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/nid|NID071 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-070 HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXYYYXXYX
 ```
@@ -498,7 +498,59 @@ Authorization: bearer XXXXYYYXXYX
 **Alternate**: The test harness issues a query for patient demographics using only NID identifier
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=NID071 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=FHR-070 HTTP/1.1
+Accept: application/fhir+json
+Authorization: bearer XXXXYYYXXYX
+```
+
+### Expected Behaviour
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return a bundle in JSON format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return HTTP code of 200</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Contain a bundle with exactly 1 result</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Match full demographics details outlined in Registration step</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Return the master identity and have links to the local identities</p>
+        <p>in one or more <code>link</code> elements</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Retrieve Full Patient Profile
+
+The test harness issues a query for patient demographics using the Patient's NID identifier and instructs the inclusion of all data
+
+```http
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/nid|NID071&_revinclude=RelatedPerson:patient&_include=Organization:managingOrganization&_include=Practitioner:generalPractitioner HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXYYYXXYX
 ```
