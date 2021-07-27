@@ -41,7 +41,7 @@ Create an AssigningAuthority domain which has the following attributes:
   <insert skipIfError="false" skipIfExists="true">
     <AssigningAuthority xmlns="http://santedb.org/model">
       <name>OHIE TEST Domain</name>
-      <domainName>TEST</domainName>
+      <domainName>TEST_FHIR</domainName>
       <oid>1.3.6.1.4.1.52820.3.72.5.9.1</oid>
       <url>http://ohie.org/test/test</url>
       <isUnique>true</isUnique>
