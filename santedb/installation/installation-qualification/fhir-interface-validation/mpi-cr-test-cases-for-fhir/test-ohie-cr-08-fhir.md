@@ -11,6 +11,7 @@ This test ensures that the client registry properly handles merge requests sent 
 * [Integrating the Health Enterprise Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)
 * [HL7 FHIR RelatedPerson Resource](http://hl7.org/fhir/relatedperson.html)
 * [HL7 FHIR Patient Resource](http://hl7.org/fhir/patient.html)
+* I[ntegrating the Health Enterprise Patient Identity Cross Reference for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
 
 ## Discussion
 
@@ -30,7 +31,7 @@ Subsequent requests to query for a patient using `GREEN_TRIANGLE` would result i
 
 Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-04](test-ohie-cr-04-fhir.md) and [TEST: OHIE-CR-06](test-ohie-cr-06-fhir.md) have been run.
 
-## Authenticate as TEST\_HARNESS\_FHIR\_A
+## Authenticate as TEST\_HARNESS
 
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
@@ -40,14 +41,14 @@ Content-Type: application/x-www-form-urlencoded
 Host: sut:8080
 Content-Length: 112
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_id=TEST_HARNESS&client_secret=TEST_HARNESS
 ```
 
-## Register New Patient Identity in TEST\_A
+## Register New Patient Identity in TEST
 
-The test harness sends an authenticated request to create a new patient with a new identifier in TEST\_A domain. Patient details:
+The test harness sends an authenticated request to create a new patient with a new identifier in TEST domain. Patient details:
 
-* Identifier `FHRA-080` in `http://ohie.org/test/test_a` 
+* Identifier `FHR-080` in `http://ohie.org/test/test` 
 * Identifier `NID080` in `http://ohie.org/test/nid` 
 * Name: MERGY SMITH
 * Gender: Male
@@ -61,19 +62,8 @@ The test harness sends an authenticated request to create a new patient with a n
     "identifier": [
       {
         "use": "official",
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "PI"
-            }
-          ]
-        },
-        "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-080",
-        "assigner": {
-          "display": "Test Harness A Patient Identity"
-        }
+        "system": "http://ohie.org/test/test",
+        "value": "FHR-080"
       },
       {
         "use":"usual",
@@ -105,12 +95,12 @@ The test harness sends an authenticated request to create a new patient with a n
 | SHOULD |  | Include a Patient entry in response containing created patient |
 | SHOULD |  | Include a link to the master identity with code refer  |
 
-## Execute PIXm Query Patient in TEST\_A
+## Execute PIXm Query Patient in TEST
 
-The test harness sends an IHE PIXm query for a patient with identifier FHIRA-080 to the receiver.
+The test harness sends an IHE PIXm query for a patient with identifier FHR-080 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-080 HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test|FHR-080 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -140,8 +130,8 @@ Accept: application/fhir+json
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
       <td style="text-align:left">
-        <p>Have two parameters carrying the identifier in TEST_A and NID</p>
-        <p>with parameter name of targetIdentifier and values FHRA-080 and NID080</p>
+        <p>Have two parameters carrying the identifier in TEST and NID</p>
+        <p>with parameter name of targetIdentifier and values FHR-080 and NID080</p>
       </td>
     </tr>
     <tr>
@@ -155,11 +145,11 @@ Accept: application/fhir+json
   </tbody>
 </table>
 
-## Register Second Patient Identity in TEST\_A
+## Register Second Patient Identity in TEST
 
-The test harness sends an authenticated request to create a new patient with a new identifier in TEST\_A domain. Patient details:
+The test harness sends an authenticated request to create a new patient with a new identifier in TEST domain. Patient details:
 
-* Identifier `FHRA-081` in `http://ohie.org/test/test_a` 
+* Identifier `FHR-081` in `http://ohie.org/test/test` 
 * Name: MERGY SMYTHE
 * Gender: Male
 * DOB: 1986-05-25
@@ -172,19 +162,8 @@ The test harness sends an authenticated request to create a new patient with a n
     "identifier": [
       {
         "use": "official",
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "PI"
-            }
-          ]
-        },
-        "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-081",
-        "assigner": {
-          "display": "Test Harness A Patient Identity"
-        }
+        "system": "http://ohie.org/test/test",
+        "value": "FHR-081"
       }
     ],
     "name": [
@@ -211,12 +190,12 @@ The test harness sends an authenticated request to create a new patient with a n
 | SHOULD |  | Include a Patient entry in response containing created patient |
 | SHOULD |  | Include a link to the master identity with code refer  |
 
-## Execute PIXm Query Patient in TEST\_A
+## Execute PIXm Query Patient in TEST
 
-The test harness sends an IHE PIXm query for a patient with identifier FHIRA-081 to the receiver.
+The test harness sends an IHE PIXm query for a patient with identifier FHIR-081 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-081 HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test|FHR-081 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -245,8 +224,8 @@ Accept: application/fhir+json
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Have two parameters carrying the identifier in TEST_A with parameter name
-        of targetIdentifier and value FHRA-081.</td>
+      <td style="text-align:left">Have one parameter carrying the identifier in TEST with parameter name
+        of targetIdentifier and value FHR-081.</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
@@ -259,9 +238,9 @@ Accept: application/fhir+json
   </tbody>
 </table>
 
-## Merge FHRA-081 into FHRA-080
+## Merge FHR-081 into FHR-080
 
-In this step the test harness sends a PIMR request to instruct the Client Registry that `FHRA-081` has been replaced by `FHRA-080`.
+In this step the test harness sends a PIMR request to instruct the Client Registry that `FHR-081` has been replaced by `FHR-080`.
 
 ```javascript
 {
@@ -305,39 +284,17 @@ In this step the test harness sends a PIMR request to instruct the Client Regist
               "identifier": [
                 {
                   "use": "official",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "PI"
-                      }
-                    ]
-                  },
-                  "system": "http://ohie.org/test/test_a",
-                  "value": "FHRA-081",
-                  "assigner": {
-                    "display": "Test Harness A Patient Identity"
-                  }
+                  "system": "http://ohie.org/test/test",
+                  "value": "FHR-081"
                 }
               ],
-              "name": [
-                {
-                  "use": "official",
-                  "family": "SMYTHE",
-                  "given": [
-                    "MERGY"
-                  ]
-                }
-              ],
-              "gender": "male",
-              "birthDate": "1986-05-25",
               "link": [
                 {
                   "other": {
                     "type": "Patient",
                     "identifier": {
-                      "value": "FHRA-080",
-                      "system": "http://ohie.org/test/test_a"
+                      "value": "FHR-080",
+                      "system": "http://ohie.org/test/test"
                     }
                   },
                   "type": "replaced-by"
@@ -388,14 +345,14 @@ Alternately, the test harness may fetch/obtain the logical ID of the resource an
 
 ## Query for Merged Record
 
-This test ensures that the client registry returns the new record \(with identifier FHRA-080\) when the old record \(FHRA-081\) is queried. This resolution ensures that the merge occurred successfully and any attempts to reference an old record results in the new being returned. 
+This test ensures that the client registry returns the new record \(with identifier FHR-080\) when the old record \(FHR-081\) is queried. This resolution ensures that the merge occurred successfully and any attempts to reference an old record results in the new being returned. 
 
 {% hint style="info" %}
 This test uses the business identifiers to ensure the cross referencing is updated, and is the recommended manner for handling record merges. Alternates \(such as returning the old record with active of false would place a burden on the client to intelligently handle merges by following, potentially, dozens of "replaced-by" links\)
 {% endhint %}
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHRA-081 HTTP/1.1
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-081 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -416,7 +373,7 @@ Accept: application/fhir+json
       <td style="text-align:left"></td>
       <td style="text-align:left">
         <p>Return a bundle with an entry carrying a <code>Patient</code> resource with</p>
-        <p>the FHRA-080 identifier (i.e. the resource returned should be the survivor</p>
+        <p>the FHR-080 identifier (i.e. the resource returned should be the survivor</p>
         <p>of the merge operation)</p>
       </td>
     </tr>
@@ -430,6 +387,12 @@ Accept: application/fhir+json
       <td style="text-align:left"></td>
       <td style="text-align:left">Return an additional <code>Patient</code> entry resource with <code>active</code> set
         to <code>false</code> and carrying the now inactive resource.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SHOULD</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Carry a link with type <code>replaces</code> indicating that the record
+        returned replaced a previous record.</td>
     </tr>
   </tbody>
 </table>
@@ -512,7 +475,7 @@ Accept: application/fhir+json
 This test ensures that the updates applied via the PMIR merge are reflected in the PIXm cross referencing query request. The test harness issues a cross referencing request to obtain the national health identifier for FHRA-081 \(a patient, when registered, did not have an NID however by virtue FHRA-081 was merged into FHR-080 which carries a NID, FHRA-081 should carry a NID\).
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a&targetDomain=http://ohie.org/test/nid HTTP/1.1
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test|FHR-080&targetSystem=http://ohie.org/test/nid HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
