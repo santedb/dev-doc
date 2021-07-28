@@ -16,16 +16,6 @@ This test ensures that the client registry properly handles merge requests sent 
 
 The PMIR profile makes the assumption that the client is controlling the process of merge by instructing the server to link/de-activate a victim. Since merging is an event which triggers several business rules in the Master Data Management layer, the SanteDB PMIR handler detects this condition \(a client attempting to control linking of patients, which is an internal matter\) and mimics the equivalent behaviors of `ADT^A40` from HL7v2. 
 
-It is generally bad practice to allow clients full control over merging/de-activating records on the server since this requires each client communicating with the PMIR service to properly implement and govern merges. SanteDB has three different types of merge:
-
-* LOCAL&gt;MASTER: In which a flagged candidate `LOCAL` record is reconciled and linked/merged with an appropriate `MASTER` record. Clients which make these calls are required to have the `Write MDM Master` permission. 
-* LOCAL&gt;LOCAL: In which a client indicates that a registration they have previously sent is a duplicate of another record they had previously sent. This action requires no special permissions and is the default method of using a `replaces` link.
-* MASTER&gt;MASTER: In which two golden or `MASTER` records are merged. This process includes the migration of all local references, and the record from truth from one master \(the victim\) to another \(the survivor\). Generally this merge is not permitted by clients unless the `Merge MDM Master` permissions is granted \(which is bad practice as it bypasses all governance controls on the server\).
-
-These merge strategies and the conditions under which they are permitted are described in the [Master Data Management](../../../../architecture/data-storage-patterns/master-data-storage.md#merging-linking) architecture article.
-
-Furthermore SanteDB requires establishing ownership over a particular `LOCAL` record in order to determine if a source is permitted to merge two records. Generally, source `HOSPITAL_A` is only permitted to indicate merges of data only submitted from `HOSPITAL_A` and should not allow `HOSPITAL_B` records to be merged into `HOSPITAL_A`.
-
 Furthermore, the SanteDB implementation of merging behaves as described in `Chapter 3 - Patient Administration` in HL7 Version 2 \(see: `3.6.2.1.2`\). For example, if two patients from `HOSPITAL_A` are registered as illustrated below \(patient 1 with two identifiers and patient 2 with one\):
 
 ![](../../../../../.gitbook/assets/image%20%28395%29.png)
@@ -396,5 +386,142 @@ Alternately, the test harness may fetch/obtain the logical ID of the resource an
 | MUST |  | Return HTTP code of 200 OK |
 | SHOULD |  | Include an OperationOutcome entry in the response |
 
-## Retrieve 
+## Query for Merged Record
+
+This test ensures that the client registry returns the new record \(with identifier FHRA-080\) when the old record \(FHRA-081\) is queried. This resolution ensures that the merge occurred successfully and any attempts to reference an old record results in the new being returned. 
+
+{% hint style="info" %}
+This test uses the business identifiers to ensure the cross referencing is updated, and is the recommended manner for handling record merges. Alternates \(such as returning the old record with active of false would place a burden on the client to intelligently handle merges by following, potentially, dozens of "replaced-by" links\)
+{% endhint %}
+
+```http
+GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHRA-081 HTTP/1.1
+Auhthorization: Bearer XXXXXX
+Accept: application/fhir+json
+```
+
+### Expected Behavior
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>Return a bundle with an entry carrying a <code>Patient</code> resource with</p>
+        <p>the FHRA-080 identifier (i.e. the resource returned should be the survivor</p>
+        <p>of the merge operation)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return HTTP code of 200 OK</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MAY</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return an additional <code>Patient</code> entry resource with <code>active</code> set
+        to <code>false</code> and carrying the now inactive resource.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Fetch Merged Record
+
+This test ensures compliance with the IHE PMIR profile by explicitly querying for a resource by logical identifier \(rather than business identifier\). IHE PMIR provides several options for handling a `READ` or `SEARCH` operation for merged records. All of these options are expressed as alternates in the expected behaviors table. 
+
+{% hint style="info" %}
+This test requires that the logical resource identifier assigned by the iCDR / MPI instance is known by the SUT.
+{% endhint %}
+
+```http
+GET http://sut:8080/fhir/Patient/5d0e583f-1fda-4a25-8fbe-f4fb3e876f3c HTTP/1.1
+Auhthorization: Bearer XXXXXX
+Accept: application/fhir+json
+```
+
+### Expected Behavior
+
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Return an HTTP 200 OK with the replaced/merged record carrying `active` value of `false` |
+| MUST | ALTERNATE | Return HTTP code of 404 NOT FOUND |
+
+## Search Merged Record
+
+This test ensures compliance with the IHE PMIR profile by explicitly searching for a resource by logical identifier \(rather than business identifier\). IHE PMIR provides several options for handling a `SEARCH` operation for merged records. All of these options are expressed as alternates in the expected behaviors table. 
+
+{% hint style="info" %}
+This test requires that the logical resource identifier assigned by the iCDR / MPI instance is known by the SUT.
+{% endhint %}
+
+```http
+GET http://sut:8080/fhir/Patient?_id=5d0e583f-1fda-4a25-8fbe-f4fb3e876f3c HTTP/1.1
+Auhthorization: Bearer XXXXXX
+Accept: application/fhir+json
+```
+
+### Expected Behavior
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Requirement</th>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">Return an HTTP 200 OK and a <code>Bundle</code> with the 0 results.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left">ALTERNATE</td>
+      <td style="text-align:left">
+        <p>Return an HTTP 200 OK and a <code>Bundle</code> with the merged record</p>
+        <p>with <code>active</code> set to <code>false</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MUST</td>
+      <td style="text-align:left">ALTERNATE</td>
+      <td style="text-align:left">
+        <p>Return an HTTP 200 OK and a <code>Bundle</code> with 2 results. One</p>
+        <p>representing the survivor record (with <code>active</code> of <code>true</code>)
+          and one</p>
+        <p>representing the merged record (with <code>active</code> of <code>false</code>)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## PIXm Query for Merged Record
+
+This test ensures that the updates applied via the PMIR merge are reflected in the PIXm cross referencing query request. The test harness issues a cross referencing request to obtain the national health identifier for FHRA-081 \(a patient, when registered, did not have an NID however by virtue FHRA-081 was merged into FHR-080 which carries a NID, FHRA-081 should carry a NID\).
+
+```http
+GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a&targetDomain=http://ohie.org/test/nid HTTP/1.1
+Auhthorization: Bearer XXXXXX
+Accept: application/fhir+json
+```
+
+### Expected Behavior
+
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Return an HTTP 200 OK and a `Parameters` as the payload. |
+| MUST |  | Return one `targetIdentifier` parameter carrying the NID of NID080 |
+| MUST |  | Return one `targetId` parameter with a pointer to the surviving record \(i.e.  not to the merged record\)  |
 
