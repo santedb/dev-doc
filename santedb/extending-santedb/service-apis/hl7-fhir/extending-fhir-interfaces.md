@@ -1,4 +1,4 @@
-# Extending FHIR Interfaces
+# Extending FHIR Functionality
 
 The SanteDB FHIR subsystem allows developers to easily add new behaviours, resources, and operations. The following extension points and interfaces are exposed in the SanteDB FHIR package:
 
