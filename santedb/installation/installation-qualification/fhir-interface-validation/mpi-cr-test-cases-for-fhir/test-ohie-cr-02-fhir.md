@@ -55,10 +55,11 @@ Create an AssigningAuthority domain which has the following attributes:
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 87
+Host: localhost:8080
+
 
 grant_type=client_credentials&scope=*&client_id=TEST_HARNESS&client_secret=TEST_HARNESS
 ```
