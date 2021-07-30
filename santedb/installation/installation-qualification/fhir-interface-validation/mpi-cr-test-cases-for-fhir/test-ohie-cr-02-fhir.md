@@ -61,7 +61,7 @@ Content-Length: 87
 Host: localhost:8080
 
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS
 ```
 
 ## Register Olly Oid
