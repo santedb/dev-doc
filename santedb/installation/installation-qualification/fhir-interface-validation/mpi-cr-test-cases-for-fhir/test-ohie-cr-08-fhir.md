@@ -36,15 +36,15 @@ Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-04
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 87
+Host: localhost:8080
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS
 ```
 
-## Register New Patient Identity in TEST
+## Register First Patient Identity in TEST
 
 The test harness sends an authenticated request to create a new patient with a new identifier in TEST domain. Patient details:
 
@@ -67,7 +67,7 @@ The test harness sends an authenticated request to create a new patient with a n
       },
       {
         "use":"usual",
-        "system": "http://ohie.org/test/nhid",
+        "system": "http://ohie.org/test/nid",
         "value":"NID080"
       }
     ],
@@ -95,12 +95,12 @@ The test harness sends an authenticated request to create a new patient with a n
 | SHOULD |  | Include a Patient entry in response containing created patient |
 | SHOULD |  | Include a link to the master identity with code refer  |
 
-## Execute PIXm Query Patient in TEST
+## Execute PIXm Query To Validate The First Patient in TEST
 
 The test harness sends an IHE PIXm query for a patient with identifier FHR-080 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test|FHR-080 HTTP/1.1
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-080 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -124,7 +124,7 @@ Accept: application/fhir+json
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Include an Parameters resource in the response</td>
+      <td style="text-align:left">Include a Parameters resource in the response</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
@@ -190,12 +190,12 @@ The test harness sends an authenticated request to create a new patient with a n
 | SHOULD |  | Include a Patient entry in response containing created patient |
 | SHOULD |  | Include a link to the master identity with code refer  |
 
-## Execute PIXm Query Patient in TEST
+## Execute PIXm Query To Validate The Second Patient in TEST
 
 The test harness sends an IHE PIXm query for a patient with identifier FHIR-081 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test|FHR-081 HTTP/1.1
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-081 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -219,7 +219,7 @@ Accept: application/fhir+json
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Include an Parameters resource in the response</td>
+      <td style="text-align:left">Include a Parameters resource in the response</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
@@ -238,7 +238,7 @@ Accept: application/fhir+json
   </tbody>
 </table>
 
-## Merge FHR-081 into FHR-080
+## Merge FHR-081 \(Patient 2\)  into FHR-080 \(Patient 1\)
 
 In this step the test harness sends a PIMR request to instruct the Client Registry that `FHR-081` has been replaced by `FHR-080`.
 
@@ -320,6 +320,11 @@ In this step the test harness sends a PIMR request to instruct the Client Regist
 You will notice that the `link` element in the above message uses the business identifier reference rather than an absolute reference by URL. This is considered best practice when merging on SanteDB server as it abstracts the logical identifier \(which changes as the resource moves between servers\). See: [http://hl7.org/fhir/resource.html\#identifiers](http://hl7.org/fhir/resource.html#identifiers)
 {% endhint %}
 
+| Requirement | Option | Description |
+| :--- | :--- | :--- |
+| MUST |  | Return HTTP code of 200 OK |
+| MUST |  | Return MessageHeader with response.code = ok |
+
 ### Alternate Merge Request
 
 Alternately, the test harness may fetch/obtain the logical ID of the resource and may indicate the merge using the logical identifier of the resource. For example, if the SanteDB MPI registered a patient with logical identifier `5d0e583f-1fda-4a25-8fbe-f4fb3e876f3c`, the sender may issue a link request such as:
@@ -352,7 +357,7 @@ This test uses the business identifiers to ensure the cross referencing is updat
 {% endhint %}
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-081 HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-081 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -470,12 +475,12 @@ Accept: application/fhir+json
   </tbody>
 </table>
 
-## PIXm Query for Merged Record
+## Execute PIXm Query To Validate Merged Record
 
-This test ensures that the updates applied via the PMIR merge are reflected in the PIXm cross referencing query request. The test harness issues a cross referencing request to obtain the national health identifier for FHRA-081 \(a patient, when registered, did not have an NID however by virtue FHRA-081 was merged into FHR-080 which carries a NID, FHRA-081 should carry a NID\).
+This test ensures that the updates applied via the PMIR merge are reflected in the PIXm cross-referencing query request. The test harness issues a cross-referencing request to obtain the national health identifier for FHRA-081 \(a patient, when registered, did not have a NID however by virtue FHRA-081 was merged into FHR-080 which carries a NID, FHRA-081 should carry a NID\).
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test|FHR-080&targetSystem=http://ohie.org/test/nid HTTP/1.1
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-081&targetSystem=http%3A%2F%2Fohie.org%2Ftest%2Fnid HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
