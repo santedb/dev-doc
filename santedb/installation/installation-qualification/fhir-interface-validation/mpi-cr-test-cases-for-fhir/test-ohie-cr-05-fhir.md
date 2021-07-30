@@ -65,12 +65,12 @@ Ensure that all pre-conditions for [OHIE-CR-02-FHIR](test-ohie-cr-02-fhir.md#pre
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 87
+Host: localhost:8080
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_FHIR&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS
 ```
 
 ## Register Mother / Child Demographics in Transaction Bundle
@@ -181,7 +181,7 @@ This test case does not use familial names to mimic contexts where only given na
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-050&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-050&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -383,7 +383,7 @@ The bundle portrayed is using type `history` and is intended to be tested as par
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-051&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-051&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXXXX
 ```
@@ -425,7 +425,7 @@ Authorization: bearer XXXXXXX
 The test harness will execute a query on the patient resource and will validate that the client registry understands the extended `mothersMaidenName` parameter supplied.
 
 ```http
-GET http://sut:8080/fhir/Patient?mothersMaidenName=Abels HTTP/1.1
+GET http://localhost:8080/fhir/Patient?mothersMaidenName=Abels HTTP/1.1
 Authorization: bearer
 Accept: application/fhir+json
 ```
