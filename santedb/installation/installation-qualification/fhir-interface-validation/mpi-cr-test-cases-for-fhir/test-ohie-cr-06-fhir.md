@@ -45,12 +45,12 @@ The NID domain is a sample domain which is being used to simulate a globally ass
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 94
+Host: localhost:8080
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_A
 ```
 
 ## Execute PIXm Query for Non-Existent Patient in TEST\_A
@@ -58,7 +58,7 @@ grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TES
 The test harness sends an IHE PIXm query for a patient with identifier FHIRA-8767 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-060 HTTP/1.1
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a%7CFHRA-060 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -139,7 +139,7 @@ The test harness sends an authenticated request to create a new patient with a n
 The test harness sends an IHE PIXm query for a patient with identifier FHIRA-8767 to the receiver.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_a|FHRA-061 HTTP/1.1
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a%7CFHRA-061 HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -163,7 +163,7 @@ Accept: application/fhir+json
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Include an Parameters resource in the response</td>
+      <td style="text-align:left">Include a Parameters resource in the response</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
@@ -189,12 +189,12 @@ Accept: application/fhir+json
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 94
+Host: localhost:8080
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_B&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_B
 ```
 
 ## Register New Patient Identity in TEST\_B
@@ -262,7 +262,7 @@ The test harness sends an authenticated request to create a new patient with a n
 The test harness sends an IHE PIXm query for a patient with identifier NID061 to the receiver and explicitly requests a resolve to TEST\_A.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/nid|NID061&targetDomain=http://ohie.org/test/test_a HTTP/1.1
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Fnid%7CNID061&targetSystem=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a HTTP/1.1
 Auhthorization: Bearer XXXXXX
 Accept: application/fhir+json
 ```
@@ -286,7 +286,7 @@ Accept: application/fhir+json
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Include an Parameters resource in the response</td>
+      <td style="text-align:left">Include a Parameters resource in the response</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
