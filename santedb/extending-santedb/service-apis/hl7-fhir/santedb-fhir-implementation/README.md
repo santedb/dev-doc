@@ -1,4 +1,4 @@
-# SanteDB FHIR Implementation
+# Implementation Details
 
 Unlike CDRs which use FHIR as the basis of their data storage throughout the stack, SanteDB treats FHIR as an edge messaging format. Therefore FHIR resource requests are considered **transient** and are never persisted into the database.
 
