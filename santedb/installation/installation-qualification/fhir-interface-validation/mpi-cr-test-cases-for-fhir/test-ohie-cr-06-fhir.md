@@ -136,7 +136,7 @@ The test harness sends an authenticated request to create a new patient with a n
 
 ## Execute PIXm Query Patient in TEST\_A
 
-The test harness sends an IHE PIXm query for a patient with identifier FHIRA-8767 to the receiver.
+The test harness sends an IHE PIXm query for a patient with identifier FHRA-061 to the receiver.
 
 ```http
 GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a%7CFHRA-061 HTTP/1.1
@@ -307,7 +307,7 @@ Accept: application/fhir+json
 
 ## Execute PIXm Query Patient using TEST\_B for TEST\_X
 
-The test harness sends an IHE PIXm query for a patient with identifier FHRB-87 to the receiver asking for identities in TEST\_X.
+The test harness sends an IHE PIXm query for a patient with identifier FHRB-062 to the receiver asking for identities in TEST\_X.
 
 ```http
 GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_b|FHRB-062&targetDomain=http://ohie.org/test/test_x HTTP/1.1
