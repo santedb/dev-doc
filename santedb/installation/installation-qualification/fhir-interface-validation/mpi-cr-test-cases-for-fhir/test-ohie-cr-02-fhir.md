@@ -124,7 +124,7 @@ Authorization: bearer XXXXXXX
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result |
 | MUST |  | Contain a patient for Olly Oid |
-| MUST |  | Have an identifier for FHR-403 in system http://ohie.org/test/test |
+| MUST |  | Have an identifier for FHR-020 in system http://ohie.org/test/test |
 | SHOULD |  | Contain one or more link entries with type seealso |
 
 ## Register Uma Url
@@ -137,27 +137,27 @@ The test harness registers a patient using the URL representation of the system 
 
 ```javascript
 {
-  "resourceType": "Patient",
-  "id": "ohie-cr-02-10-fhir",
-  "active": true,
-  "identifier": [
-    {
-      "system": "http://ohie.org/test/test",
-      "value": "FHR-021"
-    }
-  ],
-  "name": [
-    {
-      "use": "official",
-      "family": "URL",
-      "given": [
-        "UMA"
-      ]
-    }
-  ],
-  "gender": "female",
-  "birthDate": "1990-03-09"
-}
+			  "resourceType": "Patient",
+			  "id": "ohie-cr-02-30-fhir",
+			  "active": true,
+			  "identifier": [
+			    {
+			      "system": "http://ohie.org/test/test",
+			      "value": "FHR-021"
+			    }
+			  ],
+			  "name": [
+			    {
+			      "use": "official",
+			      "family": "URL",
+			      "given": [
+			        "UMA"
+			      ]
+			    }
+			  ],
+			  "gender": "female",
+			  "birthDate": "1990-03-09"
+			}
 ```
 
 ### Expected Behaviour
