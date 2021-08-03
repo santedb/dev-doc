@@ -413,8 +413,8 @@ Authorization: bearer XXXXXXX
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result |
 | MUST |  | Contain a patient for Jennifer Jones |
-| MUST |  | Have an identifier for FHRB-4736 in system http://ohie.org/test/test\_b |
-| SHOULD |  | Have identifier for FHIRA-0396 in system http://ohie.org/test/test\_a |
+| MUST |  | Have an identifier for FHRB-042 in system http://ohie.org/test/test\_b |
+| SHOULD |  | Have identifier for FHIRA-040 in system http://ohie.org/test/test\_a |
 | SHOULD |  | Contain a link entry with type seealso pointing to local records from TEST HARNESS A |
 | SHOULD |  | Contain a link entry with type seealso pointing to local record from TEST HARNESS B |
 
