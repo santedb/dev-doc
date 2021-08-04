@@ -24,7 +24,7 @@ None
 
 ## Register Incomplete Message
 
-The test harness sends a patient which ahs a mal-formed identifier entry which is missing the system.
+The test harness sends a patient which has a malformed identifier entry which is missing the system.
 
 ```javascript
 {
