@@ -187,7 +187,7 @@ Authorization: bearer XXXXXXX
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result |
 | MUST |  | Contain a patient for Uma Url |
-| MUST |  | Have an identifier for FHR-404 in system http://ohie.org/test/test |
+| MUST |  | Have an identifier for FHR-021 in system http://ohie.org/test/test |
 | SHOULD |  | Contain one or more link entries with type seealso |
 
 
