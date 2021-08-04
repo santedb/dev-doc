@@ -514,7 +514,7 @@ Additionally, the message has registration information for Flynn's insurance pro
 The test harness issues a query for patient demographics using the Patient's NID identifier
 
 ```http
-GET http://localhost:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-070 HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-070 HTTP/1.1
 Accept-Encoding: gzip,deflate
 Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
@@ -583,7 +583,7 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 The test harness issues a query for patient demographics using the Patient's NID identifier and instructs the inclusion of all data
 
 ```http
-GET http://localhost:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-070&_include=Organization:AmanagingOrganization&_revinclude=RelatedPerson:patient HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-070&_include=Organization:AmanagingOrganization&_revinclude=RelatedPerson:patient HTTP/1.1
 Accept-Encoding: gzip,deflate
 Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
@@ -648,7 +648,7 @@ Authorization: bearer XXXXYYYXXYX
 **Alternate**: The test harness issues a query for patient using an exact modifier 
 
 ```http
-GET http://sut:8080/fhir/Patient?family=Profile&given:exact=Flynn HTTP/1.1
+GET http://sut:8080/fhir/Patient?family=Profile&given%3Aexact=Flynn HTTP/1.1
 Accept: application/fhir+json
 Authorization: bearer XXXXYYYXXYX
 ```
