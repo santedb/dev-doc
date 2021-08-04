@@ -66,9 +66,13 @@ The test harness authenticates against the SanteMPI IdP using a client\_credenti
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
 Content-Type: application/x-www-form-urlencoded;charset=UTF-8
 Content-Length: 87
 Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 
 grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS
 ```
@@ -91,74 +95,99 @@ This test case does not use familial names to mimic contexts where only given na
 ```javascript
 {
   "resourceType": "Bundle",
-  "type": "history",
+  "type": "message",
   "entry": [
     {
-      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-05-10-fhir",
+      "fullUrl": "MessageHeader/ohie-cr-05-10-fhir",
       "resource": {
-        "resourceType": "Patient",
-        "id": "ohie-cr-05-10-fhir",
-        "active": true,
-        "identifier": [
+        "resourceType": "MessageHeader",
+        "id": "1",
+        "eventUri": "urn:ihe:iti:pmir:2019:patient-feed",
+        "source": {
+          "endpoint": "http://ohie.org/test/test_harness_b"
+        },
+        "focus": [
           {
-            "use": "official",
-            "system": "http://ohie.org/test/test",
-            "value": "FHR-050"
+            "reference": "Bundle/ohie-cr-05-10-fhir"
           }
         ],
-        "name": [
+        "destination": [
           {
-            "use": "usual",
-            "given": [
-              "WIN MINH"
-            ]
+            "endpoint": "http://ohie.org/test/endpoint/Bundle"
           }
-        ],
-        "gender": "male",
-        "birthDate": "2017-04-03"
-      },
-      "request": {
-        "method": "POST",
-        "url": "Patient/ohie-cr-05-10-fhir"
-      },
-      "response": {
-        "status":"200"
+        ]
       }
     },
     {
-      "fullUrl": "http://test.ohie.org/fhir/RelatedPerson/ohie-cr-05-10-fhir-mother",
+      "fullUrl": "Bundle/ohie-cr-05-10-fhir",
       "resource": {
-        "resourceType": "RelatedPerson",
-        "id": "ohie-cr-05-10-fhir-mother",
-        "patient": {
-          "reference": "http://test.ohie.org/fhir/Patient/ohie-cr-05-10-fhir"
-        },
-        "relationship": [
+        "resourceType": "Bundle",
+        "type": "history",
+        "entry": [
           {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                "code": "MTH"
-              }
-            ]
-          }
-        ],
-        "name": [
+            "fullUrl": "Patient/ohie-cr-05-10-fhir",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "ohie-cr-05-10-fhir",
+              "active": true,
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://ohie.org/test/test",
+                  "value": "FHR-050"
+                }
+              ],
+              "name": [
+                {
+                  "use": "usual",
+                  "given": [
+                    "WIN MINH"
+                  ]
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2017-04-03"
+              
+            },
+            "request": {
+              "method": "POST",
+              "url": "Patient/ohie-cr-05-10-fhir"
+            }
+          },
           {
-            "use": "usual",
-            "given": [
-              "SU MYAT LWIN"
-            ]
+            "fullUrl": "RelatedPerson/ohie-cr-05-10-fhir-mother",
+            "resource": {
+              "resourceType": "RelatedPerson",
+              "id": "ohie-cr-05-10-fhir-mother",
+              "patient": {
+                "reference": "Patient/ohie-cr-05-10-fhir"
+              },
+              "relationship": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "MTH"
+                    }
+                  ]
+                }
+              ],
+              "name": [
+                {
+                  "use": "usual",
+                  "given": [
+                    "SU MYAT LWIN"
+                  ]
+                }
+              ],
+              "gender": "female"
+            },
+            "request": {
+              "method": "POST",
+              "url": "RelatedPerson/ohie-cr-05-10-fhir-mother"
+            }
           }
-        ],
-        "gender": "female"
-      },
-      "request": {
-        "method": "POST",
-        "url": "RelatedPerson/ohie-cr-05-10-fhir-mother"
-      },
-      "response": {
-        "status":"200"
+        ]
       }
     }
   ]
@@ -182,8 +211,12 @@ The test harness executes a query against the receiver to ensure the record was 
 
 ```http
 GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-050&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 ```
 
 ### Expected Behaviour
@@ -194,7 +227,7 @@ Authorization: bearer XXXXXXX
 | MUST |  | Include a bundle with exactly 1 patient result |
 | MUST |  | Include a bundle with exactly 1 RelatedPerson result |
 | MUST |  | Contain a patient for WIN MINH |
-| MUST |  | Have an identifier for FHR-4956 in system http://ohie.org/test/test |
+| MUST |  | Have an identifier for FHR-050 in system http://ohie.org/test/test |
 | MUST |  | Contain a RelatedPerson with name SU MYAT LWIN |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
 
@@ -204,14 +237,14 @@ The test harness sends an authenticated request to create a newborn record with 
 
 Patient \(Mother\) details:
 
-* Identifier `FHR-051` in `http://ohie.org/test/test` with use `official`
+* Identifier `FHR-052` in `http://ohie.org/test/test` with use `official`
 * Name: SARAH ABELS
 * Gender: Female
 * DOB: 1984-05-25
 
 Newborn information:
 
-* Identifier `FHR-052` in `http://ohie.org/test/test`
+* Identifier `FHR-051` in `http://ohie.org/test/test`
 * Gender: Female
 * DOB: 2021-04-25
 
@@ -222,114 +255,125 @@ The bundle portrayed is using type `history` and is intended to be tested as par
 ```javascript
 {
   "resourceType": "Bundle",
-  "type": "history",
+  "type": "message",
   "entry": [
     {
-      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-05-20-fhir-baby",
+      "fullUrl": "MessageHeader/ohie-cr-05-20-fhir",
       "resource": {
-        "resourceType": "Patient",
-        "id": "ohie-cr-05-20-fhir-baby",
-        "active": true,
-        "identifier": [
-          {
-            "use": "official",
-            "system": "http://ohie.org/test/test",
-            "value": "FHR-052"
-          }
-        ],
-        "gender": "female",
-        "birthDate": "2021-04-25"
-      },
-      "request": {
-        "method": "POST",
-        "url": "Patient/ohie-cr-05-20-fhir-baby"
-      },
-      "response": {
-        "status":"200"
-      }
-    },
-    {
-      "fullUrl": "http://test.ohie.org/fhir/RelatedPerson/ohie-cr-05-20-fhir-mother-rp",
-      "resource": {
-        "resourceType": "RelatedPerson",
-        "id": "ohie-cr-05-20-fhir-mother-rp",
-        "identifier": [
-          {
-            "use": "official",
-            "system": "http://ohie.org/test/test",
-            "value": "FHR-051"
-          }
-        ],
-        "patient": {
-          "reference": "http://test.ohie.org/fhir/Patient/ohie-cr-05-20-fhir-baby"
+        "resourceType": "MessageHeader",
+        "id": "1",
+        "eventUri": "urn:ihe:iti:pmir:2019:patient-feed",
+        "source": {
+          "endpoint": "http://ohie.org/test/test_harness"
         },
-        "relationship": [
+        "focus": [
           {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                "code": "MTH"
-              }
-            ]
+            "reference": "Bundle/ohie-cr-05-20-fhir"
           }
         ],
-        "name": [
+        "destination": [
           {
-            "use": "maiden",
-            "family": "Abels",
-            "given": [
-              "Sarah"
-            ]
-          }
-        ],
-        "gender": "female"
-      },
-      "request": {
-        "method": "POST",
-        "url": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
-      },
-      "response": {
-        "status":"200"
-      }
-    },
-    {
-      "fullUrl": "http://test.ohie.org/fhir/Patient/ohie-cr-05-20-fhir-mother",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "ohie-cr-05-20-fhir-mother",
-        "identifier": [
-          {
-            "use": "official",
-            "system": "http://ohie.org/test/test",
-            "value": "FHR-051"
-          }
-        ],
-        "name": [
-          {
-            "use": "usual",
-            "family": "Abels",
-            "given": [
-              "Sarah"
-            ]
-          }
-        ],
-        "gender": "female",
-        "birthDate": "1984-05-25",
-        "link": [
-          {
-            "other": {
-              "reference":"http://test.ohie.org/fhir/RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
-            },
-            "type": "seealso"
+            "endpoint": "http://ohie.org/test/endpoint/Bundle"
           }
         ]
-      },
-      "request": {
-        "method": "POST",
-        "url": "Patient/ohie-cr-05-20-fhir-mother"
-      },
-      "response": {
-        "status":"200"
+      }
+    },
+    {
+      "fullUrl": "Bundle/ohie-cr-05-20-fhir",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "history",
+        "entry": [
+          {
+            "fullUrl": "Patient/ohie-cr-05-20-fhir-baby",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "ohie-cr-05-20-fhir-baby",
+              "active": true,
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://ohie.org/test/test",
+                  "value": "FHR-051"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "2021-04-25"
+            },
+            "request": {
+              "method": "POST",
+              "url": "Patient/ohie-cr-05-20-fhir-baby"
+            }
+          },
+          {
+            "fullUrl": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp",
+            "resource": {
+              "resourceType": "RelatedPerson",
+              "id": "ohie-cr-05-10-fhir-mother-rp",
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://ohie.org/test/test",
+                  "value": "FHR-052"
+                }
+              ],
+              "patient": {
+                "reference": "Patient/ohie-cr-05-20-fhir-baby"
+              },
+              "relationship": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "MTH"
+                    }
+                  ]
+                }
+              ]
+            },
+            "request": {
+              "method": "POST",
+              "url": "RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
+            }
+          },
+          {
+            "fullUrl": "Patient/ohie-cr-05-20-fhir-mother",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "ohie-cr-05-10-fhir-mother",
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://ohie.org/test/test",
+                  "value": "FHR-052"
+                }
+              ],
+              "name": [
+                {
+                  "use": "maiden",
+                  "family": "Abels",
+                  "given": [
+                    "Sarah"
+                  ]
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1984-05-25",
+              "link": [
+                {
+                  "other": {
+                    "reference":"RelatedPerson/ohie-cr-05-20-fhir-mother-rp"
+                  },
+                  "type": "seealso"
+                }
+              ]
+            },
+            "request": {
+              "method": "POST",
+              "url": "Patient/ohie-cr-05-20-fhir-mother"
+            }
+          }
+        ]
       }
     }
   ]
@@ -384,8 +428,13 @@ The test harness executes a query against the receiver to ensure the record was 
 
 ```http
 GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-051&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -404,9 +453,14 @@ Authorization: bearer XXXXXXX
 The test harness will query by the identifier of the mother to validate that the receiver created the mother record for a patient.
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-052&_include=RelatedPerson%3Alink HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-051&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -426,8 +480,13 @@ The test harness will execute a query on the patient resource and will validate 
 
 ```http
 GET http://localhost:8080/fhir/Patient?mothersMaidenName=Abels HTTP/1.1
-Authorization: bearer
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour

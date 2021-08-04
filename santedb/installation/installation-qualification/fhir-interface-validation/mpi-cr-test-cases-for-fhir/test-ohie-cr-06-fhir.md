@@ -46,9 +46,12 @@ The test harness authenticates against the SanteMPI IdP using a client\_credenti
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
 Content-Type: application/x-www-form-urlencoded;charset=UTF-8
 Content-Length: 94
 Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_A
 ```
@@ -59,8 +62,12 @@ The test harness sends an IHE PIXm query for a patient with identifier FHIRA-876
 
 ```http
 GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a%7CFHRA-060 HTTP/1.1
-Auhthorization: Bearer XXXXXX
-Accept: application/fhir+json
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
+accept: application/fhir+json
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 ```
 
 ### Expected Behaviour
@@ -84,44 +91,87 @@ The test harness sends an authenticated request to create a new patient with a n
 
 ```javascript
 {
-    "resourceType": "Patient",
-    "id": "ohie-cr-06-10-fhir",
-    "active": true,
-    "identifier": [
-      {
-        "use": "official",
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "PI"
-            }
-          ]
+  "resourceType": "Bundle",
+  "type": "message",
+  "entry": [
+    {
+      "fullUrl": "MessageHeader/ohie-cr-06-20-fhir",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "1",
+        "eventUri": "urn:ihe:iti:pmir:2019:patient-feed",
+        "source": {
+          "endpoint": "http://ohie.org/test/test_harness_b"
         },
-        "system": "http://ohie.org/test/test_a",
-        "value": "FHRA-061",
-        "assigner": {
-          "display": "Test Harness A Patient Identity"
-        }
-      },
-      {
-        "use":"usual",
-        "system": "http://ohie.org/test/nid",
-        "value":"NID061"
-      }
-    ],
-    "name": [
-      {
-        "use": "official",
-        "family": "SMITH",
-        "given": [
-          "JIM"
+        "focus": [
+          {
+            "reference": "Bundle/ohie-cr-06-10-fhir"
+          }
+        ],
+        "destination": [
+          {
+            "endpoint": "http://ohie.org/test/endpoint/Bundle"
+          }
         ]
       }
-    ],
-    "gender": "male",
-    "birthDate": "1984-05-25",
-  }
+    },
+    {
+      "fullUrl": "Bundle/ohie-cr-06-10-fhir",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "history",
+        "entry": [
+          {
+            "fullUrl": "Patient/ohie-cr-06-10-fhir",
+            "resource": {
+		    "resourceType": "Patient",
+		    "id": "ohie-cr-06-10-fhir",
+		    "active": true,
+		    "identifier": [
+		      {
+		        "use": "official",
+		        "type": {
+		          "coding": [
+		            {
+		              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+		              "code": "PI"
+		            }
+		          ]
+		        },
+		        "system": "http://ohie.org/test/test_a",
+		        "value": "FHRA-061",
+		        "assigner": {
+		          "display": "Test Harness A Patient Identity"
+		        }
+		      },
+		      {
+		        "use":"usual",
+		        "system": "http://ohie.org/test/nid",
+		        "value":"NID061"
+		      }
+		    ],
+		    "name": [
+		      {
+		        "use": "official",
+		        "family": "SMITH",
+		        "given": [
+		          "JIM"
+		        ]
+		      }
+		    ],
+		    "gender": "male",
+		    "birthDate": "1984-05-25",
+		  },
+            "request": {
+              "method": "POST",
+              "url": "Patient/ohie-cr-06-10-fhir"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
 ```
 
 ### Expected Behaviour
@@ -140,8 +190,12 @@ The test harness sends an IHE PIXm query for a patient with identifier FHRA-061 
 
 ```http
 GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a%7CFHRA-061 HTTP/1.1
-Auhthorization: Bearer XXXXXX
-Accept: application/fhir+json
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -190,9 +244,13 @@ The test harness authenticates against the SanteMPI IdP using a client\_credenti
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
 Content-Type: application/x-www-form-urlencoded;charset=UTF-8
 Content-Length: 94
 Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 
 grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_B
 ```
@@ -208,43 +266,86 @@ The test harness sends an authenticated request to create a new patient with a n
 
 ```javascript
 {
-    "resourceType": "Patient",
-    "id": "ohie-cr-06-20-fhir",
-    "active": true,
-    "identifier": [
-      {
-        "use": "official",
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "PI"
-            }
-          ]
+  "resourceType": "Bundle",
+  "type": "message",
+  "entry": [
+    {
+      "fullUrl": "MessageHeader/ohie-cr-06-20-fhir",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "1",
+        "eventUri": "urn:ihe:iti:pmir:2019:patient-feed",
+        "source": {
+          "endpoint": "http://ohie.org/test/test_harness_b"
         },
-        "system": "http://ohie.org/test/test_b",
-        "value": "FHRB-062",
-        "assigner": {
-          "display": "Test Harness B Patient Identity"
-        }
-      },
-      {
-        "use":"usual",
-        "system": "http://ohie.org/test/nid",
-        "value":"NID061"
-      }
-    ],
-    "name": [
-      {
-        "use": "official",
-        "family": "SMITH",
-        "given": [
-          "JIM"
+        "focus": [
+          {
+            "reference": "Bundle/ohie-cr-06-20-fhir"
+          }
+        ],
+        "destination": [
+          {
+            "endpoint": "http://ohie.org/test/endpoint/Bundle"
+          }
         ]
       }
-    ],
-    "gender": "male"
-  }
+    },
+    {
+      "fullUrl": "Bundle/ohie-cr-06-20-fhir",
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "history",
+        "entry": [
+          {
+            "fullUrl": "Patient/ohie-cr-06-20-fhir",
+            "resource": {
+		    "resourceType": "Patient",
+		    "id": "ohie-cr-06-20-fhir",
+		    "active": true,
+		    "identifier": [
+		      {
+		        "use": "official",
+		        "type": {
+		          "coding": [
+		            {
+		              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+		              "code": "PI"
+		            }
+		          ]
+		        },
+		        "system": "http://ohie.org/test/test_b",
+		        "value": "FHRB-062",
+		        "assigner": {
+		          "display": "Test Harness B Patient Identity"
+		        }
+		      },
+		      {
+		        "use":"usual",
+		        "system": "http://ohie.org/test/nid",
+		        "value":"NID061"
+		      }
+		    ],
+		    "name": [
+		      {
+		        "use": "official",
+		        "family": "SMITH",
+		        "given": [
+		          "JIM"
+		        ]
+		      }
+		    ],
+		    "gender": "male"
+		  },
+            "request": {
+              "method": "POST",
+              "url": "Patient/ohie-cr-06-20-fhir"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
 ```
 
 ### Expected Behaviour
@@ -263,8 +364,13 @@ The test harness sends an IHE PIXm query for a patient with identifier NID061 to
 
 ```http
 GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Fnid%7CNID061&targetSystem=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a HTTP/1.1
-Auhthorization: Bearer XXXXXX
-Accept: application/fhir+json
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
+accept: application/fhir+json
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -310,9 +416,14 @@ Accept: application/fhir+json
 The test harness sends an IHE PIXm query for a patient with identifier FHRB-062 to the receiver asking for identities in TEST\_X.
 
 ```http
-GET http://sut:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http://ohie.org/test/test_b|FHRB-062&targetDomain=http://ohie.org/test/test_x HTTP/1.1
-Auhthorization: Bearer XXXXXX
-Accept: application/fhir+json
+GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_b%7CFHRB-062&targetSystem=http%3A%2F%2Fohie.org%2Ftest%2Ftest_x HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
+accept: application/fhir+json
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
