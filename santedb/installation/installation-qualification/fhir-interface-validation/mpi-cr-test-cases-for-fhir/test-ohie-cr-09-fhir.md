@@ -267,7 +267,7 @@ In this test step, the test harness will attempt \(while authenticated as `TEST_
 
 | Requirement | Option | Description |
 | :--- | :--- | :--- |
-| MUST |  | Return HTTP code of 422 UNPROCESSABLE ENTITY or 400 BAD REQUEST |
+| MUST |  | Return HTTP code of 422 UNPROCESSABLE ENTITY or 400 BAD REQUEST or 403 FORBIDDEN |
 | MUST |  | Return a `Bundle` with a `MessageHeader` carrying a `response` code of `fatal-error` |
 | MUST |  | Carry an `OperationOutcome` resource which indicates that the merge could not be completed due to invalid authority to merge. |
 
