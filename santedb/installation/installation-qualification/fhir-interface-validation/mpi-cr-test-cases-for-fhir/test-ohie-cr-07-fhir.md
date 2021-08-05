@@ -583,7 +583,7 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 The test harness issues a query for patient demographics using the Patient's NID identifier and instructs the inclusion of all data
 
 ```http
-GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-070&_include=Organization%3AAmanagingOrganization&_revinclude=RelatedPerson%3Apatient HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-070&_include=Organization%3AmanagingOrganization&_revinclude=RelatedPerson%3Apatient HTTP/1.1
 Accept-Encoding: gzip,deflate
 Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
