@@ -469,7 +469,7 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 | :--- | :--- | :--- |
 | MUST |  | Accept the message with HTTP 200 OK |
 | MUST |  | Include a bundle with exactly 1 patient result. |
-| MUST |  | Contain the mother's patient details  \(name of SARAH ABELS\) |
+| MUST |  | Contain the mother  patient details  \(name of SARAH ABELS\) |
 | MUST |  | Have an identifier for FHR-052 in system http://ohie.org/test/test |
 | MUST |  | Have a RelatedPerson with identifier FHR-051 |
 | SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
