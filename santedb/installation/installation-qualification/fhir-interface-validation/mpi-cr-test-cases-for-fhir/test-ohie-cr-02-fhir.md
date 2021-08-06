@@ -65,7 +65,6 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 
 
-
 grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS
 ```
 
@@ -112,7 +111,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
 | SHOULD |  | Indicate the identifier of the created patient with URL |
 | SHOULD |  | Contain a link to the local record created |
 
-## Query for Olly Oid
+## Query for Olly Oid using Url
 
 The test harness executes a query against the receiver using the URL version of the TEST domain
 
@@ -175,7 +174,7 @@ The test harness registers a patient using the URL representation of the system 
 | SHOULD |  | Indicate the identifier of the created patient with URL |
 | SHOULD |  | Contain a link to the local record created |
 
-## Query for Uma Url
+## Query for Uma Url using Oid
 
 The test harness executes a query against the receiver using the OID version of the TEST domain
 
