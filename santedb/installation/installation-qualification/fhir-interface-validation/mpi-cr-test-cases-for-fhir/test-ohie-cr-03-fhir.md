@@ -29,7 +29,7 @@ GET http://sut:8080/hdsi/AssigningAuthority?url=http%3A%2F%2Fohie.org%2Ftest%2Ft
 GET http://sut:8080/hdsi/AssigningAuthority?oid=1.3.6.1.4.1.52820.3.72.5.9.4 HTTP/1.1
 ```
 
-## Register Unknown Identity Domain \(via URL\)
+## Register patient in invalid Identity Domain \(via Url\)
 
 The test harness sends a registration request to the receiver with `http://ohie.org/test/test_block` domain.
 
@@ -70,7 +70,7 @@ The test harness sends a registration request to the receiver with `http://ohie.
 | MUST |  | Carry an HTTP response code in 400 series |
 | SHOULD |  | Carry an HTTP response code of 422. |
 
-## Register Unknown Identity Domain \(via OID\)
+## Register patient in invalid Identity Domain \(via Oid\)
 
 The test harness sends a registration request to the receiver with `urn:oid:1.3.6.1.4.1.52820.3.72.5.9.4` domain.
 
