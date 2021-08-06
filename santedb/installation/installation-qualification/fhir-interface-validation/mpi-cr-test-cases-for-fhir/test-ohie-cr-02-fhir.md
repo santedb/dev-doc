@@ -116,9 +116,13 @@ The test harness registers a patient using the OID for the TEST domain with the 
 The test harness executes a query against the receiver using the URL version of the TEST domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test|FHR-020 HTTP/1.1
-Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-020&_format=application%2Ffhir%2Bjson HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER xxxxxxx
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -179,9 +183,12 @@ The test harness registers a patient using the URL representation of the system 
 The test harness executes a query against the receiver using the OID version of the TEST domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1|FHR-021 HTTP/1.1
-Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+GET http://localhost:8080/fhir/Patient?identifier=urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1%7CFHR-021&_format=application%2Ffhir%2Bjson HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER xxxxxxx
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 ```
 
 ### Expected Behaviour
