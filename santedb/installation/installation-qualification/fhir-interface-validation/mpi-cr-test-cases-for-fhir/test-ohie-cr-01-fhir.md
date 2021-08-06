@@ -22,6 +22,22 @@ The SanteMPI product solution, when configured properly, will perform basic vali
 
 None
 
+## Authenticate as TEST\_HARNESS
+
+The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness.
+
+```javascript
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 77
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
+grant_type=client_credentials&scope=*&client_secret=fiddler&client_id=fiddler
+```
+
 ## Register Incomplete Message
 
 The test harness sends a patient which has a malformed identifier entry which is missing the system.
