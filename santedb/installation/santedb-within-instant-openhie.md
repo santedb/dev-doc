@@ -137,7 +137,69 @@ Click set route.
 
 ![](../../.gitbook/assets/screen-shot-2021-06-30-at-3.01.40-pm.png)
 
-#### Testing, and viewing transactions
+#### 
+
+### Run on Kubernetes
+
+Navigate to the OpenHIE/Instant repository. Type the following commands
+
+```text
+yarn
+yarn docker:build
+```
+
+Next we need to run the images
+
+```text
+yarn docker:instant init -t k8s santempi -c="<path to santedb package>"
+```
+
+The above command is specifying to run docker, specifying the package santempi \(Which will link to the **id** property of the instant.json file\), and specifying a path of where to find the image. The only difference between this and docker, is you're changing the keyword 'docker' to 'k8s'.
+
+The kubernetes deployments will take much longer to build than the docker deployments. Afterwards it will look something like the following image \(Note: This might change depending on what packages you're running\)
+
+![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.29.05-am.png)
+
+You can navigate to http://localhost:9000 and be brought to the login screen. 
+
+* default username is: root@openhim.org
+* default password is: instant101
+
+**Manually Adding Channels**
+
+To manually add a santedb channel, once logged in, click on the channel section and the green **Channel +** button. 
+
+Adding a channel is almost identical to docker. \(See above\) - The differences is when adding a route, instead of using the container name, as in docker, you will need to use the IP Address of the pod. 
+
+To obtain the pod:
+
+```text
+kubectl get pods
+```
+
+The pod we want is the santeDB pod, **santedb-66bf68f744-xpsnh** \(This will change as the name is dynamic, but it should be prefixed with santedb\)
+
+```text
+kubectl describe pod santedb-66bf68f744-xpsnh
+```
+
+The above command will display the details of this pod. At the top of the JSON blob you can see the IP Address.
+
+![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.41.35-am.png)
+
+Now you can add the IP Address as the **host** for the route.
+
+![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.43.35-am.png)
+
+One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients** tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
+
+ 
+
+![](../../.gitbook/assets/screen-shot-2021-08-06-at-3.45.44-pm.png)
+
+![](../../.gitbook/assets/screen-shot-2021-08-06-at-3.46.15-pm.png)
+
+## Testing, and viewing transactions
 
 We will now test to make sure we can see SanteDB transactions in openHIM. You will need to generate a bearer token in order to successfully access santedb services. We will test with an administrator account, so we will be using the SanteMPI Admin Channel. 
 
@@ -154,7 +216,7 @@ You will be redirected to a blank page, where you can copy the bearer token from
 
 ![Bear token](../../.gitbook/assets/screen-shot-2021-06-30-at-3.05.01-pm.png)
 
-#### Testing
+### Testing the channels
 
 To test we are going to make API calls using something like **Postman**, or maybe **curl.** For this demo I will use postman. 
 
@@ -173,8 +235,4 @@ You should see a 200 response. Now, go back to the OpenHIM console. You should s
 
 
 #### Congratulations, you have now verified your santedb package within the instant openhim!
-
-### Run on Kubernetes
-
-TODO
 
