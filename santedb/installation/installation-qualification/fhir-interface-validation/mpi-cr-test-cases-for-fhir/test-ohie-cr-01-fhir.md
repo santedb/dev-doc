@@ -88,7 +88,7 @@ The test harness sends a patient which has a malformed identifier entry which is
 | MUST |  | Carry an HTTP response code in the 400 series |
 | SHOULD |  | Carry an HTTP response code of 422 |
 
-## Invalid / Unknown Reference
+## Register Invalid / Unknown Reference
 
 This test will ensure that the client registry rejects a message \(such as a transaction or PMIR bundle\) where a target of a relationship is unknown. 
 
