@@ -590,7 +590,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Expected Behaviour
@@ -647,7 +646,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 **Alternate**: The test harness issues a query for patient using an exact modifier 
@@ -712,8 +710,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
-
 ```
 
 ### Expected Behaviour
@@ -776,7 +772,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Query By Gender and Family Name
@@ -789,7 +784,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Query By Gender and Date Of Birth
@@ -802,7 +796,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Expected Behaviour
@@ -859,7 +852,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Expected Behaviour
@@ -883,7 +875,6 @@ Accept: application/fhir+json
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Expected Behaviour
