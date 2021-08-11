@@ -640,9 +640,14 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 The test harness issues a query for patient demographics using the Patient's family and given names.
 
 ```http
-GET http://sut:8080/fhir/Patient?family=Profile&given=Flynn HTTP/1.1
+GET http://localhost:8080/fhir/Patient?family=Profile&given=Flynn HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 **Alternate**: The test harness issues a query for patient using an exact modifier 
@@ -700,9 +705,15 @@ Authorization: bearer XXXXYYYXXYX
 The test harness sends a query to the client registry requests results based on a given birth date.
 
 ```http
-GET http://sut:8080/fhir/Patient?birthdate=ap1982 HTTP/1.1
+GET http://localhost:8080/fhir/Patient?birthdate=ap1982 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
+
 ```
 
 ### Expected Behaviour
@@ -729,7 +740,7 @@ Authorization: bearer XXXXYYYXXYX
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Contain a result within the bundle with identifier matching NID071</td>
+      <td style="text-align:left">Contain a result within the bundle with identifier matching FHR-070</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
@@ -758,25 +769,40 @@ The test harness sends a query to the client registry requests results based on 
 ### Query By Name and Date Of Birth
 
 ```http
-GET http://sut:8080/fhir/Patient?birthdate=ap1982&given=Flynn&family=Profile HTTP/1.1
+GET http://localhost:8080/fhir/Patient?family=Profile&given=Flynn&birthdate=ap1982 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Query By Gender and Family Name
 
 ```http
-GET http://sut:8080/fhir/Patient?gender=female&family=Profile HTTP/1.1
+GET http://localhost:8080/fhir/Patient?family=Profile&gender=male HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Query By Gender and Date Of Birth
 
 ```http
-GET http://sut:8080/fhir/Patient?gender=female&birthdate=1982-03-02 HTTP/1.1
+GET http://localhost:8080/fhir/Patient?birthdate=1982-03-02&gender=male HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -803,7 +829,7 @@ Authorization: bearer XXXXYYYXXYX
     <tr>
       <td style="text-align:left">MUST</td>
       <td style="text-align:left"></td>
-      <td style="text-align:left">Contain exactly 1 result within the bundle with identifier matching NID071</td>
+      <td style="text-align:left">Contain exactly 1 result within the bundle with identifier matching FHR-070</td>
     </tr>
     <tr>
       <td style="text-align:left">MUST</td>
@@ -826,9 +852,14 @@ Authorization: bearer XXXXYYYXXYX
 This test step ensures that the demographics query provider behaves appropriately when no results are found. The test harness sends a query for demographics which results in no matches:
 
 ```http
-GET http://sut:8080/fhir/Patient?gender=other&family=Profile HTTP/1.1
+GET http://localhost:8080/fhir/Patient?given=Profile&gender=other HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -842,12 +873,17 @@ Authorization: bearer XXXXYYYXXYX
 
 ## Restricting Domains Returned
 
-This step ensures that the PDQm provider implements the behavior described in `3.78.4.1.2.4`. The test harness sends a PDQm query and requests domains returned, and ensures that the SUT removes non-compatible domains.
+This step ensures that the PDQm provider implements the behaviour described in `3.78.4.1.2.4`. The test harness sends a PDQm query and requests domains returned, and ensures that the SUT removes non-compatible domains.
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=NID071&identifier=http://ohie.org/test/nid| HTTP/1.1
+GET http://localhost:8080/fhir/RelatedPerson?identifier=http%3A%2F%2Fohie.org%2Ftest%2Fnid%7CNID071 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER XXXXXXX
 Accept: application/fhir+json
-Authorization: bearer XXXXYYYXXYX
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
@@ -859,7 +895,7 @@ Authorization: bearer XXXXYYYXXYX
 | MUST |  | Contain exactly 1 entry elements  |
 | MUST |  | Entry element must contain exactly 1 identifier with value `NID071` |
 | MUST  |  | Entry element must not contain the TEST domain value of `FHR-071` |
-| MUST |  | Contain a `total` element with value 0 |
+| MUST |  | Contain a `total` element with value 1 |
 
 
 
