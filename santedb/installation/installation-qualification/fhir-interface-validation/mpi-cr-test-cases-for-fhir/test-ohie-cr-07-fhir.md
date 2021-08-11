@@ -524,18 +524,6 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ```
 
-**Alternate**: The test harness issues a query for patient demographics using only FHR identifier
-
-```http
-GET http://localhost:8080/fhir/Patient?identifier=FHR-070 HTTP/1.1
-Accept-Encoding: gzip,deflate
-Authorization: BEARER XXXXXXX
-Accept: application/fhir+json
-Host: localhost:8080
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-```
-
 ### Expected Behaviour
 
 <table>
