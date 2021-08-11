@@ -883,8 +883,8 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 | :--- | :--- | :--- |
 | MUST |  | Return a bundle in JSON format |
 | MUST |  | Return HTTP code of 200  |
-| MUST |  | Contain exactly 1 entry elements  |
-| MUST |  | Entry element must contain exactly 1 identifier with value `NID071` |
+| MUST |  | Contain exactly 1 entry element |
+| MUST |  | Entry element must contain exactly 1 identifier with value `FHR-70` |
 | MUST  |  | Entry element must not contain the TEST domain value of `FHR-071` |
 | MUST |  | Contain a `total` element with value 1 |
 
