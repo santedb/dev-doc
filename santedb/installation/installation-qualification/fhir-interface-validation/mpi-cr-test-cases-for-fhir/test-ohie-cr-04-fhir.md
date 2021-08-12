@@ -93,12 +93,16 @@ Create an AssigningAuthority domain which has the following attributes:
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 94
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TEST_HARNESS
+
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_A
 ```
 
 ## Register New Patient Identity in TEST\_A
@@ -166,9 +170,12 @@ The patient is being sent from a source with the expectation that the informatio
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_a|FHRA-040 HTTP/1.1
-Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_a%7CFHRA-040&_format=application%2Ffhir%2Bjson HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER xxxxxxx
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 ```
 
 ### Expected Behaviour
@@ -186,12 +193,15 @@ Authorization: bearer XXXXXXX
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-b account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 94
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_B&client_secret=TEST_HARNES
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_B
 ```
 
 ## Attempt to Register New Patient Identity in TEST\_A
@@ -401,9 +411,13 @@ This mimics a use case where TEST B is registering a patient on a referral that 
 The test harness executes a query against the receiver to ensure the record was created domain
 
 ```http
-GET http://sut:8080/fhir/Patient?identifier=http://ohie.org/test/test_b|FHRB-042 HTTP/1.1
-Accept: application/fhir+json
-Authorization: bearer XXXXXXX
+GET http://localhost:8080/fhir/Patient?identifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest_b%7CFHRB-042&_format=application%2Ffhir%2Bjson HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: BEARER xxxxxxx
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
 ```
 
 ### Expected Behaviour
