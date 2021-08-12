@@ -31,12 +31,15 @@ Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-04
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 94
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_A&client_secret=TEST_HARNESS
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_A
 ```
 
 ## Register New Patient Identity in TEST\_A
@@ -106,12 +109,17 @@ The test harness sends an authenticated request to create a new patient with a n
 The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
 
 ```http
-POST http://sut:8080/auth/oauth2_token HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Host: sut:8080
-Content-Length: 112
+POST http://localhost:8080/auth/oauth2_token HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 94
+Host: localhost:8080
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
-grant_type=client_credentials&scope=*&client_id=TEST_HARNESS_B&client_secret=TEST_HARNESS
+
+
+grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_B
 ```
 
 ## Register New Patient Identity in TEST\_B
