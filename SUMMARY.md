@@ -235,6 +235,7 @@
         * [TEST: OHIE-CR-03-HL7v2](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-hl7v2/test-ohie-cr-03-hl7v2.md)
         * [TEST: OHIE-CR-04-HL7v2](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-hl7v2/test-ohie-cr-04-hl7v2.md)
         * [TEST: OHIE-CR-05-HL7v2](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-hl7v2/test-ohie-cr-05-hl7v2.md)
+        * [TEST: OHIE-CR-06-HL7v2](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-hl7v2/test-ohie-cr-06-hl7v2.md)
       * [MPI/CR Test Cases for FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/README.md)
         * [TEST: OHIE-CR-01-FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-01-fhir.md)
         * [TEST: OHIE-CR-02-FHIR](santedb/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-02-fhir.md)
