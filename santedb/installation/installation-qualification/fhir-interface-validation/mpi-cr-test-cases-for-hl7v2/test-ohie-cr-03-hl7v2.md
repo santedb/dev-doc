@@ -10,6 +10,8 @@ This test ensures that the receiver rejects messages which contain identifiers a
 
 ## Pre-Conditions / Setup
 
+#### Remove any configuration in the recipient which references OID 2.16.840.1.113883.3.72.5.9.4 or TEST\_BLOCK
+
 ## Test Step 1:
 
 Test harness sends ADT^A01 message having the invalid OID in CX.4.2.
@@ -24,13 +26,11 @@ PV1||I
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-|  |  | Receiver rejects message with error code AE or AR |
-|  |  | MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST” |
-|  |  | Meaning MSA or ERR segment is conveyed showing the error |
-|  |  | Response is ACK^A01 |
-|  |  | Response Version is 2.3.1 |
+* Receiver rejects message with error code AE or AR
+* MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST”
+* Meaning MSA or ERR segment is conveyed showing the error
+* Response is ACK^A01
+* Response Version is 2.3.1
 
 ## Test Step 2:
 
@@ -45,11 +45,9 @@ PV1||I
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-|  |  | Receiver rejects message with error code AE or AR |
-|  |  | MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST” |
-|  |  | Meaning MSA or ERR segment is conveyed showing the error |
-|  |  | Response is ACK^A01 |
-|  |  | Response Version is 2.3.1 |
+* Receiver rejects message with error code AE or AR
+* MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST”
+* Meaning MSA or ERR segment is conveyed showing the error
+* Response is ACK^A01
+* Response Version is 2.3.1
 
