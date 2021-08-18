@@ -6,6 +6,10 @@ The [Master Data Management](../../../architecture/data-storage-patterns/master-
 When using the MDM extensions on the dCDR \(like in the user interface, or on a client\) you must provide the `_upstream=true` indicator so the dCDR service sends the original request to the central server directly. This means that these functions should only be called when online and connected to the iCDR
 {% endhint %}
 
+{% hint style="info" %}
+It is entirely possible to perform the same operations manually by manipulating the `EntityRelationship` resources in the CDR. However this method is discouraged as `EntityRelationship`properties require specific attributes/values in order for MDM to function correctly.
+{% endhint %}
+
 ## Operations
 
 The operations provided by the MDM extension plugins actually kickoff jobs and operations on the SanteDB server. These are equivalent to calling the Job management interface on the AMI.
@@ -378,5 +382,25 @@ DELETE /hdsi/Patient/f8f92db2-e48e-4b6c-951d-b42e06c5c4d4/mdm-link/5ac04a36-b521
 Accept: application/json
 ```
 
+#### Attach MDM Link for Instance
 
+The attach MDM link operation on the `mdm-link` resource ensures that only a LOCAL record is linked with a MASTER record. This differs from a MERGE operation where LOCAL&gt;LOCAL and MASTER&gt;MASTER merges can be performed \(and it called via the `$merge` operation since `$merge` does not rely on MDM logic\). 
+
+{% hint style="info" %}
+You can still perform an MDM attachment using the `$merge` operation, however the source and target UUIDs must be a local and master respectively.
+{% endhint %}
+
+To link an instance the caller must `POST` an `Entity`  \(or other focus object\) with the `id` carrying the UUID of the master to which the attaching is to occur \(or if the focus UUID on the URL is a MASTER then the UUID of the local\).
+
+```http
+POST /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-link HTTP/1.1
+Content-Type: application/json
+
+{
+    "$type": "Entity",
+    "id": "f8f92db2-e48e-4b6c-951d-b42e06c5c4d4"
+}
+```
+
+All properties other than `id` in the `Entity` are ignored.
 
