@@ -10,6 +10,19 @@ This test ensures that the receiver is able to merge patient data from an assign
 
 ## Pre-Conditions / Setup
 
+#### Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.2 has assigning authority of TEST\_A which can be assigned from TEST\_HARNESS\_A
+
+#### Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.9 has assigning authority of NID which can be assigned from NID\_AUTH
+
+#### Ensure that the following patient is registered in the receiver \(can be done with the ADT message provided\). Name: John Smith, id: NID-000345435^^^NID^NNXXX, gender: M, dob: 1980
+
+```text
+MSH|^~\&|NID_AUTH^^|TEST^^|CR1^^|MOH_CAAT^^|20141104174451||ADT^A01^ADT_A01|TEST-CR-06-20|P|2.3.1
+EVN||20101020
+PID|||NID-000345435^^^NID^NNXXX||SMITH^JOHN^^^^^L||1980|M|||||||||||
+PV1||I
+```
+
 ## Test Step 1:
 
 Test harness \(as TEST\_HARNESS\_A\) sends a registration message for patient Jon \[sic\] Smith having a more specific date of birth, with NID of NID-000345435 and local identifier of TEST\_A of RJ-449.
@@ -23,10 +36,8 @@ PV1||I
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-|  |  | Receiver Accepts Message with an AA |
-|  |  | MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST” |
+* Receiver Accepts Message with an AA
+* MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST”
 
 ## Test Step 2
 
@@ -40,8 +51,6 @@ RCP|I
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-|  |  | Receiver responds with an AA |
-|  |  | Receiver sends exactly one PID segment with identifier RJ-449 in domain TEST\_A in one of the PID-3 repetitions |
+* Receiver responds with an AA
+* Receiver sends exactly one PID segment with identifier RJ-449 in domain TEST\_A in one of the PID-3 repetitions
 
