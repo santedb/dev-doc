@@ -404,7 +404,7 @@
       * [HDSI Query Syntax](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)
       * [API Responses](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/api-responses.md)
       * [Visual Resource Pointer API](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/digitally-signed-visual-code-api.md)
-      * [Matching Extensions for HDSI](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/matching-extensions-for-hdsi.md)
+      * [MDM Extensions for HDSI](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/matching-extensions-for-hdsi.md)
       * [Patching](santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/patching.md)
     * [HL7v2](santedb/extending-santedb/service-apis/hl7v2/README.md)
       * [Enabling HL7v2 Interfaces](santedb/extending-santedb/service-apis/hl7v2/enabling-hl7v2-interfaces.md)
