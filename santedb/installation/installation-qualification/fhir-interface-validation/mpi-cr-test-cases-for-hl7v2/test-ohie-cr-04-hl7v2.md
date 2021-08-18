@@ -10,6 +10,10 @@ This test ensures that two assigning authorities cannot assign identifiers from 
 
 ## Pre-Conditions / Setup
 
+#### Setup the receiver so that OID 2.16.840.1.113883.3.72.5.9.2 has assigning authority of TEST\_A which can be assigned from TEST\_HARNESS\_A
+
+#### Setup the receiver so that OID 2.16.840.1.113883.3.72.5.9.3 has assigning authority of TEST\_B which can be assigned from TEST\_HARNESS\_B
+
 ## Test Step 1:
 
 Test harness \(as TEST\_HARNESS\_A\) sends ADT^A01 registering a new patient with an identifier from TEST\_A domain.
@@ -24,12 +28,10 @@ PV1||I
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-|  |  | Receiver Accepts Message with an AA |
-|  |  | MSH-5 and MSH-6 matches “TEST\_HARNESS\_A\|TEST” |
-|  |  | Response is ACK^A01 |
-|  |  | Response version is 2.3.1 |
+* Receiver Accepts Message with an AA
+* MSH-5 and MSH-6 matches “TEST\_HARNESS\_A\|TEST”
+* Response is ACK^A01
+* Response version is 2.3.1
 
 ## Test Step 2:
 
@@ -44,11 +46,9 @@ PV1||I
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-|  |  | Receiver rejects the message with an AE or AR |
-|  |  | An MSA message exists with an appropriate error code |
-|  |  | MSH-5 and MSH-6 matches “TEST\_HARNESS\_B\|TEST” |
-|  |  | Response is ACK^A01 |
-|  |  | Response Version is 2.3.1 |
+* Receiver rejects the message with an AE or AR
+* An MSA message exists with an appropriate error code
+* MSH-5 and MSH-6 matches “TEST\_HARNESS\_B\|TEST”
+* Response is ACK^A01
+* Response Version is 2.3.1
 
