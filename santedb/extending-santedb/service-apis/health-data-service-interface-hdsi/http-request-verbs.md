@@ -165,20 +165,16 @@ Instead of executing separate HEAD and then GET operations, you can use the cond
 
 ### Get Resource Version \(GET\)
 
-
-
 ## Special Operations
 
 ### Lock Resource \(LOCK\)
 
 The HTTP LOCK operation in SanteDB is typically used to obtain an exclusive lock on an object, or to lock an object which supports lockout. When using the LOCK HTTP verb against a security resource, any access to that security resource \(such as user, device, or application\) will be prohibited.
 
-When running a LOCK operation against a regular resource on the HDSI, the principal which obtained the lock will be the only principal which is permitted to update the specified resource. This method is useful when you wish to prevent concurrent updates of a single resource. 
-
 For example, to block concurrent editing of a patient, the user interface can lock the resource:
 
 ```text
-LOCK /Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+LOCK /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16
 Host: demo.openiz.org:8080
 ```
 
@@ -188,7 +184,21 @@ Any attempt to perform a PUT, POST, or DELETE against the patient from an authen
 
 The HTTP UNLOCK operation in SanteDB is used to release a lock on an object, or to release an authentication lock on a security resource \(such as unlocking a user's account\). 
 
-When used on an HDSI resource, the UNLOCK operation will permit the general editing of the resource which was previously locked. 
+### Checkout Resource \(CHECKOUT\)
+
+There are use cases where clients may wish to obtain an exclusive EDIT lock on a particular resource. This is done by performing an HTTP CHECKOUT on a supported resource \(like Patient, Concept, etc.\). This prevents concurrent editing of the same resource.
+
+```text
+CHECKOUT /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+Host: demo.openiz.org:8080
+Authorization: bearer XXXXXXX
+```
+
+The response, if successful, is an `HTTP 204 NO CONTENT` . Any attempt to update the resource other than the principal represented with XXXX will result in a 403.
+
+### Check-in Resource \(CHECKIN\)
+
+The `CHECKIN` verb performs the opposite action as the `CHECKOUT` verb, in that it releases the lock \(if any\) on the specified resource.
 
 ### Get Service Parameters \(OPTIONS\)
 
@@ -202,75 +212,29 @@ The response to a PING is an HTTP 204 \(No Content\) response with general servi
 
 ## Associated Resources
 
-## Control Parameters
+## Operations
 
-### Controlling Response Format
+Operations on the HDSI and AMI represent RPC calls to the server to "do something" rather than a resource manipulation action. Operations start with a `$` sign and may be affixed on an instance or resource level.
 
-The HDSI, AMI and BIS all support a variety of response formats which are controlled by the Accept header. Valid accept headers are:
+Operations always rely on `POST` verbs and always accept an `ApiOperationParameterCollection` object. For example:
 
-| Accept | Format |
-| :--- | :--- |
-| application/xml | XML format optimized for synchronization interfaces |
-| application/json | JSON format optimized for synchronization interfaces |
-| application/json+sdb-viewmodel | JSON format optimized for HTML rendering |
+```http
+POST http://foo.com/hdsi/Patient/$subtractNumbers HTTP/1.1
+Content-Type: application/xml
 
-### Request / Response Compression
-
-SanteDB is designed to work in low-resource environments with high latency narrowband networks. This means that SanteDB provides a variety of data compression algorithms which can be specified when interacting with the server.
-
-Request payloads which are compressed are indicated using the Content-Encoding HTTP header and the Accept-Encoding HTTP header to control the compression of the response.
-
-```text
-PUT /hdsi/Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16
-Authorization: BASIC ZmlkZGxlcjpmaWRkbGVy
-Host: demo.openiz.org:8080
-Content-Encoding: gzip
-Accept-Encoding: gzip
-
-<<< GZIP COMPRESSED BINARY PAYLOAD >>>
-
-HTTP/1.1 201 Created
-Content-Encoding: gzip
-X-CompressResponseStream: gzip
-
-<<< GZIP COMPRESSED BINARY PAYLOAD >>>
+<ApiOperationParameterCollection xmlns="http://santedb.org/operation"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <parameter>
+        <name>subtrahend</name>
+        <value xsi:type="xs:int">30</value>
+    </parameter>
+    <parameter>
+        <name>minuend</name>
+        <value xsi:type="xs:int">10</value>
+    </parameter>
+</ApiOperationParameterCollection>
 ```
 
-The compression algorithms supported by SanteDB are:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Algorithm</th>
-      <th style="text-align:left">Header</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">GZIP Compress</td>
-      <td style="text-align:left">gzip</td>
-      <td style="text-align:left">Uses the GZIP compression algorithm for payloads (default)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">BZIP2 Compress</td>
-      <td style="text-align:left">bzip2</td>
-      <td style="text-align:left">Uses the BZIP2 compression algorithm</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Deflate Compress</td>
-      <td style="text-align:left">deflate</td>
-      <td style="text-align:left">Uses the ZIP deflate compression algorithm (df)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">LZMA Compress</td>
-      <td style="text-align:left">lzma</td>
-      <td style="text-align:left">
-        <p>Uses the LZMA / 7ZIP compression algorithm.</p>
-        <p>This option uses more CPU resources on compression however results in
-          much slower payload sizes.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
