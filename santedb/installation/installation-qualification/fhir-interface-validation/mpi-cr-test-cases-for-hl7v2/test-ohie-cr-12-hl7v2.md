@@ -141,5 +141,5 @@ RCP|I|10^RD
 * Receiver accepts the message with an AA
 * Receiver indicates query success of OK in QAK
 * Receiver returns at least one PID segment containing the match for Jennifer Jones
-* Receiver sends a QRI segment with a QRI-3 indicating variant match and strength of the matchv
+* Receiver sends a QRI segment with a QRI-3 indicating variant match and strength of the match
 
