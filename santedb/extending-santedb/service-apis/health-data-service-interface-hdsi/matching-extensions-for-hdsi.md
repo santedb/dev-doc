@@ -34,72 +34,22 @@ Content-Type: application/json
             "value": false
         },
         {
-            "name":"includeMasters",
+            "name":"globalReset",
             "value": false
         },
         {
-            "name":"includeRot",
-            "value": false
-        },
-        {
-            "name":"disableMdm",
-            "value": false
-        },
-        {
-            "name":"purge",
+            "name":"linksOnly",
             "value": false
         } 
     ]
 }
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">includeVerified</td>
-      <td style="text-align:left">If true the clear operation will remove all MDM links (ignore, candidates,
-        etc.)
-        <br />including those which have been adjudicated by a human and verified. When
-        <br
-        />false only automatic links are moved.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">includeMasters</td>
-      <td style="text-align:left">
-        <p>If true the clear operation will delete (obsolete) all MDM master links
-          and will</p>
-        <p>delete all MDM Master records.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">includeRot</td>
-      <td style="text-align:left">When true, clears out all the records of truth and obsoletes them in the
-        database.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">disableMdm</td>
-      <td style="text-align:left">
-        <p>When true, the MDM host services for Patient are unbound from the iCDR
-          instance</p>
-        <p>and are removed from the configuration subsystem.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">purge</td>
-      <td style="text-align:left">
-        <p>When true, the clean operation will permanently delete the data from the
-          database</p>
-        <p>rather than just obsoleting it.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Value |
+| :--- | :--- |
+| includeVerified | If true the clear operation will remove all MDM links \(ignore, candidates, etc.\)  including those which have been adjudicated by a human and verified. When  false only automatic links are moved. |
+| globalReset | If true the clear operation will perform a global reset on all MDM links in the system. This includes resetting MDM master, candidate, ignore, and record of truth links. |
+| linksOnly | When true, only links are removed and any targets of those links \(like master records, etc.\) are left orphaned. It is recommended to leave this value as FALSE |
 
 ### Rematch
 

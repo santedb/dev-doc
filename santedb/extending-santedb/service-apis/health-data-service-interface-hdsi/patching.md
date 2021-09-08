@@ -141,5 +141,24 @@ Which will bypass the outcomes of checks.
 It is best practice to not append the X-Patch-Force header **unless** a human is indicating that they would like to force the the patch to succeed.
 {% endhint %}
 
-### 
+### Difference Operation
+
+You can submit an object to the SanteDB API to get a "diff" of two objects. This operation is invoked using the `$diff` operation on the desired instance of the type. For example, to see the instructions it would take to turn patent `9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4` to `1c8c9aa3-abb8-48ee-992d-8f0c524ce40c` submitting the following request.
+
+```http
+POST /hdsi/Patient/9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4/$diff
+Content-Type: application/json
+
+{
+    "$type":"ApiOperationParameterCollection",
+    "parameter": [
+        {
+            "name":"other",
+            "value": "1c8c9aa3-abb8-48ee-992d-8f0c524ce40c"
+        }
+    ]
+}
+```
+
+
 
