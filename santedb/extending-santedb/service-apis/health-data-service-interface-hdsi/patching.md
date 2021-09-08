@@ -97,7 +97,7 @@ You can also patch using JSON, for example, the following patch will remove the 
 You can assert that particular values are present or true prior to performing your patch, additionally the SanteDB service will assert on the etag of the If-Match header. For example, this patch will change the gender of the patient from MALE to FEMALE, but will only succeed if the etag matches e15be5a372b742ccac35518df7c9a784 and the gender is currently MALE.
 
 ```http
-PATCH /hdsi/Patient/9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4
+PATCH /hdsi/Patient/9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4 HTTP/1.1
 If-Match: e15be5a372b742ccac35518df7c9a784
 Content-Type: application/json
 
@@ -146,7 +146,7 @@ It is best practice to not append the X-Patch-Force header **unless** a human is
 You can submit an object to the SanteDB API to get a "diff" of two objects. This operation is invoked using the `$diff` operation on the desired instance of the type. For example, to see the instructions it would take to turn patent `9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4` to `1c8c9aa3-abb8-48ee-992d-8f0c524ce40c` submitting the following request.
 
 ```http
-POST /hdsi/Patient/9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4/$diff
+POST /hdsi/Patient/9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4/$diff HTTP/1.1
 Content-Type: application/json
 
 {
