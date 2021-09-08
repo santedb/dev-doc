@@ -206,9 +206,11 @@ The `CHECKIN` verb performs the opposite action as the `CHECKOUT` verb, in that 
 
 The PING operation is a non-standard HTTP verb which is used by the application layer \(on the dCDR\) to determine if the central iCDR server is available. The dCDR also uses the returned Date header to calculate the drift between its own clock and the server.
 
-The date drift functionality is implemented as widespread NTP services are sometimes not available in all environments. 
-
 The response to a PING is an HTTP 204 \(No Content\) response with general service headers such as the server version, the server time, etc.
+
+{% hint style="info" %}
+The Date header in the response of the `PING` is used by clients to calculate the time drift between the local device and the server. This is done since NTP services are not always available in all environments.
+{% endhint %}
 
 ## Associated Resources
 
