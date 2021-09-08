@@ -94,7 +94,7 @@ You can also patch using JSON, for example, the following patch will remove the 
 
 ### Dealing with Conflicts
 
-You can assert that particular values are present or true prior to performing your patch, additionally the SanteDB service will assert on the etag of the If-Match header. For example, this patch will change the gender of the patient from MALE to FEMALE, but will only succeed if the etag matches e15be5a372b742ccac35518df7c9a784 and the gender is currently MALE.
+You can assert that particular values are present or true prior to performing your patch, additionally the SanteDB service will assert on the etag of the `If-Match` header. For example, this patch will change the gender of the patient from MALE to FEMALE, but will only succeed if the etag matches `e15be5a372b742ccac35518df7c9a784` and the gender is currently MALE.
 
 ```http
 PATCH /hdsi/Patient/9fdb557d-2e2f-4fe5-a193-e1cf8cf49bc4 HTTP/1.1
