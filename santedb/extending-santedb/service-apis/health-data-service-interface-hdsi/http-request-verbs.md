@@ -8,7 +8,7 @@ The HDSI, AMI and BIS all use a common HTTP grammar to operate their REST interf
 
 The HTTP post operation is executed against a root resource type and contains a payload in either XML or JSON \(sync JSON or view model\). The POST operation inserts a new resource \(or collection of resources if creating a Bundle\). If the resource already exists, an HTTP 409 is returned indicating the conflict.
 
-```text
+```http
 POST /hdsi/Patient HTTP/1.1
 Content-Type: application/xml
 
@@ -20,8 +20,8 @@ Content-Type: application/xml
 
 The HTTP post operation can also be executed against a single instance of a resource. When this method is used, the API will create a new instance OR will update an existing instance of the object.
 
-```text
-POST /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09
+```http
+POST /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09 HTTP/1.1
 Content-Type: application/xml
 
 <Patient xmlns="http://santedb.org/model">
@@ -32,8 +32,8 @@ Content-Type: application/xml
 
 The HTTP PUT operation is used to update an existing record on the HDSI, AMI or BIS. If the specified resource does not exist, an HTTP 404 is returned. 
 
-```text
-PUT /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09
+```http
+PUT /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09 HTTP/1.1
 Content-Type: application/xml
 
 <Patient xmlns="http://santedb.org/model">
@@ -46,8 +46,8 @@ You can additionally use the conditional update header If-Match or If-None-Match
 
 Conditional updates will return an HTTP 409 \(Conflict\) whenever the conditional match is not satisfied.
 
-```text
-PUT /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09
+```http
+PUT /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09 HTTP/1.1
 Content-Type: application/xml
 If-Match: e403940394382743823
 
@@ -61,8 +61,8 @@ The default behavior of the HDSI PUT operation is to replace an object, in its e
 
 This means that the PUT operation is really a replacement \(similar to uploading a new copy of a file\). This behavior requires clients to send a complete copy of the resource with modifications to the HDS which can be troublesome when the client only wishes to update part of a resource. In order to overcome this, SanteDB’s HDSI implements the HTTP PATCH method specified in IETF RFC5789. This method allows a client to send a delta of changes to be made to a particular object. The PATCH format is illustrated in , and closely follows the IETF RFC6902 specification
 
-```text
-PATCH /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09
+```http
+PATCH /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09 HTTP/1.1
 Content-Type: application/xml
 If-Match: e403940394382743823
 
@@ -81,8 +81,8 @@ SanteDB provides version tracking of resources in its database and never truly "
 
 The mode of DELETE verb is to obsolete the object, however you can override this with the X-Delete-Mode header containing either: obsolete, nullify, or cancel to indicate the method of deletion.
 
-```text
-DELETE /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09
+```http
+DELETE /hdsi/Patient/54558ca5-c093-11ea-9f6f-00155d640b09 HTTP/1.1
 Content-Type: application/xml
 If-Match: e403940394382743823
 X-Delete-Mode: nullify
@@ -96,15 +96,15 @@ You may execute a general query against any of the provided resources on the HDS
 
 The query parameters are structured using [HDSI Query Syntax](hdsi-query-syntax.md).
 
-```text
-GET /hdsi/Patient?name.component.value=PETER
+```http
+GET /hdsi/Patient?name.component.value=PETER HTTP/1.1
 Accept: application/xml
 Accept-Encoding: gzip
 ```
 
 The result of a query is a Bundle which contains the offset, count, entry keys and any associated items in the response.
 
-```text
+```http
 HTTP/1.1 200 OK
 Content-Type: application/xml
 
@@ -126,8 +126,8 @@ If the “If” condition fails, then the HDS server will respond with an HTTP 3
 
 The HTTP HEAD operation is used to fetch metadata about a particular resource without fetching the resource itself. When a client sends HTTP head, the HDSI interface will respond with data such as version-identifier and sequence of the last edited resource or the metadata of the resource in question. For example, to get all patients named PETER who have been updated since a particular time:
 
-```text
-GET /Patient?name.component.value=PETER
+```http
+GET /Patient?name.component.value=PETER HTTP/1.1
 Authorization: BASIC ZmlkZGxlcjpmaWRkbGVy
 Host: demo.openiz.org:8080
 If-Modified-Since: Fri, 15 Jul 2016 10:09:39 GMT
@@ -143,8 +143,8 @@ Last-Modified: 2016-06-22T19:21:30.6871719-04:00
 
 A single resource instance is fetched from the server using a GET operation against the specific resource instance on the API. For example:
 
-```text
-GET /Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+```http
+GET /Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16 HTTP/1.1
 Authorization: BASIC ZmlkZGxlcjpmaWRkbGVy
 Host: demo.openiz.org:8080
 ```
@@ -173,8 +173,8 @@ The HTTP LOCK operation in SanteDB is typically used to obtain an exclusive lock
 
 For example, to block concurrent editing of a patient, the user interface can lock the resource:
 
-```text
-LOCK /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+```http
+LOCK /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16 HTTP/1.1
 Host: demo.openiz.org:8080
 ```
 
@@ -188,8 +188,8 @@ The HTTP UNLOCK operation in SanteDB is used to release a lock on an object, or 
 
 There are use cases where clients may wish to obtain an exclusive EDIT lock on a particular resource. This is done by performing an HTTP CHECKOUT on a supported resource \(like Patient, Concept, etc.\). This prevents concurrent editing of the same resource.
 
-```text
-CHECKOUT /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+```http
+CHECKOUT /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16 HTTP/1.1
 Host: demo.openiz.org:8080
 Authorization: bearer XXXXXXX
 ```
