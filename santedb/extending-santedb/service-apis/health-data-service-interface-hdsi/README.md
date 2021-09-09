@@ -101,8 +101,8 @@ SanteDB is designed to work in low-resource environments with high latency narro
 
 Request payloads which are compressed are indicated using the Content-Encoding HTTP header and the Accept-Encoding HTTP header to control the compression of the response.
 
-```text
-PUT /hdsi/Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16
+```http
+PUT /hdsi/Patient/fb00e97a-bdfc-403d-8f62-52f8e6846a16 HTTP/1.1
 Authorization: BASIC ZmlkZGxlcjpmaWRkbGVy
 Host: demo.openiz.org:8080
 Content-Encoding: gzip

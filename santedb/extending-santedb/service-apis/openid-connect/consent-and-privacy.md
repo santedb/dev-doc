@@ -8,8 +8,9 @@ When accessing resources from the API, a failed consent/policy decision will be 
 
 When a policy violation is denied \(the principal does not have any route to elevate\), an HTTP 403 Forbidden response is sent with details of the policy violation. For example:
 
-```text
+```http
 HTTP/1.1 403 Forbidden
+Content-Type: application/json
 
 {
     "$type": "PolicyViolationException",
@@ -29,7 +30,7 @@ Under certain conditions, some policies which are DENIED can be overridden by th
 
 When an elevation condition is detected, the server will respond with a 401 Unauthorized response. For example:
 
-```text
+```http
 HTTP/1.1 401 Unauthorized
 WWW-Authenticate: Bearer realm="elbonia.santesuite.net" 
                    error="insufficient_scope" 

@@ -2,7 +2,7 @@
 
 SanteDB provides a portable configuration system which is used by the iCDR and dCDR on any platform in which SanteDB is running. 
 
-{% hint style="info" %}
+{% hint style="warning" %}
 SanteDB may be configured to load configuration from a central cluster service, or load configurations from databases, the file system, or unit testing context. It is highly recommended you use the SanteDB.Core.Configuration interfaces rather than the System.Configuration namespaces.
 {% endhint %}
 

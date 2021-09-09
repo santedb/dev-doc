@@ -29,7 +29,7 @@ COMMIT;
 ```
 
 {% hint style="info" %}
-When writing FirebirdSQL patches you should add FROM RDB$DATABASE to the ck\_patch and reg patch functions.
+When writing FirebirdSQL patches you should add FROM RDB$DATABASE to the ck\_patch and reg patch functions such as `SELECT REG_PATCH('MYPATCH') FROM RDB$DATABASE;`
 {% endhint %}
 
 The SanteDB updater config tool will read these manifests and allow the system administrator an option to install your patches to their database.

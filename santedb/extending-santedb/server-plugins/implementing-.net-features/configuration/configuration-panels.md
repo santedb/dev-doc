@@ -36,7 +36,7 @@ When the administrator clicks `Ok` on the `Confirm Tasks` dialog box, the `IConf
 
 The `Execute` method of the task should perform the necessary configuration tasks to alter the configuration for the administrator. The `Rollback` method is called in the case of an error in applying the configuration changes. 
 
-{% hint style="info" %}
+{% hint style="danger" %}
 Do not save the configuration passed to the Execute or Rollback methods. The saving of the configuration is handled by the configuration tooling. Your methods should only update the configuration variable passed to the method call.
 {% endhint %}
 

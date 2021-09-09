@@ -44,7 +44,7 @@ In FHIR, it is possible to link to clinical data hosted offsite, or on another s
 
 Consider the following request to create a patient
 
-```text
+```javascript
 {
     "resourceType":"Patient",
     "name": [

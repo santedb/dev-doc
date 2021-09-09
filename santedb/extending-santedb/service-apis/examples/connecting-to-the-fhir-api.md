@@ -10,7 +10,7 @@ Note: You should complete the [Obtaining A Session](obtaining-a-session.md) exam
 
 SanteDB iCDR servers can operate in a multitude of roles, as such, some FHIR resources your application uses may have been disabled by the administrator. It is a good practice to obtain the FHIR conformance statement prior to executing operations against the FHIR server. This is done by:
 
-```text
+```http
 OPTIONS http://mpi-test.local:8080/fhir HTTP/1.1
 User-Agent: Fiddler
 Host: mpi-test.local:8080
@@ -18,7 +18,7 @@ Host: mpi-test.local:8080
 
 The response of this will be a FHIR CapabilityStatement in XML:
 
-```text
+```http
 HTTP/1.1 200 OK
 Content-Length: 14950
 Content-Type: application/fhir+xml
@@ -44,7 +44,7 @@ You can verify that the appropriate operations and appropriate resources are sup
 
 You can request a JSON payload by appending the `Accept: application/fhir+json` to your request.
 
-```text
+```http
 OPTIONS http://mpi-test.local:8080/fhir HTTP/1.1
 User-Agent: Fiddler
 Host: mpi-test.local:8080
@@ -53,7 +53,7 @@ Accept: application/fhir+json
 
 Which results in a JSON return:
 
-```text
+```http
 HTTP/1.1 200 OK
 Content-Length: 8410
 Content-Type: application/fhir+json
@@ -73,7 +73,7 @@ Date: Mon, 11 Jan 2021 17:24:07 GMT
 
 You can locate data on the FHIR service by executing the appropriate GET operation against the requested resource, for example, to find a patient who presents an identifier of 799229340878 you could execute the following query:
 
-```text
+```http
 GET http://mpi-test.local:8080/fhir/Patient?identifier=799229340878 HTTP/1.1
 User-Agent: Fiddler
 Host: mpi-test.local:8080
@@ -83,7 +83,7 @@ Authorization: bearer E878ABAE3054EB11AFFD00155D640B2349E9BDE39EBC9082EE1D45358E
 
 Which will return the structured data for that patient in a FHIR Bundle:
 
-```text
+```http
 HTTP/1.1 200 OK
 Content-Length: 3733
 Content-Type: application/fhir+json
@@ -103,7 +103,7 @@ Date: Mon, 11 Jan 2021 17:28:56 GMT
 
 To submit data, you should create an HTTP POST \(to create a new resource\) or PUT \(to update an existing resource\) to the appropriate URI defined by the FHIR standard. For example, to create a new patient John Test 
 
-```text
+```http
 POST http://mpi-test.local:8080/fhir/Patient?identifier=799229340878 HTTP/1.1
 User-Agent: Fiddler
 Host: mpi-test.local:8080
@@ -141,7 +141,7 @@ Content-Length: 675
 
 This will create a new patient and return the created data:
 
-```text
+```http
 HTTP/1.1 201 Created
 Content-Length: 2770
 Content-Type: application/fhir+json
@@ -163,7 +163,7 @@ Date: Mon, 11 Jan 2021 17:48:42 GMT
 
 If you're running the iCDR in MDM mode, the returned resource will be the generated LOCAL record for this patient. The iCDR will generate a MASTER record which expressed in the refer link:
 
-```text
+```javascript
 "link": [{
         "other": {
             "reference": "http://mpi-test.local:8080/fhir/Patient/8b554b4e-f0e1-42ec-85b7-296d521dd71b/_history/861b20d1-992d-487a-8788-63fae840f6bd", 

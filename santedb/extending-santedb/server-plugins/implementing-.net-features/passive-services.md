@@ -81,7 +81,7 @@ public class MyBarcodeGeneratorService : IBarcodeGeneratorService
 }
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Per-Call services are not currently not compatible with the Dependency Injection method of service calling. Only ApplicationServiceContext.GetService&lt;T&gt;\(\) calls adhere to Per-Call rule, DI uses of a Per-Call service are constructed once when the service using DI is constructed.
 
 i.e. If ServiceA uses ServiceB via DI, and ServiceB is PerCall, then ServiceB is constructed once when ServiceA is constructed. If ServiceC uses ServiceB then a different instance of ServiceB is constructed for ServiceC's DI.

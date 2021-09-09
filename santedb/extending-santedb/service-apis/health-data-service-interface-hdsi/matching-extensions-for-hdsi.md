@@ -2,11 +2,11 @@
 
 The [Master Data Management](../../../architecture/data-storage-patterns/master-data-storage.md) plugin for SanteDB provides controls for the management of the MDM metadata via the HDSI interface using custom interfaces.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 When using the MDM extensions on the dCDR \(like in the user interface, or on a client\) you must provide the `_upstream=true` indicator so the dCDR service sends the original request to the central server directly. This means that these functions should only be called when online and connected to the iCDR
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="success" %}
 It is entirely possible to perform the same operations manually by manipulating the `EntityRelationship` resources in the CDR. However this method is discouraged as `EntityRelationship`properties require specific attributes/values in order for MDM to function correctly.
 {% endhint %}
 
@@ -18,7 +18,7 @@ The operations provided by the MDM extension plugins actually kickoff jobs and o
 
 The clear operation clears the entire database of all MDM linkages. Depending on the parameters use, this function will completely remove all MDM links. 
 
-{% hint style="info" %}
+{% hint style="warning" %}
 It is only recommended that this operation be performed if you are disabling MDM \(i.e. plan on turning off the MDM layer\) or if you are experimenting and want to clear the automatically generated links.
 {% endhint %}
 
@@ -340,14 +340,14 @@ The attach MDM link operation on the `mdm-link` resource ensures that only a LOC
 You can still perform an MDM attachment using the `$merge` operation, however the source and target UUIDs must be a local and master respectively.
 {% endhint %}
 
-To link an instance the caller must `POST` an `Entity`  \(or other focus object\) with the `id` carrying the UUID of the master to which the attaching is to occur \(or if the focus UUID on the URL is a MASTER then the UUID of the local\).
+To link an instance the caller must `POST` an `Reference`  with the `id` carrying the UUID of the master to which the attaching is to occur \(or if the focus UUID on the URL is a MASTER then the UUID of the local\).
 
 ```http
 POST /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-link HTTP/1.1
 Content-Type: application/json
 
 {
-    "$type": "Entity",
+    "$type": "Reference",
     "id": "f8f92db2-e48e-4b6c-951d-b42e06c5c4d4"
 }
 ```

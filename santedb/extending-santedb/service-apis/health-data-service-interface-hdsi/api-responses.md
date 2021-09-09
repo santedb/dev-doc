@@ -26,7 +26,7 @@ The HDSI, AMI and BIS all behave in a similar manner at the HTTP layer. Response
 
 Whenever an error condition is encountered, the API will return a structured JSON or XML error response / payload. This payload indicates the reason for the failure. The payload in XML is illustrated below:
 
-```markup
+```http
 HTTP/1.1 500 Internal Server Error
 Date: Thu, 27 Aug 2020 20:39:09 GMT
 Content-Type: application/xml

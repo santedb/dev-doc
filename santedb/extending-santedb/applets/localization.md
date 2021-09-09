@@ -18,7 +18,7 @@ You should then register **my.ui.local.string** in the applet's manifest file.
     
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 It is recommended you use the manifest file and i18n service as SanteDB will pre-translate the file before sending it to the browser and will cache the result. This reduces the amount of processing power required for repeat viewing of the page.
 {% endhint %}
 

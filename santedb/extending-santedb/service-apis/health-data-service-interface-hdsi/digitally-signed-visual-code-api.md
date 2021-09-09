@@ -19,8 +19,8 @@ There are three APIs which are exposed on the HDSI which should be used for gene
 
 The generation of a resource pointer and the visual code are both retrieved using simple HTTP GET operations. The \_ptr operation uses the HTTP SEARCH operation, a request for this operation would be:
 
-```javascript
-SEARCH http://example.com/hdsi/_ptr
+```http
+SEARCH http://example.com/hdsi/_ptr HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
 code=JWS_PAYLOAD_HERE
@@ -28,8 +28,8 @@ code=JWS_PAYLOAD_HERE
 
 Upon successful location of the resource, the iCDR or dCDR will return an HTTP 303 result
 
-```javascript
-HTTP/1.1 303 See Other
+```http
+HTTP/1.1 303 See Other HTTP/1.1
 Location: http://example.com/hdsi/Patient/{uuid}/_history/{uuid}
 ```
 
@@ -91,7 +91,7 @@ The key header indicates the configured key to be used for validating the authen
 This key can be any key configured in SanteDB, however two common key identifiers used are either:
 
 * JWSDefault -&gt; The default JWS signing key which can be either an x.509 certificate \(in which case RSA signatures are used\) or an HMAC plaintext secret.
-* SA.UUID -&gt; The configured private key of the device which generated the key. This is the configured ApplicationSecret in SanteDB for that application.
+* SA.UUID -&gt; The configured private key of the device which generated the key. This is the configured \` in SanteDB for that application.
 
 ### Visual Code Payload
 

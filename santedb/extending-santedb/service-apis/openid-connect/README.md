@@ -6,14 +6,14 @@ SanteDB supports OpenID Connect on the https://servername:8443/auth endpoint.
 
 The configuration of the SanteDB server can be obtained via a GET to the openid-configuration endpoint, as illustrated below.
 
-```text
+```http
 GET http://mpi-test.local:8080/auth/.well-known/openid-configuration HTTP/1.1
 Host: mpi-test.local:8080
 ```
 
 This results in an OpenID configuration response, illustrated in below.
 
-```text
+```http
 HTTP/1.1 200 OK
 Content-Length: 2382
 Content-Type: application/json
@@ -386,7 +386,7 @@ The types of claims which may be sent to the OpenID Connect service are listed b
 
 When performing a consent override, you may also specify the policies which are being overridden in the source scope property. For example, the Elbonia MPI defines a directive "SUPER SECRET DISCLOSURE" , if the user Allison wished to override the default consent decision, the client could send a password grant illustrated below:
 
-```text
+```http
 POST http://mpi-test.local:8080/auth/oauth2_token HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 X-Device-Authorization: BASIC RGVidWdlZS1FMEQ1NUVBNUQ2Q0Q6MCpTdV8yfk9kSjdAR2NjNw==

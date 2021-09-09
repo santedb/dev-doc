@@ -171,13 +171,11 @@ The SanteDB system will place a unique NONCE on this element rendered into HTML 
 
 ### Inline Scripts
 
-Inline scripts like the one illustrated below
+Inline scripts like the one illustrated below are strictly prohibited, and will throw an error in the browser. It is recommended you use the guidance here [https://csp.withgoogle.com/docs/adopting-csp.html](https://csp.withgoogle.com/docs/adopting-csp.html) , to overcome this.
 
 ```markup
 <button onclick="foo()">Foo!</button>
 ```
-
-Are strictly prohibited, and will throw an error in the browser. It is recommended you use the guidance here [https://csp.withgoogle.com/docs/adopting-csp.html](https://csp.withgoogle.com/docs/adopting-csp.html) , to overcome this.
 
 ### Browser APIs
 
