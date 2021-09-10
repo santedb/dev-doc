@@ -8,24 +8,53 @@ SanteDB is actually made up of several software components which operate togethe
 
 ![](../../.gitbook/assets/image%20%28122%29.png)
 
-At a high level, the major components of the SanteDB architecture are:
+## iCDR Server
 
-* SanteDB Server \(iCDR\) - The iCDR is the primary platform component of the SanteSuite platform. The SanteDB iCDR is responsible \(at a high level\) for:
-  * Maintenance of individuals’ medical records
-  * Scheduling and maintenance of medical appointments
-  * Forecasting schedules and demand
-  * Integration with infrastructural systems such as Logistics Management Information Systems \(LMIS\), Health Management Information Systems \(HMIS\), educational systems, etc.
-* SanteDB Disconnected CDR \(dCDR\)  - The dCDR is actually a collection of disconnected solutions which integrate with SanteDB's iCDR. These solutions include:
-  * Disconnected Client - Which is a thick client application running on Linux, Windows, or Android which operates offline and hosts a user interface. These applications are designed for end-users to access the user interface in partially connected environments.
-  * Disconnected Gateway - Which is actually a server which runs on Windows and Linux and allows multiple devices within a clinic to operate offline. This solution is best used when there is a reliable wireless LAN but no WAN connectivity. The disconnected server supports HL7v2, HL7 FHIR, as well as the sync protocol
-* Standards Based Systems - Includes any software which leverages HL7 FHIR, HL7v2 or any of the other standards which SanteDB iCDR or dCDR support.
+The iCDR server is the central integrated clinical data repository which is used to coordinate the many connected clients in an implementation. Typically an implementation of SanteDB will only ever have one iCDR instance \(or a logical grouping of iCDR servers acting as a single iCDR\).
 
-Upon these base level components a series of products or "solutions" are packaged. These solutions include:
+The primary responsibilities of the iCDR are:
 
-* SanteMPI - A master patient index based on the SanteDB platform
-* SanteEMR - A general purpose EMR platform based on the SanteDB platform
-* SanteGuard - A general purpose Audit Repository based on the SanteDB platform
-* OpenIZ / SanteIMS - An Immunization Management System \(IMS\)
+* Maintain a master dataset for the entire deployment of SanteDB in a particular health role.
+* Facilitate the synchronization and sharing of data between sites within the deployment.
+* Integrate with upstream services such as audit repositories, client registries, etc.
+* Distribute OTA software updates to connected clients
+* Provide a centralized authentication authentication and privacy information distribution point.
+
+## dCDR Clients
+
+The dCDR clients are the disconnected clients which connect to the central iCDR and are typically used by end users. The term dCDR client is used loosely to describe any client which is implemented on the dCDR technology. dCDR clients are deployed in data centers, in clinics, on tablets, etc. A deployment of SanteDB will have multiple dCDR clients.
+
+No matter the implementation, the dCDR clients are primarily responsible for:
+
+* Providing offline access to relevant subsets of data synchronized and replicated from the central iCDR server.
+* Caching centralized credentials, and providing local clinic-level authentication
+* Serving out the user interface, reports, and other end-user facing elements.
+* Providing a federation point for other dCDR instances
+* Executing data quality checks, business rules, clinical decision support rules, etc. while the central iCDR server is not available.
+
+### dCDR Android Application
+
+The dCDR Android Application is an implementation of the dCDR services on the Google Android operating system. The dCDR Android application is used whenever tablet or phone users will require access to the SanteDB infrastructure while operating on poor/slow/unavailable cellular internet connections.
+
+The dCDR Android application only exposes the user interface services, offline gateway services such as FHIR, HL7v2, and ATNA are disabled, as is off-host UI access. When the Android host process launches the dCDR service core, it generates a unique secret for that application run, and expects this in the `SDB-Magic` header on all requests.
+
+### dCDR Windows / Linux Applications
+
+The dCDR Windows and Linux applications are self-contained applications which run the SanteDB user interface, and provide a known web-browser component to render them. Like the Android client, these desktop applications disable all API access and generate unique key which is shared between the web-view control and the dCDR services, and is required to access those services.
+
+### dCDR Gateway
+
+The dCDR Gateway is a headless service which implements the dCDR functionality and is intended for use in environments where third party applications \(or users in a shared local network\) require access to offline functionality. 
+
+The dCDR gateway exposes FHIR, HL7v2, ATNA, and API calls to any connected client on a local network. The Gateway acts a "mini" SanteDB  iCDR instance, where clients connected on the local network have no knowledge of the overall connectivity of the clinic or environment they're operating within.
+
+{% hint style="info" %}
+Care should be taken in planning the local network security environment when using the dCDR gateway.
+{% endhint %}
+
+### dCDR Web Portal
+
+The dCDR Web Portal is a specialized dCDR environment which has no offline capability. It is primarily designed to operate as a daemon and to serve out, on the internet, the user interfaces directly connected to the central iCDR. This is the technology used to host the administrative panels, any shared/central infrastructure, etc.
 
 
 
