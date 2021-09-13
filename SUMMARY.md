@@ -449,6 +449,9 @@
   * [Assigning a Home Facility](santempi/recipes/assigning-a-home-facility.md)
   * [Codified Address](santempi/recipes/codified-address.md)
   * [Generating ID on Registration](santempi/recipes/generating-id-on-registration.md)
+* [Customization & Branding](santempi/customization-and-branding.md)
+* [Localization](santempi/localization.md)
+* [Pontoon](santempi/pontoon.md)
 
 ## SanteGuard
 
