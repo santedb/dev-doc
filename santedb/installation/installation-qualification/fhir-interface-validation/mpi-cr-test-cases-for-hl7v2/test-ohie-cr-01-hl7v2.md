@@ -13,6 +13,8 @@ Prior to executing this test, SanteMPI instances should configure:
 * The `TEST_OTHER` application
 * The `TEST_OTHER|TEST` device
 
+{% tabs %}
+{% tab title="Dataset" %}
 ```markup
 <dataset id="Test Domain" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://santedb.org/data">
   <insert skipIfError="false" skipIfExists="true">
@@ -33,6 +35,17 @@ Prior to executing this test, SanteMPI instances should configure:
   </insert>
 </dataset>
 ```
+{% endtab %}
+
+{% tab title="SDBAC" %}
+```text
+> application.add TEST_OTHER -s TEST_HARNESS
+> device.add TEST_OTHER|TEST -s TEST_HARNESS
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ## Patient Missing PID-3.4 With No Authority
 

@@ -354,3 +354,7 @@ Content-Type: application/json
 
 All properties other than `id` in the `Entity` are ignored.
 
+## Administrative Management API
+
+The MDM layer provides extensions for the AMI layer as well. These extensions and operations permit the configuration of the MDM via the `mdm-configuration` resource on the AMI. The configuration APIs allow callers to enable, or disable 
+

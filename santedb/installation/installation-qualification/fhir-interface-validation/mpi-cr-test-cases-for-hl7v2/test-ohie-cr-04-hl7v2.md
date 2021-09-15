@@ -29,6 +29,8 @@ Prior to executing the tests in this test case, the system under test should be 
 * Authority `TEST_A` with OID `2.16.840.1.113883.3.72.5.9.2` is configured and `TEST_HARNESS_A` is granted authority to assign identifiers in this domain
 * Authority `TEST_B` with OID `2.16.840.1.113883.3.72.5.9.3` is configured and `TEST_HARNESS_B` is granted authority to assign identifiers in this domain.
 
+
+
 ## Test Step 1:
 
 Test harness \(as TEST\_HARNESS\_A\) sends ADT^A01 registering a new patient with an identifier from TEST\_A domain.

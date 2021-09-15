@@ -27,6 +27,8 @@ Prior to executing this test, SanteMPI instances should configure:
 * The `TEST` identity domain is created and the authority to assign is set to `TEST_HARNESS`
 * The SanteMPI instance is configured such that `strictCx4` is disabled
 
+{% tabs %}
+{% tab title="Dataset" %}
 ```markup
 <dataset id="Test Domain" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://santedb.org/data">
   <insert skipIfError="false" skipIfExists="true">
@@ -57,6 +59,17 @@ Prior to executing this test, SanteMPI instances should configure:
     </AssigningAuthority>
   </insert>
 ```
+{% endtab %}
+
+{% tab title="SDBAC" %}
+```text
+> application.add TEST_HARNESS -s TEST_HARNESS
+> device.add TEST_HARNESS|TEST -s TEST_HARNESS
+> application.info TEST_HARNESS
+> aa.add -n TEST -o 1.3.6.1.4.1.52820.3.72.5.9.1 -u http://ohie.org/test/test -d 'OpenHIE Test Domain' -a TEST_HARNESS 
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 If the SanteMPI instance is configured to use Msh8 security and not node authentication, then the `MSH-8` value of all test messages must contain `TEST_HARNESS|TEST_HARNESS`
