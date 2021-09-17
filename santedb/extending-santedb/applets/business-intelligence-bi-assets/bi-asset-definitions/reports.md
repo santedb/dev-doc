@@ -4,7 +4,7 @@ A report definition in SanteDB's BI services framework represents an asset which
 
 Data sources for reports can be either a view or a query which can be referenced or inline with the report definition itself.
 
-### Report Definition Files
+## Report Definition Files
 
 Report definition files define one or more data sources \(query or view\), metadata \(including permission\), and one or more views. These views represent different ways of representing data. For example you may have a report with a tabular view and a chart view. 
 
@@ -38,7 +38,7 @@ Report definition files define one or more data sources \(query or view\), metad
 
 The view contents are defined using XHTML and the content is generated using view components defined in the **http://santedb.org/bi/view** namespace.
 
-### Report View Components
+## Report View Components
 
 There are several built-in view components which you can use for creating your report. They are:
 
@@ -51,7 +51,7 @@ There are several built-in view components which you can use for creating your r
 | &lt;bi:value&gt; | Bind the contents to a particular column in the current row. |
 | &lt;bi:chart&gt; | Render a pie, line, bar, radar, donut or combination chart. |
 
-#### Aggregate Component
+### Aggregate Component
 
 The aggregate component is used to aggregate a particular data source. This is useful for showing totals, averages, counts, etc.
 
@@ -86,7 +86,7 @@ You can either aggregate a field, or an expression, for exam
 </tfoot>
 ```
 
-#### Locale Component
+### Locale Component
 
 The locale component will replace the value of the element with the correct string from the current locale.
 
@@ -94,7 +94,7 @@ The locale component will replace the value of the element with the correct stri
 <bi:locale>ui.welcome</bi:locale>
 ```
 
-#### Repeat Component
+### Repeat Component
 
 The repeat component is an iterator which opens a dataset and repeats until the rows in the data source are exhausted.
 
@@ -129,7 +129,7 @@ The contents of the repeat element is any content, for example, this component i
 </table>
 ```
 
-#### Switch Component
+### Switch Component
 
 The switch component is used to provide conditional rendering of components.
 
@@ -160,7 +160,7 @@ For example, the switch statement can be used to provide iconography:
 </bi:switch>
 ```
 
-#### Value Component
+### Value Component
 
 The value component allows the rendering of report data elements or expressions.
 
@@ -204,7 +204,7 @@ This may output a table such as:
 | JONES, JENNIFER | 2019-11-01 |
 | 2 ui.patients.total | 3 |
 
-#### Chart Component
+### Chart Component
 
 The charting component allows for quick creation of basic charts using the data found in the data source. 
 
