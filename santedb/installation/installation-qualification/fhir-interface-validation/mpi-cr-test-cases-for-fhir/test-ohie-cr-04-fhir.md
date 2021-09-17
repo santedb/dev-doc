@@ -47,7 +47,7 @@ Create an AssigningAuthority domain which has the following attributes:
     <AssigningAuthority xmlns="http://santedb.org/model">
       <name>OHIE TEST Domain A</name>
       <domainName>TEST_A</domainName>
-      <oid>1.3.6.1.4.1.52820.3.72.5.9.2</oid>
+      <oid>2.16.840.1.113883.3.72.5.9.2</oid>
       <url>http://ohie.org/test/test_a</url>
       <isUnique>true</isUnique>
       <assigningApplication>DE5BEC1E-8C41-4FF1-8E65-A39AC1DDAE60</assigningApplication>
@@ -80,7 +80,7 @@ Create an AssigningAuthority domain which has the following attributes:
     <AssigningAuthority xmlns="http://santedb.org/model">
       <name>OHIE TEST Domain B</name>
       <domainName>TEST_B</domainName>
-      <oid>1.3.6.1.4.1.52820.3.72.5.9.3</oid>
+      <oid>2.16.840.1.113883.3.72.5.9.3</oid>
       <url>http://ohie.org/test/test_b</url>
       <isUnique>true</isUnique>
       <assigningApplication>58275680-5129-4832-9668-131F76E8DFB6</assigningApplication>

@@ -42,7 +42,7 @@ Create an AssigningAuthority domain which has the following attributes:
     <AssigningAuthority xmlns="http://santedb.org/model">
       <name>OHIE TEST Domain</name>
       <domainName>TEST_FHIR</domainName>
-      <oid>1.3.6.1.4.1.52820.3.72.5.9.1</oid>
+      <oid>2.16.840.1.113883.3.72.5.9.1</oid>
       <url>http://ohie.org/test/test</url>
       <isUnique>true</isUnique>
       <assigningApplication>F0FC4322-948D-4986-A06C-DA603A77EDDE</assigningApplication>
@@ -83,7 +83,7 @@ The test harness registers a patient using the OID for the TEST domain with the 
   "active": true,
   "identifier": [
     {
-      "system": "urn:oid:1.3.6.1.4.1.52820.3.72.5.9.1",
+      "system": "urn:oid:2.16.840.1.113883.3.72.5.9.1",
       "value": "FHR-020"
     }
   ],
@@ -183,7 +183,7 @@ The test harness registers a patient using the URL representation of the system 
 The test harness executes a query against the receiver using the OID version of the TEST domain
 
 ```http
-GET http://localhost:8080/fhir/Patient?identifier=urn%3Aoid%3A1.3.6.1.4.1.52820.3.72.5.9.1%7CFHR-021&_format=application%2Ffhir%2Bjson HTTP/1.1
+GET http://localhost:8080/fhir/Patient?identifier=urn%3Aoid%3A2.16.840.1.113883.3.72.5.9.1%7CFHR-021&_format=application%2Ffhir%2Bjson HTTP/1.1
 Accept-Encoding: gzip,deflate
 Authorization: BEARER xxxxxxx
 Host: localhost:8080

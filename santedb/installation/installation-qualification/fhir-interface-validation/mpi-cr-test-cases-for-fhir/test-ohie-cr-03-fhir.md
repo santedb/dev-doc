@@ -26,7 +26,7 @@ You can verify this by executing the following queries against the SanteMPI serv
 
 ```http
 GET http://sut:8080/hdsi/AssigningAuthority?url=http%3A%2F%2Fohie.org%2Ftest%2Ftest_block HTTP/1.1
-GET http://sut:8080/hdsi/AssigningAuthority?oid=1.3.6.1.4.1.52820.3.72.5.9.4 HTTP/1.1
+GET http://sut:8080/hdsi/AssigningAuthority?oid=2.16.840.1.113883.3.72.5.9.4 HTTP/1.1
 ```
 
 ## Register patient in invalid Identity Domain \(via Url\)
@@ -82,7 +82,7 @@ The test harness sends a registration request to the receiver with `urn:oid:1.3.
   "identifier": [
     {
       "use": "usual",
-      "system": "urn:oid:1.3.6.1.4.1.52820.3.72.5.9.4",
+      "system": "urn:oid:2.16.840.1.113883.3.72.5.9.4",
       "value": "031",
       "assigner": {
         "display": "Fake Domain"
@@ -107,7 +107,7 @@ The test harness sends a registration request to the receiver with `urn:oid:1.3.
 | :--- | :--- | :--- |
 | MUST | PMIR Only | Return MessageHeader with response.code = fatal-error |
 | MUST |  | Include an OperationOutcome entry in the response |
-| MUST |  | Indicate that the identity domain urn:oid:1.3.6.1.4.1.52820.3.72.5.9.4 is not a valid identity domain. |
+| MUST |  | Indicate that the identity domain urn:oid:2.16.840.1.113883.3.72.5.9.4 is not a valid identity domain. |
 | MUST |  | Carry an HTTP response code in 400 series |
 | SHOULD |  | Carry an HTTP response code of 422. |
 

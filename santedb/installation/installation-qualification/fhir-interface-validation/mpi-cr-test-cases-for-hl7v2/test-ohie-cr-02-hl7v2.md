@@ -52,7 +52,7 @@ Prior to executing this test, SanteMPI instances should configure:
     <AssigningAuthority xmlns="http://santedb.org/model">
       <name>OHIE TEST Domain</name>
       <domainName>TEST</domainName>
-      <oid>1.3.6.1.4.1.52820.3.72.5.9.1</oid>
+      <oid>2.16.840.1.113883.3.72.5.9.1</oid>
       <url>http://ohie.org/test/test</url>
       <isUnique>true</isUnique>
       <assigningApplication>F0FC4322-948D-4986-A06C-DA603A77EDDE</assigningApplication>
@@ -66,7 +66,7 @@ Prior to executing this test, SanteMPI instances should configure:
 > application.add TEST_HARNESS -s TEST_HARNESS
 > device.add TEST_HARNESS|TEST -s TEST_HARNESS
 > application.info TEST_HARNESS
-> aa.add -n TEST -o 1.3.6.1.4.1.52820.3.72.5.9.1 -u http://ohie.org/test/test -d 'OpenHIE Test Domain' -a TEST_HARNESS 
+> aa.add -n TEST -o 2.16.840.1.113883.3.72.5.9.1 -u http://ohie.org/test/test -d 'OpenHIE Test Domain' -a TEST_HARNESS 
 ```
 {% endtab %}
 {% endtabs %}
