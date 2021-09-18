@@ -29,11 +29,67 @@ Prior to executing the tests in this test case, the system under test should be 
 * Authority `TEST_A` with OID `2.16.840.1.113883.3.72.5.9.2` is configured and `TEST_HARNESS_A` is granted authority to assign identifiers in this domain
 * Authority `TEST_B` with OID `2.16.840.1.113883.3.72.5.9.3` is configured and `TEST_HARNESS_B` is granted authority to assign identifiers in this domain.
 
+{% tabs %}
+{% tab title="Dataset" %}
+```markup
+<dataset id="Test Domain" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://santedb.org/data">
+  <insert skipIfError="false" skipIfExists="true">
+    <SecurityApplication xmlns="http://santedb.org/model">
+      <id>DE5BEC1E-8C41-4FF1-8E65-A39AC1DDAE60</id>
+      <!-- Secret: TEST_HARNESS -->
+      <applicationSecret>b5547020757c0efa3f320fbd2a0c43d0628e19b8cd81652523b87d31fc54f5ec</applicationSecret>
+      <name>TEST_HARNESS_A</name>
+    </SecurityApplication>
+  </insert>
+  <!-- TEST -->
+  <insert skipIfError="false" skipIfExists="true">
+    <AssigningAuthority xmlns="http://santedb.org/model">
+      <name>OHIE TEST Domain A</name>
+      <domainName>TEST_A</domainName>
+      <oid>2.16.840.1.113883.3.72.5.9.2</oid>
+      <url>http://ohie.org/test/test_a</url>
+      <isUnique>true</isUnique>
+      <assigningApplication>DE5BEC1E-8C41-4FF1-8E65-A39AC1DDAE60</assigningApplication>
+    </AssigningAuthority>
+  </insert>
+  <insert skipIfError="false" skipIfExists="true">
+    <SecurityApplication xmlns="http://santedb.org/model">
+      <id>58275680-5129-4832-9668-131F76E8DFB6</id>
+      <!-- Secret: TEST_HARNESS -->
+      <applicationSecret>b5547020757c0efa3f320fbd2a0c43d0628e19b8cd81652523b87d31fc54f5ec</applicationSecret>
+      <name>TEST_HARNESS_FHIR_B</name>
+    </SecurityApplication>
+  </insert>
+  <!-- TEST -->
+  <insert skipIfError="false" skipIfExists="true">
+    <AssigningAuthority xmlns="http://santedb.org/model">
+      <name>OHIE TEST Domain B</name>
+      <domainName>TEST_B</domainName>
+      <oid>2.16.840.1.113883.3.72.5.9.3</oid>
+      <url>http://ohie.org/test/test_b</url>
+      <isUnique>true</isUnique>
+      <assigningApplication>58275680-5129-4832-9668-131F76E8DFB6</assigningApplication>
+    </AssigningAuthority>
+  </insert>
+  
+```
+{% endtab %}
 
+{% tab title="SDBAC" %}
+```text
+> application.add TEST_HARNESS_A -s TEST_HARNESS
+> device.add TEST_HARNESS_A|TEST -s TEST_HARNESS
+> aa.add -n TEST_A -o 2.16.840.1.113883.3.72.5.9.2 -u http://ohie.org/test/test_a -d 'OpenHIE Test Domain A' -a TEST_HARNESS_A
+> application.add TEST_HARNESS_B -s TEST_HARNESS
+> device.add TEST_HARNESS_B|TEST -s TEST_HARNESS
+> aa.add -n TEST_B -o 2.16.840.1.113883.3.72.5.9.3 -u http://ohie.org/test/test_b -d 'OpenHIE Test Domain B' -a TEST_HARNESS_B
+```
+{% endtab %}
+{% endtabs %}
 
-## Test Step 1:
+## Register Patient in TEST\_A
 
-Test harness \(as TEST\_HARNESS\_A\) sends ADT^A01 registering a new patient with an identifier from TEST\_A domain.
+Test harness \(as `TEST_HARNESS_A`\) sends `ADT^A01` registering a new patient with an identifier from `TEST_A` domain.
 
 ```text
 MSH|^~\&|TEST_HARNESS_A^^|TEST^^|CR1^^|MOH_CAAT^^|20141104174451||ADT^A01^ADT_A01|TEST-CR-04-20|P|2.3.1
@@ -44,14 +100,14 @@ PV1||I
 
 ### Expected Behaviour
 
-* Receiver Accepts Message with an AA
-* MSH-5 and MSH-6 matches “TEST\_HARNESS\_A\|TEST”
-* Response is ACK^A01
-* Response version is 2.3.1
+* Receiver Accepts Message with an `AA`
+* MSH-5 and MSH-6 matches `TEST_HARNESS_A|TEST`
+* Response is `ACK^A01`
+* Response version is `2.3.1`
 
-## Test Step 2:
+## Cross-Domain Registration in TEST\_A
 
-Test harness \(as TEST\_HARNESS\_B\) attempts to send an ADT^A01 for authority A.
+Test harness \(as `TEST_HARNESS_B`\) attempts to send an `ADT^A01` for authority A.
 
 ```text
 MSH|^~\&|TEST_HARNESS_B^^|TEST^^|CR1^^|MOH_CAAT^^|20141104174451||ADT^A01^ADT_A01|TEST-CR-04-30|P|2.3.1
@@ -62,9 +118,9 @@ PV1||I
 
 ### Expected Behaviour
 
-* Receiver rejects the message with an AE or AR
+* Receiver rejects the message with an `AE` or `AR`
 * An MSA message exists with an appropriate error code
-* MSH-5 and MSH-6 matches “TEST\_HARNESS\_B\|TEST”
-* Response is ACK^A01
+* `MSH-5` and `MSH-6` matches `TEST_HARNESS_B|TEST`
+* Response is `ACK^A01`
 * Response Version is 2.3.1
 

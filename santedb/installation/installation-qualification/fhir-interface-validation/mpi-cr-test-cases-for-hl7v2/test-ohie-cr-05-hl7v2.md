@@ -6,40 +6,33 @@ description: Patient Identity Feed – Minimal data set
 
 This test ensures that the receiver does not reject a message containing only an identifier, and one of gender, date of birth, mother’s identifier. This test makes no assertion about merging/matching patients
 
-## References
+## Discussion
+
+This test mimics the environment whereby a newborn demographic with minimal patient information \(gender and date of birth\) can be stored by the client registry and faithfully returned with an appropriate query to the interface.
 
 ## Pre-Conditions / Setup
 
-#### Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.1 has assigning authority of TEST which can be assigned from TEST\_HARNESS
+All conditions from OHIE-CR-02 should be completed prior to running this test suite.
 
-#### Ensure that the following patient is registered in the receiver \(can be done with the ADT message provided\). Name: Jennifer Jones, id: RJ-439^^^TEST, gender: F, dob: 1984-01-25
-
-```text
-MSH|^~\&|TEST_HARNESS^^|TEST^^|CR1^^|MOH_CAAT^^|20141104174451||ADT^A01^ADT_A01|TEST-CR-05-10|P|2.3.1
-EVN||20101020
-PID|||RJ-439^^^TEST||JONES^JENNIFER^^^^^L|SMITH^^^^^^L|19840125|F|||123 Main Street West ^^NEWARK^NJ^30293||^PRN^PH^^^409^30495||||||
-PV1||I
-```
-
-## Test Step 1:
+## Register Patient with Minimal Demographics
 
 Test harness sends an ADT^A01 message with minimal data set containing information for a newborn with only an identifier, gender and date of birth.
 
 ```text
 MSH|^~\&|TEST_HARNESS^^|TEST^^|CR1^^|MOH_CAAT^^|20141104174451||ADT^A01^ADT_A01|TEST-CR-05-20|P|2.3.1
 EVN||20141001
-20141001PID|||RJ-441^^^TEST||||20141001|M||||||||||||| 
+PID|||RJ-441^^^TEST||||20141001|M||||||||||||| 
 PV1||I
 ```
 
 ### Expected Behaviour
 
-* Receiver Accepts Message with an AA
-* MSH-5 and MSH-6 matches “TEST\_HARNESS\|TEST”
-* Response is ACK^A01
-* Response is version 2.3.1
+* Receiver Accepts Message with an `AA`
+* MSH-5 and MSH-6 matches `TEST_HARNESS|TEST`
+* Response is `ACK^A01`
+* Response is version `2.3.1`
 
-## Test Step 2:
+## Query for Minimal Patient using Identifier
 
 Test harness verifies the infant record was created in the receiver.
 
@@ -51,8 +44,8 @@ RCP|I
 
 ### Expected Behaviour
 
-* Receiver responds with an AA
-* Receiver sends exactly one PID segment with identifier RJ-441 in domain TEST in PID-3
+* Receiver responds with an `AA`
+* Receiver sends exactly one `PID` segment with identifier `RJ-441` in domain `TEST` in PID-3
 
 
 
