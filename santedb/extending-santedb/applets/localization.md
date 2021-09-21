@@ -15,8 +15,25 @@ You should then register **my.ui.local.string** in the applet's manifest file.
 ```markup
 <strings lang="en">
     <string key="my.ui.local.string">My Local String</string>
-    
 ```
+
+You may also collect your strings in an Android style `strings.xml` format, this allows common tools like [Mozilla Pontoon](https://pontoon.santesuite.net) to edit your strings.
+
+{% tabs %}
+{% tab title="manifest.xml" %}
+```markup
+<strings lang="eo" extern="i18n/eo/strings.xml" />
+```
+{% endtab %}
+
+{% tab title="strings.xml" %}
+```markup
+<resources>
+    <string name="my.ui.local.string">My Local String</string>
+</resources>
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="warning" %}
 It is recommended you use the manifest file and i18n service as SanteDB will pre-translate the file before sending it to the browser and will cache the result. This reduces the amount of processing power required for repeat viewing of the page.

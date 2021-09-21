@@ -66,9 +66,7 @@ RCP|I
 
 ## Query for Newborn using Mother's Identifier
 
-
-
-Test harness verifies the infant record was created in the receiver.
+Test harness verifies the receiver can resolve the newborn demographic based on the identifier of the mother.
 
 ```text
 MSH|^~\&|TEST_HARNESS|TEST|CR1|MOH_CAAT|20090223144546||QBP^Q22^QBP_Q22|TEST-CR-05-30|P|2.5
