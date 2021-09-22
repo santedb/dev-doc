@@ -305,6 +305,7 @@
         * [Reports](santedb/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/reports.md)
       * [BI Render Controls](santedb/extending-santedb/applets/business-intelligence-bi-assets/bi-render-controls.md)
     * [Localization](santedb/extending-santedb/applets/localization.md)
+    * [Pontoon](santedb/extending-santedb/applets/pontoon.md)
     * [Customization & Branding](santedb/extending-santedb/applets/customization-and-branding.md)
     * [Assets](santedb/extending-santedb/applets/assets/README.md)
       * [HTML Assets](santedb/extending-santedb/applets/assets/html-assets.md)
@@ -450,8 +451,6 @@
   * [Codified Address](santempi/recipes/codified-address.md)
   * [Generating ID on Registration](santempi/recipes/generating-id-on-registration.md)
 * [Customization & Branding](santempi/customization-and-branding.md)
-* [Localization](santempi/localization.md)
-* [Pontoon](santempi/pontoon.md)
 
 ## SanteGuard
 
