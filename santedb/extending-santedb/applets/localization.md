@@ -96,7 +96,7 @@ Finally, you should create a file called `i18n.toml` in your applet to allow Moz
 
 ```text
 basepath = "."
-locales = [ "en","fr","es","sw", "it", "my" ] 
+locales = [ "en", "fr", "es", "sw", "it", "my" ] 
 [[paths]]
     refernece = "i18n/en/strings.xml"
     l10n = "i18n/{locale}/strings.xml"
