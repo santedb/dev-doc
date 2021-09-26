@@ -102,7 +102,7 @@ If your deployment uses `PID-19` to map to another identity such as national soc
 
 When SanteDB responds or receives a message in HL7v2, it is possible to reference the UUID for the object using the `PID-3` segment if the `localAuthority` element is configured.
 
-```text
+```markup
 <localAuthority operation="Auto">
     <domainName xmlns="http://santedb.org/model">LOCAL_AUTH</domainName>
     <oid xmlns="http://santedb.org/model">1.3.6.1.4.1.52820.5.1.1.1.999</oid>

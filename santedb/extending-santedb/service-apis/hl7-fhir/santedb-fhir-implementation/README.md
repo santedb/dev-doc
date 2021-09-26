@@ -33,6 +33,10 @@ There are several reasons that SanteDB doesn't store this information:
 3. Simple structured identifiers and fullUrls have no concrete meaning , for example `SYSTEM_A` sending a `Patient` with a relative URL of`Patient/1` and `SYSTEM_B` sending `Patient/1`. The actual record being updated cannot be reliably resolved with ID `1` or even `Patient/1` so mis-identification is a serious risk.
 4. While it would be possible to store the `fullUrl` for an object stored as a bundle, objects submitted via simple `POST` operations via REST to the SanteDB iCDR instance would not have this contextual identifier, and would merely carry an `id` element, making referencing the object impossible.
 
+{% hint style="info" %}
+The behavior of the logical id and full URL are aligned with the [FHIR behaviors specified on Logical ID](https://www.hl7.org/fhir/R4/resource.html#id) , it is recommended that production deployments use [business identifiers ](https://www.hl7.org/fhir/R4/resource.html#identifiers)when referencing objects in FHIR.
+{% endhint %}
+
 ### Offsite Resource Links
 
 In FHIR, it is possible to link to clinical data hosted offsite, or on another server. There are several reasons why this is a bad practice:

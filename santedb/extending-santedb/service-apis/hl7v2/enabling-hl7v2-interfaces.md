@@ -41,18 +41,18 @@ To enable the HL7v2 messaging interfaces, the SanteDB iCDR host instance's confi
           <clientAuthorityCertificate findType="FindByThumbprint" storeName="My" storeLocation="CurrentUser" findValue="value" />
         </sllp>
         -->
-        <handler>
+        <messages>
           <add type="SanteDB.Messaging.HL7.Messages.QbpMessageHandler, SanteDB.Messaging.HL7, Version=1.10.0.0">
-            <message isQuery="true" name="QBP^Q22" />
-            <message isQuery="true" name="QBP^Q23" />
+            <event isQuery="true" name="QBP^Q22" />
+            <event isQuery="true" name="QBP^Q23" />
           </add>
           <add type="SanteDB.Messaging.HL7.Messages.AdtMessageHandler, SanteDB.Messaging.HL7, Version=1.10.0.0">
-            <message isQuery="false" name="ADT^A01"/>
-            <message isQuery="false" name="ADT^A04"/>
-            <message isQuery="false" name="ADT^A08"/>
-            <message isQuery="false" name="ADT^A40"/>
+            <event isQuery="false" name="ADT^A01"/>
+            <event isQuery="false" name="ADT^A04"/>
+            <event isQuery="false" name="ADT^A08"/>
+            <event isQuery="false" name="ADT^A40"/>
           </add>
-        </handler>
+        </messages>
       </add>
     </services>
   </section>
