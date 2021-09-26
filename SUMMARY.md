@@ -317,6 +317,7 @@
     * [Applet Solution Packages](santedb/extending-santedb/applets/applet-solution-packages.md)
     * [JavaScript API Reference](http://santesuite.org/assets/doc/js/santedb/)
   * [.NET Plugins](santedb/extending-santedb/server-plugins/README.md)
+    * [SanteDB Host Context](santedb/extending-santedb/server-plugins/santedb-host-context.md)
     * [Business Model Objects](santedb/extending-santedb/server-plugins/business-model-objects.md)
     * [Authoring Plugins](santedb/extending-santedb/server-plugins/authoring-plugins.md)
     * [Implementing .NET Features](santedb/extending-santedb/server-plugins/implementing-.net-features/README.md)

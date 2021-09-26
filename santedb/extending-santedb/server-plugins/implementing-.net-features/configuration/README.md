@@ -8,7 +8,7 @@ SanteDB may be configured to load configuration from a central cluster service, 
 
 ## Configuration Manager
 
-The configuration is managed by the IConfigurationManager service, this service provides methods for loading connection strings, app settings, and structured configuration sections. 
+The configuration is managed by the `IConfigurationManager` service, this service provides methods for loading connection strings, app settings, and structured configuration sections. 
 
 ### App Settings
 

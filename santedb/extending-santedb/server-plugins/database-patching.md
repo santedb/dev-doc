@@ -4,7 +4,7 @@ Some plugins may require special indexing and/or patches to the underlying Sante
 
 ### Patch SQL Files
 
-Patching is done by including SQL files in your project as an Embedded Resource. The files should end in the extension .SQL and must contain a header with the following format:
+Patching is done by including SQL files in your project as an [Embedded Resource](https://ikriv.com/blog/?p=1530#:~:text=Embedded%20Resources%20Embedded%20resources%20are%20the%20same%20as,output%20will%20have%20a%20manifest%20resource%20named%20MyProject.Texts.Guide.txt.). The files should end in the extension .SQL and must contain a header with the following format:
 
 ```sql
 /** 

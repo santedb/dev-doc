@@ -10,7 +10,7 @@ Daemons are particularly useful when:
 
 ### Lifecycle
 
-Daemons go through the same lifecycle as the primary application host. Daemons have their `.Start()` method called at stage 2 of the application startup and their `.Stop()` method called when the application host is shutting down.
+Daemons go through the same lifecycle as the primary application host. Daemons have their `.Start()` method called at Stage 2 of the application startup and their `.Stop()` method called when the application host is shutting down.
 
 ## Implementation
 
