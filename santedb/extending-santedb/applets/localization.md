@@ -39,14 +39,14 @@ SanteDB.locale.setLocale('en');
 
 When you call this, a cookie is set in the browser which controls the rendering on the server side. However, this is the lowest order of preference for the server. In short, the server will render assets using the following preference:
 
-1. The user's preference \(stored at : **UserEntity.languageCommunication**\) is used, if the user has no preference then,
-2. The lang cookie provided by the browser, if there is no setting then
-3. The value of Accept-Language HTTP header sent by the browser, if not sent then
+1. The user's preference \(stored at : `UserEntity.languageCommunication`\) is used, if the user has no preference then,
+2. The `lang` cookie provided by the browser, if there is no setting then
+3. The value of `Accept-Language` HTTP header sent by the browser, if not sent then
 4. The configured server preference \(set in the SanteDB.config.xml file\)
 
 ## Registering New Locales
 
-Locales are registered using the applet manifest.xml, within the manifest, you can specify one or more assets \(css, javascript, etc.\) to be loaded for the particular locale. For example, to define a localization for Esperanto:
+Locales are registered using the applet `manifest.xml`, within the manifest, you can specify one or more assets \(css, javascript, etc.\) to be loaded for the particular locale. For example, to define a localization for Esperanto:
 
 ```markup
 <AppletManifest xmlns="http://santedb.org/applet">
