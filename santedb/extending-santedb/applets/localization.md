@@ -74,7 +74,7 @@ The locale JavaScript files can be your own settings for SanteDB specific object
 
 You may also collect your strings in an Android style `strings.xml` format, this allows common tools like [Mozilla Pontoon](https://pontoon.santesuite.net) to edit your strings. In order to use this method, you should have an applet structure collecting strings under locale directories such as `locales/en/strings.xml` and `locales/fr/strings.xml` , or you may use `i18n/en/strings.xml` and `i18n/en/strings.xml`.
 
-Once complete, you can reference your strings files in the manifest:
+Once complete, you can reference your strings files in the manifest \(as shown in the example below\):
 
 {% tabs %}
 {% tab title="manifest.xml" %}
@@ -101,4 +101,8 @@ locales = [ "en", "fr", "es", "sw", "it", "my" ]
     refernece = "i18n/en/strings.xml"
     l10n = "i18n/{locale}/strings.xml"
 ```
+
+Once completed, you can setup a project in your Pontoon server which points to your github repository \(see: [Localizing your projects](https://mozilla-pontoon.readthedocs.io/en/latest/user/localizing-your-projects.html)\) and use the sync feature. The strings located in your `strings.xml` file should be reflected in the Mozilla Pontoon user interface where **Context** indicates the name of your resource string:
+
+![](../../../.gitbook/assets/image%20%28402%29.png)
 
