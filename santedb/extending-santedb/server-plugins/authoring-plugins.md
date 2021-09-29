@@ -60,6 +60,10 @@ By clicking `Details` you can view the digital signature on the assembly code an
 
 ![Certificate Details](../../../.gitbook/assets/image%20%28406%29.png)
 
+{% hint style="info" %}
+You can use the `chktrust` command on Linux and MacOS to perform the same verification steps for your assembly.
+{% endhint %}
+
 ### Disabling Code Validation
 
 You can disable code validation by setting the `allowUnsignedAssemblies` attribute on the `ApplicationServiceContextConfigurationSection` as:
@@ -95,4 +99,8 @@ Finally, you can create your own self-signed code signing certificate. This is l
 3. Import the CA's certificate into the trust store
    1. On Windows this is done by placing the certificate in the `Trusted Publishers` store on all machines which will use the plugin
    2. On Mono \(Linux, Docker, MacOS\) you should use [Mono's certificate tools ](https://www.mono-project.com/docs/faq/security/)to manage the certificates.
+
+### Signing your Plugin
+
+Once you have an appropriate code signing certificate you can use the [Microsoft Windows SDK signtool](https://docs.microsoft.com/en-us/dotnet/framework/tools/signtool-exe) or [Mono's signcode](https://www.mankier.com/1/signcode) command to sign your assembly. This must be done prior to loading or publishing/distributing the assembly.
 
