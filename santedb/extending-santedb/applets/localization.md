@@ -70,6 +70,19 @@ This instructs the SanteDB application framework to register a new locale "EO" a
 The locale JavaScript files can be your own settings for SanteDB specific objects or they can be included libraries from common javascript plugins. 
 {% endhint %}
 
+## Overriding Default Translations
+
+The core SanteDB applets provide default translations for all core SanteDB concepts. Sometimes, depending on the context, these need to be changed. This is supported in the `manifest.xml` file using the `priority` attribute on your translation, for example, to override the default title of the Administrative Panel you could use:
+
+```markup
+<strings lang="en">
+    <string key="ui.title" priority="100">My Custom Title</string>
+```
+
+{% hint style="info" %}
+It is recommended you **never fork** the core applets to change translations, this is very difficult to maintain and we cannot guarantee compatibility.
+{% endhint %}
+
 ## Mozilla Pontoon
 
 You may also collect your strings in an Android style `strings.xml` format, this allows common tools like [Mozilla Pontoon](https://pontoon.santesuite.net) to edit your strings. In order to use this method, you should have an applet structure collecting strings under locale directories such as `locales/en/strings.xml` and `locales/fr/strings.xml` , or you may use `i18n/en/strings.xml` and `i18n/en/strings.xml`.
@@ -105,4 +118,8 @@ locales = [ "en", "fr", "es", "sw", "it", "my" ]
 Once completed, you can setup a project in your Pontoon server which points to your github repository \(see: [Localizing your projects](https://mozilla-pontoon.readthedocs.io/en/latest/user/localizing-your-projects.html)\) and use the sync feature. The strings located in your `strings.xml` file should be reflected in the Mozilla Pontoon user interface where **Context** indicates the name of your resource string:
 
 ![](../../../.gitbook/assets/image%20%28402%29.png)
+
+{% hint style="info" %}
+When you use a `strings.xml` file for your translations, you cannot override the default translations with `priority=` mechanism supported by the `manifest.xml`
+{% endhint %}
 
