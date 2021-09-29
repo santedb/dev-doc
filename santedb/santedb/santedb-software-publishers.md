@@ -82,9 +82,5 @@ Publisher certificates are issued depending on the project, the partner, and com
 
 Yes, your extensions are timestamped when they are packaged into an applet. Software can still be executed, however you will not be able to publish new versions.
 
-#### How much does becoming a publisher cost?
-
-There is currently no cost to becoming a SanteDB publisher, however if the demand for publishing certificates becomes a burden to the community, a nominal cost-recovery fee may be collected in the future to ensure sustainability  of the verified publisher programme.
-
 
 
