@@ -16,7 +16,7 @@ There are a series of directives in the SanteDB AngularJS library which are used
 
 The entity-search directive is used to render a search box which can be used to search any SanteDB resource on the SanteDB API. This directive is used when you wish to provide simple searches to users. The structure of this directive is:
 
-```text
+```markup
 <entity-search
     type="[Patient|Person|Place|Organization|Act|AssigningAuthority|SecurityUser|..]"
     group-by="[Group Selector]"
@@ -26,7 +26,7 @@ The entity-search directive is used to render a search box which can be used to 
 
 For example, if you were to provide a search for all Places which are of type ServiceDeliveryLocation and grouped by their State the following entity-search could be used:
 
-```text
+```markup
 <entity-search
     type="Place"
     group-by="address.Direct.component.State"
@@ -57,7 +57,7 @@ For example, if you want to place a button on the page that will delete somethin
 
 The entity table is used to render a dynamic client side table which allows for filtering, sorting, and performing actions on lists \(tables\) of Entities. The entity table directive is used as follows:
 
-```text
+```markup
 <entity-table
     id="[id of table]"
     type="[SecurityUser|SecurityRole|Patient|Place|...]"
@@ -142,7 +142,7 @@ The properties are described in more detail below:
 
 Buttons are rendered on the entity-table using a series of control objects. Each control object is placed into an Array on either the item-actions or actions attributes in this format:
 
-```text
+```javascript
 {
     name: 'displayName',
     sref: 'ng-route state reference to use on button',
@@ -152,6 +152,33 @@ Buttons are rendered on the entity-table using a series of control objects. Each
     demand: 'policy OID required to use button'
 }
 ```
+
+### Authority Select \(authority-select\)
+
+The authority select directive creates a drop-down selection which allows a user to select an assigning authority based on a particular scope. 
+
+```markup
+<authority-select identity-scope="'bacd9c6f-3fa9-481e-9636-37457962804d'"
+   key="[ property to extract key from ]" 
+   ng-scope="[value]" />
+```
+
+### Security Provenance \(provenance\)
+
+The provenance filter is used to render the provenance data related to the object \(create, update, or delete\). Provenance is covered in more detail in architecture documentation. This filter renders in HTML so it should be bound as follows \(the example shows the provenance for the user's creation data\):
+
+```markup
+<div>
+    <strong>Created:</strong>
+    <provenance provenance-id="user.createdBy" provenance-time="user.creationTime"></provenance>
+</div>
+```
+
+The output of this is a control which allows examination of the event including user, application, device, timestamp and session id.
+
+![Rendering of the Provenance Filter](../../../.gitbook/assets/image%20%2851%29.png)
+
+### 
 
 ## Filters
 
@@ -198,21 +225,6 @@ The address filter, like the name filter, is used to render an entity's name. Fo
 ```text
 {{ place.address | address: 'Direct' }}
 ```
-
-### Security Provenance \(provenance\)
-
-The provenance filter is used to render the provenance data related to the object \(create, update, or delete\). Provenance is covered in more detail in architecture documentation. This filter renders in HTML so it should be bound as follows \(the example shows the provenance for the user's creation data\):
-
-```markup
-<div>
-    <strong>Created:</strong>
-    <span ng-bind-html="user.createdBy | provenance: user.creationTime"></span>
-</div>
-```
-
-The output of this is a control which allows examination of the event including user, application, device, timestamp and session id.
-
-![Rendering of the Provenance Filter](../../../.gitbook/assets/image%20%2851%29.png)
 
 ### Extended Date \(ext-date\)
 
