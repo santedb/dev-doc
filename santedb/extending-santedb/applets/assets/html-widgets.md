@@ -15,7 +15,6 @@ In order to configure a widget the following things must be present:
 ```markup
 <div xmlns="http://www.w3.org/1999/xhtml" 
   xmlns:sdb="http://santedb.org/applet"
-  oc-lazy-load="{ name: 'ExampleWidgetController', files: ['/org.example/controllers/widget.js'] }"
 >
   <sdb:widget name="org.example.widget" type="Tab" order="10" context="org.santedb.configuration">
     <sdb:demand>1.3.6.1</sdb:demand>
@@ -23,14 +22,15 @@ In order to configure a widget the following things must be present:
     <sdb:guard>!scopedObject.tag</sdb:guard>
     <sdb:description lang="en">Example Widget</sdb:description>
   </sdb:widget>
-  <div ng-controller="ExampleWidgetController">
+  <div>
+    Hello {{ scopedObject.name.Legal | name }}
   </div>
 </div>
 ```
 
 ### Widget Configuration
 
-The contents of the &lt;sdb:widget/&gt; element control the widget's rendering and visibility. 
+The contents of the `<sdb:widget/>` element control the widget's rendering and visibility. 
 
 <table>
   <thead>
@@ -65,12 +65,23 @@ The contents of the &lt;sdb:widget/&gt; element control the widget's rendering a
       <td style="text-align:left">@altViews</td>
       <td style="text-align:left">
         <p>Alternate views the widget supports. These are exposed</p>
-        <p>to the widget in {{panel.view}}</p>
+        <p>to the widget in <code>{{panel.view}}</code>
+        </p>
       </td>
       <td style="text-align:left">
         <p>None - No Alternate Views</p>
         <p>Edit - Shows a pencil in widget</p>
         <p>Settings - Shows cog in widget</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">@priority</td>
+      <td style="text-align:left">
+        <p>Used to override the default implementations of core</p>
+        <p>widgets. The widget identifier with the highest priority</p>
+        <p>is the one that is displayed.</p>
+      </td>
+      <td style="text-align:left"><code>priority=&quot;100&quot;</code>
       </td>
     </tr>
     <tr>
@@ -107,9 +118,26 @@ There are several contexts in which widgets appear.
 
 ### Scoped Object
 
-All widgets are passed a **scopedObject** reference in JavaScript which can be used to access the primary focal object of the context where the widget appears. For example, if your widget context is org.santedb.patient, then the scopedObject would be the patient which is currently being viewed.
+All widgets are passed a `scopedObject` reference in JavaScript which can be used to access the primary focal object of the context where the widget appears. For example, if your widget context is `org.santedb.patient`, then the `scopedObject` would be the patient which is currently being viewed.
 
-### Hosting Widgets
+### Widget Controllers
+
+Due to the manner in which widgets are loaded \(at render time\), the use of `<sdb:script>` does not work. It is therefore required to use the `oc-lazy-load` AngularJS component to load the controllers you require. For example, to add a custom controller:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:sdb="http://santedb.org/applet"
+  oc-lazy-load="{ name: 'ExampleWidgetController', files: ['/org.example/controllers/widget.js'] }"
+>
+  <sdb:widget name="org.example.widget" type="Tab" order="10" context="org.santedb.configuration">
+    <!-- Truncated for space -->
+  </sdb:widget>
+  <div ng-controller="ExampleWidgetController">
+  </div>
+</div>
+```
+
+## Hosting Widgets
 
 You can add your own widget extension points by adding one of the two widget hosting panels to your user interface. The two controls are widget-panels and widget-tabs which will render panels or tabs depending on your context.
 

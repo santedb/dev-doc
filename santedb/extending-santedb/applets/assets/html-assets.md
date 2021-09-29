@@ -22,7 +22,7 @@ From here the asset can be loaded by the applet collection manager.
 
 ## Extended Asset Tags
 
-You can also decorate your HTML asset with a series of tags in the http://santedb.org/applet namespace in order to add functionality. Before decorating your asset, be sure to declare the namespace:
+You can also decorate your HTML asset with a series of tags in the `http://santedb.org/applet` namespace in order to add functionality. Before decorating your asset, be sure to declare the namespace:
 
 ```markup
 <div xmlns="http://www.w3.org/1999/xhtml" 
@@ -144,6 +144,37 @@ A completed example page may be:
     {{ helloMessage }}
 </div>
 ```
+
+#### Overriding Routes
+
+There may arise a need to override a page/view that is already registered in an underlying component. This is done with the `priority` attribute. For example, to override the default login page:
+
+```markup
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:sdb="http://santedb.org/applet" 
+     ng-controller="LoginController"
+     ng-init="login = { grant_type: 'password', forbidPin: true, welcomeMessage: undefined, noSession: false }">
+    <sdb:style static="false">/org.santedb.admin/css/admin.css</sdb:style>
+    <sdb:style static="false">/org.santedb.admin/css/sb-admin.css</sdb:style>
+    <sdb:state name="login" priority="1">
+        <sdb:url>/login</sdb:url>
+        <sdb:view>
+        </sdb:view>
+    </sdb:state>
+    Quick and Dirty Login Screen:
+    
+    <form class="form" ng-submit="doLogin(loginForm)" name="loginForm">
+          <!-- #include virtual="/org.santedb.uicore/partials/security/login.html" -->
+          <br/>
+          <button type="submit" id="loginButton" class="btn btn-lg btn-primary">
+                 <i class="fa fa-check"></i> {{ 'ui.action.login' | i18n }}
+         </button>
+    </form>
+</div>
+```
+
+{% hint style="info" %}
+You should **never fork** the core SanteDB applets to override user interface elements. This can cause compatibility and management headaches in operations. It is recommended you use the priority mechanism described here.
+{% endhint %}
 
 ### Angular Controller
 
