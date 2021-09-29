@@ -9,6 +9,7 @@
   * [Version 3.x Roadmap](santedb/santedb/version-3.x-roadmap.md)
   * [SanteDB History](santedb/santedb/santedb-history.md)
   * [SanteDB Solutions](santedb/santedb/santedb-solutions.md)
+  * [SanteDB Software Publishers](santedb/santedb/santedb-software-publishers.md)
 * [Architecture](santedb/architecture/README.md)
   * [Software Architecture](santedb/architecture/software-architecture.md)
   * [Data & Information Architecture](santedb/architecture/data-and-information-architecture/README.md)
