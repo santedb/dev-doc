@@ -122,7 +122,6 @@ Authorization: BEARER xxxxxxx
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
-
 ```
 
 ### Expected Behaviour

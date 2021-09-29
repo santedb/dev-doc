@@ -22,8 +22,6 @@ The SanteMPI product solution, when configured properly, will perform basic vali
 
 None
 
-
-
 ## Register Incomplete Message
 
 The test harness sends a patient which has a malformed identifier entry which is missing the system.
@@ -185,6 +183,4 @@ This test attempts to establish whether the Client Registry is capable of mainta
     </tr>
   </tbody>
 </table>
-
-## 
 
