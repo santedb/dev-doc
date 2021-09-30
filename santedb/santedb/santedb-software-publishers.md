@@ -47,15 +47,76 @@ Once you've collected the appropriate documentation you will need to apply for a
 2. The SanteSuite team will schedule an interview with your group and will discuss your project and publisher requirements, how SanteSuite can provide assistance, etc. \(this interview also ensures the applicant is a real person\)
 3. You will be invited to submit a CSR \(Certificate Signing Request\) , this is a process whereby your developers generate a private digital signature key and request SanteSuite Community sign it.
 
+#### Generating Certificate Signing Request
+
+In order to request a code signing certificate, first generate a Private Key and CSR. In [Microsoft Windows this is done using the Certificates panel in MMC ](https://knowledge.digicert.com/solution/SO29005.html). In OpenSSL to generate a private key:
+
+```text
+$ mkdir keys
+$ chmod 700 keys
+$ openssl genrsa -aes256 -out keys/myprivatekey.key 2048
+Generating RSA private key, 2048 bit long modulus (2 primes)
+...+++++
+....................................................................................................................+++++
+e is 65537 (0x010001)
+Enter pass phrase for keys/myprivatekey.key:
+Verifying - Enter pass phrase for keys/myprivatekey.key:
+```
+
+After the key is generated you'll need to create a CSR:
+
+```text
+$ openssl req -key keys/myprivatekey.key -new -sha256 -out mycsr.csr
+Enter pass phrase for keys/myprivatekey.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:CA
+State or Province Name (full name) [Some-State]:ON
+Locality Name (eg, city) []:Hamilton
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:My Company
+Organizational Unit Name (eg, section) []:My Division
+Common Name (e.g. server FQDN or YOUR name) []:My Company Inc.
+Email Address []:info@mycompany.com
+```
+
+{% hint style="info" %}
+The e-mail address must be a registered domain for your company or project, generic addresses from Gmail or Hotmail  will not be signed.
+{% endhint %}
+
 ### Using your Publisher Certificate
 
 When your group has completed the sign up process, you will receive an e-mail with your X509 code signing certificate, the SanteSuite Community Signing Certificate chain. You will have to [combine these ](https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/)with your private key to create a PKCS12 \(`.pfx`\) file. 
+
+To do this in OpenSSL:
+
+```text
+$ cat mycert/MYCERT.crt mycert/INTER.crt mycert/ROOT.crt > mycert/chain.crt
+$ openssl pkcs12 -export -out mycert.pfx -inkey ./keys/myprivatekey.key -in mycert/chain.crt
+Enter pass phrase for ./keys/myprivatekey.key:
+Enter Export Password:
+Verifying - Enter Export Password:
+```
 
 When packaging applets/extensions/etc. you will need to sign these applications, when packaging your applets:
 
 ```text
 pakman --compile --source=./myapplet/ --output=./myapplet.pak --keyFile=mykey.pfx --embedcert
 ```
+
+If you're using SDK version 2.1.85 or higher on Microsoft Windows, you can also reference your signing key by placing it in your personal certificate store \(via MMC\) and referencing the thumbprint:
+
+```text
+pakman --compile --source=./myapplet/ --output=./myapplet.pak --key=THUMBPRINT --embedcert
+```
+
+{% hint style="success" %}
+Always protect your private key and code signing certificate. You should never share or disclose it.
+{% endhint %}
 
 ## Frequently Asked Questions
 
