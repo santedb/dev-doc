@@ -70,3 +70,16 @@ Use REDIS caching when:
 * You may need to scale out your application servers \(i.e. multiple servers accessing the shared REDIS cache\)
 * You are setting up a production, training or staging environment and don't want a cold-start of the SanteDB server to result in cache misses.
 
+## Security Certificate Notice
+
+SanteDB's iCDR uses code signing in order to verify the identity of publishers of Applets and Plugins. Many community partners use publishing certificates issued by the SanteDB Community Certificate Authority. 
+
+When you install the iCDR or dCDR the software needs to register these certificates.
+
+* On Microsoft Windows the Configuration Tool registers these certificates into the Local Machine Trusted Authorities store.
+* On Linux and MacOS you must manually run `mono SanteDB.exe --install-certs` which will register the certificates into the Mono's Trust Store
+* On Docker the registration occurs on service startup
+* On Android the certificates are installed into the device Trust Store
+
+
+
