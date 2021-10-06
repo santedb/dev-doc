@@ -3,7 +3,7 @@
 SanteDB provides a basic implementation of the [GS1 Business Messaging Standard \(BMS\) 3.3](https://www.gs1.org/standards/gs1-xml/guideline/ediint-as1-and-as2-transport-communication-guidelines) for conveying stock transactions to logistics systems.
 
 {% hint style="warning" %}
-The SanteDB GS1 BMS interfaces are undergoing refactoring from OpenIZ. The information in these pages document the OpenIZ GS1 plugin that is currently ported to SanteDB however has not been refactored.
+The SanteDB GS1 BMS interfaces are undergoing refactoring from OpenIZ. The information in these pages document the OpenIZ GS1 plugin that is currently ported to SanteDB however has not been validated.
 {% endhint %}
 
 ## GS1 Stock Messaging Workflows
