@@ -105,6 +105,10 @@ The iCDR converts this into an `Act` with class code of `Supply` , mood code of 
 
 ![](../../../.gitbook/assets/image%20%28408%29.png)
 
+#### Orderless Despatch
+
+In some jurisdictions stock is sent without explicit ordering to a facility. These orderless despatches are supported by SanteDB and are implemented as a GS1 `DespatchAdvice` message with no source order information. 
+
 ### Order Receive
 
 Once an order is received by the remote facility or original caller, the user will open the package and will verify the contents. This may include:
