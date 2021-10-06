@@ -425,6 +425,7 @@
         * [Publish/Subscribe](santedb/extending-santedb/service-apis/hl7-fhir/santedb-fhir-implementation/publish-subscribe.md)
         * [Related Persons](santedb/extending-santedb/service-apis/hl7-fhir/santedb-fhir-implementation/related-persons.md)
       * [Extending FHIR Functionality](santedb/extending-santedb/service-apis/hl7-fhir/extending-fhir-interfaces.md)
+    * [GS1 BMS XML](santedb/extending-santedb/service-apis/gs1-bms-xml.md)
     * [Examples](santedb/extending-santedb/service-apis/examples/README.md)
       * [Obtaining A Session](santedb/extending-santedb/service-apis/examples/obtaining-a-session.md)
       * [Connecting to the FHIR API](santedb/extending-santedb/service-apis/examples/connecting-to-the-fhir-api.md)

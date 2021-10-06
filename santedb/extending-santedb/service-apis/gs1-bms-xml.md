@@ -1,0 +1,112 @@
+# GS1 BMS XML
+
+SanteDB provides a basic implementation of the [GS1 Business Messaging Standard \(BMS\) 3.3](https://www.gs1.org/standards/gs1-xml/guideline/ediint-as1-and-as2-transport-communication-guidelines) for conveying stock transactions to logistics systems.
+
+{% hint style="warning" %}
+The SanteDB GS1 BMS interfaces are undergoing refactoring from OpenIZ. The information in these pages document the OpenIZ GS1 plugin that is currently ported to SanteDB however has not been refactored.
+{% endhint %}
+
+## GS1 Stock Messaging Workflows
+
+### Order Flow
+
+The order flow is triggered whenever a client of the iCDR submits an `Act` with mood code `Request` and a type of `Supply` \(i.e. Request for Supply\). When configured, the iCDR will construct a GS1 [`Order` message](https://www.gs1.org/standards/edi-xml/xml-order/3-4-1) and will issue the message over `AS.2` over HTTP with mime encoded attachment or can perform a simple `POST` with the order message as the request.
+
+The logistics management information system may perform an internal approval of the order and can accept the order \(with modifications to the quantities\) via a [GS1 Order Response](https://www.gs1.org/standards/edi-xml/xml-order-response/3-4-1).
+
+![](../../../.gitbook/assets/image%20%28409%29.png)
+
+The order and order response is made up of a series of `tradeItemDetail` which are mapped to the  `Product` participations in the original `Supply` request \(these are typically `Materials`\). If an order response is set then the iCDR creates a new `Act` with mood-code of `Promise` linking the new act with the request act as a `Fulfills` relationship.
+
+For example:
+
+```markup
+<?xml version="1.0"?>
+<orderMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:gs1:ecom:order:xsd:3">
+  <StandardBusinessDocumentHeader xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <HeaderVersion>1.0</HeaderVersion>
+    <Sender>
+      ...
+    </Sender>
+    <DocumentIdentification>
+      <Standard>GS1</Standard>
+      <TypeVersion>3.3</TypeVersion>
+      <InstanceIdentifier>44432A5701A4F209</InstanceIdentifier>
+      <Type>order</Type>
+      <MultipleType>false</MultipleType>
+      <CreationDateAndTime>2020-11-12T01:30:49.4634744-08:00</CreationDateAndTime>
+    </DocumentIdentification>
+  </StandardBusinessDocumentHeader>
+  <order xmlns="">
+    <creationDateTime>2020-11-12T01:30:46.219541</creationDateTime>
+    <documentStatusCode>ORIGINAL</documentStatusCode>
+    <orderIdentification>
+      <entityIdentification>2227710f-5b6a-49ea-893e-13bb483b2cf4</entityIdentification>
+    </orderIdentification>
+    <isApplicationReceiptAcknowledgementRequired>true</isApplicationReceiptAcknowledgementRequired>
+    <isOrderFreeOfExciseTaxDuty>false</isOrderFreeOfExciseTaxDuty>
+    <orderLogisticalInformation>
+      <shipTo>
+        <additionalPartyIdentification additionalPartyIdentificationTypeCode="HIE_FRID">urn:uuid:b2955791-ea33-3048-a438-866188819d7f</additionalPartyIdentification>
+        <address>
+          <city>Handeni TC</city>
+          <countryCode>Tanzania</countryCode>
+          <countyCode>Handeni District</countyCode>
+          <state>Tanga Region</state>
+        </address>
+        <organisationDetails>
+          <organisationName>Kideleko</organisationName>
+        </organisationDetails>
+      </shipTo>
+      <orderLogisticalDateInformation>
+        <requestedDeliveryDateTime>
+          <date>2020-11-12</date>
+        </requestedDeliveryDateTime>
+      </orderLogisticalDateInformation>
+    </orderLogisticalInformation>
+    <orderLineItem>
+      <lineItemNumber>1</lineItemNumber>
+      <requestedQuantity measurementUnitCode="dose" codeListVersion="UCUM">20</requestedQuantity>
+      <additionalOrderLineInstruction languageCode="en">FRAGILE</additionalOrderLineInstruction>
+      <additionalOrderLineInstruction languageCode="en">KEEP REFRIGERATED</additionalOrderLineInstruction>
+      <transactionalTradeItem>
+        <tradeItemDescription>HPV</tradeItemDescription>
+        <itemTypeCode codeListVersion="CVX">137</itemTypeCode>
+        <tradeItemClassification>
+          <additionalTradeItemClassificationCode codeListVersion="VIMS_ITEM_ID">2429</additionalTradeItemClassificationCode>
+        </tradeItemClassification>
+      </transactionalTradeItem>
+    </orderLineItem>
+    <!-- Repeat orderLineItem -->
+  </order>
+</orderMessage>
+```
+
+### Order Despatch
+
+Once the order is approved by the LMIS / Distributor it is expected that the requested order will be picked and packed. Once the order has been despatched \(i.e. it is on a truck, or courier, etc.\) the LMIS will respond with a [GS1 Despatch Advice](https://www.gs1.org/standards/edi-xml/xml-despatch-advice/3-4-1-0) message.
+
+The `Despatch Advice` differs from the `Order` message in that it contains:
+
+* The actual quantity of each item packed and shipped
+* The actual product codes \(GTIN\) and lot \#'s of products shipped
+* The expected date of delivery \(EDD\)
+
+The iCDR converts this into an `Act` with class code of `Supply` , mood code of `EventOccurence` and a status of `Active`, dCDRs will synchronize this from the core iCDR model on their next synchronization, or clients may request the information in any of the supported iCDR messaging formats. The new `Act` is linked to the original `Act` with an `ActRelationship` carrying relationship type of `Fulfills` \(i.e. the new act fulfills the request act\)
+
+![](../../../.gitbook/assets/image%20%28408%29.png)
+
+### Order Receive
+
+Once an order is received by the remote facility or original caller, the user will open the package and will verify the contents. This may include:
+
+* Verifying the quantities of stock shipped
+* Verifying the cold storage status \(VVM\) of any vials of product shipped
+* Identifying breakage and items to be rejected.
+
+The caller creates a new `Act` with class code `Supply` with status code of `Complete` and mood code of `EventOccurence`. The created act is linked to the despatched act with an `ActRelationship` carrying type `Arrival` \(i.e. the new act documents the arrival of the previous act\). 
+
+The previous act has its status code set to `Complete` .
+
+![](../../../.gitbook/assets/image%20%28407%29.png)
+
