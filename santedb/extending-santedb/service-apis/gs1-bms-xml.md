@@ -8,6 +8,15 @@ The SanteDB GS1 BMS interfaces are undergoing refactoring from OpenIZ. The infor
 
 ## GS1 Stock Messaging Workflows
 
+The overall order flow in SanteDB follows the order flow in GS1: 
+
+1. An order is created in SanteDB \(a `Request for Supply Act` \) which is stored with product classes and quantities requested.
+2. SanteDB's iCDR constructs a `Order` message and sends it to the supplier
+3. The supplier validates the order and responds to SanteDB with an `OrderResponse` which is linked in SanteDB \(a `Promise to Supply` which `Fulfills` the `Request for Supply`\)
+4. The supplier picks and packs the order and despatches the order sending SanteDB with actual product \(GTIN and LOT\#\) via a `DespatchAdvice` , SanteDB stores the order in RIM \(a `EventOccurence Supply` which documents `Departure` of the `Promise for Supply`\)
+5. The product arrives at the clinic, the clinic staff count and verify the product and confirm receipt \(a `EventOccurrence of Supply` which documents `Arrival` of the `EventOccurence Supply`\) 
+6. SanteDB's iCDR constructs a `ReceiveAdvice` message and sends it to the supplier. 
+
 ### Order Flow
 
 The order flow is triggered whenever a client of the iCDR submits an `Act` with mood code `Request` and a type of `Supply` \(i.e. Request for Supply\). When configured, the iCDR will construct a GS1 [`Order` message](https://www.gs1.org/standards/edi-xml/xml-order/3-4-1) and will issue the message over `AS.2` over HTTP with mime encoded attachment or can perform a simple `POST` with the order message as the request.
