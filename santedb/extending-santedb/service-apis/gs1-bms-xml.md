@@ -27,7 +27,7 @@ The logistics management information system may perform an internal approval of 
 
 The order and order response is made up of a series of `tradeItemDetail` which are mapped to the  `Product` participations in the original `Supply` request \(these are typically `Materials`\). If an order response is set then the iCDR creates a new `Act` with mood-code of `Promise` linking the new act with the request act as a `Fulfills` relationship.
 
-For example:
+For example, an order request from Elbonia's Good Health Hospital:
 
 ```markup
 <?xml version="1.0"?>
@@ -35,7 +35,7 @@ For example:
   <StandardBusinessDocumentHeader xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
     <HeaderVersion>1.0</HeaderVersion>
     <Sender>
-      ...
+      <!-- Truncated -->
     </Sender>
     <DocumentIdentification>
       <Standard>GS1</Standard>
@@ -58,13 +58,13 @@ For example:
       <shipTo>
         <additionalPartyIdentification additionalPartyIdentificationTypeCode="HIE_FRID">urn:uuid:b2955791-ea33-3048-a438-866188819d7f</additionalPartyIdentification>
         <address>
-          <city>Handeni TC</city>
-          <countryCode>Tanzania</countryCode>
-          <countyCode>Handeni District</countyCode>
-          <state>Tanga Region</state>
+          <street>23 Main Street</street>
+          <city>Muddsville</city>
+          <countryCode>ELB</countryCode>
+          <state>MU</state>
         </address>
         <organisationDetails>
-          <organisationName>Kideleko</organisationName>
+          <organisationName>Good Health Hospital</organisationName>
         </organisationDetails>
       </shipTo>
       <orderLogisticalDateInformation>
@@ -118,4 +118,89 @@ The caller creates a new `Act` with class code `Supply` with status code of `Com
 The previous act has its status code set to `Complete` .
 
 ![](../../../.gitbook/assets/image%20%28407%29.png)
+
+For example, an order receive message for Good Health Hospital may appear as:
+
+```markup
+<?xml version="1.0"?>
+<receivingAdviceMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:gs1:ecom:receiving_advice:xsd:3">
+  <StandardBusinessDocumentHeader xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <HeaderVersion>1.0</HeaderVersion>
+    <Sender>
+      <!-- Truncated -->
+    </Sender>
+    <DocumentIdentification>
+      <Standard>GS1</Standard>
+      <TypeVersion>3.3</TypeVersion>
+      <InstanceIdentifier>4281C212207220B2</InstanceIdentifier>
+      <Type>receivingAdvice</Type>
+      <MultipleType>false</MultipleType>
+      <CreationDateAndTime>2020-12-16T23:04:53.7368109-08:00</CreationDateAndTime>
+    </DocumentIdentification>
+  </StandardBusinessDocumentHeader>
+  <receivingAdvice xmlns="">
+    <creationDateTime>2020-12-16T05:21:07.118676</creationDateTime>
+    <documentStatusCode>ORIGINAL</documentStatusCode>
+    <receivingAdviceIdentification>
+      <entityIdentification>4bb1d8cd-d8d6-4531-be43-189661b7a1db</entityIdentification>
+    </receivingAdviceIdentification>
+    <receivingDateTime>2020-12-16T05:21:03.764</receivingDateTime>
+    <reportingCode>FULL_DETAILS</reportingCode>
+    <shipper>
+      <additionalPartyIdentification additionalPartyIdentificationTypeCode="HIE_FRID">urn:uuid:9b573dd9-1e72-3110-9540-8b7cd1a59df4</additionalPartyIdentification>
+      <address>
+        <countryCode>ELB</countryCode>
+        <state>MU</state>
+      </address>
+      <organisationDetails>
+        <organisationName>Muddsville Regional Distribution Centre</organisationName>
+      </organisationDetails>
+    </shipper>
+    <receiver>
+      <additionalPartyIdentification additionalPartyIdentificationTypeCode="HIE_FRID">urn:uuid:04333219-4f77-3a16-947f-b52527b54453</additionalPartyIdentification>
+      <address>
+        <street>23 Main Street</street>
+        <city>Muddsville</city>
+        <countryCode>ELB</countryCode>
+        <state>MU</state>
+      </address>
+      <organisationDetails>
+        <organisationName>Good Health Hospital</organisationName>
+      </organisationDetails>
+    </receiver>
+    <shipTo>
+      <!-- Truncated -->
+    </shipTo>
+    <despatchAdvice>
+      <entityIdentification>a905c25c-47ac-4775-a7be-0498cbeef3cf</entityIdentification>
+      <creationDateTime>2020-09-29T08:54:24.898187</creationDateTime>
+    </despatchAdvice>
+    <receivingAdviceLogisticUnit>
+      <receivingAdviceLineItem>
+        <lineItemNumber>1</lineItemNumber>
+        <quantityAccepted measurementUnitCode="each" codeListVersion="UCUM">80</quantityAccepted>
+        <quantityDespatched measurementUnitCode="each" codeListVersion="UCUM">80</quantityDespatched>
+        <transactionalTradeItem>
+          <gtin>10060123AD</gtin>
+          <tradeItemDescription>BCG Diluent (Serum Institute of India)</tradeItemDescription>
+          <itemTypeCode codeListVersion="OpenIZ-MaterialType">62962d65-be7b-465d-9a92-772ea3ba0d03</itemTypeCode>
+          <transactionalItemData>
+            <batchNumber>068S14079Z</batchNumber>
+            <itemExpirationDate>2021-03-31</itemExpirationDate>
+          </transactionalItemData>
+        </transactionalTradeItem>
+        <receivingConditionInformation>
+          <receivingConditionCode>DAMAGED_PRODUCT_OR_CONTAINER</receivingConditionCode>
+          <receivingConditionQuantity measurementUnitCode="each" codeListVersion="UCUM">0</receivingConditionQuantity>
+        </receivingConditionInformation>
+        <receivingConditionInformation>
+          <receivingConditionCode>GOOD_CONDITION</receivingConditionCode>
+          <receivingConditionQuantity measurementUnitCode="each" codeListVersion="UCUM">80</receivingConditionQuantity>
+        </receivingConditionInformation>
+      </receivingAdviceLineItem>
+    </receivingAdviceLogisticUnit>
+    <!-- Repeat for each Accepted Item -->
+  </receivingAdvice>
+</receivingAdviceMessage>
+```
 
