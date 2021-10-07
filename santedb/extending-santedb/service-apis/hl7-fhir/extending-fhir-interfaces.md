@@ -148,7 +148,7 @@ By default, SanteDB's internal properties are mapped to FHIR base resources, and
 FHIR Extension handlers are implemented using the IFHirExtensionHandler interface. For example, if you wanted to implement an extension handler which tags a patient if the value of the extension is a certain value.
 
 {% hint style="info" %}
-If the data you are capturing in your extension is registered as a [SanteDB extension](../../../architecture/data-and-information-architecture/extended-data.md) in the RIM the FHIR handler will automatically map these to an extension in FHIR.
+If the data you are capturing in your extension is registered as a [SanteDB extension](../../../architecture/data-and-information-architecture/conceptual-data-model/extended-data.md) in the RIM the FHIR handler will automatically map these to an extension in FHIR.
 {% endhint %}
 
 ```csharp
