@@ -3,7 +3,7 @@
 The [Conceptual Entity Data Dictionary](../conceptual-data-model/entities/data-dictionary.md) expressed in ADO.NET tables.  
 
 
-![](../../../../.gitbook/assets/image%20%28413%29.png)
+![](../../../../.gitbook/assets/image%20%28414%29.png)
 
 | **Physical Table** | **Conceptual Entity** | **Description** |
 | :--- | :--- | :--- |
