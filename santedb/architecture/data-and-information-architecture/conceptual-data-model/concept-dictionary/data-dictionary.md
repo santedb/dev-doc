@@ -115,6 +115,57 @@ The concept version table is used to store mutable properties of a concept. All 
   </tbody>
 </table>
 
+### Concept Set
+
+The concept set entity is used to represent logical groupings of concepts which are related in some manner. These typically are used to drive validation \(i.e. gender field must be bound to a concept in the gender concept set\) or data-entry fields.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">ConceptSetId
+        <br />[1..1]</td>
+      <td style="text-align:left">UUID</td>
+      <td style="text-align:left">A unique identifier for the concept set</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Mnemonic
+        <br />[1..1]</td>
+      <td style="text-align:left">VARCHAR</td>
+      <td style="text-align:left">The codified name of the concept set (without spaces) used to reference
+        the concept set in queries and paths.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Name
+        <br />[1..1]</td>
+      <td style="text-align:left">VARCHAR</td>
+      <td style="text-align:left">The human readable name of the concept set.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>Url</p>
+        <p>[1..1]</p>
+      </td>
+      <td style="text-align:left">VARCHAR</td>
+      <td style="text-align:left">The URL which defines the concept set.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>Oid</p>
+        <p>[1..1]</p>
+      </td>
+      <td style="text-align:left">VARCHAR</td>
+      <td style="text-align:left">The OID which defines the concept set.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Concept Name
 
 The concept name table represents a series of human readable names for the concept at a particular version. This facilitates searches as well as translation.
