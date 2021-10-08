@@ -18,7 +18,11 @@ This test is only required if the Client Registry is implementing the Pediatrics
 
 ## Pre-Conditions / Setup
 
-All conditions from OHIE-CR-02 should be completed prior to running this test suite.
+All conditions from [OHIE-CR-02](test-ohie-cr-02-hl7v2.md#pre-conditions-setup) should be completed prior to running this test suite.
+
+{% hint style="info" %}
+If the SanteMPI instance is configured to use Msh8 security and not node authentication, then the `MSH-8` value of all test messages must contain `TEST_HARNESS+TEST_HARNESS`
+{% endhint %}
 
 ## Register Mother's Demographic
 

@@ -16,6 +16,10 @@ The lack of configuration for an identity domain being received by an identity s
 
 In order to mimic a mis-configuration of the client registry, the environment should ensure that the domain `TEST_BLOCK` and OID `2.16.840.1.113883.3.72.5.9.4` are not present.
 
+{% hint style="info" %}
+If the SanteMPI instance is configured to use Msh8 security and not node authentication, then the `MSH-8` value of all test messages must contain `TEST_HARNESS+TEST_HARNESS`
+{% endhint %}
+
 ## Attempt Registration with invalid OID
 
 Test harness sends ADT^A01 message having the invalid OID in CX.4.2.

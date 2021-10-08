@@ -72,7 +72,7 @@ Prior to executing this test, SanteMPI instances should configure:
 {% endtabs %}
 
 {% hint style="info" %}
-If the SanteMPI instance is configured to use Msh8 security and not node authentication, then the `MSH-8` value of all test messages must contain `TEST_HARNESS|TEST_HARNESS`
+If the SanteMPI instance is configured to use Msh8 security and not node authentication, then the `MSH-8` value of all test messages must contain `TEST_HARNESS+TEST_HARNESS`
 {% endhint %}
 
 ## Register Patient with CX.4.2 and CX.4.3

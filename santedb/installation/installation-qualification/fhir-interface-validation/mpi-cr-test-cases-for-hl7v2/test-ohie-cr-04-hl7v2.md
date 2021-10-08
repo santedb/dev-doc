@@ -87,6 +87,10 @@ Prior to executing the tests in this test case, the system under test should be 
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+If the SanteMPI instance is configured to use Msh8 security and not node authentication, then the `MSH-8` value of all test messages must contain `TEST_HARNESS+TEST_HARNESS`
+{% endhint %}
+
 ## Register Patient in TEST\_A
 
 Test harness \(as `TEST_HARNESS_A`\) sends `ADT^A01` registering a new patient with an identifier from `TEST_A` domain.

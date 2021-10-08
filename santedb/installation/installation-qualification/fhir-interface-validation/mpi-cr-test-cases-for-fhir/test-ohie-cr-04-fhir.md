@@ -13,10 +13,12 @@ This test ensures that an assigner cannot inappropriately attempt to assign an a
 
 ## Discussion
 
+In a jurisdictional MPI environment, it is important that a centralized client-registry or MPI govern the issuance and trust of identity for certain domains. For example, a national health identifier registration submitted by the NHID authority / software may be indicated as an "authoritative" source whereas a new NID submitted by an EMR might be "informative".  
+
 SanteMPI provides mechanisms for two types of identity domains:
 
-* Open Identity Domains - Whereby any caller from any source can freely assign new identifiers in that domain \(for example: in use cases where the DLN authority is not directly integrated to the MPI you can allow any EMR to assign / register a DLN\)
-* Protected Identity Domains - Whereby only the registered source for identities in that domain can assign new identifiers and be authoritative. For example, only the national health insurance provider may notify the MPI/CR about new health insurance numbers, or only Hospital A can notify the CR about official identifiers form Hospital A.
+* **Open Identity Domains** - Whereby any caller from any source can freely assign new identifiers in that domain \(for example: in use cases where the DLN authority is not directly integrated to the MPI you can allow any EMR to assign / register a DLN\)
+* **Protected Identity Domains** - Whereby only the registered source for identities in that domain can assign new identifiers and be authoritative. For example, only the national health insurance provider may notify the MPI/CR about new health insurance numbers, or only Hospital A can notify the CR about official identifiers form Hospital A.
 
 When protected identity domains are used, other sources may provide identifiers in protected domains, however they are treated as informative rather than "official" authoritative sources. This information can be taken into consideration when weighing a candidate match. Additionally, non-authoritative sources can link their own records with existing identifiers in a protected identity domain.
 
