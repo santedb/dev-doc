@@ -14,6 +14,12 @@ SanteMPI acts as a custodian of patient master identities, as such it is importa
 
 All implementations of FHIR interfaces in SanteDB are subject to the [FHIR Implementation Notes ](../../../../extending-santedb/service-apis/hl7-fhir/#fhir-implementation)provided, including limitations on `fullUrl` , identifiers, and offsite resources. 
 
+## SOAP-UI Test Cases
+
+All of the test cases expressed on the wiki using FHIR have been expressed in a SOAP-UI project available on the [SanteMPI GitHub](https://github.com/santedb/santempi/blob/master/SanteMPI-Test-Cases-soapui-project.xml) project page. You can use [SmartBear SOAP-UI](https://www.soapui.org/downloads/latest-release/) to execute these tests. 
+
+By default the test  cases use `http://localhost:8080` as the iCDR binding.
+
 ## Patient Registration Test Cases
 
 The test cases which involve the merging/creation/updating of patient can be submitted to SanteMPI in three ways. The create tests only specify the contents of a bundle/patient being tested, and do not include any wrapper \(such as MessageHeader\) specifications. 
