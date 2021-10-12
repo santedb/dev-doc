@@ -16,7 +16,7 @@ description: >-
 
 ## Discussion
 
-The `user.undel` command is for re-activating de-activated users \(effectively un-deleting the user\) and has a single `-u` parameter for specifying **username** of user to un-delete.
+The `user.undel` command is for re-activating de-activated users (effectively un-deleting the user) and has a single `-u` parameter for specifying **username** of user to un-delete.
 
 * An exception is thrown when a non-existing username is specified.
 
@@ -27,9 +27,9 @@ The `user.undel` command is for re-activating de-activated users \(effectively u
 
 ## Actions/Steps
 
-1. Execute the `user.undel` command with `-u` parameter specified as a non-existing username.
+1\. Execute the `user.undel` command with `-u` parameter specified as a non-existing username.
 
-```text
+```
 user.undel -u <new user name>
 ```
 
@@ -37,9 +37,8 @@ user.undel -u <new user name>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.undel -u TestUser098
 ERR: Exception has been thrown by the target of an invocation.
         1:User TestUser098 not found
 ```
-

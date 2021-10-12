@@ -10,14 +10,14 @@ Represents a service that can do clinical protocols
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| FindProtocol | IEnumerable&lt;Protocol&gt; | _Expression&lt;Func&lt;Protocol,Boolean&gt;&gt;_ **predicate** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** | Find protocols in the repository service |
-| InsertProtocol | Protocol | _Protocol_ **data** | Find protocols in the repository service |
+| Operation      | Response/Return        | Input/Parameter                                                                                                                                                                                                                                 | Description                              |
+| -------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| FindProtocol   | IEnumerable\<Protocol> | <p><em>Expression&#x3C;Func&#x3C;Protocol,Boolean>></em> <strong>predicate</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong></p> | Find protocols in the repository service |
+| InsertProtocol | Protocol               | _Protocol_ **data**                                                                                                                                                                                                                             | Find protocols in the repository service |
 
 ## Implementations
 
-### Applet Based Clinical Protocol Repository - \(SanteDB.Cdss.Xml\)
+### Applet Based Clinical Protocol Repository - (SanteDB.Cdss.Xml)
 
 Applet clinical protocol repository
 
@@ -55,4 +55,3 @@ public class MyClinicalProtocolRepositoryService : SanteDB.Core.Services.IClinic
     }
 }
 ```
-

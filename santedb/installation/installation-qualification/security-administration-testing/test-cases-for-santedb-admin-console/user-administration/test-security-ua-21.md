@@ -12,7 +12,7 @@ description: Testing the user.undel command with no parameters specified.
 
 ## Discussion
 
-The `user.undel` command is for re-activating de-activated users \(effectively un-deleting the user\) and has a single `-u` parameter for specifying **username** of user to un-delete.
+The `user.undel` command is for re-activating de-activated users (effectively un-deleting the user) and has a single `-u` parameter for specifying **username **of user to un-delete.
 
 * An exception is thrown when no username is specified.
 
@@ -22,9 +22,9 @@ The `user.undel` command is for re-activating de-activated users \(effectively u
 
 ## Actions/Steps
 
-1. Execute the `user.undel`.
+1\. Execute the `user.undel`.
 
-```text
+```
 user.undel 
 ```
 
@@ -32,9 +32,8 @@ user.undel
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.undel
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

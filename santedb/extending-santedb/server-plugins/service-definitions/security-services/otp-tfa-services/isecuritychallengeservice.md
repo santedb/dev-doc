@@ -10,15 +10,15 @@ Represents an interface that allows for the retrieval of pre-configured security
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Get | IEnumerable&lt;SecurityChallenge&gt; | _String_ **userName** _IPrincipal_ **principal** | Gets the challenges current registered for the user \(not the answers\) |
-| Set | void | _String_ **userName** _Guid_ **challengeKey** _String_ **response** _IPrincipal_ **principal** | Add a challenge to the current registered user |
-| Remove | void | _String_ **userName** _Guid_ **challengeKey** _IPrincipal_ **principal** | Removes or clears the specified challenge |
+| Operation | Response/Return                 | Input/Parameter                                                                                                                                                                                | Description                                                           |
+| --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Get       | IEnumerable\<SecurityChallenge> | <p><em>String</em> <strong>userName</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                             | Gets the challenges current registered for the user (not the answers) |
+| Set       | void                            | <p><em>String</em> <strong>userName</strong><br><em>Guid</em> <strong>challengeKey</strong><br><em>String</em> <strong>response</strong><br><em>IPrincipal</em> <strong>principal</strong></p> | Add a challenge to the current registered user                        |
+| Remove    | void                            | <p><em>String</em> <strong>userName</strong><br><em>Guid</em> <strong>challengeKey</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                              | Removes or clears the specified challenge                             |
 
 ## Implementations
 
-### AdoSecurityChallengeProvider - \(SanteDB.Persistence.Data.ADO\)
+### AdoSecurityChallengeProvider - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -62,4 +62,3 @@ public class MySecurityChallengeService : SanteDB.Core.Security.ISecurityChallen
     }
 }
 ```
-

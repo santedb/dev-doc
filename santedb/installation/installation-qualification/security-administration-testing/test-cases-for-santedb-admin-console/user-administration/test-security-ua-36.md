@@ -22,9 +22,9 @@ The `user.roles` command is for assigning roles to a user.
 
 ## Actions/Steps
 
-1. Execute the `user.roles` command.
+1\. Execute the `user.roles` command.
 
-```text
+```
 user.roles
 ```
 
@@ -32,9 +32,8 @@ user.roles
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.roles
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

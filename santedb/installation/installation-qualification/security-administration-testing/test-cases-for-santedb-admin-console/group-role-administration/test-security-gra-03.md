@@ -22,9 +22,9 @@ The `role.info` command is for listing a specific role's information and effecti
 
 ## Actions/Steps
 
-1. Execute the `role.info` command.
+1\. Execute the `role.info` command.
 
-```text
+```
 role.info
 ```
 
@@ -32,9 +32,8 @@ role.info
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.info
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a role
 ```
-

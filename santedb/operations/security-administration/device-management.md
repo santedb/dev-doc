@@ -4,18 +4,18 @@ The administrative portal provides several key functions related to the administ
 
 ## Creating A New Device
 
-If you wanted to create a new device, you could select the **Create** button. 
+If you wanted to create a new device, you could select the **Create **button. 
 
-![](../../../.gitbook/assets/3%20%281%29.jpg)
+![](<../../../.gitbook/assets/3 (1).jpg>)
 
-You'll then be presented with the new Create Device screen. Fill out the fields appropriately and click the **Save** button. \( Name, Model Name, and Operating System are required fields and must be filled out\).
+You'll then be presented with the new Create Device screen. Fill out the fields appropriately and click the **Save** button. ( Name, Model Name, and Operating System are required fields and must be filled out).
 
-![](../../../.gitbook/assets/4%20%284%29.jpg)
+![](<../../../.gitbook/assets/4 (4).jpg>)
 
 Once create
 
 * The device can be locked/unlocked
-* Device Secret can be changed\(reset\)
+* Device Secret can be changed(reset)
 * A policy can be assigned to the device
 * The device can be deleted/undeleted
 
@@ -23,7 +23,7 @@ Once create
 
 If you wanted to lock a device you could select the **Lock** button:
 
-![](../../../.gitbook/assets/10%20%281%29.jpg)
+![](<../../../.gitbook/assets/10 (1).jpg>)
 
 when a device is locked the status will change to "Locked" and it can be unlocked by selecting the **Unlock** button.
 
@@ -45,7 +45,7 @@ In order to assign a policy to a device you should click the **Edit** button:
 
 ![](../../../.gitbook/assets/16-1.jpg)
 
-then go to the **Assigned Policies** tab,  choose the policy you wish to add ****from the drop-down list and click the **+** button**:**
+then go to the **Assigned Policies** tab,  choose the policy you wish to add** **from the drop-down list and click the **+ **button**:**
 
 ![](../../../.gitbook/assets/20.jpg)
 
@@ -60,4 +60,3 @@ To un-delete, click the **Show Deleted** button to go to the deleted devices scr
 ![](../../../.gitbook/assets/25.jpg)
 
 ![](../../../.gitbook/assets/26.jpg)
-

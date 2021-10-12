@@ -10,18 +10,18 @@ Represents a contract for a policy information service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| GetActivePolicies | IEnumerable&lt;IPolicyInstance&gt; | _Object_ **securable** | Get active policies for the specified securable type |
-| GetPolicies | IEnumerable&lt;IPolicy&gt; |  | TODO |
-| GetPolicy | IPolicy | _String_ **policyOid** | Get a specific policy |
-| AddPolicies | void | _Object_ **securable** _PolicyGrantType_ **rule** _IPrincipal_ **principal** _String\[\]_ **policyOids** | Adds the specified policies to the specified securable object |
-| GetPolicyInstance | IPolicyInstance | _Object_ **securable** _String_ **policyOid** | Gets the policy instance for the specified object |
-| RemovePolicies | void | _Object_ **securable** _IPrincipal_ **principal** _String\[\]_ **oid** | Removes the specified policies from the user account |
+| Operation         | Response/Return               | Input/Parameter                                                                                                                                                                                        | Description                                                   |
+| ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| GetActivePolicies | IEnumerable\<IPolicyInstance> | _Object_ **securable**                                                                                                                                                                                 | Get active policies for the specified securable type          |
+| GetPolicies       | IEnumerable\<IPolicy>         |                                                                                                                                                                                                        | TODO                                                          |
+| GetPolicy         | IPolicy                       | _String_ **policyOid**                                                                                                                                                                                 | Get a specific policy                                         |
+| AddPolicies       | void                          | <p><em>Object</em> <strong>securable</strong><br><em>PolicyGrantType</em> <strong>rule</strong><br><em>IPrincipal</em> <strong>principal</strong><br><em>String[]</em> <strong>policyOids</strong></p> | Adds the specified policies to the specified securable object |
+| GetPolicyInstance | IPolicyInstance               | <p><em>Object</em> <strong>securable</strong><br><em>String</em> <strong>policyOid</strong></p>                                                                                                        | Gets the policy instance for the specified object             |
+| RemovePolicies    | void                          | <p><em>Object</em> <strong>securable</strong><br><em>IPrincipal</em> <strong>principal</strong><br><em>String[]</em> <strong>oid</strong></p>                                                          | Removes the specified policies from the user account          |
 
 ## Implementations
 
-### ADO.NET Policy Information Service - \(SanteDB.Persistence.Data.ADO\)
+### ADO.NET Policy Information Service - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -80,4 +80,3 @@ public class MyPolicyInformationService : SanteDB.Core.Security.Services.IPolicy
     }
 }
 ```
-

@@ -6,14 +6,14 @@ Whenever your .NET plugin exposes functionality to the iCDR service instance, an
 
 Features are located on the left hand side of the configuration tool, as shown below:
 
-![](../../../../../.gitbook/assets/image%20%28401%29.png)
+![](<../../../../../.gitbook/assets/image (401).png>)
 
 Each of these features is discovered by scanning your .NET assembly for implementations of `IFeature` , an `IFeature` defines the following properties:
 
-* Group -&gt; The logical grouping where the feature should reside
-* Description -&gt; A textual description of the feature which is to appear on the detailed configuration
-* ConfigurationType -&gt; The type of object that the feature is expecting to appear in the configuration file
-* Name -&gt; The name of the feature to appear in the feature list
+* Group -> The logical grouping where the feature should reside
+* Description -> A textual description of the feature which is to appear on the detailed configuration
+* ConfigurationType -> The type of object that the feature is expecting to appear in the configuration file
+* Name -> The name of the feature to appear in the feature list
 
 The `IFeature` expects implementers to provide a function called `QueryState` , this method should scan the provided configuration instance and return on of the following values based on the status of the feature in the provided configuration:
 
@@ -25,10 +25,10 @@ When a feature is enabled the `CreateInstallTasks` method is called, and should 
 
 ### Configuration Tasks
 
-The `IConfigurationTask` interface is used to control individual configuration steps to modify the provided file to perform a configuration or removal of a feature. You can see these in the confirm tasks dialog.  
+The `IConfigurationTask` interface is used to control individual configuration steps to modify the provided file to perform a configuration or removal of a feature. You can see these in the confirm tasks dialog.\
 
 
-![](../../../../../.gitbook/assets/image%20%28400%29.png)
+![](<../../../../../.gitbook/assets/image (400).png>)
 
 Each task can be enabled/disabled by an administrator to skip the specified task in their environment.
 
@@ -44,14 +44,14 @@ Do not save the configuration passed to the Execute or Rollback methods. The sav
 
 The configuration tooling in SanteDB uses the .NET `PropertyGrid` control to expose configuration options. It is recommended that you use the attributes listed below on your properties to allow for proper user experience for configuration of your plugin.
 
-| Attribute | Use | Example |
-| :--- | :--- | :--- |
-| `[DisplayName]` | Controls the display name of the configuration property  | `[DisplayName("Server URL")]` |
-| `[Description]` | Provides contextual help on the property grid which describes how the setting should be used. | `[Description("The remote endpoint of the server")]` |
-| `[Browsable]` | Use this attribute to control whether your setting should appear in the configuration tool. | `[Browsable(false)]` |
-| `[ReadOnly]` | When your configuration setting needs to be shown, but not edited. | `[ReadOnly(true)]` |
-| `[Editor]` | When you would like to allow a user to edit the value using a complex editor \(see below\) |  |
-| `[TypeConverter]` | The type converter used to convert input from the property grid to/from the class. |  |
+| Attribute         | Use                                                                                           | Example                                              |
+| ----------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `[DisplayName]`   | Controls the display name of the configuration property                                       | `[DisplayName("Server URL")]`                        |
+| `[Description]`   | Provides contextual help on the property grid which describes how the setting should be used. | `[Description("The remote endpoint of the server")]` |
+| `[Browsable]`     | Use this attribute to control whether your setting should appear in the configuration tool.   | `[Browsable(false)]`                                 |
+| `[ReadOnly]`      | When your configuration setting needs to be shown, but not edited.                            | `[ReadOnly(true)]`                                   |
+| `[Editor]`        | When you would like to allow a user to edit the value using a complex editor (see below)      |                                                      |
+| `[TypeConverter]` | The type converter used to convert input from the property grid to/from the class.            |                                                      |
 
 {% hint style="info" %}
 For more information on how to use the PropertyGrid settings see [https://www.codeproject.com/articles/22717/using-propertygrid](https://www.codeproject.com/articles/22717/using-propertygrid)
@@ -111,6 +111,4 @@ Additionally, using the `Binding` attribute will allow you to filter from any ty
 [DisplayName("Enabled Plugins"), Description("Extended Plugins You want to use")]
 public List<TypeReferenceConfiguration> Extensions { get; set; }
 ```
-
-
 

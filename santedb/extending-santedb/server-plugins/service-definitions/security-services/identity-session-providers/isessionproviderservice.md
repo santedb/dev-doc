@@ -10,23 +10,23 @@ Represents a service which is responsible for the storage and retrieval of sessi
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Established | EventHandler&lt;SessionEstablishedEventArgs&gt; | Fired when the session provider service has established |
-| Abandoned | EventHandler&lt;SessionEstablishedEventArgs&gt; | Fired when the session provider service has ended by the user's decision |
+| Event       | Type                                       | Description                                                              |
+| ----------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| Established | EventHandler\<SessionEstablishedEventArgs> | Fired when the session provider service has established                  |
+| Abandoned   | EventHandler\<SessionEstablishedEventArgs> | Fired when the session provider service has ended by the user's decision |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Establish | ISession | _IPrincipal_ **principal** _String_ **remoteEp** _Boolean_ **isOverride** _String_ **purpose** _String\[\]_ **scope** _String_ **lang** | Establishes a session for the specified principal |
-| Get | ISession | _Byte\[\]_ **sessionToken** _Boolean_ **allowExpired** | Authenticates the session identifier as evidence of session |
-| Extend | ISession | _Byte\[\]_ **refreshToken** | Extend the session with the specified refresh token |
-| Abandon | void | _ISession_ **session** | Abandons the session |
+| Operation | Response/Return | Input/Parameter                                                                                                                                                                                                                                                                     | Description                                                 |
+| --------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Establish | ISession        | <p><em>IPrincipal</em> <strong>principal</strong><br><em>String</em> <strong>remoteEp</strong><br><em>Boolean</em> <strong>isOverride</strong><br><em>String</em> <strong>purpose</strong><br><em>String[]</em> <strong>scope</strong><br><em>String</em> <strong>lang</strong></p> | Establishes a session for the specified principal           |
+| Get       | ISession        | <p><em>Byte[]</em> <strong>sessionToken</strong><br><em>Boolean</em> <strong>allowExpired</strong></p>                                                                                                                                                                              | Authenticates the session identifier as evidence of session |
+| Extend    | ISession        | _Byte\[]_ **refreshToken**                                                                                                                                                                                                                                                          | Extend the session with the specified refresh token         |
+| Abandon   | void            | _ISession_ **session**                                                                                                                                                                                                                                                              | Abandons the session                                        |
 
 ## Implementations
 
-### ADO.NET Session Storage - \(SanteDB.Persistence.Data.ADO\)
+### ADO.NET Session Storage - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -84,4 +84,3 @@ public class MySessionProviderService : SanteDB.Core.Services.ISessionProviderSe
     }
 }
 ```
-

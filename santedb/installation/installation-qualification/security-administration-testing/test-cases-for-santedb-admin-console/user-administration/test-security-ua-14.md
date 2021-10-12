@@ -20,9 +20,9 @@ description: >-
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**. 
 
-* The `-r` parameter is used to specify a **role** to assign to the user being newly added. 
-* The `-u` parameter is used to specify a unique **username** to assign to the user being newly added. 
-* The `-p`  parameter is used to specify a **password** that must pass strength validation.
+* The `-r` parameter is used to specify a **role **to assign to the user being newly added. 
+* The `-u` parameter is used to specify a unique **username **to assign to the user being newly added. 
+* The `-p`  parameter is used to specify a **password **that must pass strength validation.
 
 ## Pre-Conditions / Setup
 
@@ -34,7 +34,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 1. Execute the `user.add` command with `-r` parameter specified as an existing role, `-u` parameter specified as a non-existing username, and `-u` parameter specified as sufficiently strong password.
 
-```text
+```
 user.add -r <existing role> -u <new user name> -p M0r3SeCuRe!
 ```
 
@@ -42,16 +42,15 @@ user.add -r <existing role> -u <new user name> -p M0r3SeCuRe!
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.add -r USERS -u TestUser123 -p M0r3SeCuRe!
 >
 ```
 
 * Check for the user that was just created:
 
-```text
+```
 > user.list -u TestUser123
 SID                                    Name                     Last Auth              Lockout                ILA  A
 6f25da3a-e3da-11eb-bbaf-eb1f1d969e16   TestUser123                                                            0    *
 ```
-

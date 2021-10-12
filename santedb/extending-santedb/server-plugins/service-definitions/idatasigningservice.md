@@ -10,15 +10,15 @@ Represents a service which can sign arbitrary data
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| GetSignatureAlgorithm | String | _String_ **keyId** | Get the siganture algorithm this service would use to sign w/the specified key |
-| SignData | Byte\[\] | _Byte\[\]_ **data** _String_ **keyId** | Signs the specified data using the service's configured signing key |
-| Verify | Boolean | _Byte\[\]_ **data** _Byte\[\]_ **signature** _String_ **keyId** | Verifies the digital signature of the data |
+| Operation             | Response/Return | Input/Parameter                                                                                                                      | Description                                                                    |
+| --------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| GetSignatureAlgorithm | String          | _String_ **keyId**                                                                                                                   | Get the siganture algorithm this service would use to sign w/the specified key |
+| SignData              | Byte\[]         | <p><em>Byte[]</em> <strong>data</strong><br><em>String</em> <strong>keyId</strong></p>                                               | Signs the specified data using the service's configured signing key            |
+| Verify                | Boolean         | <p><em>Byte[]</em> <strong>data</strong><br><em>Byte[]</em> <strong>signature</strong><br><em>String</em> <strong>keyId</strong></p> | Verifies the digital signature of the data                                     |
 
 ## Implementations
 
-### DefaultDataSigningService - \(SanteDB.Core\)
+### DefaultDataSigningService - (SanteDB.Core)
 
 Default data signature service
 
@@ -62,4 +62,3 @@ public class MyDataSigningService : SanteDB.Core.Security.IDataSigningService {
     }
 }
 ```
-

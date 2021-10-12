@@ -49,7 +49,7 @@ public void MyDatabaseFunction() {
 
 ## Configuration Sections
 
-It is often the case that modules must not use hard coded values, and must allow for some degree of user configuration. The use of the `GetAppSetting` / `SetAppSetting` may be appropriate for simple settings, however for more complex configuration you should define your own IConfigurationSection implementation.
+It is often the case that modules must not use hard coded values, and must allow for some degree of user configuration. The use of the `GetAppSetting `/ `SetAppSetting `may be appropriate for simple settings, however for more complex configuration you should define your own IConfigurationSection implementation.
 
 A configuration section is a complex structure contained within the configuration provider. Depending on the configuration provider it may store these values in JSON, XML, a database, or other appropriate format.
 
@@ -82,7 +82,7 @@ When you deploy your service, you can configure it using whatever configuration 
 
 Since our configuration section is defined in the http://foo.bar namespace we have to declare the namespace in the XML file, if we were using the default namespace this definition could be ignored.
 
-Next, we need to add our actual configuration section to the file, this is done with the &lt;section&gt; attribute:
+Next, we need to add our actual configuration section to the file, this is done with the \<section> attribute:
 
 ```markup
 <section xsi:type="hello:HelloWorldConfigurationSection">
@@ -108,6 +108,4 @@ public void SayHello() {
         Console.WriteLine(String.Join(";", config.Names));
 }
 ```
-
-
 

@@ -12,14 +12,16 @@ description: >-
 * [Security Administration](../../../../../operations/security-administration/#demo-environment) 
 * [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/)
 * [TEST: SECURITY-GRA-01](test-security-gra-01.md)
-* [TEST: SECURITY-GRA-02](test-security-gra-02.md) 
+*   [TEST: SECURITY-GRA-02](test-security-gra-02.md) 
+
+
 
 ## Discussion
 
 The `role.info` command is for listing a specific role's information and effective policies. 
 
-* The `-r` parameter is used to specify which **role** to display information and effective policies from. 
-* An exception is thrown when an invalid \(non-existing\) role is specified.
+* The `-r` parameter is used to specify which **role **to display information and effective policies from. 
+* An exception is thrown when an invalid (non-existing) role is specified.
 
 ## Pre-Conditions / Setup
 
@@ -28,9 +30,9 @@ The `role.info` command is for listing a specific role's information and effecti
 
 ## Actions/Steps
 
-1. Execute the `role.info` command with `-r` parameter specified as a non-existing role.
+1\. Execute the `role.info` command with `-r` parameter specified as a non-existing role.
 
-```text
+```
 role.info -r <non-existing role>
 ```
 
@@ -38,11 +40,9 @@ role.info -r <non-existing role>
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.info -r not_a_role
 ERR: Exception has been thrown by the target of an invocation.
         1:Role not_a_role not found
 ```
-
-
 

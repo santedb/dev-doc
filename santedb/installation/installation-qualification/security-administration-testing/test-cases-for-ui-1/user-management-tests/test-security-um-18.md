@@ -23,11 +23,10 @@ While creating new users, any Employer being added to a new user's profile must 
 
 ## Actions/Steps
 
-1. Follow the same actions/steps from [TEST: SECURITY-UM-15](test-security-um-15.md), but use the **Employer** textbox and a corresponding invalid value \(e.g. "NOT\_AN\_EMPLOYER"\) instead of the **Primary Facility** textbox and a corresponding invalid value.   
+1\. Follow the same actions/steps from [TEST: SECURITY-UM-15](test-security-um-15.md), but use the **Employer** textbox and a corresponding invalid value (e.g. "NOT_AN_EMPLOYER") instead of the **Primary Facility **textbox and a corresponding invalid value.   
 
 ## Expected Behaviour
 
 * The dropdown of possible existing employers should only have a single disabled option that simply prompts users: "No results found".
 
-![](../../../../../../.gitbook/assets/image%20%28262%29.png)
-
+![](<../../../../../../.gitbook/assets/image (262).png>)

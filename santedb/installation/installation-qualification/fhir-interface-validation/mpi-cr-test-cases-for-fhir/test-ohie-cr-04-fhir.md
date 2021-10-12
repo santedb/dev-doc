@@ -4,7 +4,7 @@ description: Patient Identity Feed - Blocks Inappropriate Assigner
 
 # TEST: OHIE-CR-04-FHIR
 
-This test ensures that an assigner cannot inappropriately attempt to assign an authoritative \(official\) identity for a domain which it does not have appropriate authority to do so. 
+This test ensures that an assigner cannot inappropriately attempt to assign an authoritative (official) identity for a domain which it does not have appropriate authority to do so. 
 
 ## References
 
@@ -17,18 +17,18 @@ In a jurisdictional MPI environment, it is important that a centralized client-r
 
 SanteMPI provides mechanisms for two types of identity domains:
 
-* **Open Identity Domains** - Whereby any caller from any source can freely assign new identifiers in that domain \(for example: in use cases where the DLN authority is not directly integrated to the MPI you can allow any EMR to assign / register a DLN\)
+* **Open Identity Domains** - Whereby any caller from any source can freely assign new identifiers in that domain (for example: in use cases where the DLN authority is not directly integrated to the MPI you can allow any EMR to assign / register a DLN)
 * **Protected Identity Domains** - Whereby only the registered source for identities in that domain can assign new identifiers and be authoritative. For example, only the national health insurance provider may notify the MPI/CR about new health insurance numbers, or only Hospital A can notify the CR about official identifiers form Hospital A.
 
 When protected identity domains are used, other sources may provide identifiers in protected domains, however they are treated as informative rather than "official" authoritative sources. This information can be taken into consideration when weighing a candidate match. Additionally, non-authoritative sources can link their own records with existing identifiers in a protected identity domain.
 
 ## Pre-Conditions / Setup
 
-### Create TEST\_A Domain
+### Create TEST_A Domain
 
 Create an AssigningAuthority domain which has the following attributes:
 
-* URL of http://ohie.org/test/test\_a
+* URL of http://ohie.org/test/test_a
 * OID of 1.3.6.1.4.1.52820.3.72.5.9.2
 * Device TEST-HARNESS-A with authoritative source for identifiers
 
@@ -57,11 +57,11 @@ Create an AssigningAuthority domain which has the following attributes:
   </insert>
 ```
 
-### Create TEST\_B Domain
+### Create TEST_B Domain
 
 Create an AssigningAuthority domain which has the following attributes:
 
-* URL of http://ohie.org/test/test\_b
+* URL of http://ohie.org/test/test_b
 * OID of 1.3.6.1.4.1.52820.3.72.5.9.3
 * Device TEST-HARNESS-B with authoritative source for identifiers
 
@@ -90,9 +90,9 @@ Create an AssigningAuthority domain which has the following attributes:
   </insert>
 ```
 
-## Authenticate as TEST\_HARNESS\_FHIR\_A
+## Authenticate as TEST_HARNESS_FHIR_A
 
-The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
+The test harness authenticates against the SanteMPI IdP using a client_credentials grant for the test-harness-a account.
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
@@ -107,9 +107,9 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_A
 ```
 
-## Register New Patient Identity in TEST\_A
+## Register New Patient Identity in TEST_A
 
-The test harness sends an authenticated request to create a new patient with a new identifier in TEST\_A domain. Patient details:
+The test harness sends an authenticated request to create a new patient with a new identifier in TEST_A domain. Patient details:
 
 * Identifier `FHRA-040` in `http://ohie.org/test/test_a` with use `official`
 * Name: JENNIFER JONES
@@ -117,7 +117,7 @@ The test harness sends an authenticated request to create a new patient with a n
 * DOB: 1984-01-25
 
 {% hint style="info" %}
-The patient is being sent from a source with the expectation that the information is scoped from the worldview of the sender. So the sender may use an MRN or Patient Internal Identifier \(PI\) as the "official" identifier for the patient in its own world, which may \(or may not\) match the view of the patient from the jurisdictional worldview.
+The patient is being sent from a source with the expectation that the information is scoped from the worldview of the sender. So the sender may use an MRN or Patient Internal Identifier (PI) as the "official" identifier for the patient in its own world, which may (or may not) match the view of the patient from the jurisdictional worldview.
 {% endhint %}
 
 ```javascript
@@ -159,13 +159,13 @@ The patient is being sent from a source with the expectation that the informatio
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST | PMIR Only | Return MessageHeader with response.code = ok |
-| MUST |  | Return HTTP code of 201 Created |
-| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
-| SHOULD |  | Include a Patient entry in response containing created patient |
-| SHOULD |  | Include a link to the master identity with code refer  |
+| Requirement | Option    | Description                                                    |
+| ----------- | --------- | -------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                   |
+| MUST        |           | Return HTTP code of 201 Created                                |
+| SHOULD      | PMIR Only | Include an OperationOutcome entry in the response              |
+| SHOULD      |           | Include a Patient entry in response containing created patient |
+| SHOULD      |           | Include a link to the master identity with code refer          |
 
 ## Validate Patient Created
 
@@ -182,17 +182,17 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Accept the message with HTTP 200 OK |
-| MUST |  | Include a bundle with exactly 1 patient result |
-| MUST |  | Contain a patient for Jennifer Jones |
-| MUST |  | Have an identifier for FHRA-040 in system http://ohie.org/test/test\_a |
-| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
+| Requirement | Option | Description                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| MUST        |        | Accept the message with HTTP 200 OK                                          |
+| MUST        |        | Include a bundle with exactly 1 patient result                               |
+| MUST        |        | Contain a patient for Jennifer Jones                                         |
+| MUST        |        | Have an identifier for FHRA-040 in system http://ohie.org/test/test_a        |
+| SHOULD      |        | Contain one or more link entries with type seealso pointing to local records |
 
-## Authenticate as TEST\_HARNESS\_FHIR\_B
+## Authenticate as TEST_HARNESS_FHIR_B
 
-The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-b account.
+The test harness authenticates against the SanteMPI IdP using a client_credentials grant for the test-harness-b account.
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
@@ -206,9 +206,9 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 grant_type=client_credentials&scope=*&client_secret=TEST_HARNESS&client_id=TEST_HARNESS_FHIR_B
 ```
 
-## Attempt to Register New Patient Identity in TEST\_A
+## Attempt to Register New Patient Identity in TEST_A
 
-The test harness sends a registration message to the receiver, attempting to incorrectly register a new official identifier in the TEST\_A domain \(an identity domain for which it does not have authority to assign new identities\).
+The test harness sends a registration message to the receiver, attempting to incorrectly register a new official identifier in the TEST_A domain (an identity domain for which it does not have authority to assign new identities).
 
 * Identifier `FHRB-041` in `http://ohie.org/test/test_b` with use `offical`
 * Name: JENNIFER DOE
@@ -252,86 +252,28 @@ The test harness sends a registration message to the receiver, attempting to inc
   }
 ```
 
-### Expected Behaviour \(Option 1 - Rejection / Strict\)
+### Expected Behaviour (Option 1 - Rejection / Strict)
 
-If the receiver is behaving in a strict mode \(i.e. emulating the behavior from HL7v2\), then.
+If the receiver is behaving in a strict mode (i.e. emulating the behavior from HL7v2), then.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left">PMIR Only</td>
-      <td style="text-align:left">Return MessageHeader with response.code = fatal-error</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return HTTP code in the 400 series</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Include an OperationOutcome entry in the response indicating sender</p>
-        <p>does not have authority to issue new identities in the TEST_A domain.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option    | Description                                                                                                                                            |
+| ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| MUST        | PMIR Only | Return MessageHeader with response.code = fatal-error                                                                                                  |
+| MUST        |           | Return HTTP code in the 400 series                                                                                                                     |
+| MUST        |           | <p>Include an OperationOutcome entry in the response indicating sender</p><p>does not have authority to issue new identities in the TEST_A domain.</p> |
 
-### Expected Behavior \(Option 2 - Flag as Informative\)
+### Expected Behavior (Option 2 - Flag as Informative)
 
 If the receiver is operating in a mode that is lenient for identity domains, it should process the message and flag the identifier as informative.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left">PMIR Only</td>
-      <td style="text-align:left">Return MessageHeader with response.code = ok</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return HTTP code in the 201 Created</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SHOULD</td>
-      <td style="text-align:left">PMIR Only</td>
-      <td style="text-align:left">
-        <p>Include an OperationOutcome entry in the response indicating sender</p>
-        <p>does not have authority to issue new identities in the TEST_A domain
-          <br
-          />and code official was changed to usual/secondary.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SHOULD</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Return the created patient with the identifier FHRB-041 with use</p>
-        <p>set to usual/secondary and/or an extension indicating the identifier</p>
-        <p>is informative.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option    | Description                                                                                                                                                                                                |
+| ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                                                                                                                                                               |
+| MUST        |           | Return HTTP code in the 201 Created                                                                                                                                                                        |
+| SHOULD      | PMIR Only | <p>Include an OperationOutcome entry in the response indicating sender</p><p>does not have authority to issue new identities in the TEST_A domain<br>and code official was changed to usual/secondary.</p> |
+| SHOULD      |           | <p>Return the created patient with the identifier FHRB-041 with use</p><p>set to usual/secondary and/or an extension indicating the identifier</p><p>is informative.</p>                                   |
 
-## Attempt to Register New Patient Identity in TEST\_B with existing Identity in TEST\_A
+## Attempt to Register New Patient Identity in TEST_B with existing Identity in TEST_A
 
 The test harness sends a registration for a new patient in its own identity domain where the patient has an existing identity in another protected domain.
 
@@ -339,7 +281,7 @@ The test harness sends a registration for a new patient in its own identity doma
 This mimics a use case where TEST B is registering a patient on a referral that came from TEST A or where TEST A is, in fact, a health insurance number or some other identifier domain from an official source.
 {% endhint %}
 
-* Identifier `FHRB-042` in `http://ohie.org/test/test_b` with use `official`
+* Identifier `FHRB-042 `in `http://ohie.org/test/test_b `with use `official`
 * Identifier `FHRA-040` in `http://ohie.org/test/test_a` with use `usual`
 * Name: JENNIFER JONES
 * Gender: Female
@@ -400,13 +342,13 @@ This mimics a use case where TEST B is registering a patient on a referral that 
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST | PMIR Only | Return MessageHeader with response.code = ok |
-| MUST |  | Return HTTP code of 201 Created |
-| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
-| SHOULD |  | Include a Patient entry in response containing created patient |
-| SHOULD |  | Include a link to the master identity with code refer |
+| Requirement | Option    | Description                                                    |
+| ----------- | --------- | -------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                   |
+| MUST        |           | Return HTTP code of 201 Created                                |
+| SHOULD      | PMIR Only | Include an OperationOutcome entry in the response              |
+| SHOULD      |           | Include a Patient entry in response containing created patient |
+| SHOULD      |           | Include a link to the master identity with code refer          |
 
 ## Validate Patient Created / Linked
 
@@ -424,15 +366,13 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Accept the message with HTTP 200 OK |
-| MUST |  | Include a bundle with exactly 1 patient result |
-| MUST |  | Contain a patient for Jennifer Jones |
-| MUST |  | Have an identifier for FHRB-042 in system http://ohie.org/test/test\_b |
-| MUST |  | Have identifier for FHRA-040 in system http://ohie.org/test/test\_a |
-| SHOULD |  | Contain a link entry with type seealso pointing to local records from TEST HARNESS A |
-| SHOULD |  | Contain a link entry with type seealso pointing to local record from TEST HARNESS B |
-
-
+| Requirement | Option | Description                                                                          |
+| ----------- | ------ | ------------------------------------------------------------------------------------ |
+| MUST        |        | Accept the message with HTTP 200 OK                                                  |
+| MUST        |        | Include a bundle with exactly 1 patient result                                       |
+| MUST        |        | Contain a patient for Jennifer Jones                                                 |
+| MUST        |        | Have an identifier for FHRB-042 in system http://ohie.org/test/test_b                |
+| MUST        |        | Have identifier for FHRA-040 in system http://ohie.org/test/test_a                   |
+| SHOULD      |        | Contain a link entry with type seealso pointing to local records from TEST HARNESS A |
+| SHOULD      |        | Contain a link entry with type seealso pointing to local record from TEST HARNESS B  |
 

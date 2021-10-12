@@ -16,18 +16,18 @@ description: >-
 
 The `user.list` command is for listing users. 
 
-* The `-u` parameter is used to specify a **username** to filter the list with.
+* The `-u` parameter is used to specify a **username **to filter the list with.
 
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. A user must be created for a username to be tested as a `-u` parameter \(e.g. "demoadmin"\).
+2. A user must be created for a username to be tested as a `-u` parameter (e.g. "demoadmin").
 
 ## Actions/Steps
 
-1. Execute the `user.list` command and specify `demoadmin` ****for the `-u` parameter.
+1\. Execute the `user.list` command and specify `demoadmin`** **for the `-u` parameter.
 
-```text
+```
 user.list -u demoadmin
 ```
 
@@ -35,11 +35,9 @@ user.list -u demoadmin
 
 * The Admin Console output should appear similarly to the following:
 
-```text
+```
 > user.list -u demoadmin
 SID                                    Name                     Last Auth              Lockout                ILA  A
 2a348c6e-c158-11ea-9f6f-00155d640b09   demoadmin                2021-07-09T08:30:59...                        0    *
 ```
-
-
 

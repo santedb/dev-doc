@@ -20,17 +20,16 @@ While editing a user account, the **User Activity** can be reviewed and is repre
 
 1. User must be logged into an account with policies granted for creating users.
 2. Follow the instructions from [TEST: SECURITY-UM-01](test-security-um-01.md) to create a new user -- applying any valid values for required fields.
-3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User** for the newly created user.
+3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User **for the newly created user.
 
 ## Actions/Steps
 
-1. Click the **User Activity** tab.
+1\. Click the **User Activity **tab.
 
-![](../../../../../../.gitbook/assets/image%20%28337%29.png)
+![](<../../../../../../.gitbook/assets/image (337).png>)
 
 ## Expected Behaviour
 
-* A table of Audit Events appears and is filtered to show events involving the user being edited \(based on user activity\).
+* A table of Audit Events appears and is filtered to show events involving the user being edited (based on user activity).
 
-![](../../../../../../.gitbook/assets/image%20%28299%29.png)
-
+![](<../../../../../../.gitbook/assets/image (299).png>)

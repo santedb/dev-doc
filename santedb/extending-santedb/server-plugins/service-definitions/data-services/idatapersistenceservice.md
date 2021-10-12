@@ -10,30 +10,30 @@ Represents a data persistence service which is capable of storing and retrieving
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Inserted | EventHandler&lt;DataPersistedEventArgs&lt;TData&gt;&gt; | Occurs when inserted. |
-| Inserting | EventHandler&lt;DataPersistingEventArgs&lt;TData&gt;&gt; | Occurs when inserting. |
-| Updated | EventHandler&lt;DataPersistedEventArgs&lt;TData&gt;&gt; | Occurs when updated. |
-| Updating | EventHandler&lt;DataPersistingEventArgs&lt;TData&gt;&gt; | Occurs when updating. |
-| Obsoleted | EventHandler&lt;DataPersistedEventArgs&lt;TData&gt;&gt; | Occurs when obsoleted. |
-| Obsoleting | EventHandler&lt;DataPersistingEventArgs&lt;TData&gt;&gt; | Occurs when obsoleting. |
-| Queried | EventHandler&lt;QueryResultEventArgs&lt;TData&gt;&gt; | Occurs when queried. |
-| Querying | EventHandler&lt;QueryRequestEventArgs&lt;TData&gt;&gt; | Occurs when querying. |
-| Retrieving | EventHandler&lt;DataRetrievingEventArgs&lt;TData&gt;&gt; | Data is being retrieved |
-| Retrieved | EventHandler&lt;DataRetrievedEventArgs&lt;TData&gt;&gt; | Fired when data has been retrieved |
+| Event      | Type                                           | Description                        |
+| ---------- | ---------------------------------------------- | ---------------------------------- |
+| Inserted   | EventHandler\<DataPersistedEventArgs\<TData>>  | Occurs when inserted.              |
+| Inserting  | EventHandler\<DataPersistingEventArgs\<TData>> | Occurs when inserting.             |
+| Updated    | EventHandler\<DataPersistedEventArgs\<TData>>  | Occurs when updated.               |
+| Updating   | EventHandler\<DataPersistingEventArgs\<TData>> | Occurs when updating.              |
+| Obsoleted  | EventHandler\<DataPersistedEventArgs\<TData>>  | Occurs when obsoleted.             |
+| Obsoleting | EventHandler\<DataPersistingEventArgs\<TData>> | Occurs when obsoleting.            |
+| Queried    | EventHandler\<QueryResultEventArgs\<TData>>    | Occurs when queried.               |
+| Querying   | EventHandler\<QueryRequestEventArgs\<TData>>   | Occurs when querying.              |
+| Retrieving | EventHandler\<DataRetrievingEventArgs\<TData>> | Data is being retrieved            |
+| Retrieved  | EventHandler\<DataRetrievedEventArgs\<TData>>  | Fired when data has been retrieved |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Insert | TData | _TData_ **data** _TransactionMode_ **mode** _IPrincipal_ **principal** | Insert the specified data. |
-| Update | TData | _TData_ **data** _TransactionMode_ **mode** _IPrincipal_ **principal** | Update the specified data |
-| Obsolete | TData | _TData_ **data** _TransactionMode_ **mode** _IPrincipal_ **principal** | Obsolete the specified identified data |
-| Get | TData | _Guid_ **key** _Nullable&lt;Guid&gt;_ **versionKey** _Boolean_ **loadFast** _IPrincipal_ **principal** | Get the specified key. |
-| Query | IEnumerable&lt;TData&gt; | _Expression&lt;Func&lt;TData,Boolean&gt;&gt;_ **query** _IPrincipal_ **principal** | Query the specified data |
-| Query | IEnumerable&lt;TData&gt; | _Expression&lt;Func&lt;TData,Boolean&gt;&gt;_ **query** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _IPrincipal_ **principal** _ModelSort\`1\[\]_ **orderBy** | Query the specified data |
-| Count | Int64 | _Expression&lt;Func&lt;TData,Boolean&gt;&gt;_ **p** _IPrincipal_ **authContext** | Performs a fast count |
+| Operation | Response/Return     | Input/Parameter                                                                                                                                                                                                                                                                                                                               | Description                            |
+| --------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| Insert    | TData               | <p><em>TData</em> <strong>data</strong><br><em>TransactionMode</em> <strong>mode</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                                                                                                                               | Insert the specified data.             |
+| Update    | TData               | <p><em>TData</em> <strong>data</strong><br><em>TransactionMode</em> <strong>mode</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                                                                                                                               | Update the specified data              |
+| Obsolete  | TData               | <p><em>TData</em> <strong>data</strong><br><em>TransactionMode</em> <strong>mode</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                                                                                                                               | Obsolete the specified identified data |
+| Get       | TData               | <p><em>Guid</em> <strong>key</strong><br><em>Nullable&#x3C;Guid></em> <strong>versionKey</strong><br><em>Boolean</em> <strong>loadFast</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                                                                         | Get the specified key.                 |
+| Query     | IEnumerable\<TData> | <p><em>Expression&#x3C;Func&#x3C;TData,Boolean>></em> <strong>query</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                                                                                                                                            | Query the specified data               |
+| Query     | IEnumerable\<TData> | <p><em>Expression&#x3C;Func&#x3C;TData,Boolean>></em> <strong>query</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>IPrincipal</em> <strong>principal</strong><br><em>ModelSort`1[]</em> <strong>orderBy</strong></p> | Query the specified data               |
+| Count     | Int64               | <p><em>Expression&#x3C;Func&#x3C;TData,Boolean>></em> <strong>p</strong><br><em>IPrincipal</em> <strong>authContext</strong></p>                                                                                                                                                                                                              | Performs a fast count                  |
 
 ## Implementations
 
@@ -131,4 +131,3 @@ public class MyDataPersistenceService<TData> : SanteDB.Core.Services.IDataPersis
     }
 }
 ```
-

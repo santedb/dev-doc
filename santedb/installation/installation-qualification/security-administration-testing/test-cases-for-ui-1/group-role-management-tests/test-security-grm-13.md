@@ -20,20 +20,19 @@ Groups with explicitly assigned members can be filtered using a search string.
 1. Follow the instructions from [TEST: SECURITY-GRM-13](test-security-grm-11.md) to create a group and assign a member.
 2. Repeat the actions/steps from [TEST: SECURITY-GRM-13](test-security-grm-11.md) until a few different members have been added and saved.
 
-![](../../../../../../.gitbook/assets/image%20%28342%29.png)
+![](<../../../../../../.gitbook/assets/image (342).png>)
 
 ## Actions/Steps
 
-1. Select the **Search** bar in the top-right corner of the **Members** panel.
+1\. Select the **Search** bar in the top-right corner of the **Members** panel.
 
-![](../../../../../../.gitbook/assets/image%20%28353%29.png)
+![](<../../../../../../.gitbook/assets/image (353).png>)
 
-  
-2. Enter a search string for some explicitly assigned **Members** \(e.g. "admin"\).
+\
+2\. Enter a search string for some explicitly assigned **Members** (e.g. "admin").
 
 ## Expected Behaviour
 
-* The table of **Members** should be filtered to show only members that have names with a substring matching the search string entered. 
+* The table of **Members **should be filtered to show only members that have names with a substring matching the search string entered. 
 
-![](../../../../../../.gitbook/assets/image%20%28352%29.png)
-
+![](<../../../../../../.gitbook/assets/image (352).png>)

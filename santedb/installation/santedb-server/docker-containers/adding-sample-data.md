@@ -62,9 +62,9 @@ COPY custom.dataset /santedb/data/custom.dataset
 
 ## FHIR Resources
 
-You can also seed data into the `/santedb/data/fhir` directory of the container using a custom dockerfile or by mounting the volume from the docker container.
+You can also seed data into the `/santedb/data/fhir `directory of the container using a custom dockerfile or by mounting the volume from the docker container.
 
-FHIR resources are limited to only those resources which have a IFhirResourceHandler implementation registered and configured. \(TODO: Insert link\)
+FHIR resources are limited to only those resources which have a IFhirResourceHandler implementation registered and configured. (TODO: Insert link)
 
 FHIR resources can be in JSON or in XML format, and are simply placed in the directory. The seeder then processes these files on application start and will generate two files:
 
@@ -79,7 +79,7 @@ Seeding data via FHIR requires at least version 2.1.11 of the iCDR FHIR plugin.
 
 You can deploy either dataset files or FHIR files onto your running iCDR container by either including the files in a custom `Dockerfile` such as:
 
-```text
+```
 FROM santedb-icdr:latest
 COPY patients.json /santedb/data/fhir/patients.json
 COPY identity.dataset /santedb/data/identity.dataset
@@ -87,10 +87,8 @@ COPY identity.dataset /santedb/data/identity.dataset
 
 Alternately , you can mount the `/santedb/data` directory as a volume for your container and copy the files, or you can use a command line interface and `docker cp` such as:
 
-```text
+```
 docker cp patients.json santedb-icdr:/santedb/data
 docker cp identity.dataset santedb-icdr:/santedb/data
 ```
-
-
 

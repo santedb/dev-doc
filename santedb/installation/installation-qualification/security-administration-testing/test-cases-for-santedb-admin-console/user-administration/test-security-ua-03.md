@@ -23,13 +23,13 @@ The `user.list` command is for listing users.
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. A user must be created for a username to be tested as a `-u` parameter \(e.g. assume "NOT\_A\_USER" has not been created yet for this test or refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to find out what usernames are still available\).
+2. A user must be created for a username to be tested as a `-u` parameter (e.g. assume "NOT_A_USER" has not been created yet for this test or refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to find out what usernames are still available).
 
 ## Actions/Steps
 
-1. Execute the `user.list` command and specify `NOT_A_USER` ****for the `-u` parameter.
+1\. Execute the `user.list` command and specify `NOT_A_USER`** **for the `-u` parameter.
 
-```text
+```
 user.list -u NOT_A_USER
 ```
 
@@ -37,7 +37,7 @@ user.list -u NOT_A_USER
 
 * The Admin Console output should appear similarly to the following:
 
-```text
+```
 > user.list -u NOT_A_USER
 E:System.Net.WebException: The remote server returned an error: (403) Forbidden.
    at SanteDB.Server.Core.Http.RestClient.InvokeInternal[TBody,TResult](String method, String url, String contentType, WebHeaderCollection requestHeaders, WebHeaderCollection& responseHeaders, TBody body, NameValueCollection query)
@@ -47,4 +47,3 @@ ERR: Exception has been thrown by the target of an invocation.
                 REMOTE: Session expired
         2:The remote server returned an error: (403) Forbidden.
 ```
-

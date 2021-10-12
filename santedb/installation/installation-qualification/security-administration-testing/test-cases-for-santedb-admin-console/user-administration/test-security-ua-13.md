@@ -20,10 +20,10 @@ description: >-
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**. 
 
-* The `-r` parameter is used to specify a **role** to assign to the user being newly added. 
-* The `-u` parameter is used to specify a unique **username** to assign to the user being newly added. 
-* The `-p`  parameter is used to specify a **password** that must pass strength validation.
-* An exception is thrown when an invalid \(weak\) password is specified.
+* The `-r` parameter is used to specify a **role **to assign to the user being newly added. 
+* The `-u` parameter is used to specify a unique **username **to assign to the user being newly added. 
+* The `-p`  parameter is used to specify a **password **that must pass strength validation.
+* An exception is thrown when an invalid (weak) password is specified.
 
 ## Pre-Conditions / Setup
 
@@ -35,7 +35,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 1. Execute the `user.add` command with `-r` parameter specified as an existing role, `-u` parameter specified as a non-existing username, and `-u` parameter specified as weak password.
 
-```text
+```
 user.add -r <existing role> -u <new user name> -p NotSecure
 ```
 
@@ -43,7 +43,7 @@ user.add -r <existing role> -u <new user name> -p NotSecure
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.add -r USERS -u TestUser123 -p NotSecure
 E:System.Net.WebException: The remote server returned an error: (422) Unprocessable Entity.
    at SanteDB.Server.Core.Http.RestClient.InvokeInternal[TBody,TResult](String method, String url, String contentType, WebHeaderCollection requestHeaders, WebHeaderCollection& responseHeaders, TBody body, NameValueCollection query)
@@ -54,4 +54,3 @@ ERR: Exception has been thrown by the target of an invocation.
                 REMOTE: RULE: Error Password failed validation
         2:The remote server returned an error: (422) Unprocessable Entity.
 ```
-

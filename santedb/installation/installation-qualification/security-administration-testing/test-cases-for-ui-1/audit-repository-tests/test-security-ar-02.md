@@ -18,22 +18,21 @@ When a user is an actor involved in an audit event, a link can be followed to th
 ## Pre-Conditions / Setup
 
 1. User must have permission to view the list of other users.
-2. Follow the instructions from [TEST: SECURITY-AR-01](test-security-ar-01.md) to view the details of some **Audit Event** involving a user.
+2. Follow the instructions from [TEST: SECURITY-AR-01](test-security-ar-01.md) to view the details of some **Audit Event **involving a user.
 
 ## Actions/Steps
 
-1. Click on the **Users & Computers** accordion-panel heading.
+1\. Click on the **Users & Computers** accordion-panel heading.
 
-![](../../../../../../.gitbook/assets/image%20%28371%29.png)
+![](<../../../../../../.gitbook/assets/image (371).png>)
 
-2. Click on a user's **User Name** appearing in the list of **Users & Computers** \(e.g. "demoadmin"\).
+2\. Click on a user's **User Name **appearing in the list of **Users & Computers **(e.g. "demoadmin").
 
-![](../../../../../../.gitbook/assets/image%20%28358%29.png)
+![](<../../../../../../.gitbook/assets/image (358).png>)
 
 ## Expected Behaviour
 
-* Automatically navigate to the **Administration Panel / Security / Users / Index** page.
+* Automatically navigate to the **Administration Panel / Security / Users / Index **page.
 * Automatically enter search string to show the user that was clicked.
 
-![](../../../../../../.gitbook/assets/image%20%28354%29.png)
-
+![](<../../../../../../.gitbook/assets/image (354).png>)

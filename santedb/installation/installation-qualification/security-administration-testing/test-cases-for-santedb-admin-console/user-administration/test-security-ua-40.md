@@ -20,7 +20,7 @@ description: >-
 
 The `user.roles` command is for assigning roles to a user. 
 
-* The `-u` parameter is used to specify the **username** of which user to assign roles to. 
+* The `-u` parameter is used to specify the **username **of which user to assign roles to. 
 * The `-r` parameter is used to specify which **role** to assign to the specified user.
 
 ## Pre-Conditions / Setup
@@ -31,9 +31,9 @@ The `user.roles` command is for assigning roles to a user.
 
 ## Actions/Steps
 
-1.  Execute the `user.roles` command with `-u` parameter specified as an existing user and `-r` parameter specified as an existing role.
+1\.  Execute the `user.roles` command with `-u` parameter specified as an existing user and `-r` parameter specified as an existing role.
 
-```text
+```
 user.roles -u <existing username> -r <existing role>
 ```
 
@@ -41,14 +41,14 @@ user.roles -u <existing username> -r <existing role>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.roles -u TestUser123 -r USERS
 >
 ```
 
 * Check that all other roles are removed and only the one assigned appears:
 
-```text
+```
 > user.info -u TestUser123
 Name: TestUser123
 SID: 6f25da3a-e3da-11eb-bbaf-eb1f1d969e16
@@ -132,4 +132,3 @@ Roles: USERS
 {% hint style="warning" %}
 User information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

@@ -8,7 +8,7 @@ SanteMPI acts as a custodian of patient master identities, as such it is importa
 
 * OpenHIE Test Framework for HL7v2 Messages
 * IHE Technical Frameworks related to patient management:
-  *  [Patient Demographics Query for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)
+  *    [Patient Demographics Query for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PDQm.pdf)
   * [Patient Identity Cross Referencing for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PIXm.pdf)
   * [Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_PMIR.pdf)  
 
@@ -22,7 +22,7 @@ By default the test  cases use `http://localhost:8080` as the iCDR binding.
 
 ## Patient Registration Test Cases
 
-The test cases which involve the merging/creation/updating of patient can be submitted to SanteMPI in three ways. The create tests only specify the contents of a bundle/patient being tested, and do not include any wrapper \(such as MessageHeader\) specifications. 
+The test cases which involve the merging/creation/updating of patient can be submitted to SanteMPI in three ways. The create tests only specify the contents of a bundle/patient being tested, and do not include any wrapper (such as MessageHeader) specifications. 
 
 ### POST Patient Resource
 
@@ -40,7 +40,7 @@ Authorization: bearer XXXXXXX
 
 ### POST Transaction Bundle
 
-A transaction bundle can be POST\(ed\) directly to the FHIR Bundle endpoint with necessary information \(such as related persons, organizations, etc.\) as a transaction to the /fhir/Bundle endpoint. Such transactions are required to have the bundle type of "transaction" selected.
+A transaction bundle can be POST(ed) directly to the FHIR Bundle endpoint with necessary information (such as related persons, organizations, etc.) as a transaction to the /fhir/Bundle endpoint. Such transactions are required to have the bundle type of "transaction" selected.
 
 ```http
 POST http://sut:8080/fhir/Bundle HTTP/1.1
@@ -80,7 +80,7 @@ Authorization: bearer XXXXXXX
 
 The minimal bundle which is required to process a PMIR message has:
 
-* A `MessageHeader` with the appropriate PMIR operation type
+* A `MessageHeader `with the appropriate PMIR operation type
 * A single entry being a `Bundle`with type history
 
 ```javascript
@@ -134,9 +134,9 @@ The minimal bundle which is required to process a PMIR message has:
 
 Unfortunately some of the specified behaviors in PMIR are not fully compatible with SanteMPI. The SanteDB team will be working with stakeholders to submit change requests to the PMIR solution. The workarounds are listed below:
 
-#### Related Person in the &lt;link&gt; element
+#### Related Person in the \<link> element
 
-Section 3.93.4.1.2.5 describes a mechanism for linking `Patient` to `RelatedPerson`using the link mechanism on the `Patient` resource. Unfortunately, SanteDB reserves the link and seealso relationship types to distinguish between objects which are equivalent in some way \(i.e. Patient&gt;Patient, or Person&gt;Person\). When adding mother's or other person's information, it is recommended to use the native FHIR expression for these, namely, the `RelatedPerson` pointing at the `Patient` to which they are related via the `patient/reference` attribute. For example:
+Section 3.93.4.1.2.5 describes a mechanism for linking `Patient `to `RelatedPerson`using the link mechanism on the `Patient `resource. Unfortunately, SanteDB reserves the link and seealso relationship types to distinguish between objects which are equivalent in some way (i.e. Patient>Patient, or Person>Person). When adding mother's or other person's information, it is recommended to use the native FHIR expression for these, namely, the `RelatedPerson `pointing at the `Patient` to which they are related via the `patient/reference` attribute. For example:
 
 ```javascript
 {
@@ -169,11 +169,10 @@ Section 3.93.4.1.2.5 describes a mechanism for linking `Patient` to `RelatedPers
 
 #### Master Identity Merge
 
-SanteMPI maintains strict authority over which systems are permitted to perform `MASTER->MASTER` merges. The SanteMPI implementation of PMIR allows callers \(such as an EMR, LAB, HIS, etc.\) to merge only their own LOCAL records in a `LOCAL->LOCAL` merge using the `replaces` relationship type. 
+SanteMPI maintains strict authority over which systems are permitted to perform `MASTER->MASTER` merges. The SanteMPI implementation of PMIR allows callers (such as an EMR, LAB, HIS, etc.) to merge only their own LOCAL records in a `LOCAL->LOCAL` merge using the `replaces` relationship type. 
 
-Attempting to merge two master identities together will result in a new LOCAL record being established for the caller's data domain and a LOCAL-&gt;LOCAL merge occurring. In order to permit EMRs or other callers to perform MASTER-&gt;MASTER merge you should add the `Unrestricted MDM` policy to the application or device credentials for that caller. 
+Attempting to merge two master identities together will result in a new LOCAL record being established for the caller's data domain and a LOCAL->LOCAL merge occurring. In order to permit EMRs or other callers to perform MASTER->MASTER merge you should add the `Unrestricted MDM `policy to the application or device credentials for that caller. 
 
 {% hint style="info" %}
-Allowing MASTER-&gt;MASTER merging from external callers is not actively tested or maintained by the SanteMPI team, and should be used with caution as it allows any user on that application to have unrestricted control over the master identities in your SanteMPI deployment.
+Allowing MASTER->MASTER merging from external callers is not actively tested or maintained by the SanteMPI team, and should be used with caution as it allows any user on that application to have unrestricted control over the master identities in your SanteMPI deployment.
 {% endhint %}
-

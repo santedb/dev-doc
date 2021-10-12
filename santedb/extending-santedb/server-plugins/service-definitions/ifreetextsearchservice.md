@@ -10,9 +10,9 @@ Free text search service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Search | IEnumerable&lt;TEntity&gt; | _String\[\]_ **term** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _ModelSort\`1\[\]_ **orderBy** | Search based on tokens |
+| Operation | Response/Return       | Input/Parameter                                                                                                                                                                                                                                           | Description            |
+| --------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| Search    | IEnumerable\<TEntity> | <p><em>String[]</em> <strong>term</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>ModelSort`1[]</em> <strong>orderBy</strong></p> | Search based on tokens |
 
 ## Implementations
 
@@ -34,4 +34,3 @@ public class MyFreetextSearchService : SanteDB.Core.Services.IFreetextSearchServ
     }
 }
 ```
-

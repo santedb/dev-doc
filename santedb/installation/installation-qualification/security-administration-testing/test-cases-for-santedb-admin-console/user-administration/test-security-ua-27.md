@@ -23,9 +23,9 @@ The `user.info` command is for listing information about a user account and effe
 
 ## Actions/Steps
 
-1. Execute the `user.info` command with `-u` parameter specified as an existing username.
+1\. Execute the `user.info` command with `-u` parameter specified as an existing username.
 
-```text
+```
 user.info -u <existing username>
 ```
 
@@ -33,7 +33,7 @@ user.info -u <existing username>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.info -u demoadmin
 Name: demoadmin
 SID: 2a348c6e-c158-11ea-9f6f-00155d640b09
@@ -117,4 +117,3 @@ Roles: Test , TestyMcTester , TestGroup2 , ADMINISTRATORS , Muddsville
 {% hint style="warning" %}
 User information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

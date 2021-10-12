@@ -17,19 +17,19 @@ description: >-
 
 ## Discussion
 
-The `user.del` command is for de-activating users \(effectively deleting the user\) and has a single `-u` parameter for specifying **username** of user to delete. 
+The `user.del` command is for de-activating users (effectively deleting the user) and has a single `-u` parameter for specifying **username **of user to delete. 
 
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
 2. See [TEST: SECURITY-UA-02](test-security-ua-02.md) or [TEST: SECURITY-UA-03](test-security-ua-03.md) for checking if a username exists.
-3. See [TEST: SECURITY-UA-27](test-security-ua-27.md) for checking if a user is active \(un-deleted\).
+3. See [TEST: SECURITY-UA-27](test-security-ua-27.md) for checking if a user is active (un-deleted).
 
 ## Actions/Steps
 
-1. Execute the `user.del` command with `-u` parameter specified as an existing and active username.
+1\. Execute the `user.del` command with `-u` parameter specified as an existing and active username.
 
-```text
+```
 user.del -u <undeleted username>
 ```
 
@@ -37,14 +37,14 @@ user.del -u <undeleted username>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.del -u demoadmin
 >
 ```
 
-* Check for the user that was just de-activated \(deleted\) to verify:
+* Check for the user that was just de-activated (deleted) to verify:
 
-```text
+```
 > user.info -u demoadmin
 Name: demoadmin
 SID: 2a348c6e-c158-11ea-9f6f-00155d640b09
@@ -129,4 +129,3 @@ Roles: Test , TestyMcTester , TestGroup2 , ADMINISTRATORS , Muddsville
 {% hint style="warning" %}
 User information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

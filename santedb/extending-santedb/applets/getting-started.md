@@ -2,13 +2,13 @@
 
 In order to start writing your own applets you're going to need the following environment setup:
 
-* An HTML & JavaScript editor \(Microsoft Visual Studio Code works well\)
+* An HTML & JavaScript editor (Microsoft Visual Studio Code works well)
 * Windows Environments:
   * [Microsoft Visual C++ 2015 - 2019 Runtime](https://download.visualstudio.microsoft.com/download/pr/3b070396-b7fb-4eee-aa8b-102a23c3e4f4/40EA2955391C9EAE3E35619C4C24B5AAF3D17AEAA6D09424EE9672AA9372AEED/VC_redist.x64.exe)
   * .NET Framework 4.7.2 or higher
 * Linux / Mac Environments:
-  * Mono Framework \(if running on MacOS or Linux\) 
-* The SanteDB SDK \([https://github.com/santedb/santedb-sdk/releases](https://github.com/santedb/santedb-sdk/releases)\) 
+  * Mono Framework (if running on MacOS or Linux) 
+* The SanteDB SDK ([https://github.com/santedb/santedb-sdk/releases](https://github.com/santedb/santedb-sdk/releases)) 
 * Chrome or Edge are recommended for debugging
 * Optional: Setup a iCDR Server Instance
 
@@ -26,7 +26,7 @@ In Linux the installation procedure for the SDK requires installing mono. This c
 
 The software requires at least mono version 5.x , so after installation you can run `mono --version` to obtain the version code:
 
-```text
+```
 $ mono --version
 Mono JIT compiler version 6.12.0.90 (tarball Fri Sep  4 14:01:23 UTC 2020)
 Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
@@ -42,7 +42,7 @@ Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-proj
     GC:            sgen (concurrent by default)
 ```
 
-After the mono project is installed, you can extract the provided tarball to a directory of convenience \(like /opt/santedb-sdk or /usr/local/santedb-sdk\). All commands in this tutorial on Linux should be prefixed with mono, so for example:
+After the mono project is installed, you can extract the provided tarball to a directory of convenience (like /opt/santedb-sdk or /usr/local/santedb-sdk). All commands in this tutorial on Linux should be prefixed with mono, so for example:
 
 `mono /opt/santedb-sdk/sdb-ade.exe --help`
 
@@ -50,64 +50,64 @@ After the mono project is installed, you can extract the provided tarball to a d
 
 Next, you'll need to clone or create an applet. You can clone the starter applet from [https://github.com/santedb/applet-starter](https://github.com/santedb/applet-starter) in any directory of your choice.
 
-![](../../../.gitbook/assets/image%20%28193%29.png)
+![](<../../../.gitbook/assets/image (193).png>)
 
 ## Configuring the SDK
 
-Next, you'll need to configure the SDK to use a server endpoint. This endpoint is the iCDR to which your dCDR will connect. There are a variety of ways you can connect to the iCDR \(such as offline mode, etc.\) however we'll connect the SDK using online mode only. This means that your SDK environment will need to be connected to the internet and have contact with the remote server to function.
+Next, you'll need to configure the SDK to use a server endpoint. This endpoint is the iCDR to which your dCDR will connect. There are a variety of ways you can connect to the iCDR (such as offline mode, etc.) however we'll connect the SDK using online mode only. This means that your SDK environment will need to be connected to the internet and have contact with the remote server to function.
 
 We'll use the elbonia.santesuite.net server for our debugging. First we should launch the sdb-ade command which is the debugging tool for the dCDR:
 
-```text
+```
 sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-applet-starter
 ```
 
 This command instructs the applet debugging environment to:
 
-1. Include / reference the contents of the administrative portal \(--ref\)
+1. Include / reference the contents of the administrative portal (--ref)
 2. Debug the applet-starter directory
 
 {% hint style="info" %}
-If you want to debug the core applets you can clone the [https://github.com/santedb/applets](https://github.com/santedb/applets) directory and reference the solution file santedb.admin.sln.xml with --ref=&lt;path-to-applets&gt;/santedb.admin.sln.xml
+If you want to debug the core applets you can clone the [https://github.com/santedb/applets](https://github.com/santedb/applets) directory and reference the solution file santedb.admin.sln.xml with --ref=\<path-to-applets>/santedb.admin.sln.xml
 {% endhint %}
 
 If successful you should see the initial configuration window.
 
-![](../../../.gitbook/assets/image%20%28196%29.png)
+![](<../../../.gitbook/assets/image (196).png>)
 
 If you have a local iCDR server you would enter the details for this server now, for the Elbonia MPI the settings are:
 
-* address =&gt; elbonia.santesuite.net
-* Port =&gt; 8443
-* Use TLS =&gt; True
+* address => elbonia.santesuite.net
+* Port => 8443
+* Use TLS => True
 
 Upon clicking the join button you'll be prompted to enter the credentials of the user which is joining your dCDR device to the domain:
 
-![](../../../.gitbook/assets/image%20%28197%29.png)
+![](<../../../.gitbook/assets/image (197).png>)
 
 For the demonstration server you can use demoadmin/@Elbonia123 .
 
 If successful, you should receive a welcome message to the domain. You will then need to select a role, normally, when deploying the dCDR, this setting indicates the user interface and plugins that the client should download. For the SDK these settings are ignored.
 
-![](../../../.gitbook/assets/image%20%28194%29.png)
+![](<../../../.gitbook/assets/image (194).png>)
 
 After selecting the role, you must configure the synchronization settings. Using "Online Only" will allow you to get an SDK environment setup quickly that mimics the web portal installation.
 
 {% hint style="info" %}
-There are currently known issues with the Synchronized mode setup with some community plugins \(namely the reading of custom synchronization subscriptions\). It is recommended, for now, using Online Only option for development.
+There are currently known issues with the Synchronized mode setup with some community plugins (namely the reading of custom synchronization subscriptions). It is recommended, for now, using Online Only option for development.
 {% endhint %}
 
-![](../../../.gitbook/assets/image%20%28190%29.png)
+![](<../../../.gitbook/assets/image (190).png>)
 
 You can continue setup by accepting the defaults for the other pages. Some configuration notes:
 
-* Turn down logging to Errors and Warnings if you value your sanity \(and you want performance similar to production\)
-* You can turn off optimization if you receive errors about GZIP CRC checksums \(there is a known issue certain server middleware\)
-* If you're using a proxy \(like fiddler\) for debugging you should enter the full proxy address and port \(for fiddler use [http://localhost:8888\](http://localhost:8888\)\)
+* Turn down logging to Errors and Warnings if you value your sanity (and you want performance similar to production)
+* You can turn off optimization if you receive errors about GZIP CRC checksums (there is a known issue certain server middleware)
+* If you're using a proxy (like fiddler) for debugging you should enter the full proxy address and port (for fiddler use [http://localhost:8888\\](http://localhost:8888))
 
 Upon completion you will be instructed to restart the application host. This is done by pressing CTRL+C in the sdb-ade window and restarting it.
 
-![](../../../.gitbook/assets/image%20%28189%29.png)
+![](<../../../.gitbook/assets/image (189).png>)
 
 ## Hello World!
 
@@ -115,7 +115,7 @@ If you re-run the command `sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-
 
 To debug just the applet-starter applet you can instead reference just the core plugins:
 
-```text
+```
 sdb-ade --ref=santedb.core.sln.pak --applet=path-to-applet-starter
 ```
 
@@ -127,7 +127,7 @@ The login screen is shown because the index.html view demands login permission t
 
 After logging in, you should see the welcome message:
 
-![](../../../.gitbook/assets/image%20%28192%29.png)
+![](<../../../.gitbook/assets/image (192).png>)
 
 ### Code Editing
 
@@ -182,10 +182,10 @@ async function doSearch(searchForm) {
 This code:
 
 * Validates that the form has no issues
-* Calls the SanteDB API to find all patients \(SanteDB.resources.patient.findAsync\) who has any name \(name.component.value\) is approximately the output \(the ~ indicator\)
+* Calls the SanteDB API to find all patients (SanteDB.resources.patient.findAsync) who has any name (name.component.value) is approximately the output (the \~ indicator)
 * Assigns the results of the call to the scoped results variable
 
-![](../../../.gitbook/assets/image%20%28191%29.png)
+![](<../../../.gitbook/assets/image (191).png>)
 
 ### Next Steps
 
@@ -197,14 +197,13 @@ sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-elb-mpi
 
 When launching this you should be presented with the Elbonia customizations of the MPI administrative panel.
 
-![](../../../.gitbook/assets/image%20%28195%29.png)
+![](<../../../.gitbook/assets/image (195).png>)
 
 ### Useful Hints
 
 * You can reset your debugging environment with the `sdb-ade --reset` option
 * You can setup different servers/environments by adding the --name= option, for example, you can setup a PROD and STAGE debugging environment by using `sdb-ade --ref=XXX --name=PROD` and `sdb-ade --ref=YYY --name=STAGE`
 * You can change the configuration of your debugging environment and/or see offline files in the following directory:
-  * %localappdata%\log =&gt; Logs from the debugging environment
-  * %localappdata%\SDBADE =&gt; Data files \(databases, preferences, etc.\)
-  * %appdata%\SDBADE =&gt; Configuration files
-
+  * %localappdata%\log => Logs from the debugging environment
+  * %localappdata%\SDBADE => Data files (databases, preferences, etc.)
+  * %appdata%\SDBADE => Configuration files

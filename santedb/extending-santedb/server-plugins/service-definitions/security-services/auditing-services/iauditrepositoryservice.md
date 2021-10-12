@@ -10,16 +10,16 @@ Represents a service which can persist and retrieve audits
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Insert | AuditData | _AuditData_ **audit** | Insert an audit into the repository |
-| Find | IEnumerable&lt;AuditData&gt; | _Expression&lt;Func&lt;AuditData,Boolean&gt;&gt;_ **query** | Find an audit from the audit repository |
-| Get | AuditData | _Object_ **correlationKey** | Get the specified audit |
-| Find | IEnumerable&lt;AuditData&gt; | _Expression&lt;Func&lt;AuditData,Boolean&gt;&gt;_ **query** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _ModelSort\`1\[\]_ **orderBy** | Find an audit from the audit repository |
+| Operation | Response/Return         | Input/Parameter                                                                                                                                                                                                                                                                                 | Description                             |
+| --------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Insert    | AuditData               | _AuditData_ **audit**                                                                                                                                                                                                                                                                           | Insert an audit into the repository     |
+| Find      | IEnumerable\<AuditData> | _Expression\<Func\<AuditData,Boolean>>_ **query**                                                                                                                                                                                                                                               | Find an audit from the audit repository |
+| Get       | AuditData               | _Object_ **correlationKey**                                                                                                                                                                                                                                                                     | Get the specified audit                 |
+| Find      | IEnumerable\<AuditData> | <p><em>Expression&#x3C;Func&#x3C;AuditData,Boolean>></em> <strong>query</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>ModelSort`1[]</em> <strong>orderBy</strong></p> | Find an audit from the audit repository |
 
 ## Implementations
 
-### Default Audit Repository - \(SanteDB.Core\)
+### Default Audit Repository - (SanteDB.Core)
 
 Represents an audit repository which stores and queries audit data.
 
@@ -69,4 +69,3 @@ public class MyAuditRepositoryService : SanteDB.Core.Security.Services.IAuditRep
     }
 }
 ```
-

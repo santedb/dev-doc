@@ -21,17 +21,16 @@ After a **Policy** is added to the list of **Assigned Policies**, its **Permissi
 
 ## Actions/Steps
 
-1. Toggle **Permission** to **Denied**, corresponding to the **Policy** having denied permission**.**
+1\. Toggle **Permission** to **Denied**, corresponding to the **Policy** having denied permission**.**
 
-![](../../../../../../.gitbook/assets/image%20%28387%29.png)
+![](<../../../../../../.gitbook/assets/image (387).png>)
 
-2. Click the **Save** button.
+2\. Click the **Save** button.
 
-![](../../../../../../.gitbook/assets/image%20%28372%29.png)
+![](<../../../../../../.gitbook/assets/image (372).png>)
 
 ## Expected Behaviour
 
-* The **Permission** toggle button should switch to **Deny** being darkened \(selected\) for the corresponding **Policy**.
+* The **Permission** toggle button should switch to **Deny** being darkened (selected) for the corresponding **Policy**.
 
-![](../../../../../../.gitbook/assets/image%20%28340%29.png)
-
+![](<../../../../../../.gitbook/assets/image (340).png>)

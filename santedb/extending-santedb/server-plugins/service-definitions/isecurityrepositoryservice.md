@@ -10,28 +10,28 @@ Security repository service is responsible for the maintenance of security entit
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| ChangePassword | SecurityUser | _Guid_ **userId** _String_ **password** | Changes a user's password. |
-| GetProviderEntity | Provider | _IIdentity_ **identity** | Gets the specified provider entity from the specified identity |
-| CreateUser | SecurityUser | _SecurityUser_ **userInfo** _String_ **password** | Creates a user with a specified password. |
-| GetUser | SecurityUser | _String_ **userName** | Get a user by user name |
-| GetPolicy | SecurityPolicy | _String_ **policyOid** | Get the specified security policy by OID |
-| GetRole | SecurityRole | _String_ **roleName** | Gets a specific role. |
-| LockDevice | void | _Guid_ **key** | Locks a device principal |
-| LockApplication | void | _Guid_ **key** | Locks an application |
-| UnlockDevice | void | _Guid_ **key** | Removes a lock from a device |
-| UnlockApplication | void | _Guid_ **key** | Removes a lock from an application |
-| GetUser | SecurityUser | _IIdentity_ **identity** | Get a user by user name |
-| GetUserEntity | UserEntity | _IIdentity_ **identity** | Get the user entity |
-| LockUser | void | _Guid_ **userId** | Locks a specific user. |
-| UnlockUser | void | _Guid_ **userId** | Unlocks a specific user. |
-| GetProvenance | SecurityProvenance | _Guid_ **provenanceId** | Get the provenance object |
-| FindProvenance | IEnumerable&lt;SecurityProvenance&gt; | _Expression&lt;Func&lt;SecurityProvenance,Boolean&gt;&gt;_ **query** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _Guid_ **queryId** _ModelSort\`1\[\]_ **orderBy** | Find provenance objects matching the specified object |
+| Operation         | Response/Return                  | Input/Parameter                                                                                                                                                                                                                                                                                                                                    | Description                                                    |
+| ----------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| ChangePassword    | SecurityUser                     | <p><em>Guid</em> <strong>userId</strong><br><em>String</em> <strong>password</strong></p>                                                                                                                                                                                                                                                          | Changes a user's password.                                     |
+| GetProviderEntity | Provider                         | _IIdentity_ **identity**                                                                                                                                                                                                                                                                                                                           | Gets the specified provider entity from the specified identity |
+| CreateUser        | SecurityUser                     | <p><em>SecurityUser</em> <strong>userInfo</strong><br><em>String</em> <strong>password</strong></p>                                                                                                                                                                                                                                                | Creates a user with a specified password.                      |
+| GetUser           | SecurityUser                     | _String_ **userName**                                                                                                                                                                                                                                                                                                                              | Get a user by user name                                        |
+| GetPolicy         | SecurityPolicy                   | _String_ **policyOid**                                                                                                                                                                                                                                                                                                                             | Get the specified security policy by OID                       |
+| GetRole           | SecurityRole                     | _String_ **roleName**                                                                                                                                                                                                                                                                                                                              | Gets a specific role.                                          |
+| LockDevice        | void                             | _Guid_ **key**                                                                                                                                                                                                                                                                                                                                     | Locks a device principal                                       |
+| LockApplication   | void                             | _Guid_ **key**                                                                                                                                                                                                                                                                                                                                     | Locks an application                                           |
+| UnlockDevice      | void                             | _Guid_ **key**                                                                                                                                                                                                                                                                                                                                     | Removes a lock from a device                                   |
+| UnlockApplication | void                             | _Guid_ **key**                                                                                                                                                                                                                                                                                                                                     | Removes a lock from an application                             |
+| GetUser           | SecurityUser                     | _IIdentity_ **identity**                                                                                                                                                                                                                                                                                                                           | Get a user by user name                                        |
+| GetUserEntity     | UserEntity                       | _IIdentity_ **identity**                                                                                                                                                                                                                                                                                                                           | Get the user entity                                            |
+| LockUser          | void                             | _Guid_ **userId**                                                                                                                                                                                                                                                                                                                                  | Locks a specific user.                                         |
+| UnlockUser        | void                             | _Guid_ **userId**                                                                                                                                                                                                                                                                                                                                  | Unlocks a specific user.                                       |
+| GetProvenance     | SecurityProvenance               | _Guid_ **provenanceId**                                                                                                                                                                                                                                                                                                                            | Get the provenance object                                      |
+| FindProvenance    | IEnumerable\<SecurityProvenance> | <p><em>Expression&#x3C;Func&#x3C;SecurityProvenance,Boolean>></em> <strong>query</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>Guid</em> <strong>queryId</strong><br><em>ModelSort`1[]</em> <strong>orderBy</strong></p> | Find provenance objects matching the specified object          |
 
 ## Implementations
 
-### LocalSecurityRepositoryService - \(SanteDB.Core\)
+### LocalSecurityRepositoryService - (SanteDB.Core)
 
 Represents a security repository service that uses the direct local services
 
@@ -153,4 +153,3 @@ public class MySecurityRepositoryService : SanteDB.Core.Services.ISecurityReposi
     }
 }
 ```
-

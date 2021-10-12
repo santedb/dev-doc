@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application ****with a name parameter that is a duplicate record.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application** **with a name parameter that is a duplicate record.
 
 ## Pre-Conditions / Setup
 
@@ -20,9 +20,9 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use "**application.add**" command followed by a name that is a duplicate record \(for example: "Create-Application-Test"\)
+1- Use "**application.add**" command followed by a name that is a duplicate record (for example: "Create-Application-Test")
 
-```text
+```
 > application.add Create-Application-Test
 ```
 
@@ -30,7 +30,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Should show : "Application secret: ..." followed by an Error message indicating that duplicate key value violates unique constraint.
 
-```text
+```
 > application.add Create-Application-Test
 Application secret: 7524EE054493
 E:System.Net.WebException: The remote server returned an error: (422) Unprocessable Entity.
@@ -43,4 +43,3 @@ ERR: Exception has been thrown by the target of an invocation.
         2:The remote server returned an error: (422) Unprocessable Entity.
 >
 ```
-

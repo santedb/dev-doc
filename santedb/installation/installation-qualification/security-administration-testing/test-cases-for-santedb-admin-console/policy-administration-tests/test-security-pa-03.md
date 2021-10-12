@@ -18,35 +18,35 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by object parameter:"**-a" \(**or **"--application"\)** followed ****by the application\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) to apply followed by "**-e**" \(or "**--rule**"\) followed by the action to take \(0/deny, 1/elevate, 2/grant\).
+1- Use the "**policy.assign**" command followed by object parameter:"**-a" (**or** "--application") **followed** **by the application(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) to apply followed by "**-e**" (or "**--rule**") followed by the action to take (0/deny, 1/elevate, 2/grant).
 
 {% hint style="info" %}
-If you don't specify the action to take \("e" or "--rule" parameter\) then the default action would be "deny".
+If you don't specify the action to take ("e" or "--rule" parameter) then the default action would be "deny".
 {% endhint %}
 
-```text
+```
 > policy.assign -a Create-Application-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 1
 ```
 
 2- **Test Validation**: Use "**application.info**" command followed by application name.
 
-```text
+```
 > application.info Create-Application-Test
 ```
 
 ## Expected Behaviour
 
-1- Should appear "the action \(Deny or Elevate or Grant\)"  followed by "policy name" followed by "application name".
+1- Should appear "the action (Deny or Elevate or Grant)"  followed by "policy name" followed by "application name".
 
-```text
+```
 > policy.assign -a Create-Application-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 1
 Elevate: Override Disclosure TO Create-Application-Test
 >
 ```
 
-2- Should the assigned policy \("Override Disclosure"\) appear in the Effective Policies row:
+2- Should the assigned policy ("Override Disclosure") appear in the Effective Policies row:
 
-```text
+```
 > application.info Create-Application-Test
 Name: Create-Application-Test
 SID: a01a3472-d36f-11eb-8248-00155d640b09
@@ -123,4 +123,3 @@ Updated: 2021-07-05T03:17:09.1743860-04:00 (demoadmin)
                 SUPER SECRET DISCLOSURE [2.25.3049340304933] : --- (default DENY)
 >
 ```
-

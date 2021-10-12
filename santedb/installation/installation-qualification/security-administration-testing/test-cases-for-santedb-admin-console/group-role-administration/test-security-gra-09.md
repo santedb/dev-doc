@@ -19,8 +19,8 @@ description: >-
 
 The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**. 
 
-* The `-r` parameter is used to specify which **role** to display information and effective policies from.
-* The `-g` parameter is used to specify which **policy** to explicitly grant the new role being added.
+* The `-r` parameter is used to specify which **role **to display information and effective policies from.
+* The `-g` parameter is used to specify which **policy **to explicitly grant the new role being added.
 
 ## Pre-Conditions / Setup
 
@@ -32,7 +32,7 @@ The `role.add` command is for adding a new role and has 1 required parameter tha
 
 1. Execute the `role.add` command with `-r` parameter specified as non-existing role and `-g` parameter specified as an existing policy.
 
-```text
+```
 role.add -r <new role name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999
 ```
 
@@ -40,14 +40,14 @@ role.add -r <new role name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.info -r TestRole01
 >
 ```
 
 * Check that the newly created role has the specified policy explicitly granted:
 
-```text
+```
 > role.info -r TestRole01
 Name: TestRole01
 SID: 7a3cb428-e3f0-11eb-bbaf-eb1f1d969e16
@@ -126,4 +126,3 @@ Updated: 2021-07-13T11:39:15.0919660-04:00 (Administrator)
 {% hint style="warning" %}
 Role information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

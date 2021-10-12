@@ -10,14 +10,14 @@ Represents the patient repository service. This service is responsible for ensur
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Merge | Patient | _Patient_ **survivor** _Patient_ **victim** | Merges two patients together |
-| UnMerge | Patient | _Patient_ **patient** _Guid_ **versionKey** | Un-merges two patients from each other |
+| Operation | Response/Return | Input/Parameter                                                                               | Description                            |
+| --------- | --------------- | --------------------------------------------------------------------------------------------- | -------------------------------------- |
+| Merge     | Patient         | <p><em>Patient</em> <strong>survivor</strong><br><em>Patient</em> <strong>victim</strong></p> | Merges two patients together           |
+| UnMerge   | Patient         | <p><em>Patient</em> <strong>patient</strong><br><em>Guid</em> <strong>versionKey</strong></p> | Un-merges two patients from each other |
 
 ## Implementations
 
-### LocalPatientRepository - \(SanteDB.Core\)
+### LocalPatientRepository - (SanteDB.Core)
 
 Local patient repository service
 
@@ -55,4 +55,3 @@ public class MyPatientRepositoryService : SanteDB.Core.Services.IPatientReposito
     }
 }
 ```
-

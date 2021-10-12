@@ -6,7 +6,7 @@ Because of this, there are several implementation notes which are important to r
 
 ### Resource URLS and ID
 
-When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl` property which point to an absolute URL where the resource originated and/or was referenced. For example:
+When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl `property which point to an absolute URL where the resource originated and/or was referenced. For example:
 
 ```javascript
 {
@@ -24,12 +24,12 @@ When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl` 
 
 In SanteDB this fullUrl is replaced with the internal URL on the SanteDB server once submitted. For example, after submission `Patient/3` would carry a `fullUrl` of `http://santedb_server/fhir/Patient/95569551-5abd-4484-be52-4c6986c4beb7` and an `id` of `95569551-5abd-4484-be52-4c6986c4beb7` . 
 
-The FHIR message processor only tracks `http://example.com/fhir/Patient/3` in order to resolve references within the same message transaction, this is not stored in the database unless the identifier is a UUID in which case the `id` element will be used as the suggested UUID for inserting the patient \(i.e. update if the UUID exists, or use the UUID if it doesn't\). 
+The FHIR message processor only tracks `http://example.com/fhir/Patient/3` in order to resolve references within the same message transaction, this is not stored in the database unless the identifier is a UUID in which case the `id` element will be used as the suggested UUID for inserting the patient (i.e. update if the UUID exists, or use the UUID if it doesn't). 
 
 There are several reasons that SanteDB doesn't store this information:
 
 1. The `fullUrl` may be a fully qualified URL, may be an OID, a UUID, or a relative URL which have different semantic meanings in the iCDR instance.
-2. It is nearly impossible to determine if any random client is sending`id` from the perspective of itself \(i.e. my internal reference for this record is X and I am sharing it with the server\), or if it is from the perspective of the iCDR \(i.e. I have fetched this resource from you and am using your identifier\). 
+2. It is nearly impossible to determine if any random client is sending`id` from the perspective of itself (i.e. my internal reference for this record is X and I am sharing it with the server), or if it is from the perspective of the iCDR (i.e. I have fetched this resource from you and am using your identifier). 
 3. Simple structured identifiers and fullUrls have no concrete meaning , for example `SYSTEM_A` sending a `Patient` with a relative URL of`Patient/1` and `SYSTEM_B` sending `Patient/1`. The actual record being updated cannot be reliably resolved with ID `1` or even `Patient/1` so mis-identification is a serious risk.
 4. While it would be possible to store the `fullUrl` for an object stored as a bundle, objects submitted via simple `POST` operations via REST to the SanteDB iCDR instance would not have this contextual identifier, and would merely carry an `id` element, making referencing the object impossible.
 
@@ -41,10 +41,10 @@ The behavior of the logical id and full URL are aligned with the [FHIR behaviors
 
 In FHIR, it is possible to link to clinical data hosted offsite, or on another server. There are several reasons why this is a bad practice:
 
-* Internal processes within SanteDB wouldn't have information necessary to action the object \(such as matching, de-duplication, etc.\)
+* Internal processes within SanteDB wouldn't have information necessary to action the object (such as matching, de-duplication, etc.)
 * There would be no way for the dCDR instances to actually acquire the information to populate the user interface since offsite references **assume** that an internet connection is available to fetch the resource
 * There is an assumption made that the offsite server will be accessible at all times from all clients which may consume the information, this is often not the case.
-* There is a dependency on another system to be present, the identifier / resource to be valid \(not removed as part of a merge/move operation, etc.\)
+* There is a dependency on another system to be present, the identifier / resource to be valid (not removed as part of a merge/move operation, etc.)
 
 Consider the following request to create a patient
 
@@ -131,7 +131,7 @@ In FHIR a `Reference` object is used to link two resources together in a role. T
 
 #### Reference By UUID
 
-Referencing an object by UUID is the most preferred mechanism of resource referencing. Resources which are linked by UUID are first cross referenced in the current processing scope \(the bundle\), followed by database linkage. Reference by UUID is commonly represented as:
+Referencing an object by UUID is the most preferred mechanism of resource referencing. Resources which are linked by UUID are first cross referenced in the current processing scope (the bundle), followed by database linkage. Reference by UUID is commonly represented as:
 
 ```javascript
 "someReference" : {
@@ -139,7 +139,7 @@ Referencing an object by UUID is the most preferred mechanism of resource refere
 }
 ```
 
-Alternately, if you're not picky about what the reference type is \(i.e. it could be any entity, but it is a known entity to SanteDB\) you can use a plain UUID reference:
+Alternately, if you're not picky about what the reference type is (i.e. it could be any entity, but it is a known entity to SanteDB) you can use a plain UUID reference:
 
 ```javascript
 "someReference" : {
@@ -178,8 +178,8 @@ Business identifier references are also supported by the reference resolver:
 Referencing an object which is being processed within the same scope is also permitted. The reference is subject to the following limitations:
 
 1. The `reference` property must exactly match the `fullUrl` property in the bundle
-2. The `reference` objects must exist **in order** , i.e. a `RelatedPerson` which has a reference of `Patient/1` must exist **after** the `Patient` ****with `fullUrl` of `Patient/1` in the bundle
-3. No circular references are permitted \(i.e. `Patient/2` with `link` to `RelatedPerson/1` with a link to `Patient/1` which in-turn links to `Patient/2` \)
+2. The `reference` objects must exist **in order** , i.e. a `RelatedPerson` which has a reference of `Patient/1` must exist **after** the `Patient`** **with `fullUrl` of `Patient/1` in the bundle
+3. No circular references are permitted (i.e. `Patient/2` with `link` to `RelatedPerson/1` with a link to `Patient/1` which in-turn links to `Patient/2` )
 
 ```javascript
 "entry": [
@@ -271,7 +271,7 @@ For example, consider the registration of a patient and a related person:
     }
 ```
 
-Upon sending this bundle to the server, the iCDR will create a new `Patient` \(example: `Patient/UUIDA`\) and a new `Person` \(example: `Person/UUIDB`\) which is related via an `EntityRelationship`. If a client re-submits this exact bundle, the iCDR will \(once again\) register a new `Patient` \(example: `Patient/UUIDC` \) and a new `Person` \(example: `Person/UUIDD`\).
+Upon sending this bundle to the server, the iCDR will create a new `Patient` (example: `Patient/UUIDA`) and a new `Person` (example: `Person/UUIDB`) which is related via an `EntityRelationship`. If a client re-submits this exact bundle, the iCDR will (once again) register a new `Patient` (example: `Patient/UUIDC` ) and a new `Person` (example: `Person/UUIDD`).
 
 If, however only one of the resources contained a reliable identifier, such as the patient in this example:
 
@@ -339,9 +339,9 @@ If, however only one of the resources contained a reliable identifier, such as t
     }
 ```
 
-Then the behavior is modified such that an initial submission results in a `Patient` with business identifier `FHR-4040` \(example: `Patient/UUIDA`\) and a `Person` \(example: `Person/UUIDB`\) related to one another via an `EntityRelationship`.
+Then the behavior is modified such that an initial submission results in a `Patient` with business identifier `FHR-4040` (example: `Patient/UUIDA`) and a `Person` (example: `Person/UUIDB`) related to one another via an `EntityRelationship`.
 
-If the client resubmits this bundle, the CDR is able to cross-reference the `Patient` \(as it has a business identifier of `FHR-4040`\) and would perform an update \(on `Patient/UUIDA`\) however since the `RelatedPerson` cannot be reliably referenced to a known object, a new `Person` would be created \(example: `Person/UUIDC`\) related to the `Patient` via an `EntityRelationship`.
+If the client resubmits this bundle, the CDR is able to cross-reference the `Patient` (as it has a business identifier of `FHR-4040`) and would perform an update (on `Patient/UUIDA`) however since the `RelatedPerson` cannot be reliably referenced to a known object, a new `Person` would be created (example: `Person/UUIDC`) related to the `Patient` via an `EntityRelationship`.
 
 The end state of this message would be:
 
@@ -446,4 +446,3 @@ Or to give each a UUID as their identifier:
       }
     }
 ```
-

@@ -16,7 +16,7 @@ description: Testing the user.add command with existing role with -r parameter o
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**. 
 
-* The `-r` parameter is used to specify an existing **role** to assign to the user being newly added. 
+* The `-r` parameter is used to specify an existing **role **to assign to the user being newly added. 
 * An exception should be thrown when no new username is specified.
 
 ## Pre-Conditions / Setup
@@ -26,9 +26,9 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 ## Actions/Steps
 
-1. Execute the `user.add` command with `-r` parameter specified as an existing role.
+1\. Execute the `user.add` command with `-r` parameter specified as an existing role.
 
-```text
+```
 user.add -r <existing role>
 ```
 
@@ -36,9 +36,8 @@ user.add -r <existing role>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.add -r USERS
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

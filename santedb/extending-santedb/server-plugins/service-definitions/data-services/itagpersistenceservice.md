@@ -10,13 +10,13 @@ Taggable persistence service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Save | void | _Guid_ **sourceKey** _ITag_ **tag** | Save tag to source key |
+| Operation | Response/Return | Input/Parameter                                                                       | Description            |
+| --------- | --------------- | ------------------------------------------------------------------------------------- | ---------------------- |
+| Save      | void            | <p><em>Guid</em> <strong>sourceKey</strong><br><em>ITag</em> <strong>tag</strong></p> | Save tag to source key |
 
 ## Implementations
 
-### Local Tag Persistence - \(SanteDB.Core\)
+### Local Tag Persistence - (SanteDB.Core)
 
 Tag persistence service for act
 
@@ -48,4 +48,3 @@ public class MyTagPersistenceService : SanteDB.Core.Services.ITagPersistenceServ
     }
 }
 ```
-

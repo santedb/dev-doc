@@ -16,18 +16,18 @@ This configuration option is only recommended if it is impossible to use X509 ce
 
 When the `Msh8` option is specified for security mode, then SanteDB server will use the following authentication strategy:
 
-| MSH-8 | App ID | App Secret | Dev ID | Dev Secret |
-| :--- | :--- | :--- | :--- | :--- |
-| `FOO+BAR` | `MSH-3` | `BAR`  | `MSH-3|MSH-4` | `FOO`  |
-| `FOOBAR` | `MSH-3` | `noAuthSecret` | `MSH-3|MSH-4` | `FOOBAR` |
+| MSH-8     | App ID  | App Secret     | Dev ID         | Dev Secret |
+| --------- | ------- | -------------- | -------------- | ---------- |
+| `FOO+BAR` | `MSH-3` | `BAR`          | `MSH-3\|MSH-4` | `FOO`      |
+| `FOOBAR`  | `MSH-3` | `noAuthSecret` | `MSH-3\|MSH-4` | `FOOBAR`   |
 
 ### SFT-4 Authentication
 
 When `Sft4` is used as the security mode, then SanteDB server will use the following authentication strategy:
 
-| App ID | App Secret | Dev ID | Dev Secret |
-| :--- | :--- | :--- | :--- |
-| `MSH-3` | `SFT-4`  | `MSH-3|MSH-4` | `MSH-8`  |
+| App ID  | App Secret | Dev ID         | Dev Secret |
+| ------- | ---------- | -------------- | ---------- |
+| `MSH-3` | `SFT-4`    | `MSH-3\|MSH-4` | `MSH-8`    |
 
 {% hint style="info" %}
 SFT-4 is only supported on newer version of HL7 and should not generally be used unless a reliable software binary value is provided.
@@ -47,13 +47,11 @@ If your use case requires remote servers to enforce client authentication using 
 
 When using X.509 authentication the HL7 message handler will use the `MSH-3|MSH-4` value as the device name and the thumbprint of the selected X.509 certificate as the secret. Additionally, the X.509 certificate must have a chain which includes the certificate indicated in `<clientAuthorityCertificate`.
 
-When node authentication is perform using certificates, the value of the `securityMode` attribute dictates the authentication strategy for the application \(`MSH-3`\). Where:
+When node authentication is perform using certificates, the value of the `securityMode` attribute dictates the authentication strategy for the application (`MSH-3`). Where:
 
-| Security Mode | Authentication |
-| :--- | :--- |
-| None | No application authentication is performed - the system application is used |
-| Msh8 | The entire value of the `MSH-8` segment is used as the client secret for the application |
-| Sft4 | The entire value of the `SFT-4` segment is used as the client secret for the application |
-
-
+| Security Mode | Authentication                                                                           |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| None          | No application authentication is performed - the system application is used              |
+| Msh8          | The entire value of the `MSH-8` segment is used as the client secret for the application |
+| Sft4          | The entire value of the `SFT-4` segment is used as the client secret for the application |
 

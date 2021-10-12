@@ -10,14 +10,14 @@ A caching service which permits the storage of any data regardless of type
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Add | void | _String_ **key** _T_ **value** _Nullable&lt;TimeSpan&gt;_ **timeout** | Add the specified object to the cache |
-| Get | T | _String_ **key** | Gets the specified object from the cache |
+| Operation | Response/Return | Input/Parameter                                                                                                                               | Description                              |
+| --------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| Add       | void            | <p><em>String</em> <strong>key</strong><br><em>T</em> <strong>value</strong><br><em>Nullable&#x3C;TimeSpan></em> <strong>timeout</strong></p> | Add the specified object to the cache    |
+| Get       | T               | _String_ **key**                                                                                                                              | Gets the specified object from the cache |
 
 ## Implementations
 
-### RedisAdhocCache - \(SanteDB.Caching.Redis\)
+### RedisAdhocCache - (SanteDB.Caching.Redis)
 
 TODO: Document this
 
@@ -55,4 +55,3 @@ public class MyAdhocCacheService : SanteDB.Core.Services.IAdhocCacheService {
     }
 }
 ```
-

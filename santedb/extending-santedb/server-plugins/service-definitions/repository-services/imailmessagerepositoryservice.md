@@ -10,24 +10,24 @@ Represents an alerting service.
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Committed | EventHandler&lt;MailMessageEventArgs&gt; | Fired when an alert is received. |
-| Received | EventHandler&lt;MailMessageEventArgs&gt; | Fired when an alert was raised and is being processed. |
+| Event     | Type                                | Description                                            |
+| --------- | ----------------------------------- | ------------------------------------------------------ |
+| Committed | EventHandler\<MailMessageEventArgs> | Fired when an alert is received.                       |
+| Received  | EventHandler\<MailMessageEventArgs> | Fired when an alert was raised and is being processed. |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Broadcast | void | _MailMessage_ **message** | Broadcasts an alert. |
-| Find | IEnumerable&lt;MailMessage&gt; | _Expression&lt;Func&lt;MailMessage,Boolean&gt;&gt;_ **predicate** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalCount** _ModelSort\`1\[\]_ **orderBy** | Searches for alerts. |
-| Get | MailMessage | _Guid_ **id** | Gets an alert. |
-| Insert | MailMessage | _MailMessage_ **message** | Inserts an alert message. |
-| Save | MailMessage | _MailMessage_ **message** | Saves an alert. |
+| Operation | Response/Return           | Input/Parameter                                                                                                                                                                                                                                                                                     | Description               |
+| --------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| Broadcast | void                      | _MailMessage_ **message**                                                                                                                                                                                                                                                                           | Broadcasts an alert.      |
+| Find      | IEnumerable\<MailMessage> | <p><em>Expression&#x3C;Func&#x3C;MailMessage,Boolean>></em> <strong>predicate</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalCount</strong><br><em>ModelSort`1[]</em> <strong>orderBy</strong></p> | Searches for alerts.      |
+| Get       | MailMessage               | _Guid_ **id**                                                                                                                                                                                                                                                                                       | Gets an alert.            |
+| Insert    | MailMessage               | _MailMessage_ **message**                                                                                                                                                                                                                                                                           | Inserts an alert message. |
+| Save      | MailMessage               | _MailMessage_ **message**                                                                                                                                                                                                                                                                           | Saves an alert.           |
 
 ## Implementations
 
-### Local Mail Message - \(SanteDB.Core\)
+### Local Mail Message - (SanteDB.Core)
 
 Represents a local alert service.
 
@@ -91,4 +91,3 @@ public class MyMailMessageRepositoryService : SanteDB.Core.Services.IMailMessage
     }
 }
 ```
-

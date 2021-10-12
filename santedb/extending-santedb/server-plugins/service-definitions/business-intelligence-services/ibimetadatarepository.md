@@ -10,16 +10,16 @@ Represents a metadata repository for the BIS services
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Query | IEnumerable&lt;TBisDefinition&gt; | _Expression&lt;Func&lt;TBisDefinition,Boolean&gt;&gt;_ **filter** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** | Query metadata repository for |
-| Get | TBisDefinition | _String_ **id** | Get the specified BI definition by identifier |
-| Remove | void | _String_ **id** | Removes the specified BI definition from the repository |
-| Insert | TBisDefinition | _TBisDefinition_ **metadata** | Inserts the specified BI definition into the repository |
+| Operation | Response/Return              | Input/Parameter                                                                                                                                                                              | Description                                             |
+| --------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Query     | IEnumerable\<TBisDefinition> | <p><em>Expression&#x3C;Func&#x3C;TBisDefinition,Boolean>></em> <strong>filter</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong></p> | Query metadata repository for                           |
+| Get       | TBisDefinition               | _String_ **id**                                                                                                                                                                              | Get the specified BI definition by identifier           |
+| Remove    | void                         | _String_ **id**                                                                                                                                                                              | Removes the specified BI definition from the repository |
+| Insert    | TBisDefinition               | _TBisDefinition_ **metadata**                                                                                                                                                                | Inserts the specified BI definition into the repository |
 
 ## Implementations
 
-### AppletBiRepository - \(SanteDB.BI\)
+### AppletBiRepository - (SanteDB.BI)
 
 Represents a default implementation of a BIS metadata repository which loads definitions from loaded applets
 
@@ -35,7 +35,7 @@ Represents a default implementation of a BIS metadata repository which loads def
     </serviceProviders>
 ```
 
-### File Based BI Repository - \(SanteDB.Tools.Debug\)
+### File Based BI Repository - (SanteDB.Tools.Debug)
 
 TODO: Document this
 
@@ -85,4 +85,3 @@ public class MyBiMetadataRepository : SanteDB.BI.Services.IBiMetadataRepository 
     }
 }
 ```
-

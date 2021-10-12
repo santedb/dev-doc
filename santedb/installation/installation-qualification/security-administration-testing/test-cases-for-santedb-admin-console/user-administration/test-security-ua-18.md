@@ -16,7 +16,7 @@ description: >-
 
 ## Discussion
 
-The `user.del` command is for de-activating users \(effectively deleting the user\) and has a single `-u` parameter for specifying **username** of user to delete. 
+The `user.del` command is for de-activating users (effectively deleting the user) and has a single `-u` parameter for specifying **username **of user to delete. 
 
 * An exception is thrown when a non-existing username is specified.
 
@@ -27,9 +27,9 @@ The `user.del` command is for de-activating users \(effectively deleting the use
 
 ## Actions/Steps
 
-1. Execute the `user.del` command with `-u` parameter specified as a new username.
+1\. Execute the `user.del` command with `-u` parameter specified as a new username.
 
-```text
+```
 user.del -u <new user name>
 ```
 
@@ -37,9 +37,8 @@ user.del -u <new user name>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.del -u not_a_user
 ERR: Exception has been thrown by the target of an invocation.
         1:User not_a_user not found
 ```
-

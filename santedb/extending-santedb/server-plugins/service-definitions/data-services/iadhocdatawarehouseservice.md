@@ -10,32 +10,32 @@ Represents a simple data warehousing service which allows business rules to stas
 
 ## Properties
 
-| Property | Type | Access | Description |
-| :--- | :--- | :--- | :--- |
-| DataProvider | String | R | Gets the provider mnemonic |
+| Property     | Type   | Access | Description                |
+| ------------ | ------ | ------ | -------------------------- |
+| DataProvider | String | R      | Gets the provider mnemonic |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| CreateDatamart | DatamartDefinition | _String_ **name** _Object_ **schema** | Creates an ad-hoc datamart which is not based on an ETL process, rather created            by a trigger. |
-| GetDatamarts | List&lt;DatamartDefinition&gt; |  | TODO |
-| GetDatamart | DatamartDefinition | _String_ **name** | Gets the specified datamart |
-| GetDatamart | DatamartDefinition | _Guid_ **id** | Gets the specified datamart |
-| DeleteDatamart | void | _Guid_ **datamartId** | Deletes a datamart |
-| Truncate | void | _Guid_ **datamartId** | Truncates \(drops all data\) the specified data mart |
-| Get | Object | _Guid_ **datamartId** _Guid_ **tupleId** | Gets data from an ad-hoc data mart |
-| AdhocQuery | IEnumerable&lt;Object&gt; | _String_ **queryText** | Executes the specified query |
-| AdhocQuery | IEnumerable&lt;Object&gt; | _Guid_ **datamartId** _Object_ **filterParameters** | Executes the specified query |
-| AdhocQuery | IEnumerable&lt;Object&gt; | _Guid_ **datamartId** _Object_ **filterParameters** _Int32_ **offset** _Int32_ **count** _Int32&_ **totalResults** | Executes the specified query |
-| CreateStoredQuery | DatamartStoredQuery | _Guid_ **datamartId** _Object_ **queryDefinition** | Create the specified stored query on the warehouse provider |
-| StoredQuery | IEnumerable&lt;Object&gt; | _Guid_ **datamartId** _String_ **queryId** _Object_ **queryParameters** _Int32_ **offset** _Int32_ **count** _Int32&_ **totalResults** | Executes a predefined query against a datamart |
-| Add | Guid | _Guid_ **datamartId** _Object_ **obj** | Adds the specified object to the specified datamart returning the tupleId |
-| Delete | void | _Guid_ **datamartId** _Object_ **matchingQuery** | Delete a tuple from the datamart |
+| Operation         | Response/Return           | Input/Parameter                                                                                                                                                                                                                                                                           | Description                                                                                              |
+| ----------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| CreateDatamart    | DatamartDefinition        | <p><em>String</em> <strong>name</strong><br><em>Object</em> <strong>schema</strong></p>                                                                                                                                                                                                   | Creates an ad-hoc datamart which is not based on an ETL process, rather created            by a trigger. |
+| GetDatamarts      | List\<DatamartDefinition> |                                                                                                                                                                                                                                                                                           | TODO                                                                                                     |
+| GetDatamart       | DatamartDefinition        | _String_ **name**                                                                                                                                                                                                                                                                         | Gets the specified datamart                                                                              |
+| GetDatamart       | DatamartDefinition        | _Guid_ **id**                                                                                                                                                                                                                                                                             | Gets the specified datamart                                                                              |
+| DeleteDatamart    | void                      | _Guid_ **datamartId**                                                                                                                                                                                                                                                                     | Deletes a datamart                                                                                       |
+| Truncate          | void                      | _Guid_ **datamartId**                                                                                                                                                                                                                                                                     | Truncates (drops all data) the specified data mart                                                       |
+| Get               | Object                    | <p><em>Guid</em> <strong>datamartId</strong><br><em>Guid</em> <strong>tupleId</strong></p>                                                                                                                                                                                                | Gets data from an ad-hoc data mart                                                                       |
+| AdhocQuery        | IEnumerable\<Object>      | _String_ **queryText**                                                                                                                                                                                                                                                                    | Executes the specified query                                                                             |
+| AdhocQuery        | IEnumerable\<Object>      | <p><em>Guid</em> <strong>datamartId</strong><br><em>Object</em> <strong>filterParameters</strong></p>                                                                                                                                                                                     | Executes the specified query                                                                             |
+| AdhocQuery        | IEnumerable\<Object>      | <p><em>Guid</em> <strong>datamartId</strong><br><em>Object</em> <strong>filterParameters</strong><br><em>Int32</em> <strong>offset</strong><br><em>Int32</em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong></p>                                            | Executes the specified query                                                                             |
+| CreateStoredQuery | DatamartStoredQuery       | <p><em>Guid</em> <strong>datamartId</strong><br><em>Object</em> <strong>queryDefinition</strong></p>                                                                                                                                                                                      | Create the specified stored query on the warehouse provider                                              |
+| StoredQuery       | IEnumerable\<Object>      | <p><em>Guid</em> <strong>datamartId</strong><br><em>String</em> <strong>queryId</strong><br><em>Object</em> <strong>queryParameters</strong><br><em>Int32</em> <strong>offset</strong><br><em>Int32</em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong></p> | Executes a predefined query against a datamart                                                           |
+| Add               | Guid                      | <p><em>Guid</em> <strong>datamartId</strong><br><em>Object</em> <strong>obj</strong></p>                                                                                                                                                                                                  | Adds the specified object to the specified datamart returning the tupleId                                |
+| Delete            | void                      | <p><em>Guid</em> <strong>datamartId</strong><br><em>Object</em> <strong>matchingQuery</strong></p>                                                                                                                                                                                        | Delete a tuple from the datamart                                                                         |
 
 ## Implementations
 
-### ADO.NET Ad-Hoc Data Warehouse Service - \(SanteDB.Warehouse.ADO\)
+### ADO.NET Ad-Hoc Data Warehouse Service - (SanteDB.Warehouse.ADO)
 
 TODO: Document this
 
@@ -148,4 +148,3 @@ public class MyAdHocDatawarehouseService : SanteDB.Core.Services.IAdHocDatawareh
     }
 }
 ```
-

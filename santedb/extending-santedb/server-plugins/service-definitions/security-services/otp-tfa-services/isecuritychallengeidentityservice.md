@@ -10,20 +10,20 @@ Represents a security challenge service which can provide identity
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Authenticating | EventHandler&lt;AuthenticatingEventArgs&gt; | Fired prior to an authentication event |
-| Authenticated | EventHandler&lt;AuthenticatedEventArgs&gt; | Fired after an authentication decision being made |
+| Event          | Type                                   | Description                                       |
+| -------------- | -------------------------------------- | ------------------------------------------------- |
+| Authenticating | EventHandler\<AuthenticatingEventArgs> | Fired prior to an authentication event            |
+| Authenticated  | EventHandler\<AuthenticatedEventArgs>  | Fired after an authentication decision being made |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Authenticate | IPrincipal | _String_ **userName** _Guid_ **challengeKey** _String_ **response** _String_ **tfaSecret** | Authenticates the specified user with a challenge key and response |
+| Operation    | Response/Return | Input/Parameter                                                                                                                                                                            | Description                                                        |
+| ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Authenticate | IPrincipal      | <p><em>String</em> <strong>userName</strong><br><em>Guid</em> <strong>challengeKey</strong><br><em>String</em> <strong>response</strong><br><em>String</em> <strong>tfaSecret</strong></p> | Authenticates the specified user with a challenge key and response |
 
 ## Implementations
 
-### AdoSecurityChallengeProvider - \(SanteDB.Persistence.Data.ADO\)
+### AdoSecurityChallengeProvider - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -63,4 +63,3 @@ public class MySecurityChallengeIdentityService : SanteDB.Core.Security.ISecurit
     }
 }
 ```
-

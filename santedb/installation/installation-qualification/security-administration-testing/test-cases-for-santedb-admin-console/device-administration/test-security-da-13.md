@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device ****without specifying the device name parameter.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device** **without specifying the device name parameter.
 
 ## Pre-Conditions / Setup
 
@@ -22,7 +22,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Use "**device.add**" command.
 
-```text
+```
 > device.add
 ```
 
@@ -30,7 +30,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Should show : "Device secret: ..." followed by an Error message indicating that name can not be null.
 
-```text
+```
 > device.add
 Device secret: 178DAC6DE7CDDA44A789B57D5606A7AD
 ERR: Exception has been thrown by the target of an invocation.
@@ -38,4 +38,3 @@ ERR: Exception has been thrown by the target of an invocation.
 Parameter name: source
 >
 ```
-

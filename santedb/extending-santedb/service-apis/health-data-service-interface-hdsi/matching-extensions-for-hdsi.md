@@ -3,7 +3,7 @@
 The [Master Data Management](../../../architecture/data-storage-patterns/master-data-storage.md) plugin for SanteDB provides controls for the management of the MDM metadata via the HDSI interface using custom interfaces.
 
 {% hint style="warning" %}
-When using the MDM extensions on the dCDR \(like in the user interface, or on a client\) you must provide the `_upstream=true` indicator so the dCDR service sends the original request to the central server directly. This means that these functions should only be called when online and connected to the iCDR
+When using the MDM extensions on the dCDR (like in the user interface, or on a client) you must provide the `_upstream=true` indicator so the dCDR service sends the original request to the central server directly. This means that these functions should only be called when online and connected to the iCDR
 {% endhint %}
 
 {% hint style="success" %}
@@ -19,7 +19,7 @@ The operations provided by the MDM extension plugins actually kickoff jobs and o
 The clear operation clears the entire database of all MDM linkages. Depending on the parameters use, this function will completely remove all MDM links. 
 
 {% hint style="warning" %}
-It is only recommended that this operation be performed if you are disabling MDM \(i.e. plan on turning off the MDM layer\) or if you are experimenting and want to clear the automatically generated links.
+It is only recommended that this operation be performed if you are disabling MDM (i.e. plan on turning off the MDM layer) or if you are experimenting and want to clear the automatically generated links.
 {% endhint %}
 
 ```http
@@ -45,11 +45,11 @@ Content-Type: application/json
 }
 ```
 
-| Parameter | Value |
-| :--- | :--- |
-| includeVerified | If true the clear operation will remove all MDM links \(ignore, candidates, etc.\)  including those which have been adjudicated by a human and verified. When  false only automatic links are moved. |
-| globalReset | If true the clear operation will perform a global reset on all MDM links in the system. This includes resetting MDM master, candidate, ignore, and record of truth links. |
-| linksOnly | When true, only links are removed and any targets of those links \(like master records, etc.\) are left orphaned. It is recommended to leave this value as FALSE |
+| Parameter       | Value                                                                                                                                                                                                           |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| includeVerified | <p>If true the clear operation will remove all MDM links (ignore, candidates, etc.) <br>including those which have been adjudicated by a human and verified. When <br>false only automatic links are moved.</p> |
+| globalReset     | If true the clear operation will perform a global reset on all MDM links in the system. This includes resetting MDM master, candidate, ignore, and record of truth links.                                       |
+| linksOnly       | When true, only links are removed and any targets of those links (like master records, etc.) are left orphaned. It is recommended to leave this value as FALSE                                                  |
 
 ### Rematch
 
@@ -97,11 +97,11 @@ Content-Type: application/json
 
 ## Resources
 
-The linkages in the MDM layer can be controlled and queried via the extended resources on the API. These resources control the links between a master record and the locals \(or candidate locals\). 
+The linkages in the MDM layer can be controlled and queried via the extended resources on the API. These resources control the links between a master record and the locals (or candidate locals). 
 
-When a property is scoped to a particular instance of a resource, the resource UUID can represent a `LOCAL` record \(in which case results are the corresponding `MASTER` records\) or the UUID can represent a `MASTER` record \(in which case the results are the corresponding `LOCAL` records\). Operations on global resources are match pairs since there is no context.
+When a property is scoped to a particular instance of a resource, the resource UUID can represent a `LOCAL` record (in which case results are the corresponding `MASTER` records) or the UUID can represent a `MASTER` record (in which case the results are the corresponding `LOCAL` records). Operations on global resources are match pairs since there is no context.
 
-### MDM Candidates \(mdm-candidate\)
+### MDM Candidates (mdm-candidate)
 
 An MDM match candidate exists between two records when the matching engine determines either:
 
@@ -145,7 +145,7 @@ You can use an accept header of application/json+viewModel to fetch the holder a
 
 #### Get Candidates for Instances
 
-Gets a list of all MDM candidate instances for a particular resource instance. Since this method has a resource instance scope, it does not return the relationship objects, rather it returns the actual instances of the candidates \(either `MASTER` records to which the current local is a candidate or `LOCAL` records for which current master has candidates\).
+Gets a list of all MDM candidate instances for a particular resource instance. Since this method has a resource instance scope, it does not return the relationship objects, rather it returns the actual instances of the candidates (either `MASTER` records to which the current local is a candidate or `LOCAL` records for which current master has candidates).
 
 ```http
 GET /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-candidate HTTP/1.1
@@ -185,7 +185,7 @@ The `$match.score` tag on the returned object is the original score that candida
 
 #### Remove Candidate from Instance
 
-The remove candidate resource operation is a `DELETE` against the candidate record and instructs the matcher to never consider the record as a candidate again \(establishes an IGNORE record\). 
+The remove candidate resource operation is a `DELETE` against the candidate record and instructs the matcher to never consider the record as a candidate again (establishes an IGNORE record). 
 
 ```http
 DELETE /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-candidate/f8f92db2-e48e-4b6c-951d-b42e06c5c4d4 HTTP/1.1
@@ -233,13 +233,13 @@ Content-Type: application/json
 }
 ```
 
-### MDM Ignored \(mdm-ignore\)
+### MDM Ignored (mdm-ignore)
 
 An ingnore link is used to signal that a user has reviewed a duplicate and determined that the indicated link is definitely not a candidate/duplicate.
 
 #### Get Ignored Candidates for Instance
 
-This resource fetches all candidates for an instance which were confirmed to be "not a match" \(i.e. are ignored\).
+This resource fetches all candidates for an instance which were confirmed to be "not a match" (i.e. are ignored).
 
 ```http
 GET /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-ignore HTTP/1.1
@@ -280,7 +280,7 @@ DELETE /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-ignore/f8f92db2-e4
 Accept: application/json
 ```
 
-### MDM Established Links \(mdm-link\)
+### MDM Established Links (mdm-link)
 
 #### Get Established MDM Link for Instance
 
@@ -334,13 +334,13 @@ Accept: application/json
 
 #### Attach MDM Link for Instance
 
-The attach MDM link operation on the `mdm-link` resource ensures that only a LOCAL record is linked with a MASTER record. This differs from a MERGE operation where LOCAL&gt;LOCAL and MASTER&gt;MASTER merges can be performed \(and it called via the `$merge` operation since `$merge` does not rely on MDM logic\). 
+The attach MDM link operation on the `mdm-link` resource ensures that only a LOCAL record is linked with a MASTER record. This differs from a MERGE operation where LOCAL>LOCAL and MASTER>MASTER merges can be performed (and it called via the `$merge` operation since `$merge` does not rely on MDM logic). 
 
 {% hint style="info" %}
 You can still perform an MDM attachment using the `$merge` operation, however the source and target UUIDs must be a local and master respectively.
 {% endhint %}
 
-To link an instance the caller must `POST` an `Reference`  with the `id` carrying the UUID of the master to which the attaching is to occur \(or if the focus UUID on the URL is a MASTER then the UUID of the local\).
+To link an instance the caller must `POST` an `Reference`  with the `id` carrying the UUID of the master to which the attaching is to occur (or if the focus UUID on the URL is a MASTER then the UUID of the local).
 
 ```http
 POST /hdsi/Patient/5ac04a36-b521-4bc1-8255-6463c0083ae8/mdm-link HTTP/1.1
@@ -357,4 +357,3 @@ All properties other than `id` in the `Entity` are ignored.
 ## Administrative Management API
 
 The MDM layer provides extensions for the AMI layer as well. These extensions and operations permit the configuration of the MDM via the `mdm-configuration` resource on the AMI. The configuration APIs allow callers to enable, or disable 
-

@@ -14,7 +14,7 @@ description: >-
 
 ## Discussion
 
-When more than one **Employer** is entered during user creation, individual **Employer** values can be removed from **Demographic Properties** before submitting the form. 
+When more than one **Employer** is entered during user creation, individual **Employer** values can be removed from **Demographic Properties **before submitting the form. 
 
 ## Pre-Conditions / Setup
 
@@ -24,13 +24,12 @@ When more than one **Employer** is entered during user creation, individual **Em
 
 ## Actions/Steps
 
-1. Click the **x** on the left side of a **Employer** tag that has been added to the **Employer** textbox.
+1\. Click the **x** on the left side of a **Employer** tag that has been added to the **Employer** textbox.
 
-![](../../../../../../.gitbook/assets/image%20%28268%29.png)
+![](<../../../../../../.gitbook/assets/image (268).png>)
 
 ## Expected Behaviour
 
-* The **Employer** tag corresponding to the **x** clicked is removed from the **Employer** textbox.
+* The **Employer** tag corresponding to the **x** clicked is removed from the **Employer **textbox.
 
-![](../../../../../../.gitbook/assets/image%20%28263%29.png)
-
+![](<../../../../../../.gitbook/assets/image (263).png>)

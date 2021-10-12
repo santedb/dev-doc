@@ -15,21 +15,20 @@ Groups cannot be created with a duplicate **Name** matching a deleted group.
 
 ## Pre-Conditions / Setup
 
-1. Follow instructions from [TEST: SECURITY-GRM-03](test-security-grm-03-1.md) to delete a group.
+1\. Follow instructions from [TEST: SECURITY-GRM-03](test-security-grm-03-1.md) to delete a group.
 
 ## Actions/Steps
 
-1. Click the **Create** button.
+1\. Click the **Create** button.
 
-![](../../../../../../.gitbook/assets/image%20%28295%29.png)
+![](<../../../../../../.gitbook/assets/image (295).png>)
 
-2. Enter invalid **Name** for the group \(duplicate; e.g. "Muddsville"\).
+2\. Enter invalid **Name** for the group (duplicate; e.g. "Muddsville").
 
 ## Expected Behaviour
 
 * No group should be created.
 * Remain on **Administration Panel / Security / Groups / Create Group** page.
-* Display a prompt below the required **Name** textbox with a validation message as follows:
+* Display a prompt below the required **Name **textbox with a validation message as follows:
 
-![](../../../../../../.gitbook/assets/image%20%28328%29.png)
-
+![](<../../../../../../.gitbook/assets/image (328).png>)

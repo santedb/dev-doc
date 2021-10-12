@@ -1,6 +1,6 @@
 # Physical Model
 
-In SanteDB, the physical model is used to express the concrete tables which are created in a SQL based RDBMS to store data on a physical media \(disk\). Implementers of new SQL based persistence services should try to re-use these mappings in their expression to the physical model. 
+In SanteDB, the physical model is used to express the concrete tables which are created in a SQL based RDBMS to store data on a physical media (disk). Implementers of new SQL based persistence services should try to re-use these mappings in their expression to the physical model. 
 
 SanteDB uses the [ORM Lite](https://github.com/santedb/santedb-orm) data mapping technology, and the `SanteDB.Persistence.Data.Ado` assembly contains the ORM lite physical model classes.
 
@@ -8,22 +8,22 @@ SanteDB uses the [ORM Lite](https://github.com/santedb/santedb-orm) data mapping
 Version 2.5 of SanteDB is undergoing a major code refactor. The physical model classes in the 2.5.x series of SanteDB will reside in the `SanteDB.Persistence.Data` assembly.
 {% endhint %}
 
-##  Data Providers
+## &#xD; Data Providers&#xD;
 
 SanteDB includes an implementation of a persistence layer which includes support for generic ADO based databases. This provider uses the ADO.NET wrapper to invoke necessary functions and select data from tables. In order to leverage the ADO.NET persistence service, the ADO.NET provider must support:
 
 * SQL92 syntax 
 * Limit and offset queries in the form of `SELECT FOO FROM BAR OFFSET x LIMIT y`
-* Invoke of Stored Procedures and Functions or equivalent C\# logic which implements the functions
+* Invoke of Stored Procedures and Functions or equivalent C# logic which implements the functions
 * Pooled and thread-safe access to the underlying disk structure.
 
 Currently SanteDB iCDR works with the following OrmLite data providers:
 
-| **Database System** | **Invariant** |
-| :--- | :--- |
-| PostgreSQL 9.4 – 10.0 | npgsql |
-| FirebirdSQL 3.0 | FirebirdSQL |
-| SQLite 3.3 | Sqlite |
+| **Database System**   | **Invariant** |
+| --------------------- | ------------- |
+| PostgreSQL 9.4 – 10.0 | npgsql        |
+| FirebirdSQL 3.0       | FirebirdSQL   |
+| SQLite 3.3            | Sqlite        |
 
  Regardless of the RDBMS system feeding the ADO provider, it must follow the schema specified in this section.
 
@@ -31,13 +31,13 @@ Currently SanteDB iCDR works with the following OrmLite data providers:
 
 To implement a new ADO.NET based data provider, implementers will need to:
 
-1. Write an ORM Lite `IDbProvider` instance \(see an example of the [FirebirdSQL provider](https://github.com/santedb/santedb-orm/blob/master/SanteDB.OrmLite/Providers/Firebird/FirebirdSQLProvider.cs)\)
-2. Write an ORM Lite `IDbConfigurationProvider` instance \(see an example of the [FirebirdSQL Configuration provider](https://github.com/santedb/santedb-orm/blob/master/SanteDB.OrmLite/Providers/Firebird/FirebirdSQLConfigurationProvider.cs)\)
-3. The DDL and DML classes for the most recent SanteDB physical model \(see an example of the [FirebirdSQL DDL files](https://github.com/santedb/santedb-server/tree/master/SanteDB.Persistence.Data.ADO/Data/SQL/FBSQL)\)
+1. Write an ORM Lite `IDbProvider` instance (see an example of the [FirebirdSQL provider](https://github.com/santedb/santedb-orm/blob/master/SanteDB.OrmLite/Providers/Firebird/FirebirdSQLProvider.cs))
+2. Write an ORM Lite `IDbConfigurationProvider` instance (see an example of the [FirebirdSQL Configuration provider](https://github.com/santedb/santedb-orm/blob/master/SanteDB.OrmLite/Providers/Firebird/FirebirdSQLConfigurationProvider.cs))
+3. The DDL and DML classes for the most recent SanteDB physical model (see an example of the [FirebirdSQL DDL files](https://github.com/santedb/santedb-server/tree/master/SanteDB.Persistence.Data.ADO/Data/SQL/FBSQL))
    * You should include these as embedded resources in your plugin
    * You should include all updates , translated to your SQL dialect as well
    * You should include your own provider's invariant in the header
-4. Implementations of any supported extended functions \(such as SOUNDEX, LEVENSHTEIN, etc.\) as `IDbFilterFunction` implementations \(see an example [FirebirdSQL String Matching Functions](https://github.com/santedb/santedb-orm/blob/master/SanteDB.OrmLite/Providers/Firebird/StrMatchFunctions.cs)\)
+4. Implementations of any supported extended functions (such as SOUNDEX, LEVENSHTEIN, etc.) as `IDbFilterFunction` implementations (see an example [FirebirdSQL String Matching Functions](https://github.com/santedb/santedb-orm/blob/master/SanteDB.OrmLite/Providers/Firebird/StrMatchFunctions.cs))
 
 ## Patching SQL Tables
 
@@ -51,28 +51,28 @@ See: [Database Patching ](../../../extending-santedb/server-plugins/database-pat
 
 The following suffixes are placed on entities in the schema:
 
-| Suffix | Used For | Example |
-| :--- | :--- | :--- |
-| \_TBL | Tables | `ENT_VRSN_TBL` |
-| \_VW | Views | `ENT_CUR_VRSN_VW` |
-| \_CDTBL | Code Lookup Tables | `ENT_REL_CLS_CDTBL` |
-| \_SYSTBL | Internal System Tables | `PATCH_DB_SYSTBL` |
+| Suffix   | Used For               | Example             |
+| -------- | ---------------------- | ------------------- |
+| \_TBL    | Tables                 | `ENT_VRSN_TBL`      |
+| \_VW     | Views                  | `ENT_CUR_VRSN_VW`   |
+| \_CDTBL  | Code Lookup Tables     | `ENT_REL_CLS_CDTBL` |
+| \_SYSTBL | Internal System Tables | `PATCH_DB_SYSTBL`   |
 
 ### General Naming Conventions
 
 Most tables in the SanteDB physical model carry common abbreviations of names. Because of the varied contributors some tables break these rules, however the general principal applies:
 
-* Names less than four characters should be represented in full \(example: `NAME` or `TAG`\)
+* Names less than four characters should be represented in full (example: `NAME` or `TAG`)
 * Names which represent a classified object carry their classification, for example:
-  * `OBS_TBL` =&gt; Observation Table
-  * `SUB_ADM_TBL` =&gt; Substance Administration Table
+  * `OBS_TBL` => Observation Table
+  * `SUB_ADM_TBL `=> Substance Administration Table
 * Association tables which exist only to link together two other tables should have `ASSOC` in their name
 * Longer table names are usually acronyms:
-  * `CD_TBL` =&gt; **C**oncept **D**efinition Table 
-  * `CS_TBL` =&gt; **C**ode **S**ystem Table
+  * `CD_TBL` => **C**oncept **D**efinition Table 
+  * `CS_TBL` => **C**ode **S**ystem Table
 * Table and columns should remove vowels where the removal of vowels do no interfere with understanding the meaning of the column or table:
-  * `ENT_TBL` =&gt; Entity Table
-  * `CLS_CD_ID` =&gt; **Cl**a**s**s **C**oncept **D**efinition ID
+  * `ENT_TBL` => Entity Table
+  * `CLS_CD_ID `=> **Cl**a**s**s **C**oncept **D**efinition ID
 
 ### Inherited Tables
 
@@ -133,10 +133,10 @@ On a versioned database each class down the hierarchy should point to the versio
 
 ### Versioning
 
-On persistence services which provide versioning \(such as those in the iCDR\) the tables can be split into two categories:
+On persistence services which provide versioning (such as those in the iCDR) the tables can be split into two categories:
 
-* Versioned Tables -&gt; Acts, Entities and Concepts which track changes to data over time.
-* Non-Versioned Tables -&gt; Any other class which does not track changes over time.
+* Versioned Tables -> Acts, Entities and Concepts which track changes to data over time.
+* Non-Versioned Tables -> Any other class which does not track changes over time.
 
 {% hint style="info" %}
 The legacy dCDR SQLite provider is un-versioned. This means all of its tables are not versioned.
@@ -146,12 +146,12 @@ Because version data is required for interfaces in the iCDR the structures are b
 
 * Primary Table: Contains the unchanging attributes of the object
 * Version Table: Contains the attributes which may be changed on the object. This table contains:
-  * Sequence Identification \(used for tracking the order of versions\)
-  * Creation time and provenance \(who created the version\)
-  * Obsolete time and provenance \(who rendered this version obsolete\)
-  * Replaced version id \(the version that this version replaces\)
+  * Sequence Identification (used for tracking the order of versions)
+  * Creation time and provenance (who created the version)
+  * Obsolete time and provenance (who rendered this version obsolete)
+  * Replaced version id (the version that this version replaces)
 
-For example, `ENT_TBL` and `ENT_VRSN_TBL` are related in this manner:
+For example, `ENT_TBL` and `ENT_VRSN_TBL `are related in this manner:
 
 ```sql
 CREATE TABLE ENT_TBL (
@@ -195,4 +195,3 @@ CREATE TABLE ENT_ID_TBL (
     CONSTRAINT FK_ENT_ID_OBSLT_VRSN_TBL FOREIGN KEY (OBSLT_VRSN_SEQ_ID) REFERENCES ENT_VRSN_TBL(VRSN_SEQ_ID)
 ) 
 ```
-

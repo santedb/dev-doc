@@ -20,9 +20,9 @@ The `user.list` command is for listing users.
 
 ## Actions/Steps
 
-1. Execute the `user.list` command.
+1\. Execute the `user.list` command.
 
-```text
+```
 user.list
 ```
 
@@ -30,7 +30,7 @@ user.list
 
 * The Admin Console output should appear similarly to the following:
 
-```text
+```
 > user.list
 SID                                    Name                     Last Auth              Lockout                ILA  A
 c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                                              0    *
@@ -50,4 +50,3 @@ a762c780-df18-11eb-bbad-eb1f1d969e16   ClinicalStaffUser11                      
 {% hint style="warning" %}
 Users listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

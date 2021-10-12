@@ -19,10 +19,10 @@ description: >-
 
 The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**. 
 
-* The `-r` parameter is used to specify which **role** to display information and effective policies from.
-* The `-g` parameter is used to specify which **policy** to explicitly grant the new role being added.
-* The `-d` parameter is used to specify which **policy** to explicitly deny the new role being added.
-* The `-n` parameter is used to specify a **description/note** \(no spaces\). 
+* The `-r` parameter is used to specify which **role **to display information and effective policies from.
+* The `-g` parameter is used to specify which **policy **to explicitly grant the new role being added.
+* The `-d` parameter is used to specify which **policy **to explicitly deny the new role being added.
+* The `-n` parameter is used to specify a **description/note **(no spaces). 
 
 ## Pre-Conditions / Setup
 
@@ -34,7 +34,7 @@ The `role.add` command is for adding a new role and has 1 required parameter tha
 
 1. Execute the `role.add` command with `-r` parameter specified as non-existing role and `-n` parameter specified as a description/note without spaces.
 
-```text
+```
 role.add -r <new role name> -n SPECIAL_ROLE_NOTE
 ```
 
@@ -42,14 +42,14 @@ role.add -r <new role name> -n SPECIAL_ROLE_NOTE
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.add -r TestRole03 -n SPECIAL_ROLE_NOTE
 >
 ```
 
 * Check that the role created has the specified Description property:
 
-```text
+```
 > role.info -r TestRole03
 Name: TestRole03
 SID: 4adda038-e3f1-11eb-bbaf-eb1f1d969e16
@@ -128,4 +128,3 @@ Updated: 2021-07-13T11:48:38.9308250-04:00 (Administrator)
 {% hint style="warning" %}
 Role information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

@@ -10,14 +10,14 @@ Represents a policy decision service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| GetPolicyDecision | PolicyDecision | _IPrincipal_ **principal** _Object_ **securable** | Make a simple policy decision for a specific securable |
-| GetPolicyOutcome | PolicyGrantType | _IPrincipal_ **principal** _String_ **policyId** | Get a policy decision outcome \(i.e. make a policy decision\) |
+| Operation         | Response/Return | Input/Parameter                                                                                     | Description                                                 |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| GetPolicyDecision | PolicyDecision  | <p><em>IPrincipal</em> <strong>principal</strong><br><em>Object</em> <strong>securable</strong></p> | Make a simple policy decision for a specific securable      |
+| GetPolicyOutcome  | PolicyGrantType | <p><em>IPrincipal</em> <strong>principal</strong><br><em>String</em> <strong>policyId</strong></p>  | Get a policy decision outcome (i.e. make a policy decision) |
 
 ## Implementations
 
-### Default PDP Service - \(SanteDB.Core\)
+### Default PDP Service - (SanteDB.Core)
 
 Local policy decision service
 
@@ -55,4 +55,3 @@ public class MyPolicyDecisionService : SanteDB.Core.Security.Services.IPolicyDec
     }
 }
 ```
-

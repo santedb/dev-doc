@@ -10,31 +10,31 @@ Identity provider service
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Authenticating | EventHandler&lt;AuthenticatingEventArgs&gt; | Fired prior to an authentication event |
-| Authenticated | EventHandler&lt;AuthenticatedEventArgs&gt; | Fired after an authentication decision being made |
+| Event          | Type                                   | Description                                       |
+| -------------- | -------------------------------------- | ------------------------------------------------- |
+| Authenticating | EventHandler\<AuthenticatingEventArgs> | Fired prior to an authentication event            |
+| Authenticated  | EventHandler\<AuthenticatedEventArgs>  | Fired after an authentication decision being made |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| GetIdentity | IIdentity | _String_ **userName** | Retrieves an identity from the object |
-| GetIdentity | IIdentity | _Guid_ **sid** | Retrieves an identity from the object |
-| CreateIdentity | IIdentity | _String_ **userName** _String_ **password** _IPrincipal_ **principal** | Create a basic identity in the provider |
-| Authenticate | IPrincipal | _String_ **userName** _String_ **password** | Authenticate the user creating an identity |
-| Authenticate | IPrincipal | _String_ **userName** _String_ **password** _String_ **tfaSecret** | Authenticate the user creating an identity |
-| ReAuthenticate | IPrincipal | _IPrincipal_ **principal** | Perform a re-authentication of the principal |
-| ChangePassword | void | _String_ **userName** _String_ **newPassword** _IPrincipal_ **principal** | Change user password |
-| GenerateTfaSecret | String | _String_ **userName** | Set the user's two factor authentication secret |
-| DeleteIdentity | void | _String_ **userName** _IPrincipal_ **principal** | Delete an identity |
-| SetLockout | void | _String_ **userName** _Boolean_ **lockout** _IPrincipal_ **principal** | Set lockout |
-| AddClaim | void | _String_ **userName** _IClaim_ **claim** _IPrincipal_ **principal** _Nullable&lt;TimeSpan&gt;_ **expiriy** | Adds a claim to the specified user account |
-| RemoveClaim | void | _String_ **userName** _String_ **claimType** _IPrincipal_ **principal** | Removes a claim from the specified user account |
+| Operation         | Response/Return | Input/Parameter                                                                                                                                                                                           | Description                                     |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| GetIdentity       | IIdentity       | _String_ **userName**                                                                                                                                                                                     | Retrieves an identity from the object           |
+| GetIdentity       | IIdentity       | _Guid_ **sid**                                                                                                                                                                                            | Retrieves an identity from the object           |
+| CreateIdentity    | IIdentity       | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>password</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                           | Create a basic identity in the provider         |
+| Authenticate      | IPrincipal      | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>password</strong></p>                                                                                                             | Authenticate the user creating an identity      |
+| Authenticate      | IPrincipal      | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>password</strong><br><em>String</em> <strong>tfaSecret</strong></p>                                                               | Authenticate the user creating an identity      |
+| ReAuthenticate    | IPrincipal      | _IPrincipal_ **principal**                                                                                                                                                                                | Perform a re-authentication of the principal    |
+| ChangePassword    | void            | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>newPassword</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                        | Change user password                            |
+| GenerateTfaSecret | String          | _String_ **userName**                                                                                                                                                                                     | Set the user's two factor authentication secret |
+| DeleteIdentity    | void            | <p><em>String</em> <strong>userName</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                                                                        | Delete an identity                              |
+| SetLockout        | void            | <p><em>String</em> <strong>userName</strong><br><em>Boolean</em> <strong>lockout</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                           | Set lockout                                     |
+| AddClaim          | void            | <p><em>String</em> <strong>userName</strong><br><em>IClaim</em> <strong>claim</strong><br><em>IPrincipal</em> <strong>principal</strong><br><em>Nullable&#x3C;TimeSpan></em> <strong>expiriy</strong></p> | Adds a claim to the specified user account      |
+| RemoveClaim       | void            | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>claimType</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                                          | Removes a claim from the specified user account |
 
 ## Implementations
 
-### ADO.NET Identity Provider - \(SanteDB.Persistence.Data.ADO\)
+### ADO.NET Identity Provider - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -140,4 +140,3 @@ public class MyIdentityProviderService : SanteDB.Core.Security.Services.IIdentit
     }
 }
 ```
-

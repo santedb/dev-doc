@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application ****without specifying the application name parameter.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application** **without specifying the application name parameter.
 
 ## Pre-Conditions / Setup
 
@@ -22,7 +22,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Use "**application.add**" command.
 
-```text
+```
 > application.add
 ```
 
@@ -30,7 +30,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Should show : "Application secret: ..." followed by an Error message indicating that name can not be null.
 
-```text
+```
 > application.add
 Application secret: B30F61126184
 ERR: Exception has been thrown by the target of an invocation.
@@ -38,4 +38,3 @@ ERR: Exception has been thrown by the target of an invocation.
 Parameter name: source
 >
 ```
-

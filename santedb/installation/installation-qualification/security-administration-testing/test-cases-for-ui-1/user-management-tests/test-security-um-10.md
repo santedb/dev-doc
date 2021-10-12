@@ -23,17 +23,16 @@ A new password and confirmation password must match to be accepted as valid duri
 
 ## Actions/Steps
 
-1. Enter "Clinic@l123" in the **New Password** textbox.
+1\. Enter "Clinic@l123" in the **New Password** textbox.
 
-2. Enter any string not matching "Clinic@l123" in the **Confirm Password** textbox.
+2\. Enter any string not matching "Clinic@l123" in the **Confirm Password** textbox.
 
 ## Expected Behaviour
 
 * A red error message should appear below the **Confirm Password** textbox stating that "passwords must match". 
 
-![](../../../../../../.gitbook/assets/image%20%2874%29.png)
+![](<../../../../../../.gitbook/assets/image (74).png>)
 
-* Nothing should occur if all other required fields are provided valid values and the **Save** button is clicked \(see [TEST: SECURITY-UM-01](test-security-um-01.md) for successful creation and [TEST: SECURITY-UM-02](test-security-um-02.md) for required fields missing\).
+* Nothing should occur if all other required fields are provided valid values and the **Save** button is clicked (see [TEST: SECURITY-UM-01](test-security-um-01.md) for successful creation and [TEST: SECURITY-UM-02](test-security-um-02.md) for required fields missing).
 
-![](../../../../../../.gitbook/assets/image%20%28134%29.png)
-
+![](<../../../../../../.gitbook/assets/image (134).png>)

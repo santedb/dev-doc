@@ -6,7 +6,7 @@ You can use the iCDR administrative console to create, list, lock, unlock and ge
 
 You can view applications in the system using the `application.list` command, specifying optional filter paramters.
 
-```text
+```
 > application.list
 SID                                    Name                     Last Auth.             Lockout                ILA  A
 010cc4e0-d8ff-11eb-8249-00155d640b09   Create-Application-Te...                                               0    *
@@ -17,12 +17,12 @@ bc8221bc-9cbd-11eb-be65-00155d640b09   test-new4                                
 a9ada8ae-9cbd-11eb-be65-00155d640b09   test-new3                                                              0    *
 ```
 
-The optional filter parameters for `application.list` ****are:
+The optional filter parameters for `application.list`** **are:
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-l` | Filter on locked status | `application.list -l` |
-| `-a` | Include non-active application | `application.list -a` |
+| Parameter | Description                    | Example               |
+| --------- | ------------------------------ | --------------------- |
+| `-l`      | Filter on locked status        | `application.list -l` |
+| `-a`      | Include non-active application | `application.list -a` |
 
 ## Adding Applications
 
@@ -32,7 +32,7 @@ You can add an application to the iCDR instance using the `application.add` comm
 Application secret is shown after creation so that it can be copied and saved since it's not accessible later.
 {% endhint %}
 
-```text
+```
 > application.add Create-Application-Test-10
 Application secret: D540A5CBB247
 CREATE Create-Application-Test-10
@@ -41,12 +41,12 @@ CREATE Create-Application-Test-10
 
 The parameters for `application.add` are:
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-s` | The application secret to set | `application.add <application_name> -s s3CreT` |
-| `-g` | The policies to grant deny application | `application.add <application_name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-d` | The policies to deny the application | `application.add <application_name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-n` | A description/note to add to the application | `application.add <application_name> -n SPECIAL_APPLICATION_NOTE` |
+| Parameter | Description                                  | Example                                                                 |
+| --------- | -------------------------------------------- | ----------------------------------------------------------------------- |
+| `-s`      | The application secret to set                | `application.add <application_name> -s s3CreT`                          |
+| `-g`      | The policies to grant deny application       | `application.add <application_name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d`      | The policies to deny the application         | `application.add <application_name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-n`      | A description/note to add to the application | `application.add <application_name> -n SPECIAL_APPLICATION_NOTE`        |
 
 ## Locking/Unlocking Applications
 
@@ -54,13 +54,13 @@ To lock or unlock an application, the `application.lock` command with our withou
 
 To lock the application "Create-Application-Test":
 
-```text
+```
 > application.lock -l Create-Application-Test
 ```
 
 To unlock the application "Create-Application-Test":
 
-```text
+```
 > application.lock Create-Application-Test
 ```
 
@@ -70,7 +70,7 @@ To delete an application, the `application.del` command is used specifiying the 
 
 To delete the application "Create-Application-Test":
 
-```text
+```
 > application.del Create-Application-Test
 ```
 
@@ -78,7 +78,7 @@ To undelete an application, the `application.undel` command is used specifying t
 
 To undelete the application "Create-Application-Test":
 
-```text
+```
 > application.undel Create-Application-Test
 ```
 
@@ -90,7 +90,7 @@ To assign a policy to an application please visit 'Assigning Policies' section o
 
 You can get extended information about a particular application by using the `application.info` command and specifying the application name. For example, to get information about the application Create-Application-Test:
 
-```text
+```
 > application.info Create-Application-Test
 Name: Create-Application-Test
 SID: a01a3472-d36f-11eb-8248-00155d640b09
@@ -167,5 +167,4 @@ Updated: 2021-06-30T03:23:17.7651820-04:00 (Administrator)
 >
 ```
 
-## 
-
+##

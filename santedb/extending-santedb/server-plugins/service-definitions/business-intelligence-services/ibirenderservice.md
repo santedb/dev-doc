@@ -10,13 +10,13 @@ BI Render service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Render | Stream | _String_ **reportId** _String_ **viewName** _String_ **formatName** _IDictionary&lt;String,Object&gt;_ **parameters** _String&_ **mimeType** | Render the specified report |
+| Operation | Response/Return | Input/Parameter                                                                                                                                                                                                                                                         | Description                 |
+| --------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| Render    | Stream          | <p><em>String</em> <strong>reportId</strong><br><em>String</em> <strong>viewName</strong><br><em>String</em> <strong>formatName</strong><br><em>IDictionary&#x3C;String,Object></em> <strong>parameters</strong><br><em>String&#x26;</em> <strong>mimeType</strong></p> | Render the specified report |
 
 ## Implementations
 
-### LocalBiRenderService - \(SanteDB.BI\)
+### LocalBiRenderService - (SanteDB.BI)
 
 Rendering service which renders reports locally
 
@@ -48,4 +48,3 @@ public class MyBiRenderService : SanteDB.BI.Services.IBiRenderService {
     }
 }
 ```
-

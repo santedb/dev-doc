@@ -20,9 +20,9 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by "**-d" \(**or **"--device"\)** followed ****by the device\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) name\(s\) to apply. \(for example "Create-Policy-Test"
+1- Use the "**policy.assign**" command followed by "**-d" (**or** "--device") **followed** **by the device(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) name(s) to apply. (for example "Create-Policy-Test"
 
-```text
+```
 > policy.assign -d Create-Device-Test -p Create-Policy-Test
 ```
 
@@ -30,10 +30,9 @@ Should have the iCDR administrative console open and logged in successfully.
 
 1- Should display an error message indicating that policy could not be found.
 
-```text
+```
 > policy.assign -d Create-Device-Test -p Create-Policy-Test
 ERR: Exception has been thrown by the target of an invocation.
         1:Could not find one or more policies
 >
 ```
-

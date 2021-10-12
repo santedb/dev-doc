@@ -19,21 +19,20 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Actions/Steps
 
-1- Click the **Edit** button.
+1- Click the** Edit** button.
 
-![](../../../../../../.gitbook/assets/18%20%281%29.jpg)
+![](<../../../../../../.gitbook/assets/18 (1).jpg>)
 
-2- Choose the to be added policy \( for example: Create Local Users \) from the dropdown list and click the **+** button.
+2- Choose the to be added policy ( for example: Create Local Users ) from the dropdown list and click the **+** button.
 
-![](../../../../../../.gitbook/assets/20%20%283%29.jpg)
+![](<../../../../../../.gitbook/assets/20 (3).jpg>)
 
 ## Expected Behaviour
 
 1- Should navigate to the Devices/Edit Device page.
 
-![](../../../../../../.gitbook/assets/19%20%282%29.jpg)
+![](<../../../../../../.gitbook/assets/19 (2).jpg>)
 
-2- Assigned policy \( Create Local Users \) should appear under the Assigned Policies tab.
+2- Assigned policy ( Create Local Users ) should appear under the Assigned Policies tab.
 
-![](../../../../../../.gitbook/assets/21%20%281%29.jpg)
-
+![](<../../../../../../.gitbook/assets/21 (1).jpg>)

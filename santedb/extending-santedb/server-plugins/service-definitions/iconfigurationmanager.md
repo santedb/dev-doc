@@ -10,23 +10,23 @@ Represents a configuration manager service
 
 ## Properties
 
-| Property | Type | Access | Description |
-| :--- | :--- | :--- | :--- |
-| Configuration | SanteDBConfiguration | R | Get the configuration object |
+| Property      | Type                 | Access | Description                  |
+| ------------- | -------------------- | ------ | ---------------------------- |
+| Configuration | SanteDBConfiguration | R      | Get the configuration object |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| GetSection | T |  | TODO |
-| GetAppSetting | String | _String_ **key** | Gets the specified application setting |
-| GetConnectionString | ConnectionString | _String_ **key** | Get the specified connection string |
-| SetAppSetting | void | _String_ **key** _String_ **value** | Set the specified application setting |
-| Reload | void |  | TODO |
+| Operation           | Response/Return  | Input/Parameter                                                                       | Description                            |
+| ------------------- | ---------------- | ------------------------------------------------------------------------------------- | -------------------------------------- |
+| GetSection          | T                |                                                                                       | TODO                                   |
+| GetAppSetting       | String           | _String_ **key**                                                                      | Gets the specified application setting |
+| GetConnectionString | ConnectionString | _String_ **key**                                                                      | Get the specified connection string    |
+| SetAppSetting       | void             | <p><em>String</em> <strong>key</strong><br><em>String</em> <strong>value</strong></p> | Set the specified application setting  |
+| Reload              | void             |                                                                                       | TODO                                   |
 
 ## Implementations
 
-### ConfigurationContext - \(SanteDB.Configuration\)
+### ConfigurationContext - (SanteDB.Configuration)
 
 TODO: Document this
 
@@ -42,7 +42,7 @@ TODO: Document this
     </serviceProviders>
 ```
 
-### Local Configuration Manager - \(SanteDB.Core\)
+### Local Configuration Manager - (SanteDB.Core)
 
 Provides a redirected configuration service which reads configuration from a different file
 
@@ -58,7 +58,7 @@ Provides a redirected configuration service which reads configuration from a dif
     </serviceProviders>
 ```
 
-### TestConfigurationService - \(SanteDB.Core.TestFramework\)
+### TestConfigurationService - (SanteDB.Core.TestFramework)
 
 TODO: Document this
 
@@ -114,4 +114,3 @@ public class MyConfigurationManager : SanteDB.Core.Services.IConfigurationManage
     }
 }
 ```
-

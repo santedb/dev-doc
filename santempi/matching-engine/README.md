@@ -4,21 +4,21 @@
 SanteMPI uses the SanteDB matching engine. This page may be moved in the future to a common page as the SanteDB matching engine supports more than just Patient resources.
 {% endhint %}
 
-The matching engine in SanteDB is a multi-stage process whereby an inbound \(or a target record\) is compared with the current dataset within the CDR. The matching process occurs in three stages:
+The matching engine in SanteDB is a multi-stage process whereby an inbound (or a target record) is compared with the current dataset within the CDR. The matching process occurs in three stages:
 
-* **Blocking :** In the blocking phase records are queried from the CDR's database infrastructure. The blocking phase is used to reduce the total number of records being scored, which can be more computationally expensive.
-* **Scoring :** In the scoring stage, the target record is compared to those records retrieved from the blocking phase. Each attribute configured is transformed/normalized and then a score applied for each attribute. Furthermore there are API hooks for implementing partial weighting/partial scoring of an attribute \(based on frequency of data in database, NLP, or other future methods\)
-* **Classification :**  In the classification stage, each record's score \(the sum of each attribute's score\) is grouped into Match, NonMatch, and ProbableMatch. These thresholds are configured.
+* **Blocking : **In the blocking phase records are queried from the CDR's database infrastructure. The blocking phase is used to reduce the total number of records being scored, which can be more computationally expensive.
+* **Scoring : **In the scoring stage, the target record is compared to those records retrieved from the blocking phase. Each attribute configured is transformed/normalized and then a score applied for each attribute. Furthermore there are API hooks for implementing partial weighting/partial scoring of an attribute (based on frequency of data in database, NLP, or other future methods)
+* **Classification :**  In the classification stage, each record's score (the sum of each attribute's score) is grouped into Match, NonMatch, and ProbableMatch. These thresholds are configured.
 
-SanteDB allows for the configuration of multiple match configurations, and allows configuration for the "default" match configuration to be used for regular operation \(whenever data is inserted, updated, etc.\).
+SanteDB allows for the configuration of multiple match configurations, and allows configuration for the "default" match configuration to be used for regular operation (whenever data is inserted, updated, etc.).
 
 ## Match Configuration
 
-Matches are configured using match configuration XML, the schema for this XML can be located in %INSTALL\_DIR%\Schemas and referenced in an XML editor of your choice to obtain auto-complete data.
+Matches are configured using match configuration XML, the schema for this XML can be located in %INSTALL_DIR%\Schemas and referenced in an XML editor of your choice to obtain auto-complete data.
 
 ### Target and Classification Thresholds
 
-All match configurations begin with the **&lt;MatchConfiguration&gt;** element. This element defines the overall matching process you'd like to apply.
+All match configurations begin with the **\<MatchConfiguration>** element. This element defines the overall matching process you'd like to apply.
 
 ```markup
 <MatchConfiguration xmlns="http://santedb.org/matcher"
@@ -29,11 +29,11 @@ All match configurations begin with the **&lt;MatchConfiguration&gt;** element. 
 
 The attributes for this element are:
 
-| Attribute | Type | Description |
-| :--- | :--- | :--- |
-| id | xs:string | A unique identifier for this match configuration, used when configuring any triggers which use matching. |
-| nonmatchThreshold | xs:decimal | The threshold at which a candidate is excluded from consideration as being a match. |
-| matchThreshold | xs:decimal | The threshold at which a candidate is considered a definite match. |
+| Attribute         | Type       | Description                                                                                              |
+| ----------------- | ---------- | -------------------------------------------------------------------------------------------------------- |
+| id                | xs:string  | A unique identifier for this match configuration, used when configuring any triggers which use matching. |
+| nonmatchThreshold | xs:decimal | The threshold at which a candidate is excluded from consideration as being a match.                      |
+| matchThreshold    | xs:decimal | The threshold at which a candidate is considered a definite match.                                       |
 
 The next element to be configured is the target resource and triggers. Note that some SanteDB Components don't adhere to these settings, they are for suggestion only.
 
@@ -50,7 +50,7 @@ Here the configuration is indicating that the matching algorithm should be appli
 
 ### Blocking Stage Configuration
 
-The blocking stage is configured using one or more &lt;blocking&gt; elements, blocking elements are structured [HDSI format ](../../santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
+The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
 
 ```markup
   <!-- Patient which have same MRN -->
@@ -60,13 +60,13 @@ The blocking stage is configured using one or more &lt;blocking&gt; elements, bl
   </blocking>
 ```
 
-Here the blocking filter is stating it wants to consider any record in the database with a matching identifier from domain MRN \(identifier\[MRN\].value\) matching the input value \($input\) and it only wants to consider records which have no detectedIssues \(i.e. have not been flagged by the data quality engine as having issues\).
+Here the blocking filter is stating it wants to consider any record in the database with a matching identifier from domain MRN (identifier\[MRN].value) matching the input value ($input) and it only wants to consider records which have no detectedIssues (i.e. have not been flagged by the data quality engine as having issues).
 
-The blocking filter will initially request the data layer to load 100 results \(after which roundtrips to the database will be required\).
+The blocking filter will initially request the data layer to load 100 results (after which roundtrips to the database will be required).
 
 #### Additional Blocking Filters
 
-You can specify an infinite number of blocking filters to be run. Each resultset is either UNION \(OR\) or INTERSECT \(and\) with the previous. For example, the following configuration:
+You can specify an infinite number of blocking filters to be run. Each resultset is either UNION (OR) or INTERSECT (and) with the previous. For example, the following configuration:
 
 ```markup
   <!-- Patient which have same MRN -->
@@ -100,7 +100,7 @@ Will perform three queries against the database for candidate records:
 
 ### Scoring Stage Configuration
 
-Scoring is configured in the &lt;scoring&gt; section which applies to one or more attributes from the records loaded during the blocking phase. A simple example provided below instructs the patient's gender to be scored.
+Scoring is configured in the \<scoring> section which applies to one or more attributes from the records loaded during the blocking phase. A simple example provided below instructs the patient's gender to be scored.
 
 ```markup
 <scoring>
@@ -109,58 +109,26 @@ Scoring is configured in the &lt;scoring&gt; section which applies to one or mor
     </attribute>
 ```
 
-| Attribute | Type | Description |
-| :--- | :--- | :--- |
-| property | xs:string | The property path on both objects to consider |
-| u | xs:decimal | The u probability \(the probability the property will agree by pure coincidence\) |
-| m | xs:decimal | The m probability \(the probability a matching value indicates a match\) |
-| whenNull | xs:enum | The behavior the engine should take when the value is null in either record A or record B |
-| required | xs:boolean | Whether the attribute assertions need to evaluate \(or be handled by whenNull\) for matching to continue. |
+| Attribute | Type       | Description                                                                                             |
+| --------- | ---------- | ------------------------------------------------------------------------------------------------------- |
+| property  | xs:string  | The property path on both objects to consider                                                           |
+| u         | xs:decimal | The u probability (the probability the property will agree by pure coincidence)                         |
+| m         | xs:decimal | The m probability (the probability a matching value indicates a match)                                  |
+| whenNull  | xs:enum    | The behavior the engine should take when the value is null in either record A or record B               |
+| required  | xs:boolean | Whether the attribute assertions need to evaluate (or be handled by whenNull) for matching to continue. |
 
-Here the configuration is instructing the matching engine to consider genderConcept of record A \(new object\) and record B \(the existing object\), and the values must exactly match.
+Here the configuration is instructing the matching engine to consider genderConcept of record A (new object) and record B (the existing object), and the values must exactly match.
 
 #### Handling Missing Data
 
 There can occur instances of either the inbound record or the source records from the database which are missing the specified attribute. When this is the case the attribute's `whenNull` attribute controls the behavior of the evaluation of that attribute. The behaviors are:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">@whenNull</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">match</td>
-      <td style="text-align:left">When the value is null in A or B, treat the attribute as a &quot;match&quot;
-        <br
-        />(i.e. assume the missing data matches)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nonmatch</td>
-      <td style="text-align:left">
-        <p>When the value is null in either A or B, treat the attribute as a non-match</p>
-        <p>(i.e. assume the missing data would not match)</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ignore</td>
-      <td style="text-align:left">When the value is null in A or B, don&apos;t evaluate the attribute.
-        <br
-        />(i.e. neither the non-match or match scores should be considered)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">disqualify</td>
-      <td style="text-align:left">
-        <p>When the value is null in A or B disqualify the entire record from consideration</p>
-        <p>(i.e. it doesn&apos;t matter what the other attribute scores are, the
-          record is considered</p>
-        <p>not a match)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| @whenNull  | Description                                                                                                                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| match      | <p>When the value is null in A or B, treat the attribute as a "match" <br>(i.e. assume the missing data matches)</p>                                                                                    |
+| nonmatch   | <p>When the value is null in either A or B, treat the attribute as a non-match</p><p>(i.e. assume the missing data would not match)</p>                                                                 |
+| ignore     | <p>When the value is null in A or B, don't evaluate the attribute. <br>(i.e. neither the non-match or match scores should be considered) </p>                                                           |
+| disqualify | <p>When the value is null in A or B disqualify the entire record from consideration</p><p>(i.e. it doesn't matter what the other attribute scores are, the record is considered </p><p>not a match)</p> |
 
 #### Transforming Data
 
@@ -178,26 +146,26 @@ You can instruct the matching classification stage to transform the data on reco
     </attribute>
 ```
 
-The date\_extract is applied to both records and then the assertion of "eq" is applied. The following data transforms are available in SanteDB.
+The date_extract is applied to both records and then the assertion of "eq" is applied. The following data transforms are available in SanteDB.
 
-| Transform | Applies  | Action |
-| :--- | :--- | :--- |
-| addresspart\_extract | Entity Address | Extracts a portion of an address for consideration |
-| date\_difference | Date | Extracts the difference \(in weeks, months, years, etc.\) between the A record and B record. |
-| date\_extract | Date | Extracts a portion of the date from both records. |
-| name\_alias | Entity Name | Considers any of the configured aliases for the name meeting a particular threshold of relevance \(i.e. Will = Bill is stronger than Tess = Theresa\) |
-| abs | Number | Returns the absolute value of a number |
-| dmetaphone | Text | Returns the double metaphone code \(with configured code length\) from the input string |
-| length | Text | Returns the length of text string |
-| levenshtein | Text | Returns the levenshtein string difference between the A and B values. |
-| sorensen\_dice | Text | Returns the Sorensen Dice coefficient of text content A and B values. |
-| jaro\_winkler | Text | Returns the Jaro-Winkler \(with default threshold of 0.7\) between A and B values. |
-| metaphone | Text | Returns the metaphone phonetic code for the attribute |
-| similarity | Text | Returns a %'age \(based on levenshtein difference\) of string A to string B \(i.e. 80% similar or 90% similar\) |
-| soundex | Text | Extracts the soundex codification of the input values. |
-| substr | Text | Extracts a portion of the input values |
-| tokenize | Text | Tokenizes the input string based on splitting characters, the tokenized values can then be transformed independently using any of the transforms listed in this table. |
-| timespan\_extract | TimeSpan | Extracts a portion of a timespan such as minutes, hours, seconds. |
+| Transform           | Applies        | Action                                                                                                                                                                 |
+| ------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| addresspart_extract | Entity Address | Extracts a portion of an address for consideration                                                                                                                     |
+| date_difference     | Date           | Extracts the difference (in weeks, months, years, etc.) between the A record and B record.                                                                             |
+| date_extract        | Date           | Extracts a portion of the date from both records.                                                                                                                      |
+| name_alias          | Entity Name    | Considers any of the configured aliases for the name meeting a particular threshold of relevance (i.e. Will = Bill is stronger than Tess = Theresa)                    |
+| abs                 | Number         | Returns the absolute value of a number                                                                                                                                 |
+| dmetaphone          | Text           | Returns the double metaphone code (with configured code length) from the input string                                                                                  |
+| length              | Text           | Returns the length of text string                                                                                                                                      |
+| levenshtein         | Text           | Returns the levenshtein string difference between the A and B values.                                                                                                  |
+| sorensen_dice       | Text           | Returns the Sorensen Dice coefficient of text content A and B values.                                                                                                  |
+| jaro_winkler        | Text           | Returns the Jaro-Winkler (with default threshold of 0.7) between A and B values.                                                                                       |
+| metaphone           | Text           | Returns the metaphone phonetic code for the attribute                                                                                                                  |
+| similarity          | Text           | Returns a %'age (based on levenshtein difference) of string A to string B (i.e. 80% similar or 90% similar)                                                            |
+| soundex             | Text           | Extracts the soundex codification of the input values.                                                                                                                 |
+| substr              | Text           | Extracts a portion of the input values                                                                                                                                 |
+| tokenize            | Text           | Tokenizes the input string based on splitting characters, the tokenized values can then be transformed independently using any of the transforms listed in this table. |
+| timespan_extract    | TimeSpan       | Extracts a portion of a timespan such as minutes, hours, seconds.                                                                                                      |
 
 #### Custom Transforms
 
@@ -234,7 +202,7 @@ The example below illustrates the implementation to the "similarity" transform
     }
 ```
 
-Custom transforms can be implemented using any .NET language \(C\#, Pascal, Iron Python, Visual Basic, etc\).
+Custom transforms can be implemented using any .NET language (C#, Pascal, Iron Python, Visual Basic, etc).
 
 #### Chaining Transforms
 
@@ -253,7 +221,7 @@ Transforms can be chained, for example, if you want to extract the Given name an
     </attribute>
 ```
 
-This configuration will consider the Mother's name \(relationship\[Mother\].target.name\) and will extract \(namepart\_extract\) the Given name, then apply a levenshtein difference. The result must be less than or equal to 2 \(op=lte value=2\)
+This configuration will consider the Mother's name (relationship\[Mother].target.name) and will extract (namepart_extract) the Given name, then apply a levenshtein difference. The result must be less than or equal to 2 (op=lte value=2)
 
 #### Conditional Evaluation
 
@@ -285,7 +253,7 @@ You can also instruct the matching engine to only run or consider an attribute i
 ```
 
 {% hint style="info" %}
-Note: Since the property path for both attributes are the same \(address\) the scoring engine will consider these two properties related, and will execute them as pairs. For example, if a patient has both a VacationHome and a Home address this configuration will consider VacationHome as one address for both attributes and Home. If using **address.component\[State\].value and address.component\[City\].value** instead then the scoring algorithm would treat these as two different property paths.
+Note: Since the property path for both attributes are the same (address) the scoring engine will consider these two properties related, and will execute them as pairs. For example, if a patient has both a VacationHome and a Home address this configuration will consider VacationHome as one address for both attributes and Home. If using **address.component\[State].value and address.component\[City].value **instead then the scoring algorithm would treat these as two different property paths.
 {% endhint %}
 
 #### Partial Scoring
@@ -307,11 +275,11 @@ It is possible to apply a partial score to a match attribute. The understand why
 
 Under such a configuration, a patient with the name **Kimberly** may be compared to existing patients as illustrated in the table below:
 
-| Name | Gender | DOB | Address |
-| :--- | :--- | :--- | :--- |
-| Kimberleigh Smith | F | 1992-01-12 | 123 Main Street |
-| Kimberly Smith | F | 1992-01-15 | 321 Brant Street |
-| Kimber Smith | F | 1992-01-10 | 222 West Street |
+| Name              | Gender | DOB        | Address          |
+| ----------------- | ------ | ---------- | ---------------- |
+| Kimberleigh Smith | F      | 1992-01-12 | 123 Main Street  |
+| Kimberly Smith    | F      | 1992-01-15 | 321 Brant Street |
+| Kimber Smith      | F      | 1992-01-10 | 222 West Street  |
 
 When evaluating a match the a attribute configuration will generate the Double Metaphone code of **KMPR** for all of these records, even though the candidate being considered doesn't match. Here it may be important to configure a partial score based on the levenshtein string difference between the original names and applying the percentage of difference to the calculated match score.
 
@@ -337,9 +305,8 @@ When evaluating a match the a attribute configuration will generate the Double M
 
 Here, the matching engine would alter the given scores for each of the patients under consideration:
 
-| Name | namepart\_extract | dmetaphone | assertion | similarity | Score |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Kimberleigh Smith | Kimberleigh | KMPR | PASS | 0.429 | 42% of match score |
-| Kimberly Smith | Kimberly | KMPR | PASS | 1.0 | 100% of match score |
-| Kimber Smith | Kimber | KMPR | PASS | 0.715 | 71.5% of match score |
-
+| Name              | namepart_extract | dmetaphone | assertion | similarity | Score                |
+| ----------------- | ---------------- | ---------- | --------- | ---------- | -------------------- |
+| Kimberleigh Smith | Kimberleigh      | KMPR       | PASS      | 0.429      | 42% of match score   |
+| Kimberly Smith    | Kimberly         | KMPR       | PASS      | 1.0        | 100% of match score  |
+| Kimber Smith      | Kimber           | KMPR       | PASS      | 0.715      | 71.5% of match score |

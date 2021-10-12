@@ -51,9 +51,9 @@ The Kubernetes folder will need the following items:
 * A **k8s.sh** file
 * Kubernetes resource files, in our example we have:
   * **db-deployment.yaml**
-  * **db-service.yaml** \(These are for the Postgres Image\)
+  * **db-service.yaml** (These are for the Postgres Image)
   * **santedb-deployment.yaml**
-  * **santedb-service.yaml** \(This are for the santedb-mpi image\)
+  * **santedb-service.yaml **(This are for the santedb-mpi image)
   * **santedb-mpi-app-persistentvolumeclaim.yaml, santedb-mpi-config-persistentvolumeclaim.yaml, santedb-mpi-seed-persistentvolumeclaim**
 * Potentially an **Importer** folder, which while not necessarily required, will make life easier - this would enable you to preconfigure channels, instead of having to manually create them. 
 
@@ -67,22 +67,22 @@ More information on the importer folder can be found: [https://openhie.github.io
 
 Navigate to the OpenHIE/Instant repository. Type the following commands
 
-```text
+```
 yarn
 yarn docker:build
 ```
 
 Next we need to run the images
 
-```text
+```
 yarn docker:instant init -t docker santempi -c="<path to santedb package>"
 ```
 
-The above command is specifying to run docker, specifying the package santempi \(Which will link to the **id** property of the instant.json file\), and specifying a path of where to find the image. 
+The above command is specifying to run docker, specifying the package santempi (Which will link to the **id **property of the instant.json file), and specifying a path of where to find the image. 
 
 It make take several minutes to build. And after it's complete, you may need to wait a couple more minutes for the santedb-mpi server to be fully initialized. Once it's done, you should see something that looks like the following:
 
-```text
+```
 whitet@Mohawks-MBP instant % docker container ls
 CONTAINER ID   IMAGE                              COMMAND                  CREATED              STATUS              PORTS                                                                                                                                                                     NAMES
 58d391d05922   santesuite/santedb-mpi:2.1.3       "mono /santedb/Sante…"   33 seconds ago       Up 28 seconds       0.0.0.0:2100->2100/tcp, :::2100->2100/tcp, 0.0.0.0:8082->8080/tcp, :::8082->8080/tcp                                                                                      santedb-mpi
@@ -115,13 +115,13 @@ If you've used the example project, or have used an Importer, you should be able
 
 #### Channels - If creating manually
 
-If you are creating a channel manually, click on the green **+ Channel** near the bottom left. 
+If you are creating a channel manually, click on the green **+ Channel **near the bottom left. 
 
 For **basic info** give a channel name, and a brief description. In this example we are going to use the admin API, so you could call the channel **Santedb MPI Admin**
 
 For r**equest matching** there are two things you need to do
 
-* enter a URL pattern \(in our case **/ami**\) - make sure you unclick Auto-add regex delimiters
+* enter a URL pattern (in our case **/ami**) - make sure you unclick Auto-add regex delimiters
 * Make the channel public
 
 ![](../../.gitbook/assets/screen-shot-2021-06-30-at-2.58.22-pm.png)
@@ -129,34 +129,34 @@ For r**equest matching** there are two things you need to do
 Finally, for **Routes**, add a new route with the following info:
 
 * Route Name: SanteDB Admin
-* Host: santedb-mpi \(this is referencing the docker container name\)
-* Port: 8080 \(this is referencing the **internal** docker port on the container\)
+* Host: santedb-mpi (this is referencing the docker container name)
+* Port: 8080 (this is referencing the **internal** docker port on the container)
 * Forward existing Authorization Headers: yes
 
 Click set route. 
 
 ![](../../.gitbook/assets/screen-shot-2021-06-30-at-3.01.40-pm.png)
 
-#### 
+####
 
 ### Run on Kubernetes
 
 Navigate to the OpenHIE/Instant repository. Type the following commands
 
-```text
+```
 yarn
 yarn docker:build
 ```
 
 Next we need to run the images
 
-```text
+```
 yarn docker:instant init -t k8s santempi -c="<path to santedb package>"
 ```
 
-The above command is specifying to run docker, specifying the package santempi \(Which will link to the **id** property of the instant.json file\), and specifying a path of where to find the image. The only difference between this and docker, is you're changing the keyword 'docker' to 'k8s'.
+The above command is specifying to run docker, specifying the package santempi (Which will link to the **id **property of the instant.json file), and specifying a path of where to find the image. The only difference between this and docker, is you're changing the keyword 'docker' to 'k8s'.
 
-The kubernetes deployments will take much longer to build than the docker deployments. Afterwards it will look something like the following image \(Note: This might change depending on what packages you're running\)
+The kubernetes deployments will take much longer to build than the docker deployments. Afterwards it will look something like the following image (Note: This might change depending on what packages you're running)
 
 ![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.29.05-am.png)
 
@@ -167,19 +167,19 @@ You can navigate to http://localhost:9000 and be brought to the login screen.
 
 **Manually Adding Channels**
 
-To manually add a santedb channel, once logged in, click on the channel section and the green **Channel +** button. 
+To manually add a santedb channel, once logged in, click on the channel section and the green **Channel + **button. 
 
-Adding a channel is almost identical to docker. \(See above\) - The differences is when adding a route, instead of using the container name, as in docker, you will need to use the IP Address of the pod. 
+Adding a channel is almost identical to docker. (See above) - The differences is when adding a route, instead of using the container name, as in docker, you will need to use the IP Address of the pod. 
 
 To obtain the pod:
 
-```text
+```
 kubectl get pods
 ```
 
-The pod we want is the santeDB pod, **santedb-66bf68f744-xpsnh** \(This will change as the name is dynamic, but it should be prefixed with santedb\)
+The pod we want is the santeDB pod, **santedb-66bf68f744-xpsnh **(This will change as the name is dynamic, but it should be prefixed with santedb)
 
-```text
+```
 kubectl describe pod santedb-66bf68f744-xpsnh
 ```
 
@@ -191,7 +191,7 @@ Now you can add the IP Address as the **host** for the route.
 
 ![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.43.35-am.png)
 
-One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients** tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
+One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients **tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
 
  
 
@@ -205,9 +205,9 @@ We will now test to make sure we can see SanteDB transactions in openHIM. You wi
 
 **To generate a bearer token:**
 
-You can follow this link: [http://localhost:8082/auth/authorize/?redirect\_uri=http://google.com&client\_id=fiddler&scope=openid%20\*&response\_type=token&response\_mode=query&state=foo](http://localhost:8082/auth/authorize/?redirect_uri=http://google.com&client_id=fiddler&scope=openid%20*&response_type=token&response_mode=query&state=foo)
+You can follow this link: [http://localhost:8082/auth/authorize/?redirect_uri=http://google.com\&client_id=fiddler\&scope=openid%20\*\&response_type=token\&response_mode=query\&state=foo](http://localhost:8082/auth/authorize/?redirect_uri=http://google.com\&client_id=fiddler\&scope=openid%20\*\&response_type=token\&response_mode=query\&state=foo)
 
-This is using the running santedb-mpi container, externally from openhim, and generating a token. It will take you to a login page. Enter the account credentials of the account you want to test with \(in our case, Administrator\)
+This is using the running santedb-mpi container, externally from openhim, and generating a token. It will take you to a login page. Enter the account credentials of the account you want to test with (in our case, Administrator)
 
 * username: Administrator
 * password: Mohawk123
@@ -218,7 +218,7 @@ You will be redirected to a blank page, where you can copy the bearer token from
 
 ### Testing the channels
 
-To test we are going to make API calls using something like **Postman**, or maybe **curl.** For this demo I will use postman. 
+To test we are going to make API calls using something like **Postman**, or maybe **curl. **For this demo I will use postman. 
 
 Under the **Authorization** tab for postman, select type as **Bearer Token** - In the value, enter the bearer token that you have generated. 
 
@@ -235,4 +235,3 @@ You should see a 200 response. Now, go back to the OpenHIM console. You should s
 
 
 #### Congratulations, you have now verified your santedb package within the instant openhim!
-

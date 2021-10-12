@@ -10,15 +10,15 @@ Represents a patch service which can calculate and apply patches
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Diff | Patch | _IdentifiedData_ **existing** _IdentifiedData_ **updated** _String\[\]_ **ignoreProperties** | Performs a DIFF and creates the related patch which can be used to update             to |
-| Patch | IdentifiedData | _Patch_ **patch** _IdentifiedData_ **data** _Boolean_ **force** | Apples the specified  onto  returning the updated object |
-| Test | Boolean | _Patch_ **patch** _IdentifiedData_ **target** | Tests that the patch can be applied on the specified object |
+| Operation | Response/Return | Input/Parameter                                                                                                                                                     | Description                                                                              |
+| --------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Diff      | Patch           | <p><em>IdentifiedData</em> <strong>existing</strong><br><em>IdentifiedData</em> <strong>updated</strong><br><em>String[]</em> <strong>ignoreProperties</strong></p> | Performs a DIFF and creates the related patch which can be used to update             to |
+| Patch     | IdentifiedData  | <p><em>Patch</em> <strong>patch</strong><br><em>IdentifiedData</em> <strong>data</strong><br><em>Boolean</em> <strong>force</strong></p>                            | Apples the specified  onto  returning the updated object                                 |
+| Test      | Boolean         | <p><em>Patch</em> <strong>patch</strong><br><em>IdentifiedData</em> <strong>target</strong></p>                                                                     | Tests that the patch can be applied on the specified object                              |
 
 ## Implementations
 
-### Basic Patching Service - \(SanteDB.Core.Api\)
+### Basic Patching Service - (SanteDB.Core.Api)
 
 Represents a simple patch service which can calculate patches and apply them
 
@@ -62,4 +62,3 @@ public class MyPatchService : SanteDB.Core.Services.IPatchService {
     }
 }
 ```
-

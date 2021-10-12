@@ -14,7 +14,7 @@ When writing your applets, there are a variety of ways to make localization and 
 It is recommended you use the manifest file and i18n service as SanteDB will pre-translate the file before sending it to the browser and will cache the result. This reduces the amount of processing power required for repeat viewing of the page.
 {% endhint %}
 
-You should then register **my.ui.local.string** in the applet's manifest file.
+You should then register **my.ui.local.string **in the applet's manifest file.
 
 ```markup
 <strings lang="en">
@@ -39,14 +39,14 @@ SanteDB.locale.setLocale('en');
 
 When you call this, a cookie is set in the browser which controls the rendering on the server side. However, this is the lowest order of preference for the server. In short, the server will render assets using the following preference:
 
-1. The user's preference \(stored at : `UserEntity.languageCommunication`\) is used, if the user has no preference then,
+1. The user's preference (stored at : `UserEntity.languageCommunication`) is used, if the user has no preference then,
 2. The `lang` cookie provided by the browser, if there is no setting then
 3. The value of `Accept-Language` HTTP header sent by the browser, if not sent then
-4. The configured server preference \(set in the SanteDB.config.xml file\)
+4. The configured server preference (set in the SanteDB.config.xml file)
 
 ## Registering New Locales
 
-Locales are registered using the applet `manifest.xml`, within the manifest, you can specify one or more assets \(css, javascript, etc.\) to be loaded for the particular locale. For example, to define a localization for Esperanto:
+Locales are registered using the applet `manifest.xml`, within the manifest, you can specify one or more assets (css, javascript, etc.) to be loaded for the particular locale. For example, to define a localization for Esperanto:
 
 ```markup
 <AppletManifest xmlns="http://santedb.org/applet">
@@ -87,7 +87,7 @@ It is recommended you **never fork** the core applets to change translations, th
 
 You may also collect your strings in an Android style `strings.xml` format, this allows common tools like [Mozilla Pontoon](https://pontoon.santesuite.net) to edit your strings. In order to use this method, you should have an applet structure collecting strings under locale directories such as `locales/en/strings.xml` and `locales/fr/strings.xml` , or you may use `i18n/en/strings.xml` and `i18n/en/strings.xml`.
 
-Once complete, you can reference your strings files in the manifest \(as shown in the example below\):
+Once complete, you can reference your strings files in the manifest (as shown in the example below):
 
 {% tabs %}
 {% tab title="manifest.xml" %}
@@ -107,7 +107,7 @@ Once complete, you can reference your strings files in the manifest \(as shown i
 
 Finally, you should create a file called `i18n.toml` in your applet to allow Mozilla Pontoon to import your strings.
 
-```text
+```
 basepath = "."
 locales = [ "en", "fr", "es", "sw", "it", "my" ] 
 [[paths]]
@@ -115,11 +115,10 @@ locales = [ "en", "fr", "es", "sw", "it", "my" ]
     l10n = "i18n/{locale}/strings.xml"
 ```
 
-Once completed, you can setup a project in your Pontoon server which points to your github repository \(see: [Localizing your projects](https://mozilla-pontoon.readthedocs.io/en/latest/user/localizing-your-projects.html)\) and use the sync feature. The strings located in your `strings.xml` file should be reflected in the Mozilla Pontoon user interface where **Context** indicates the name of your resource string:
+Once completed, you can setup a project in your Pontoon server which points to your github repository (see: [Localizing your projects](https://mozilla-pontoon.readthedocs.io/en/latest/user/localizing-your-projects.html)) and use the sync feature. The strings located in your `strings.xml` file should be reflected in the Mozilla Pontoon user interface where **Context** indicates the name of your resource string:
 
-![](../../../.gitbook/assets/image%20%28402%29.png)
+![](<../../../.gitbook/assets/image (402).png>)
 
 {% hint style="info" %}
 When you use a `strings.xml` file for your translations, you cannot override the default translations with `priority=` mechanism supported by the `manifest.xml`
 {% endhint %}
-

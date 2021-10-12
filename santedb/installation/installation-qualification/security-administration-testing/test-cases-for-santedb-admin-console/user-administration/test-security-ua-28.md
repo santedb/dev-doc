@@ -22,9 +22,9 @@ The `user.lock` command is for locking or unlocking existing users.
 
 ## Actions/Steps
 
-1. Execute the `user.lock` command.
+1\. Execute the `user.lock` command.
 
-```text
+```
 user.lock
 ```
 
@@ -32,9 +32,8 @@ user.lock
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.lock
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

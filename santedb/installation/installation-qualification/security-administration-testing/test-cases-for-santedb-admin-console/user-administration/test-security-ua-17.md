@@ -12,7 +12,7 @@ description: Testing the user.del command with no parameters specified.
 
 ## Discussion
 
-The `user.del` command is for de-activating users \(effectively deleting the user\) and has a single `-u` parameter for specifying **username** of user to delete. 
+The `user.del` command is for de-activating users (effectively deleting the user) and has a single `-u` parameter for specifying **username **of user to delete. 
 
 * An exception is thrown when no username is specified.
 
@@ -22,9 +22,9 @@ The `user.del` command is for de-activating users \(effectively deleting the use
 
 ## Actions/Steps
 
-1. Execute the `user.del` command.
+1\. Execute the `user.del` command.
 
-```text
+```
 user.del
 ```
 
@@ -32,9 +32,8 @@ user.del
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.del
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

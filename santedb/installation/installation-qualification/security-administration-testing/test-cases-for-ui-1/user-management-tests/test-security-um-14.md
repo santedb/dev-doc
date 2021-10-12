@@ -22,20 +22,19 @@ New users being created can be assigned multiple family names in the **Family Na
 
 ## Actions/Steps
 
-1. Select the **Family Name** textbox within the **Demographic Properties** section.
+1\. Select the **Family Name** textbox within the **Demographic Properties** section.
 
-![](../../../../../../.gitbook/assets/image%20%28237%29.png)
+![](<../../../../../../.gitbook/assets/image (237).png>)
 
-2. Input a first family name \(e.g. "Jingleheimer"\) and press enter.
+2\. Input a first family name (e.g. "Jingleheimer") and press enter.
 
-![](../../../../../../.gitbook/assets/image%20%28239%29.png)
+![](<../../../../../../.gitbook/assets/image (239).png>)
 
-3. Input a second family name \(e.g. "Schmidt"\) and press enter.
+3\. Input a second family name (e.g. "Schmidt") and press enter.
 
 ## Expected Behaviour
 
 * Each name entered should appear on an individual card inside the **Family Name** textbox.
 * These steps can be repeated during user creation to add more names to the **Family Name** property.
 
-![](../../../../../../.gitbook/assets/image%20%28235%29.png)
-
+![](<../../../../../../.gitbook/assets/image (235).png>)

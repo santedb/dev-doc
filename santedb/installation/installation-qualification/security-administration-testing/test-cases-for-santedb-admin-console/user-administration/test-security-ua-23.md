@@ -17,19 +17,19 @@ description: >-
 
 ## Discussion
 
-The `user.undel` command is for re-activating de-activated users \(effectively un-deleting the user\) and has a single `-u` parameter for specifying **username** of user to un-delete.
+The `user.undel` command is for re-activating de-activated users (effectively un-deleting the user) and has a single `-u` parameter for specifying **username **of user to un-delete.
 
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
 2. See [TEST: SECURITY-UA-02](test-security-ua-02.md) or [TEST: SECURITY-UA-03](test-security-ua-03.md) for checking if a username exists.
-3. See [TEST: SECURITY-UA-27](test-security-ua-27.md) for checking if a user is de-activated \(deleted\).
+3. See [TEST: SECURITY-UA-27](test-security-ua-27.md) for checking if a user is de-activated (deleted).
 
 ## Actions/Steps
 
 1. Execute the `user.undel` command with `-u` parameter specified as an existing and deleted username.
 
-```text
+```
 user.undel -u <deleted username>
 ```
 
@@ -37,14 +37,14 @@ user.undel -u <deleted username>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.undel -u demoadmin
 >
 ```
 
-* Check for previously de-activated user to be re-activated \(no de-activated property present\):
+* Check for previously de-activated user to be re-activated (no de-activated property present):
 
-```text
+```
 > user.info -u demoadmin
 Name: demoadmin
 SID: 2a348c6e-c158-11ea-9f6f-00155d640b09
@@ -128,4 +128,3 @@ Roles: Test , TestyMcTester , TestGroup2 , ADMINISTRATORS , Muddsville
 {% hint style="warning" %}
 User information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

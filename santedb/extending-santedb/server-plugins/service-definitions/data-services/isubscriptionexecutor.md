@@ -10,21 +10,21 @@ Represents a subscription executor
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Executed | EventHandler&lt;QueryResultEventArgs&lt;IdentifiedData&gt;&gt; | Occurs when queried. |
-| Executing | EventHandler&lt;QueryRequestEventArgs&lt;IdentifiedData&gt;&gt; | Occurs when querying. |
+| Event     | Type                                                  | Description           |
+| --------- | ----------------------------------------------------- | --------------------- |
+| Executed  | EventHandler\<QueryResultEventArgs\<IdentifiedData>>  | Occurs when queried.  |
+| Executing | EventHandler\<QueryRequestEventArgs\<IdentifiedData>> | Occurs when querying. |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Execute | IEnumerable&lt;Object&gt; | _Guid_ **subscriptionKey** _NameValueCollection_ **parameters** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _Guid_ **queryId** | Executes the specified subscription mechanism |
-| Execute | IEnumerable&lt;Object&gt; | _SubscriptionDefinition_ **subscription** _NameValueCollection_ **parameters** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _Guid_ **queryId** | Executes the specified subscription mechanism |
+| Operation | Response/Return      | Input/Parameter                                                                                                                                                                                                                                                                                                                    | Description                                   |
+| --------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| Execute   | IEnumerable\<Object> | <p><em>Guid</em> <strong>subscriptionKey</strong><br><em>NameValueCollection</em> <strong>parameters</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>Guid</em> <strong>queryId</strong></p>                | Executes the specified subscription mechanism |
+| Execute   | IEnumerable\<Object> | <p><em>SubscriptionDefinition</em> <strong>subscription</strong><br><em>NameValueCollection</em> <strong>parameters</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>Guid</em> <strong>queryId</strong></p> | Executes the specified subscription mechanism |
 
 ## Implementations
 
-### ADO.NET Subscription Executor - \(SanteDB.Persistence.Data.ADO\)
+### ADO.NET Subscription Executor - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -70,4 +70,3 @@ public class MySubscriptionExecutor : SanteDB.Core.Services.ISubscriptionExecuto
     }
 }
 ```
-

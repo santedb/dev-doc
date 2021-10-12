@@ -18,7 +18,7 @@ description: >-
 
 The `user.password` command is for changing a specific users password. 
 
-* The `-u` parameter is used to specify the **username** of the user who's password will change. 
+* The `-u` parameter is used to specify the **username **of the user who's password will change. 
 * An exception is thrown when the username specified does not exist. 
 
 ## Pre-Conditions / Setup
@@ -28,9 +28,9 @@ The `user.password` command is for changing a specific users password.
 
 ## Actions/Steps
 
-1. Execute the `user.password` command with `-u` parameter specified as a non-existing username.
+1\. Execute the `user.password` command with `-u` parameter specified as a non-existing username.
 
-```text
+```
 user.password -u <new user name>
 ```
 
@@ -38,9 +38,8 @@ user.password -u <new user name>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.password -u TestUser5678
 ERR: Exception has been thrown by the target of an invocation.
         1:User TestUser5678 not found
 ```
-

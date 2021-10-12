@@ -17,15 +17,15 @@ This test is a combination of TEST-OHIE-CR05 and TEST-OHIE-CR07 from the HL7v2 t
 
 A master patient index/client registry is often tasked with the storage of partial registration records and/or records which are only identifiable by their mother's information. 
 
-Whereas this information can be registered in one message in HL7v2 \(using mother's name and mother's identifier\), this test requires the use of either:
+Whereas this information can be registered in one message in HL7v2 (using mother's name and mother's identifier), this test requires the use of either:
 
-* A FHIR transaction bundle to register a related person \(the mother\) and patient
-* Two FHIR operations to register the patient and the related person \(the mother\)
-* A PMIR message with the related person \(the mother\) and patient.
+* A FHIR transaction bundle to register a related person (the mother) and patient
+* Two FHIR operations to register the patient and the related person (the mother)
+* A PMIR message with the related person (the mother) and patient.
 
 ### FHIR Representation of Mother/Child Relationship
 
-SanteMPI supports robust relationships between entities which cannot be easily expressed in FHIR. For example, there may be use cases where the mother is a patient \(via delivery\) at a hospital and the child is also a patient \(receiving care at a NICU\). Unfortunately, this type of relationship in FHIR is represented as the following structure:
+SanteMPI supports robust relationships between entities which cannot be easily expressed in FHIR. For example, there may be use cases where the mother is a patient (via delivery) at a hospital and the child is also a patient (receiving care at a NICU). Unfortunately, this type of relationship in FHIR is represented as the following structure:
 
 ```http
 <Patient>
@@ -48,10 +48,10 @@ SanteMPI supports robust relationships between entities which cannot be easily e
 
 Unfortunately in SanteMPI this type of relationship can only be established when:
 
-* The three resources are submitted as part of an entire bundle \(such as a transaction bundle or PMIR operation\)
+* The three resources are submitted as part of an entire bundle (such as a transaction bundle or PMIR operation)
 * The Registration occurs on the REST interface such that:
-  * Mother Patient is registered first with a concrete identifier in the `identifier` property
-  * Baby Patient is registered next with a concrete identifier in the `identifier` property
+  * Mother Patient is registered first with a concrete identifier in the `identifier `property
+  * Baby Patient is registered next with a concrete identifier in the `identifier `property
   * Mother RelatedPerson is registered using the same concrete `identifier` as that used in step .
 
 This test suite tests both methods of creating a mother/child relationship
@@ -60,9 +60,9 @@ This test suite tests both methods of creating a mother/child relationship
 
 Ensure that all pre-conditions for [OHIE-CR-02-FHIR](test-ohie-cr-02-fhir.md#pre-conditions-setup) have been completed.
 
-## Authenticate as TEST\_HARNESS\_FHIR
+## Authenticate as TEST_HARNESS_FHIR
 
-The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
+The test harness authenticates against the SanteMPI IdP using a client_credentials grant for the test-harness-a account.
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
@@ -89,7 +89,7 @@ The test harness sends an authenticated request to create a child record with a 
 The mother is a simple Related Person with name SU MYAT LWIN.
 
 {% hint style="info" %}
-This test case does not use familial names to mimic contexts where only given names \(no surnames\) are present.
+This test case does not use familial names to mimic contexts where only given names (no surnames) are present.
 {% endhint %}
 
 ```javascript
@@ -196,14 +196,14 @@ This test case does not use familial names to mimic contexts where only given na
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST | PMIR Only | Return MessageHeader with response.code = ok |
-| MUST |  | Return HTTP code of 201 Created |
-| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
-| SHOULD |  | Include a Patient entry in response containing created patient |
-| SHOULD |  | Include the RelatedPerson entry which was created |
-| SHOULD |  | Include a link to the master identity with code refer  |
+| Requirement | Option    | Description                                                    |
+| ----------- | --------- | -------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                   |
+| MUST        |           | Return HTTP code of 201 Created                                |
+| SHOULD      | PMIR Only | Include an OperationOutcome entry in the response              |
+| SHOULD      |           | Include a Patient entry in response containing created patient |
+| SHOULD      |           | Include the RelatedPerson entry which was created              |
+| SHOULD      |           | Include a link to the master identity with code refer          |
 
 ## Validate Child Patient Created
 
@@ -221,21 +221,21 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Accept the message with HTTP 200 OK |
-| MUST |  | Include a bundle with exactly 1 patient result |
-| MUST |  | Include a bundle with exactly 1 RelatedPerson result |
-| MUST |  | Contain a patient for WIN MINH |
-| MUST |  | Have an identifier for FHR-050 in system http://ohie.org/test/test |
-| MUST |  | Contain a RelatedPerson with name SU MYAT LWIN |
-| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
+| Requirement | Option | Description                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| MUST        |        | Accept the message with HTTP 200 OK                                          |
+| MUST        |        | Include a bundle with exactly 1 patient result                               |
+| MUST        |        | Include a bundle with exactly 1 RelatedPerson result                         |
+| MUST        |        | Contain a patient for WIN MINH                                               |
+| MUST        |        | Have an identifier for FHR-050 in system http://ohie.org/test/test           |
+| MUST        |        | Contain a RelatedPerson with name SU MYAT LWIN                               |
+| SHOULD      |        | Contain one or more link entries with type seealso pointing to local records |
 
 ## Register Mother Patient and Newborn Demographics in Transaction Bundle
 
-The test harness sends an authenticated request to create a newborn record with the mother's demographics. This test mimics registering a patient \(the Mother\) and a nameless newborn \(the Baby\) in one transaction. 
+The test harness sends an authenticated request to create a newborn record with the mother's demographics. This test mimics registering a patient (the Mother) and a nameless newborn (the Baby) in one transaction. 
 
-Patient \(Mother\) details:
+Patient (Mother) details:
 
 * Identifier `FHR-052` in `http://ohie.org/test/test` with use `official`
 * Name: SARAH ABELS
@@ -382,45 +382,13 @@ The bundle portrayed is using type `history` and is intended to be tested as par
 
 ### Expected Behaviour
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left">PMIR Only</td>
-      <td style="text-align:left">Return MessageHeader with response.code = ok</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return HTTP code of 201 Created</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SHOULD</td>
-      <td style="text-align:left">PMIR Only</td>
-      <td style="text-align:left">Include an OperationOutcome entry in the response</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SHOULD</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Include a Patient entry in response containing created patients for</p>
-        <p>the newborn and mother.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SHOULD</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Include a link to the master identity with code refer</td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option    | Description                                                                                               |
+| ----------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                                                              |
+| MUST        |           | Return HTTP code of 201 Created                                                                           |
+| SHOULD      | PMIR Only | Include an OperationOutcome entry in the response                                                         |
+| SHOULD      |           | <p>Include a Patient entry in response containing created patients for </p><p>the newborn and mother.</p> |
+| SHOULD      |           | Include a link to the master identity with code refer                                                     |
 
 ## Validate Newborn Patient Created with Mother Related Person
 
@@ -439,14 +407,14 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Accept the message with HTTP 200 OK |
-| MUST |  | Include a bundle with exactly 1 patient result. |
-| MUST |  | Contain the nameless newborn patient details \(validated by Gender and DOB\) |
-| MUST |  | Have an identifier for FHR-051 in system http://ohie.org/test/test |
-| MUST |  | Have a RelatedPerson with identifier FHR-052 for SARAH ABELS |
-| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
+| Requirement | Option | Description                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| MUST        |        | Accept the message with HTTP 200 OK                                          |
+| MUST        |        | Include a bundle with exactly 1 patient result.                              |
+| MUST        |        | Contain the nameless newborn patient details (validated by Gender and DOB)   |
+| MUST        |        | Have an identifier for FHR-051 in system http://ohie.org/test/test           |
+| MUST        |        | Have a RelatedPerson with identifier FHR-052 for SARAH ABELS                 |
+| SHOULD      |        | Contain one or more link entries with type seealso pointing to local records |
 
 ## Validate Mother Patient Created 
 
@@ -465,13 +433,13 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Accept the message with HTTP 200 OK |
-| MUST |  | Include a bundle with exactly 1 patient result. |
-| MUST |  | Contain the mother  patient details  \(name of SARAH ABELS\) |
-| MUST |  | Have an identifier for FHR-052 in system http://ohie.org/test/test |
-| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
+| Requirement | Option | Description                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| MUST        |        | Accept the message with HTTP 200 OK                                          |
+| MUST        |        | Include a bundle with exactly 1 patient result.                              |
+| MUST        |        | Contain the mother  patient details  (name of SARAH ABELS)                   |
+| MUST        |        | Have an identifier for FHR-052 in system http://ohie.org/test/test           |
+| SHOULD      |        | Contain one or more link entries with type seealso pointing to local records |
 
 ## Patient Demographics Query for Mobile Paediatric Query
 
@@ -490,11 +458,10 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Accept the message with HTTP 200 OK |
-| MUST |  | Include a bundle with exactly 1 patient result. |
-| MUST |  | Contain the child patient details |
-| MUST |  | Have an identifier for FHR-051 in system http://ohie.org/test/test |
-| SHOULD |  | Contain one or more link entries with type seealso pointing to local records |
-
+| Requirement | Option | Description                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| MUST        |        | Accept the message with HTTP 200 OK                                          |
+| MUST        |        | Include a bundle with exactly 1 patient result.                              |
+| MUST        |        | Contain the child patient details                                            |
+| MUST        |        | Have an identifier for FHR-051 in system http://ohie.org/test/test           |
+| SHOULD      |        | Contain one or more link entries with type seealso pointing to local records |

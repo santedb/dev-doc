@@ -10,16 +10,16 @@ Identifies a structure for message persistence service implementations
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| GetMessageState | MessageState | _String_ **messageId** | Get the state of a message |
-| PersistMessage | void | _String_ **messageId** _Stream_ **message** | Persists the message |
-| PersistMessageInfo | void | _MessageInfo_ **message** | Persist message extension |
-| GetMessageResponseMessage | Stream | _String_ **messageId** | Get the identifier of the message that represents the response to the current message |
-| GetMessage | Stream | _String_ **messageId** | Get a message |
-| PersistResultMessage | void | _String_ **messageId** _String_ **respondsToId** _Stream_ **response** | Persist |
-| GetMessageIds | IEnumerable&lt;String&gt; | _DateTime_ **from** _DateTime_ **to** | Get all message ids between the specified time\(s\) |
-| GetMessageInfo | MessageInfo | _String_ **messageId** | Get message extended attribute |
+| Operation                 | Response/Return      | Input/Parameter                                                                                                                                 | Description                                                                           |
+| ------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| GetMessageState           | MessageState         | _String_ **messageId**                                                                                                                          | Get the state of a message                                                            |
+| PersistMessage            | void                 | <p><em>String</em> <strong>messageId</strong><br><em>Stream</em> <strong>message</strong></p>                                                   | Persists the message                                                                  |
+| PersistMessageInfo        | void                 | _MessageInfo_ **message**                                                                                                                       | Persist message extension                                                             |
+| GetMessageResponseMessage | Stream               | _String_ **messageId**                                                                                                                          | Get the identifier of the message that represents the response to the current message |
+| GetMessage                | Stream               | _String_ **messageId**                                                                                                                          | Get a message                                                                         |
+| PersistResultMessage      | void                 | <p><em>String</em> <strong>messageId</strong><br><em>String</em> <strong>respondsToId</strong><br><em>Stream</em> <strong>response</strong></p> | Persist                                                                               |
+| GetMessageIds             | IEnumerable\<String> | <p><em>DateTime</em> <strong>from</strong><br><em>DateTime</em> <strong>to</strong></p>                                                         | Get all message ids between the specified time(s)                                     |
+| GetMessageInfo            | MessageInfo          | _String_ **messageId**                                                                                                                          | Get message extended attribute                                                        |
 
 ## Implementations
 
@@ -83,4 +83,3 @@ public class MyMessagePersistenceService : SanteDB.Core.Services.IMessagePersist
     }
 }
 ```
-

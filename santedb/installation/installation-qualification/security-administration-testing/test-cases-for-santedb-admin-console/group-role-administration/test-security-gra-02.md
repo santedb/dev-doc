@@ -14,18 +14,18 @@ description: Testing the role.list command with -a flag specified.
 
 The `role.list` command is for listing groups/roles. 
 
-* The `-a` flag is used to filter for **roles** that are de-activated \(deleted\).
+* The `-a` flag is used to filter for **roles **that are de-activated (deleted).
 
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. There must be de-activated \(deleted\) roles see any roles listed in the expected behaviour for this specific test.
+2. There must be de-activated (deleted) roles see any roles listed in the expected behaviour for this specific test.
 
 ## Actions/Steps
 
-1. Execute the `role.list` command with the `-a` flag.
+1\. Execute the `role.list` command with the `-a` flag.
 
-```text
+```
 role.list -a
 ```
 
@@ -33,7 +33,7 @@ role.list -a
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.list -a
 SID                                    Name                 Description                                      A
 97ba3b52-811b-11eb-b733-00155d640b09   Test                 TEst
@@ -42,4 +42,3 @@ SID                                    Name                 Description         
 {% hint style="warning" %}
 De-activated roles listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

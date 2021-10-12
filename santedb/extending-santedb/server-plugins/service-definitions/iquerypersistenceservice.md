@@ -10,20 +10,20 @@ Query persistence service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| FindQueryId | Guid | _Object_ **queryTag** | Find the query ID by the query tag |
-| RegisterQuerySet | Boolean | _Guid_ **queryId** _IEnumerable&lt;Guid&gt;_ **results** _Object_ **tag** _Int32_ **totalResults** | Register a query set |
-| IsRegistered | Boolean | _Guid_ **queryId** | Returns true if the query identifier is already registered |
-| GetQueryResults | IEnumerable&lt;Guid&gt; | _Guid_ **queryId** _Int32_ **offset** _Int32_ **count** | Get query results from the query set result store |
-| GetQueryTag | Object | _Guid_ **queryId** | Get the query tag value from the result store |
-| QueryResultTotalQuantity | Int64 | _Guid_ **queryId** | Count the number of remaining query results |
-| AddResults | void | _Guid_ **queryId** _IEnumerable&lt;Guid&gt;_ **results** | Add results to the query |
-| SetQueryTag | void | _Guid_ **queryId** _Object_ **value** | Set or update the query tag of an existing query id |
+| Operation                | Response/Return    | Input/Parameter                                                                                                                                                                                   | Description                                                |
+| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| FindQueryId              | Guid               | _Object_ **queryTag**                                                                                                                                                                             | Find the query ID by the query tag                         |
+| RegisterQuerySet         | Boolean            | <p><em>Guid</em> <strong>queryId</strong><br><em>IEnumerable&#x3C;Guid></em> <strong>results</strong><br><em>Object</em> <strong>tag</strong><br><em>Int32</em> <strong>totalResults</strong></p> | Register a query set                                       |
+| IsRegistered             | Boolean            | _Guid_ **queryId**                                                                                                                                                                                | Returns true if the query identifier is already registered |
+| GetQueryResults          | IEnumerable\<Guid> | <p><em>Guid</em> <strong>queryId</strong><br><em>Int32</em> <strong>offset</strong><br><em>Int32</em> <strong>count</strong></p>                                                                  | Get query results from the query set result store          |
+| GetQueryTag              | Object             | _Guid_ **queryId**                                                                                                                                                                                | Get the query tag value from the result store              |
+| QueryResultTotalQuantity | Int64              | _Guid_ **queryId**                                                                                                                                                                                | Count the number of remaining query results                |
+| AddResults               | void               | <p><em>Guid</em> <strong>queryId</strong><br><em>IEnumerable&#x3C;Guid></em> <strong>results</strong></p>                                                                                         | Add results to the query                                   |
+| SetQueryTag              | void               | <p><em>Guid</em> <strong>queryId</strong><br><em>Object</em> <strong>value</strong></p>                                                                                                           | Set or update the query tag of an existing query id        |
 
 ## Implementations
 
-### Memory-Based Query Persistence Service - \(SanteDB.Caching.Memory\)
+### Memory-Based Query Persistence Service - (SanteDB.Caching.Memory)
 
 TODO: Document this
 
@@ -39,7 +39,7 @@ TODO: Document this
     </serviceProviders>
 ```
 
-### REDIS Query Persistence Service - \(SanteDB.Caching.Redis\)
+### REDIS Query Persistence Service - (SanteDB.Caching.Redis)
 
 TODO: Document this
 
@@ -113,4 +113,3 @@ public class MyQueryPersistenceService : SanteDB.Core.Services.IQueryPersistence
     }
 }
 ```
-

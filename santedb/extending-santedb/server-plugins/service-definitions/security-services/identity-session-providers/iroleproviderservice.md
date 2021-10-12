@@ -10,20 +10,20 @@ Represents a service which is capableof retrieving roles
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| CreateRole | void | _String_ **roleName** _IPrincipal_ **principal** | Creates a role |
-| AddUsersToRoles | void | _String\[\]_ **users** _String\[\]_ **roles** _IPrincipal_ **principal** | Add users to roles |
-| RemoveUsersFromRoles | void | _String\[\]_ **users** _String\[\]_ **roles** _IPrincipal_ **principal** | Remove users from specified roles |
-| FindUsersInRole | String\[\] | _String_ **role** | Find all users in a specified role |
-| GetAllRoles | String\[\] |  | Get all roles |
-| GetAllRoles | String\[\] | _String_ **userName** | Get all roles |
-| IsUserInRole | Boolean | _String_ **userName** _String_ **roleName** | User user in the specified role |
-| IsUserInRole | Boolean | _IPrincipal_ **principal** _String_ **roleName** | User user in the specified role |
+| Operation            | Response/Return | Input/Parameter                                                                                                                               | Description                        |
+| -------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| CreateRole           | void            | <p><em>String</em> <strong>roleName</strong><br><em>IPrincipal</em> <strong>principal</strong></p>                                            | Creates a role                     |
+| AddUsersToRoles      | void            | <p><em>String[]</em> <strong>users</strong><br><em>String[]</em> <strong>roles</strong><br><em>IPrincipal</em> <strong>principal</strong></p> | Add users to roles                 |
+| RemoveUsersFromRoles | void            | <p><em>String[]</em> <strong>users</strong><br><em>String[]</em> <strong>roles</strong><br><em>IPrincipal</em> <strong>principal</strong></p> | Remove users from specified roles  |
+| FindUsersInRole      | String\[]       | _String_ **role**                                                                                                                             | Find all users in a specified role |
+| GetAllRoles          | String\[]       |                                                                                                                                               | Get all roles                      |
+| GetAllRoles          | String\[]       | _String_ **userName**                                                                                                                         | Get all roles                      |
+| IsUserInRole         | Boolean         | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>roleName</strong></p>                                                 | User user in the specified role    |
+| IsUserInRole         | Boolean         | <p><em>IPrincipal</em> <strong>principal</strong><br><em>String</em> <strong>roleName</strong></p>                                            | User user in the specified role    |
 
 ## Implementations
 
-### ADO.NET Role Provider Service - \(SanteDB.Persistence.Data.ADO\)
+### ADO.NET Role Provider Service - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -97,4 +97,3 @@ public class MyRoleProviderService : SanteDB.Core.Security.Services.IRoleProvide
     }
 }
 ```
-

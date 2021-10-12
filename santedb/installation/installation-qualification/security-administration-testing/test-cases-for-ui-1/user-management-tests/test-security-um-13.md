@@ -22,15 +22,15 @@ New users being created can be assigned multiple given names in the **Given Name
 
 ## Actions/Steps
 
-1. Select the **Given Name** textbox within the **Demographic Properties** section.
+1\. Select the **Given Name** textbox within the **Demographic Properties** section.
 
-![](../../../../../../.gitbook/assets/image%20%28238%29.png)
+![](<../../../../../../.gitbook/assets/image (238).png>)
 
-2. Input a first name \(e.g. "John"\) and press enter.
+2\. Input a first name (e.g. "John") and press enter.
 
-![](../../../../../../.gitbook/assets/image%20%28236%29.png)
+![](<../../../../../../.gitbook/assets/image (236).png>)
 
-3. Input a second name \(e.g. "Jacob"\) and press enter.
+3\. Input a second name (e.g. "Jacob") and press enter.
 
 
 
@@ -39,5 +39,4 @@ New users being created can be assigned multiple given names in the **Given Name
 * Each name entered should appear on an individual card inside the **Given Name** textbox.
 * These steps can be repeated during user creation to add more names to the **Given Name** property.
 
-![](../../../../../../.gitbook/assets/image%20%28234%29.png)
-
+![](<../../../../../../.gitbook/assets/image (234).png>)

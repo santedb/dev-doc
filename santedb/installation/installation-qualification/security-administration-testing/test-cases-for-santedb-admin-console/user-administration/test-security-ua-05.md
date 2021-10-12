@@ -15,7 +15,7 @@ description: Testing the user.list command with the optional -s flag specified.
 
 The `user.list` command is for listing users. 
 
-* The `-s` flag is used to specify a filter for only users created by the **SYSTEM** user.
+* The `-s` flag is used to specify a filter for only users created by the **SYSTEM **user.
 
 ## Pre-Conditions / Setup
 
@@ -24,9 +24,9 @@ The `user.list` command is for listing users.
 
 ## Actions/Steps
 
-1. Execute the `user.list` command with the `-s` flag.
+1\. Execute the `user.list` command with the `-s` flag.
 
-```text
+```
 user.list -s
 ```
 
@@ -34,16 +34,16 @@ user.list -s
 
 * Admin Console output should appear similarly to the following:
 
-```text
+```
 > user.list -s
 SID                                    Name                     Last Auth              Lockout                ILA  A
 c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                                              0    *
 fadca076-3690-4a6e-af9e-f1cd68e8c7e8   SYSTEM                                                                 0    *
 ```
 
-* Refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to see that there are other non-system \(human\) users \(e.g. **Administrator**, **demoadmin**, etc\) without the `-s` flag.
+* Refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to see that there are other non-system (human) users (e.g. **Administrator**, **demoadmin**, etc) without the `-s` flag.
 
-```text
+```
 > user.list
 SID                                    Name                     Last Auth              Lockout                ILA  A
 c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                                              0    *
@@ -63,4 +63,3 @@ a762c780-df18-11eb-bbad-eb1f1d969e16   ClinicalStaffUser11                      
 {% hint style="warning" %}
 Users listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

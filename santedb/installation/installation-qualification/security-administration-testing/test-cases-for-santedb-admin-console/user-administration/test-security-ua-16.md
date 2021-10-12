@@ -21,10 +21,10 @@ description: >-
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**. 
 
-* The `-r` parameter is used to specify a **role** to assign to the user being newly added. 
-* The `-u` parameter is used to specify a unique **username** to assign to the user being newly added. 
-* The `-p`  parameter is used to specify a **password** that must pass strength validation.
-* The `-e`  parameter is used to specify an **email** for the new user being added.
+* The `-r` parameter is used to specify a **role **to assign to the user being newly added. 
+* The `-u` parameter is used to specify a unique **username **to assign to the user being newly added. 
+* The `-p`  parameter is used to specify a **password **that must pass strength validation.
+* The `-e`  parameter is used to specify an **email **for the new user being added.
 
 ## Pre-Conditions / Setup
 
@@ -36,7 +36,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 1. Execute the `user.add` command with `-r` parameter specified as an existing role, `-u` parameter specified as a non-existing username, and `-u` parameter specified as sufficiently strong password. Add optional `-e` parameter with valid email format.
 
-```text
+```
 user.add -r <existing role> -u <new user name> -p M0r3SeCuRe! -e <valid email>
 ```
 
@@ -44,14 +44,14 @@ user.add -r <existing role> -u <new user name> -p M0r3SeCuRe! -e <valid email>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.add -r USERS -u TestUser1234 -p M0r3SeCuRe! -e mail@user.net
 >
 ```
 
 * Check for the user that was just created and verify the role and email properties:
 
-```text
+```
 > user.info TestUser1234
 Name: TestUser1234
 SID: ec7d0706-e3da-11eb-bbaf-eb1f1d969e16
@@ -135,4 +135,3 @@ Roles: USERS
 {% hint style="warning" %}
 User information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

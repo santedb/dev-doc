@@ -18,7 +18,7 @@ description: >-
 
 The `user.lock` command is for locking or unlocking existing users.
 
-* The `-u` parameter is used to specify a **username** of the user to **unlock** whenever the `-l` flag is not specified.
+* The `-u` parameter is used to specify a **username **of the user to **unlock** whenever the `-l` flag is not specified.
 
 ## Pre-Conditions / Setup
 
@@ -27,9 +27,9 @@ The `user.lock` command is for locking or unlocking existing users.
 
 ## Actions/Steps
 
-1. Execute the `user.lock` command with `-u` parameter specified as an existing username.
+1\. Execute the `user.lock` command with `-u` parameter specified as an existing username.
 
-```text
+```
 user.lock -u <existing username>
 ```
 
@@ -37,14 +37,14 @@ user.lock -u <existing username>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.lock -u demoadmin
 >
 ```
 
 * Check for no Lockout value to verify that the user is unlocked:
 
-```text
+```
 > user.info -u demoadmin
 Name: demoadmin
 SID: 2a348c6e-c158-11ea-9f6f-00155d640b09
@@ -128,4 +128,3 @@ Roles: Test , TestyMcTester , TestGroup2 , ADMINISTRATORS , Muddsville
 {% hint style="warning" %}
 User information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

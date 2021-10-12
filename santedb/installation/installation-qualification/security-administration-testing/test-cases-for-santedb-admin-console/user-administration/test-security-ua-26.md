@@ -27,9 +27,9 @@ The `user.info` command is for listing information about a user account and effe
 
 ## Actions/Steps
 
-1. Execute the `user.info` command with `-u` parameter specified as a non-existing username.
+1\. Execute the `user.info` command with `-u` parameter specified as a non-existing username.
 
-```text
+```
 user.info -u <new user name>
 ```
 
@@ -37,9 +37,8 @@ user.info -u <new user name>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.info -u TestUser5678
 ERR: Exception has been thrown by the target of an invocation.
         1:User TestUser5678 not found
 ```
-

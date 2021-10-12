@@ -18,7 +18,7 @@ description: >-
 
 The `user.roles` command is for assigning roles to a user. 
 
-* The `-u` parameter is used to specify the **username** of which user to assign roles to. 
+* The `-u` parameter is used to specify the **username **of which user to assign roles to. 
 * An exception is thrown when a non existing user is specified. 
 
 ## Pre-Conditions / Setup
@@ -28,9 +28,9 @@ The `user.roles` command is for assigning roles to a user.
 
 ## Actions/Steps
 
-1. Execute the `user.roles` command with `-u` parameter specified as a non-existing username.
+1\. Execute the `user.roles` command with `-u` parameter specified as a non-existing username.
 
-```text
+```
 user.roles -u <new user name>
 ```
 
@@ -38,9 +38,8 @@ user.roles -u <new user name>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.roles -u TestUser5678
 ERR: Exception has been thrown by the target of an invocation.
         1:User TestUser5678 not found
 ```
-

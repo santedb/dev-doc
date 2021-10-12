@@ -18,7 +18,7 @@ description: >-
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**. 
 
-* The `-r` parameter is used to specify an existing **role** to assign to the user being newly added. 
+* The `-r` parameter is used to specify an existing **role **to assign to the user being newly added. 
 * An exception should be thrown when a non-existing role is specified.
 
 ## Pre-Conditions / Setup
@@ -28,9 +28,9 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 ## Actions/Steps
 
-1. Execute the `user.add` command with `-r` parameter specified as a non-existing role. 
+1\. Execute the `user.add` command with `-r` parameter specified as a non-existing role. 
 
-```text
+```
 user.add -r <non-existing role>
 ```
 
@@ -38,9 +38,8 @@ user.add -r <non-existing role>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.add -r not_a_role
 ERR: Exception has been thrown by the target of an invocation.
         1:The specified roles do not exit. Roles are case sensitive
 ```
-

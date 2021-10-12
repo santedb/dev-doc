@@ -22,15 +22,14 @@ While creating new users, any **Primary Facility** being added to a new user's p
 
 ## Actions/Steps
 
-1. Select the **Primary Facility** textbox within the **Demographic Properties** section.
+1\. Select the **Primary Facility** textbox within the **Demographic Properties** section.
 
-![](../../../../../../.gitbook/assets/image%20%28243%29.png)
+![](<../../../../../../.gitbook/assets/image (243).png>)
 
-2. Enter a string value that does not match any existing **Primary Facility** from the dropdown.
+2\. Enter a string value that does not match any existing **Primary Facility **from the dropdown.
 
 ## Expected Behaviour
 
 * The dropdown of possible existing primary facilities should only have a single disabled option that simply prompts users: "No results found".
 
-![](../../../../../../.gitbook/assets/image%20%28246%29.png)
-
+![](<../../../../../../.gitbook/assets/image (246).png>)

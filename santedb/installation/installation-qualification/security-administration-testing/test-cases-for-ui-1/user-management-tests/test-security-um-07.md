@@ -19,14 +19,13 @@ description: >-
 
 ## Actions/Steps
 
-1. Click the **x** on the left side of a **Role Name** tag that has been added to the **Role** textbox.
+1\. Click the **x** on the left side of a **Role Name** tag that has been added to the **Role** textbox.
 
 ![](../../../../../../.gitbook/assets/role_removehover.png)
 
 ## Expected Behaviour
 
 * The **Role Name** tag corresponding to the **x** clicked is removed from the **Role** textbox.
-* Only policies and permissions for the **Role Name\(s\)** in the **Role** textbox are applied upon creation of the corresponding user \(see [TEST: SECURITY-UM-01](test-security-um-01.md)\).
+* Only policies and permissions for the **Role Name(s)** in the **Role **textbox are applied upon creation of the corresponding user (see [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
-![](../../../../../../.gitbook/assets/image%20%28157%29.png)
-
+![](<../../../../../../.gitbook/assets/image (157).png>)

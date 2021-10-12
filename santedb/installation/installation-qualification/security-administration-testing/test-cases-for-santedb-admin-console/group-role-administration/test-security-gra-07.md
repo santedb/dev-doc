@@ -16,8 +16,8 @@ description: Testing the role.add command with existing role provided as -r para
 
 The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**. 
 
-* The `-r` parameter is used to specify which **role** to display information and effective policies from.
-* An exception should be thrown when an invalid \(non-existing\) role is specified.
+* The `-r` parameter is used to specify which **role **to display information and effective policies from.
+* An exception should be thrown when an invalid (non-existing) role is specified.
 
 ## Pre-Conditions / Setup
 
@@ -28,7 +28,7 @@ The `role.add` command is for adding a new role and has 1 required parameter tha
 
 1. Execute the `role.add` command with `-r` parameter specified as an existing role.
 
-```text
+```
 role.add -r <existing role name>
 ```
 
@@ -36,7 +36,5 @@ role.add -r <existing role name>
 
 * Admin Console output should appear similar to the following:
 
-```text
-
 ```
-
+```

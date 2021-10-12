@@ -1,6 +1,6 @@
 # REST Service Configuration
 
-The RestService configuration is contained in the `RestConfigurationSection` section. To register this section, add the following section configuration registration.
+The RestService configuration is contained in the `RestConfigurationSection `section. To register this section, add the following section configuration registration.
 
 ```markup
 <sections>
@@ -8,14 +8,14 @@ The RestService configuration is contained in the `RestConfigurationSection` sec
 </sections>
 ```
 
-Each REST based service in the host uses a service in the rest controller host \(listed as service sections\). The basic architecture of the REST service layer is illustrated below.
+Each REST based service in the host uses a service in the rest controller host (listed as service sections). The basic architecture of the REST service layer is illustrated below.
 
-![](../../../../../.gitbook/assets/image%20%28200%29.png)
+![](<../../../../../.gitbook/assets/image (200).png>)
 
-* **Service:** A service represents a logical service which is provided on the REST based API. A service can be FHIR or METADATA, etc. Typically a single daemon service will bind itself to a single rest service.
-* **Service Behavior:** Service behaviors represent a behavior which applied across all endpoints within the service. This can be, for example, authorization behaviors, or policy behaviors.
-* **Endpoint:** An endpoint is a specific listening location for the REST based service. The endpoint is bound to a listening address and a contract. A contract can express a particular series of operations and paths on the endpoint base address.  A contract can be \(for example\) v1, v2, v3 of an API service.
-* **Endpoint Behavior:** An endpoint behavior is a particular behavior applied only to the endpoint. Endpoint behaviors include messaging inspectors, serializers, compression behaviors, cors behaviors etc.
+* **Service: **A service represents a logical service which is provided on the REST based API. A service can be FHIR or METADATA, etc. Typically a single daemon service will bind itself to a single rest service.
+* **Service Behavior: **Service behaviors represent a behavior which applied across all endpoints within the service. This can be, for example, authorization behaviors, or policy behaviors.
+* **Endpoint: **An endpoint is a specific listening location for the REST based service. The endpoint is bound to a listening address and a contract. A contract can express a particular series of operations and paths on the endpoint base address.  A contract can be (for example) v1, v2, v3 of an API service.
+* **Endpoint Behavior: **An endpoint behavior is a particular behavior applied only to the endpoint. Endpoint behaviors include messaging inspectors, serializers, compression behaviors, cors behaviors etc.
 
 An example of a simple FHIR API configuration is illustrated below.
 
@@ -36,14 +36,14 @@ An example of a simple FHIR API configuration is illustrated below.
 
 The following services are bound to the REST API in the default SanteDB installation.
 
-| Service Name | Plugin |
-| :--- | :--- |
-| OAuth2 | [SanteDB OpenID Connect IdP](../../../../extending-santedb/service-apis/openid-connect/) |
-| FHIR | [HL7 FHIR Interface](../../../../extending-santedb/service-apis/hl7-fhir/) |
-| AMI | [Administrative Management Interface](../../../../extending-santedb/service-apis/administration-management-interface-ami/) |
-| BIS | [Business Intelligence Service](../../../../extending-santedb/server-plugins/service-definitions/business-intelligence-services/) |
-| HDSI | [Health Data Service Interface](../../../../extending-santedb/service-apis/health-data-service-interface-hdsi/) |
-| META | OpenAPI \(Swagger\) Metadata Exchange |
+| Service Name | Plugin                                                                                                                            |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| OAuth2       | [SanteDB OpenID Connect IdP](../../../../extending-santedb/service-apis/openid-connect/)                                          |
+| FHIR         | [HL7 FHIR Interface](../../../../extending-santedb/service-apis/hl7-fhir/)                                                        |
+| AMI          | [Administrative Management Interface](../../../../extending-santedb/service-apis/administration-management-interface-ami/)        |
+| BIS          | [Business Intelligence Service](../../../../extending-santedb/server-plugins/service-definitions/business-intelligence-services/) |
+| HDSI         | [Health Data Service Interface](../../../../extending-santedb/service-apis/health-data-service-interface-hdsi/)                   |
+| META         | OpenAPI (Swagger) Metadata Exchange                                                                                               |
 
 ## Service Behaviors
 
@@ -60,7 +60,7 @@ The TokenAuthorizationAccess behavior is configured using the `SanteDB.Server.Co
 
 ### Basic Authentication Access Behavior
 
-The BasicAuthenticationAccessBehavior behavior is configured using the `SanteDB.Rest.Common.Security.BasicAuthorizationAccessBehavior` and allows the use of HTTP BASIC authentication to establish principals.
+The BasicAuthenticationAccessBehavior behavior is configured using the `SanteDB.Rest.Common.Security.BasicAuthorizationAccessBehavior `and allows the use of HTTP BASIC authentication to establish principals.
 
 ```markup
 <service name="name">
@@ -146,11 +146,11 @@ The accept language behavior allows the SanteDB instance to modify the current l
 
 1. The language of the user's session
 2. The value of the Accept-Language header
-3. The value of the X-Sdb-Language header \(used when clients cannot set Accept-Language\)
+3. The value of the X-Sdb-Language header (used when clients cannot set Accept-Language)
 
 ### Security Policy Behavior
 
-The security policy behavior enables cross site scripting and [Content Security Policy \(CSP\) ](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)on the endpoint.
+The security policy behavior enables cross site scripting and [Content Security Policy (CSP) ](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)on the endpoint.
 
 ```markup
 <endpoint address="address" contract="contract">
@@ -159,6 +159,4 @@ The security policy behavior enables cross site scripting and [Content Security 
         </behaviors>
 </endpoint>    
 ```
-
-
 

@@ -10,15 +10,15 @@ Represents a repository service base
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Get | TModel | _Guid_ **key** | Gets the specified model. |
-| Get | TModel | _Guid_ **key** _Guid_ **versionKey** | Gets the specified model. |
-| Find | IEnumerable&lt;TModel&gt; | _Expression&lt;Func&lt;TModel,Boolean&gt;&gt;_ **query** | Finds the specified data. |
-| Find | IEnumerable&lt;TModel&gt; | _Expression&lt;Func&lt;TModel,Boolean&gt;&gt;_ **query** _Int32_ **offset** _Nullable&lt;Int32&gt;_ **count** _Int32&_ **totalResults** _ModelSort\`1\[\]_ **orderBy** | Finds the specified data. |
-| Insert | TModel | _TModel_ **data** | Inserts the specified data. |
-| Save | TModel | _TModel_ **data** | Saves the specified data. |
-| Obsolete | TModel | _Guid_ **key** | Obsoletes the specified data. |
+| Operation | Response/Return      | Input/Parameter                                                                                                                                                                                                                                                                              | Description                   |
+| --------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| Get       | TModel               | _Guid_ **key**                                                                                                                                                                                                                                                                               | Gets the specified model.     |
+| Get       | TModel               | <p><em>Guid</em> <strong>key</strong><br><em>Guid</em> <strong>versionKey</strong></p>                                                                                                                                                                                                       | Gets the specified model.     |
+| Find      | IEnumerable\<TModel> | _Expression\<Func\<TModel,Boolean>>_ **query**                                                                                                                                                                                                                                               | Finds the specified data.     |
+| Find      | IEnumerable\<TModel> | <p><em>Expression&#x3C;Func&#x3C;TModel,Boolean>></em> <strong>query</strong><br><em>Int32</em> <strong>offset</strong><br><em>Nullable&#x3C;Int32></em> <strong>count</strong><br><em>Int32&#x26;</em> <strong>totalResults</strong><br><em>ModelSort`1[]</em> <strong>orderBy</strong></p> | Finds the specified data.     |
+| Insert    | TModel               | _TModel_ **data**                                                                                                                                                                                                                                                                            | Inserts the specified data.   |
+| Save      | TModel               | _TModel_ **data**                                                                                                                                                                                                                                                                            | Saves the specified data.     |
+| Obsolete  | TModel               | _Guid_ **key**                                                                                                                                                                                                                                                                               | Obsoletes the specified data. |
 
 ## Implementations
 
@@ -76,4 +76,3 @@ public class MyRepositoryService<TModel> : SanteDB.Core.Services.IRepositoryServ
     }
 }
 ```
-

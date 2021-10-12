@@ -18,35 +18,35 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by object parameter:"**-d" \(**or **"--device"\)** followed ****by the device\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) to apply followed by "**-e**" \(or "**--rule**"\) followed by the action to take \(0/deny, 1/elevate, 2/grant\).
+1- Use the "**policy.assign**" command followed by object parameter:"**-d" (**or** "--device") **followed** **by the device(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) to apply followed by "**-e**" (or "**--rule**") followed by the action to take (0/deny, 1/elevate, 2/grant).
 
 {% hint style="info" %}
-If you don't specify the action to take \("e" or "--rule" parameter\) then the default action would be "deny".
+If you don't specify the action to take ("e" or "--rule" parameter) then the default action would be "deny".
 {% endhint %}
 
-```text
+```
 > policy.assign -d Create-Device-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 2
 ```
 
 2- **Test Validation**: Use "**device.info**" command followed by device name.
 
-```text
+```
 > device.info Create-Device-Test
 ```
 
 ## Expected Behaviour
 
-1- Should appear "the action \(Deny or Elevate or Grant\)"  followed by "policy name" followed by "device name".
+1- Should appear "the action (Deny or Elevate or Grant)"  followed by "policy name" followed by "device name".
 
-```text
+```
 > policy.assign -d Create-Device-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 2
 Grant: Override Disclosure TO Create-Device-Test
 >
 ```
 
-2- Should the assigned policy \("Override Disclosure"\) appear in the Effective Policies row:
+2- Should the assigned policy ("Override Disclosure") appear in the Effective Policies row:
 
-```text
+```
 > device.info Create-Device-Test
 Name: Create-Device-Test
 SID: d73a8f8c-d361-11eb-8248-00155d640b09
@@ -123,4 +123,3 @@ Updated: 2021-07-05T03:43:51.5914870-04:00 (demoadmin)
                 SUPER SECRET DISCLOSURE [2.25.3049340304933] : --- (default DENY)
 >
 ```
-

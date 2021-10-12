@@ -10,16 +10,16 @@ Represents a stock management repository service.
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Adjust | Act | _ManufacturedMaterial_ **manufacturedMaterial** _Place_ **place** _Int32_ **quantity** _Concept_ **reason** | Performs a stock adjustment for the specified facility and material. |
-| GetBalance | Int32 | _Place_ **place** _ManufacturedMaterial_ **manufacturedMaterial** | Gets the balance for the material. |
-| GetConsumed | IEnumerable&lt;ActParticipation&gt; | _Guid_ **manufacturedMaterialKey** _Guid_ **placeKey** _Nullable&lt;DateTimeOffset&gt;_ **startPeriod** _Nullable&lt;DateTimeOffset&gt;_ **endPeriod** | Get the total amount of consumed objects |
-| FindAdjustments | IEnumerable&lt;Act&gt; | _Guid_ **manufacturedMaterialKey** _Guid_ **placeKey** _Nullable&lt;DateTimeOffset&gt;_ **startPeriod** _Nullable&lt;DateTimeOffset&gt;_ **endPeriod** | Find adjustments matching the specified |
+| Operation       | Response/Return                | Input/Parameter                                                                                                                                                                                                                                      | Description                                                          |
+| --------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Adjust          | Act                            | <p><em>ManufacturedMaterial</em> <strong>manufacturedMaterial</strong><br><em>Place</em> <strong>place</strong><br><em>Int32</em> <strong>quantity</strong><br><em>Concept</em> <strong>reason</strong></p>                                          | Performs a stock adjustment for the specified facility and material. |
+| GetBalance      | Int32                          | <p><em>Place</em> <strong>place</strong><br><em>ManufacturedMaterial</em> <strong>manufacturedMaterial</strong></p>                                                                                                                                  | Gets the balance for the material.                                   |
+| GetConsumed     | IEnumerable\<ActParticipation> | <p><em>Guid</em> <strong>manufacturedMaterialKey</strong><br><em>Guid</em> <strong>placeKey</strong><br><em>Nullable&#x3C;DateTimeOffset></em> <strong>startPeriod</strong><br><em>Nullable&#x3C;DateTimeOffset></em> <strong>endPeriod</strong></p> | Get the total amount of consumed objects                             |
+| FindAdjustments | IEnumerable\<Act>              | <p><em>Guid</em> <strong>manufacturedMaterialKey</strong><br><em>Guid</em> <strong>placeKey</strong><br><em>Nullable&#x3C;DateTimeOffset></em> <strong>startPeriod</strong><br><em>Nullable&#x3C;DateTimeOffset></em> <strong>endPeriod</strong></p> | Find adjustments matching the specified                              |
 
 ## Implementations
 
-### Local Stock Management Repository - \(SanteDB.Core\)
+### Local Stock Management Repository - (SanteDB.Core)
 
 Represents a stock management repository service.
 
@@ -69,4 +69,3 @@ public class MyStockManagementRepositoryService : SanteDB.Core.Services.IStockMa
     }
 }
 ```
-

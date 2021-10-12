@@ -20,13 +20,13 @@ The `user.list` command is for listing users.
 ## Pre-Conditions / Setup
 
 1. Follow the directions from [Security Administration](../../../../../operations/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../operations/host-administration/santedb-icdr-admin-console/).
-2. A human \(non-system\) user must be created to test the `-h` flag.
+2. A human (non-system) user must be created to test the `-h` flag.
 
 ## Actions/Steps
 
-1. Execute the `user.list` command with the `-h` flag.
+1\. Execute the `user.list` command with the `-h` flag.
 
-```text
+```
 user.list -h
 ```
 
@@ -34,7 +34,7 @@ user.list -h
 
 * The Admin Console output should appear similarly to the following:
 
-```text
+```
 > user.list -h
 SID                                    Name                     Last Auth              Lockout                ILA  A
 54558ca2-c093-11ea-9f6f-00155d640b09   Administrator            2021-07-09T12:53:34...                        0    *
@@ -49,9 +49,9 @@ a762c780-df18-11eb-bbad-eb1f1d969e16   ClinicalStaffUser11                      
 98d6e9fc-7493-11eb-b733-00155d640b09   console                                                                0    *
 ```
 
-* Refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to see that there are other system users \(**ANONYMOUS** and **SYSTEM**\) without the `-h` flag.
+* Refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to see that there are other system users (**ANONYMOUS** and **SYSTEM**) without the `-h` flag.
 
-```text
+```
 > user.list
 SID                                    Name                     Last Auth              Lockout                ILA  A
 c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                                              0    *
@@ -71,4 +71,3 @@ a762c780-df18-11eb-bbad-eb1f1d969e16   ClinicalStaffUser11                      
 {% hint style="warning" %}
 Users listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

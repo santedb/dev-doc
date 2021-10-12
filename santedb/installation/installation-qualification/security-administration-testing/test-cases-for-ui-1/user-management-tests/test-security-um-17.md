@@ -14,7 +14,7 @@ description: >-
 
 ## Discussion
 
-When more than one **Primary Facility** is entered during user creation, individual **Primary Facility** values can be removed from **Demographic Properties** before submitting the form. 
+When more than one **Primary Facility** is entered during user creation, individual **Primary Facility** values can be removed from **Demographic Properties **before submitting the form. 
 
 ## Pre-Conditions / Setup
 
@@ -24,13 +24,12 @@ When more than one **Primary Facility** is entered during user creation, individ
 
 ## Actions/Steps
 
-1. Click the **x** on the left side of a **Primary Facility** tag that has been added to the **Primary Facility** textbox.
+1\. Click the **x** on the left side of a **Primary Facility** tag that has been added to the **Primary Facility** textbox.
 
-![](../../../../../../.gitbook/assets/image%20%28261%29.png)
+![](<../../../../../../.gitbook/assets/image (261).png>)
 
 ## Expected Behaviour
 
-* The **Primary Facility** tag corresponding to the **x** clicked is removed from the **Primary Facility** textbox.
+* The **Primary Facility** tag corresponding to the **x** clicked is removed from the **Primary Facility **textbox.
 
-![](../../../../../../.gitbook/assets/image%20%28250%29.png)
-
+![](<../../../../../../.gitbook/assets/image (250).png>)

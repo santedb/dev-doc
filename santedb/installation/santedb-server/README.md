@@ -10,20 +10,20 @@ description: >-
 
 SanteDB Server can be a light process, and requirements for running SanteDB Server will vary depending on your deployment and purpose. At minimum, SanteDB Server requires:
 
-* **Operating System:** Windows Server 2008R2 SP1, Windows 7 SP2, Linux \(varies\), MacOS 10.9+
-* **RAM:** 1 GB RAM minimum \(more if using Memory Caching\)
-* **CPU:** Any \(multi-core system recommended\)
-* **HDD:** 300 MB recommended
+* **Operating System: **Windows Server 2008R2 SP1, Windows 7 SP2, Linux (varies), MacOS 10.9+
+* **RAM: **1 GB RAM minimum (more if using Memory Caching)
+* **CPU: **Any (multi-core system recommended)
+* **HDD: **300 MB recommended
 
 ### Database Support
 
 SanteDB Server runs on a variety of operating systems and a variety of RDBMS however not all RDBMS modules are available on all platforms.
 
-| OS | PostgreSQL | FirebirdSQL |
-| :--- | :--- | :--- |
-| Windows | 9.6+, 10 | 3.0+ |
-| MacOS | 9.6+, 10 | Not Supported |
-| Linux | 9.6+, 10 | Not Supported |
+| OS      | PostgreSQL | FirebirdSQL   |
+| ------- | ---------- | ------------- |
+| Windows | 9.6+, 10   | 3.0+          |
+| MacOS   | 9.6+, 10   | Not Supported |
+| Linux   | 9.6+, 10   | Not Supported |
 
 #### PostgreSQL
 
@@ -38,12 +38,12 @@ Use PostgreSQL when:
 
 #### **FirebirdSQL**
 
-FirebirdSQL 3.0 is also supported on Microsoft Windows based machines \(it could be supported on Linux with a few modifications\). FirebirdSQL provides a fully ACID compliant RDBMS solution while also being embedded within the SanteDB host process. This allows SanteDB Server to run without requiring setup of a third party database server.
+FirebirdSQL 3.0 is also supported on Microsoft Windows based machines (it could be supported on Linux with a few modifications). FirebirdSQL provides a fully ACID compliant RDBMS solution while also being embedded within the SanteDB host process. This allows SanteDB Server to run without requiring setup of a third party database server.
 
 Use FirebirdSQL when:
 
 * You are setting up a development or testing server
-* You need to easily wipe/backup/restore test datasets \(you can copy your FDB file and restart the service\)
+* You need to easily wipe/backup/restore test datasets (you can copy your FDB file and restart the service)
 * You need to setup a demonstration on a lower powered laptop
 * You are evaluating a new SanteDB based product and want a quick solution for deployment
 
@@ -67,7 +67,7 @@ SanteDB Server also supports connecting to the NoSQL database REDIS. SanteDB Ser
 
 Use REDIS caching when:
 
-* You may need to scale out your application servers \(i.e. multiple servers accessing the shared REDIS cache\)
+* You may need to scale out your application servers (i.e. multiple servers accessing the shared REDIS cache)
 * You are setting up a production, training or staging environment and don't want a cold-start of the SanteDB server to result in cache misses.
 
 ## Security Certificate Notice
@@ -80,6 +80,4 @@ When you install the iCDR or dCDR the software needs to register these certifica
 * On Linux and MacOS you must manually run `mono SanteDB.exe --install-certs` which will register the certificates into the Mono's Trust Store
 * On Docker the registration occurs on service startup
 * On Android the certificates are installed into the device Trust Store
-
-
 

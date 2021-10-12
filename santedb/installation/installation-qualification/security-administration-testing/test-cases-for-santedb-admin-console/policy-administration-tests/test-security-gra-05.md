@@ -20,19 +20,19 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by "**-r" \(**or **"--role"\)** followed ****by the role\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) to apply.
+1- Use the "**policy.assign**" command followed by "**-r" (**or** "--role") **followed** **by the role(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) to apply.
 
 {% hint style="info" %}
-If you don't specify the action to take \("e" or "--rule" parameter\) then the default action would be "deny".
+If you don't specify the action to take ("e" or "--rule" parameter) then the default action would be "deny".
 {% endhint %}
 
-```text
+```
 > policy.assign -r Create-Role-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999
 ```
 
 2- **Test Validation**: Use "**role.info**" command followed  "**-r**" followed by role name.
 
-```text
+```
 > role.info -r Create-Role-Test
 ```
 
@@ -40,15 +40,15 @@ If you don't specify the action to take \("e" or "--rule" parameter\) then the d
 
 1- Should appear "Deny "  followed by "policy name" followed by "role name".
 
-```text
+```
 > policy.assign -r Create-Role-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999
 Deny: Override Disclosure TO Create-Role-Test
 >
 ```
 
-2- Should the assigned policy \("Override Disclosure"\) appear in the Effective Policies row with action : "Deny \(explicit\)"
+2- Should the assigned policy ("Override Disclosure") appear in the Effective Policies row with action : "Deny (explicit)"
 
-```text
+```
 > role.info -r Create-Role-Test
 Name: Create-Role-Test
 SID: ff22744e-de81-11eb-bbad-eb1f1d969e16
@@ -123,4 +123,3 @@ Updated: 2021-07-06T13:45:48.1910570-04:00 (Administrator)
                 SUPER SECRET DISCLOSURE [2.25.3049340304933] : --- (default DENY)
 >
 ```
-

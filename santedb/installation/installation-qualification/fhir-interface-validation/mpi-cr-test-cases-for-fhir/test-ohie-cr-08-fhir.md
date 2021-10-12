@@ -15,25 +15,25 @@ This test ensures that the client registry properly handles merge requests sent 
 
 ## Discussion
 
-The PMIR profile makes the assumption that the client is controlling the process of merge by instructing the server to link/de-activate a victim. Since merging is an event which triggers several business rules in the Master Data Management layer, the SanteDB PMIR handler detects this condition \(a client attempting to control linking of patients, which is an internal matter\) and mimics the equivalent behaviors of `ADT^A40` from HL7v2. 
+The PMIR profile makes the assumption that the client is controlling the process of merge by instructing the server to link/de-activate a victim. Since merging is an event which triggers several business rules in the Master Data Management layer, the SanteDB PMIR handler detects this condition (a client attempting to control linking of patients, which is an internal matter) and mimics the equivalent behaviors of `ADT^A40` from HL7v2. 
 
-Furthermore, the SanteDB implementation of merging behaves as described in `Chapter 3 - Patient Administration` in HL7 Version 2 \(see: `3.6.2.1.2`\). For example, if two patients from `HOSPITAL_A` are registered as illustrated below \(patient 1 with two identifiers and patient 2 with one\):
+Furthermore, the SanteDB implementation of merging behaves as described in `Chapter 3 - Patient Administration` in HL7 Version 2 (see: `3.6.2.1.2`). For example, if two patients from `HOSPITAL_A` are registered as illustrated below (patient 1 with two identifiers and patient 2 with one):
 
-![](../../../../../.gitbook/assets/image%20%28395%29.png)
+![](<../../../../../.gitbook/assets/image (395).png>)
 
 Then a merge requests where Patient 1 is replaced by Patient 2 would result in a merge such that:
 
-![](../../../../../.gitbook/assets/image%20%28396%29.png)
+![](<../../../../../.gitbook/assets/image (396).png>)
 
-Subsequent requests to query for a patient using `GREEN_TRIANGLE` would result in `Patient 2` being resolved. This behavior differs from the prescribed behavior of PMIR whereby the victim \(in this case Patient 2\) is not returned, or continues to be resolved with an inactive flag.
+Subsequent requests to query for a patient using `GREEN_TRIANGLE` would result in `Patient 2` being resolved. This behavior differs from the prescribed behavior of PMIR whereby the victim (in this case Patient 2) is not returned, or continues to be resolved with an inactive flag.
 
 ## Pre-Conditions
 
 Prior to running this test ensure that the pre-conditions from [TEST: OHIE-CR-04](test-ohie-cr-04-fhir.md) and [TEST: OHIE-CR-06](test-ohie-cr-06-fhir.md) have been run.
 
-## Authenticate as TEST\_HARNESS
+## Authenticate as TEST_HARNESS
 
-The test harness authenticates against the SanteMPI IdP using a client\_credentials grant for the test-harness-a account.
+The test harness authenticates against the SanteMPI IdP using a client_credentials grant for the test-harness-a account.
 
 ```http
 POST http://localhost:8080/auth/oauth2_token HTTP/1.1
@@ -139,13 +139,13 @@ The test harness sends an authenticated request to create a new patient with a n
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST | PMIR Only | Return MessageHeader with response.code = ok |
-| MUST |  | Return HTTP code of 201 Created |
-| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
-| SHOULD |  | Include a Patient entry in response containing created patient |
-| SHOULD |  | Include a link to the master identity with code refer  |
+| Requirement | Option    | Description                                                    |
+| ----------- | --------- | -------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                   |
+| MUST        |           | Return HTTP code of 201 Created                                |
+| SHOULD      | PMIR Only | Include an OperationOutcome entry in the response              |
+| SHOULD      |           | Include a Patient entry in response containing created patient |
+| SHOULD      |           | Include a link to the master identity with code refer          |
 
 ## Execute PIXm Query To Validate The First Patient in TEST
 
@@ -164,43 +164,12 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return HTTP code of 200 OK</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Include a Parameters resource in the response</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Have two parameters carrying the identifier in TEST and NID</p>
-        <p>with parameter name of targetIdentifier and values FHR-080 and NID080</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Include a parameter with name targetId which has a resource link</p>
-        <p>to the created resource from the previous step.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option | Description                                                                                                                                     |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| MUST        |        | Return HTTP code of 200 OK                                                                                                                      |
+| MUST        |        | Include a Parameters resource in the response                                                                                                   |
+| MUST        |        | <p>Have two parameters carrying the identifier in TEST and NID </p><p>with parameter name of targetIdentifier and values FHR-080 and NID080</p> |
+| MUST        |        | <p>Include a parameter with name targetId which has a resource link</p><p>to the created resource from the previous step.</p>                   |
 
 ## Register Second Patient Identity in TEST
 
@@ -286,13 +255,13 @@ The test harness sends an authenticated request to create a new patient with a n
 
 ### Expected Behaviour
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST | PMIR Only | Return MessageHeader with response.code = ok |
-| MUST |  | Return HTTP code of 201 Created |
-| SHOULD | PMIR Only | Include an OperationOutcome entry in the response |
-| SHOULD |  | Include a Patient entry in response containing created patient |
-| SHOULD |  | Include a link to the master identity with code refer  |
+| Requirement | Option    | Description                                                    |
+| ----------- | --------- | -------------------------------------------------------------- |
+| MUST        | PMIR Only | Return MessageHeader with response.code = ok                   |
+| MUST        |           | Return HTTP code of 201 Created                                |
+| SHOULD      | PMIR Only | Include an OperationOutcome entry in the response              |
+| SHOULD      |           | Include a Patient entry in response containing created patient |
+| SHOULD      |           | Include a link to the master identity with code refer          |
 
 ## Execute PIXm Query To Validate The Second Patient in TEST
 
@@ -311,43 +280,14 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behaviour
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return HTTP code of 200 OK</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Include a Parameters resource in the response</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Have one parameter carrying the identifier in TEST with parameter name
-        of targetIdentifier and value FHR-081.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Include a parameter with name targetId which has a resource link</p>
-        <p>to the created resource from the previous step.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option | Description                                                                                                                   |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| MUST        |        | Return HTTP code of 200 OK                                                                                                    |
+| MUST        |        | Include a Parameters resource in the response                                                                                 |
+| MUST        |        | Have one parameter carrying the identifier in TEST with parameter name of targetIdentifier and value FHR-081.                 |
+| MUST        |        | <p>Include a parameter with name targetId which has a resource link</p><p>to the created resource from the previous step.</p> |
 
-## Merge FHR-081 \(Patient 2\)  into FHR-080 \(Patient 1\)
+## Merge FHR-081 (Patient 2)  into FHR-080 (Patient 1)
 
 In this step the test harness sends a PIMR request to instruct the Client Registry that `FHR-081` has been replaced by `FHR-080`.
 
@@ -426,13 +366,13 @@ In this step the test harness sends a PIMR request to instruct the Client Regist
 ```
 
 {% hint style="info" %}
-You will notice that the `link` element in the above message uses the business identifier reference rather than an absolute reference by URL. This is considered best practice when merging on SanteDB server as it abstracts the logical identifier \(which changes as the resource moves between servers\). See: [http://hl7.org/fhir/resource.html\#identifiers](http://hl7.org/fhir/resource.html#identifiers)
+You will notice that the `link` element in the above message uses the business identifier reference rather than an absolute reference by URL. This is considered best practice when merging on SanteDB server as it abstracts the logical identifier (which changes as the resource moves between servers). See: [http://hl7.org/fhir/resource.html#identifiers](http://hl7.org/fhir/resource.html#identifiers)
 {% endhint %}
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Return HTTP code of 200 OK |
-| MUST |  | Return MessageHeader with response.code = ok |
+| Requirement | Option | Description                                  |
+| ----------- | ------ | -------------------------------------------- |
+| MUST        |        | Return HTTP code of 200 OK                   |
+| MUST        |        | Return MessageHeader with response.code = ok |
 
 ### Alternate Merge Request
 
@@ -451,18 +391,18 @@ Alternately, the test harness may fetch/obtain the logical ID of the resource an
 
 ### Expected Behavior
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Return MessageHeader with response.code = ok |
-| MUST |  | Return HTTP code of 200 OK |
-| SHOULD |  | Include an OperationOutcome entry in the response |
+| Requirement | Option | Description                                       |
+| ----------- | ------ | ------------------------------------------------- |
+| MUST        |        | Return MessageHeader with response.code = ok      |
+| MUST        |        | Return HTTP code of 200 OK                        |
+| SHOULD      |        | Include an OperationOutcome entry in the response |
 
 ## Query for Merged Record
 
-This test ensures that the client registry returns the new record \(with identifier FHR-080\) when the old record \(FHR-081\) is queried. This resolution ensures that the merge occurred successfully and any attempts to reference an old record results in the new being returned. 
+This test ensures that the client registry returns the new record (with identifier FHR-080) when the old record (FHR-081) is queried. This resolution ensures that the merge occurred successfully and any attempts to reference an old record results in the new being returned. 
 
 {% hint style="info" %}
-This test uses the business identifiers to ensure the cross referencing is updated, and is the recommended manner for handling record merges. Alternates \(such as returning the old record with active of false would place a burden on the client to intelligently handle merges by following, potentially, dozens of "replaced-by" links\)
+This test uses the business identifiers to ensure the cross referencing is updated, and is the recommended manner for handling record merges. Alternates (such as returning the old record with active of false would place a burden on the client to intelligently handle merges by following, potentially, dozens of "replaced-by" links)
 {% endhint %}
 
 ```http
@@ -478,47 +418,16 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behavior
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p>Return a bundle with an entry carrying a <code>Patient</code> resource with</p>
-        <p>the FHR-080 identifier (i.e. the resource returned should be the survivor</p>
-        <p>of the merge operation)</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return HTTP code of 200 OK</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MAY</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return an additional <code>Patient</code> entry resource with <code>active</code> set
-        to <code>false</code> and carrying the now inactive resource.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SHOULD</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Carry a link with type <code>replaces</code> indicating that the record
-        returned replaced a previous record.</td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option | Description                                                                                                                                                                                      |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| MUST        |        | <p>Return a bundle with an entry carrying a <code>Patient</code> resource with</p><p>the FHR-080 identifier (i.e. the resource returned should be the survivor</p><p>of the merge operation)</p> |
+| MUST        |        | Return HTTP code of 200 OK                                                                                                                                                                       |
+| MAY         |        | Return an additional `Patient` entry resource with `active` set to `false` and carrying the now inactive resource.                                                                               |
+| SHOULD      |        | Carry a link with type `replaces` indicating that the record returned replaced a previous record.                                                                                                |
 
 ## Fetch Merged Record
 
-This test ensures compliance with the IHE PMIR profile by explicitly querying for a resource by logical identifier \(rather than business identifier\). IHE PMIR provides several options for handling a `READ` or `SEARCH` operation for merged records. All of these options are expressed as alternates in the expected behaviors table. 
+This test ensures compliance with the IHE PMIR profile by explicitly querying for a resource by logical identifier (rather than business identifier). IHE PMIR provides several options for handling a `READ` or `SEARCH` operation for merged records. All of these options are expressed as alternates in the expected behaviors table. 
 
 {% hint style="info" %}
 This test requires that the logical resource identifier assigned by the iCDR / MPI instance is known by the SUT.
@@ -536,14 +445,14 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behavior
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Return an HTTP 200 OK with the replaced/merged record carrying `active` value of `false` |
-| MUST | ALTERNATE | Return HTTP code of 404 NOT FOUND |
+| Requirement | Option    | Description                                                                              |
+| ----------- | --------- | ---------------------------------------------------------------------------------------- |
+| MUST        |           | Return an HTTP 200 OK with the replaced/merged record carrying `active` value of `false` |
+| MUST        | ALTERNATE | Return HTTP code of 404 NOT FOUND                                                        |
 
 ## Search Merged Record
 
-This test ensures compliance with the IHE PMIR profile by explicitly searching for a resource by logical identifier \(rather than business identifier\). IHE PMIR provides several options for handling a `SEARCH` operation for merged records. All of these options are expressed as alternates in the expected behaviors table. 
+This test ensures compliance with the IHE PMIR profile by explicitly searching for a resource by logical identifier (rather than business identifier). IHE PMIR provides several options for handling a `SEARCH` operation for merged records. All of these options are expressed as alternates in the expected behaviors table. 
 
 {% hint style="info" %}
 This test requires that the logical resource identifier assigned by the iCDR / MPI instance is known by the SUT.
@@ -557,45 +466,15 @@ Accept: application/fhir+json
 
 ### Expected Behavior
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Requirement</th>
-      <th style="text-align:left">Option</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Return an HTTP 200 OK and a <code>Bundle</code> with the 0 results.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left">ALTERNATE</td>
-      <td style="text-align:left">
-        <p>Return an HTTP 200 OK and a <code>Bundle</code> with the merged record</p>
-        <p>with <code>active</code> set to <code>false</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MUST</td>
-      <td style="text-align:left">ALTERNATE</td>
-      <td style="text-align:left">
-        <p>Return an HTTP 200 OK and a <code>Bundle</code> with 2 results. One</p>
-        <p>representing the survivor record (with <code>active</code> of <code>true</code>)
-          and one</p>
-        <p>representing the merged record (with <code>active</code> of <code>false</code>)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Requirement | Option    | Description                                                                                                                                                                                                                                                       |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MUST        |           | Return an HTTP 200 OK and a `Bundle` with the 0 results.                                                                                                                                                                                                          |
+| MUST        | ALTERNATE | <p>Return an HTTP 200 OK and a <code>Bundle</code> with the merged record</p><p>with <code>active</code> set to <code>false</code></p>                                                                                                                            |
+| MUST        | ALTERNATE | <p>Return an HTTP 200 OK and a <code>Bundle</code> with 2 results. One </p><p>representing the survivor record (with <code>active</code> of <code>true</code>) and one </p><p>representing the merged record (with <code>active</code> of <code>false</code>)</p> |
 
 ## Execute PIXm Query To Validate Merged Record
 
-This test ensures that the updates applied via the PMIR merge are reflected in the PIXm cross-referencing query request. The test harness issues a cross-referencing request to obtain the national health identifier for FHRA-081 \(a patient, when registered, did not have a NID however by virtue FHRA-081 was merged into FHR-080 which carries a NID, FHRA-081 should carry a NID\).
+This test ensures that the updates applied via the PMIR merge are reflected in the PIXm cross-referencing query request. The test harness issues a cross-referencing request to obtain the national health identifier for FHRA-081 (a patient, when registered, did not have a NID however by virtue FHRA-081 was merged into FHR-080 which carries a NID, FHRA-081 should carry a NID).
 
 ```http
 GET http://localhost:8080/fhir/Patient/$ihe-pix?sourceIdentifier=http%3A%2F%2Fohie.org%2Ftest%2Ftest%7CFHR-081&targetSystem=http%3A%2F%2Fohie.org%2Ftest%2Fnid HTTP/1.1
@@ -610,9 +489,8 @@ User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
 
 ### Expected Behavior
 
-| Requirement | Option | Description |
-| :--- | :--- | :--- |
-| MUST |  | Return an HTTP 200 OK and a `Parameters` as the payload. |
-| MUST |  | Return one `targetIdentifier` parameter carrying the NID of NID080 |
-| MUST |  | Return one `targetId` parameter with a pointer to the surviving record \(i.e.  not to the merged record\)  |
-
+| Requirement | Option | Description                                                                                                                   |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| MUST        |        | Return an HTTP 200 OK and a `Parameters` as the payload.                                                                      |
+| MUST        |        | Return one `targetIdentifier` parameter carrying the NID of NID080                                                            |
+| MUST        |        | <p>Return one <code>targetId</code> parameter with a pointer to the surviving record (i.e. <br>not to the merged record) </p> |

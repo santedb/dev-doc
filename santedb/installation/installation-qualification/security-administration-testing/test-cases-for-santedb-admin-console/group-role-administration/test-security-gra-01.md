@@ -20,9 +20,9 @@ The `role.list` command is for listing groups/roles.
 
 ## Actions/Steps
 
-1. Execute the `role.list` command.
+1\. Execute the `role.list` command.
 
-```text
+```
 role.list
 ```
 
@@ -30,7 +30,7 @@ role.list
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.list
 SID                                    Name                 Description                                      A
 c3ae21d2-fc23-4133-ba42-b0e0a3b817d7   SYSTEM               Group for user SYSTEM. Identifies the functio... *
@@ -61,4 +61,3 @@ b81e78e0-8143-11eb-b733-00155d640b09   TestyMcTester        Test Group 1        
 {% hint style="warning" %}
 Active roles listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

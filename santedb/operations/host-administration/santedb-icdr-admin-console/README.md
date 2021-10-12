@@ -10,89 +10,30 @@ The SanteDB iCDR administrative console is a client tool which allows system adm
 
 You can launch the command line on the same machine as the iCDR service from the start menu or by typing the `sdbac` command in the command line. If you need to connect to a different server/realm the basic syntax is:
 
-```text
+```
 sdbac --realm=<server-ip-or-name> --port=<port> [--tls] 
 ```
 
 The command line options for sdbac are listed below:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Short</th>
-      <th style="text-align:left">Long</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">-r</td>
-      <td style="text-align:left">--realm</td>
-      <td style="text-align:left">The server/realm to which you&apos;re connecting.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-a</td>
-      <td style="text-align:left">--appId</td>
-      <td style="text-align:left">
-        <p>The application identifier if the default administrative console application</p>
-        <p>has not been enabled by the system administrator.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-s</td>
-      <td style="text-align:left">--secret</td>
-      <td style="text-align:left">The application secret if the default has been changed by the administrator</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">--port</td>
-      <td style="text-align:left">The port to connect to the iCDR API on</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-t</td>
-      <td style="text-align:left">--tls</td>
-      <td style="text-align:left">
-        <p>If specified, instruct the console administrative application to connect</p>
-        <p>via TLS</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-u</td>
-      <td style="text-align:left">--user</td>
-      <td style="text-align:left">The username to login with</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-p</td>
-      <td style="text-align:left">--password</td>
-      <td style="text-align:left">The password to use for authentication</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-v</td>
-      <td style="text-align:left">--verbose</td>
-      <td style="text-align:left">When present, output all server and client events with full stack traces</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-x</td>
-      <td style="text-align:left">--proxy</td>
-      <td style="text-align:left">When specified route all traffic through a proxy</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-b</td>
-      <td style="text-align:left">--oauth-basic</td>
-      <td style="text-align:left">
-        <p>When specified, instructs the client to send client credentials via HTTP
-          BASIC</p>
-        <p>rather than through the request body of the OAUTH request.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Short | Long          | Description                                                                                                                                            |
+| ----- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| -r    | --realm       | The server/realm to which you're connecting.                                                                                                           |
+| -a    | --appId       | <p>The application identifier if the default administrative console application</p><p>has not been enabled by the system administrator.</p>            |
+| -s    | --secret      | The application secret if the default has been changed by the administrator                                                                            |
+|       | --port        | The port to connect to the iCDR API on                                                                                                                 |
+| -t    | --tls         | <p>If specified, instruct the console administrative application to connect</p><p>via TLS</p>                                                          |
+| -u    | --user        | The username to login with                                                                                                                             |
+| -p    | --password    | The password to use for authentication                                                                                                                 |
+| -v    | --verbose     | When present, output all server and client events with full stack traces                                                                               |
+| -x    | --proxy       | When specified route all traffic through a proxy                                                                                                       |
+| -b    | --oauth-basic | <p>When specified, instructs the client to send client credentials via HTTP BASIC</p><p>rather than through the request body of the OAUTH request.</p> |
 
 ## Getting Help
 
 You can run the help command in order to get a list of commands which are available on the administrative console. 
 
-```text
+```
 > help
 aa.add              Add Assigning Authority application
 aa.list             Query assigning authorties/identity domains
@@ -142,9 +83,9 @@ Use:
 For command specific help
 ```
 
-If you require help for a specific command use the `help command` syntax, for example, to get help with user.list:
+If you require help for a specific command use the `help command `syntax, for example, to get help with user.list:
 
-```text
+```
 > help user.list
 user.list parms - Lists users in the SanteDB instance
            + This command lists all users in the user database regardless of their status, or class. To filter use the filter parameters listed.
@@ -154,6 +95,4 @@ user.list parms - Lists users in the SanteDB instance
  -s                 Filter on system class only
  -u                 The username of the user
 ```
-
-
 

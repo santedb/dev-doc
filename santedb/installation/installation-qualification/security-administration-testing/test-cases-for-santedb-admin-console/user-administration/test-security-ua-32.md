@@ -22,9 +22,9 @@ The `user.password` command is for changing a specific users password.
 
 ## Actions/Steps
 
-1. Execute the `user.password` command.
+1\. Execute the `user.password` command.
 
-```text
+```
 user.password
 ```
 
@@ -32,9 +32,8 @@ user.password
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.password
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

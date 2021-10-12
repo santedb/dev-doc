@@ -18,7 +18,7 @@ description: >-
 
 The `user.lock` command is for locking or unlocking existing users. 
 
-* The `-u` parameter is used to specify a **username** of the user to **unlock** only if `-l` flag is not specified.
+* The `-u` parameter is used to specify a **username **of the user to **unlock** only if `-l` flag is not specified.
 * An exception is thrown when a non-existing user is specified.
 
 ## Pre-Conditions / Setup
@@ -28,9 +28,9 @@ The `user.lock` command is for locking or unlocking existing users.
 
 ## Actions/Steps
 
-1. Execute the `user.lock` command with `-u` parameter specified as a non-existing username.
+1\. Execute the `user.lock` command with `-u` parameter specified as a non-existing username.
 
-```text
+```
 user.lock -u <new user name>
 ```
 
@@ -38,9 +38,8 @@ user.lock -u <new user name>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 >> user.lock -u TestUser5678
 ERR: Exception has been thrown by the target of an invocation.
         1:User TestUser5678 not found
 ```
-

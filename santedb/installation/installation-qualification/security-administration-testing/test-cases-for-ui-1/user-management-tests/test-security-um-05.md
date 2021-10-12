@@ -20,18 +20,17 @@ Users can be assigned multiple roles/groups that could have various policies and
 
 ## Actions/Steps
 
-1. Select the **Role** textbox within the **Security Properties** section.
+1\. Select the **Role** textbox within the **Security Properties** section.
 
-![](../../../../../../.gitbook/assets/image%20%28228%29.png)
+![](<../../../../../../.gitbook/assets/image (228).png>)
 
-2. Enter a string that does not match the **Role Name** for any existing group ****\(e.g. "NOT\_A\_ROLE" is being entered here and role names are searched as each character is modified\). 
+2\. Enter a string that does not match the **Role Name **for any existing group** **(e.g. "NOT_A_ROLE" is being entered here and role names are searched as each character is modified). 
 
-![](../../../../../../.gitbook/assets/image%20%2871%29.png)
+![](<../../../../../../.gitbook/assets/image (71).png>)
 
 ## Expected Behaviour
 
 * The dropdown of possible matching Role Names should display a single disabled value only to prompt the user that there are "no results found".
-* The non-existent role being searched should not be added to the **Role** textbox \(in this case it remains blank when no other values are present\).
+* The non-existent role being searched should not be added to the **Role **textbox (in this case it remains blank when no other values are present).
 
-![](../../../../../../.gitbook/assets/image%20%2885%29.png)
-
+![](<../../../../../../.gitbook/assets/image (85).png>)

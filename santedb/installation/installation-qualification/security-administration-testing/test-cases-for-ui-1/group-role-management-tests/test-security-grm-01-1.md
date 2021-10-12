@@ -19,29 +19,28 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Actions/Steps
 
-1. Click the **Create** button.
+1\. Click the **Create** button.
 
-![](../../../../../../.gitbook/assets/image%20%28295%29.png)
+![](<../../../../../../.gitbook/assets/image (295).png>)
 
-2. Enter a valid **Name** for the group \(non-duplicate\).
+2\. Enter a valid **Name** for the group (non-duplicate).
 
-![](../../../../../../.gitbook/assets/image%20%28336%29.png)
+![](<../../../../../../.gitbook/assets/image (336).png>)
 
-3. Optionally enter a **Description** \(max. 2048 characters\).
+3\. Optionally enter a **Description** (max. 2048 characters).
 
-![](../../../../../../.gitbook/assets/image%20%28316%29.png)
+![](<../../../../../../.gitbook/assets/image (316).png>)
 
-4. Click the **Save** button.
+4\. Click the **Save** button.
 
-![](../../../../../../.gitbook/assets/image%20%28304%29.png)
+![](<../../../../../../.gitbook/assets/image (304).png>)
 
 ## Expected Behaviour
 
 * Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
 
-![](../../../../../../.gitbook/assets/image%20%28292%29.png)
+![](<../../../../../../.gitbook/assets/image (292).png>)
 
-* Page is redirected to **Administration Panel / Security / Groups / Edit Group** for the new group create successfully.
+* Page is redirected to **Administration Panel / Security / Groups / Edit Group **for the new group create successfully.
 
-![](../../../../../../.gitbook/assets/image%20%28303%29.png)
-
+![](<../../../../../../.gitbook/assets/image (303).png>)

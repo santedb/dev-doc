@@ -20,9 +20,9 @@ description: >-
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**. 
 
-* The `-r` parameter is used to specify a **role** to assign to the user being newly added. 
-* The `-u` parameter is used to specify a unique **username** to assign to the user being newly added. 
-* The `-p`  parameter is used to specify a **password** that must pass strength validation.
+* The `-r` parameter is used to specify a **role **to assign to the user being newly added. 
+* The `-u` parameter is used to specify a unique **username **to assign to the user being newly added. 
+* The `-p`  parameter is used to specify a **password **that must pass strength validation.
 
 ## Pre-Conditions / Setup
 
@@ -34,7 +34,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 1. Execute the `user.add` command with `-r` parameter specified as an existing role and `-u` parameter specified as an existing username.
 
-```text
+```
 user.add -r <existing role> -u <existing user>
 ```
 
@@ -42,7 +42,7 @@ user.add -r <existing role> -u <existing user>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.add -r USERS -u demoadmin
 E:System.Net.WebException: The remote server returned an error: (422) Unprocessable Entity.
    at SanteDB.Server.Core.Http.RestClient.InvokeInternal[TBody,TResult](String method, String url, String contentType, WebHeaderCollection requestHeaders, WebHeaderCollection& responseHeaders, TBody body, NameValueCollection query)
@@ -53,4 +53,3 @@ ERR: Exception has been thrown by the target of an invocation.
                 REMOTE: RULE: Error Password failed validation
         2:The remote server returned an error: (422) Unprocessable Entity.
 ```
-

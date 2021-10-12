@@ -10,15 +10,15 @@ Represents an identity provider that allows for elevation
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| OverrideRequested | EventHandler&lt;SecurityOverrideEventArgs&gt; | The caller has requested an override |
+| Event             | Type                                     | Description                          |
+| ----------------- | ---------------------------------------- | ------------------------------------ |
+| OverrideRequested | EventHandler\<SecurityOverrideEventArgs> | The caller has requested an override |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| ElevatedAuthenticate | IPrincipal | _String_ **userName** _String_ **password** _String_ **tfaSecret** _String_ **purpose** _String\[\]_ **policies** | Requests the currently established principal to be elevated |
+| Operation            | Response/Return | Input/Parameter                                                                                                                                                                                                                        | Description                                                 |
+| -------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| ElevatedAuthenticate | IPrincipal      | <p><em>String</em> <strong>userName</strong><br><em>String</em> <strong>password</strong><br><em>String</em> <strong>tfaSecret</strong><br><em>String</em> <strong>purpose</strong><br><em>String[]</em> <strong>policies</strong></p> | Requests the currently established principal to be elevated |
 
 ## Implementations
 
@@ -44,4 +44,3 @@ public class MyElevatableIdentityProviderService : SanteDB.Core.Security.Service
     }
 }
 ```
-

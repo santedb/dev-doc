@@ -10,16 +10,16 @@ Represents a service that performs record matching and classification
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Block | IEnumerable&lt;T&gt; | _T_ **input** _String_ **configurationName** | Instructs the record matching service to perform a quick block function of records            for type  with |
-| Classify | IEnumerable&lt;IRecordMatchResult&lt;T&gt;&gt; | _T_ **input** _IEnumerable&lt;T&gt;_ **blocks** _String_ **configurationName** | Instructs the record matcher to run a detailed classification on the matching blocks in |
-| Match | IEnumerable&lt;IRecordMatchResult&lt;T&gt;&gt; | _T_ **input** _String_ **configurationName** | Instructs the record matcher to run a block and match operation against |
-| Score | IRecordMatchResult&lt;T&gt; | _T_ **input** _Expression&lt;Func&lt;T,Boolean&gt;&gt;_ **query** _String_ **configurationName** | Performs a score against the specified query \(how confident the match is that the  matches the |
+| Operation | Response/Return                      | Input/Parameter                                                                                                                                                         | Description                                                                                                  |
+| --------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Block     | IEnumerable\<T>                      | <p><em>T</em> <strong>input</strong><br><em>String</em> <strong>configurationName</strong></p>                                                                          | Instructs the record matching service to perform a quick block function of records            for type  with |
+| Classify  | IEnumerable\<IRecordMatchResult\<T>> | <p><em>T</em> <strong>input</strong><br><em>IEnumerable&#x3C;T></em> <strong>blocks</strong><br><em>String</em> <strong>configurationName</strong></p>                  | Instructs the record matcher to run a detailed classification on the matching blocks in                      |
+| Match     | IEnumerable\<IRecordMatchResult\<T>> | <p><em>T</em> <strong>input</strong><br><em>String</em> <strong>configurationName</strong></p>                                                                          | Instructs the record matcher to run a block and match operation against                                      |
+| Score     | IRecordMatchResult\<T>               | <p><em>T</em> <strong>input</strong><br><em>Expression&#x3C;Func&#x3C;T,Boolean>></em> <strong>query</strong><br><em>String</em> <strong>configurationName</strong></p> | Performs a score against the specified query (how confident the match is that the  matches the               |
 
 ## Implementations
 
-### SanteMatch Deterministic Matcher - \(SanteDB.Matcher\)
+### SanteMatch Deterministic Matcher - (SanteDB.Matcher)
 
 Represents a deterministic record matching service
 
@@ -35,7 +35,7 @@ Represents a deterministic record matching service
     </serviceProviders>
 ```
 
-### SanteMatch Probabalistic Match Service - \(SanteDB.Matcher\)
+### SanteMatch Probabalistic Match Service - (SanteDB.Matcher)
 
 Represents a probabalistic record matching service
 
@@ -85,4 +85,3 @@ public class MyRecordMatchingService : SanteDB.Core.Services.IRecordMatchingServ
     }
 }
 ```
-

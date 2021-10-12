@@ -10,22 +10,22 @@ Represents a class which can create care plans
 
 ## Properties
 
-| Property | Type | Access | Description |
-| :--- | :--- | :--- | :--- |
-| Protocols | List&lt;IClinicalProtocol&gt; | R | Gets the list of protocols which can be or should be used to create the care plans |
+| Property  | Type                     | Access | Description                                                                        |
+| --------- | ------------------------ | ------ | ---------------------------------------------------------------------------------- |
+| Protocols | List\<IClinicalProtocol> | R      | Gets the list of protocols which can be or should be used to create the care plans |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| CreateCarePlan | CarePlan | _Patient_ **p** | Create a care plam |
-| CreateCarePlan | CarePlan | _Patient_ **p** _Boolean_ **asEncounters** | Create a care plam |
-| CreateCarePlan | CarePlan | _Patient_ **p** _Boolean_ **asEncounters** _IDictionary&lt;String,Object&gt;_ **parameters** | Create a care plam |
-| CreateCarePlan | CarePlan | _Patient_ **p** _Boolean_ **asEncounters** _IDictionary&lt;String,Object&gt;_ **parameters** _Guid\[\]_ **protocols** | Create a care plam |
+| Operation      | Response/Return | Input/Parameter                                                                                                                                                                                                    | Description        |
+| -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
+| CreateCarePlan | CarePlan        | _Patient_ **p**                                                                                                                                                                                                    | Create a care plam |
+| CreateCarePlan | CarePlan        | <p><em>Patient</em> <strong>p</strong><br><em>Boolean</em> <strong>asEncounters</strong></p>                                                                                                                       | Create a care plam |
+| CreateCarePlan | CarePlan        | <p><em>Patient</em> <strong>p</strong><br><em>Boolean</em> <strong>asEncounters</strong><br><em>IDictionary&#x3C;String,Object></em> <strong>parameters</strong></p>                                               | Create a care plam |
+| CreateCarePlan | CarePlan        | <p><em>Patient</em> <strong>p</strong><br><em>Boolean</em> <strong>asEncounters</strong><br><em>IDictionary&#x3C;String,Object></em> <strong>parameters</strong><br><em>Guid[]</em> <strong>protocols</strong></p> | Create a care plam |
 
 ## Implementations
 
-### Simple Care Planning Service - \(SanteDB.Core.Api\)
+### Simple Care Planning Service - (SanteDB.Core.Api)
 
 Represents a care plan service that can bundle protocol acts together based on their start/stop times
 
@@ -81,4 +81,3 @@ public class MyCarePlanService : SanteDB.Core.Services.ICarePlanService {
     }
 }
 ```
-

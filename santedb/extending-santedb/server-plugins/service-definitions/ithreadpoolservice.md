@@ -10,16 +10,16 @@ Represents a thread pooling service
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| QueueUserWorkItem | void | _Action&lt;Object&gt;_ **action** | Queues the specified action into the worker pool |
-| QueueUserWorkItem | void | _Action&lt;Object&gt;_ **action** _Object_ **parm** | Queues the specified action into the worker pool |
-| QueueUserWorkItem | void | _TimeSpan_ **timeout** _Action&lt;Object&gt;_ **action** _Object_ **parm** | Queues the specified action into the worker pool |
-| QueueNonPooledWorkItem | void | _Action&lt;Object&gt;_ **action** _Object_ **parm** | Creates a normal thread which is not in the pool |
+| Operation              | Response/Return | Input/Parameter                                                                                                                                    | Description                                      |
+| ---------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| QueueUserWorkItem      | void            | _Action\<Object>_ **action**                                                                                                                       | Queues the specified action into the worker pool |
+| QueueUserWorkItem      | void            | <p><em>Action&#x3C;Object></em> <strong>action</strong><br><em>Object</em> <strong>parm</strong></p>                                               | Queues the specified action into the worker pool |
+| QueueUserWorkItem      | void            | <p><em>TimeSpan</em> <strong>timeout</strong><br><em>Action&#x3C;Object></em> <strong>action</strong><br><em>Object</em> <strong>parm</strong></p> | Queues the specified action into the worker pool |
+| QueueNonPooledWorkItem | void            | <p><em>Action&#x3C;Object></em> <strong>action</strong><br><em>Object</em> <strong>parm</strong></p>                                               | Creates a normal thread which is not in the pool |
 
 ## Implementations
 
-### DefaultThreadPoolService - \(SanteDB.Core.Api\)
+### DefaultThreadPoolService - (SanteDB.Core.Api)
 
 Represents a thread pool which is implemented separately from the default .net threadpool, this is to reduce the load on the .net framework thread pool
 
@@ -69,4 +69,3 @@ public class MyThreadPoolService : SanteDB.Core.Services.IThreadPoolService {
     }
 }
 ```
-

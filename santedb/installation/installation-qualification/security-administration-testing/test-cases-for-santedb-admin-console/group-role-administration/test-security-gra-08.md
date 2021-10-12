@@ -16,7 +16,7 @@ description: Testing the role.add command with existing role provided as -r para
 
 The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**. 
 
-* The `-r` parameter is used to specify which **role** to display information and effective policies from.
+* The `-r` parameter is used to specify which **role **to display information and effective policies from.
 
 ## Pre-Conditions / Setup
 
@@ -27,7 +27,7 @@ The `role.add` command is for adding a new role and has 1 required parameter tha
 
 1. Execute the `role.add` command with `-r` parameter specified as non-existing role.
 
-```text
+```
 role.add -r <new role name>
 ```
 
@@ -35,14 +35,14 @@ role.add -r <new role name>
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.add -r NewRole
 >
 ```
 
 * Check that the new role that was created appears:
 
-```text
+```
 > role.list
 SID                                    Name                 Description                                      A
 c3ae21d2-fc23-4133-ba42-b0e0a3b817d7   SYSTEM               Group for user SYSTEM. Identifies the functio... *
@@ -74,4 +74,3 @@ b81e78e0-8143-11eb-b733-00155d640b09   TestyMcTester        Test Group 1        
 {% hint style="warning" %}
 Active roles listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

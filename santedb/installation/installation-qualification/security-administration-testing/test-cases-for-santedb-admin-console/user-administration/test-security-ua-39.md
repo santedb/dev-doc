@@ -20,9 +20,9 @@ description: >-
 
 The `user.roles` command is for assigning roles to a user. 
 
-* The `-u` parameter is used to specify the **username** of which user to assign roles to.
+* The `-u` parameter is used to specify the **username **of which user to assign roles to.
 * The `-r` parameter is used to specify which **role** to assign to the specified user.
-* An exception is thrown when an invalid \(non-existing\) role is specified.
+* An exception is thrown when an invalid (non-existing) role is specified.
 
 ## Pre-Conditions / Setup
 
@@ -32,9 +32,9 @@ The `user.roles` command is for assigning roles to a user.
 
 ## Actions/Steps
 
-1. Execute the `user.roles` command with `-u` parameter specified as an existing user and `-r` parameter specified as a non-existing role.
+1\. Execute the `user.roles` command with `-u` parameter specified as an existing user and `-r` parameter specified as a non-existing role.
 
-```text
+```
 user.roles -u <existing username> -r <non-existing role>
 ```
 
@@ -42,9 +42,8 @@ user.roles -u <existing username> -r <non-existing role>
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.roles -u TestUser123 -r not_a_role
 ERR: Exception has been thrown by the target of an invocation.
         1:The specified roles do not exit. Roles are case sensitive
 ```
-

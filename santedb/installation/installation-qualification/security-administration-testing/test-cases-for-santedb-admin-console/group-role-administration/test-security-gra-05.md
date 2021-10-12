@@ -14,7 +14,7 @@ description: Testing the role.info command with a existing role specified as -r 
 
 ## Discussion
 
-The `role.info` command is for listing a specific role's information and effective policies. The `-r` parameter is used to specify which **role** to display information and effective policies from.
+The `role.info` command is for listing a specific role's information and effective policies. The `-r` parameter is used to specify which **role **to display information and effective policies from.
 
 ## Pre-Conditions / Setup
 
@@ -23,9 +23,9 @@ The `role.info` command is for listing a specific role's information and effecti
 
 ## Actions/Steps
 
-1. Execute the `role.` command with `-r` parameter specified as an existing role.
+1\. Execute the `role.` command with `-r` parameter specified as an existing role.
 
-```text
+```
 role.info -r <existing role name>
 ```
 
@@ -33,7 +33,7 @@ role.info -r <existing role name>
 
 * Admin Console output should appear similar to the following:
 
-```text
+```
 > role.info -r ADMINISTRATORS
 Name: ADMINISTRATORS
 SID: f6d2ba1d-5bb5-41e3-b7fb-2ec32418b2e1
@@ -112,4 +112,3 @@ Updated: 2021-04-05T14:09:41.7419680-04:00 (Administrator)
 {% hint style="warning" %}
 Role information listed here may be outdated in the future and the list is subject to change.
 {% endhint %}
-

@@ -10,23 +10,23 @@ Represents a service which retrieves IPrincipal objects for applications.
 
 ## Events
 
-| Event | Type | Description |
-| :--- | :--- | :--- |
-| Authenticated | EventHandler&lt;AuthenticatedEventArgs&gt; | Fired after an authentication request has been made. |
-| Authenticating | EventHandler&lt;AuthenticatingEventArgs&gt; | Fired prior to an authentication request being made. |
+| Event          | Type                                   | Description                                          |
+| -------------- | -------------------------------------- | ---------------------------------------------------- |
+| Authenticated  | EventHandler\<AuthenticatedEventArgs>  | Fired after an authentication request has been made. |
+| Authenticating | EventHandler\<AuthenticatingEventArgs> | Fired prior to an authentication request being made. |
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Authenticate | IPrincipal | _String_ **applicationId** _String_ **applicationSecret** | Authenticate the application identity. |
-| GetIdentity | IIdentity | _String_ **name** | Gets the specified identity for an application. |
-| SetLockout | void | _String_ **name** _Boolean_ **lockoutState** _IPrincipal_ **principal** | Set the lockout status |
-| ChangeSecret | void | _String_ **name** _String_ **secret** _IPrincipal_ **principal** | Change the specified application identity's secret |
+| Operation    | Response/Return | Input/Parameter                                                                                                                                  | Description                                        |
+| ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
+| Authenticate | IPrincipal      | <p><em>String</em> <strong>applicationId</strong><br><em>String</em> <strong>applicationSecret</strong></p>                                      | Authenticate the application identity.             |
+| GetIdentity  | IIdentity       | _String_ **name**                                                                                                                                | Gets the specified identity for an application.    |
+| SetLockout   | void            | <p><em>String</em> <strong>name</strong><br><em>Boolean</em> <strong>lockoutState</strong><br><em>IPrincipal</em> <strong>principal</strong></p> | Set the lockout status                             |
+| ChangeSecret | void            | <p><em>String</em> <strong>name</strong><br><em>String</em> <strong>secret</strong><br><em>IPrincipal</em> <strong>principal</strong></p>        | Change the specified application identity's secret |
 
 ## Implementations
 
-### ADO.NET Application Identity Provider - \(SanteDB.Persistence.Data.ADO\)
+### ADO.NET Application Identity Provider - (SanteDB.Persistence.Data.ADO)
 
 TODO: Document this
 
@@ -84,4 +84,3 @@ public class MyApplicationIdentityProviderService : SanteDB.Core.Security.Servic
     }
 }
 ```
-

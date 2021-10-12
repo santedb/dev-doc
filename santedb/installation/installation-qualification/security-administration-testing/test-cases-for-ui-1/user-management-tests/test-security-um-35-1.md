@@ -11,7 +11,7 @@ description: Testing the Lock button for an unlocked user.
 
 ## Discussion
 
-Users can be updated with a Status of Locked \(for a maximum amount of time\).
+Users can be updated with a Status of Locked (for a maximum amount of time).
 
 ## Pre-Conditions / Setup
 
@@ -21,18 +21,17 @@ Users can be updated with a Status of Locked \(for a maximum amount of time\).
 
 ## Actions/Steps
 
-1.  Click the **Lock** button corresponding to a user with a Status of Active to be locked \(e.g. "ClinicalStaffUser123"\).
+1\.  Click the **Lock** button corresponding to a user with a Status of Active to be locked (e.g. "ClinicalStaffUser123").
 
-![](../../../../../../.gitbook/assets/image%20%28300%29.png)
+![](<../../../../../../.gitbook/assets/image (300).png>)
 
-2. Click the **OK** button on the confirmation modal that appears in the browser.
+2\. Click the **OK** button on the confirmation modal that appears in the browser.
 
-![](../../../../../../.gitbook/assets/image%20%28334%29.png)
+![](<../../../../../../.gitbook/assets/image (334).png>)
 
 ## Expected Behaviour
 
 * Status of the user that was unlocked changes to **Locked.**
-* **Lock** button changes to an **Unlock** button.
+* **Lock **button changes to an **Unlock** button.
 
-![](../../../../../../.gitbook/assets/image%20%28330%29.png)
-
+![](<../../../../../../.gitbook/assets/image (330).png>)

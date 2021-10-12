@@ -18,35 +18,35 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by "**-r" \(**or **"--role"\)** followed ****by the role\(s\) to assign the policy to followed by "**-p**" \(or "**--policy**"\) followed by the policy\(ies\) to apply followed by "**-e**" \(or "**--rule**"\) followed by the action to take \(0/deny, 1/elevate, 2/grant\).
+1- Use the "**policy.assign**" command followed by "**-r" (**or** "--role") **followed** **by the role(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) to apply followed by "**-e**" (or "**--rule**") followed by the action to take (0/deny, 1/elevate, 2/grant).
 
 {% hint style="info" %}
-If you don't specify the action to take \("e" or "--rule" parameter\) then the default action would be "deny".
+If you don't specify the action to take ("e" or "--rule" parameter) then the default action would be "deny".
 {% endhint %}
 
-```text
+```
 > policy.assign -r Create-Role-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 2
 ```
 
 2- **Test Validation**: Use "**role.info**" command followed  "**-r**" followed by role name.
 
-```text
+```
 > role.info -r Create-Role-Test
 ```
 
 ## Expected Behaviour
 
-1- Should appear "the action \(Deny or Elevate or Grant\)"  followed by "policy name" followed by "role name".
+1- Should appear "the action (Deny or Elevate or Grant)"  followed by "policy name" followed by "role name".
 
-```text
+```
 > policy.assign -r Create-Role-Test -p 1.3.6.1.4.1.33349.3.1.5.9.2.999 -e 2
 Grant: Override Disclosure TO Create-Role-Test
 >
 ```
 
-2- Should the assigned policy \("Override Disclosure"\) appear in the Effective Policies row:
+2- Should the assigned policy ("Override Disclosure") appear in the Effective Policies row:
 
-```text
+```
 > role.info -r Create-Role-Test
 Name: Create-Role-Test
 SID: ff22744e-de81-11eb-bbad-eb1f1d969e16
@@ -120,4 +120,3 @@ Updated: 2021-07-06T13:45:48.1910570-04:00 (Administrator)
                 Testy Mctesterson [1.3.6.1.4.1.66666.3.1.5.9.2.0.14] : --- (default DENY)
                 SUPER SECRET DISCLOSURE [2.25.3049340304933] : --- (default DENY)
 ```
-

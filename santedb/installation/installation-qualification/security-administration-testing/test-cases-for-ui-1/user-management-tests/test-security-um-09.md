@@ -28,16 +28,15 @@ As more of each of the items listed above are used, the password is stronger. **
 
 ## Actions/Steps
 
-1. Enter either "Clinic@l" for a **Moderate** password or "Clinic" for a **Weak** password or "Clini" for a **Very Weak** password into both **New Password** and **Confirm Password** textboxes.
+1\. Enter either "Clinic@l" for a **Moderate** password or "Clinic" for a **Weak** password or "Clini" for a **Very Weak** password into both **New Password** and **Confirm Password** textboxes.
 
 ## Expected Behaviour
 
 * A status bar should be displayed yellow or red or not at all.
-* Status bar is labelled to the right of the status bar as either **Moderate** \(using "Clinic@l"; shown below\) or **Weak** \(using "Clinic"\) or **Very Weak** \(using "Clini"\).
+* Status bar is labelled to the right of the status bar as either **Moderate** (using "Clinic@l"; shown below) or **Weak **(using "Clinic") or **Very Weak **(using "Clini").
 
-![](../../../../../../.gitbook/assets/image%20%28230%29.png)
+![](<../../../../../../.gitbook/assets/image (230).png>)
 
 * When all other required fields are provided, clicking **Save** should prompt a **Business Rules Violation** modal with a message stating "password failed validation".
 
-![](../../../../../../.gitbook/assets/image%20%28120%29.png)
-
+![](<../../../../../../.gitbook/assets/image (120).png>)

@@ -14,7 +14,7 @@ The details of each event from the **Audit Repository** can be viewed.
 
 ## Pre-Conditions / Setup
 
-1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository** events.
+1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository **events.
 2. Navigate to the **Administration Panel / Security / Audit Log / List**. 
 
 {% hint style="warning" %}
@@ -23,13 +23,12 @@ Entries in the table being filtered here are subject to change very frequently.
 
 ## Actions/Steps
 
- 1. Click on the **View** button corresponding to an Audit Event for which details need to be viewed.
+ 1\. Click on the **View** button corresponding to an Audit Event for which details need to be viewed.
 
-![](../../../../../../.gitbook/assets/image%20%28379%29.png)
+![](<../../../../../../.gitbook/assets/image (379).png>)
 
 ## Expected Behaviour
 
-* A modal with **Audit Event Details** should appear over the page with 4 panels \(**Event Information**, **Network**, **Users & Computers**, and **Data & Objects**\).
+* A modal with **Audit Event Details** should appear over the page with 4 panels (**Event Information**, **Network**, **Users & Computers**, and **Data & Objects**).
 
-![](../../../../../../.gitbook/assets/image%20%28365%29.png)
-
+![](<../../../../../../.gitbook/assets/image (365).png>)

@@ -22,9 +22,9 @@ The `user.info` command is for listing information about a user account and effe
 
 ## Actions/Steps
 
-1. Execute the `user.info` command.
+1\. Execute the `user.info` command.
 
-```text
+```
 user.info
 ```
 
@@ -32,9 +32,8 @@ user.info
 
 * Admin Console output should appear as follows:
 
-```text
+```
 > user.info
 ERR: Exception has been thrown by the target of an invocation.
         1:Must specify a user
 ```
-

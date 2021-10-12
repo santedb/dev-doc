@@ -10,21 +10,21 @@ Represents a service which is responsible for the maintenance of concepts.
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| FindConceptsByName | IEnumerable&lt;Concept&gt; | _String_ **name** _String_ **language** | Searches for a concept by name and language. |
-| FindConceptsByReferenceTerm | IEnumerable&lt;Concept&gt; | _String_ **code** _Uri_ **codeSystem** | Finds a concept by reference term. |
-| GetConceptSetMembers | IEnumerable&lt;Concept&gt; | _String_ **mnemonic** | Get concept set members |
-| FindConceptsByReferenceTerm | IEnumerable&lt;Concept&gt; | _String_ **code** _String_ **codeSystemDomain** | Finds a concept by reference term. |
-| GetConcept | Concept | _String_ **mnemonic** | Gets a concept by mnemonic. |
-| Implies | Boolean | _Concept_ **a** _Concept_ **b** | Returns a value which indicates whether  implies |
-| IsMember | Boolean | _ConceptSet_ **set** _Concept_ **concept** | Returns true if the concept  is a member of set |
-| IsMember | Boolean | _Guid_ **set** _Guid_ **concept** | Returns true if the concept  is a member of set |
-| GetConceptReferenceTerm | ReferenceTerm | _Guid_ **conceptId** _String_ **codeSystem** | Gets the concept reference term for the specified code system |
+| Operation                   | Response/Return       | Input/Parameter                                                                                   | Description                                                   |
+| --------------------------- | --------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| FindConceptsByName          | IEnumerable\<Concept> | <p><em>String</em> <strong>name</strong><br><em>String</em> <strong>language</strong></p>         | Searches for a concept by name and language.                  |
+| FindConceptsByReferenceTerm | IEnumerable\<Concept> | <p><em>String</em> <strong>code</strong><br><em>Uri</em> <strong>codeSystem</strong></p>          | Finds a concept by reference term.                            |
+| GetConceptSetMembers        | IEnumerable\<Concept> | _String_ **mnemonic**                                                                             | Get concept set members                                       |
+| FindConceptsByReferenceTerm | IEnumerable\<Concept> | <p><em>String</em> <strong>code</strong><br><em>String</em> <strong>codeSystemDomain</strong></p> | Finds a concept by reference term.                            |
+| GetConcept                  | Concept               | _String_ **mnemonic**                                                                             | Gets a concept by mnemonic.                                   |
+| Implies                     | Boolean               | <p><em>Concept</em> <strong>a</strong><br><em>Concept</em> <strong>b</strong></p>                 | Returns a value which indicates whether  implies              |
+| IsMember                    | Boolean               | <p><em>ConceptSet</em> <strong>set</strong><br><em>Concept</em> <strong>concept</strong></p>      | Returns true if the concept  is a member of set               |
+| IsMember                    | Boolean               | <p><em>Guid</em> <strong>set</strong><br><em>Guid</em> <strong>concept</strong></p>               | Returns true if the concept  is a member of set               |
+| GetConceptReferenceTerm     | ReferenceTerm         | <p><em>Guid</em> <strong>conceptId</strong><br><em>String</em> <strong>codeSystem</strong></p>    | Gets the concept reference term for the specified code system |
 
 ## Implementations
 
-### LocalConceptRepository - \(SanteDB.Core\)
+### LocalConceptRepository - (SanteDB.Core)
 
 Represents a service which is responsible for the maintenance of concepts.
 
@@ -109,7 +109,7 @@ public class MyConceptRepositoryService : SanteDB.Core.Services.IConceptReposito
 
 ### Lookup Reference Term From Concept
 
-This example is particularly useful for those who are looking to convert an internal property \(in the example GenderConcept\) into a wire-level code system \(in the example: HL7 v2 Administrative Sex\).
+This example is particularly useful for those who are looking to convert an internal property (in the example GenderConcept) into a wire-level code system (in the example: HL7 v2 Administrative Sex).
 
 ```csharp
 var conceptRepository = ApplicationServiceContext.Current.GetService<IConceptRepositoryService>();
@@ -135,4 +135,3 @@ var genderConcept = conceptRepository.FindConceptsByReferenceTerm(resource.Gende
 var coding = resource.MaritalStatus.Coding.First();
 var marriageStatus = conceptRepository.FindConceptsByReferenceTerm(coding.Code.Value, coding.System);
 ```
-

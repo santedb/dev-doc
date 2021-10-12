@@ -10,14 +10,14 @@ Represents a PEP that receives demands
 
 ## Operations
 
-| Operation | Response/Return | Input/Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| Demand | void | _String_ **policyId** | Demand access to the policy |
-| Demand | void | _String_ **policyId** _IPrincipal_ **principal** | Demand access to the policy |
+| Operation | Response/Return | Input/Parameter                                                                                    | Description                 |
+| --------- | --------------- | -------------------------------------------------------------------------------------------------- | --------------------------- |
+| Demand    | void            | _String_ **policyId**                                                                              | Demand access to the policy |
+| Demand    | void            | <p><em>String</em> <strong>policyId</strong><br><em>IPrincipal</em> <strong>principal</strong></p> | Demand access to the policy |
 
 ## Implementations
 
-### ApplicationContext - \(SanteDB.Core\)
+### ApplicationContext - (SanteDB.Core)
 
 Provides a context for components.
 
@@ -33,7 +33,7 @@ Provides a context for components.
     </serviceProviders>
 ```
 
-### TestApplicationContext - \(SanteDB.Core.TestFramework\)
+### TestApplicationContext - (SanteDB.Core.TestFramework)
 
 TODO: Document this
 
@@ -71,4 +71,3 @@ public class MyPolicyEnforcementService : SanteDB.Core.Security.Services.IPolicy
     }
 }
 ```
-

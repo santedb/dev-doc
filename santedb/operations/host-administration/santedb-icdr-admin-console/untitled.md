@@ -6,7 +6,7 @@ You can use the iCDR administrative console to create, list, lock, unlock and ge
 
 You can view devices in the system using the `device.list` command, specifying optional filter paramters.
 
-```text
+```
 > device.list
 SID                                    Name                     Last Auth.             Lockout                ILA  A
 8a5c2e0c-c096-11ea-9f6f-00155d640b09   OSS-SANTEMPI-EL          2021-06-29T23:15:44...                        0    *
@@ -17,18 +17,18 @@ b1006a6c-d514-11eb-8248-00155d640b09   testDevice                               
 959617ca-d2af-11eb-8248-00155d640b09   Debugee-0060739CE9C9     2021-06-22T09:27:35...                        0    *
 ```
 
-The optional filter parameters for `device.list` ****are:
+The optional filter parameters for `device.list`** **are:
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-l` | Filter on locked status | `device.list -l` |
-| `-a` | Include non-active devices | `device.list -a` |
+| Parameter | Description                | Example          |
+| --------- | -------------------------- | ---------------- |
+| `-l`      | Filter on locked status    | `device.list -l` |
+| `-a`      | Include non-active devices | `device.list -a` |
 
 ## Adding Devices
 
 You can add a device to the iCDR instance using the `device.add` command and specifying the name you wish to give to the device:
 
-```text
+```
 > device.add Create-Device-Test-10
 Device secret: AFF89DA48479B8478748BD11A9BD8F20
 CREATE Create-Device-Test-10
@@ -37,11 +37,11 @@ CREATE Create-Device-Test-10
 
 The parameters for `device.add` are:
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-s` | The device secret to set | `device.add <device_name> -s s3CreT` |
-| `-g` | The policies to grant the device | `device.add <device_name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-d` | The policies to deny the device | `device.add <device_name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| Parameter | Description                      | Example                                                       |
+| --------- | -------------------------------- | ------------------------------------------------------------- |
+| `-s`      | The device secret to set         | `device.add <device_name> -s s3CreT`                          |
+| `-g`      | The policies to grant the device | `device.add <device_name> -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d`      | The policies to deny the device  | `device.add <device_name> -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
 
 ## Locking/Unlocking Devices
 
@@ -49,13 +49,13 @@ To lock or unlock a device, the `device.lock` command with our without the `-l` 
 
 To lock the device "Create-Device-Test":
 
-```text
+```
 > device.lock -l Create-Device-Test
 ```
 
 To unlock the device "Create-Device-Test":
 
-```text
+```
 > device.lock Create-Device-Test
 ```
 
@@ -65,7 +65,7 @@ To delete a device, the **`device.del`** command is used specifiying the device 
 
 To delete the device "Create-Device-Test":
 
-```text
+```
 > device.del Create-Device-Test
 ```
 
@@ -73,7 +73,7 @@ To undelete a device, the `device.undel` command is used specifying the device n
 
 To undelete the device "Create-Device-Test":
 
-```text
+```
 > device.undel Create-Device-Test
 ```
 
@@ -85,7 +85,7 @@ To assign a policy to a device please visit 'Assigning Policies' section of [Pol
 
 You can get extended information about a particular device by using the `device.info` command and specifying the device name. For example, to get information about the device Create-Device-Test:
 
-```text
+```
 > device.info Create-Device-Test
 Name: Create-Device-Test
 SID: d73a8f8c-d361-11eb-8248-00155d640b09
@@ -161,4 +161,3 @@ Updated: 2021-06-30T03:42:25.5389080-04:00 (Administrator)
                 SUPER SECRET DISCLOSURE [2.25.3049340304933] : --- (default DENY)
 >
 ```
-

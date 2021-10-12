@@ -14,9 +14,9 @@ description: Testing attempted creation of a new user with required properties m
 Some user properties are specifically required to successfully create a new user. This test verifies required fields have a prompt with a validation message. Required fields are:
 
 * Username
-* Role\(s\)
+* Role(s)
 * New/Confirm Password
-* Given Name\(s\)
+* Given Name(s)
 
 ## Pre-Conditions / Setup
 
@@ -25,15 +25,14 @@ Some user properties are specifically required to successfully create a new user
 
 ## Actions/Steps
 
-1. Click the **Save** button.   
+1\. Click the **Save **button.   
 
 ![](../../../../../../.gitbook/assets/blankcreate_savebutton.png)
 
 ## Expected Behaviour
 
 * No user should be created.
-* Remain on **Administration Panel / Security / Users / Create User** page.
+* Remain on **Administration Panel / Security / Users / Create User **page.
 * Display a prompt below each required property textbox with a validation message as follows:
 
 ![](../../../../../../.gitbook/assets/blankcreate_prompted.png)
-
