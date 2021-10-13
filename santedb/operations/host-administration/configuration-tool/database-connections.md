@@ -1,25 +1,22 @@
-# Configuration Tool
+# Database Connections
 
-The SanteDB configuration tool is a graphical tool which is used to control the [SanteDB Configuration](../../../operations/host-administration/host-configuration-file/) file.
+On the initial configuration screen, as well as any configuration page which requires a connection to be set, the tool exposes a panel for connection string editing.
 
-## Initial Configuration
+Connection strings are named settings which provide SanteDB with the necessary information to contact a particular database server using a specified provider. 
 
-Whenever you install SanteDB in a new environment you will be prompted to run the Configuration Tool. On initial configuration the configuration tool will show its initial configuration screen.
+## Editing Connection Strings
 
-![Initial Configuration](<../../../../.gitbook/assets/image (418).png>)
+When editing a connection string in an existing configuration file, you will be presented with a list of connection strings which have already been configured:
 
-The options are:
+![](<../../../../.gitbook/assets/image (427).png>)
 
-* **Easy Configuration** -> Sets a series of defaults from the selected **Template**
-* **Advanced Configuration **-> Creates an empty configuration file which administrators can use individual configuration panels to control the overall configuration.
+In the example above, a user could select a an existing Read/Write connection string which has already been configured or they can create a NEW connection string to, for example, bind the read/write connection string to a read/write primary node.
 
-In most cases the Easy Configuration should be used.
+![](<../../../../.gitbook/assets/image (426).png>)
 
-### Database Configuration
+## Connection Types
 
-To setup Easy Configuration select the database software you'll be using and enter the connection details for the configuration.
-
-#### PostgreSQL Configuration
+### PostgreSQL Configuration
 
 When PostgreSQL is selected as the database software, you should enter the connection details to the PostgreSQL server and database you'd like to configure.
 
@@ -34,7 +31,7 @@ When PostgreSQL is selected as the database software, you should enter the conne
 | minpoolsize | The minimum number of pooled connections to keep open to the database.                           | 5         |
 | maxpoolsize | The maximum number of pooled connections to allow to the database (before a wait is induced)     | 20        |
 
-#### Firebird
+### Firebird
 
 When Firebird is selected as the database software, SanteDB will assume you're using an embedded IBSQL (Firebird) database.
 
@@ -44,24 +41,10 @@ When Firebird is selected as the database software, SanteDB will assume you're u
 | password        | If password protecting the database, the password of SYSDBA                |         |
 | initial catalog | The name of the FDB file to connect to or a new database.                  |         |
 
-#### Creating a new Database
+## Creating a new Database
 
 You can create a new database from the configuration tool on the database software of your choice by selecting New Database as the database option. You will be prompted to enter the details of the database you're creating:
 
-![](<../../../../.gitbook/assets/image (417).png>)
+![](<../../../../.gitbook/assets/image (417) (1).png>)
 
 You will need to provide the superuser account of a user which has `CREATE DATABASE` permission on the selected provider. Upon pressing OK the database will be created and initialized, and you will be returned to the initial configuration screen.
-
-### Instance Name
-
-If you're running multiple copies of SanteDB on the same server environment, the named instance is the differentiation between these instances. The configuration tool will register the appropriate instance name service on your Windows operating system to start/stop the instance.
-
-### Template
-
-SanteDB iCDR servers have hundreds of configuration options. The `Template` option allows you to quickly select a configuration template which has pre-configured values as a starter for your configuration. The templates which are commonly used are:
-
-* SanteDB MDM -> Configuration with Master Data Management enabled
-* SanteMPI Server -> Configuration with the SanteMPI interfaces pre-configured
-* SanteGuard Server -> Configuration with the SanteGuard interfaces pre-configured.
-
-If you do not select a template, you will need to configure each plugin in the S

@@ -1,9 +1,9 @@
-# SanteDB iCDR
+# SanteDB iCDR Command
 
 The SanteDB iCDR server runs via the SanteDB.exe file located in the following default installation directories:
 
 * **Microsoft Windows Operating Systems: **C:\Program Files\SanteSuite\SanteDB\Server\SanteDB.exe
-* **Linux Operating Systems: **/opt/sante-suite/santedb/server/SanteDB.exe
+* **Linux Operating Systems: **/opt/santesuite/santedb/server/SanteDB.exe
 
 This process can be used to operate one or more IMS services. 
 
@@ -11,11 +11,7 @@ This process can be used to operate one or more IMS services.
 
 ### Configuration of Host
 
-When you install the SanteDB iCDR server, the application (by default) has no configuration file. The default configuration file is `santedb.config.xml` , this file can be created by running `ConfigTool.exe` ([as illustrated here](broken-reference)) or by copying one of the sample files. The sample configuration files are:
-
-* santedb.config.psql.xml - A basic configuration file which is setup to run with PostgreSQL server.
-* santedb.config.fbsql.xml - A basic configuration file which is designed to operate with Firebird databases (Windows only)
-* Generated - You can generate an empty configuration file by running `SanteDB.exe --genconfig` and then editing the resulting default.config.xml file that is created.
+When you install the SanteDB iCDR server, the application (by default) has no configuration file. The default configuration file is `santedb.config.xml` , this file can be created by running `ConfigTool.exe` ([as illustrated here](configuration-tool/)) .
 
 For more information, see the [SanteDB Configuration](host-configuration-file/) documentation.
 
@@ -23,13 +19,14 @@ For more information, see the [SanteDB Configuration](host-configuration-file/) 
 
 The following options can be used on the SanteDB.exe command
 
-| Option          | Use                                                     | Example             |
-| --------------- | ------------------------------------------------------- | ------------------- |
-| --console       | Run as an application rather than a service.            | --console           |
-| --test-startup  | Tests the configuration file (for startup) then stops . | --test-startup      |
-| --name=INSTANCE | Named instance to configure as a windows service        | --name=IMS1         |
-| --config=file   | Load an alternate configuration file                    | --config=myconf.xml |
-| --genconfig     | Generate an empty configuration file.                   |                     |
+| Option          | Use                                                                                     | Example             |
+| --------------- | --------------------------------------------------------------------------------------- | ------------------- |
+| --console       | Run as an application rather than a service.                                            | --console           |
+| --test-startup  | Tests the configuration file (for startup) then stops .                                 | --test-startup      |
+| --name=INSTANCE | Named instance to configure as a windows service                                        | --name=IMS1         |
+| --config=file   | Load an alternate configuration file                                                    | --config=myconf.xml |
+| --genconfig     | Generate an empty configuration file.                                                   |                     |
+| --install-certs | Install the SanteSuite community certificates into the local trust store for the server |                     |
 
 ### Running in Linux / MacOS
 
@@ -37,7 +34,7 @@ To run the SanteDB.exe process in a terminal you can the following command:
 
 `mono /opt/sante-suite/santedb/server/SanteDB.exe --console`
 
-Additionally the service can be installed into your operating system by copying the service definition from /opt/sante-suite/santedb/server/santedb.service to your distribution's appropriate directory.
+Additionally the service can be installed into your operating system by copying the service definition from `/opt/santesuite/santedb/server/santedb.service` to your distribution's appropriate directory.
 
 Then you can control the service by running:
 
