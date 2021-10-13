@@ -1,9 +1,3 @@
----
-cover: >-
-  https://images.unsplash.com/photo-1523726491678-bf852e717f6a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwyfHxkZXNpZ258ZW58MHx8fHwxNjM0MTU3MjUz&ixlib=rb-1.2.1&q=85
-coverY: 70.55506607929516
----
-
 # Architecture
 
 This page provides a summary of the SanteDB architecture. The "source of truth" for this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))

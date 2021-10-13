@@ -1,9 +1,3 @@
----
-cover: >-
-  https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWVyfGVufDB8fHx8MTYzNDE1NzI4MQ&ixlib=rb-1.2.1&q=85
-coverY: 0
----
-
 # Extending SanteDB
 
 SanteDB provides a variety of mechanisms for extension and customizing the manner in which it operates. The most common ways to modify the behavior of SanteDB are:
