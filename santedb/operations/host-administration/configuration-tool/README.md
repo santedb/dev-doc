@@ -19,7 +19,7 @@ In most cases the Easy Configuration should be used.
 
 When using the easy configuration option, the tool will allow you to set a database connection which you'd like to connect to. 
 
-For more information on database connections see the [Database Connections](database-connections.md) page.
+For more information on database connections see the [Database Connections](persistence-settings/database-connections.md) page.
 
 ### Instance Name
 
@@ -39,7 +39,7 @@ If you do not select a template, you will need to configure each plugin in the s
 
 When you have completed initial configuration you will be presented with a user interface as shown.
 
-![](<../../../../.gitbook/assets/image (425) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1).png>)
 
 1. Feature List -> Shows a list of all features enabled in the SanteDB iCDR server which can be configured. (based on installed options)
 2. Feature Configuration -> The configuration options for the selected feature.
@@ -78,3 +78,4 @@ You can disable a feature step by clicking on the checkmark beside it. This inst
 {% hint style="warning" %}
 Disabling a configuration task may result in the feature being partially enabled and not operating correctly. 
 {% endhint %}
+

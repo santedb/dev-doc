@@ -59,7 +59,7 @@ When binding an endpoint to HTTPS you must ensure:
 
 Once the certificate binding is enabled, you can expand it and select the certificate
 
-![](<../../../../.gitbook/assets/image (422) (1).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1).png>)
 
 
 
