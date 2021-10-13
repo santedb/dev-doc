@@ -2,7 +2,7 @@
 
 The HL7 Version 2 Service configuration panel is used to enable or disable the sending and receiving of [HL7 Version 2.x](../../../../extending-santedb/service-apis/hl7v2/) messages.
 
-![](<../../../../../.gitbook/assets/image (431).png>)
+![](<../../../../../.gitbook/assets/image (432).png>)
 
 | Setting                            | Description                                                                                                                                                                                                                                                                                                                           | Values                 |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
@@ -21,7 +21,7 @@ The HL7 Version 2 Service configuration panel is used to enable or disable the s
 
 The HL7 Services configuration property allows administrators to edit one or more IP/Endpoints which can receive HL7v2 messages.
 
-![](<../../../../../.gitbook/assets/image (433).png>)
+![](<../../../../../.gitbook/assets/image (435).png>)
 
 
 
@@ -45,3 +45,14 @@ When `sllp://` is used as the transport for the HL7 endpoint, the security setti
 | Enable Client Cert Negotiation | When true, the HL7 endpoint will challenge clients to provide a client certificate.                                                                                         | Boolean                                                         |
 | Client CA Certificate          | The root certificate or intermediary certificate where client certificates must be bound to. The certificate chain will be validated against the this CA.                   | See: [Security Certificate](../messaging-settings.md#endpoints) |
 | Server Certificate             | The certificate which the SanteDB iCDR will provide to clients which authenticates the server to clients. This certificate is also used to encrypt traffic with the client. | See: [Security Certificate](../messaging-settings.md#endpoints) |
+
+### Messaging Events
+
+Each HL7 endpoint can support multiple message / trigger events. The messages property of the endpoint specifies which message handlers can be used for which trigger events on the specified endpoint.
+
+![](<../../../../../.gitbook/assets/image (424).png>)
+
+| Setting         | Description                                                                                                                                    | Values                                                |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Message Handler | The implementation of the message handler which should be used to process messages which have any of the events listed in the events property. | ![](<../../../../../.gitbook/assets/image (433).png>) |
+| Events          | The trigger events which should be forwarded to the selected message handler.                                                                  |                                                       |
