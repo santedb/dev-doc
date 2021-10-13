@@ -1,16 +1,22 @@
+---
+cover: >-
+  https://images.unsplash.com/photo-1523726491678-bf852e717f6a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwyfHxkZXNpZ258ZW58MHx8fHwxNjM0MTU3MjUz&ixlib=rb-1.2.1&q=85
+coverY: 70.55506607929516
+---
+
 # Architecture
 
-This page provides a summary of the SanteDB architecture. The "source of truth" for this architecture can be found in the SanteDB Functional Design Specification \([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf)\)
+This page provides a summary of the SanteDB architecture. The "source of truth" for this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))
 
 ## Overall Architecture
 
 SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure. 
 
-![](../../.gitbook/assets/image%20%28122%29.png)
+![](<../../.gitbook/assets/image (122).png>)
 
 ## iCDR Server
 
-The iCDR server is the central integrated clinical data repository which is used to coordinate the many connected clients in an implementation. Typically an implementation of SanteDB will only ever have one iCDR instance \(or a logical grouping of iCDR servers acting as a single iCDR\).
+The iCDR server is the central integrated clinical data repository which is used to coordinate the many connected clients in an implementation. Typically an implementation of SanteDB will only ever have one iCDR instance (or a logical grouping of iCDR servers acting as a single iCDR).
 
 The primary responsibilities of the iCDR are:
 
@@ -44,7 +50,7 @@ The dCDR Windows and Linux applications are self-contained applications which ru
 
 ### dCDR Gateway
 
-The dCDR Gateway is a headless service which implements the dCDR functionality and is intended for use in environments where third party applications \(or users in a shared local network\) require access to offline functionality. 
+The dCDR Gateway is a headless service which implements the dCDR functionality and is intended for use in environments where third party applications (or users in a shared local network) require access to offline functionality. 
 
 The dCDR gateway exposes FHIR, HL7v2, ATNA, and API calls to any connected client on a local network. The Gateway acts a "mini" SanteDB  iCDR instance, where clients connected on the local network have no knowledge of the overall connectivity of the clinic or environment they're operating within.
 
@@ -55,6 +61,4 @@ Care should be taken in planning the local network security environment when usi
 ### dCDR Web Portal
 
 The dCDR Web Portal is a specialized dCDR environment which has no offline capability. It is primarily designed to operate as a daemon and to serve out, on the internet, the user interfaces directly connected to the central iCDR. This is the technology used to host the administrative panels, any shared/central infrastructure, etc.
-
-
 
