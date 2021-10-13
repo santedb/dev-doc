@@ -19,7 +19,7 @@ In most cases the Easy Configuration should be used.
 
 When using the easy configuration option, the tool will allow you to set a database connection which you'd like to connect to. 
 
-For more information on database connections see the [Database Connections](persistence-settings/database-connections.md) page.
+For more information on database connections see the [Database Connections](database-connections.md) page.
 
 ### Instance Name
 
@@ -69,7 +69,7 @@ This view allows administrators to directly edit the configuration file - regard
 
 Editing the configuration values doesn't actually save the configuration file. When you change values in the configuration panel the tool calculates a list of changes that need to occur to apply the changes you've set. In order to apply these use the **Apply Changes** button on the command bar.
 
-![](<../../../../.gitbook/assets/image (420) (1).png>)
+![](<../../../../.gitbook/assets/image (420) (1) (1).png>)
 
 Each feature that you've edited creates one or more tasks that will be executed. Each task can be investigated to gather details of the feature and what is being changed in your configuration file.
 

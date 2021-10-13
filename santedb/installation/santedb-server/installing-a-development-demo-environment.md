@@ -30,7 +30,7 @@ Each of these installers:
 
 The installation process is a standard Windows installer experience, administrators can elect to install particular plugins that meet their needs. 
 
-![](<../../../.gitbook/assets/image (420) (1) (1).png>)
+![](<../../../.gitbook/assets/image (420) (1) (1) (1).png>)
 
 The plugins available at the time of writing are enumerated below.
 
