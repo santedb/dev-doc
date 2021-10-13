@@ -2,13 +2,13 @@
 
 SanteDB provides several docker containers for SanteDB solutions and services. The docker containers are structured as illustrated.
 
-![](../../../../.gitbook/assets/image%20%28198%29.png)
+![](<../../../../.gitbook/assets/image (198).png>)
 
 The docker containers all use the mono:latest as their root container.
 
-* santedb\_icdr: The generic SanteDB iCDR project running as a docker container with FHIR, HL7, caching, PostgreSQL database support, and everything needed to get the iCDR running quickly.
-* santedb\_mpi: The generic iCDR project with the SanteGuard and SanteMPI plugins enabled.
-* santedb\_dcdr: The disconnected dCDR project
+* santedb_icdr: The generic SanteDB iCDR project running as a docker container with FHIR, HL7, caching, PostgreSQL database support, and everything needed to get the iCDR running quickly.
+* santedb_mpi: The generic iCDR project with the SanteGuard and SanteMPI plugins enabled.
+* santedb_dcdr: The disconnected dCDR project
 
 ## Configuring the Docker Containers
 
@@ -17,48 +17,48 @@ The docker containers all use the mono:latest as their root container.
 The container structure is as follows:
 
 * `/santedb` - Directory which contains the application code for SanteDB
-* `/santedb/docker.lastconfig` - The configuration file \(in XML form\) which represents the computed configuration file for the last run of the docker host.
+* `/santedb/docker.lastconfig` - The configuration file (in XML form) which represents the computed configuration file for the last run of the docker host.
 * `/santedb/data` - Data seeding directory in Dataset format
-* `/santedb/data/fhir` - Data seeding for FHIR files \(JSON or XML\)
-* `/santedb/applets` - Application directory \(where compile applets files should be\)
+* `/santedb/data/fhir` - Data seeding for FHIR files (JSON or XML)
+* `/santedb/applets` - Application directory (where compile applets files should be)
 * `/santedb/match` - Directory for match configuration source files
 * `/var/log/santedb_yyyyMMdd.log` - SanteDB log file for current date
 
 ### Enabling or Disabling Features
 
-The docker containers are configured using environment variables. Features can be turned on/off using the environment variable SDB\_FEATURE environment variable, for example, to enable the core features and ATNA audit shipping:
+The docker containers are configured using environment variables. Features can be turned on/off using the environment variable SDB_FEATURE environment variable, for example, to enable the core features and ATNA audit shipping:
 
-```text
+```
 SDB_FEATURE=AUDIT_SHIPPING;ADO;AUDIT_REPO
 ```
 
 The features which are available for the default SanteDB docker container are:
 
-| Code | Feature |
-| :--- | :--- |
-| LOG | Core data logging \(see: [Configuration Notes](feature-configuration.md#diagnostic-logging)\) |
-| DATA\_POLICY | Data privacy enforcement \(see: [Configuration Notes](feature-configuration.md#data-privacy-controls)\) |
-| AUDIT\_REPO | Internal security audit repository \(see: [Configuration Notes](feature-configuration.md#audit-repository)\) |
-| ADO | Core Application Data Objects \(ADO.NET\) data persistence \(see: [Configuration Notes](feature-configuration.md#ado-data-storage)\) |
-| PUBSUB\_ADO | Publish / Subscribe Subsystem \(see: [Configuration Notes](feature-configuration.md#publish-subscribe-functions)\) |
-| RAMCACHE | In-Process Memory Cache \(see: [Configuration Notes](feature-configuration.md#in-memory-caching)\) |
-| REDIS | REDIS based shared cache \(see: [Configuration Notes](feature-configuration.md#redis-caching)\) |
-| SEC | Core Security Functions \(PIP, PDP, PEP\) |
-| SWAGGER | OpenAPI / Swagger Metadata Endpoint \(see: Configuration Notes\) |
-| OPENID | OAUTH 2.0 / OpenID IdP Provider \(see: [Configuration Notes](feature-configuration.md#openid-connect-idp)\) |
-| MDM | Master Data Management Functions \(see: [Configuration Notes](feature-configuration.md#master-data-management-and-record-linking)\) |
-| FHIR | HL7 FHIR Endpoint \(see: [Configuration Notes](feature-configuration.md#hl7-fast-health-interoperability-resources-fhir)\) |
-| HL7 | HL7 Version 2.x Endpoint \(see: [Configuration Notes](feature-configuration.md#hl7-version-2-x)\) |
-| HDSI | Core Health Data Service Interface \(see: [Configuration Notes](feature-configuration.md#core-health-data-service-interface)\) |
-| AMI | Administrative Management Interface \(see: [Configuration Notes](feature-configuration.md#core-administrative-management-interface)\) |
-| BIS | Business Intelligence \(reporting/query set/etc.\) interface \(see: [Configuration Notes](feature-configuration.md#core-business-intelligence-interfaces)\) |
-| MATCHING | Internal SanteDB Matching Engine \(see: [Configuration Notes](feature-configuration.md#record-matching-plugin)\) |
+| Code        | Feature                                                                                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOG         | Core data logging (see: [Configuration Notes](feature-configuration.md#diagnostic-logging))                                                             |
+| DATA_POLICY | Data privacy enforcement (see: [Configuration Notes](feature-configuration.md#data-privacy-controls))                                                   |
+| AUDIT_REPO  | Internal security audit repository (see: [Configuration Notes](feature-configuration.md#audit-repository))                                              |
+| ADO         | Core Application Data Objects (ADO.NET) data persistence (see: [Configuration Notes](feature-configuration.md#ado-data-storage))                        |
+| PUBSUB_ADO  | Publish / Subscribe Subsystem (see: [Configuration Notes](feature-configuration.md#publish-subscribe-functions))                                        |
+| RAMCACHE    | In-Process Memory Cache (see: [Configuration Notes](feature-configuration.md#in-memory-caching))                                                        |
+| REDIS       | REDIS based shared cache (see: [Configuration Notes](feature-configuration.md#redis-caching))                                                           |
+| SEC         | Core Security Functions (PIP, PDP, PEP)                                                                                                                 |
+| SWAGGER     | OpenAPI / Swagger Metadata Endpoint (see: Configuration Notes)                                                                                          |
+| OPENID      | OAUTH 2.0 / OpenID IdP Provider (see: [Configuration Notes](feature-configuration.md#openid-connect-idp))                                               |
+| MDM         | Master Data Management Functions (see: [Configuration Notes](feature-configuration.md#master-data-management-and-record-linking))                       |
+| FHIR        | HL7 FHIR Endpoint (see: [Configuration Notes](feature-configuration.md#hl7-fast-health-interoperability-resources-fhir))                                |
+| HL7         | HL7 Version 2.x Endpoint (see: [Configuration Notes](feature-configuration.md#hl7-version-2-x))                                                         |
+| HDSI        | Core Health Data Service Interface (see: [Configuration Notes](feature-configuration.md#core-health-data-service-interface))                            |
+| AMI         | Administrative Management Interface (see: [Configuration Notes](feature-configuration.md#core-administrative-management-interface))                     |
+| BIS         | Business Intelligence (reporting/query set/etc.) interface (see: [Configuration Notes](feature-configuration.md#core-business-intelligence-interfaces)) |
+| MATCHING    | Internal SanteDB Matching Engine (see: [Configuration Notes](feature-configuration.md#record-matching-plugin))                                          |
 
 ### Database Connections
 
 The location of your PostgreSQL server, and the database to use for the container can be specified with the connection string environment variables: 
 
-```text
+```
 SDB_DB_PSQL="server=location;user=user;password=password;database=db"
 SDB_DB_PSQL_PROVIDER=Npgsql
 SDB_DB_AUDIT=" ... "
@@ -99,7 +99,7 @@ services:
     restart: always
 
   santedb:
-    image: santesuite/santedb-icdr:2.1.3
+    image: santesuite/santedb-icdr:latest
     container_name: santedb-icdr
     environment:
       - SDB_FEATURE=LOG;DATA_POLICY;AUDIT_REPO;ADO;PUBSUB_ADO;RAMCACHE;SEC;SWAGGER;OPENID;FHIR;HL7;HDSI;AMI;BIS
@@ -118,7 +118,7 @@ services:
 
 ### Volumes
 
-Some directories in the docker image are useful for development purposes. For example, you can configure a volume which exposes a common configuration file set, or common applets. The volumes which can be expose \(and their directories\) can be done via:
+Some directories in the docker image are useful for development purposes. For example, you can configure a volume which exposes a common configuration file set, or common applets. The volumes which can be expose (and their directories) can be done via:
 
 ```yaml
 services:
@@ -126,7 +126,7 @@ services:
    # ... truncated for space ...
    
    santedb:
-      image: santesuite/santedb-icdr:2.1.3
+      image: santesuite/santedb-icdr:latest
       # .. truncated ...
       volumes:
          - santedb-data:/santedb/data
@@ -137,50 +137,12 @@ volumes:
 
 The volumes which are of use for exposing to the host docker environment are:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Path</th>
-      <th style="text-align:left">Use</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">/santedb/data</td>
-      <td style="text-align:left">
-        <p>Used for seeding data into the SanteDB instance. For example</p>
-        <p>if you have a development environment where you&apos;d like the same data</p>
-        <p>seeded into the database on startup you can use this option.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">/santedb/config</td>
-      <td style="text-align:left">
-        <p>Used for direct access to the configuration files. You should use this
-          option</p>
-        <p>if the environment variables for the docker instance are too restrictive.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">/santedb/applets</td>
-      <td style="text-align:left">
-        <p>Used for loading applet files which contain user interfaces, BI reports,</p>
-        <p>business rules, CDSS rules, etc. These applets should be digitally signed</p>
-        <p>PAK files.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">/santedb/match</td>
-      <td style="text-align:left">
-        <p>Stores the match configuration files for the SanteDB matching engine.
-          These</p>
-        <p>match configuration files control the weight, blocking, and classification
-          subsystem</p>
-        <p>for the default match algorithm.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Path             | Use                                                                                                                                                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /santedb/data    | <p>Used for seeding data into the SanteDB instance. For example</p><p>if you have a development environment where you'd like the same data</p><p>seeded into the database on startup you can use this option.</p>     |
+| /santedb/config  | <p>Used for direct access to the configuration files. You should use this option</p><p>if the environment variables for the docker instance are too restrictive. </p>                                                 |
+| /santedb/applets | <p>Used for loading applet files which contain user interfaces, BI reports, </p><p>business rules, CDSS rules, etc. These applets should be digitally signed</p><p>PAK files.</p>                                     |
+| /santedb/match   | <p>Stores the match configuration files for the SanteDB matching engine. These </p><p>match configuration files control the weight, blocking, and classification subsystem</p><p>for the default match algorithm.</p> |
 
 ## Advanced Configurations
 
@@ -260,11 +222,9 @@ services:
 
 The SanteMPI container adds the following plugins to SanteDB which can be enabled/disabled with `SDB_FEATURE`:
 
-| Code | Feature |
-| :--- | :--- |
-| IHE\_PDQM | Enables the Patient Demographics Query for Mobile query parameters and extensions. |
-| IHE\_PIXM | Enables the Patient Identity Cross Reference \(`$ihe-pix`\) FHIR operation |
-| IHE\_PMIR | Enables the Patient Master Identity Registry function \(`urn:ihe:iti:pmir:2019:patient-feed` \) FHIR message |
-
-
+| Code     | Feature                                                                                                    |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| IHE_PDQM | Enables the Patient Demographics Query for Mobile query parameters and extensions.                         |
+| IHE_PIXM | Enables the Patient Identity Cross Reference (`$ihe-pix`) FHIR operation                                   |
+| IHE_PMIR | Enables the Patient Master Identity Registry function (`urn:ihe:iti:pmir:2019:patient-feed` ) FHIR message |
 
