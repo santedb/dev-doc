@@ -2,7 +2,7 @@
 
 The Health Data Services Interface configuration panel allows administrators to configure the behaviors and allowed resources on the HDSI. 
 
-![](<../../../../../.gitbook/assets/image (430).png>)
+![](<../../../../../.gitbook/assets/image (432).png>)
 
 When **Allowed Resources** are not configured, the HDSI allows all resources to be accessed on the HDSI (it exposes the resources on the HDSI). When an **Allowed Resources** value is configured, only those resources listed in the collection are exposed on the interface. 
 

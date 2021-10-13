@@ -2,7 +2,7 @@
 
 The administrative management interface configuration provides two configuration properties.
 
-![](<../../../../../.gitbook/assets/image (420).png>)
+![](<../../../../../.gitbook/assets/image (422).png>)
 
 | Setting          | Description                                                                                                                                                                                                                                                         | Values |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -15,7 +15,7 @@ When you cluster your iCDR service, you can opt to have a single application ser
 
 When running SanteDB iCDR on a single server, the API Endpoints configuration should not be used, as the server auto-detects its environment. However, when using the iCDR on multiple servers you should configure the primary iCDR to point to the other servers in your cluster.
 
-![](<../../../../../.gitbook/assets/image (425).png>)
+![](<../../../../../.gitbook/assets/image (427).png>)
 
 | Setting          | Description                                                                                                                                                                           | Values                                                                                                                                                                                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
