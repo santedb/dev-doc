@@ -101,6 +101,8 @@ When installing using the tarball on Linux the process is manual - the instructi
 
 Configuration of the SanteDB service is covered in a series of discrete wiki articles which cover each configuration option in the platform and their impact on the system.
 
+See: [Configuration Tool Documentation](../../operations/host-administration/configuration-tool/)
+
 ## Service Management
 
 SanteDB runs as a Windows service (equivalent of a daemon). These can be accessed using the `services.msc` plugin an finding the `SanteDB Host Process` service.
