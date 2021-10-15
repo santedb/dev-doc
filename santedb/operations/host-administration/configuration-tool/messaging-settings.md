@@ -13,8 +13,9 @@ The REST based services in the configuration panel have two sections of configur
 
 This section illustrates the common REST settings.
 
-| Info Name         | The informational name for the REST API. This is usually how the service handler knows which REST endpoint to bind to.                                                                                                                                                                        | `FHIR`                                                            |
+| Setting           | Description                                                                                                                                                                                                                                                                                   | Example                                                           |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Info Name         | The informational name for the REST API. This is usually how the service handler knows which REST endpoint to bind to.                                                                                                                                                                        | `FHIR`                                                            |
 | Service Behaviors | The service behaviors configuration allows the configuration of one or more global behaviors for the service. Service behaviors are applied on all endpoints in the REST manager. See[ Service Behaviors](../host-configuration-file/service-api-configuration/rest-service-configuration.md) | See: [Service Behaviors](messaging-settings.md#service-behaviors) |
 | Endpoints         | The endpoints (port, scheme, and host) where the API should be accessed. See [Service Endpoints](../host-configuration-file/service-api-configuration/rest-service-configuration.md).                                                                                                         | See: [Endpoints](messaging-settings.md#endpoints)                 |
 
@@ -35,7 +36,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 Editing the endpoints will present a collection editor where administrators can add/remove specific endpoint bindings to/from the service. Endpoint bindings dictate the port, scheme and path where the REST API can be accessed.
 
-![](<../../../../.gitbook/assets/image (424) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1).png>)
 
 
 
@@ -58,7 +59,7 @@ When binding an endpoint to HTTPS you must ensure:
 
 Once the certificate binding is enabled, you can expand it and select the certificate
 
-![](<../../../../.gitbook/assets/image (422) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1) (1).png>)
 
 
 

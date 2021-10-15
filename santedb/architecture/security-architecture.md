@@ -38,6 +38,18 @@ An interactive session is established when a user enters their username, passwor
 
 A non-interactive session is established when a device or application authenticates without the intervention of a user. Non-interactive session may carry either an Application Identity and a Device Identity or simply an Application Identity.
 
+### Credential Storage
+
+Secrets for all objects in the SanteDB iCDR and dCDR (applications, devices, and users) are [**peppered**](https://nordpass.com/blog/pepper-password/). 
+
+> A pepper is a secret value added to a password before hashing. It can be considered a second salt — another input to change the hash outcome completely. Yet, unlike a salt, it’s not stored in the database along with the hashes.
+
+Whenever you generate a secret (like creating a device, resetting your password, etc.) in SanteDB the authentication architecture will grab a random series of password pepper characters and will add it to your secret, then hash it using the configured hasher, and store the result.
+
+When you authenticate in SanteDB, all possible combinations of pepper are added to your entered credential and hashed, the SanteDB server then compares the peppered hashes with the stored hash to verify your login credentials. 
+
+Additionally, your password is re-peppered and re-hashed. This means that the password hashes in SanteDB's security tables change with each authentication.
+
 ## Policy / Access Control Architecture
 
 The enforcement of privacy and policies is handled through a series of services within the SanteDB solution. From a high level, three different types of services are involved:
