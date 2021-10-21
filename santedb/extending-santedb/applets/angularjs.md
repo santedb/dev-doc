@@ -34,6 +34,65 @@ For example, if you were to provide a search for all Places which are of type Se
 />
 ```
 
+### Address Edit (address-edit)
+
+The address editing control provides a common input control for `EntityAddress` types.&#x20;
+
+```
+<address-edit address="entity.address.HomeAddress"
+    no-add="true|false"
+    no-type="true|false"
+    simple-entry="true|false"
+    is-required="true|false"
+    owner-form="name-of-form"
+    control-prefix="'some-prefix'"/>
+```
+
+| Attribute      | Description                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| address        | The `entity.address `field to bind to.                                                        |
+| no-add         | When true, the user will not be permitted to add new types of this address to the entity.     |
+| no-type        | When true, no type address (Home, Vacation, Work, etc.) will be shown.                        |
+| simple-entry   | When true, a simplified version of the data entry form will be shown.                         |
+| is-required    | When true, the address is required.                                                           |
+| owner-form     | The name of the AngularJS form to which the address entry belongs.                            |
+| control-prefix | When using multiple address entry forms on a single page, the prefix to add to each input id. |
+
+#### Example of Use
+
+```html
+<div role="tabpanel" class="tab-pane fade" id="demoAddress">
+    <address-edit owner-form="panel.editForm" address="editObject.address" is-required="true" />
+</div>
+```
+
+### Name Edit (name-edit)
+
+The name edit input control allows for the common reuse of a name entry component.
+
+```
+<name-edit
+    name="name-to-bind-to"
+    simple-name="true|false"
+    no-add="true|false"
+    no-type="true|false"
+    simple-entry="true|false"
+    is-required="true|false"
+    owner-form="'name-of-form'"
+    control-prefix="'prefix-to-add'" />
+```
+
+| Attribute      | Description                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| name           | The `entity.name` field to bind to                                                            |
+| no-add         | When true, the user will not be permitted to add new types of this name to the entity.        |
+| no-type        | When true, no type name (legal, official, license, etc.) will be shown.                       |
+| simple-name    | When true, the name input is shown as a single text box and names are not split into parts.   |
+| simple-entry   | When true, a simplified version of the data entry form will be shown.                         |
+| is-required    | When true, the address is required.                                                           |
+| owner-form     | The name of the AngularJS form to which the address entry belongs.                            |
+| control-prefix | When using multiple address entry forms on a single page, the prefix to add to each input id. |
+
 ### Demand (demand)
 
 The demand directive is an attribute that can be attached to any button or link and is used to easily disable the link whenever the currently authenticated user does not have adequate permission to access the function.
@@ -74,18 +133,24 @@ The entity table is used to render a dynamic client side table which allows for 
 
 The properties are described in more detail below:
 
-| Attribute     | Description                                                                                                                                                                                                        |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id            | Uniquely identifies the entity table                                                                                                                                                                               |
-| type          | Identifies the type name (resource name) which the table should be used to display                                                                                                                                 |
-| search-field  | The field within the @type that is to be filtered when the user uses the search function of the table                                                                                                              |
-| default-query | The default HDSI query specification to use on the table (used to filter obsolete data)                                                                                                                            |
-| property-path | If the data you wish to display in the table is not at the root of the object, this is the path to select the display data.                                                                                        |
-| i18n-prefix   | The localization prefix to be used when rendering buttons, column titles, etc. If you have a prefix of "org.myapp" then a column "userName" would be rendered with "org.myapp.userName"                            |
-| render        | <p>Provides a series of rendering functions for the named columns. For example, to render "userName" using a function "renderUserName" the following value would be used:</p><p>{ userName: 'renderUserName' }</p> |
-| properties    | A JavaScript array of properties from the object (root properties only) which are to be rendered.                                                                                                                  |
-| item-actions  | An array of objects which dictate which buttons to place on each column.                                                                                                                                           |
-| actions       | An array of objects which dictate which buttons to place at the top of the table.                                                                                                                                  |
+| Attribute           | Description                                                                                                                                                                                                        |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id                  | Uniquely identifies the entity table                                                                                                                                                                               |
+| type                | Identifies the type name (resource name) which the table should be used to display                                                                                                                                 |
+| search-field        | The field within the @type that is to be filtered when the user uses the search function of the table                                                                                                              |
+| default-query       | The default HDSI query specification to use on the table (used to filter obsolete data)                                                                                                                            |
+| property-path       | If the data you wish to display in the table is not at the root of the object, this is the path to select the display data.                                                                                        |
+| i18n-prefix         | The localization prefix to be used when rendering buttons, column titles, etc. If you have a prefix of "org.myapp" then a column "userName" would be rendered with "org.myapp.userName"                            |
+| render              | <p>Provides a series of rendering functions for the named columns. For example, to render "userName" using a function "renderUserName" the following value would be used:</p><p>{ userName: 'renderUserName' }</p> |
+| properties          | A JavaScript array of properties from the object (root properties only) which are to be rendered.                                                                                                                  |
+| can-filter          | When true, indicates the user can search the results in the entity table.                                                                                                                                          |
+| external            | When true, binds the entity table to an upstream datasource.                                                                                                                                                       |
+| can-sort            | When true, sorting is enabled.                                                                                                                                                                                     |
+| stateless           | When true, a \_queryId parameter is not appended to queries that the entity-table does. This slows down pagination, however allows for dynamic refreshes of the data.                                              |
+| sub-resource        | If querying from a sub-resource (example: `Patient/{id}/some-property` then the property to use.                                                                                                                   |
+| sub-resource-holder | The UUID of the object which holds the sub-resource.                                                                                                                                                               |
+| item-actions        | An array of objects which dictate which buttons to place on each column.                                                                                                                                           |
+| actions             | An array of objects which dictate which buttons to place at the top of the table.                                                                                                                                  |
 
 #### Rendering Buttons
 
@@ -104,12 +169,46 @@ Buttons are rendered on the entity-table using a series of control objects. Each
 
 ### Authority Select (authority-select)
 
-The authority select directive creates a drop-down selection which allows a user to select an assigning authority based on a particular scope. 
+The authority select directive creates a drop-down selection which allows a user to select an assigning authority based on a particular scope.&#x20;
 
 ```markup
 <authority-select identity-scope="'bacd9c6f-3fa9-481e-9636-37457962804d'"
    key="[ property to extract key from ]" 
    ng-scope="[value]" />
+```
+
+| Attribute      | Description                                                                                                               |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| ng-scope       | The property/attribute where the value of the authority selection should be placed                                        |
+| key            | The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted. |
+| identity-scope | The scope of the authorities to show in the selector (i.e. the types of authorities to show)                              |
+
+### Concept Select (concept-select)
+
+The concept select shows a searchable input which is bound to a concept set.
+
+```
+<concept-select 
+    ng-scope="[value]"
+    concept-set="'name-of-concept-set'"
+    exclude-c        oncepts="[ 'uuid-of-concept-to-exclude' ]
+    key="'path-to-key'"
+/>
+```
+
+#### Parameters
+
+| Attribute        | Type   | Description                                                                                                               |
+| ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| ng-scope         | \*     | The property/attribute where the value of the selected concept selection should be placed                                 |
+| key              | String | The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted. |
+| concept-set      | String | The name of the concept set to use to populate the searchable drop-down.                                                  |
+| exclude-concepts | UUID   | The concepts to exclude from the selection box                                                                            |
+
+#### Example Use
+
+```
+<concept-select class="form-control" required="required" concept-set="'PlaceClass'" ng-model="target.classConceptModel"/>
 ```
 
 ### Security Provenance (provenance)

@@ -1,10 +1,10 @@
 # Localization
 
-The core SanteDB applets are designed to easily be localized and branded to suit your particular deployment of SanteDB. 
+The core SanteDB applets are designed to easily be localized and branded to suit your particular deployment of SanteDB.&#x20;
 
 ## Localizing Your Applets
 
-When writing your applets, there are a variety of ways to make localization and branding of your applet easier. First, in all HTML assets you can use the i18n service in Angular to localize your asset. 
+When writing your applets, there are a variety of ways to make localization and branding of your applet easier. First, in all HTML assets you can use the i18n service in Angular to localize your asset.&#x20;
 
 ```markup
 <strong>{{ 'my.ui.local.string' | i18n}}</strong>
@@ -64,10 +64,10 @@ Locales are registered using the applet `manifest.xml`, within the manifest, you
   </locales>
 ```
 
-This instructs the SanteDB application framework to register a new locale "EO" and load the two supplied assets whenever the user interface is switched to locale eo. 
+This instructs the SanteDB application framework to register a new locale "EO" and load the two supplied assets whenever the user interface is switched to locale eo.&#x20;
 
 {% hint style="info" %}
-The locale JavaScript files can be your own settings for SanteDB specific objects or they can be included libraries from common javascript plugins. 
+The locale JavaScript files can be your own settings for SanteDB specific objects or they can be included libraries from common javascript plugins.&#x20;
 {% endhint %}
 
 ## Overriding Default Translations
@@ -122,3 +122,13 @@ Once completed, you can setup a project in your Pontoon server which points to y
 {% hint style="info" %}
 When you use a `strings.xml` file for your translations, you cannot override the default translations with `priority=` mechanism supported by the `manifest.xml`
 {% endhint %}
+
+### Community Translations
+
+SanteDB community translations are collected via the SanteDB Pontoon service. The following process is used:
+
+1. As the SanteDB community implements new features they add them to the appropriate `strings.xml` file with an English translation.
+2. Prior to a new minor release the SanteDB team merges the new terms from `develop` branch into the `i18n` branch - and the new strings become available in SanteDB.
+3. The community can contribute translations of the new strings into the `i18n` branch
+4. Prior to a major release the `i18n` branch is merged into `develop`(all community translations are present)
+5. The build is validated and the `develop` branch is merged into `master` where a new release is packaged.
