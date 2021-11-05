@@ -150,6 +150,22 @@ Sometimes a traversal path may not have a value, this can cause issues when the 
 genderConcept?.mnemonic=Male
 ```
 
+### Variables
+
+Variables are either defined by the user (for example, in the data retention service) or by the host context (such as `$index` in the CDSS for repeated actions, or `$input` in the matcher for the inbound record).&#x20;
+
+Variables may be referenced as the value, for example, if a `$mothersBirth` variable was defined in a retention policy, it could be used in the filter as:
+
+```
+relationship[Mother].target@Person.dateOfBirth=<$mothersBirth
+```
+
+Variables can also be used as the root of another HDSI expression, for example, comparing the city in which an `$input` patient lives.
+
+```
+address.component[City].value=$input.address.component[City].value
+```
+
 ### Extension Functions
 
 The default matching operations may be extended via SanteDB's query extension methods. These methods allow for custom matching parameters. These extension functions are enumerated below (with a discussion on which plugins must be enabled to activate them).
@@ -278,6 +294,6 @@ When writing your HDSI queries, you can ensure that you have higher performance 
 1. Use Guards: Whenever possible use guard conditions, this reduces the records to be filtered by the database system and (if you've partitioned tables) can dictate particular partitions to use.
 2. Combine Guard Conditions: You can combine guard conditions as illustrated above, this ensures that results are filtered with one EXISTS condition in the database rather than multiple
 3. Special Indexing: You can (and should) apply additional indexing to your SanteDB database to take advantage of common functions and queries. For example, if you often use the SOUNDEX algorithm to search for addresses, you might want to create an index like: \
-   **CREATE INDEX addr_cmp_val_soundex_idx ON addr_cmp_val_tbl(SOUNDEX(val));**
+   **CREATE INDEX addr\_cmp\_val\_soundex\_idx ON addr\_cmp\_val\_tbl(SOUNDEX(val));**
 4. Partition Tables: You can partition collection tables based on their classifiers , this can make it easier for the database system to filter data based on classifiers. There is an partitioning script in the SQL\ directory of your iCDR installation folder. This sets up partitions for the entity relationship and act participations.
 
