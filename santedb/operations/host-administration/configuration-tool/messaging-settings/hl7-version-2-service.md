@@ -51,7 +51,7 @@ When `sllp://` is used as the transport for the HL7 endpoint, the security setti
 
 Each HL7 endpoint can support multiple message / trigger events. The messages property of the endpoint specifies which message handlers can be used for which trigger events on the specified endpoint.
 
-![](<../../../../../.gitbook/assets/image (424) (1).png>)
+![](<../../../../../.gitbook/assets/image (424) (1) (1).png>)
 
 | Setting         | Description                                                                                                                                    | Examples                                                  |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |

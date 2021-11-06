@@ -1,6 +1,6 @@
 # Messaging Settings
 
-The messaging settings section allows system administrators to configure the various messaging interfaces on SanteDB. 
+The messaging settings section allows system administrators to configure the various messaging interfaces on SanteDB.&#x20;
 
 ## Common REST Settings
 
@@ -36,7 +36,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 Editing the endpoints will present a collection editor where administrators can add/remove specific endpoint bindings to/from the service. Endpoint bindings dictate the port, scheme and path where the REST API can be accessed.
 
-![](<../../../../.gitbook/assets/image (424) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1) (1).png>)
 
 
 
@@ -59,7 +59,7 @@ When binding an endpoint to HTTPS you must ensure:
 
 Once the certificate binding is enabled, you can expand it and select the certificate
 
-![](<../../../../.gitbook/assets/image (422) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1) (1) (1) (1).png>)
 
 
 

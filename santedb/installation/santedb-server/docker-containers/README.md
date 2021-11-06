@@ -6,9 +6,9 @@ SanteDB provides several docker containers for SanteDB solutions and services. T
 
 The docker containers all use the mono:latest as their root container.
 
-* santedb_icdr: The generic SanteDB iCDR project running as a docker container with FHIR, HL7, caching, PostgreSQL database support, and everything needed to get the iCDR running quickly.
-* santedb_mpi: The generic iCDR project with the SanteGuard and SanteMPI plugins enabled.
-* santedb_dcdr: The disconnected dCDR project
+* santedb\_icdr: The generic SanteDB iCDR project running as a docker container with FHIR, HL7, caching, PostgreSQL database support, and everything needed to get the iCDR running quickly.
+* santedb\_mpi: The generic iCDR project with the SanteGuard and SanteMPI plugins enabled.
+* santedb\_dcdr: The disconnected dCDR project
 
 ## Configuring the Docker Containers
 
@@ -26,7 +26,7 @@ The container structure is as follows:
 
 ### Enabling or Disabling Features
 
-The docker containers are configured using environment variables. Features can be turned on/off using the environment variable SDB_FEATURE environment variable, for example, to enable the core features and ATNA audit shipping:
+The docker containers are configured using environment variables. Features can be turned on/off using the environment variable SDB\_FEATURE environment variable, for example, to enable the core features and ATNA audit shipping:
 
 ```
 SDB_FEATURE=AUDIT_SHIPPING;ADO;AUDIT_REPO
@@ -34,29 +34,29 @@ SDB_FEATURE=AUDIT_SHIPPING;ADO;AUDIT_REPO
 
 The features which are available for the default SanteDB docker container are:
 
-| Code        | Feature                                                                                                                                                 |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOG         | Core data logging (see: [Configuration Notes](feature-configuration.md#diagnostic-logging))                                                             |
-| DATA_POLICY | Data privacy enforcement (see: [Configuration Notes](feature-configuration.md#data-privacy-controls))                                                   |
-| AUDIT_REPO  | Internal security audit repository (see: [Configuration Notes](feature-configuration.md#audit-repository))                                              |
-| ADO         | Core Application Data Objects (ADO.NET) data persistence (see: [Configuration Notes](feature-configuration.md#ado-data-storage))                        |
-| PUBSUB_ADO  | Publish / Subscribe Subsystem (see: [Configuration Notes](feature-configuration.md#publish-subscribe-functions))                                        |
-| RAMCACHE    | In-Process Memory Cache (see: [Configuration Notes](feature-configuration.md#in-memory-caching))                                                        |
-| REDIS       | REDIS based shared cache (see: [Configuration Notes](feature-configuration.md#redis-caching))                                                           |
-| SEC         | Core Security Functions (PIP, PDP, PEP)                                                                                                                 |
-| SWAGGER     | OpenAPI / Swagger Metadata Endpoint (see: Configuration Notes)                                                                                          |
-| OPENID      | OAUTH 2.0 / OpenID IdP Provider (see: [Configuration Notes](feature-configuration.md#openid-connect-idp))                                               |
-| MDM         | Master Data Management Functions (see: [Configuration Notes](feature-configuration.md#master-data-management-and-record-linking))                       |
-| FHIR        | HL7 FHIR Endpoint (see: [Configuration Notes](feature-configuration.md#hl7-fast-health-interoperability-resources-fhir))                                |
-| HL7         | HL7 Version 2.x Endpoint (see: [Configuration Notes](feature-configuration.md#hl7-version-2-x))                                                         |
-| HDSI        | Core Health Data Service Interface (see: [Configuration Notes](feature-configuration.md#core-health-data-service-interface))                            |
-| AMI         | Administrative Management Interface (see: [Configuration Notes](feature-configuration.md#core-administrative-management-interface))                     |
-| BIS         | Business Intelligence (reporting/query set/etc.) interface (see: [Configuration Notes](feature-configuration.md#core-business-intelligence-interfaces)) |
-| MATCHING    | Internal SanteDB Matching Engine (see: [Configuration Notes](feature-configuration.md#record-matching-plugin))                                          |
+| Code         | Feature                                                                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOG          | Core data logging (see: [Configuration Notes](feature-configuration.md#diagnostic-logging))                                                             |
+| DATA\_POLICY | Data privacy enforcement (see: [Configuration Notes](feature-configuration.md#data-privacy-controls))                                                   |
+| AUDIT\_REPO  | Internal security audit repository (see: [Configuration Notes](feature-configuration.md#audit-repository))                                              |
+| ADO          | Core Application Data Objects (ADO.NET) data persistence (see: [Configuration Notes](feature-configuration.md#ado-data-storage))                        |
+| PUBSUB\_ADO  | Publish / Subscribe Subsystem (see: [Configuration Notes](feature-configuration.md#publish-subscribe-functions))                                        |
+| RAMCACHE     | In-Process Memory Cache (see: [Configuration Notes](feature-configuration.md#in-memory-caching))                                                        |
+| REDIS        | REDIS based shared cache (see: [Configuration Notes](feature-configuration.md#redis-caching))                                                           |
+| SEC          | Core Security Functions (PIP, PDP, PEP)                                                                                                                 |
+| SWAGGER      | OpenAPI / Swagger Metadata Endpoint (see: Configuration Notes)                                                                                          |
+| OPENID       | OAUTH 2.0 / OpenID IdP Provider (see: [Configuration Notes](feature-configuration.md#openid-connect-idp))                                               |
+| MDM          | Master Data Management Functions (see: [Configuration Notes](feature-configuration.md#master-data-management-and-record-linking))                       |
+| FHIR         | HL7 FHIR Endpoint (see: [Configuration Notes](feature-configuration.md#hl7-fast-health-interoperability-resources-fhir))                                |
+| HL7          | HL7 Version 2.x Endpoint (see: [Configuration Notes](feature-configuration.md#hl7-version-2-x))                                                         |
+| HDSI         | Core Health Data Service Interface (see: [Configuration Notes](feature-configuration.md#core-health-data-service-interface))                            |
+| AMI          | Administrative Management Interface (see: [Configuration Notes](feature-configuration.md#core-administrative-management-interface))                     |
+| BIS          | Business Intelligence (reporting/query set/etc.) interface (see: [Configuration Notes](feature-configuration.md#core-business-intelligence-interfaces)) |
+| MATCHING     | Internal SanteDB Matching Engine (see: [Configuration Notes](feature-configuration.md#record-matching-plugin))                                          |
 
 ### Database Connections
 
-The location of your PostgreSQL server, and the database to use for the container can be specified with the connection string environment variables: 
+The location of your PostgreSQL server, and the database to use for the container can be specified with the connection string environment variables:&#x20;
 
 ```
 SDB_DB_PSQL="server=location;user=user;password=password;database=db"
@@ -80,7 +80,7 @@ SDB_CACHE_REDIS_SERVER=sdb-redis:6379
 SDB_CACHE_EXPIRE=PT1H
 ```
 
-### Minimal Application 
+### Minimal Application&#x20;
 
 You can compose a minimal application with either the SanteDB-ICDR or SanteMPI instance using a docker-compose.yml file as shown.
 
@@ -178,9 +178,34 @@ Upon load, the SanteDB iCDR server will load your package files and will load an
 The `santedb-icdr` container is the generic ICDR instance for SanteDB, however SanteSuite provides other containers which are pre-configured with the necessary plugins for those functions:
 
 * `santedb-mpi` : SanteDB + SanteMPI plugins pre-deployed
-* `santedb-guard` : SanteDB + SanteGuard plugins pre-deployed
+* `santedb-www` : SanteDB dCDR Web Portal
+
+### SanteDB Web Portal
+
+To install the SanteDB web portal you can run the www container in your application.
+
+```yaml
+  www:
+    image: santesuite/santedb-www:latest
+    container_name: santedb-www
+    ports:
+      - "9200:9200"
+    depends_on:
+      - santedb
+    restart: always
+```
+
+Once configured you can access the portal by navigating to : http://localhost:9200
+
+{% hint style="warning" %}
+Never expose the SanteDB WWW host container to the internet. If you are running the santedb-www container and wish to expose it to external clients, it is recommended you use SSL termination with either IIS or NGINX
+{% endhint %}
 
 ### SanteMPI Application
+
+{% hint style="info" %}
+This section is being moved to the [SanteMPI installation ](../../../../santempi/installation.md#docker-containers)documentation.
+{% endhint %}
 
 In order to run a minimal SanteMPI application, you can exchange `santedb-icdr` with the `santedb-mpi` image, and apply the appropriate service configuration.
 
@@ -222,9 +247,9 @@ services:
 
 The SanteMPI container adds the following plugins to SanteDB which can be enabled/disabled with `SDB_FEATURE`:
 
-| Code     | Feature                                                                                                    |
-| -------- | ---------------------------------------------------------------------------------------------------------- |
-| IHE_PDQM | Enables the Patient Demographics Query for Mobile query parameters and extensions.                         |
-| IHE_PIXM | Enables the Patient Identity Cross Reference (`$ihe-pix`) FHIR operation                                   |
-| IHE_PMIR | Enables the Patient Master Identity Registry function (`urn:ihe:iti:pmir:2019:patient-feed` ) FHIR message |
+| Code      | Feature                                                                                                    |
+| --------- | ---------------------------------------------------------------------------------------------------------- |
+| IHE\_PDQM | Enables the Patient Demographics Query for Mobile query parameters and extensions.                         |
+| IHE\_PIXM | Enables the Patient Identity Cross Reference (`$ihe-pix`) FHIR operation                                   |
+| IHE\_PMIR | Enables the Patient Master Identity Registry function (`urn:ihe:iti:pmir:2019:patient-feed` ) FHIR message |
 

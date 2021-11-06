@@ -17,7 +17,7 @@ In most cases the Easy Configuration should be used.
 
 ### Database Configuration
 
-When using the easy configuration option, the tool will allow you to set a database connection which you'd like to connect to. 
+When using the easy configuration option, the tool will allow you to set a database connection which you'd like to connect to.&#x20;
 
 For more information on database connections see the [Database Connections](database-connections.md) page.
 
@@ -39,7 +39,7 @@ If you do not select a template, you will need to configure each plugin in the s
 
 When you have completed initial configuration you will be presented with a user interface as shown.
 
-![](<../../../../.gitbook/assets/image (425) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1).png>)
 
 1. Feature List -> Shows a list of all features enabled in the SanteDB iCDR server which can be configured. (based on installed options)
 2. Feature Configuration -> The configuration options for the selected feature.
@@ -73,9 +73,9 @@ Editing the configuration values doesn't actually save the configuration file. W
 
 Each feature that you've edited creates one or more tasks that will be executed. Each task can be investigated to gather details of the feature and what is being changed in your configuration file.
 
-You can disable a feature step by clicking on the checkmark beside it. This instructs the configuration tool to not apply the task. 
+You can disable a feature step by clicking on the checkmark beside it. This instructs the configuration tool to not apply the task.&#x20;
 
 {% hint style="warning" %}
-Disabling a configuration task may result in the feature being partially enabled and not operating correctly. 
+Disabling a configuration task may result in the feature being partially enabled and not operating correctly.&#x20;
 {% endhint %}
 

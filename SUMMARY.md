@@ -51,6 +51,7 @@
     * [Docker Containers](santedb/installation/santedb-server/docker-containers/README.md)
       * [Adding Sample Data](santedb/installation/santedb-server/docker-containers/adding-sample-data.md)
       * [Feature Configuration](santedb/installation/santedb-server/docker-containers/feature-configuration.md)
+  * [Securing the APIs](santedb/installation/securing-the-apis.md)
   * [Installation Qualification](santedb/installation/installation-qualification/README.md)
     * [Security Administration Testing](santedb/installation/installation-qualification/security-administration-testing/README.md)
       * [Test Cases for UI](santedb/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/README.md)
@@ -456,6 +457,8 @@
 ## SanteMPI
 
 * [About SanteMPI](santempi/about-santempi.md)
+* [Installation](santempi/installation.md)
+* [Operations](santempi/operations.md)
 * [SanteMPI Dashboard](santempi/santempi-dashboard.md)
 * [SanteMPI Searching](santempi/santempi-searching.md)
 * [The Patient Dashboard](santempi/the-patient-dashboard.md)

@@ -1,6 +1,6 @@
 # Physical Model
 
-In SanteDB, the physical model is used to express the concrete tables which are created in a SQL based RDBMS to store data on a physical media (disk). Implementers of new SQL based persistence services should try to re-use these mappings in their expression to the physical model. 
+In SanteDB, the physical model is used to express the concrete tables which are created in a SQL based RDBMS to store data on a physical media (disk). Implementers of new SQL based persistence services should try to re-use these mappings in their expression to the physical model.&#x20;
 
 SanteDB uses the [ORM Lite](https://github.com/santedb/santedb-orm) data mapping technology, and the `SanteDB.Persistence.Data.Ado` assembly contains the ORM lite physical model classes.
 
@@ -8,11 +8,13 @@ SanteDB uses the [ORM Lite](https://github.com/santedb/santedb-orm) data mapping
 Version 2.5 of SanteDB is undergoing a major code refactor. The physical model classes in the 2.5.x series of SanteDB will reside in the `SanteDB.Persistence.Data` assembly.
 {% endhint %}
 
-## &#xD; Data Providers&#xD;
+\
+Data Providers
+
 
 SanteDB includes an implementation of a persistence layer which includes support for generic ADO based databases. This provider uses the ADO.NET wrapper to invoke necessary functions and select data from tables. In order to leverage the ADO.NET persistence service, the ADO.NET provider must support:
 
-* SQL92 syntax 
+* SQL92 syntax&#x20;
 * Limit and offset queries in the form of `SELECT FOO FROM BAR OFFSET x LIMIT y`
 * Invoke of Stored Procedures and Functions or equivalent C# logic which implements the functions
 * Pooled and thread-safe access to the underlying disk structure.
@@ -25,7 +27,7 @@ Currently SanteDB iCDR works with the following OrmLite data providers:
 | FirebirdSQL 3.0       | FirebirdSQL   |
 | SQLite 3.3            | Sqlite        |
 
- Regardless of the RDBMS system feeding the ADO provider, it must follow the schema specified in this section.
+&#x20;Regardless of the RDBMS system feeding the ADO provider, it must follow the schema specified in this section.
 
 ### Implementing new Data Providers
 
@@ -45,7 +47,7 @@ See: [Database Patching ](../../../extending-santedb/server-plugins/database-pat
 
 ## Conventions
 
-The physical schema of the ADO provider is designed such that many different ADO providers can support the data structures. Because of the limitations on some RDBMS systems, the ADO schema uses a short-hand for table names. 
+The physical schema of the ADO provider is designed such that many different ADO providers can support the data structures. Because of the limitations on some RDBMS systems, the ADO schema uses a short-hand for table names.&#x20;
 
 ### Suffixes
 
@@ -68,7 +70,7 @@ Most tables in the SanteDB physical model carry common abbreviations of names. B
   * `SUB_ADM_TBL `=> Substance Administration Table
 * Association tables which exist only to link together two other tables should have `ASSOC` in their name
 * Longer table names are usually acronyms:
-  * `CD_TBL` => **C**oncept **D**efinition Table 
+  * `CD_TBL` => **C**oncept **D**efinition Table&#x20;
   * `CS_TBL` => **C**ode **S**ystem Table
 * Table and columns should remove vowels where the removal of vowels do no interfere with understanding the meaning of the column or table:
   * `ENT_TBL` => Entity Table
@@ -76,7 +78,7 @@ Most tables in the SanteDB physical model carry common abbreviations of names. B
 
 ### Inherited Tables
 
-Tables which represent an inheritance are created as discrete tables. Each class in the hierarchy maps to one table in the schema and contain only the attributes of the class. 
+Tables which represent an inheritance are created as discrete tables. Each class in the hierarchy maps to one table in the schema and contain only the attributes of the class.&#x20;
 
 As an example:
 

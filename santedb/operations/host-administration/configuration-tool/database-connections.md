@@ -2,7 +2,7 @@
 
 On the initial configuration screen, as well as any configuration page which requires a connection to be set, the tool exposes a panel for connection string editing.
 
-Connection strings are named settings which provide SanteDB with the necessary information to contact a particular database server using a specified provider. 
+Connection strings are named settings which provide SanteDB with the necessary information to contact a particular database server using a specified provider.&#x20;
 
 ## Editing Connection Strings
 
@@ -12,7 +12,7 @@ When editing a connection string in an existing configuration file, you will be 
 
 In the example above, a user could select a an existing Read/Write connection string which has already been configured or they can create a NEW connection string to, for example, bind the read/write connection string to a read/write primary node.
 
-![](<../../../../.gitbook/assets/image (426) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (426) (1) (1) (1).png>)
 
 ## Connection Types
 

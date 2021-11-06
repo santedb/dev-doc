@@ -29,17 +29,17 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 {% endtab %}
 
 {% tab title="Security Properties" %}
-| Label                | Value          |
-| -------------------- | -------------- |
-| **Role**             | CLINICAL_STAFF |
-| **New Password**     | Clinic@l123    |
-| **Confirm Password** | Clinic@l123    |
+| Label                | Value           |
+| -------------------- | --------------- |
+| **Role**             | CLINICAL\_STAFF |
+| **New Password**     | Clinic@l123     |
+| **Confirm Password** | Clinic@l123     |
 {% endtab %}
 
 {% tab title="Demographic Properties" %}
 | Label                  | Value                               |
 | ---------------------- | ----------------------------------- |
-| **Security E-mail**    | clinical_staff@user.com             |
+| **Security E-mail**    | clinical\_staff@user.com            |
 | **Security Phone**     | 519-203-8190                        |
 | **Given Name**         | John                                |
 | **Family Name**        | Doe                                 |
@@ -51,29 +51,29 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 
 ## Actions/Steps
 
-    1\. Click the **Create** button to navigate from **Administration Panel / Security / Users / Index** to **Administration Panel / Security / Users / Create User**.
+&#x20;   1\. Click the **Create** button to navigate from **Administration Panel / Security / Users / Index** to **Administration Panel / Security / Users / Create User**.
 
-![](../../../../../../.gitbook/assets/test1\_createbutton.png) 
+![](../../../../../../.gitbook/assets/test1\_createbutton.png)&#x20;
 
-    2\. Enter valid text into the **Core Properties** drop-down form group.
+&#x20;   2\. Enter valid text into the **Core Properties** drop-down form group.
 
 ![](../../../../../../.gitbook/assets/test1\_coreproperties.png)
 
-    3\. Enter valid text into the **Security Properties** drop-down form group.
+&#x20;   3\. Enter valid text into the **Security Properties** drop-down form group.
 
 ![](../../../../../../.gitbook/assets/test1\_securityproperties.png)
 
-    4\. Enter valid text into the **Demographic Properties** drop-down form group.
+&#x20;   4\. Enter valid text into the **Demographic Properties** drop-down form group.
 
 ![](../../../../../../.gitbook/assets/test1\_demographicproperties.png)
 
-    5\. Click the **Save **button.
+&#x20;   5\. Click the **Save **button.
 
-    ![](../../../../../../.gitbook/assets/test1\_savebutton.png) 
+&#x20;   ![](../../../../../../.gitbook/assets/test1\_savebutton.png)&#x20;
 
 ## Expected Behaviour
 
 * Automatically navigate to the **Administration Panel / Security / Users / Index **page.
-* Momentarily display success message in top right corner: ![](../../../../../../.gitbook/assets/user_successtoast.png) 
+* Momentarily display success message in top right corner: ![](../../../../../../.gitbook/assets/user\_successtoast.png)&#x20;
 * New user (**ClinicalStaffUser123**)** **should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
 

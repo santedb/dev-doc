@@ -2,7 +2,7 @@
 
 The performance group in the configuration tool controls the caching of data in SanteDB.
 
-![](<../../../../.gitbook/assets/image (424).png>)
+![](<../../../../.gitbook/assets/image (424) (1).png>)
 
 The services installed by default on SanteDB are:
 
@@ -12,11 +12,11 @@ The services installed by default on SanteDB are:
 The caching control panel is broken into two sections:
 
 * Configuration Sections: Which are used to control the configuration of each class of caching, and
-*  Services Section: Which is used to set the caching service/strategy used.
+* &#x20;Services Section: Which is used to set the caching service/strategy used.
 
 ## Services Configuration
 
-The services section is used to to control the implementations of the caching infrastructure. 
+The services section is used to to control the implementations of the caching infrastructure.&#x20;
 
 | Option               | Description                                                                                                                                                                              | Example |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
