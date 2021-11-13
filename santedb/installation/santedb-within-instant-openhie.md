@@ -18,7 +18,7 @@ Example project can be found at: [https://github.com/santedb/santempi-openhie-pa
 
 ### Create a fresh SanteDB Package
 
-The minimum needed to create a package is an instant.json file, a Docker folder, and a Kubernetes folder. The instant.json file will look something like shown below.  
+The minimum needed to create a package is an instant.json file, a Docker folder, and a Kubernetes folder. The instant.json file will look something like shown below. &#x20;
 
 {% tabs %}
 {% tab title="instant.json" %}
@@ -35,14 +35,14 @@ The minimum needed to create a package is an instant.json file, a Docker folder,
 {% endtab %}
 {% endtabs %}
 
-####  Docker Folder
+#### &#x20;Docker Folder
 
-The docker folder will need the following items: 
+The docker folder will need the following items:&#x20;
 
-* A **compose.sh** file 
-* A **docker-compose.yml** file 
+* A **compose.sh** file&#x20;
+* A **docker-compose.yml** file&#x20;
 * Either **docker-compose.config.yml** files and/or a **docker-compose.dev.yml** file
-* Potentially an **Importer** folder, which while not necessarily required, will make life easier - this would enable you to preconfigure channels, instead of having to manually create them. 
+* Potentially an **Importer** folder, which while not necessarily required, will make life easier - this would enable you to preconfigure channels, instead of having to manually create them.&#x20;
 
 #### Kubernetes Folder
 
@@ -55,7 +55,7 @@ The Kubernetes folder will need the following items:
   * **santedb-deployment.yaml**
   * **santedb-service.yaml **(This are for the santedb-mpi image)
   * **santedb-mpi-app-persistentvolumeclaim.yaml, santedb-mpi-config-persistentvolumeclaim.yaml, santedb-mpi-seed-persistentvolumeclaim**
-* Potentially an **Importer** folder, which while not necessarily required, will make life easier - this would enable you to preconfigure channels, instead of having to manually create them. 
+* Potentially an **Importer** folder, which while not necessarily required, will make life easier - this would enable you to preconfigure channels, instead of having to manually create them.&#x20;
 
 {% hint style="info" %}
 More information on the importer folder can be found: [https://openhie.github.io/instant/docs/how-to/configure-openhim-mapping-mediator](https://openhie.github.io/instant/docs/how-to/configure-openhim-mapping-mediator)
@@ -78,7 +78,7 @@ Next we need to run the images
 yarn docker:instant init -t docker santempi -c="<path to santedb package>"
 ```
 
-The above command is specifying to run docker, specifying the package santempi (Which will link to the **id **property of the instant.json file), and specifying a path of where to find the image. 
+The above command is specifying to run docker, specifying the package santempi (Which will link to the **id **property of the instant.json file), and specifying a path of where to find the image.&#x20;
 
 It make take several minutes to build. And after it's complete, you may need to wait a couple more minutes for the santedb-mpi server to be fully initialized. Once it's done, you should see something that looks like the following:
 
@@ -102,20 +102,20 @@ whitet@Mohawks-MBP instant %
 
 There are other containers available. These are the minimum required to use the santedb package with the instant openhie project.
 
-You can navigate to http://localhost:9000 and be brought to the login screen. 
+You can navigate to http://localhost:9000 and be brought to the login screen.&#x20;
 
 * default username is: root@openhim.org
 * default password is: instant101
 
 #### Channels - If using the example project
 
-If you've used the example project, or have used an Importer, you should be able to see santedb channels. 
+If you've used the example project, or have used an Importer, you should be able to see santedb channels.&#x20;
 
 ![Currently the channels need to be public, in order to access SanteDB](../../.gitbook/assets/screen-shot-2021-06-30-at-2.52.26-pm.png)
 
 #### Channels - If creating manually
 
-If you are creating a channel manually, click on the green **+ Channel **near the bottom left. 
+If you are creating a channel manually, click on the green **+ Channel **near the bottom left.&#x20;
 
 For **basic info** give a channel name, and a brief description. In this example we are going to use the admin API, so you could call the channel **Santedb MPI Admin**
 
@@ -133,7 +133,7 @@ Finally, for **Routes**, add a new route with the following info:
 * Port: 8080 (this is referencing the **internal** docker port on the container)
 * Forward existing Authorization Headers: yes
 
-Click set route. 
+Click set route.&#x20;
 
 ![](../../.gitbook/assets/screen-shot-2021-06-30-at-3.01.40-pm.png)
 
@@ -160,16 +160,16 @@ The kubernetes deployments will take much longer to build than the docker deploy
 
 ![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.29.05-am.png)
 
-You can navigate to http://localhost:9000 and be brought to the login screen. 
+You can navigate to http://localhost:9000 and be brought to the login screen.&#x20;
 
 * default username is: root@openhim.org
 * default password is: instant101
 
 **Manually Adding Channels**
 
-To manually add a santedb channel, once logged in, click on the channel section and the green **Channel + **button. 
+To manually add a santedb channel, once logged in, click on the channel section and the green **Channel + **button.&#x20;
 
-Adding a channel is almost identical to docker. (See above) - The differences is when adding a route, instead of using the container name, as in docker, you will need to use the IP Address of the pod. 
+Adding a channel is almost identical to docker. (See above) - The differences is when adding a route, instead of using the container name, as in docker, you will need to use the IP Address of the pod.&#x20;
 
 To obtain the pod:
 
@@ -193,7 +193,7 @@ Now you can add the IP Address as the **host** for the route.
 
 One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients **tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
 
- 
+&#x20;
 
 ![](../../.gitbook/assets/screen-shot-2021-08-06-at-3.45.44-pm.png)
 
@@ -201,31 +201,32 @@ One quick note when manually adding channels, you may need to check to ensure th
 
 ## Testing, and viewing transactions
 
-We will now test to make sure we can see SanteDB transactions in openHIM. You will need to generate a bearer token in order to successfully access santedb services. We will test with an administrator account, so we will be using the SanteMPI Admin Channel. 
+We will now test to make sure we can see SanteDB transactions in openHIM. You will need to generate a bearer token in order to successfully access santedb services. We will test with an administrator account, so we will be using the SanteMPI Admin Channel.&#x20;
 
 **To generate a bearer token:**
 
-You can follow this link: [http://localhost:8082/auth/authorize/?redirect_uri=http://google.com\&client_id=fiddler\&scope=openid%20\*\&response_type=token\&response_mode=query\&state=foo](http://localhost:8082/auth/authorize/?redirect_uri=http://google.com\&client_id=fiddler\&scope=openid%20\*\&response_type=token\&response_mode=query\&state=foo)
+SanteDB requires that you use a bearer token to access services on the SanteDB server. For full documentation see the [OpenID Connect Documentation](../extending-santedb/service-apis/openid-connect/#discovery-configuration). A quick method to authenticate yourself with:
 
-This is using the running santedb-mpi container, externally from openhim, and generating a token. It will take you to a login page. Enter the account credentials of the account you want to test with (in our case, Administrator)
+```
+POST http://localhost:8082/auth/oauth2_token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+X-SanteDBClient-Claim: PolicyOverride=1;PurposeOfUse=EMERG
+Host: mpi-test.local:8080
+Content-Length: 112
 
-* username: Administrator
-* password: Mohawk123
-
-You will be redirected to a blank page, where you can copy the bearer token from the url.
-
-![Bear token](../../.gitbook/assets/screen-shot-2021-06-30-at-3.05.01-pm.png)
+grant_type=password&scope=2.25.3049340304933&username=administrator&password=Mohawk123&client_id=fiddler&client_secret=fiddler
+```
 
 ### Testing the channels
 
-To test we are going to make API calls using something like **Postman**, or maybe **curl. **For this demo I will use postman. 
+To test we are going to make API calls using something like **Postman**, or maybe **curl. **For this demo I will use postman.&#x20;
 
-Under the **Authorization** tab for postman, select type as **Bearer Token** - In the value, enter the bearer token that you have generated. 
+Under the **Authorization** tab for postman, select type as **Bearer Token** - In the value, enter the bearer token that you have generated.&#x20;
 
 We are going to make a simple **get** request using [http://localhost:5001/ami/SecurityUser](http://localhost:5001/ami/SecurityUser)
 
 {% hint style="info" %}
-We're targeting port 5001 here, as this is one of the ports open in the openhim-core container. If successful, our request should redirect through the openhim-core, to santedb. And a transaction should have been created. 
+We're targeting port 5001 here, as this is one of the ports open in the openhim-core container. If successful, our request should redirect through the openhim-core, to santedb. And a transaction should have been created.&#x20;
 {% endhint %}
 
 You should see a 200 response. Now, go back to the OpenHIM console. You should see transactions being displayed. It will look similar to the image below:
