@@ -2,7 +2,7 @@
 
 SanteDB's administration panel provides user self-service operations which allow any user to self-administer their profile. The profile administration screen is accessed by clicking on the user name on the top right side of your browser window.
 
-![](<../../../.gitbook/assets/image (430).png>)
+![](<../../../.gitbook/assets/image (432).png>)
 
 After visiting this page, the user profile screen will be displayed. SanteDB's security subsystem separates user information into two components:
 
@@ -17,7 +17,7 @@ The difference between the two is your security profile is only shared when you 
 
 By clicking on the pencil icon in the `Profile` panel, you will enter `Edit` mode. Here you can update your personal user profile for the solution.
 
-![](<../../../.gitbook/assets/image (432).png>)
+![](<../../../.gitbook/assets/image (435).png>)
 
 You can edit the following information on the tabs provided:
 
@@ -52,7 +52,7 @@ The security profile panel allows you to modify your security settings for Sante
 
 If you would like to reset your password, you can click the `Reset Pwd` button , this will open a new dialog which will allow you to enter your existing password and a new password.
 
-![](<../../../.gitbook/assets/image (431).png>)
+![](<../../../.gitbook/assets/image (433).png>)
 
 
 

@@ -12,7 +12,7 @@ When editing a connection string in an existing configuration file, you will be 
 
 In the example above, a user could select a an existing Read/Write connection string which has already been configured or they can create a NEW connection string to, for example, bind the read/write connection string to a read/write primary node.
 
-![](<../../../../.gitbook/assets/image (426) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (426) (1) (1) (1) (1).png>)
 
 ## Connection Types
 

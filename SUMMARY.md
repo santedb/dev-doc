@@ -548,4 +548,6 @@
   * [SanteDB Administration Panel](operations/application-administration/santedb-administration-panel/README.md)
     * [Logging In](operations/application-administration/santedb-administration-panel/logging-in.md)
     * [Managing Your Profile](operations/application-administration/santedb-administration-panel/managing-your-profile.md)
+    * [Security Administration](operations/application-administration/santedb-administration-panel/security-administration/README.md)
+      * [Managing User Accounts](operations/application-administration/santedb-administration-panel/security-administration/managing-user-accounts.md)
 * [Standard Operating Procedures](operations/standard-operating-procedures.md)
