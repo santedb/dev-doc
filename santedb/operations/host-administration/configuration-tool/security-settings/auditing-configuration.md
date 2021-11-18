@@ -11,7 +11,7 @@ You can only enable one audit dispatcher (FHIR OR ATNA , if you enable one the o
 
 The ATNA auditing dispatch service, when enabled, will ensure that SanteDB forwards audits for events which are to be dispatched over UDP.
 
-![](<../../../../../.gitbook/assets/image (423).png>)
+![](<../../../../../.gitbook/assets/image (423) (1).png>)
 
 | Option             | Description                                                                                                                                                           | Example                                                                                     |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |

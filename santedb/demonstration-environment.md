@@ -6,7 +6,7 @@ Information about the demonstration servers (and runtime issues) can be sent to 
 
 Note that demonstration servers may become unavailable at any time and/or may be wiped/reset at anytime.
 
-### Elbonia Ministry Of Health (SanteMPI)
+### Sample Ministry Of Health (SanteMPI)
 
 The first series of demonstration servers are used to illustrate the SanteMPI services provided by SanteDB. The fake country  to illustrate functions typical of a nationally deployed SanteMPI solution.&#x20;
 

@@ -539,3 +539,13 @@
   * [20190522-01](knowledgebase/fixpatch/20190522-01.md)
   * [20190625-01](knowledgebase/fixpatch/20190625-01.md)
   * [20200105-01](knowledgebase/fixpatch/20200105-01.md)
+
+## Operations
+
+* [SanteDB Operations](operations/santedb-operations.md)
+* [Server Administration](operations/server-administration.md)
+* [Application Administration](operations/application-administration/README.md)
+  * [SanteDB Administration Panel](operations/application-administration/santedb-administration-panel/README.md)
+    * [Logging In](operations/application-administration/santedb-administration-panel/logging-in.md)
+    * [Managing Your Profile](operations/application-administration/santedb-administration-panel/managing-your-profile.md)
+* [Standard Operating Procedures](operations/standard-operating-procedures.md)

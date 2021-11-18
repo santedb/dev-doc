@@ -1,6 +1,6 @@
 # Retention Policies
 
-Administrators can specify optional retention policies which use the ADO.NET Data Archiving and Shipping service in order to purge/obsolete data which is no longer clinically relevant. 
+Administrators can specify optional retention policies which use the ADO.NET Data Archiving and Shipping service in order to purge/obsolete data which is no longer clinically relevant.&#x20;
 
 When enabled, the retention policy feature will create a JOB on system startup which will ensure that data is retained according to the administrator configured policies.
 
@@ -20,9 +20,9 @@ When enabled, the retention policy feature will create a JOB on system startup w
 
 ## Retention Policy Definition
 
-The retention service requires the definition of retention policies which need to be applied. 
+The retention service requires the definition of retention policies which need to be applied.&#x20;
 
-![](<../../../../../.gitbook/assets/image (429).png>)
+![](<../../../../../.gitbook/assets/image (429) (1).png>)
 
 | Option           | Description                                                                                                                                                                                                             | Example                                                                                                                      |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |

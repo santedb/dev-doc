@@ -1,6 +1,6 @@
 # Standalone Server
 
-When installing SanteDB iCDR server on a Microsoft Windows Server environment you should use the installation package for the latest version of the SanteDB iCDR server. Each solution within SanteDB iCDR Server has its own distribution which can be downloaded for their own source repository. 
+When installing SanteDB iCDR server on a Microsoft Windows Server environment you should use the installation package for the latest version of the SanteDB iCDR server. Each solution within SanteDB iCDR Server has its own distribution which can be downloaded for their own source repository.&#x20;
 
 * [SanteDB iCDR Releases](https://github.com/santedb/santedb-server/releases)
 * [SanteMPI Releases](https://github.com/santedb/santempi/releases)
@@ -8,7 +8,7 @@ When installing SanteDB iCDR server on a Microsoft Windows Server environment yo
 The installation process for SanteDB on Microsoft Windows is a three step process:
 
 1. Install the software:
-   * Copies software program files and pre-requisites 
+   * Copies software program files and pre-requisites&#x20;
    * Creates an un-installer
    * Initiates the next step of the process
 2. Configuration of the software:
@@ -22,15 +22,15 @@ Each of these installers:
 
 * Install the Visual C++ 2010 redistributable (for C++ libraries)
 * Install Microsoft .NET Framework 4.8 (if not already installed)
-* Copies the required files for the selected options to the Installation 
+* Copies the required files for the selected options to the Installation&#x20;
 * Opens Firewall port 8080 and 2100 (for HL7v2) on the Windows Firewall
 * Creates an un-installer which will clean the directory on uninstall
 
 ### Windows Installer
 
-The installation process is a standard Windows installer experience, administrators can elect to install particular plugins that meet their needs. 
+The installation process is a standard Windows installer experience, administrators can elect to install particular plugins that meet their needs.&#x20;
 
-![](<../../../.gitbook/assets/image (420) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1).png>)
 
 The plugins available at the time of writing are enumerated below.
 
@@ -56,7 +56,7 @@ The messaging interfaces option installs the core REST APIs for the iCDR server.
 
 #### Business Intelligence Services
 
-When installed, the SanteDB core business intelligence services for rendering and executing reports from applets will be enabled. The BIS should be installed on servers where you'd like the clients to be able to access shared report definitions. 
+When installed, the SanteDB core business intelligence services for rendering and executing reports from applets will be enabled. The BIS should be installed on servers where you'd like the clients to be able to access shared report definitions.&#x20;
 
 If you're using a third party reporting tool like Jasper Reports, Crystal Reports, SQL Server Report Services, etc. you do not need to enable this.
 
@@ -65,7 +65,7 @@ If you're using a third party reporting tool like Jasper Reports, Crystal Report
 Installation of the integration interfaces will allow SanteDB iCDR to interact with third party services using one of the standards based APIs such as:
 
 * [HL7 Fast Health Interoperability Resources](../../extending-santedb/service-apis/hl7-fhir/)
-* [HL7 Version 2](../../extending-santedb/service-apis/hl7v2/) 
+* [HL7 Version 2](../../extending-santedb/service-apis/hl7v2/)&#x20;
 * [GS1 Business Messaging Standard (BMS)](../../extending-santedb/service-apis/gs1-bms-xml.md#gs1-stock-messaging-workflows)
 * JIRA Integration (which allow submission of Diagnostic reports from dCDR instances directly into JIRA)
 * ATNA & DICOM Messaging (which allows for dispatch of audits via NEMA DICOM over Syslog)

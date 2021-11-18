@@ -6,7 +6,7 @@ The messaging settings section allows system administrators to configure the var
 
 The REST based services in the configuration panel have two sections of configuration in their panel, as illustrated in the FHIR panel below.
 
-![](<../../../../.gitbook/assets/image (423) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (423) (1) (1) (1).png>)
 
 * REST API -> This section of the configuration panel is common to all REST services and controls the ports, paths and bindings of the REST API.
 * Service -> This section varies and is specific to the actual API being configured.
@@ -25,7 +25,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 
 
-![](<../../../../.gitbook/assets/image (429) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (429) (1) (1) (1).png>)
 
 | Setting                | Description                                                                                                                                                                                                                                                            | Examples                              |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -50,7 +50,7 @@ Editing the endpoints will present a collection editor where administrators can 
 
 When you set an endpoint address to scheme `https://` the certificate binding configuration is enabled.
 
-![](<../../../../.gitbook/assets/image (428) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (428) (1) (1) (1).png>)
 
 When binding an endpoint to HTTPS you must ensure:
 

@@ -19,7 +19,7 @@ The persistence settings typically share a common configuration structure as ill
 
 The ADO.NET data persistence service as well as the archiving service share a common configuration options.&#x20;
 
-![](<../../../../.gitbook/assets/image (420).png>)
+![](<../../../../.gitbook/assets/image (420) (1).png>)
 
 | Option                          | Description                                                                                                                                                                                                                                                          | Example       |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |

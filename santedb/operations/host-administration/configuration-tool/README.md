@@ -61,7 +61,7 @@ To enable or disable a feature, use the ENABLE or DISABLE link on the feature co
 
 By default the simple editor is shown. The simple editor groups functions into logical feature sets and groups them in a manner which better illustrates what the feature is. There are occasions (for example, third party plugins) where a 1 to 1 representation of the configuration file is desired. This can be accessed via the **Setting Editor. **
 
-![](<../../../../.gitbook/assets/image (417) (1).png>)
+![](<../../../../.gitbook/assets/image (417) (1) (1).png>)
 
 This view allows administrators to directly edit the configuration file - regardless if the feature has implemented the necessary [Configuration Panel Interfaces](../../../extending-santedb/server-plugins/implementing-.net-features/configuration/configuration-panels.md).
 
@@ -69,7 +69,7 @@ This view allows administrators to directly edit the configuration file - regard
 
 Editing the configuration values doesn't actually save the configuration file. When you change values in the configuration panel the tool calculates a list of changes that need to occur to apply the changes you've set. In order to apply these use the **Apply Changes** button on the command bar.
 
-![](<../../../../.gitbook/assets/image (420) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (420) (1) (1) (1).png>)
 
 Each feature that you've edited creates one or more tasks that will be executed. Each task can be investigated to gather details of the feature and what is being changed in your configuration file.
 
