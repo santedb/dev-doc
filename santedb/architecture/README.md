@@ -1,10 +1,10 @@
 # Architecture
 
-This page provides a summary of the SanteDB architecture. The "source of truth" for this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))
+This page provides a summary of the SanteDB architecture. A more detailed description of this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))
 
 ## Overall Architecture
 
-SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure. 
+SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure.&#x20;
 
 ![](<../../.gitbook/assets/image (122).png>)
 
@@ -44,7 +44,7 @@ The dCDR Windows and Linux applications are self-contained applications which ru
 
 ### dCDR Gateway
 
-The dCDR Gateway is a headless service which implements the dCDR functionality and is intended for use in environments where third party applications (or users in a shared local network) require access to offline functionality. 
+The dCDR Gateway is a headless service which implements the dCDR functionality and is intended for use in environments where third party applications (or users in a shared local network) require access to offline functionality.&#x20;
 
 The dCDR gateway exposes FHIR, HL7v2, ATNA, and API calls to any connected client on a local network. The Gateway acts a "mini" SanteDB  iCDR instance, where clients connected on the local network have no knowledge of the overall connectivity of the clinic or environment they're operating within.
 

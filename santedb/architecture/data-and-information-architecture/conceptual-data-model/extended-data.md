@@ -1,6 +1,6 @@
 # Extended Data
 
-The SanteDB CDR requires that any data provided to it by callers conform to the logical information either in XML, JSON or ViewModel formats. 
+The SanteDB CDR requires that any data provided to it by callers conform to the logical information either in XML, JSON or ViewModel formats.&#x20;
 
 If you need to store data which cannot be captured in the primary information model you can add it with either an extension or a tag.
 
@@ -27,7 +27,7 @@ SanteDB provides several built-in serializers for handling extension data which 
 | String    | StringExtensionHandler     | A variable length string stored in the database     |
 | Uuid      | UuidExtensionHandler       | A 128-bit byte array representing a UUID            |
 
-You can create additional extension data types by implementing the `IExtensionHandler` interface in a .NET plugin. 
+You can create additional extension data types by implementing the `IExtensionHandler` interface in a .NET plugin.&#x20;
 
 ### Extension Type Registration
 
@@ -47,19 +47,19 @@ All extensions are in the http://santedb.org/extensions URL base.
 | /stock/contrib/gs1/shipmentDate          | Date       | The original shipment date of an action                                                       |
 | /stock/contrib/gs1/packgingType          | String     | The type of packaging (crate, box, etc.) from the GS1 sender                                  |
 
-You can register your own extensions by using the [HDSI interface](../../../extending-santedb/service-apis/health-data-service-interface-hdsi/) and POSTing a new ExtensionType resource.
+You can register your own extensions by using the [HDSI interface](../../../../developers/extending-santesuite/extending-santedb/service-apis/health-data-service-interface-hdsi/) and POSTing a new ExtensionType resource.
 
 ## Tags
 
 Tags are another extension point which can be used to attach metadata to an object during processing, disclosure, or to control some operational process. Tags are not versioned and live throughout the lifetime of the object. Tags can be removed and updated, however the history of these changes are not tracked.
 
-Tags require no formal definition of the tag type, and represent a simple key/value pair on the object. 
+Tags require no formal definition of the tag type, and represent a simple key/value pair on the object.&#x20;
 
 {% hint style="info" %}
 Tag keys starting with $ are transient, meaning they aren't persisted to the database and are intended to control operational processes within the CDR and its plugins/business rules.
 {% endhint %}
 
-### SanteDB Core Tags 
+### SanteDB Core Tags&#x20;
 
 SanteDB's core plugins affix tags to objects based on the plugins enabled and the status of the object. These tags are described below.
 

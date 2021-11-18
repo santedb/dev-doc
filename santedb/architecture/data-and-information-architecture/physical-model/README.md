@@ -43,7 +43,7 @@ To implement a new ADO.NET based data provider, implementers will need to:
 
 ## Patching SQL Tables
 
-See: [Database Patching ](../../../extending-santedb/server-plugins/database-patching.md)article for information on patching SQL structures.
+See: [Database Patching ](../../../../developers/extending-santesuite/extending-santedb/server-plugins/database-patching.md)article for information on patching SQL structures.
 
 ## Conventions
 

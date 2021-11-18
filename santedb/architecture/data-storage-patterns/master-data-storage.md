@@ -10,7 +10,7 @@ The Master Data Management plugin permits your SanteDB CDR instance to store mul
 * Persons
 
 {% hint style="info" %}
-The use of Master Data Management services require a compatible [Matching and Merge](../../extending-santedb/server-plugins/service-definitions/matching-merging-services/) service to operate. This is how the MDM solution detects candidate master records.
+The use of Master Data Management services require a compatible [Matching and Merge](../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/matching-merging-services/) service to operate. This is how the MDM solution detects candidate master records.
 {% endhint %}
 
 ## MDM Data Storage Pattern
@@ -52,9 +52,9 @@ This candidate link exists until:
 
 ### Record of Truth
 
-The MDM solution permits the establishing of a Record Of Truth (ROT). The Record Of Truth is a new local instance which belongs to the SYSTEM and can only be updated when the security principal is permitted MDM Record Of Truth. 
+The MDM solution permits the establishing of a Record Of Truth (ROT). The Record Of Truth is a new local instance which belongs to the SYSTEM and can only be updated when the security principal is permitted MDM Record Of Truth.&#x20;
 
-A ROT record is a special pointer at a LOCAL whereby the LOCAL points to the MASTER record, and the MASTER points at the ROT with relationship type of `MDM-RecordOfTruth`. 
+A ROT record is a special pointer at a LOCAL whereby the LOCAL points to the MASTER record, and the MASTER points at the ROT with relationship type of `MDM-RecordOfTruth`.&#x20;
 
 {% hint style="info" %}
 It is possible to manually elevate an existing LOCAL as a ROT record, however this is not yet supported on user interfaces available.
@@ -68,7 +68,7 @@ It is possible to manually elevate an existing LOCAL as a ROT record, however th
 
 It is a commonly asked how the solution operates when a sensitive LOCAL record is shared with common health infrastructure. In the case of SanteDB's iCDR, when a MASTER record has multiple LOCALS the information returned to a caller is a synthesized copy of data within the LOCAL records.
 
-The synthetization process uses a most-restrictive policy enforcement mechanism before considering a local for inclusion in the result. In the example illustrated above, the information sourced from the HIV Health Clinic is tagged as TABOO information. 
+The synthetization process uses a most-restrictive policy enforcement mechanism before considering a local for inclusion in the result. In the example illustrated above, the information sourced from the HIV Health Clinic is tagged as TABOO information.&#x20;
 
 When a caller asks the CDR for the MASTER, the MDM service will call the `IPolicyDecisionService `and ask for a decision on each of the flagged policies in each of the locals and will return either:
 
@@ -129,7 +129,7 @@ The following section outlines several common behaviors and patterns to assist i
 
 ### Case 1: New Object Registered
 
-When the CDR receives a request to create a new entity which is under MDM control, as shown below. 
+When the CDR receives a request to create a new entity which is under MDM control, as shown below.&#x20;
 
 ![](<../../../.gitbook/assets/image (220).png>)
 
@@ -141,7 +141,7 @@ When the CDR receives a request to create a new entity which is under MDM contro
 
 ![](<../../../.gitbook/assets/image (215).png>)
 
-Any future queries based on the demographics will result in the MASTER_A record being returned and synthesized from the source records according to the synthesization rules. 
+Any future queries based on the demographics will result in the MASTER\_A record being returned and synthesized from the source records according to the synthesization rules.&#x20;
 
 ![](<../../../.gitbook/assets/image (214).png>)
 
@@ -153,7 +153,7 @@ When the CDR receives a registration request for a new object which is under MDM
 
 1. The source record is issued as new UUID
 2. The IRecordMatchService is called with the specified configurations. If this process classifies a record as MATCH and AutoLink is turned on for that match configuration
-   1. The SORUCE is linked to the MASTER with relationship MDM-Master 
+   1. The SORUCE is linked to the MASTER with relationship MDM-Master&#x20;
    2. The classification of this relationship is AUTO
    3. The weighting of the match is stored
 
@@ -179,10 +179,10 @@ The behavior is as follows:
 
 1. The SOURCE is issued a new UUID
 2. A new MASTER is created with a new UUID
-3. The SOURCE is linked to the new MASTER 
+3. The SOURCE is linked to the new MASTER&#x20;
    1. The relationship type is MDM-Master
    2. The classification of the relationship is AUTO
-4. The SOURCE is linked to the suspected MASTER 
+4. The SOURCE is linked to the suspected MASTER&#x20;
    1. The relationship type is MDM-CandidateLocal
    2. The classification of the relationship is AUTO
    3. The score of the match is stored as the relationship strength
@@ -191,9 +191,9 @@ The behavior is as follows:
 
 ### Case 4: Object is Updated to Match MASTER
 
-When the CDR receives a request to update a source record, it does so against the source (or if the update was attempted against the MASTER the SOURCE is created or located). When this occurs, the matching is re-run and if determined that the records now match the relationships are re-calculated. 
+When the CDR receives a request to update a source record, it does so against the source (or if the update was attempted against the MASTER the SOURCE is created or located). When this occurs, the matching is re-run and if determined that the records now match the relationships are re-calculated.&#x20;
 
-For example, given this update to SOURCE_C.
+For example, given this update to SOURCE\_C.
 
 ![](<../../../.gitbook/assets/image (222).png>)
 
@@ -235,7 +235,7 @@ A LOCAL>MASTER link operation is initiated by calling `Merge()` in `IRecordMerge
 * The explicit UUIDs of local records (i.e. the UUID pointing at the local record), or
 * The UUID of masters where the caller does not have `Merge MDM Master` permission
 
-This operation works by unlinking the local/duplicate record relationships (of `MDM-Master` ) and re-establishing the link on the locals to the surviving master. This is a form of linking where neither the master nor the local records are merged. 
+This operation works by unlinking the local/duplicate record relationships (of `MDM-Master` ) and re-establishing the link on the locals to the surviving master. This is a form of linking where neither the master nor the local records are merged.&#x20;
 
 For example, if a principal has `Write MDM Master` permission, and issues the following `ADT^A40` :
 
@@ -252,7 +252,7 @@ The process would be:
 * Load the record `YYYYY` in domain TEST (MASTER)
 * Call `Merge()` for MASTER>MASTER
 * Client has `Write MDM Master` so record `XXXXX` remains the target of the merge.
-* Client does not have `Merge MDM Master` so record `YYYYY` is resolved to LOCAL record for TEST_HARNESS at site TEST (`LYYYY`)
+* Client does not have `Merge MDM Master` so record `YYYYY` is resolved to LOCAL record for TEST\_HARNESS at site TEST (`LYYYY`)
 * Merge proceeds as LOCAL>MASTER
   * `LYYYY `is disconnected from master `YYYY`
   * `LYYYY` is attached to master `XXXX`
@@ -276,11 +276,11 @@ The process for performing a master merge is:
 * Merge proceeds:
   * All `MDM-Master` associations previously pointing at `YYYY` are rewritten to `XXXX`
   * All identifiers directly on `YYYY` master record are copied to `XXXX`
-  * `YYYY` is obsoleted 
+  * `YYYY` is obsoleted&#x20;
 
 ### Local Merge
 
-A local merge occurs when a source system indicates it has resolved duplicates in its own database issues an appropriate merge request to the iCDR. The local merge is the default operation whenever the caller is not granted explicit permission to perform MDM merges on the server. 
+A local merge occurs when a source system indicates it has resolved duplicates in its own database issues an appropriate merge request to the iCDR. The local merge is the default operation whenever the caller is not granted explicit permission to perform MDM merges on the server.&#x20;
 
 The process for performing a local merge is:
 

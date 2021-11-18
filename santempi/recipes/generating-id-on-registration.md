@@ -1,8 +1,8 @@
 # Generating ID on Registration
 
-SanteMPI can generate a unique identifier in any format you choose whenever a patient is registered. This generation can occur regardless of where the registration originated \(FHIR, HL7v2, UI, etc.\).
+SanteMPI can generate a unique identifier in any format you choose whenever a patient is registered. This generation can occur regardless of where the registration originated (FHIR, HL7v2, UI, etc.).
 
-This generator will use the [Business Rules Engine](../../santedb/extending-santedb/applets/business-rules.md) to generate a new ID each time a master record is created for the patient. 
+This generator will use the [Business Rules Engine](../../developers/extending-santesuite/extending-santedb/applets/business-rules.md) to generate a new ID each time a master record is created for the patient.&#x20;
 
 ### Create a new Business Rules File
 
@@ -96,6 +96,4 @@ You can also have the UI made aware of the presence of this generator by registe
 if(SanteDB.application) 
     SanteDB.application.addIdentifierGenerator("ELB_HEALTH_ID", generateElboniaId());
 ```
-
-
 

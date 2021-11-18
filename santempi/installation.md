@@ -1,10 +1,10 @@
 # Installation
 
-SanteMPI is installed and configured in an identical manner to the [SanteDB iCDR ](../santedb/installation/)Installation. This section will only discuss the delta (differences) between installing SanteDB iCDR ad dCDR.
+SanteMPI is installed and configured in an identical manner to the [SanteDB iCDR ](../installation/installation/)Installation. This section will only discuss the delta (differences) between installing SanteDB iCDR ad dCDR.
 
 ## Docker Containers
 
-The `santedb-mpi `docker container is derived from the [SanteDB iCDR docker container](../santedb/installation/santedb-server/docker-containers/#santempi-application). When using SanteMPI you should reference the `santedb-mpi:latest` docker image.
+The `santedb-mpi `docker container is derived from the [SanteDB iCDR docker container](../installation/installation/santedb-server/docker-containers/#santempi-application). When using SanteMPI you should reference the `santedb-mpi:latest` docker image.
 
 ```
 version: "3.3"
@@ -55,7 +55,7 @@ The SanteMPI docker containers add five new features in the `SDB_FEATURE` enviro
 
 ## Microsoft Windows Operating Systems
 
-The setup procedure is identical to SanteDB iCDR on Windows Operating Systems. The major differentiator is that the [Configuration Tool](../santedb/operations/host-administration/configuration-tool/#template) Template for **SanteMPI Server **should be selected on initial configuration. This template:
+The setup procedure is identical to SanteDB iCDR on Windows Operating Systems. The major differentiator is that the [Configuration Tool](../operations/system-administration/host-administration/configuration-tool/#template) Template for **SanteMPI Server **should be selected on initial configuration. This template:
 
 * Configures the necessary HL7v2 handlers to use PIX and PDQ specified behaviors.
 * Configures the necessary FHIR extensions and profiles for PIXm, PDQm and PMIR

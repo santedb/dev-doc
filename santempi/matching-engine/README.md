@@ -14,7 +14,7 @@ SanteDB allows for the configuration of multiple match configurations, and allow
 
 ## Match Configuration
 
-Matches are configured using match configuration XML, the schema for this XML can be located in %INSTALL_DIR%\Schemas and referenced in an XML editor of your choice to obtain auto-complete data.
+Matches are configured using match configuration XML, the schema for this XML can be located in %INSTALL\_DIR%\Schemas and referenced in an XML editor of your choice to obtain auto-complete data.
 
 ### Target and Classification Thresholds
 
@@ -50,7 +50,7 @@ Here the configuration is indicating that the matching algorithm should be appli
 
 ### Blocking Stage Configuration
 
-The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../santedb/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
+The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../developers/extending-santesuite/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
 
 ```markup
   <!-- Patient which have same MRN -->
@@ -146,30 +146,30 @@ You can instruct the matching classification stage to transform the data on reco
     </attribute>
 ```
 
-The date_extract is applied to both records and then the assertion of "eq" is applied. The following data transforms are available in SanteDB.
+The date\_extract is applied to both records and then the assertion of "eq" is applied. The following data transforms are available in SanteDB.
 
-| Transform           | Applies        | Action                                                                                                                                                                 |
-| ------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| addresspart_extract | Entity Address | Extracts a portion of an address for consideration                                                                                                                     |
-| date_difference     | Date           | Extracts the difference (in weeks, months, years, etc.) between the A record and B record.                                                                             |
-| date_extract        | Date           | Extracts a portion of the date from both records.                                                                                                                      |
-| name_alias          | Entity Name    | Considers any of the configured aliases for the name meeting a particular threshold of relevance (i.e. Will = Bill is stronger than Tess = Theresa)                    |
-| abs                 | Number         | Returns the absolute value of a number                                                                                                                                 |
-| dmetaphone          | Text           | Returns the double metaphone code (with configured code length) from the input string                                                                                  |
-| length              | Text           | Returns the length of text string                                                                                                                                      |
-| levenshtein         | Text           | Returns the levenshtein string difference between the A and B values.                                                                                                  |
-| sorensen_dice       | Text           | Returns the Sorensen Dice coefficient of text content A and B values.                                                                                                  |
-| jaro_winkler        | Text           | Returns the Jaro-Winkler (with default threshold of 0.7) between A and B values.                                                                                       |
-| metaphone           | Text           | Returns the metaphone phonetic code for the attribute                                                                                                                  |
-| similarity          | Text           | Returns a %'age (based on levenshtein difference) of string A to string B (i.e. 80% similar or 90% similar)                                                            |
-| soundex             | Text           | Extracts the soundex codification of the input values.                                                                                                                 |
-| substr              | Text           | Extracts a portion of the input values                                                                                                                                 |
-| tokenize            | Text           | Tokenizes the input string based on splitting characters, the tokenized values can then be transformed independently using any of the transforms listed in this table. |
-| timespan_extract    | TimeSpan       | Extracts a portion of a timespan such as minutes, hours, seconds.                                                                                                      |
+| Transform            | Applies        | Action                                                                                                                                                                 |
+| -------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| addresspart\_extract | Entity Address | Extracts a portion of an address for consideration                                                                                                                     |
+| date\_difference     | Date           | Extracts the difference (in weeks, months, years, etc.) between the A record and B record.                                                                             |
+| date\_extract        | Date           | Extracts a portion of the date from both records.                                                                                                                      |
+| name\_alias          | Entity Name    | Considers any of the configured aliases for the name meeting a particular threshold of relevance (i.e. Will = Bill is stronger than Tess = Theresa)                    |
+| abs                  | Number         | Returns the absolute value of a number                                                                                                                                 |
+| dmetaphone           | Text           | Returns the double metaphone code (with configured code length) from the input string                                                                                  |
+| length               | Text           | Returns the length of text string                                                                                                                                      |
+| levenshtein          | Text           | Returns the levenshtein string difference between the A and B values.                                                                                                  |
+| sorensen\_dice       | Text           | Returns the Sorensen Dice coefficient of text content A and B values.                                                                                                  |
+| jaro\_winkler        | Text           | Returns the Jaro-Winkler (with default threshold of 0.7) between A and B values.                                                                                       |
+| metaphone            | Text           | Returns the metaphone phonetic code for the attribute                                                                                                                  |
+| similarity           | Text           | Returns a %'age (based on levenshtein difference) of string A to string B (i.e. 80% similar or 90% similar)                                                            |
+| soundex              | Text           | Extracts the soundex codification of the input values.                                                                                                                 |
+| substr               | Text           | Extracts a portion of the input values                                                                                                                                 |
+| tokenize             | Text           | Tokenizes the input string based on splitting characters, the tokenized values can then be transformed independently using any of the transforms listed in this table. |
+| timespan\_extract    | TimeSpan       | Extracts a portion of a timespan such as minutes, hours, seconds.                                                                                                      |
 
 #### Custom Transforms
 
-Attribute transform algorithms can be implemented by creating a new implementation of either IUnaryDataTransformer or IBinaryDataTransformer. 
+Attribute transform algorithms can be implemented by creating a new implementation of either IUnaryDataTransformer or IBinaryDataTransformer.&#x20;
 
 * IUnaryTrasnformer - Is applied to each input independently and the each value is then compared to each other using the assertion logic.
 * IBinaryTransformer - Is applied to both inputs with a result being passed to the assertion.
@@ -221,7 +221,7 @@ Transforms can be chained, for example, if you want to extract the Given name an
     </attribute>
 ```
 
-This configuration will consider the Mother's name (relationship\[Mother].target.name) and will extract (namepart_extract) the Given name, then apply a levenshtein difference. The result must be less than or equal to 2 (op=lte value=2)
+This configuration will consider the Mother's name (relationship\[Mother].target.name) and will extract (namepart\_extract) the Given name, then apply a levenshtein difference. The result must be less than or equal to 2 (op=lte value=2)
 
 #### Conditional Evaluation
 
@@ -305,8 +305,8 @@ When evaluating a match the a attribute configuration will generate the Double M
 
 Here, the matching engine would alter the given scores for each of the patients under consideration:
 
-| Name              | namepart_extract | dmetaphone | assertion | similarity | Score                |
-| ----------------- | ---------------- | ---------- | --------- | ---------- | -------------------- |
-| Kimberleigh Smith | Kimberleigh      | KMPR       | PASS      | 0.429      | 42% of match score   |
-| Kimberly Smith    | Kimberly         | KMPR       | PASS      | 1.0        | 100% of match score  |
-| Kimber Smith      | Kimber           | KMPR       | PASS      | 0.715      | 71.5% of match score |
+| Name              | namepart\_extract | dmetaphone | assertion | similarity | Score                |
+| ----------------- | ----------------- | ---------- | --------- | ---------- | -------------------- |
+| Kimberleigh Smith | Kimberleigh       | KMPR       | PASS      | 0.429      | 42% of match score   |
+| Kimberly Smith    | Kimberly          | KMPR       | PASS      | 1.0        | 100% of match score  |
+| Kimber Smith      | Kimber            | KMPR       | PASS      | 0.715      | 71.5% of match score |

@@ -54,11 +54,11 @@ Or in HL7v3 the identifier may appear as:
 
 To properly ensure cross referencing between each of these interfaces, SanteDB will need to know the URL (used primarily in FHIR), the namespce ID (used primarily in HL7v2) and the OID/Universal ID (used primarily in HL7v3).
 
-Since these all need to be unique, it is a good practice that your scheme for these values encompass the entity which owns the identifier, the programme area or department, and the system. For example, if the Ministry of Health runs an infectious disease programme in which an HIV EMR is used, a good Namespace ID for the MRN form that system may be: **MOH_ID_HIV_EMR_MRN** 
+Since these all need to be unique, it is a good practice that your scheme for these values encompass the entity which owns the identifier, the programme area or department, and the system. For example, if the Ministry of Health runs an infectious disease programme in which an HIV EMR is used, a good Namespace ID for the MRN form that system may be: **MOH\_ID\_HIV\_EMR\_MRN**&#x20;
 
 ## Creating a New Identity Domain
 
-To create a new identity domain (for example, a new programme identifier type), you'll use the [Reference Data](../santedb/operations/reference-data-administration.md) administration area and more specifically, the Identity Domain administration page within that administrative area. This will present you with a list of configured identity domains, you can click "CREATE" to create a new identity domain.
+To create a new identity domain (for example, a new programme identifier type), you'll use the [Reference Data](../operations/system-administration/reference-data-administration.md) administration area and more specifically, the Identity Domain administration page within that administrative area. This will present you with a list of configured identity domains, you can click "CREATE" to create a new identity domain.
 
 ![](<../.gitbook/assets/image (37).png>)
 
@@ -91,7 +91,7 @@ The authority and scope configuration area will dictate how SanteDB discloses th
 
 #### Assigning App
 
-In the example above, this new **MOH_ID_HIV_EMR_MRN** ** **identity domain, only authenticated devices running the application org.santedb.disconnected_client.android (the Android SanteDB Client) is the authoritative source of identifiers for this domain. Other systems can register patients and provide this identifier, however if the MPI doesn't recognize a new identity (say from OpenMRS) it will flag it as a DQ issue.
+In the example above, this new **MOH\_ID\_HIV\_EMR\_MRN** ** **identity domain, only authenticated devices running the application org.santedb.disconnected\_client.android (the Android SanteDB Client) is the authoritative source of identifiers for this domain. Other systems can register patients and provide this identifier, however if the MPI doesn't recognize a new identity (say from OpenMRS) it will flag it as a DQ issue.
 
 #### Scope
 
@@ -101,6 +101,6 @@ Whenever SanteMPI receives a registration that attempts to assign an identity in
 
 #### Disclosure Policy
 
-When specified, this parameter dictates the policy which must be granted to the principal which is accessing it, otherwise the identifier will be masked. For example, the set disclosure policy would require the user, device, and application to not have been prohibited access to the DISCLOSE HIV INFORMATION policy. 
+When specified, this parameter dictates the policy which must be granted to the principal which is accessing it, otherwise the identifier will be masked. For example, the set disclosure policy would require the user, device, and application to not have been prohibited access to the DISCLOSE HIV INFORMATION policy.&#x20;
 
 If the user or remote system has not been explicitly granted that policy, it will be masked and the issuer of the request can establish an ELEVATED session with the MPI to gain access to the identifiers.
