@@ -10,8 +10,8 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 
 * [Logging In](logging-in.md)
 * [Managing your User Profile](managing-your-profile.md)
-* Security Administration
-  * Managing User Accounts
+* [Security Administration](security-administration/)
+  * [Managing User Accounts](security-administration/managing-user-accounts.md)
   * Managing Application Roles&#x20;
   * Managing Device Accounts
   * Managing Application Accounts

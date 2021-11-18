@@ -65,3 +65,5 @@ When you use the `Edit` option to view the details of a user, you will be presen
   * Setting the user's TFA settings
   * Changing security settings (e-mail, phone number).
 * Profile Tab: The profile tab is used to control the user's public profile such as name, date of birth, etc.
+* Activity Tab: The activity tab shows the activity in the system which was initiated by the user which is being viewed. This data allows administrators to see what the user has been doing in the SanteDB system.
+* Audit Trail: The audit trail tab shows the data in the audit trail for the user account itself. This tab differs from the activity tab in that the activity tab shows actions initiated BY the user, the audit trail tab shows the actions performed AGAINST the user.
