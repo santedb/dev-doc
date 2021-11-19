@@ -205,7 +205,7 @@ We will now test to make sure we can see SanteDB transactions in openHIM. You wi
 
 **To generate a bearer token:**
 
-SanteDB requires that you use a bearer token to access services on the SanteDB server. For full documentation see the [OpenID Connect Documentation](../../developers/service-apis/openid-connect/#discovery-configuration). A quick method to authenticate yourself with:
+SanteDB requires that you use a bearer token to access services on the SanteDB server. For full documentation see the [OpenID Connect Documentation](../../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/#discovery-configuration). A quick method to authenticate yourself with:
 
 ```
 POST http://localhost:8082/auth/oauth2_token HTTP/1.1

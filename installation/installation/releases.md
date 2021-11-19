@@ -63,7 +63,7 @@ The installers can be accessed via the [santedb-www GitHub](https://github.com/s
 
 ## Software Development Kit
 
-The SanteDB SDK is used by developers to simulate the offline dCDR in a debug-friendly environment. The SDK is documented on the [Software Development Kit](../../developers/applets/applet-sdk/) wiki page.&#x20;
+The SanteDB SDK is used by developers to simulate the offline dCDR in a debug-friendly environment. The SDK is documented on the [Software Development Kit](../../developers/extending-santesuite/extending-santedb/applets/applet-sdk/) wiki page.&#x20;
 
 The SDK runs on:
 

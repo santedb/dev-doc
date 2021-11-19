@@ -1,6 +1,6 @@
 # FHIR R4 Service
 
-The FHIR R4 configuration panel is used to control the configuration of the [FHIR API ](../../../../../developers/service-apis/hl7-fhir/)endpoint.
+The FHIR R4 configuration panel is used to control the configuration of the [FHIR API ](../../../../../operations-1/standard-operating-procedures/hl7-fhir/)endpoint.
 
 ![](<../../../../../.gitbook/assets/image (423) (1) (1).png>)
 

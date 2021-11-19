@@ -63,7 +63,7 @@ By default the simple editor is shown. The simple editor groups functions into l
 
 ![](<../../../../.gitbook/assets/image (417) (1) (1).png>)
 
-This view allows administrators to directly edit the configuration file - regardless if the feature has implemented the necessary [Configuration Panel Interfaces](../../../../developers/server-plugins/implementing-.net-features/configuration/configuration-panels.md).
+This view allows administrators to directly edit the configuration file - regardless if the feature has implemented the necessary [Configuration Panel Interfaces](../../../../developers/extending-santesuite/extending-santedb/server-plugins/implementing-.net-features/configuration/configuration-panels.md).
 
 ### Applying Configuration
 

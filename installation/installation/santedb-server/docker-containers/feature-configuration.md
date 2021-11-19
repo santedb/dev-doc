@@ -108,7 +108,7 @@ SDB_SIG_other=rs256:THUMBPRINT_OF_YOUR_RSA_CERT
 
 ### OpenID Connect IDP
 
-The OpenID Connect IDP service enables the [OpenID Identity Provider](../../../../developers/service-apis/openid-connect/) services.
+The OpenID Connect IDP service enables the [OpenID Identity Provider](../../../../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/) services.
 
 ```
 SDB_FEATURE=...;OPENID;...

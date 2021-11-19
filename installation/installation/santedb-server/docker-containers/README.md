@@ -164,7 +164,7 @@ See the Adding Sample Data article for methods of seeding sample data into Sante
 
 ### Packaging Custom Business Rules
 
-You can package [business rules](../../../../developers/applets/business-rules.md), [business intelligence](../../../../developers/applets/business-intelligence-bi-assets/), and other [asset files](../../../../developers/applets/assets/) into your docker container by simply composing them into a PAK file and including them in the /santedb/applets/ directory.
+You can package [business rules](../../../../developers/extending-santesuite/extending-santedb/applets/business-rules.md), [business intelligence](../../../../developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/), and other [asset files](../../../../developers/extending-santesuite/extending-santedb/applets/assets/) into your docker container by simply composing them into a PAK file and including them in the /santedb/applets/ directory.
 
 ```markup
 FROM santedb-icdr:latest

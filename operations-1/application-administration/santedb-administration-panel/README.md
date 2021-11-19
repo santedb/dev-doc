@@ -8,8 +8,8 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 
 ## Table of Contents
 
-* [Logging In](logging-in.md)
-* [Managing your User Profile](managing-your-profile/)
+* [Logging In](logging-in/)
+* [Managing your User Profile](managing-your-profile.md)
 * [Security Administration](security-administration/)
   * [Managing User Accounts](security-administration/managing-user-accounts.md)
   * Managing Application Roles&#x20;
@@ -38,7 +38,7 @@ When you log into the SanteDB Administration Panel user interface, the default s
 * System Mail Messages: If using SanteDB offline or leveraging system alert mail, this is the system mailbox.
 * System Alerts: Any tickles (notifications) that are raised which require your attention will be placed in the system alert area.
 * Connection Status: If administering a disconnected instance of the SanteDB dCDR this indicates the connectivity of the dCDR with the iCDR server.
-* User Menu: This allows you to logout of your session and to also [Manage Your Profile](managing-your-profile/).
+* User Menu: This allows you to logout of your session and to also [Manage Your Profile](managing-your-profile.md).
 
 ### SanteMPI Dashboard
 
