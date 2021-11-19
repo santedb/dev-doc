@@ -2,6 +2,12 @@
 
 * [SanteSuite Help Portal](README.md)
 
+## Product Overview
+
+* [SanteSuite Products](product-overview/santesuite-products/README.md)
+  * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
+  * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
+
 ## Architecture <a href="santedb" id="santedb"></a>
 
 * [Architecture](santedb/architecture/README.md)
@@ -95,12 +101,6 @@
   * [20190522-01](knowledgebase/fixpatch/20190522-01.md)
   * [20190625-01](knowledgebase/fixpatch/20190625-01.md)
   * [20200105-01](knowledgebase/fixpatch/20200105-01.md)
-
-## Product Overview
-
-* [SanteSuite Products](product-overview/santesuite-products/README.md)
-  * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
-  * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
 
 ## SanteMPI
 
