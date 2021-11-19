@@ -1,6 +1,6 @@
 # Adding Sample Data
 
-You can quickly add test/sample data by copying [dataset files](../../../../developers/extending-santesuite/extending-santedb/applets/distributing-data.md) into the `/santedb/data` directory of the docker container either using a custom dockerfile or by mounting a volume from the docker image.
+You can quickly add test/sample data by copying [dataset files](../../../../developers/applets/distributing-data.md) into the `/santedb/data` directory of the docker container either using a custom dockerfile or by mounting a volume from the docker image.
 
 ## Dataset Files
 

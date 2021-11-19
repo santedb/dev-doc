@@ -50,7 +50,7 @@ Here the configuration is indicating that the matching algorithm should be appli
 
 ### Blocking Stage Configuration
 
-The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../developers/extending-santesuite/extending-santedb/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
+The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax.md)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
 
 ```markup
   <!-- Patient which have same MRN -->

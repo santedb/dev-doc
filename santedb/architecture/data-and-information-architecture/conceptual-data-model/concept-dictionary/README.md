@@ -42,5 +42,5 @@ Some fields in the SanteDB database are bound to concept sets using the ck\_set\
 Reference terms are used for the expression of concept within an external codification system. Reference terms are used to translate concept sets into wire-level codifications of those concepts. This design allows the SanteDB internal data model to maintain integrity with a known internal series of concepts, while mapping those concepts to external code systems which may or may not be subjected to changes (for example: ICD9, ICD10 and ICD11 can be implemented by simply mapping).
 
 {% hint style="info" %}
-If you're implementing an interface which mandates the use of a separate code list, it is recommended to use the [Concept Repository ](../../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/repository-services/iconceptrepositoryservice.md)and register your wire-level codes as reference terms.
+If you're implementing an interface which mandates the use of a separate code list, it is recommended to use the [Concept Repository ](../../../../../developers/server-plugins/service-definitions/repository-services/iconceptrepositoryservice.md)and register your wire-level codes as reference terms.
 {% endhint %}

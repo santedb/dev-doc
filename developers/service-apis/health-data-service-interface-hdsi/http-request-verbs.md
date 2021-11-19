@@ -69,7 +69,7 @@ If-Match: e403940394382743823
 <Patch xmlns="http://santedb.org/model"
 ```
 
-More documentation of the PATCH operation is documented in the [Constructing Patches article. ](../../../../../operations-1/application-administration/santedb-administration-panel/security-administration/patching.md)
+More documentation of the PATCH operation is documented in the [Constructing Patches article. ](patching.md)
 
 ### Obsolete Resource (DELETE)
 

@@ -12,7 +12,7 @@ SanteMPI acts as a custodian of patient master identities, as such it is importa
   * [Patient Identity Cross Referencing for Mobile](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE\_ITI\_Suppl\_PIXm.pdf)
   * [Patient Master Identity Registry](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE\_ITI\_Suppl\_PMIR.pdf) &#x20;
 
-All implementations of FHIR interfaces in SanteDB are subject to the [FHIR Implementation Notes ](../../../../../operations-1/standard-operating-procedures/hl7-fhir/#fhir-implementation)provided, including limitations on `fullUrl` , identifiers, and offsite resources.&#x20;
+All implementations of FHIR interfaces in SanteDB are subject to the [FHIR Implementation Notes ](../../../../../developers/service-apis/hl7-fhir/#fhir-implementation)provided, including limitations on `fullUrl` , identifiers, and offsite resources.&#x20;
 
 ## SOAP-UI Test Cases
 

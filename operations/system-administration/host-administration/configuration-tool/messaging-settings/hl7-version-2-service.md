@@ -1,6 +1,6 @@
 # HL7 Version 2 Service
 
-The HL7 Version 2 Service configuration panel is used to enable or disable the sending and receiving of [HL7 Version 2.x](../../../../../operations-1/application-administration/santedb-administration-panel/security-administration/hl7v2.md) messages.
+The HL7 Version 2 Service configuration panel is used to enable or disable the sending and receiving of [HL7 Version 2.x](../../../../../developers/service-apis/hl7v2/) messages.
 
 ![](<../../../../../.gitbook/assets/image (432) (1) (1).png>)
 

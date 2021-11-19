@@ -48,8 +48,8 @@ The SanteDB iCDR server uses a folder structure as illustrated below.
 
 The folders are:
 
-* applets - Applet PAK files which control the behavior, business rules, BI definitions, and common user interface elements. These files are documented more in the [Applets](../../../developers/extending-santesuite/extending-santedb/applets/) wiki page.
-* data - Dataset files which are installed by the SanteDB host service on start. These files contain common terminology, identity domains, places, etc. See the [Dataset Files](../../../developers/extending-santesuite/extending-santedb/applets/distributing-data.md) wiki page.
+* applets - Applet PAK files which control the behavior, business rules, BI definitions, and common user interface elements. These files are documented more in the [Applets](../../../developers/applets/) wiki page.
+* data - Dataset files which are installed by the SanteDB host service on start. These files contain common terminology, identity domains, places, etc. See the [Dataset Files](../../../developers/applets/distributing-data.md) wiki page.
 * plugins - This folder is used by FirebirdSQL to load custom SQL plugins.
 * queue - This folder is the default location of the file-system based persistent queue service. This directory stores outbound messages and has a dead-letter queue for retry.&#x20;
   * Note: Future persistent queue plugins may use databases or queue technologies in lieu of this directory.

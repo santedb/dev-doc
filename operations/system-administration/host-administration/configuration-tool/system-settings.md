@@ -16,7 +16,7 @@ The default job manager is the SanteDB service that is responsible for managing 
 
 ## Applet Manager
 
-The applet manager configuration panel allows for configuration of the applet repository. The applet repository is the file system location where [SanteDB Applets](../../../../developers/extending-santesuite/extending-santedb/applets/) are loaded into the iCDR server context.
+The applet manager configuration panel allows for configuration of the applet repository. The applet repository is the file system location where [SanteDB Applets](../../../../developers/applets/) are loaded into the iCDR server context.
 
 ![](<../../../../.gitbook/assets/image (433) (1).png>)
 
@@ -34,10 +34,10 @@ The core API configuration panel allows administrators to change the core behavi
 
 This includes:
 
-* Enabling or disabling core [Daemon services ](../../../../developers/extending-santesuite/extending-santedb/server-plugins/implementing-.net-features/daemon-services.md)
-* Changing the primary [Passive Service](../../../../developers/extending-santesuite/extending-santedb/server-plugins/implementing-.net-features/passive-services.md) assigned to a Service Contract.
+* Enabling or disabling core [Daemon services ](../../../../developers/server-plugins/implementing-.net-features/daemon-services.md)
+* Changing the primary [Passive Service](../../../../developers/server-plugins/implementing-.net-features/passive-services.md) assigned to a Service Contract.
 
 {% hint style="info" %}
-SanteDB Services are described in the [Service Definitions](../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/) wiki page.
+SanteDB Services are described in the [Service Definitions](../../../../developers/server-plugins/service-definitions/) wiki page.
 {% endhint %}
 

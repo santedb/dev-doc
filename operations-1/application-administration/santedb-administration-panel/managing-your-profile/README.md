@@ -45,7 +45,7 @@ The security profile panel allows you to modify your security settings for Sante
 * Security E-Mail: The e-mail address where you would like to receive password reset codes, or TFA codes.
 * Security Phone: The telephone number where you would like to receive password reset codes, or TFA codes.
 * TFA Enabled: If your jurisdiction has setup the necessary infrastructure, you can enable two-factor authentication. This means that you will receive an e-mail or SMS code whenever you log in which contains a one-time password.
-* Password Recovery: One or more password recovery questions which can be used to [Reset Your Password](../logging-in/#forgot-password).
+* Password Recovery: One or more password recovery questions which can be used to [Reset Your Password](../logging-in.md#forgot-password).
 * Password: The expiration time of your password, and the option to reset your password.
 
 ### Resetting your Password

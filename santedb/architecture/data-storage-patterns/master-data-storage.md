@@ -10,7 +10,7 @@ The Master Data Management plugin permits your SanteDB CDR instance to store mul
 * Persons
 
 {% hint style="info" %}
-The use of Master Data Management services require a compatible [Matching and Merge](../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/matching-merging-services/) service to operate. This is how the MDM solution detects candidate master records.
+The use of Master Data Management services require a compatible [Matching and Merge](../../../developers/server-plugins/service-definitions/matching-merging-services/) service to operate. This is how the MDM solution detects candidate master records.
 {% endhint %}
 
 ## MDM Data Storage Pattern

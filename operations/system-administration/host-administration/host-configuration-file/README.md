@@ -40,7 +40,7 @@ The namespace definitions used in the configuration file allow plugins to isolat
 
 The configuration must contain two sections:
 
-* Header - Which contains the \<sections> element and identifies to the configuration engine which IConfigurationSection instances are being used (see [Configuration Wiki Page](../../../../developers/extending-santesuite/extending-santedb/server-plugins/implementing-.net-features/configuration/))
+* Header - Which contains the \<sections> element and identifies to the configuration engine which IConfigurationSection instances are being used (see [Configuration Wiki Page](../../../../developers/server-plugins/implementing-.net-features/configuration/))
 * Configuration Sections - Which contain the \<section> element and configure the actual plugins in SanteDB.
 
 ## Sections Element

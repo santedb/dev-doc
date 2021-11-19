@@ -8,7 +8,7 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 
 ## Table of Contents
 
-* [Logging In](logging-in/)
+* [Logging In](logging-in.md)
 * [Managing your User Profile](managing-your-profile/)
 * [Security Administration](security-administration/)
   * [Managing User Accounts](security-administration/managing-user-accounts.md)
