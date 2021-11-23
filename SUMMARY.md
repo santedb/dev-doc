@@ -552,6 +552,7 @@
     * [Template Definition Repository](developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/itemplatedefinitionrepositoryservice.md)
     * [Thread Pool](developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/ithreadpoolservice.md)
     * [Secure Barcode Generator](developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/ibarcodegeneratorservice.md)
+  * [.NET API Reference](http://santesuite.org/assets/doc/net/html/R\_Project\_santedb-help.htm)
 * [Service APIs](developers/extending-santesuite/extending-santedb/service-apis/README.md)
   * [OpenID Connect](developers/extending-santesuite/extending-santedb/service-apis/openid-connect/README.md)
     * [Consent & Privacy](developers/extending-santesuite/extending-santedb/service-apis/openid-connect/consent-and-privacy.md)
