@@ -4,8 +4,8 @@ When you click on the `Security` menu in the SanteDB administration panel, the s
 
 ![](<../../../../.gitbook/assets/image (426).png>)
 
-* Users: Shows a count of all authorized users (those accounts which can access SanteDB) in the system and provides a quick access to create a new user account. In SanteDB `Users` (see: [Security Architecture](../../../../santedb/architecture/security-architecture.md#authentication-architecture))
-* Groups: Shows a count of all security roles within the SanteDB server and provides a quick option to create a new security role. (see: [Security Architecture](../../../../santedb/architecture/security-architecture.md#authentication-architecture))
-* Devices: Shows a count of all authorized devices which are permitted to access the SanteDB server, and an option to create a new security device. (see: [Security Architecture](../../../../santedb/architecture/security-architecture.md#authentication-architecture))
-* Applications: Shows a count of all authorized applications which are permitted to access the SanteDB server, and an option to create a new security application (see: [Security Architecture](../../../../santedb/architecture/security-architecture.md#authentication-architecture))
+* Users: Shows a count of all authorized users (those accounts which can access SanteDB) in the system and provides a quick access to create a new user account. In SanteDB `Users` (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
+* Groups: Shows a count of all security roles within the SanteDB server and provides a quick option to create a new security role. (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
+* Devices: Shows a count of all authorized devices which are permitted to access the SanteDB server, and an option to create a new security device. (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
+* Applications: Shows a count of all authorized applications which are permitted to access the SanteDB server, and an option to create a new security application (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
 

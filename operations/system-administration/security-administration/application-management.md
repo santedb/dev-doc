@@ -4,7 +4,7 @@ The administrative portal provides several key functions related to the administ
 
 ## Application Identity
 
-Application Identity is defined as identity of scope of grants permitted to the application and is explained further in the 'Principals and Identities' section from [Security Architecture](../../../santedb/architecture/security-architecture.md) .
+Application Identity is defined as identity of scope of grants permitted to the application and is explained further in the 'Principals and Identities' section from [Security Architecture](../../../santedb/security-architecture.md) .
 
 ## Creating A New Application
 

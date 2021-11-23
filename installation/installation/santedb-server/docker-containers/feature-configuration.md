@@ -242,7 +242,7 @@ SDB_PUBSUB_ADO_RW_CONNECTION=connectionString
 
 ### Record Matching Plugin
 
-The record matching plugin registers the [SanteDB Matcher ](../../../../santempi/matching-engine/)plugin in the container. This service is used by other services to match and/or merge data.
+The record matching plugin registers the [SanteDB Matcher ](../../../../santedb/matching-engine.md)plugin in the container. This service is used by other services to match and/or merge data.
 
 ```
 SDB_FEATURE=...;MATCHING;...

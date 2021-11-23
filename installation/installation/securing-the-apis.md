@@ -8,7 +8,7 @@ This will require obtaining an SSL certificate, installing the certificate into 
 * `certmgr` on Mono (Linux or Mac)
 * SSL Termination (for REST APIs only)
 
-Securing the HL7v2 interfaces is documented in [SanteDB HL7v2 Implementation](../../developers/service-apis/hl7v2/santedb-hl7v2-implementation.md#tls-+-llp-sllp) and is not covered here.
+Securing the HL7v2 interfaces is documented in [SanteDB HL7v2 Implementation](../../developers/service-apis/administration-management-interface-ami/santedb-hl7v2-implementation.md#tls-+-llp-sllp) and is not covered here.
 
 ## Securing iCDR and dCDR Directly
 
