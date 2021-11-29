@@ -1,6 +1,6 @@
 # SanteDB Host Context
 
-As described in the [Software Architecture](../../../../santedb/software-architecture/#service-architecture) documentation, the SanteDB services or iCDR and dCDR leverage dependency injection and service locator patterns. In the iCDR and dCDR both of these patterns are managed by the `ApplicationServiceContext` instance.&#x20;
+As described in the [Software Architecture](../../../../santedb/software-architecture.md#service-architecture) documentation, the SanteDB services or iCDR and dCDR leverage dependency injection and service locator patterns. In the iCDR and dCDR both of these patterns are managed by the `ApplicationServiceContext` instance.&#x20;
 
 The implementation of `ApplicationServiceContext` depends on the environment that SanteDB is running within, they can be:
 

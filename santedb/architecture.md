@@ -1,4 +1,4 @@
-# Architecture
+# Overall Architecture
 
 This page provides a summary of the SanteDB architecture. A more detailed description of this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))
 
@@ -6,7 +6,7 @@ This page provides a summary of the SanteDB architecture. A more detailed descri
 
 SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure.&#x20;
 
-![](<../../.gitbook/assets/image (122).png>)
+![](<../.gitbook/assets/image (122).png>)
 
 ## iCDR Server
 
