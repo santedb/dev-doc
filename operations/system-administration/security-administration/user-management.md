@@ -22,16 +22,16 @@ To create a new user account, press the **Create** button. You'll be presented w
 
 The user edit / creation screen is broken into four sections:
 
-* **Core Properties: **Which contains the core properties of the user account (creation/updated user, security ID, username, etc.)
+* **Core Properties:** Which contains the core properties of the user account (creation/updated user, security ID, username, etc.)
 * **Security Properties:** Role membership, invalid login tracking, and password control.
 * **Demographic Fields:** Demographics related to the user who owns the account (name, organization, facility, etc.)
-* **Version Information: **Complete changelog of edits made to the user account.
+* **Version Information:** Complete changelog of edits made to the user account.
 
 ### Demographics Fields
 
 ![](<../../../.gitbook/assets/image (81).png>)
 
-Users in SanteDB have to profiles. The first profile is the **SecurityUser**, which are the attributes that the user uses for security reasons. The second profile is their **UserEntity** profile (and optionally **Provider** profile), which is a clinical representation of the user. 
+Users in SanteDB have to profiles. The first profile is the **SecurityUser**, which are the attributes that the user uses for security reasons. The second profile is their **UserEntity** profile (and optionally **Provider** profile), which is a clinical representation of the user.&#x20;
 
 To imagine the difference, you can think of an e-mail address or telephone number attached to security user as being the address used by the system for things like TFA and password resets, however the e-mail on the clinical profile may be for clinical purposes like booking appointments, referrals, etc.
 
@@ -48,7 +48,7 @@ Clicking on the pencil on the security properties panel will enable the editing 
 ![](<../../../.gitbook/assets/image (140).png>)
 
 {% hint style="info" %}
-The e-mail and phone number information on the security properties panel is only used for security purposes (like TFA, password resets, etc.). If you're using SanteDB with a third party IdP, Active Directory or LDAP authentication these fields will attempt to update the profile on the source system. This differs from the clinical contact information on the profile tab which is always stored in SanteDB. 
+The e-mail and phone number information on the security properties panel is only used for security purposes (like TFA, password resets, etc.). If you're using SanteDB with a third party IdP, Active Directory or LDAP authentication these fields will attempt to update the profile on the source system. This differs from the clinical contact information on the profile tab which is always stored in SanteDB.&#x20;
 {% endhint %}
 
 ### Editing User Profile

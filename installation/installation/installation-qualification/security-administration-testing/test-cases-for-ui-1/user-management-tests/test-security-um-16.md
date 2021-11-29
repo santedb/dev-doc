@@ -26,11 +26,11 @@ New users being created can be assigned multiple primary facilities in the **Pri
 
 ![](<../../../../../../.gitbook/assets/image (243).png>)
 
-2\. Select an existing **Primary Facility **listed in the dropdown (e.g. "ELBONIA" is used in this test).
+2\. Select an existing **Primary Facility** listed in the dropdown (e.g. "ELBONIA" is used in this test).
 
 ![](<../../../../../../.gitbook/assets/image (255).png>)
 
-2\. Select another existing **Primary Facility **listed in the dropdown (e.g. "Good Health Hospital" is used in this test).
+2\. Select another existing **Primary Facility** listed in the dropdown (e.g. "Good Health Hospital" is used in this test).
 
 ## Expected Behaviour
 

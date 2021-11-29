@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device** **without specifying the device name parameter.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device **** without specifying the device name parameter.
 
 ## Pre-Conditions / Setup
 

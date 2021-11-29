@@ -16,7 +16,7 @@ description: Testing the user.add command with existing role with -r parameter o
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**.&#x20;
 
-* The `-r` parameter is used to specify an existing **role **to assign to the user being newly added.&#x20;
+* The `-r` parameter is used to specify an existing **role** to assign to the user being newly added.&#x20;
 * An exception should be thrown when no new username is specified.
 
 ## Pre-Conditions / Setup

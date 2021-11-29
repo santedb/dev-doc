@@ -24,7 +24,7 @@ The Username textbox has UI that prevents Username re-use that is supportive of 
 
 ## Actions/Steps
 
-1\. Select the **Username **textbox within the **Core Properties **section.
+1\. Select the **Username** textbox within the **Core Properties** section.
 
 ![](<../../../../../../.gitbook/assets/image (210).png>)
 

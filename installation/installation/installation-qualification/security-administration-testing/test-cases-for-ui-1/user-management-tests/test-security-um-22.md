@@ -25,7 +25,7 @@ When a user's properties are edited, the user's corresponding **Updated By** cor
 
 ## Actions/Steps
 
-1\. Click the pencil in the top right-hand corner of **Security Properties **to edit them.&#x20;
+1\. Click the pencil in the top right-hand corner of **Security Properties** to edit them.&#x20;
 
 ![](<../../../../../../.gitbook/assets/image (257).png>)
 
@@ -45,7 +45,7 @@ It is recommended to empty the cache and perform a hard reload in step 4.
 
 ## Expected Behaviour
 
-* Notice that the users **Updated By **field in the **Core Properties** has changed to the datetime when roles were edited.
+* Notice that the users **Updated By** field in the **Core Properties** has changed to the datetime when roles were edited.
 
 ![Before editing.](<../../../../../../.gitbook/assets/image (248).png>)
 

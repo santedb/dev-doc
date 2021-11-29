@@ -33,6 +33,6 @@ Groups with explicitly assigned members can be filtered using a search string.&#
 
 ## Expected Behaviour
 
-* The table of **Members **should be filtered to show only members that have names with a substring matching the search string entered.&#x20;
+* The table of **Members** should be filtered to show only members that have names with a substring matching the search string entered.&#x20;
 
 ![](<../../../../../../.gitbook/assets/image (352).png>)

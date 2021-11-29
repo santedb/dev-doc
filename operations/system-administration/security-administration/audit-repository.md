@@ -2,9 +2,9 @@
 
 ## Purpose of Audits
 
-Auditing represents official inspection of user accounts. SanteSuite logs **timestamped** **events** that occur when **actors** perform **actions** within the application that may result in various **outcomes**. 
+Auditing represents official inspection of user accounts. SanteSuite logs **timestamped** **events** that occur when **actors** perform **actions** within the application that may result in various **outcomes**.&#x20;
 
-![](../../../.gitbook/assets/purpose_highlight.png)
+![](../../../.gitbook/assets/purpose\_highlight.png)
 
 ## Reviewing Audits
 
@@ -12,7 +12,7 @@ Audits can be filtered by:
 
 * **Action** - can be Execute, Create, Read, Update, Delete depending on an event action.
 * **Event** - can be Security Alert, Authentication, Import Data, Export Data, or Query depending on what an actor does in the application that is being logged for auditing.
-* **Outcome **- can be Success, Minor/Moderate Fail, Serious Fail, ui.model.audit.outcome.epic
+* **Outcome** - can be Success, Minor/Moderate Fail, Serious Fail, ui.model.audit.outcome.epic
 
 Additional details are provided when viewing an audited event (by clicking a 'View' button in the 'Actions' column) with details about the:
 
@@ -21,7 +21,7 @@ Additional details are provided when viewing an audited event (by clicking a 'Vi
 3. Users & Computers
 4. Data & Objects
 
-![](../../../.gitbook/assets/purpose_highlight2.png)
+![](../../../.gitbook/assets/purpose\_highlight2.png)
 
 ### Event Information
 
@@ -37,11 +37,11 @@ Additional details are provided when viewing an audited event (by clicking a 'Vi
 
 ### Network
 
-The following network diagrams demonstrate differences depending on the event action: 
+The following network diagrams demonstrate differences depending on the event action:&#x20;
 
-![Diagram showing direction of data transfer between user and device during an execute action.](../../../.gitbook/assets/network_execute.png)
+![Diagram showing direction of data transfer between user and device during an execute action.](../../../.gitbook/assets/network\_execute.png)
 
-![Diagram showing direction of data transfer between user and device during a read action.](../../../.gitbook/assets/network_read.png)
+![Diagram showing direction of data transfer between user and device during a read action.](../../../.gitbook/assets/network\_read.png)
 
 | Label   | Description |
 | ------- | ----------- |

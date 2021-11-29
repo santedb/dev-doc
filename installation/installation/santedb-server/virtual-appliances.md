@@ -1,6 +1,6 @@
 # Virtual Appliances
 
-SanteDB provides a number of virtual appliances to assist in the rapid deployment of service environments. 
+SanteDB provides a number of virtual appliances to assist in the rapid deployment of service environments.&#x20;
 
 ## Virtual Appliance Types
 
@@ -20,9 +20,9 @@ You should use the developer environment virtual appliances when you need to rap
 
 * Ubuntu 20.04
 * XFCE4 Desktop Environment
-* MonoDevelop 
+* MonoDevelop&#x20;
 * PostgreSQL 10
-* Visual Studio Code 
+* Visual Studio Code&#x20;
 * DBeaver Community Edition
 * SanteDB iCDR Server
 * SanteDB dCDR Server
@@ -32,12 +32,12 @@ You should use the developer environment virtual appliances when you need to rap
 
 ### **Shell Access**
 
-**User: **sante\
-**Password: **SanteDB123\
+**User:** sante\
+**Password:** SanteDB123\
 After deploying and setting up the OVA, you should either:
 
-* Setup a host entry or DNS entry for **santempi.local **which points to the IP address of the appliance in your environment, or
-* Edit the /etc/nginx/sites-available/santedb file and edit the server_name to use your own DNS entries
+* Setup a host entry or DNS entry for **santempi.local** which points to the IP address of the appliance in your environment, or
+* Edit the /etc/nginx/sites-available/santedb file and edit the server\_name to use your own DNS entries
 
 The service requires that port 80 and 8080 be opened to allow for administrative and API access from other hosts respectively.
 

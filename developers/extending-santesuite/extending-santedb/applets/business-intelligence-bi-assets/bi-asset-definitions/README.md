@@ -9,7 +9,7 @@
 * BiViewDefinition - Defines a view on top of a BiQueryDefinition. This allows for data source independent aggregation and pivoting of results.
 * BiReportDefinition - Defines a user friendly view of data defined in a view.
 
-All BI assets are defined in XML in the **http://santedb.org/bi **namespace. The schema for this namespace is in the Schema\ directory of your SanteDB installation.
+All BI assets are defined in XML in the **http://santedb.org/bi** namespace. The schema for this namespace is in the Schema\ directory of your SanteDB installation.
 
 ### Uses of BI Assets
 

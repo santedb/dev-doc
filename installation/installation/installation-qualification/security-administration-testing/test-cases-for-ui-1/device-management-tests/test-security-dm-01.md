@@ -37,7 +37,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 2-&#x20;
 
 * Should momentarily display success message in the top right corner
-* When navigating to the Devices/Devices page, Should appear New Device(**Create-Device-Test1**)** ** in the list of devices.
+* When navigating to the Devices/Devices page, Should appear New Device(**Create-Device-Test1**) **** in the list of devices.
 
 ![](<../../../../../../.gitbook/assets/4 (3).jpg>)
 

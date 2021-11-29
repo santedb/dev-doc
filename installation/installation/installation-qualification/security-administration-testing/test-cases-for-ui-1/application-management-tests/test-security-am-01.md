@@ -36,7 +36,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 2-
 
 * Should momentarily display success message in the top right corner
-* When navigating to the Applications/List page, Should appear New Application(**Create-Application-Test7**)** ** in the list of applications.
+* When navigating to the Applications/List page, Should appear New Application(**Create-Application-Test7**) **** in the list of applications.
 
 ![](<../../../../../../.gitbook/assets/4 (2).jpg>)
 

@@ -32,6 +32,6 @@ Users can be updated with a Status of Locked (for a maximum amount of time).
 ## Expected Behaviour
 
 * Status of the user that was unlocked changes to **Locked.**
-* **Lock **button changes to an **Unlock** button.
+* **Lock** button changes to an **Unlock** button.
 
 ![](<../../../../../../.gitbook/assets/image (330).png>)

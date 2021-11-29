@@ -27,7 +27,7 @@ The `user.list` command is for listing users.
 
 ## Actions/Steps
 
-1\. Execute the `user.list` command and specify `NOT_A_USER`** **for the `-u` parameter.
+1\. Execute the `user.list` command and specify `NOT_A_USER` **** for the `-u` parameter.
 
 ```
 user.list -u NOT_A_USER

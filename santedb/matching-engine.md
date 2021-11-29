@@ -6,8 +6,8 @@ SanteMPI uses the SanteDB matching engine. This page may be moved in the future 
 
 The matching engine in SanteDB is a multi-stage process whereby an inbound (or a target record) is compared with the current dataset within the CDR. The matching process occurs in three stages:
 
-* **Blocking : **In the blocking phase records are queried from the CDR's database infrastructure. The blocking phase is used to reduce the total number of records being scored, which can be more computationally expensive.
-* **Scoring : **In the scoring stage, the target record is compared to those records retrieved from the blocking phase. Each attribute configured is transformed/normalized and then a score applied for each attribute. Furthermore there are API hooks for implementing partial weighting/partial scoring of an attribute (based on frequency of data in database, NLP, or other future methods)
+* **Blocking :** In the blocking phase records are queried from the CDR's database infrastructure. The blocking phase is used to reduce the total number of records being scored, which can be more computationally expensive.
+* **Scoring :** In the scoring stage, the target record is compared to those records retrieved from the blocking phase. Each attribute configured is transformed/normalized and then a score applied for each attribute. Furthermore there are API hooks for implementing partial weighting/partial scoring of an attribute (based on frequency of data in database, NLP, or other future methods)
 * **Classification :**  In the classification stage, each record's score (the sum of each attribute's score) is grouped into Match, NonMatch, and ProbableMatch. These thresholds are configured.
 
 SanteDB allows for the configuration of multiple match configurations, and allows configuration for the "default" match configuration to be used for regular operation (whenever data is inserted, updated, etc.).
@@ -253,7 +253,7 @@ You can also instruct the matching engine to only run or consider an attribute i
 ```
 
 {% hint style="info" %}
-Note: Since the property path for both attributes are the same (address) the scoring engine will consider these two properties related, and will execute them as pairs. For example, if a patient has both a VacationHome and a Home address this configuration will consider VacationHome as one address for both attributes and Home. If using **address.component\[State].value and address.component\[City].value **instead then the scoring algorithm would treat these as two different property paths.
+Note: Since the property path for both attributes are the same (address) the scoring engine will consider these two properties related, and will execute them as pairs. For example, if a patient has both a VacationHome and a Home address this configuration will consider VacationHome as one address for both attributes and Home. If using **address.component\[State].value and address.component\[City].value** instead then the scoring algorithm would treat these as two different property paths.
 {% endhint %}
 
 #### Partial Scoring

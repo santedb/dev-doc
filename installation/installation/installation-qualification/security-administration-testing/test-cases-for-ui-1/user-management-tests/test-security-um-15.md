@@ -26,7 +26,7 @@ While creating new users, any **Primary Facility** being added to a new user's p
 
 ![](<../../../../../../.gitbook/assets/image (243).png>)
 
-2\. Enter a string value that does not match any existing **Primary Facility **from the dropdown.
+2\. Enter a string value that does not match any existing **Primary Facility** from the dropdown.
 
 ## Expected Behaviour
 

@@ -18,7 +18,7 @@ description: >-
 
 The `user.password` command is for changing a specific users password.&#x20;
 
-* The `-u` parameter is used to specify the **username **of the user who's password will change.&#x20;
+* The `-u` parameter is used to specify the **username** of the user who's password will change.&#x20;
 * An exception is thrown when the username specified does not exist.&#x20;
 
 ## Pre-Conditions / Setup

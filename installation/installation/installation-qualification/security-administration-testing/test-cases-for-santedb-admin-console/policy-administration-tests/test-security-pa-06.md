@@ -20,7 +20,7 @@ Should have the iCDR administrative console open and logged in successfully.
 
 ## Actions/Steps
 
-1- Use the "**policy.assign**" command followed by "**-d" (**or** "--device") **followed** **by the device(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) name(s) to apply. (for example "Create-Policy-Test"
+1- Use the "**policy.assign**" command followed by "**-d" (**or **"--device")** followed **** by the device(s) to assign the policy to followed by "**-p**" (or "**--policy**") followed by the policy(ies) name(s) to apply. (for example "Create-Policy-Test"
 
 ```
 > policy.assign -d Create-Device-Test -p Create-Policy-Test

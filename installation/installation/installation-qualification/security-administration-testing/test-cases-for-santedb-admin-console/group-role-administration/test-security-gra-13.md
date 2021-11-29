@@ -20,7 +20,7 @@ description: >-
 The `role.add` command is for adding a new role and has 1 required parameter that must pass validation: **role**.&#x20;
 
 * The `-r` parameter is used to specify which **role** to display information and effective policies from.
-* The `-d` parameter is used to specify which **policy **to explicitly deny the new role being added.
+* The `-d` parameter is used to specify which **policy** to explicitly deny the new role being added.
 * An exception is thrown when a non-existing policy is specified.
 
 ## Pre-Conditions / Setup

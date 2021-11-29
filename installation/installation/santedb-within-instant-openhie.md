@@ -53,7 +53,7 @@ The Kubernetes folder will need the following items:
   * **db-deployment.yaml**
   * **db-service.yaml** (These are for the Postgres Image)
   * **santedb-deployment.yaml**
-  * **santedb-service.yaml **(This are for the santedb-mpi image)
+  * **santedb-service.yaml** (This are for the santedb-mpi image)
   * **santedb-mpi-app-persistentvolumeclaim.yaml, santedb-mpi-config-persistentvolumeclaim.yaml, santedb-mpi-seed-persistentvolumeclaim**
 * Potentially an **Importer** folder, which while not necessarily required, will make life easier - this would enable you to preconfigure channels, instead of having to manually create them.&#x20;
 
@@ -78,7 +78,7 @@ Next we need to run the images
 yarn docker:instant init -t docker santempi -c="<path to santedb package>"
 ```
 
-The above command is specifying to run docker, specifying the package santempi (Which will link to the **id **property of the instant.json file), and specifying a path of where to find the image.&#x20;
+The above command is specifying to run docker, specifying the package santempi (Which will link to the **id** property of the instant.json file), and specifying a path of where to find the image.&#x20;
 
 It make take several minutes to build. And after it's complete, you may need to wait a couple more minutes for the santedb-mpi server to be fully initialized. Once it's done, you should see something that looks like the following:
 
@@ -115,7 +115,7 @@ If you've used the example project, or have used an Importer, you should be able
 
 #### Channels - If creating manually
 
-If you are creating a channel manually, click on the green **+ Channel **near the bottom left.&#x20;
+If you are creating a channel manually, click on the green **+ Channel** near the bottom left.&#x20;
 
 For **basic info** give a channel name, and a brief description. In this example we are going to use the admin API, so you could call the channel **Santedb MPI Admin**
 
@@ -154,7 +154,7 @@ Next we need to run the images
 yarn docker:instant init -t k8s santempi -c="<path to santedb package>"
 ```
 
-The above command is specifying to run docker, specifying the package santempi (Which will link to the **id **property of the instant.json file), and specifying a path of where to find the image. The only difference between this and docker, is you're changing the keyword 'docker' to 'k8s'.
+The above command is specifying to run docker, specifying the package santempi (Which will link to the **id** property of the instant.json file), and specifying a path of where to find the image. The only difference between this and docker, is you're changing the keyword 'docker' to 'k8s'.
 
 The kubernetes deployments will take much longer to build than the docker deployments. Afterwards it will look something like the following image (Note: This might change depending on what packages you're running)
 
@@ -167,7 +167,7 @@ You can navigate to http://localhost:9000 and be brought to the login screen.&#x
 
 **Manually Adding Channels**
 
-To manually add a santedb channel, once logged in, click on the channel section and the green **Channel + **button.&#x20;
+To manually add a santedb channel, once logged in, click on the channel section and the green **Channel +** button.&#x20;
 
 Adding a channel is almost identical to docker. (See above) - The differences is when adding a route, instead of using the container name, as in docker, you will need to use the IP Address of the pod.&#x20;
 
@@ -177,7 +177,7 @@ To obtain the pod:
 kubectl get pods
 ```
 
-The pod we want is the santeDB pod, **santedb-66bf68f744-xpsnh **(This will change as the name is dynamic, but it should be prefixed with santedb)
+The pod we want is the santeDB pod, **santedb-66bf68f744-xpsnh** (This will change as the name is dynamic, but it should be prefixed with santedb)
 
 ```
 kubectl describe pod santedb-66bf68f744-xpsnh
@@ -191,7 +191,7 @@ Now you can add the IP Address as the **host** for the route.
 
 ![](../../.gitbook/assets/screen-shot-2021-08-06-at-9.43.35-am.png)
 
-One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients **tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
+One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients** tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
 
 &#x20;
 
@@ -219,7 +219,7 @@ grant_type=password&scope=2.25.3049340304933&username=administrator&password=Moh
 
 ### Testing the channels
 
-To test we are going to make API calls using something like **Postman**, or maybe **curl. **For this demo I will use postman.&#x20;
+To test we are going to make API calls using something like **Postman**, or maybe **curl.** For this demo I will use postman.&#x20;
 
 Under the **Authorization** tab for postman, select type as **Bearer Token** - In the value, enter the bearer token that you have generated.&#x20;
 

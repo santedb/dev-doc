@@ -11,7 +11,7 @@ Whenever you install SanteDB in a new environment you will be prompted to run th
 The options are:
 
 * **Easy Configuration** -> Sets a series of defaults from the selected **Template**
-* **Advanced Configuration **-> Creates an empty configuration file which administrators can use individual configuration panels to control the overall configuration.
+* **Advanced Configuration** -> Creates an empty configuration file which administrators can use individual configuration panels to control the overall configuration.
 
 In most cases the Easy Configuration should be used.
 
@@ -59,7 +59,7 @@ To enable or disable a feature, use the ENABLE or DISABLE link on the feature co
 
 ### Advanced Editor
 
-By default the simple editor is shown. The simple editor groups functions into logical feature sets and groups them in a manner which better illustrates what the feature is. There are occasions (for example, third party plugins) where a 1 to 1 representation of the configuration file is desired. This can be accessed via the **Setting Editor. **
+By default the simple editor is shown. The simple editor groups functions into logical feature sets and groups them in a manner which better illustrates what the feature is. There are occasions (for example, third party plugins) where a 1 to 1 representation of the configuration file is desired. This can be accessed via the **Setting Editor.**&#x20;
 
 ![](<../../../../.gitbook/assets/image (417) (1) (1).png>)
 

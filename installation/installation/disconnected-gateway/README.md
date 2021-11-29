@@ -23,7 +23,7 @@ These specifications represent the minimum specifications on which SanteDB's dCG
 
 ### Obtain the Software
 
-For Windows based installations, you can obtain the most recent copy of the SanteDB dCG software at the disconnected gateway releases page: [https://github.com/santedb/santedb-dcg/releases](https://github.com/santedb/santedb-dcg/releases) . 
+For Windows based installations, you can obtain the most recent copy of the SanteDB dCG software at the disconnected gateway releases page: [https://github.com/santedb/santedb-dcg/releases](https://github.com/santedb/santedb-dcg/releases) .&#x20;
 
 For other operating systems and environments, you will currently have to manually compile the dCG software from source. This requires the installation and proper setup of the SanteDB SDK as well as compiler tools for Mono. We are working on more installation options.
 
@@ -56,25 +56,25 @@ You must be connected to the internet to perform the initial configuration.
 
 ### Joining the Security Domain
 
-When you first configure the SanteDB dCG you'll be asked which security domain you'd like to join. There may be several security domains in your jurisdiction depending on different projects, or uses of SanteDB. 
+When you first configure the SanteDB dCG you'll be asked which security domain you'd like to join. There may be several security domains in your jurisdiction depending on different projects, or uses of SanteDB.&#x20;
 
 ![](<../../../.gitbook/assets/image (73).png>)
 
 The configuration settings are:
 
-* **Device ID: **The name of the device which you are configuring. This should be reflective of where the device is located (for example: HOSPITAL_A_HIV_PROGRAM_OFFICE)
-* **Address: **The address of the domain that you'd like to join
-* **Secret Mode: **If you're connecting to a domain which uses a different client secret mode than in the request body you can change it here.
-* **Override Application Secret: **By default , the dcg will authenticate itself as org.santedb.disconnectedClient.gateway , if your administrator has changed this you may override the defaults here.
-* **Port: **If SanteDB server is running on a different port than the 8080 or 8443 you may enter the correct port
-* **Use TLS: **For most production environment you'll check this box to ensure the communication is over TLS.
+* **Device ID:** The name of the device which you are configuring. This should be reflective of where the device is located (for example: HOSPITAL\_A\_HIV\_PROGRAM\_OFFICE)
+* **Address:** The address of the domain that you'd like to join
+* **Secret Mode:** If you're connecting to a domain which uses a different client secret mode than in the request body you can change it here.
+* **Override Application Secret:** By default , the dcg will authenticate itself as org.santedb.disconnectedClient.gateway , if your administrator has changed this you may override the defaults here.
+* **Port:** If SanteDB server is running on a different port than the 8080 or 8443 you may enter the correct port
+* **Use TLS:** For most production environment you'll check this box to ensure the communication is over TLS.
 
 Once you press **Join Realm** you'll be prompted with an elevation prompt. Enter your username and password for the target domain:
 
 ![](<../../../.gitbook/assets/image (91).png>)
 
 {% hint style="info" %}
-The user account you use MUST be granted the **Create Device Identity** policy permission by the central administrator. 
+The user account you use MUST be granted the **Create Device Identity** policy permission by the central administrator.&#x20;
 {% endhint %}
 
 If successful you'll be welcomed to the domain:
@@ -89,7 +89,7 @@ You may also select whether you'd like automatic updates to be downloaded when t
 
 ### Configuring Synchronization
 
-You can configure the frequency of synchronization and the conflict resolution mechanism on the next screen. 
+You can configure the frequency of synchronization and the conflict resolution mechanism on the next screen.&#x20;
 
 ![](<../../../.gitbook/assets/image (100).png>)
 
@@ -101,10 +101,10 @@ If your clinic is never usually connected to the internet, or has limited bandwi
 
 When the disconnected gateway is online, it has the opportunity to download a subset of the information from the central server. This is called a subscription. Subscriptions can be to:
 
-* **The Entire Database : **Where the dCG will download a complete copy of the central server (not recommended)
-* **Place : **Where the dCG will only download information about patients who live in the specified place.
-* **Facility : **Where the dCG can establish a relationship between a patient or event and a facility
-* **Identifier : **Where the dCG will only download information which has an identifier from the specified domain.
+* **The Entire Database :** Where the dCG will download a complete copy of the central server (not recommended)
+* **Place :** Where the dCG will only download information about patients who live in the specified place.
+* **Facility :** Where the dCG can establish a relationship between a patient or event and a facility
+* **Identifier :** Where the dCG will only download information which has an identifier from the specified domain.
 
 ![](<../../../.gitbook/assets/image (84).png>)
 
@@ -120,7 +120,7 @@ Because the dCG operates offline, it must maintain security settings which dicta
 
 * The password storage strength
 * How long local audits should be retained on the device
-* Where the device will operate 
+* Where the device will operate&#x20;
   * Whether only users assigned to that facility can log in
 * Who is the administrative contact for the device
 

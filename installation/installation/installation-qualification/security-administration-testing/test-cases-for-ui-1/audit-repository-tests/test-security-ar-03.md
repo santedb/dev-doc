@@ -18,7 +18,7 @@ When a device is an actor involved in an audit event, a link can be followed to 
 ## Pre-Conditions / Setup
 
 1. User must have permission to view the list of other devices.
-2. Follow the instructions from [TEST: SECURITY-AR-01](test-security-ar-01.md) to view the details of some **Audit Event **involving a device.
+2. Follow the instructions from [TEST: SECURITY-AR-01](test-security-ar-01.md) to view the details of some **Audit Event** involving a device.
 
 ## Actions/Steps
 
@@ -26,13 +26,13 @@ When a device is an actor involved in an audit event, a link can be followed to 
 
 ![](<../../../../../../.gitbook/assets/image (371).png>)
 
-2\. Click on a device's **User Name **appearing in the list of **Users & Computers **(e.g. "OSS-SANTEMPE-EL").
+2\. Click on a device's **User Name** appearing in the list of **Users & Computers** (e.g. "OSS-SANTEMPE-EL").
 
 ![](<../../../../../../.gitbook/assets/image (351).png>)
 
 ## Expected Behaviour
 
-* Automatically navigate to the **Administration Panel / Security / Devices / Index **page.
+* Automatically navigate to the **Administration Panel / Security / Devices / Index** page.
 * Automatically enter search string to show the device that was clicked.
 
 ![](<../../../../../../.gitbook/assets/image (360).png>)

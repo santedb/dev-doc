@@ -17,7 +17,7 @@ bc8221bc-9cbd-11eb-be65-00155d640b09   test-new4                                
 a9ada8ae-9cbd-11eb-be65-00155d640b09   test-new3                                                              0    *
 ```
 
-The optional filter parameters for `application.list`** **are:
+The optional filter parameters for `application.list` **** are:
 
 | Parameter | Description                    | Example               |
 | --------- | ------------------------------ | --------------------- |

@@ -33,7 +33,7 @@ As more of each of the items listed above are used, the password is stronger. **
 ## Expected Behaviour
 
 * A status bar should be displayed yellow or red or not at all.
-* Status bar is labelled to the right of the status bar as either **Moderate** (using "Clinic@l"; shown below) or **Weak **(using "Clinic") or **Very Weak **(using "Clini").
+* Status bar is labelled to the right of the status bar as either **Moderate** (using "Clinic@l"; shown below) or **Weak** (using "Clinic") or **Very Weak** (using "Clini").
 
 ![](<../../../../../../.gitbook/assets/image (230).png>)
 

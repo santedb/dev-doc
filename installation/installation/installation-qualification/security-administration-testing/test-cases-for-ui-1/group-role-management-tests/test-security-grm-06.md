@@ -22,7 +22,7 @@ A **Policy** may be added to a group which is applied to group members.
 
 ## Actions/Steps
 
-&#x20;1\. Select the **Add **dropdown within the **Assigned Policies** panel.
+&#x20;1\. Select the **Add** dropdown within the **Assigned Policies** panel.
 
 ![](<../../../../../../.gitbook/assets/image (343).png>)
 
@@ -40,7 +40,7 @@ A **Policy** may be added to a group which is applied to group members.
 
 ## Expected Behaviour
 
-* The explicitly added **Policy** (e.g. "Create Local Users") is saved to the list of **Assigned Policies **with a **Permission **value of **Grant **selected by default (darkened button).
+* The explicitly added **Policy** (e.g. "Create Local Users") is saved to the list of **Assigned Policies** with a **Permission** value of **Grant** selected by default (darkened button).
 * Dropdown of policies in the **Add** field has its last selection cleared.
 
 ![](<../../../../../../.gitbook/assets/image (347).png>)

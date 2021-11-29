@@ -21,19 +21,19 @@ A user's password can be reset by editing their Security Properties.&#x20;
 
 1. User must be logged into an account with policies granted for creating users.
 2. Follow the instructions from [TEST: SECURITY-UM-01](test-security-um-01.md) to create a new user -- applying any valid values for required fields.
-3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User **for the newly created user.
+3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User** for the newly created user.
 
 ## Actions/Steps
 
-1\. Click the pencil in the top right-hand corner of **Security Properties **to edit them.
+1\. Click the pencil in the top right-hand corner of **Security Properties** to edit them.
 
 ![](<../../../../../../.gitbook/assets/image (253).png>)
 
-2\. Click the **Reset Pwd **button.
+2\. Click the **Reset Pwd** button.
 
 ![](<../../../../../../.gitbook/assets/image (276).png>)
 
-3\. Enter a **New Password** and a matching **Confirm Password** that is either **Strong **or **Very Strong **(see [TEST: SECURITY-UM-08](test-security-um-08.md)) and click the **Save** button.
+3\. Enter a **New Password** and a matching **Confirm Password** that is either **Strong** or **Very Strong** (see [TEST: SECURITY-UM-08](test-security-um-08.md)) and click the **Save** button.
 
 ![](<../../../../../../.gitbook/assets/image (281).png>)
 

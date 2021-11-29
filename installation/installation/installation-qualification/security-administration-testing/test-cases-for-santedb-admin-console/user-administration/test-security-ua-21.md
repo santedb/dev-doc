@@ -12,7 +12,7 @@ description: Testing the user.undel command with no parameters specified.
 
 ## Discussion
 
-The `user.undel` command is for re-activating de-activated users (effectively un-deleting the user) and has a single `-u` parameter for specifying **username **of user to un-delete.
+The `user.undel` command is for re-activating de-activated users (effectively un-deleting the user) and has a single `-u` parameter for specifying **username** of user to un-delete.
 
 * An exception is thrown when no username is specified.
 

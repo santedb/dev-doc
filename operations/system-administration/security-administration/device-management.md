@@ -4,7 +4,7 @@ The administrative portal provides several key functions related to the administ
 
 ## Creating A New Device
 
-If you wanted to create a new device, you could select the **Create **button. 
+If you wanted to create a new device, you could select the **Create** button.&#x20;
 
 ![](<../../../.gitbook/assets/3 (1).jpg>)
 
@@ -39,13 +39,13 @@ Then click the Device Secret **Reset** button to reset the Device Secret:
 
 ![](../../../.gitbook/assets/16.jpg)
 
-## Assigning Policies To A Device 
+## Assigning Policies To A Device&#x20;
 
 In order to assign a policy to a device you should click the **Edit** button:
 
 ![](../../../.gitbook/assets/16-1.jpg)
 
-then go to the **Assigned Policies** tab,  choose the policy you wish to add** **from the drop-down list and click the **+ **button**:**
+then go to the **Assigned Policies** tab,  choose the policy you wish to add **** from the drop-down list and click the **+** button**:**
 
 ![](../../../.gitbook/assets/20.jpg)
 

@@ -11,7 +11,7 @@ description: Testing the removal of a member while editing a group's Members.
 
 ## Discussion
 
-A **Member **is removable from a group.
+A **Member** is removable from a group.
 
 ## Pre-Conditions / Setup
 
@@ -29,7 +29,7 @@ A **Member **is removable from a group.
 
 ## Expected Behaviour
 
-* The specific **Member **removed should not appear in the list after it is reloaded.
+* The specific **Member** removed should not appear in the list after it is reloaded.
 
 ![](<../../../../../../.gitbook/assets/image (359).png>)
 

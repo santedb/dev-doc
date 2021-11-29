@@ -26,6 +26,6 @@ description: >-
 ## Expected Behaviour
 
 * The **Role Name** tag corresponding to the **x** clicked is removed from the **Role** textbox.
-* Only policies and permissions for the **Role Name(s)** in the **Role **textbox are applied upon creation of the corresponding user (see [TEST: SECURITY-UM-01](test-security-um-01.md)).
+* Only policies and permissions for the **Role Name(s)** in the **Role** textbox are applied upon creation of the corresponding user (see [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
 ![](<../../../../../../.gitbook/assets/image (157).png>)

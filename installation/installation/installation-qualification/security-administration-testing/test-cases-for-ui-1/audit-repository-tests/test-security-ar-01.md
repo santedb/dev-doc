@@ -14,7 +14,7 @@ The details of each event from the **Audit Repository** can be viewed.
 
 ## Pre-Conditions / Setup
 
-1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository **events.
+1. Sign in with the "demoadmin" user or another user with permission to view **Audit Repository** events.
 2. Navigate to the **Administration Panel / Security / Audit Log / List**.&#x20;
 
 {% hint style="warning" %}

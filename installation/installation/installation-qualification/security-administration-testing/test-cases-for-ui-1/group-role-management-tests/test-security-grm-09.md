@@ -11,7 +11,7 @@ description: Testing the removal of a Policy while editing a group's Assigned Po
 
 ## Discussion
 
-A **Policy **is removable from a group.
+A **Policy** is removable from a group.
 
 ## Pre-Conditions / Setup
 

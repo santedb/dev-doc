@@ -5,7 +5,7 @@ Active management of user accounts is paramount to the security of SanteDB serve
 User accounts are used to link to **Humans that use SanteDB**.&#x20;
 
 {% hint style="info" %}
-It is best practice to keep user accounts as **Human Users** which are using the SanteDB system in an interactive capacity or **System Users** which are internal to the host process. If you wish to implement service or non-human users which need to interact with SanteDB it is recommended you use **Device **and **Application **credentials instead.
+It is best practice to keep user accounts as **Human Users** which are using the SanteDB system in an interactive capacity or **System Users** which are internal to the host process. If you wish to implement service or non-human users which need to interact with SanteDB it is recommended you use **Device** and **Application** credentials instead.
 {% endhint %}
 
 ## User List

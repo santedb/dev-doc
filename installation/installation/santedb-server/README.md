@@ -10,10 +10,10 @@ description: >-
 
 SanteDB Server can be a light process, and requirements for running SanteDB Server will vary depending on your deployment and purpose. At minimum, SanteDB Server requires:
 
-* **Operating System: **Windows Server 2008R2 SP1, Windows 7 SP2, Linux (varies), MacOS 10.9+
-* **RAM: **1 GB RAM minimum (more if using Memory Caching)
-* **CPU: **Any (multi-core system recommended)
-* **HDD: **300 MB recommended
+* **Operating System:** Windows Server 2008R2 SP1, Windows 7 SP2, Linux (varies), MacOS 10.9+
+* **RAM:** 1 GB RAM minimum (more if using Memory Caching)
+* **CPU:** Any (multi-core system recommended)
+* **HDD:** 300 MB recommended
 
 ### Database Support
 
@@ -34,7 +34,7 @@ Use PostgreSQL when:
 * You are deploying to a training, testing, or production environment
 * Your SanteDB server will be accessed by multiple clients
 * You require the use of third party reporting, ETL, or query tools
-* You need to support or scale out of your application server 
+* You need to support or scale out of your application server&#x20;
 
 #### **FirebirdSQL**
 
@@ -53,7 +53,7 @@ SanteDB supports a caching as a query optimization strategy. The SanteDB cache i
 
 #### In-Process Memory Cache
 
-The in-process memory cache is the easiest to setup. It requires no additional software services to be running and allows SanteDB Server to store objects in its own memory space. 
+The in-process memory cache is the easiest to setup. It requires no additional software services to be running and allows SanteDB Server to store objects in its own memory space.&#x20;
 
 Use in-process memory caching when:
 
@@ -72,7 +72,7 @@ Use REDIS caching when:
 
 ## Security Certificate Notice
 
-SanteDB's iCDR uses code signing in order to verify the identity of publishers of Applets and Plugins. Many community partners use publishing certificates issued by the SanteDB Community Certificate Authority. 
+SanteDB's iCDR uses code signing in order to verify the identity of publishers of Applets and Plugins. Many community partners use publishing certificates issued by the SanteDB Community Certificate Authority.&#x20;
 
 When you install the iCDR or dCDR the software needs to register these certificates.
 

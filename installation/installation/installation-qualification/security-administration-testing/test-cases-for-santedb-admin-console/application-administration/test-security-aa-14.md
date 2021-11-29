@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application** **without specifying the application name parameter.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security application **** without specifying the application name parameter.
 
 ## Pre-Conditions / Setup
 

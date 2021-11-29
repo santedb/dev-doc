@@ -12,7 +12,7 @@ description: >-
 
 ## Discussion
 
-This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device** **with a name parameter that is a duplicate record.
+This is a basic test to demonstrate the Admin Console commands operate correctly when adding a new security device **** with a name parameter that is a duplicate record.
 
 ## Pre-Conditions / Setup
 

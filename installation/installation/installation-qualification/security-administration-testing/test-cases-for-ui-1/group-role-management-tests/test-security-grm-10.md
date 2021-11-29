@@ -21,7 +21,7 @@ Groups with explicitly assigned policies can be filtered using a search string.&
 
 ## Actions/Steps
 
-1\. Click the **Edit **button corresponding to a **Role Name** known to have **Assigned Policies **(e.g. "SYSTEM").
+1\. Click the **Edit** button corresponding to a **Role Name** known to have **Assigned Policies** (e.g. "SYSTEM").
 
 ![](<../../../../../../.gitbook/assets/image (377).png>)
 

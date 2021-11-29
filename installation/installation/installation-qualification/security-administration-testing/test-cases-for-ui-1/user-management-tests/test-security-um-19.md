@@ -21,7 +21,7 @@ New users being created can be assigned multiple employers in the **Employer** t
 
 ## Actions/Steps
 
-1\. Follow the same actions/steps from [TEST: SECURITY-UM-16](test-security-um-16.md), but use the **Employer** textbox and a corresponding valid listed values (e.g. "Elbonia National Health Insurnace Programme" and "Dilbert Vaccine Manufacturers") instead of the **Primary Facility **textbox and a corresponding multiple values (e.g. "ELBONIA" and "Good Health Hospital").
+1\. Follow the same actions/steps from [TEST: SECURITY-UM-16](test-security-um-16.md), but use the **Employer** textbox and a corresponding valid listed values (e.g. "Elbonia National Health Insurnace Programme" and "Dilbert Vaccine Manufacturers") instead of the **Primary Facility** textbox and a corresponding multiple values (e.g. "ELBONIA" and "Good Health Hospital").
 
 ## Expected Behaviour
 

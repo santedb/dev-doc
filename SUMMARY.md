@@ -4,18 +4,18 @@
 
 ## Product Overview
 
-* [Introducing SanteDB CDR](product-overview/santedb.md)
 * [SanteSuite Products](product-overview/santesuite-products/README.md)
-  * [SanteDB Versioning](product-overview/santesuite-products/santedb-versioning.md)
+  * [Introducing SanteDB CDR](product-overview/santesuite-products/santedb.md)
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
-  * [Version 3.x Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
-  * [SanteDB History](product-overview/santesuite-products/santedb-history.md)
 
-## Architecture <a href="santedb" id="santedb"></a>
+## Architecture <a href="#santedb" id="santedb"></a>
 
-* [Overall Architecture](santedb/architecture.md)
-* [Software Architecture](santedb/software-architecture.md)
+* [Overall Architecture](santedb/architecture/README.md)
+  * [SanteDB History](santedb/architecture/santedb-history.md)
+* [Software Architecture](santedb/software-architecture/README.md)
+  * [SanteDB Versioning](santedb/software-architecture/santedb-versioning.md)
+  * [Version 3.x Roadmap](santedb/software-architecture/version-3.x-roadmap.md)
 * [Data & Information Architecture](santedb/data-and-information-architecture/README.md)
   * [Conceptual Information Model](santedb/data-and-information-architecture/conceptual-data-model/README.md)
     * [Concept Dictionary](santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary/README.md)

@@ -19,7 +19,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Actions/Steps
 
-1- Click the** Edit** button.
+1- Click the **Edit** button.
 
 ![](<../../../../../../.gitbook/assets/18 (1).jpg>)
 

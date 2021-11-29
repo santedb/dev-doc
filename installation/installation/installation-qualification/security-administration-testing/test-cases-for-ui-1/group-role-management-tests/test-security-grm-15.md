@@ -11,7 +11,7 @@ description: Testing successful un-deletion of a group that has previously been 
 
 ## Discussion
 
-After a group record has been deleted, it is not permanently destroyed. Deleted groups can be **Un-Deleted **and is recovered from a Status of Obsolete in so doing.&#x20;
+After a group record has been deleted, it is not permanently destroyed. Deleted groups can be **Un-Deleted** and is recovered from a Status of Obsolete in so doing.&#x20;
 
 ## Pre-Conditions / Setup
 

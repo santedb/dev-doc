@@ -6,7 +6,7 @@ The SanteMPI patient dashboard is available for any patient which has been regis
 
 ![](<../.gitbook/assets/image (44).png>)
 
-The patient demographics dashboard is first shown when you open a patient's entity information in the SanteMPI platform. This sheet shows the key demographics the patient has, the relationships the patient has with other entities (people, places, things, etc.) as well as the Master / Local relationship. 
+The patient demographics dashboard is first shown when you open a patient's entity information in the SanteMPI platform. This sheet shows the key demographics the patient has, the relationships the patient has with other entities (people, places, things, etc.) as well as the Master / Local relationship.&#x20;
 
 ### Record Type Bar
 
@@ -20,7 +20,7 @@ Depending on the configuration of SanteDB, and the status of the currently viewe
 
 ![](<../.gitbook/assets/image (72).png>)
 
-* The record is a master record which has been adjudicated by a person. The data you're seeing represents the data from the record of Truth. You can still see the source data by clicking on a local record in the **Master Data Management **tab.
+* The record is a master record which has been adjudicated by a person. The data you're seeing represents the data from the record of Truth. You can still see the source data by clicking on a local record in the **Master Data Management** tab.
 
 ![](<../.gitbook/assets/image (42).png>)
 
@@ -34,6 +34,6 @@ On the MDM dashboard tab of the dashboard will present you with three panels whe
 
 ### Entity Relationship View
 
-The entity relationship panel allows you to quickly view the relationships between the various entities stored within the SanteDB service for the specified patient. 
+The entity relationship panel allows you to quickly view the relationships between the various entities stored within the SanteDB service for the specified patient.&#x20;
 
 ![](<../.gitbook/assets/image (4).png>)

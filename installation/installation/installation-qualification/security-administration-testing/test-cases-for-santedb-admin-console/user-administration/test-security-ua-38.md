@@ -18,7 +18,7 @@ description: >-
 
 The `user.roles` command is for assigning roles to a user.&#x20;
 
-* The `-u` parameter is used to specify the **username **of which user to assign roles to.&#x20;
+* The `-u` parameter is used to specify the **username** of which user to assign roles to.&#x20;
 * An exception is thrown when no role is specified.
 
 ## Pre-Conditions / Setup

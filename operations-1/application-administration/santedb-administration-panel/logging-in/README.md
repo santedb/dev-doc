@@ -7,8 +7,8 @@ Upon navigating to the SanteDB iCDR administration panel for your deployment, th
 
 
 * **Username Input**: This is a the security name which was created for your user. On a default installation of SanteDB the administrator account is `Administrator`. User names are case-insensitive, meaning `AdMiNiStRaToR` is equivalent to `administrator`.
-* **Password Input: **This is the password which was provided to you by your administrator. The default password for a SanteDB installation is `Mohawk123`.
-* **Login: **This button submits the authentication credentials you've entered to the identity provider and establishes a session for your account.
+* **Password Input:** This is the password which was provided to you by your administrator. The default password for a SanteDB installation is `Mohawk123`.
+* **Login:** This button submits the authentication credentials you've entered to the identity provider and establishes a session for your account.
 * **Forgot Password**: This button initiates a password reset operation.
 
 ## Forgot Password

@@ -38,7 +38,7 @@ Manual conversion is a two-step process. Start by clicking the **Convert** optio
 
 ![](<../../.gitbook/assets/image (132).png>)
 
-Complete the **Birth **information tab that appears when selecting this option. Complete the suspected DOB for the patient and gender. Once complete, press **Convert** again to complete the process.
+Complete the **Birth** information tab that appears when selecting this option. Complete the suspected DOB for the patient and gender. Once complete, press **Convert** again to complete the process.
 
 ![](<../../.gitbook/assets/image (80).png>)
 

@@ -16,7 +16,7 @@ description: >-
 
 The `user.list` command is for listing users.&#x20;
 
-* The `-u` parameter is used to specify a **username **to filter the list with.
+* The `-u` parameter is used to specify a **username** to filter the list with.
 
 ## Pre-Conditions / Setup
 
@@ -25,7 +25,7 @@ The `user.list` command is for listing users.&#x20;
 
 ## Actions/Steps
 
-1\. Execute the `user.list` command and specify `demoadmin`** **for the `-u` parameter.
+1\. Execute the `user.list` command and specify `demoadmin` **** for the `-u` parameter.
 
 ```
 user.list -u demoadmin

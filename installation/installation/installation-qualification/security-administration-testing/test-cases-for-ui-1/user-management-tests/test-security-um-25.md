@@ -20,15 +20,15 @@ SanteSuite allows users to register multiple **Name** objects each with Prefix, 
 
 1. User must be logged into an account with policies granted for creating users.
 2. Follow the instructions from [TEST: SECURITY-UM-01](test-security-um-01.md) to create a new user -- applying any valid values for required fields.
-3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User **for the newly created user.
+3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User** for the newly created user.
 
 ## Actions/Steps
 
-1\. Click the **User Profile **tab.
+1\. Click the **User Profile** tab.
 
 ![](<../../../../../../.gitbook/assets/image (249).png>)
 
-2\. Click the pencil in the top right-hand corner of the **Profile **to edit the properties.&#x20;
+2\. Click the pencil in the top right-hand corner of the **Profile** to edit the properties.&#x20;
 
 ![](<../../../../../../.gitbook/assets/image (272).png>)
 
@@ -40,7 +40,7 @@ SanteSuite allows users to register multiple **Name** objects each with Prefix, 
 
 ![](<../../../../../../.gitbook/assets/image (244).png>)
 
-5\. Select a **Suffix **and **Prefix **from the corresponding dropdown lists and enter any **Given** or **Family** name(s) similar to how it is done in [TEST: SECURITY-UM-13](test-security-um-13.md) and [TEST: SECURITY-UM-14](test-security-um-14.md).
+5\. Select a **Suffix** and **Prefix** from the corresponding dropdown lists and enter any **Given** or **Family** name(s) similar to how it is done in [TEST: SECURITY-UM-13](test-security-um-13.md) and [TEST: SECURITY-UM-14](test-security-um-14.md).
 
 ![](<../../../../../../.gitbook/assets/image (256).png>)
 
@@ -50,8 +50,8 @@ SanteSuite allows users to register multiple **Name** objects each with Prefix, 
 
 ## Expected Behaviour
 
-* Notice that **Remove **buttons appear below each form group when there is more than one.
-* Notice that **Name Registration **form group headings change according to the selected **Name Type** after selecting from the dropdown in step 4.
+* Notice that **Remove** buttons appear below each form group when there is more than one.
+* Notice that **Name Registration** form group headings change according to the selected **Name Type** after selecting from the dropdown in step 4.
 * Notice the red circle with exclamation mark next to the **Name** tab in step 4 when a Name Registration form group is blank. Clicking the green checkmark like in step 6 without providing a **Name Type** first like in step 5 has a result of nothing occurring.
 * A toast message appears in the top-right corner of the window stating "User updated successfully" when the steps above are followed correctly.
 

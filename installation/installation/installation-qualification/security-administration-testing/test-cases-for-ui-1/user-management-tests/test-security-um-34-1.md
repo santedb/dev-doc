@@ -11,7 +11,7 @@ description: Testing successful un-deletion of a user that has previously been d
 
 ## Discussion
 
-After a user record has been deleted, it is not permanently destroyed. Deleted users can be **Un-Deleted **and is recovered from a Status of Obsolete in so doing.&#x20;
+After a user record has been deleted, it is not permanently destroyed. Deleted users can be **Un-Deleted** and is recovered from a Status of Obsolete in so doing.&#x20;
 
 ## Pre-Conditions / Setup
 
@@ -23,7 +23,7 @@ After a user record has been deleted, it is not permanently destroyed. Deleted u
 
 ![](<../../../../../../.gitbook/assets/image (297).png>)
 
-2\. Click the** OK **button on the confirmation modal that appears in the browser.
+2\. Click the **OK** button on the confirmation modal that appears in the browser.
 
 ![](<../../../../../../.gitbook/assets/image (331).png>)
 

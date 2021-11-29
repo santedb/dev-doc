@@ -2,8 +2,8 @@
 
 The SanteDB iCDR server runs via the SanteDB.exe file located in the following default installation directories:
 
-* **Microsoft Windows Operating Systems: **C:\Program Files\SanteSuite\SanteDB\Server\SanteDB.exe
-* **Linux Operating Systems: **/opt/santesuite/santedb/server/SanteDB.exe
+* **Microsoft Windows Operating Systems:** C:\Program Files\SanteSuite\SanteDB\Server\SanteDB.exe
+* **Linux Operating Systems:** /opt/santesuite/santedb/server/SanteDB.exe
 
 This process can be used to operate one or more IMS services.&#x20;
 

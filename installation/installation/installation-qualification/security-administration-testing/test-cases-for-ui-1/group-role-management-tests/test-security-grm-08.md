@@ -31,6 +31,6 @@ After a **Policy** is added to the list of **Assigned Policies**, its **Permissi
 
 ## Expected Behaviour
 
-* The **Permission** toggle button should switch to **Elevate **being darkened (selected) for the corresponding **Policy**.
+* The **Permission** toggle button should switch to **Elevate** being darkened (selected) for the corresponding **Policy**.
 
 ![](<../../../../../../.gitbook/assets/image (375).png>)

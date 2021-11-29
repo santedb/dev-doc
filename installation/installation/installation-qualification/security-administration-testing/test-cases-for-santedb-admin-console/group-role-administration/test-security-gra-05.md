@@ -14,7 +14,7 @@ description: Testing the role.info command with a existing role specified as -r 
 
 ## Discussion
 
-The `role.info` command is for listing a specific role's information and effective policies. The `-r` parameter is used to specify which **role **to display information and effective policies from.
+The `role.info` command is for listing a specific role's information and effective policies. The `-r` parameter is used to specify which **role** to display information and effective policies from.
 
 ## Pre-Conditions / Setup
 

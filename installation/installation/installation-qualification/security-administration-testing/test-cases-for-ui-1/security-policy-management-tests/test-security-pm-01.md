@@ -37,7 +37,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 * Should navigate to Policy Management Index page.
 * Should momentarily display success message in the top right corner
-* Should appear New Policy(**Create-Policy-Test**)** ** in the table of policies on the Index page with properties matching those put in the form required to create a new policy.
+* Should appear New Policy(**Create-Policy-Test**) **** in the table of policies on the Index page with properties matching those put in the form required to create a new policy.
 
 ![](<../../../../../../.gitbook/assets/4 (1).jpg>)
 

@@ -1,6 +1,6 @@
 # REST Service Configuration
 
-The RestService configuration is contained in the `RestConfigurationSection `section. To register this section, add the following section configuration registration.
+The RestService configuration is contained in the `RestConfigurationSection` section. To register this section, add the following section configuration registration.
 
 ```markup
 <sections>
@@ -12,10 +12,10 @@ Each REST based service in the host uses a service in the rest controller host (
 
 ![](<../../../../../.gitbook/assets/image (200).png>)
 
-* **Service: **A service represents a logical service which is provided on the REST based API. A service can be FHIR or METADATA, etc. Typically a single daemon service will bind itself to a single rest service.
-* **Service Behavior: **Service behaviors represent a behavior which applied across all endpoints within the service. This can be, for example, authorization behaviors, or policy behaviors.
-* **Endpoint: **An endpoint is a specific listening location for the REST based service. The endpoint is bound to a listening address and a contract. A contract can express a particular series of operations and paths on the endpoint base address.  A contract can be (for example) v1, v2, v3 of an API service.
-* **Endpoint Behavior: **An endpoint behavior is a particular behavior applied only to the endpoint. Endpoint behaviors include messaging inspectors, serializers, compression behaviors, cors behaviors etc.
+* **Service:** A service represents a logical service which is provided on the REST based API. A service can be FHIR or METADATA, etc. Typically a single daemon service will bind itself to a single rest service.
+* **Service Behavior:** Service behaviors represent a behavior which applied across all endpoints within the service. This can be, for example, authorization behaviors, or policy behaviors.
+* **Endpoint:** An endpoint is a specific listening location for the REST based service. The endpoint is bound to a listening address and a contract. A contract can express a particular series of operations and paths on the endpoint base address.  A contract can be (for example) v1, v2, v3 of an API service.
+* **Endpoint Behavior:** An endpoint behavior is a particular behavior applied only to the endpoint. Endpoint behaviors include messaging inspectors, serializers, compression behaviors, cors behaviors etc.
 
 An example of a simple FHIR API configuration is illustrated below.
 
@@ -60,7 +60,7 @@ The TokenAuthorizationAccess behavior is configured using the `SanteDB.Server.Co
 
 ### Basic Authentication Access Behavior
 
-The BasicAuthenticationAccessBehavior behavior is configured using the `SanteDB.Rest.Common.Security.BasicAuthorizationAccessBehavior `and allows the use of HTTP BASIC authentication to establish principals.
+The BasicAuthenticationAccessBehavior behavior is configured using the `SanteDB.Rest.Common.Security.BasicAuthorizationAccessBehavior` and allows the use of HTTP BASIC authentication to establish principals.
 
 ```markup
 <service name="name">

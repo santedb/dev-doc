@@ -71,7 +71,7 @@ This input area can change based on the configuration of your instance of SanteM
 * Freeform - You will be presented with freetext inputs where you can manually enter each field.
 
 {% hint style="info" %}
-The labels of the fields in the address entry screen can also be customized based on your configuration of SanteMPI. For example, County/District may appear in your interface as **Township **.
+The labels of the fields in the address entry screen can also be customized based on your configuration of SanteMPI. For example, County/District may appear in your interface as **Township** .
 {% endhint %}
 
 The type of addresses which can be captured in SanteDB/SanteMPI are listed below, this list can be customized by editing the concept set AddressUse.

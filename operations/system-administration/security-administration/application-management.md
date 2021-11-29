@@ -8,7 +8,7 @@ Application Identity is defined as identity of scope of grants permitted to the 
 
 ## Creating A New Application
 
-If you wanted to create a new application, you could select the **Create **button.
+If you wanted to create a new application, you could select the **Create** button.
 
 ![](<../../../.gitbook/assets/1 (1).jpg>)
 

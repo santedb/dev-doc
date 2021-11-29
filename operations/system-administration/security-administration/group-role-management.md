@@ -1,6 +1,6 @@
 # Group / Role Management
 
-Users may be placed into one or more groups in the SanteDB system. A group (or role) represents a functional responsibility that a user has plays within the system. The administrative portal provides several key functions related to the administration of groups. For example, you may create a security group for CLINICAL_STAFF, and another group for HIV_PHYSICIANS. You can then assign policies to each group. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the [Group / Role Administration](../host-administration/santedb-icdr-admin-console/group-role-management.md) page.
+Users may be placed into one or more groups in the SanteDB system. A group (or role) represents a functional responsibility that a user has plays within the system. The administrative portal provides several key functions related to the administration of groups. For example, you may create a security group for CLINICAL\_STAFF, and another group for HIV\_PHYSICIANS. You can then assign policies to each group. To see the counterpart to these functions from the perspective of the [SanteDB iCDR Admin Console](../host-administration/santedb-icdr-admin-console/), see the [Group / Role Administration](../host-administration/santedb-icdr-admin-console/group-role-management.md) page.
 
 ## Reviewing Groups
 
@@ -20,9 +20,9 @@ SanteDB supports a very robust policy infrastructure. The security architecture 
 
 You can set one of three permissions on each policy:
 
-* **Grant: **The user is granted access to the policy (either permission policy or data policy) 
+* **Grant:** The user is granted access to the policy (either permission policy or data policy)&#x20;
 * **Deny:**The user is explicitly denied access to the policy (any permission which demands it, or any data which has it assigned)
-* **Elevate: **By default, the user is denied access to the action/data the policy is attached to , however if the user belongs to a group which has the **Override **policy, they will have the opportunity to elevate themselves (similar to Windows UAC) to obtain access to the data or action they were attempting to access.
+* **Elevate:** By default, the user is denied access to the action/data the policy is attached to , however if the user belongs to a group which has the **Override** policy, they will have the opportunity to elevate themselves (similar to Windows UAC) to obtain access to the data or action they were attempting to access.
 
 {% hint style="info" %}
 Remember, SanteDB uses the MOST RESTRICTIVE permission for a policy. If a user is a member of two groups, and one group GRANT access to the policy, and another DENY it, the ACL is DENY.

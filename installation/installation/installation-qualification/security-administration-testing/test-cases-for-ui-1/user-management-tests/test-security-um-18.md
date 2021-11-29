@@ -23,7 +23,7 @@ While creating new users, any Employer being added to a new user's profile must 
 
 ## Actions/Steps
 
-1\. Follow the same actions/steps from [TEST: SECURITY-UM-15](test-security-um-15.md), but use the **Employer** textbox and a corresponding invalid value (e.g. "NOT\_AN\_EMPLOYER") instead of the **Primary Facility **textbox and a corresponding invalid value.  &#x20;
+1\. Follow the same actions/steps from [TEST: SECURITY-UM-15](test-security-um-15.md), but use the **Employer** textbox and a corresponding invalid value (e.g. "NOT\_AN\_EMPLOYER") instead of the **Primary Facility** textbox and a corresponding invalid value.  &#x20;
 
 ## Expected Behaviour
 

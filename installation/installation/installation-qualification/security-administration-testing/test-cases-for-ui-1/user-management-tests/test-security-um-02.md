@@ -25,14 +25,14 @@ Some user properties are specifically required to successfully create a new user
 
 ## Actions/Steps
 
-1\. Click the **Save **button.  &#x20;
+1\. Click the **Save** button.  &#x20;
 
 ![](../../../../../../.gitbook/assets/blankcreate\_savebutton.png)
 
 ## Expected Behaviour
 
 * No user should be created.
-* Remain on **Administration Panel / Security / Users / Create User **page.
+* Remain on **Administration Panel / Security / Users / Create User** page.
 * Display a prompt below each required property textbox with a validation message as follows:
 
 ![](../../../../../../.gitbook/assets/blankcreate\_prompted.png)

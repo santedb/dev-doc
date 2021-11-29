@@ -21,7 +21,7 @@ SanteSuite groups cannot be permanently destroyed. Deleting a group means that i
 
 ## Actions/Steps
 
-&#x20;1\. Click the **Delete **button in the same row as the group to be deleted.
+&#x20;1\. Click the **Delete** button in the same row as the group to be deleted.
 
 ![](<../../../../../../.gitbook/assets/image (293).png>)
 

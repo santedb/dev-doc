@@ -91,7 +91,7 @@ The authority and scope configuration area will dictate how SanteDB discloses th
 
 #### Assigning App
 
-In the example above, this new **MOH\_ID\_HIV\_EMR\_MRN** ** **identity domain, only authenticated devices running the application org.santedb.disconnected\_client.android (the Android SanteDB Client) is the authoritative source of identifiers for this domain. Other systems can register patients and provide this identifier, however if the MPI doesn't recognize a new identity (say from OpenMRS) it will flag it as a DQ issue.
+In the example above, this new **MOH\_ID\_HIV\_EMR\_MRN** **** identity domain, only authenticated devices running the application org.santedb.disconnected\_client.android (the Android SanteDB Client) is the authoritative source of identifiers for this domain. Other systems can register patients and provide this identifier, however if the MPI doesn't recognize a new identity (say from OpenMRS) it will flag it as a DQ issue.
 
 #### Scope
 

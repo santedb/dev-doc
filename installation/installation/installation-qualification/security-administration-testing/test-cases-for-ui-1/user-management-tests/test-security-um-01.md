@@ -45,7 +45,7 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 | **Family Name**        | Doe                                 |
 | **Preferred Language** | English                             |
 | **Primary Facility**   | Muddy District Distribution Centre  |
-| **Employer **          | Muddsville Central Hospital Network |
+| **Employer**           | Muddsville Central Hospital Network |
 {% endtab %}
 {% endtabs %}
 
@@ -67,13 +67,13 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 
 ![](../../../../../../.gitbook/assets/test1\_demographicproperties.png)
 
-&#x20;   5\. Click the **Save **button.
+&#x20;   5\. Click the **Save** button.
 
 &#x20;   ![](../../../../../../.gitbook/assets/test1\_savebutton.png)&#x20;
 
 ## Expected Behaviour
 
-* Automatically navigate to the **Administration Panel / Security / Users / Index **page.
+* Automatically navigate to the **Administration Panel / Security / Users / Index** page.
 * Momentarily display success message in top right corner: ![](../../../../../../.gitbook/assets/user\_successtoast.png)&#x20;
-* New user (**ClinicalStaffUser123**)** **should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
+* New user (**ClinicalStaffUser123**) **** should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
 

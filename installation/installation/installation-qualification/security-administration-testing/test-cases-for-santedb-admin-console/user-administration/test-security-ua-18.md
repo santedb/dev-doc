@@ -16,7 +16,7 @@ description: >-
 
 ## Discussion
 
-The `user.del` command is for de-activating users (effectively deleting the user) and has a single `-u` parameter for specifying **username **of user to delete.&#x20;
+The `user.del` command is for de-activating users (effectively deleting the user) and has a single `-u` parameter for specifying **username** of user to delete.&#x20;
 
 * An exception is thrown when a non-existing username is specified.
 

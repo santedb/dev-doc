@@ -29,6 +29,6 @@ Groups cannot be created with a duplicate **Name** matching a deleted group.
 
 * No group should be created.
 * Remain on **Administration Panel / Security / Groups / Create Group** page.
-* Display a prompt below the required **Name **textbox with a validation message as follows:
+* Display a prompt below the required **Name** textbox with a validation message as follows:
 
 ![](<../../../../../../.gitbook/assets/image (328).png>)

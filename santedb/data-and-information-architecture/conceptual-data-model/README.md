@@ -3,14 +3,14 @@
 The SanteDB conceptual data model is based on several different resources:
 
 * **HL7 Reference Information Model (RIM)** forms the basis of the core clinical storage engine. SanteDB's implementation keeps the paradigm of Entities Participating in Acts, however removes many of the complex datatypes.
-* **HL7 FHIR **forms the basis for the conceptual data model's extension and tagging capabilities, which are used to extend the SanteDB data model.
-* **OpenMRS Concept Dictionary **was used as the basis of SanteDB's concept tables.
+* **HL7 FHIR** forms the basis for the conceptual data model's extension and tagging capabilities, which are used to extend the SanteDB data model.
+* **OpenMRS Concept Dictionary** was used as the basis of SanteDB's concept tables.
 
 ## Clinical Data
 
 Clinical data in SanteDB is represented as Entities playing Roles Participating in Acts. This is illustrated in Figure 1.
 
-![Figure 1 - Conceptual Data Model](<../../../../.gitbook/assets/image (68).png>)
+![Figure 1 - Conceptual Data Model](<../../../.gitbook/assets/image (68).png>)
 
 * **Entities:** An entity represents a person, place, organization, or thing (syringe, antigen, vaccine, etc.). Entities can be related to one another via an entity relationship such as place belonging to an organization or series of materials belonging to a vaccination kit.
 * **Roles:** Roles represent a type of part an entity plays. For example, a Person entity may play the role of a provider or a patient.
@@ -19,7 +19,7 @@ Clinical data in SanteDB is represented as Entities playing Roles Participating 
 
 In this context we can represent many different clinical scenarios. In order to make conceptualizing data elements in the SanteDB persistence store easier, much data documentation leverages an information model cards as illustrated in Figure 2.
 
-![Figure 2 - Information Model Cards](<../../../../.gitbook/assets/image (96).png>)
+![Figure 2 - Information Model Cards](<../../../.gitbook/assets/image (96).png>)
 
 ### Templates
 

@@ -1,6 +1,6 @@
 # Device Administration
 
-You can use the iCDR administrative console to create, list, lock, unlock and get information about devices within the iCDR instance. Changing a device secret needs to be done through the UI. For more information visit 'Changing Device Secret' section of  [Device Management](../../security-administration/device-management.md). 
+You can use the iCDR administrative console to create, list, lock, unlock and get information about devices within the iCDR instance. Changing a device secret needs to be done through the UI. For more information visit 'Changing Device Secret' section of  [Device Management](../../security-administration/device-management.md).&#x20;
 
 ## Viewing Devices
 
@@ -17,7 +17,7 @@ b1006a6c-d514-11eb-8248-00155d640b09   testDevice                               
 959617ca-d2af-11eb-8248-00155d640b09   Debugee-0060739CE9C9     2021-06-22T09:27:35...                        0    *
 ```
 
-The optional filter parameters for `device.list`** **are:
+The optional filter parameters for `device.list` **** are:
 
 | Parameter | Description                | Example          |
 | --------- | -------------------------- | ---------------- |

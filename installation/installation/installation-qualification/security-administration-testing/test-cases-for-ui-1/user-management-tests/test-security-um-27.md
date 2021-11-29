@@ -20,15 +20,15 @@ SanteSuite user accounts can be edited to hold extended **Contact Info** that pr
 
 1. User must be logged into an account with policies granted for creating users.
 2. Follow the instructions from [TEST: SECURITY-UM-01](test-security-um-01.md) to create a new user -- applying any valid values for required fields.
-3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User **for the newly created user.
+3. Follow the instructions from [TEST: SECURITY-UM-21](test-security-um-21.md) to navigate to **Administration Panel / Security / Users / Edit User** for the newly created user.
 
 ## Actions/Steps
 
-1\. Click the **User Profile **tab.
+1\. Click the **User Profile** tab.
 
 ![](<../../../../../../.gitbook/assets/image (265).png>)
 
-2\. Click the pencil in the top right-hand corner of the **Profile **card to edit the properties.&#x20;
+2\. Click the pencil in the top right-hand corner of the **Profile** card to edit the properties.&#x20;
 
 ![](<../../../../../../.gitbook/assets/image (272).png>)
 
@@ -40,7 +40,7 @@ SanteSuite user accounts can be edited to hold extended **Contact Info** that pr
 
 ![](<../../../../../../.gitbook/assets/image (289).png>)
 
-5\. Click the green checkmark to save the **Contact Info **field(s) modified.
+5\. Click the green checkmark to save the **Contact Info** field(s) modified.
 
 ![](<../../../../../../.gitbook/assets/image (264).png>)
 

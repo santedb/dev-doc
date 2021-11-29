@@ -50,7 +50,7 @@ The address editing control provides a common input control for `EntityAddress` 
 
 | Attribute      | Description                                                                                   |
 | -------------- | --------------------------------------------------------------------------------------------- |
-| address        | The `entity.address `field to bind to.                                                        |
+| address        | The `entity.address` field to bind to.                                                        |
 | no-add         | When true, the user will not be permitted to add new types of this address to the entity.     |
 | no-type        | When true, no type address (Home, Vacation, Work, etc.) will be shown.                        |
 | simple-entry   | When true, a simplified version of the data entry form will be shown.                         |
@@ -240,7 +240,7 @@ The localize or i18n filter is used to automatically find the specified translat
 {{ 'ui.action.save' | i18n }}
 ```
 
-**Note: **One of the benefits of using SanteSuite's i18n filter rather than other AngularJS localization filters is that the server side will pre-process these tags and save the result of localization when deployed in production mode. This saves lower powered clients from re-running the filter on repeat views.
+**Note:** One of the benefits of using SanteSuite's i18n filter rather than other AngularJS localization filters is that the server side will pre-process these tags and save the result of localization when deployed in production mode. This saves lower powered clients from re-running the filter on repeat views.
 
 ### Identifier (identifier)
 

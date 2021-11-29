@@ -25,7 +25,7 @@ SanteDB is a general purpose clinical data repository based loosely on the HL7 R
 
 ### Quick Links
 
-* [Architecture Documentation](santedb/architecture.md)
+* [Architecture Documentation](santedb/architecture/)
 * [Operations Management](operations/operations/)
   * [Installation](installation/installation/)
   * [Knowledgebase](knowledgebase/sdb-kb/)

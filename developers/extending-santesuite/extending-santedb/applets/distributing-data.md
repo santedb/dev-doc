@@ -30,8 +30,8 @@ The structure of a dataset file is as follows:
 
 The two options for dataset manipulation are:
 
-* **insert - **Used to perform an insert on the database. Installation of the data is considered "FAILED" if the object already exists or is detected to be a duplicate. The @updateIfExists key is only used if an insertion was attempted and a duplicate primary key was detected. It does not check classifiers.
-* **update **- Used to perform a lookup by classifier / key and update the object. If an object does not exist, or a classifier key does not exist and @insertIfNotExists is true, then an insert is done. Typically this operation is safer than insert, but is slower.
+* **insert -** Used to perform an insert on the database. Installation of the data is considered "FAILED" if the object already exists or is detected to be a duplicate. The @updateIfExists key is only used if an insertion was attempted and a duplicate primary key was detected. It does not check classifiers.
+* **update** - Used to perform a lookup by classifier / key and update the object. If an object does not exist, or a classifier key does not exist and @insertIfNotExists is true, then an insert is done. Typically this operation is safer than insert, but is slower.
 
 The following objects are supported on the dataset:
 

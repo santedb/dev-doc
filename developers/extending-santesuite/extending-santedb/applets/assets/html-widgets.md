@@ -8,7 +8,7 @@ In order to configure a widget the following things must be present:
 
 1. The root element must be a \<div> in the **http://www.w3.org/1999/xhtml** namespace
 2. The file must be XHTML (well formed XML)
-3. The namespace **http://santedb.org/applet**_ _must be declared
+3. The namespace **http://santedb.org/applet** __ must be declared
 4. If the widget requires a custom controller, the controller must be loaded using oc-lazy-load attribute on the root element.
 5. The widget must be declared with the widget element (see below for an example).
 

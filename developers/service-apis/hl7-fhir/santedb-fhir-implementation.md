@@ -6,7 +6,7 @@ Because of this, there are several implementation notes which are important to r
 
 ### Resource URLS and ID
 
-When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl `property which point to an absolute URL where the resource originated and/or was referenced. For example:
+When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl` property which point to an absolute URL where the resource originated and/or was referenced. For example:
 
 ```javascript
 {
@@ -178,7 +178,7 @@ Business identifier references are also supported by the reference resolver:
 Referencing an object which is being processed within the same scope is also permitted. The reference is subject to the following limitations:
 
 1. The `reference` property must exactly match the `fullUrl` property in the bundle
-2. The `reference` objects must exist **in order** , i.e. a `RelatedPerson` which has a reference of `Patient/1` must exist **after** the `Patient`** **with `fullUrl` of `Patient/1` in the bundle
+2. The `reference` objects must exist **in order** , i.e. a `RelatedPerson` which has a reference of `Patient/1` must exist **after** the `Patient` **** with `fullUrl` of `Patient/1` in the bundle
 3. No circular references are permitted (i.e. `Patient/2` with `link` to `RelatedPerson/1` with a link to `Patient/1` which in-turn links to `Patient/2` )
 
 ```javascript

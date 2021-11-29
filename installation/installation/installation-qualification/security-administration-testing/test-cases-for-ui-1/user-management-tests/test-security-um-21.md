@@ -13,7 +13,7 @@ description: >-
 
 ## Discussion
 
-The top banner on the **Administrative Panel / Security / Users / Edit User **page should populate with the selected user's Official Record (Suffix, Given Name(s), Family Name(s), Prefix), Username, and Role(s).
+The top banner on the **Administrative Panel / Security / Users / Edit User** page should populate with the selected user's Official Record (Suffix, Given Name(s), Family Name(s), Prefix), Username, and Role(s).
 
 ## Pre-Conditions / Setup
 
@@ -23,7 +23,7 @@ The top banner on the **Administrative Panel / Security / Users / Edit User **pa
 
 ## Actions/Steps
 
-1\. Click the **Edit **button for an existing user (e.g. "ClinicalStaffUser123" from [TEST: SECURITY-UM-01](test-security-um-01.md)).
+1\. Click the **Edit** button for an existing user (e.g. "ClinicalStaffUser123" from [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
 ![](<../../../../../../.gitbook/assets/image (267).png>)
 

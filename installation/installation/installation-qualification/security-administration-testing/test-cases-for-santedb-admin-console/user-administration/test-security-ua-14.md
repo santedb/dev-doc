@@ -20,9 +20,9 @@ description: >-
 
 The `user.add` command is for adding new users and has 3 required parameters that must pass validation: **role**, **username**, **password**.&#x20;
 
-* The `-r` parameter is used to specify a **role **to assign to the user being newly added.&#x20;
-* The `-u` parameter is used to specify a unique **username **to assign to the user being newly added.&#x20;
-* The `-p`  parameter is used to specify a **password **that must pass strength validation.
+* The `-r` parameter is used to specify a **role** to assign to the user being newly added.&#x20;
+* The `-u` parameter is used to specify a unique **username** to assign to the user being newly added.&#x20;
+* The `-p`  parameter is used to specify a **password** that must pass strength validation.
 
 ## Pre-Conditions / Setup
 
