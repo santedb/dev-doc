@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
+* [Device Management](../../../../../../operations-1/system-administration/security-administration/device-management.md)
 
 ## Discussion
 

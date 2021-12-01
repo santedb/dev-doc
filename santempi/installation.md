@@ -55,7 +55,7 @@ The SanteMPI docker containers add five new features in the `SDB_FEATURE` enviro
 
 ## Microsoft Windows Operating Systems
 
-The setup procedure is identical to SanteDB iCDR on Windows Operating Systems. The major differentiator is that the [Configuration Tool](../operations/system-administration/host-administration/configuration-tool/#template) Template for **SanteMPI Server** should be selected on initial configuration. This template:
+The setup procedure is identical to SanteDB iCDR on Windows Operating Systems. The major differentiator is that the [Configuration Tool](../operations/server-administration/configuration-tool/#template) Template for **SanteMPI Server** should be selected on initial configuration. This template:
 
 * Configures the necessary HL7v2 handlers to use PIX and PDQ specified behaviors.
 * Configures the necessary FHIR extensions and profiles for PIXm, PDQm and PMIR

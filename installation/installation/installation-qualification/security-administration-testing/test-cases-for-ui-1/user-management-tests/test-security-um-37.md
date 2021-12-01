@@ -6,7 +6,7 @@ description: Testing the Reset Password button and prompt for a user.
 
 ## References
 
-* [User Management](../../../../../../operations/system-administration/security-administration/user-management.md)
+* [User Management](broken-reference)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 * [TEST: SECURITY-UM-24](test-security-um-24.md)
 

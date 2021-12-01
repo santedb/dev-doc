@@ -6,7 +6,7 @@ description: Testing editing a User Profile by registering names for multiple Na
 
 ## References
 
-* [User Management](../../../../../../operations/system-administration/security-administration/user-management.md)
+* [User Management](broken-reference)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 * [TEST: SECURITY-UM-21](test-security-um-21.md)
 * [TEST: SECURITY-UM-13](test-security-um-13.md)

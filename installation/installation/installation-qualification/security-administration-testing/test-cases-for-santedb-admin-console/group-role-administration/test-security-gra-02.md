@@ -6,9 +6,9 @@ description: Testing the role.list command with -a flag specified.
 
 ## References
 
-* [Group / Role Administration](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/group-role-management.md)
-* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
-* [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/)
+* [Group / Role Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/group-role-management.md)
+* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 
 ## Discussion
 
@@ -18,7 +18,7 @@ The `role.list` command is for listing groups/roles.&#x20;
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. There must be de-activated (deleted) roles see any roles listed in the expected behaviour for this specific test.
 
 ## Actions/Steps

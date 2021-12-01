@@ -8,9 +8,9 @@ description: >-
 
 ## References
 
-* [User Administration](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
-* [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/)
+* [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
+* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 * [TEST: SECURITY-UA-02](test-security-ua-02.md)
 * [TEST: SECURITY-UA-03](test-security-ua-03.md)
 
@@ -22,7 +22,7 @@ The `user.undel` command is for re-activating de-activated users (effectively un
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. See [TEST: SECURITY-UA-02](test-security-ua-02.md) or [TEST: SECURITY-UA-03](test-security-ua-03.md) for checking if a username does not exist.
 
 ## Actions/Steps

@@ -6,7 +6,7 @@ description: Testing the successful adding a new security device.
 
 ## References
 
-* [Device Administration](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/untitled.md)
+* [Device Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/untitled.md)
 
 ## Discussion
 

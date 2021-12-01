@@ -6,7 +6,7 @@ description: Testing the Role textbox from Security Properties with an invalid v
 
 ## References
 
-* [User Management](../../../../../../operations/system-administration/security-administration/user-management.md)
+* [User Management](broken-reference)
 
 ## Discussion
 

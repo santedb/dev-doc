@@ -4,7 +4,7 @@
 
 ### Diagnostic Logging
 
-The diagnostic logging feature allows for logging to files, the console, or even via the trace writer in Mono. These settings provide access to the [Diagnostics Configuration ](../../../../operations/system-administration/host-administration/host-configuration-file/diagnostics-configuration.md)subsystem.&#x20;
+The diagnostic logging feature allows for logging to files, the console, or even via the trace writer in Mono. These settings provide access to the [Diagnostics Configuration ](../../../../operations/server-administration/host-configuration-file/diagnostics-configuration.md)subsystem.&#x20;
 
 ```
 SDB_FEATURE=...;LOG;...

@@ -6,11 +6,11 @@ description: Testing the successful creation of a new user with all properties s
 
 ## References
 
-* [User Management](../../../../../../operations/system-administration/security-administration/user-management.md)
+* [User Management](broken-reference)
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](../../../../../../operations/system-administration/security-administration/user-management.md) page.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](broken-reference) page.
 
 ## Pre-Conditions / Setup
 

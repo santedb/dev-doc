@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Policy Administration](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/policy-administration.md)
+* [Policy Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/policy-administration.md)
 
 ## Discussion
 

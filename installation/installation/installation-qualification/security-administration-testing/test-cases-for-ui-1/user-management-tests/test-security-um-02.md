@@ -6,7 +6,7 @@ description: Testing attempted creation of a new user with required properties m
 
 ## References
 
-* [User Management](../../../../../../operations/system-administration/security-administration/user-management.md)
+* [User Management](broken-reference)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 
 ## Discussion

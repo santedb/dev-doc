@@ -30,7 +30,7 @@ Each of these installers:
 
 The installation process is a standard Windows installer experience, administrators can elect to install particular plugins that meet their needs.&#x20;
 
-![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1) (1).png>)
 
 The plugins available at the time of writing are enumerated below.
 
@@ -101,13 +101,13 @@ When installing using the tarball on Linux the process is manual - the instructi
 
 Configuration of the SanteDB service is covered in a series of discrete wiki articles which cover each configuration option in the platform and their impact on the system.
 
-See: [Configuration Tool Documentation](../../../operations/system-administration/host-administration/configuration-tool/)
+See: [Configuration Tool Documentation](../../../operations/server-administration/configuration-tool/)
 
 ## Service Management
 
 SanteDB runs as a Windows service (equivalent of a daemon). These can be accessed using the `services.msc` plugin an finding the `SanteDB Host Process` service.
 
 {% hint style="info" %}
-If you're running multiple instances of SanteDB on the same server as named instances, each instance of the host process will be `SanteDB Host Process - `name
+If you're running multiple instances of SanteDB on the same server as named instances, each instance of the host process will be `SanteDB Host Process -` name
 {% endhint %}
 

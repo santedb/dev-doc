@@ -6,7 +6,7 @@ description: Testing the successful locking a device.
 
 ## References
 
-* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
+* [Device Management](../../../../../../operations-1/system-administration/security-administration/device-management.md)
 
 ## Discussion
 

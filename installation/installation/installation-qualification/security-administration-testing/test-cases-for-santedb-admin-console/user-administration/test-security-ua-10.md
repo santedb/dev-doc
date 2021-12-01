@@ -6,9 +6,9 @@ description: Testing the user.add command with existing role with -r parameter o
 
 ## References
 
-* [User Administration](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
-* [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/)
+* [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
+* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 * [TEST: SECURITY-GRA-04](../group-role-administration/test-security-gra-04.md)
 * [TEST: SECURITY-GRA-05](../group-role-administration/test-security-gra-05.md)
 
@@ -21,7 +21,7 @@ The `user.add` command is for adding new users and has 3 required parameters tha
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. See [TEST: SECURITY-GRA-04](../group-role-administration/test-security-gra-04.md) or [TEST: SECURITY-GRA-05](../group-role-administration/test-security-gra-05.md) for checking if a role exists.
 
 ## Actions/Steps

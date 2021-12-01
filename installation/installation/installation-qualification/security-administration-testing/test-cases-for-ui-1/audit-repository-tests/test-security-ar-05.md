@@ -6,7 +6,7 @@ description: Testing the Search field for Audit Events.
 
 ## References
 
-* [Audit Repository](../../../../../../operations/system-administration/security-administration/audit-repository.md)
+* [Audit Repository](../../../../../../operations-1/system-administration/security-administration/audit-repository.md)
 
 ## Discussion
 

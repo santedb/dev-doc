@@ -6,7 +6,7 @@ description: Testing the Role textbox from Security Properties with multiple val
 
 ## References
 
-* [User Management](../../../../../../operations/system-administration/security-administration/user-management.md)
+* [User Management](broken-reference)
 * [TEST: SECURITY-GRM-01](../group-role-management-tests/test-security-grm-01-1.md)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 

@@ -6,9 +6,9 @@ description: Testing the user.list command with the optional -h flag specified.
 
 ## References
 
-* [User Administration](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
-* [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/)
+* [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
+* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 * [TEST: SECURITY-UA-01](test-security-ua-01.md)
 
 ## Discussion
@@ -19,7 +19,7 @@ The `user.list` command is for listing users.&#x20;
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/system-administration/host-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. A human (non-system) user must be created to test the `-h` flag.
 
 ## Actions/Steps
