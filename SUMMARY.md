@@ -6,6 +6,7 @@
 
 * [SanteSuite Products](product-overview/santesuite-products/README.md)
   * [Introducing SanteDB CDR](product-overview/santedb.md)
+  * [SanteDB Solutions](product-overview/santesuite-products/santedb-solutions.md)
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
 
@@ -43,7 +44,6 @@
 * [Data Storage Patterns](santedb/data-storage-patterns/README.md)
   * [Master Data Storage](santedb/data-storage-patterns/master-data-storage.md)
 * [Matching Engine](santedb/matching-engine.md)
-* [SanteDB Solutions](santedb/santedb-solutions.md)
 * [HIE & Interoperability](santedb/hie-and-interoperability.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
 
