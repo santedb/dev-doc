@@ -4,7 +4,7 @@ SanteMPI is installed and configured in an identical manner to the [SanteDB iCDR
 
 ## Docker Containers
 
-The `santedb-mpi` docker container is derived from the [SanteDB iCDR docker container](../installation/installation/santedb-server/installation-using-appliances/docker-containers/#santempi-application). When using SanteMPI you should reference the `santedb-mpi:latest` docker image.
+The `santedb-mpi` docker container is derived from the [SanteDB iCDR docker container](../installation/installation/santedb-server/docker-containers/#santempi-application). When using SanteMPI you should reference the `santedb-mpi:latest` docker image.
 
 ```
 version: "3.3"

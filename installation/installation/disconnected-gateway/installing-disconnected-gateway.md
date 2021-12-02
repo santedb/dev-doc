@@ -9,7 +9,7 @@ This deployment pattern is well suited when:
 
 
 
-See: [#disconnected-offline-patterns](../planning-and-preparation-work/deployment-patterns.md#disconnected-offline-patterns "mention")&#x20;
+See: [#disconnected-offline-patterns](../planning-and-preparation-work/deployment-planning/deployment-patterns.md#disconnected-offline-patterns "mention")&#x20;
 
 ## Installation on Windows
 

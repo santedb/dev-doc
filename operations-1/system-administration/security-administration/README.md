@@ -18,7 +18,7 @@ The sdbac tooling is described in more detail on the [administration console](..
 
 #### Demo Environment
 
-To quickly access the administration console for executing sdbac commands in a [demo environment](../../../installation/installation/santedb-server/installation-on-virtual-or-physical-environments/installing-a-development-demo-environment.md), follow these steps:
+To quickly access the administration console for executing sdbac commands in a [demo environment](../../../installation/installation/santedb-server/installing-a-development-demo-environment.md), follow these steps:
 
 1. Download the latest .zip release of sdbac from [https://github.com/santedb/santedb-server/releases](https://github.com/santedb/santedb-server/releases) and unzip the contents into any directory.
 2. Open a command prompt instance as an administrator and change the current working directory to where the unzipped contents of sdbac have been stored.
@@ -29,5 +29,5 @@ sdbac -r elbonia.santesuite.net --port=8443 --tls
 ```
 
 {% hint style="info" %}
-Use credentials for the [demo environment](../../../installation/installation/santedb-server/installation-on-virtual-or-physical-environments/installing-a-development-demo-environment.md) (Administrator/Mohawk123).
+Use credentials for the [demo environment](../../../installation/installation/santedb-server/installing-a-development-demo-environment.md) (Administrator/Mohawk123).
 {% endhint %}
