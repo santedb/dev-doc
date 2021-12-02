@@ -8,7 +8,6 @@
   * [Introducing SanteDB CDR](product-overview/santedb.md)
     * [SanteDB Solutions](santedb/santedb-solutions.md)
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
-    * [About SanteMPI](santempi/about-santempi.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
   * [Privacy & Security - SanteGuard](santeguard/introduction.md)
     * [SanteGuard Patient Insights](santeguard/santeguard-patient-insights.md)
