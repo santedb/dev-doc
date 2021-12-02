@@ -4,7 +4,7 @@ The SanteDB CDR (both the iCDR and dCDR) are an online/offline clinical data rep
 
 SanteDB solutions are pre-configured, pre-packaged plugins which modify SanteDB and extend it to provide a solution to a clinical problem. SanteDB has several solutions targeted to individual clinical domains and use cases.&#x20;
 
-![](<../.gitbook/assets/image (188).png>)
+![](<../../../.gitbook/assets/image (188).png>)
 
 * **SanteGuard** : The SanteGuard solution is a complete audit repository solution. The SanteGuard solution contains:
   * .NET Based Plugins for the SanteDB dCDR and iCDR which allow SanteDB to accept IHE ATNA messages.

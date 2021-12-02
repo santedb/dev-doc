@@ -5,15 +5,19 @@
 ## Product Overview
 
 * [SanteSuite Products](product-overview/santesuite-products/README.md)
-  * [Introducing SanteDB CDR](product-overview/santedb.md)
-  * [SanteDB Solutions](santedb/santedb-solutions.md)
+  * [Introducing SanteDB CDR](product-overview/santesuite-products/santedb/README.md)
+    * [SanteDB Solutions](product-overview/santesuite-products/santedb/santedb-solutions.md)
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
+  * [Privacy & Security - SanteGuard](product-overview/santesuite-products/introduction/README.md)
+    * [SanteGuard Patient Insights](product-overview/santesuite-products/introduction/santeguard-patient-insights.md)
 
 ## Architecture <a href="#santedb" id="santedb"></a>
 
 * [Overall Architecture](santedb/architecture.md)
   * [SanteDB History](product-overview/santesuite-products/santedb-history.md)
+* [Solution Architecture](santedb/solution-architecture/README.md)
+  * [Deployment Models](santedb/solution-architecture/deployment-models.md)
 * [Software Architecture](santedb/software-architecture.md)
   * [SanteDB Versioning](product-overview/santesuite-products/santedb-versioning.md)
   * [Version 3.x Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
@@ -337,11 +341,6 @@
       * [Reviewing Audits](operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md)
 * [Standard Operating Procedures](operations/standard-operating-procedures.md)
 
-## SanteGuard
-
-* [About SanteGuard](santeguard/introduction.md)
-* [SanteGuard Patient Insights](santeguard/santeguard-patient-insights.md)
-
 ## Knowledgebase
 
 * [Knowledgebase](knowledgebase/sdb-kb/README.md)
@@ -399,14 +398,14 @@
 * [Operations](santempi/operations.md)
 * [SanteMPI Dashboard](santempi/santempi-dashboard.md)
 * [SanteMPI Searching](santempi/santempi-searching.md)
-* [The Patient Dashboard](santempi/the-patient-dashboard.md)
+* [The Patient Dashboard](santempi/the-patient-dashboard/README.md)
+  * [Correcting Data](santempi/the-patient-dashboard/correcting-data/README.md)
+    * [Editing Demographic Information](santempi/the-patient-dashboard/correcting-data/editing-demographic-information.md)
+    * [Editing Identifiers](santempi/the-patient-dashboard/correcting-data/editing-identifiers.md)
+    * [Editing Next of Kin](santempi/the-patient-dashboard/correcting-data/editing-next-of-kin.md)
+    * [Records of Truth](santempi/the-patient-dashboard/correcting-data/records-of-truth.md)
+    * [Local Records](santempi/the-patient-dashboard/correcting-data/local-records.md)
 * [Configuring Identity Domains](santempi/configuring-identity-domains.md)
-* [Correcting Data](santempi/correcting-data/README.md)
-  * [Editing Demographic Information](santempi/correcting-data/editing-demographic-information.md)
-  * [Editing Identifiers](santempi/correcting-data/editing-identifiers.md)
-  * [Editing Next of Kin](santempi/correcting-data/editing-next-of-kin.md)
-  * [Records of Truth](santempi/correcting-data/records-of-truth.md)
-  * [Local Records](santempi/correcting-data/local-records.md)
 * [Integration Interfaces](santempi/integration-interfaces.md)
 * [Recipes](santempi/recipes/README.md)
   * [Adding Security Policy based on Occupation](santempi/recipes/adding-security-policy-based-on-occupation.md)
@@ -420,17 +419,6 @@
   * [Upgrading from OpenIZ to SanteDB](openiz/about-openiz/upgrading-from-openiz-to-santedb.md)
 * [FAQ](openiz/faq.md)
 * [OpenIZ Demonstration Servers](openiz/demonstration-servers.md)
-
-## Architecture
-
-* [Solution Architecture](architecture/solution-architecture.md)
-
-***
-
-* [Data Architecture](data-architecture.md)
-* [Deployment Models](deployment-models.md)
-* [Installation Guide](installation-guide.md)
-* [Configuration Guide](configuration-guide.md)
 
 ## Operations
 

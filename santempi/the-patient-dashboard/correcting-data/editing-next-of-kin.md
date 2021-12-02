@@ -6,7 +6,7 @@ Next of Kin (or Family Members) are linked entities to the patient. When you edi
 
 A patient's next of kin is displayed in the **Next of Kin** panel and can be edited by clicking the **pencil** icon.
 
-![](<../../.gitbook/assets/image (126).png>)
+![](<../../../.gitbook/assets/image (126).png>)
 
 ### Patients as Family Members of Patients
 
@@ -14,13 +14,13 @@ When a strong record exists (i.e. a patient's family member has been promoted to
 
 This can be done by clicking the **View** action when instructed, and editing the details of the family member on the Patient demographics page.
 
-![](<../../.gitbook/assets/image (76).png>)
+![](<../../../.gitbook/assets/image (76).png>)
 
 ### Person Family Members
 
 Editing a patient's family members when linked to a person (not a patient) is done inline, the tabs for this edit process is the same as [Editing Demographic Information](editing-demographic-information.md) for patients.
 
-![](<../../.gitbook/assets/image (49).png>)
+![](<../../../.gitbook/assets/image (49).png>)
 
 ### Converting a Person to Patient
 
@@ -36,15 +36,15 @@ The reason for this conversion is:
 
 Manual conversion is a two-step process. Start by clicking the **Convert** option in the edit window
 
-![](<../../.gitbook/assets/image (132).png>)
+![](<../../../.gitbook/assets/image (132).png>)
 
 Complete the **Birth** information tab that appears when selecting this option. Complete the suspected DOB for the patient and gender. Once complete, press **Convert** again to complete the process.
 
-![](<../../.gitbook/assets/image (80).png>)
+![](<../../../.gitbook/assets/image (80).png>)
 
 You will note that the edit screen now instructs you to view the detail page for the newly created patient. Doing so will open the newly created patient record for that family member.
 
-![](<../../.gitbook/assets/image (136).png>)
+![](<../../../.gitbook/assets/image (136).png>)
 
 
 

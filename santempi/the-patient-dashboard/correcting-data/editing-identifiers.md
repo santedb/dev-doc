@@ -8,7 +8,7 @@ Identifiers can be edited within the administrative portal if :
 
 To start the editing process, click the pencil icon on the **Identity** panel.
 
-![](<../../.gitbook/assets/image (14) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 ### Changing Identifiers
 
@@ -20,16 +20,16 @@ If you're editing an identifier on a master record, then the identifier original
 
 To change an identifier you can simply edit the identifier. Additionally, you can remove any identifiers you do not wish to be attached to the record.
 
-![Editing an Identifier](<../../.gitbook/assets/image (54).png>)
+![Editing an Identifier](<../../../.gitbook/assets/image (54).png>)
 
 ### Adding an Identifier
 
 To add an identifier to the patient's record you can select the identity domain of identifier to be added, and add the identifier to the list.
 
-![](<../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (56).png>)
 
 ### Identifier Generators
 
 SanteMPI provides API hooks to generate random identifiers based on some sort of algorithm. If an identity domain has a generator attached, a generation icon will appear next to the add button which can be used to generate the identifier.
 
-![](<../../.gitbook/assets/image (87).png>)
+![](<../../../.gitbook/assets/image (87).png>)
