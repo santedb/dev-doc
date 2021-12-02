@@ -43,7 +43,7 @@ Visual codes will only ever resolve to a single resource. This means codes which
 
 The default visual code generator in SanteDB iCDR and dCDR is a structured QR code containing an RFC7515 payload. A sample of a resource pointer code is:
 
-![](<../../../../.gitbook/assets/image (163).png>)
+![](<../../../.gitbook/assets/image (159).png>)
 
 The code is comprised of a header, payload and signature. The IBarcodeGeneratorService is responsible for the generation of this visual format (in this case a QR code) while the IResourcePointerService (in this case the JWS resource pointer) generates the payload.
 

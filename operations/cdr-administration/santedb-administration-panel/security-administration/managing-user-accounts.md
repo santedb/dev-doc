@@ -12,11 +12,11 @@ It is best practice to keep user accounts as **Human Users** which are using the
 
 The summary screen provides a comprehensive list of all users found in the SanteDB solution. This user list is scoped to the system on which the panel is running (i.e if you're accessing the panel from a disconnected client, these are the local users which can access the dCDR, if you're accessing the panel on an iCDR these are all users).
 
-![](<../../../../.gitbook/assets/image (440).png>)
+![](<../../../../.gitbook/assets/image (506).png>)
 
 You can sort/order the table by any field which has a sort indicator, additionally each row of the user list performs actions on each user on the same row.
 
-![](<../../../../.gitbook/assets/image (430).png>)
+![](<../../../../.gitbook/assets/image (469).png>)
 
 * Edit: Opens the detailed user information screen
 * Delete: Indicates that the user account is no longer active (i.e. the employee is fired, moved departments, etc.)
@@ -29,7 +29,7 @@ It is best practice to lock user accounts when you are investigating a security 
 
 When you delete a user they are marked as inactive. You can access these accounts by using the `Show Deleted` option in the user interface. Deleted user accounts provide an option to restore or un-delete the account (as well as edit the information).
 
-![](<../../../../.gitbook/assets/image (438) (1).png>)
+![](<../../../../.gitbook/assets/image (499).png>)
 
 ## Creating User Accounts
 
@@ -39,7 +39,7 @@ When you press the `Create` button on the user summary screen, you will be provi
 This article explains the mechanics of creating a new user. Please refer to the Standard Operating Procedure for more information about the business process surrounding this screen.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (421).png>)
+![](<../../../../.gitbook/assets/image (436).png>)
 
 * Username: Enter a unique user name for the specific user which will be using the system. It is best practices that this map to a single, individual user account.
 * Role: Select one or more roles for the user account. Built-in roles are generally:
@@ -57,7 +57,7 @@ This article explains the mechanics of creating a new user. Please refer to the 
 
 When you use the `Edit` option to view the details of a user, you will be presented with the user information detail screen.&#x20;
 
-![](<../../../../.gitbook/assets/image (434).png>)
+![](<../../../../.gitbook/assets/image (485).png>)
 
 * Security Tab: The security tab is used to edit the core security attributes of the user. This includes:
   * Resetting the user's password
@@ -72,7 +72,7 @@ When you use the `Edit` option to view the details of a user, you will be presen
 
 Clicking on the pencil on the security properties panel will enable the editing of the user's security settings. When complete, clicking the check button to commit your changes.
 
-![](<../../../../.gitbook/assets/image (140).png>)
+![](<../../../../.gitbook/assets/image (77).png>)
 
 {% hint style="info" %}
 The e-mail and phone number information on the security properties panel is only used for security purposes (like TFA, password resets, etc.). If you're using SanteDB with a third party IdP, Active Directory or LDAP authentication these fields will attempt to update the profile on the source system. This differs from the clinical contact information on the profile tab which is always stored in SanteDB.&#x20;
@@ -91,7 +91,7 @@ SanteDB security users also have a profile exposed in the CDR (apart from the se
 These can be edited using the **profile** tab of the user's detail screen.\
 
 
-![](<../../../../.gitbook/assets/image (39).png>)
+![](<../../../../.gitbook/assets/image (79).png>)
 
 
 

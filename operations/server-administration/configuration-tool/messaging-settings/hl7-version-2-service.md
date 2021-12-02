@@ -2,7 +2,7 @@
 
 The HL7 Version 2 Service configuration panel is used to enable or disable the sending and receiving of [HL7 Version 2.x](../../../../developers/service-apis/hl7v2.md) messages.
 
-![](<../../../../.gitbook/assets/image (432) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (503).png>)
 
 | Setting                            | Description                                                                                                                                                                                                                                                                     | Example                                                                                                                                                                                   |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ The HL7 Version 2 Service configuration panel is used to enable or disable the s
 
 The HL7 Services configuration property allows administrators to edit one or more IP/Endpoints which can receive HL7v2 messages.
 
-![](<../../../../.gitbook/assets/image (435) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (515).png>)
 
 
 
@@ -38,7 +38,7 @@ The HL7 Services configuration property allows administrators to edit one or mor
 
 When `sllp://` is used as the transport for the HL7 endpoint, the security settings for the endpoint.
 
-![](<../../../../.gitbook/assets/image (417) (1).png>)
+![](<../../../../.gitbook/assets/image (426).png>)
 
 | Setting                        | Description                                                                                                                                                                 | Examples                                                                                                  |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -51,9 +51,9 @@ When `sllp://` is used as the transport for the HL7 endpoint, the security setti
 
 Each HL7 endpoint can support multiple message / trigger events. The messages property of the endpoint specifies which message handlers can be used for which trigger events on the specified endpoint.
 
-![](<../../../../.gitbook/assets/image (424) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (457).png>)
 
-| Setting         | Description                                                                                                                                    | Examples                                                   |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Message Handler | The implementation of the message handler which should be used to process messages which have any of the events listed in the events property. | ![](<../../../../.gitbook/assets/image (433) (1) (1).png>) |
-| Events          | The trigger events which should be forwarded to the selected message handler.                                                                  | `ADT^A01`                                                  |
+| Setting         | Description                                                                                                                                    | Examples                                           |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Message Handler | The implementation of the message handler which should be used to process messages which have any of the events listed in the events property. | ![](<../../../../.gitbook/assets/image (508).png>) |
+| Events          | The trigger events which should be forwarded to the selected message handler.                                                                  | `ADT^A01`                                          |

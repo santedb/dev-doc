@@ -27,7 +27,7 @@ Once created:‌
 
 If you wanted to lock an application you could select the **Lock** button:
 
-![](../../../.gitbook/assets/5-0..jpg)
+![](<../../../.gitbook/assets/5-0. (1).jpg>)
 
 \
 when an application is locked the status will change to "Locked" and it can be unlocked by selecting the **Unlock** button.

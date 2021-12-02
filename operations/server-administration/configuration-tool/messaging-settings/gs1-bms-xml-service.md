@@ -1,10 +1,10 @@
 # GS1 BMS XML Service
 
-When enabled, the [GS1 BMS XML Service](../../../../../developers/santedb-software-publishers/gs1-bms-xml/) enables the GS1 services on SanteDB iCDR. The configuration modifies the behavior of the receiving and soliciting endpoints for BMS messages.
+When enabled, the [GS1 BMS XML Service](../../../../developers/santedb-software-publishers/gs1-bms-xml/) enables the GS1 services on SanteDB iCDR. The configuration modifies the behavior of the receiving and soliciting endpoints for BMS messages.
 
 
 
-![](<../../../../../.gitbook/assets/image (429) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (487).png>)
 
 | Setting                     | Description                                                                                                                                                                                                             | Values                                                           |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |

@@ -43,7 +43,7 @@ To implement a new ADO.NET based data provider, implementers will need to:
 
 ## Patching SQL Tables
 
-See: [Database Patching ](../../../../developers/extending-santesuite/extending-santedb/server-plugins/database-patching.md)article for information on patching SQL structures.
+See: [Database Patching ](../../../developers/server-plugins/database-patching.md)article for information on patching SQL structures.
 
 ## Conventions
 
@@ -67,14 +67,14 @@ Most tables in the SanteDB physical model carry common abbreviations of names. B
 * Names less than four characters should be represented in full (example: `NAME` or `TAG`)
 * Names which represent a classified object carry their classification, for example:
   * `OBS_TBL` => Observation Table
-  * `SUB_ADM_TBL `=> Substance Administration Table
+  * `SUB_ADM_TBL` => Substance Administration Table
 * Association tables which exist only to link together two other tables should have `ASSOC` in their name
 * Longer table names are usually acronyms:
   * `CD_TBL` => **C**oncept **D**efinition Table&#x20;
   * `CS_TBL` => **C**ode **S**ystem Table
 * Table and columns should remove vowels where the removal of vowels do no interfere with understanding the meaning of the column or table:
   * `ENT_TBL` => Entity Table
-  * `CLS_CD_ID `=> **Cl**a**s**s **C**oncept **D**efinition ID
+  * `CLS_CD_ID` => **Cl**a**s**s **C**oncept **D**efinition ID
 
 ### Inherited Tables
 
@@ -153,7 +153,7 @@ Because version data is required for interfaces in the iCDR the structures are b
   * Obsolete time and provenance (who rendered this version obsolete)
   * Replaced version id (the version that this version replaces)
 
-For example, `ENT_TBL` and `ENT_VRSN_TBL `are related in this manner:
+For example, `ENT_TBL` and `ENT_VRSN_TBL` are related in this manner:
 
 ```sql
 CREATE TABLE ENT_TBL (

@@ -2,7 +2,7 @@
 
 The diagnostics settings panel can be used to control the logging infrastructure in the SanteDB iCDR host server. The configuration panel provides an enumeration of the registered log sources and allows administrators to set each log level for independent services.
 
-![](<../../../../.gitbook/assets/image (428) (1).png>)
+![](<../../../.gitbook/assets/image (478).png>)
 
 The writers section allows for the setting of an output method for the diagnostic sources.
 

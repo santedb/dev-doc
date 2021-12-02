@@ -6,7 +6,7 @@ As mentioned in the SanteDB architecture, SanteDB provides a robust policy infra
 
 SanteDB comes pre-installed with all the permission policies it requires to operate appropriately, and also with a few data policies ("Restricted Data" is one). Most of these policies are demanded by SanteDB system components, and therefore cannot be deleted by the system administrator, and thus are marked as "Readonly".
 
-![](<../../../.gitbook/assets/image (93).png>)
+![](<../../../.gitbook/assets/image (61).png>)
 
 You can also see the policy hierarchy using the policy's OID. The way that this works, is quite simple, if a component or piece of data DEMANDS a policy at a lower level in the OID,  and the user is granted a higher level, the decision is inherited.&#x20;
 
@@ -41,11 +41,11 @@ when an app/device/user has the ELEVATE grant on a policy for example "Access HI
 
 
 
-![](../../../.gitbook/assets/createpolicyform.png)
+![](<../../../.gitbook/assets/CreatePolicyForm (2).png>)
 
 Once created, your policy can be assigned to any device, group, or application. For example, if you wanted to DENY access to HIV records you would do so in the UI. Any records tagged with this policy would be disclosed, masked, or not disclosed based on the policy permission you've set.
 
-![](<../../../.gitbook/assets/image (24).png>)
+![](<../../../.gitbook/assets/image (63).png>)
 
 ##
 

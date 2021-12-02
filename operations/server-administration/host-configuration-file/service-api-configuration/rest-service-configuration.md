@@ -10,7 +10,7 @@ The RestService configuration is contained in the `RestConfigurationSection` sec
 
 Each REST based service in the host uses a service in the rest controller host (listed as service sections). The basic architecture of the REST service layer is illustrated below.
 
-![](<../../../../../.gitbook/assets/image (200).png>)
+![](<../../../../.gitbook/assets/image (196).png>)
 
 * **Service:** A service represents a logical service which is provided on the REST based API. A service can be FHIR or METADATA, etc. Typically a single daemon service will bind itself to a single rest service.
 * **Service Behavior:** Service behaviors represent a behavior which applied across all endpoints within the service. This can be, for example, authorization behaviors, or policy behaviors.
@@ -36,14 +36,14 @@ An example of a simple FHIR API configuration is illustrated below.
 
 The following services are bound to the REST API in the default SanteDB installation.
 
-| Service Name | Plugin                                                                                                                                                               |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OAuth2       | [SanteDB OpenID Connect IdP](../../../../../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/)                                          |
-| FHIR         | [HL7 FHIR Interface](../../../../../operations-1/standard-operating-procedures/hl7-fhir/)                                                                            |
-| AMI          | [Administrative Management Interface](../../../../../developers/extending-santesuite/extending-santedb/service-apis/administration-management-interface-ami/)        |
-| BIS          | [Business Intelligence Service](../../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/business-intelligence-services/) |
-| HDSI         | [Health Data Service Interface](../../../../../developers/service-apis/health-data-service-interface-hdsi.md)                                                        |
-| META         | OpenAPI (Swagger) Metadata Exchange                                                                                                                                  |
+| Service Name | Plugin                                                                                                                     |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| OAuth2       | [SanteDB OpenID Connect IdP](../../../../developers/service-apis/openid-connect/)                                          |
+| FHIR         | [HL7 FHIR Interface](../../../../developers/service-apis/hl7-fhir/)                                                        |
+| AMI          | [Administrative Management Interface](../../../../developers/service-apis/administration-management-interface-ami/)        |
+| BIS          | [Business Intelligence Service](../../../../developers/server-plugins/service-definitions/business-intelligence-services/) |
+| HDSI         | [Health Data Service Interface](../../../../developers/service-apis/health-data-service-interface-hdsi.md)                 |
+| META         | OpenAPI (Swagger) Metadata Exchange                                                                                        |
 
 ## Service Behaviors
 

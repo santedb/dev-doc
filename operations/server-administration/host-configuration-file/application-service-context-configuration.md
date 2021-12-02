@@ -1,6 +1,6 @@
 # Application Service Context Configuration
 
-The ApplicationServiceContextConfigurationSection section is used to control the [application context which acts as the service locator](../../../../santedb/software-architecture.md#service-architecture).&#x20;
+The ApplicationServiceContextConfigurationSection section is used to control the [application context which acts as the service locator](../../../santedb/software-architecture/#service-architecture).&#x20;
 
 ```markup
 <section xsi:type="ApplicationServiceContextConfigurationSection" 

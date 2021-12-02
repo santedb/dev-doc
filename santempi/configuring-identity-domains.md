@@ -60,13 +60,13 @@ Since these all need to be unique, it is a good practice that your scheme for th
 
 To create a new identity domain (for example, a new programme identifier type), you'll use the [Reference Data](../operations-1/system-administration/reference-data-administration.md) administration area and more specifically, the Identity Domain administration page within that administrative area. This will present you with a list of configured identity domains, you can click "CREATE" to create a new identity domain.
 
-![](<../.gitbook/assets/image (37).png>)
+![](<../.gitbook/assets/image (95).png>)
 
 ### Configuring Core Properties
 
 The first data collected by SanteDB when creating a new identity domain are the key identity domain properties including those discussed above as well as validation information for the identity domain.
 
-![](<../.gitbook/assets/image (21).png>)
+![](<../.gitbook/assets/image (96).png>)
 
 The core properties are:
 
@@ -87,7 +87,7 @@ If there are more than one administrator be sure to use the search function firs
 
 The authority and scope configuration area will dictate how SanteDB discloses the specified identifier, which system(s) can assign the identifier, and the scope (objects which can be assigned the identifier).
 
-![](<../.gitbook/assets/image (116).png>)
+![](<../.gitbook/assets/image (97).png>)
 
 #### Assigning App
 

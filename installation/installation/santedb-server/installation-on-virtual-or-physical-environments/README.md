@@ -15,7 +15,7 @@ You can install SanteDB iCDR on Microsoft Windows or Linux / Unix operations on 
   * Using Microsoft Windows Event Log notifications for central event monitoring
   * Using Microsoft Operation Manager to coordinate update and software package installation.
 
-SanteDB supports  [installing-a-development-demo-environment.md](../installing-a-development-demo-environment.md "mention") and [installation-on-linux-and-unix.md](installation-on-linux-and-unix.md "mention").
+SanteDB supports  [installing-a-development-demo-environment.md](installing-a-development-demo-environment.md "mention") and [installation-on-linux-and-unix.md](installation-on-linux-and-unix.md "mention").
 
 ## Pre-Requisites
 

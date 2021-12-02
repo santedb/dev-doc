@@ -2,7 +2,7 @@
 
 The data dictionary for entities which store the SanteDB concept dictionary are illustrated below.
 
-![](<../../../../../.gitbook/assets/image (169).png>)
+![](<../../../../.gitbook/assets/image (163).png>)
 
 ### Concept Class
 
@@ -104,14 +104,14 @@ A reference term represents a wire level code that can be used to represent the 
 
 An associative entity that links a concept to one or more reference terms and indicates the strength of the map.
 
-| Property                                     | Type | Description                                                                                                                       |
-| -------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------- |
-| <p>ConceptReferenceTermId<br> [1..1]</p>     | UUID | A unique identifier for the concept reference term map                                                                            |
-| <p>ConceptId<br> [1..1]</p>                  | UUID | The concept to which the reference term is linked.                                                                                |
-| <p>EffectiveVersionSequenceId<br> [1..1]</p> | UUID | The version of the concept where the reference term map became effective.                                                         |
-| <p>ObsoleteVersionSequenceId<br> [0..1]</p>  | UUID | The version of the concept where the reference term map became obsolete.                                                          |
-| <p>ReferenceTermId<br> [1..1]</p>            | UUID | The reference term which is associated with the concept.                                                                          |
-| <p>RelationshipTypeId<br> [1..1]</p>         | UUID | Identifies the relationship (or strength) that the reference term has with the concept. For example: SAME_AS, NARROWER_THAN, etc. |
+| Property                                     | Type | Description                                                                                                                         |
+| -------------------------------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| <p>ConceptReferenceTermId<br> [1..1]</p>     | UUID | A unique identifier for the concept reference term map                                                                              |
+| <p>ConceptId<br> [1..1]</p>                  | UUID | The concept to which the reference term is linked.                                                                                  |
+| <p>EffectiveVersionSequenceId<br> [1..1]</p> | UUID | The version of the concept where the reference term map became effective.                                                           |
+| <p>ObsoleteVersionSequenceId<br> [0..1]</p>  | UUID | The version of the concept where the reference term map became obsolete.                                                            |
+| <p>ReferenceTermId<br> [1..1]</p>            | UUID | The reference term which is associated with the concept.                                                                            |
+| <p>RelationshipTypeId<br> [1..1]</p>         | UUID | Identifies the relationship (or strength) that the reference term has with the concept. For example: SAME\_AS, NARROWER\_THAN, etc. |
 
 ### Code System
 

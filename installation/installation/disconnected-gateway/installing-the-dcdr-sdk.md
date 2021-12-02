@@ -62,7 +62,7 @@ If you want to debug the core applets you can clone the [https://github.com/sant
 
 If successful you should see the initial configuration window.
 
-![](<../../../.gitbook/assets/image (196).png>)
+![](<../../../.gitbook/assets/image (186).png>)
 
 If you have a local iCDR server you would enter the details for this server now, for the Elbonia MPI the settings are:
 
@@ -72,13 +72,13 @@ If you have a local iCDR server you would enter the details for this server now,
 
 Upon clicking the join button you'll be prompted to enter the credentials of the user which is joining your dCDR device to the domain:
 
-![](<../../../.gitbook/assets/image (197).png>)
+![](<../../../.gitbook/assets/image (187).png>)
 
 For the demonstration server you can use demoadmin/@Elbonia123 .
 
 If successful, you should receive a welcome message to the domain. You will then need to select a role, normally, when deploying the dCDR, this setting indicates the user interface and plugins that the client should download. For the SDK these settings are ignored.
 
-![](<../../../.gitbook/assets/image (194).png>)
+![](<../../../.gitbook/assets/image (188).png>)
 
 After selecting the role, you must configure the synchronization settings. Using "Online Only" will allow you to get an SDK environment setup quickly that mimics the web portal installation.
 
@@ -86,7 +86,7 @@ After selecting the role, you must configure the synchronization settings. Using
 There are currently known issues with the Synchronized mode setup with some community plugins (namely the reading of custom synchronization subscriptions). It is recommended, for now, using Online Only option for development.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (190).png>)
+![](<../../../.gitbook/assets/image (189).png>)
 
 You can continue setup by accepting the defaults for the other pages. Some configuration notes:
 
@@ -96,5 +96,5 @@ You can continue setup by accepting the defaults for the other pages. Some confi
 
 Upon completion you will be instructed to restart the application host. This is done by pressing CTRL+C in the sdb-ade window and restarting it.
 
-![](<../../../.gitbook/assets/image (189).png>)
+![](<../../../.gitbook/assets/image (190).png>)
 

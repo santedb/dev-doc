@@ -10,7 +10,7 @@ If you wanted to create a new device, you could select the **Create** button.&#x
 
 You'll then be presented with the new Create Device screen. Fill out the fields appropriately and click the **Save** button. ( Name, Model Name, and Operating System are required fields and must be filled out).
 
-![](<../../../.gitbook/assets/4 (4).jpg>)
+![](<../../../.gitbook/assets/4 (5).jpg>)
 
 Once create
 

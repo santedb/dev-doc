@@ -1,6 +1,6 @@
 # Reviewing Audits
 
-SanteDB iCDR and dCDR instances implement a local [iauditrepositoryservice.md](../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/security-services/auditing-services/iauditrepositoryservice.md "mention")where local audits are stored for events related to SanteDB , as well as an [iauditdispatchservice.md](../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/security-services/auditing-services/iauditdispatchservice.md "mention")which is responsible for shipping audits to a centralized audit repository (if the iCDR or dCDR are participating in an OpenHIE instance).
+SanteDB iCDR and dCDR instances implement a local [iauditrepositoryservice.md](../../../../developers/server-plugins/service-definitions/security-services/auditing-services/iauditrepositoryservice.md "mention")where local audits are stored for events related to SanteDB , as well as an [iauditdispatchservice.md](../../../../developers/server-plugins/service-definitions/security-services/auditing-services/iauditdispatchservice.md "mention")which is responsible for shipping audits to a centralized audit repository (if the iCDR or dCDR are participating in an OpenHIE instance).
 
 In the SanteDB administrative panel, audits are accessed using the `Audit Repository` function in the `Security` section of the Administrative Panel.&#x20;
 
@@ -8,7 +8,7 @@ In the SanteDB administrative panel, audits are accessed using the `Audit Reposi
 
 The audit list provides an overview of the complete audit trail available in the SanteDB iCDR or dCDR instance to which the administrative panel is connected.&#x20;
 
-![](<../../../../.gitbook/assets/image (419).png>)
+![](<../../../../.gitbook/assets/image (428).png>)
 
 Audits are displayed with the event summary fields visible.
 
@@ -74,7 +74,7 @@ When clicking the `View` button on an audit, you will be presented with a long-f
 
 The event information section of an audit indicates the overall metadata about the event.
 
-![](<../../../../.gitbook/assets/image (424).png>)
+![](<../../../../.gitbook/assets/image (444).png>)
 
 The event metadata is the same as that shown in the summary list, with additional context fields.
 
@@ -88,13 +88,13 @@ The event metadata is the same as that shown in the summary list, with additiona
 
 The network information section shows information about the network infrastructure when the request was made.
 
-![](<../../../../.gitbook/assets/image (425).png>)
+![](<../../../../.gitbook/assets/image (450).png>)
 
 ### Users and Computers
 
 The users and computers section of the audit detail show the information about the actors involved in the event.&#x20;
 
-![](<../../../../.gitbook/assets/image (438).png>)
+![](<../../../../.gitbook/assets/image (494).png>)
 
 Each actor has four attributes expressed in the table:
 
@@ -132,7 +132,7 @@ Each object has a lifecycle attached to it which identifies the action or state 
 
 Session objects represent a security session which was established for a user. The object carries additional contextual data about the policies with which the session was authenticated.&#x20;
 
-![](<../../../../.gitbook/assets/image (422).png>)
+![](<../../../../.gitbook/assets/image (438).png>)
 
 #### Query Objects
 
@@ -143,16 +143,16 @@ Query events will typically append the original query being executed against the
 * The HL7v2 QBP `QPD` segment data
 * The HL7 FHIR REST Request with Headers
 
-![](<../../../../.gitbook/assets/image (420).png>)
+![](<../../../../.gitbook/assets/image (431).png>)
 
 #### De-Identification Objects
 
 Whenever a policy decision is made, and the CDR needs to de-identify patient data to protect privacy of the patient, a deidentification object will be registered. This contains the identifier of the object which was the target of masking, as well as the policy which resulted in the masking occurring.
 
-![](<../../../../.gitbook/assets/image (436).png>)
+![](<../../../../.gitbook/assets/image (491).png>)
 
 #### Policy Decision
 
 When an access control decision is performed, and a policy violation exception thrown, the SanteDB audit log will carry a copy of the policy outcome object indicating the policy which failed validation and the overall action taken.
 
-![](<../../../../.gitbook/assets/image (439).png>)
+![](<../../../../.gitbook/assets/image (495).png>)
