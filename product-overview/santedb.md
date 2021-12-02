@@ -8,7 +8,9 @@ description: >-
 
 ### What is SanteDB?
 
-SanteDB is the foundational clinical data repository (CDR) developed by SanteSuite Inc. and leveraged by SanteSuite products. SanteDB forms the core of the SanteSuite product line and provides a robust, secure, repository for modeling and sharing clinical data.
+SanteDB is the foundational clinical data repository (CDR) developed by SanteSuite Inc. and leveraged by SanteSuite products. SanteDB is standards-based and highly scalable and is designed for large-scale (regional and national) digital health application deployments.&#x20;
+
+SanteDB forms the core of the SanteSuite product line and provides a robust, secure, repository for modeling and sharing clinical data.
 
 ![Figure 1 - SanteDB and SanteSuite](<../.gitbook/assets/image (106).png>)
 
