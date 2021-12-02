@@ -204,7 +204,7 @@ Never expose the SanteDB WWW host container to the internet. If you are running 
 ### SanteMPI Application
 
 {% hint style="info" %}
-This section is being moved to the [SanteMPI installation ](../../../../santempi/installation.md#docker-containers)documentation.
+This section is being moved to the [SanteMPI installation ](../../../santempi-installation.md#docker-containers)documentation.
 {% endhint %}
 
 In order to run a minimal SanteMPI application, you can exchange `santedb-icdr` with the `santedb-mpi` image, and apply the appropriate service configuration.

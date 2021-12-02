@@ -12,7 +12,7 @@ You can then clone the start code and follow the [getting-started.md](../../deve
 
 Overall, the installation process can be described as:
 
-1. Choose one of the appropriate [santedb-solutions.md](../../product-overview/santesuite-products/santedb/santedb-solutions.md "mention") for your use case.
+1. Choose one of the appropriate [santedb-solutions.md](../../santedb/santedb-solutions.md "mention") for your use case.
 2. Complete the necessary [planning-and-preparation-work](planning-and-preparation-work/ "mention")which includes:
    1. Establishing a master list requirements, of identity and data elements for your deployment.&#x20;
    2. Creating an operational deployment architecture document outlining the ports/servers/etc. your deployment will use.

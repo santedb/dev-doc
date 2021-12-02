@@ -2,7 +2,7 @@
 
 SanteMPI can generate a unique identifier in any format you choose whenever a patient is registered. This generation can occur regardless of where the registration originated (FHIR, HL7v2, UI, etc.).
 
-This generator will use the [Business Rules Engine](../../developers/extending-santesuite/extending-santedb/applets/business-rules.md) to generate a new ID each time a master record is created for the patient.&#x20;
+This generator will use the [Business Rules Engine](../../../../developers/extending-santesuite/extending-santedb/applets/business-rules.md) to generate a new ID each time a master record is created for the patient.&#x20;
 
 ### Create a new Business Rules File
 

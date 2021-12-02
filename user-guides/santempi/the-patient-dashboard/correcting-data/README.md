@@ -10,4 +10,3 @@ This section discusses various topics related to the editing of information with
 {% hint style="info" %}
 The MPI is intended to keep records of truth, and therefore editing details of patients sourced from other systems is only recommended when establishing a record of truth, or running in a simple deployment.
 {% endhint %}
-

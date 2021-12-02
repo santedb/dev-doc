@@ -1,10 +1,10 @@
 # Privacy Architecture
 
-SanteDB's [Policy Access Control](security-architecture.md#policy-access-control-architecture) components can be used to enable basic data privacy controls on data stored within the SanteDB solution. SanteDB allows objects such as Entities, Acts and identifiers to be tagged with one or more policies which apply to that particular object. 
+SanteDB's [Policy Access Control](security-architecture.md#policy-access-control-architecture) components can be used to enable basic data privacy controls on data stored within the SanteDB solution. SanteDB allows objects such as Entities, Acts and identifiers to be tagged with one or more policies which apply to that particular object.&#x20;
 
 ## Privacy Enforcement Service
 
-Whenever an Entity, Act or Assigning Authority (identity domain) is tagged with an access policy (such as provided in the [Adding Security Policy based on Occupation](../../santempi/recipes/adding-security-policy-based-on-occupation.md)) the configured Privacy Enforcement Service is called and validate access to the record and to apply any actions to the outgoing (or incoming) data.
+Whenever an Entity, Act or Assigning Authority (identity domain) is tagged with an access policy (such as provided in the [Adding Security Policy based on Occupation](../installation/installation/planning-and-preparation-work/recipes/adding-security-policy-based-on-occupation.md)) the configured Privacy Enforcement Service is called and validate access to the record and to apply any actions to the outgoing (or incoming) data.
 
 ### Entity/Act Disclosure
 
