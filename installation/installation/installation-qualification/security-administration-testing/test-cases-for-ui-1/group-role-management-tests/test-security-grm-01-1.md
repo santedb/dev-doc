@@ -6,11 +6,11 @@ description: Testing the successful creation of a Group with all properties spec
 
 ## References
 
-* [Group / Role Management](../../../../../../operations-1/system-administration/security-administration/group-role-management.md)
+* [Group / Role Management](../../../../../../operations/system-administration/security-administration/group-role-management.md)
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating new groups on the [Group / Role Management](../../../../../../operations-1/system-administration/security-administration/group-role-management.md) page.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new groups on the [Group / Role Management](../../../../../../operations/system-administration/security-administration/group-role-management.md) page.
 
 ## Pre-Conditions / Setup
 

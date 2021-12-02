@@ -9,7 +9,7 @@ description: >-
 ## References
 
 * [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
 * [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 * [TEST: SECURITY-UA-02](test-security-ua-02.md)
 * [TEST: SECURITY-UA-03](test-security-ua-03.md)
@@ -21,7 +21,7 @@ The `user.del` command is for de-activating users (effectively deleting the user
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. See [TEST: SECURITY-UA-02](test-security-ua-02.md) or [TEST: SECURITY-UA-03](test-security-ua-03.md) for checking if a username exists.
 3. See [TEST: SECURITY-UA-27](test-security-ua-27.md) for checking if a user is active (un-deleted).
 

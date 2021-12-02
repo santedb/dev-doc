@@ -6,7 +6,7 @@ description: Testing the successful assigning a policy to an application.
 
 ## References
 
-* [Application Management](../../../../../../operations-1/system-administration/security-administration/application-management.md)
+* [Application Management](../../../../../../operations/system-administration/security-administration/application-management.md)
 
 ## Discussion
 

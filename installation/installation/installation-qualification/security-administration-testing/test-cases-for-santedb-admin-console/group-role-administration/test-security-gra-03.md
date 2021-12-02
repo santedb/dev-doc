@@ -7,7 +7,7 @@ description: Testing the role.info command with no parameters specified.
 ## References
 
 * [Group / Role Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/group-role-management.md)
-* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
 * [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 
 ## Discussion
@@ -18,7 +18,7 @@ The `role.info` command is for listing a specific role's information and effecti
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 
 ## Actions/Steps
 

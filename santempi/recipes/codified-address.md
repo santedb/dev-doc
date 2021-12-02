@@ -1,6 +1,6 @@
 # Codified Address
 
-This recipe will show you how to take free-form addresses from any inbound source \(HL7, API, FHIR, etc.\) and append a CensusTract code to the address. You can also use this same pattern to correct spellings, cross-reference address information, etc.
+This recipe will show you how to take free-form addresses from any inbound source (HL7, API, FHIR, etc.) and append a CensusTract code to the address. You can also use this same pattern to correct spellings, cross-reference address information, etc.
 
 ### Create a new Business Rules File
 
@@ -89,4 +89,3 @@ Finally, add the business rule to the BeforeInsert method on the patient.
 ```javascript
 SanteDBBre.AddBusinessRule("elb.rule.addr", "Patient", "BeforeInsert", { "deceasedDate" : "null"}, appendAddress);
 ```
-

@@ -9,7 +9,7 @@ description: >-
 ## References
 
 * [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
 * [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 * [TEST: SECURITY-UA-01](test-security-ua-01.md)
 
@@ -22,7 +22,7 @@ The `user.list` command is for listing users.
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. A user must be created for a username to be tested as a `-u` parameter (e.g. assume "NOT\_A\_USER" has not been created yet for this test or refer to [TEST: SECURITY-UA-01](test-security-ua-01.md) to find out what usernames are still available).
 
 ## Actions/Steps

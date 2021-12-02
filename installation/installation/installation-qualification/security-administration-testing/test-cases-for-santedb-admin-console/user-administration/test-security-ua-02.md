@@ -9,7 +9,7 @@ description: >-
 ## References
 
 * [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
 * [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 
 ## Discussion
@@ -20,7 +20,7 @@ The `user.list` command is for listing users.&#x20;
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 2. A user must be created for a username to be tested as a `-u` parameter (e.g. "demoadmin").
 
 ## Actions/Steps

@@ -1,8 +1,8 @@
 # Assigning a Home Facility
 
-When using the Disconnected Gateway, dCDR Android or dCDR Windows/Linux applications, you can optionally append the "home facility" or "registering facility" to the patient being registered. 
+When using the Disconnected Gateway, dCDR Android or dCDR Windows/Linux applications, you can optionally append the "home facility" or "registering facility" to the patient being registered.&#x20;
 
-This pattern works for assigning any relationships you like \(for example, automatically assigning birthplace on a birth notification\).
+This pattern works for assigning any relationships you like (for example, automatically assigning birthplace on a birth notification).
 
 ### Create a new Business Rules File
 
@@ -62,4 +62,3 @@ Finally, add the business rule to the BeforeInsert method on the patient.
 ```javascript
 SanteDBBre.AddBusinessRule("elb.rule.home_fac", "Patient", "BeforeInsert", { "deceasedDate" : "null"}, appendRegisteringFacility);
 ```
-

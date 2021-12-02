@@ -6,7 +6,7 @@ description: Testing the successful deleting a device.
 
 ## References
 
-* [Device Management](../../../../../../operations-1/system-administration/security-administration/device-management.md)
+* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
 
 ## Discussion
 

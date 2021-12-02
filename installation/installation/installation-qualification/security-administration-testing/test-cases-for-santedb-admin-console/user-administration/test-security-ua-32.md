@@ -7,7 +7,7 @@ description: Testing the user.password command with no parameters specified.
 ## References
 
 * [User Administration](../../../../../../operations/server-administration/santedb-icdr-admin-console/user-administration.md)
-* [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment)&#x20;
+* [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment)&#x20;
 * [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/)
 
 ## Discussion
@@ -18,7 +18,7 @@ The `user.password` command is for changing a specific users password.
 
 ## Pre-Conditions / Setup
 
-1. Follow the directions from [Security Administration](../../../../../../operations-1/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
+1. Follow the directions from [Security Administration](../../../../../../operations/system-administration/security-administration/#demo-environment) to quickly setup and start using the [SanteDB Administration & Security Console](../../../../../../operations/server-administration/santedb-icdr-admin-console/).
 
 ## Actions/Steps
 

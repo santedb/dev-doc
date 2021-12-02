@@ -1,4 +1,4 @@
-# Installation
+# SanteMPI Installation
 
 SanteMPI is installed and configured in an identical manner to the [SanteDB iCDR ](../installation/installation/)Installation. This section will only discuss the delta (differences) between installing SanteDB iCDR ad dCDR.
 

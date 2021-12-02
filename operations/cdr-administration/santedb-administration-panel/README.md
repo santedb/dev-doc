@@ -10,7 +10,7 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 
 * [Logging In](logging-in.md)
 * [Managing your User Profile](managing-your-profile.md)
-* [System Administration](../../../operations-1/system-administration/)
+* [System Administration](../../system-administration/)
   * [System Probes](system-administration.md#probes)
   * [Job Administration](system-administration.md#running-a-job)
   * [Logs](system-administration.md#logs)

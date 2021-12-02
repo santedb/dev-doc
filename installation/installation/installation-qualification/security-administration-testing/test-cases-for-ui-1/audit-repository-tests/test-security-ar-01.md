@@ -6,7 +6,7 @@ description: Testing the appearance of the modal viewed showing Audit Event Deta
 
 ## References
 
-* [Audit Repository](../../../../../../operations-1/system-administration/security-administration/audit-repository.md)
+* [Audit Repository](../../../../../../operations/system-administration/security-administration/audit-repository.md)
 
 ## Discussion
 

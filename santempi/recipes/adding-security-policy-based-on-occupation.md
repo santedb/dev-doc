@@ -81,4 +81,3 @@ Finally, add the business rule to the BeforeInsert and BeforeUpdate method on an
 SanteDBBre.AddBusinessRule("mpi.vip.occupation.insert", "Patient", "BeforeInsert", { "occupation" : "ff4fb688-5a91-11eb-ae93-0242ac130002" }, flagParliamentarian);
 SanteDBBre.AddBusinessRule("mpi.vip.occupation.update", "Patient", "BeforeUpdate", { "occupation" : "ff4fb688-5a91-11eb-ae93-0242ac130002" }, flagParliamentarian);
 ```
-

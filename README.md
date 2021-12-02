@@ -26,13 +26,13 @@ SanteDB is a general purpose clinical data repository based loosely on the HL7 R
 ### Quick Links
 
 * [Architecture Documentation](santedb/architecture.md)
-* [Operations Management](operations-1/operations.md)
+* [Operations Management](operations/operations.md)
   * [Installation](installation/installation/)
   * [Knowledgebase](knowledgebase/sdb-kb/)
   * [Fixes & Patches](knowledgebase/fixpatch/)
 * [Extending the Platform (SDK)](broken-reference)
 * SanteDB Solution Projects
-  * [SanteDB Master Patient Index (SanteMPI](product-overview/santesuite-products/master-patient-index-santempi/about-santempi.md))
+  * [SanteDB Master Patient Index (SanteMPI](santempi/about-santempi.md))
   * [SanteDB Audit Repository (SanteGuard)](santeguard/introduction.md)
   * [OpenIZ](openiz/about-openiz/)
 

@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Audit Repository](../../../../../../operations-1/system-administration/security-administration/audit-repository.md)
+* [Audit Repository](../../../../../../operations/system-administration/security-administration/audit-repository.md)
 * [TEST: SECURITY-AR-01](test-security-ar-01.md)
 
 ## Discussion
