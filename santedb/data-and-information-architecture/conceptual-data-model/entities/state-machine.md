@@ -2,7 +2,7 @@
 
 Entities also support a basic series of states which identify the current status of the entity in the SanteDB data model. Figure 7 illustrates the states of an entity and the valid transitions.
 
-![Figure 7 - Entity State Diagram](<../../../../.gitbook/assets/image (18).png>)
+![Figure 7 - Entity State Diagram](<../../../../.gitbook/assets/image (101).png>)
 
 The states of the entity are:
 

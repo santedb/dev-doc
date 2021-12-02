@@ -8,11 +8,11 @@ Connection strings are named settings which provide SanteDB with the necessary i
 
 When editing a connection string in an existing configuration file, you will be presented with a list of connection strings which have already been configured:
 
-![](<../../../../.gitbook/assets/image (500).png>)
+![](<../../../../.gitbook/assets/image (427) (1) (1) (1) (1).png>)
 
 In the example above, a user could select a an existing Read/Write connection string which has already been configured or they can create a NEW connection string to, for example, bind the read/write connection string to a read/write primary node.
 
-![](<../../../../.gitbook/assets/image (498).png>)
+![](<../../../../.gitbook/assets/image (426) (1) (1) (1) (1).png>)
 
 ## Connection Types
 
@@ -45,6 +45,6 @@ When Firebird is selected as the database software, SanteDB will assume you're u
 
 You can create a new database from the configuration tool on the database software of your choice by selecting New Database as the database option. You will be prompted to enter the details of the database you're creating:
 
-![](<../../../../.gitbook/assets/image (442).png>)
+![](<../../../../.gitbook/assets/image (417) (1) (1) (1).png>)
 
 You will need to provide the superuser account of a user which has `CREATE DATABASE` permission on the selected provider. Upon pressing OK the database will be created and initialized, and you will be returned to the initial configuration screen.

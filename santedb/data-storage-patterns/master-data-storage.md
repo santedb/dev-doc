@@ -10,7 +10,7 @@ The Master Data Management plugin permits your SanteDB CDR instance to store mul
 * Persons
 
 {% hint style="info" %}
-The use of Master Data Management services require a compatible [Matching and Merge](../../developers/server-plugins/service-definitions/matching-merging-services/) service to operate. This is how the MDM solution detects candidate master records.
+The use of Master Data Management services require a compatible [Matching and Merge](../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/matching-merging-services/) service to operate. This is how the MDM solution detects candidate master records.
 {% endhint %}
 
 ## MDM Data Storage Pattern
@@ -26,7 +26,7 @@ If no MASTER is found, or the configuration does not permit auto-linking then a 
 
 
 
-![](<../../.gitbook/assets/image (177).png>)
+![](<../../.gitbook/assets/image (179).png>)
 
 The master record should have **no data** associated with it. It is merely an anchor which is used to collect the local records. Typically a master record can have extensions, notes, identifiers, names, etc. associated with it, however these attributes should apply to the anchor point rather than for establishing ROT data.
 
@@ -39,7 +39,7 @@ In the scenario below, Good Health Clinic has registered John Doe born Jan 1 198
 Assuming that the match configuration was setup such that the HIV record had a match score below "DEFINITE" match, the MDM plugin would establish a new MASTER which contains one LOCAL. That LOCAL would also be related to the MASTER from Good Health Clinic with relationship type `MDM-CandidateLocal`.\
 
 
-![](<../../.gitbook/assets/image (179).png>)
+![](<../../.gitbook/assets/image (186).png>)
 
 This candidate link exists until:
 
@@ -48,7 +48,7 @@ This candidate link exists until:
 * An administrator establishes a new link between the HIV Clinic and the MASTER of `MDM-IgnoreCandidate` (which indicates a known false-match).
 * An administrator manually indicates that the HIV Health Clinic record is a known match to the MASTER (in which case the MDM-MasterRecord link is removed and updated (as shown below).
 
-![](<../../.gitbook/assets/image (181).png>)
+![](<../../.gitbook/assets/image (184).png>)
 
 ### Record of Truth
 
@@ -82,7 +82,7 @@ When a caller asks the CDR for the MASTER, the MDM service will call the `IPolic
 
 The MdmDataManagementService should be configured in your application context. Upon start, this daemon will read the contents of the `ResourceMergeConfigurationSection` to determine the appropriate instances of `MdmResourceListener<T>` to construct and register with the provider.
 
-![](<../../.gitbook/assets/image (175).png>)
+![](<../../.gitbook/assets/image (185).png>)
 
 For example, given a configuration as provided below
 
@@ -131,7 +131,7 @@ The following section outlines several common behaviors and patterns to assist i
 
 When the CDR receives a request to create a new entity which is under MDM control, as shown below.&#x20;
 
-![](<../../.gitbook/assets/image (209).png>)
+![](<../../.gitbook/assets/image (220).png>)
 
 1. The source record is issued a new UUID
 2. The MDM layer will attempt to determine if the source record matches any MASTER records that currently exist within the database (using the resource merge configuration).
@@ -139,17 +139,17 @@ When the CDR receives a request to create a new entity which is under MDM contro
    1. The relationship is indicated with RelationshipType MDM-MASTER
    2. The classification of this relationship is AUTO
 
-![](<../../.gitbook/assets/image (210).png>)
+![](<../../.gitbook/assets/image (215).png>)
 
 Any future queries based on the demographics will result in the MASTER\_A record being returned and synthesized from the source records according to the synthesization rules.&#x20;
 
-![](<../../.gitbook/assets/image (213).png>)
+![](<../../.gitbook/assets/image (214).png>)
 
 ### Case 2: Duplicate Object Created (AutoLink Enabled)
 
 When the CDR receives a registration request for a new object which is under MDM control, such as shown below:
 
-![](<../../.gitbook/assets/image (211).png>)
+![](<../../.gitbook/assets/image (213).png>)
 
 1. The source record is issued as new UUID
 2. The IRecordMatchService is called with the specified configurations. If this process classifies a record as MATCH and AutoLink is turned on for that match configuration
@@ -157,12 +157,12 @@ When the CDR receives a registration request for a new object which is under MDM
    2. The classification of this relationship is AUTO
    3. The weighting of the match is stored
 
-![](<../../.gitbook/assets/image (214).png>)
+![](<../../.gitbook/assets/image (223).png>)
 
 A query for EID A123 would now result in a single result with the synthesized data from both sources and links to the sources where the data was obtained.\
 
 
-![](<../../.gitbook/assets/image (215).png>)
+![](<../../.gitbook/assets/image (216).png>)
 
 ### Case 3: Suspected Duplicate Object Created (or AutoLink disabled)
 
@@ -173,7 +173,7 @@ When the CDR receives a request to create an object with similar attributes howe
 
 Such as the patient illustrated below.
 
-![](<../../.gitbook/assets/image (216).png>)
+![](<../../.gitbook/assets/image (218).png>)
 
 The behavior is as follows:
 
@@ -187,7 +187,7 @@ The behavior is as follows:
    2. The classification of the relationship is AUTO
    3. The score of the match is stored as the relationship strength
 
-![](<../../.gitbook/assets/image (217).png>)
+![](<../../.gitbook/assets/image (219).png>)
 
 ### Case 4: Object is Updated to Match MASTER
 
@@ -195,11 +195,11 @@ When the CDR receives a request to update a source record, it does so against th
 
 For example, given this update to SOURCE\_C.
 
-![](<../../.gitbook/assets/image (218).png>)
+![](<../../.gitbook/assets/image (222).png>)
 
 The `SOURCE_C` record would be updated to match and the matching re-run, it may be determined that `SOURCE_C` is in fact the same person as `MASTER_A`
 
-![](<../../.gitbook/assets/image (219).png>)
+![](<../../.gitbook/assets/image (217).png>)
 
 In this case, `SOURCE_C` is DETACHED from `MASTER_C` and then attached to `MASTER_A`.
 
@@ -207,11 +207,11 @@ In this case, `SOURCE_C` is DETACHED from `MASTER_C` and then attached to `MASTE
 
 The CDR also provides interfaces for manually reconciling candidate matches. Take for example, an instruction to reconcile `SOURCE_C` and `MASTER_A`.
 
-![](<../../.gitbook/assets/image (220).png>)
+![](<../../.gitbook/assets/image (224).png>)
 
 In this method (also known as a LOCAL>MASTER merge) the MDM-Candidate link is translated into a MDM-Master and the classification set to VERIFIED.
 
-![](<../../.gitbook/assets/image (222).png>)
+![](<../../.gitbook/assets/image (212).png>)
 
 {% hint style="info" %}
 Any operation which removes all MDM-Master links from a MASTER record will result in the automatic obsolete of the MASTER record.

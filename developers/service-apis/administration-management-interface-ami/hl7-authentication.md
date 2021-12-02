@@ -6,7 +6,7 @@ If your deployment does no leverage client certificates for authentication, then
 
 ### No Authentication
 
-When the `None` authentication method is specified, then the SanteDB server will use the value of `MSH-3` as an application identity, and the configured `noAuthSecret` as the client secret. 
+When the `None` authentication method is specified, then the SanteDB server will use the value of `MSH-3` as an application identity, and the configured `noAuthSecret` as the client secret.&#x20;
 
 {% hint style="danger" %}
 This configuration option is only recommended if it is impossible to use X509 certificates or MSH-8 or SFT-4 authentication schemes. All `MSH-3` values will share the same secret.
@@ -55,3 +55,6 @@ When node authentication is perform using certificates, the value of the `securi
 | Msh8          | The entire value of the `MSH-8` segment is used as the client secret for the application |
 | Sft4          | The entire value of the `SFT-4` segment is used as the client secret for the application |
 
+{% hint style="info" %}
+You can use the SanteDB Configuration Tool's [hl7-version-2-service.md](../../../operations/server-administration/configuration-tool/messaging-settings/hl7-version-2-service.md "mention") to configure these options in the user interface.
+{% endhint %}

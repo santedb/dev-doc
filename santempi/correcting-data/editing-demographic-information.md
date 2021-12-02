@@ -2,11 +2,11 @@
 
 To edit demographic information for a patient, click the pencil icon in the **Basic Information** panel.
 
-![](<../../.gitbook/assets/image (112).png>)
+![](<../../.gitbook/assets/image (90).png>)
 
 This will switch the panel into editing mode.
 
-![](<../../.gitbook/assets/image (111).png>)
+![](<../../.gitbook/assets/image (6).png>)
 
 ### Editing Birth Details
 
@@ -23,7 +23,7 @@ The **Birth** tab contains details attached to the patient's demographic record 
 
 SanteDB allows a single patient to have a multitude of names. The name input is found on the **Name** tab of the edit view, clicking this tab will enable the name editing functions.
 
-![](<../../.gitbook/assets/image (113).png>)
+![](<../../.gitbook/assets/image (121).png>)
 
 {% hint style="info" %}
 This input may appear with more or less inputs depending on the structure of names within your deployment.
@@ -62,7 +62,7 @@ There are several common types of names which are built into SanteDB. Name types
 
 SanteDB allows a single patient to have multiple addresses each with a different purpose. Accessing the address entry is done clicking on the **Address** tab.
 
-![](<../../.gitbook/assets/image (115).png>)
+![](<../../.gitbook/assets/image (57).png>)
 
 This input area can change based on the configuration of your instance of SanteMPI. There are three types of address entry generally provided:
 
@@ -99,7 +99,7 @@ The type of addresses which can be captured in SanteDB/SanteMPI are listed below
 
 You can edit the patient's primary methods of contact using the **Contact** tab. The contact tab presents a list of address types and allows for the specification of whether the contact address is an electronic address (e-mail) or telephone address.
 
-![](<../../.gitbook/assets/image (118).png>)
+![](<../../.gitbook/assets/image (115).png>)
 
 Based on your configuration of SanteDB the list of available contact types may be different. The list of address types can be changes by editing the TelecommunicationsAddressUse concept set.
 
@@ -119,7 +119,7 @@ The types of addresses are:
 
 When a patient dies, or is reported as deceased the demographic record can be updated to reflect this. To report a patient as deceased use the **Death** tab.
 
-![](<../../.gitbook/assets/image (120).png>)
+![](<../../.gitbook/assets/image (58).png>)
 
 Here the patient has been indicated as deceased sometime around May 5, 2020. It is also possible to record the place of death of the patient.
 
@@ -131,7 +131,7 @@ The death details on the patient's demographic record is merely to mark the pati
 
 SanteDB 2.0.10 introduces a new editing tab for **Extra** information. This information allows the editing of extended relationship types between the patient and other entities such as organizations, countries, etc.
 
-![](<../../.gitbook/assets/image (124).png>)
+![](<../../.gitbook/assets/image (92).png>)
 
 The relationship types are listed below for additional assistance:
 

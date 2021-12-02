@@ -23,7 +23,7 @@ The order flow is triggered whenever a client of the iCDR submits an `Act` with 
 
 The logistics management information system may perform an internal approval of the order and can accept the order (with modifications to the quantities) via a [GS1 Order Response](https://www.gs1.org/standards/edi-xml/xml-order-response/3-4-1).
 
-![](<../../../.gitbook/assets/image (415).png>)
+![](<../../../.gitbook/assets/image (409).png>)
 
 The order and order response is made up of a series of `tradeItemDetail` which are mapped to the  `Product` participations in the original `Supply` request (these are typically `Materials`). If an order response is set then the iCDR creates a new `Act` with mood-code of `Promise` linking the new act with the request act as a `Fulfills` relationship.
 
@@ -103,7 +103,7 @@ The `Despatch Advice` differs from the `Order` message in that it contains:
 
 The iCDR converts this into an `Act` with class code of `Supply` , mood code of `EventOccurence` and a status of `Active`, dCDRs will synchronize this from the core iCDR model on their next synchronization, or clients may request the information in any of the supported iCDR messaging formats. The new `Act` is linked to the original `Act` with an `ActRelationship` carrying relationship type of `Fulfills` (i.e. the new act fulfills the request act)
 
-![](<../../../.gitbook/assets/image (416).png>)
+![](<../../../.gitbook/assets/image (408).png>)
 
 #### Orderless Despatch
 
@@ -121,7 +121,7 @@ The caller creates a new `Act` with class code `Supply` with status code of `Com
 
 The previous act has its status code set to `Complete` .
 
-![](<../../../.gitbook/assets/image (417).png>)
+![](<../../../.gitbook/assets/image (407).png>)
 
 For example, an order receive message for Good Health Hospital may appear as:
 

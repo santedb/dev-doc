@@ -19,7 +19,7 @@ Digital signatures ensure:
 
 When an extension or package has been vetted and signed, the applet will appear with a digital signature indicator:
 
-![](<../../.gitbook/assets/image (412).png>)
+![](<../../.gitbook/assets/image (405).png>)
 
 {% hint style="warning" %}
 It is possible to disable the verified publisher status check on SanteDB software however this is not recommended as SanteDB will load any package files uploaded to it.&#x20;

@@ -2,7 +2,7 @@
 
 The performance group in the configuration tool controls the caching of data in SanteDB.
 
-![](<../../../.gitbook/assets/image (456).png>)
+![](<../../../.gitbook/assets/image (424) (1) (1) (1).png>)
 
 The services installed by default on SanteDB are:
 
