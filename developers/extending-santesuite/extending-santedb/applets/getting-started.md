@@ -2,13 +2,13 @@
 
 This article will illustrate the use of the SanteDB dCDR SDK to write a portable SanteDB dCDR applet.&#x20;
 
-You should follow the [installing-the-dcdr-sdk.md](../installation/installation/disconnected-gateway/installing-the-dcdr-sdk.md "mention") before completing this exercise.
+You should follow the [installing-the-dcdr-sdk.md](../../../../installation/installation/disconnected-gateway/installing-the-dcdr-sdk.md "mention") before completing this exercise.
 
 ## Obtain the Starter Code
 
 Next, you'll need to clone or create an applet. You can clone the starter applet from [https://github.com/santedb/applet-starter](https://github.com/santedb/applet-starter) in any directory of your choice.
 
-![](<../.gitbook/assets/image (193).png>)
+![](<../../../../.gitbook/assets/image (193).png>)
 
 ## Hello World!
 
@@ -28,7 +28,7 @@ The login screen is shown because the index.html view demands login permission t
 
 After logging in, you should see the welcome message:
 
-![](<../.gitbook/assets/image (192).png>)
+![](<../../../../.gitbook/assets/image (192).png>)
 
 ### Code Editing
 
@@ -86,7 +86,7 @@ This code:
 * Calls the SanteDB API to find all patients (SanteDB.resources.patient.findAsync) who has any name (name.component.value) is approximately the output (the \~ indicator)
 * Assigns the results of the call to the scoped results variable
 
-![](<../.gitbook/assets/image (191).png>)
+![](<../../../../.gitbook/assets/image (191).png>)
 
 ### Next Steps
 
@@ -98,7 +98,7 @@ sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-elb-mpi
 
 When launching this you should be presented with the Elbonia customizations of the MPI administrative panel.
 
-![](<../.gitbook/assets/image (195).png>)
+![](<../../../../.gitbook/assets/image (195).png>)
 
 ### Useful Hints
 
