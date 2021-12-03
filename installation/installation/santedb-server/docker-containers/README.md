@@ -180,27 +180,6 @@ The `santedb-icdr` container is the generic ICDR instance for SanteDB, however S
 * `santedb-mpi` : SanteDB + SanteMPI plugins pre-deployed
 * `santedb-www` : SanteDB dCDR Web Portal
 
-### SanteDB Web Portal
-
-To install the SanteDB web portal you can run the www container in your application.
-
-```yaml
-  www:
-    image: santesuite/santedb-www:latest
-    container_name: santedb-www
-    ports:
-      - "9200:9200"
-    depends_on:
-      - santedb
-    restart: always
-```
-
-Once configured you can access the portal by navigating to : http://localhost:9200
-
-{% hint style="warning" %}
-Never expose the SanteDB WWW host container to the internet. If you are running the santedb-www container and wish to expose it to external clients, it is recommended you use SSL termination with either IIS or NGINX
-{% endhint %}
-
 ### SanteMPI Application
 
 {% hint style="info" %}

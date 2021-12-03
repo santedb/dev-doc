@@ -149,7 +149,7 @@ Query events will typically append the original query being executed against the
 
 Whenever a policy decision is made, and the CDR needs to de-identify patient data to protect privacy of the patient, a deidentification object will be registered. This contains the identifier of the object which was the target of masking, as well as the policy which resulted in the masking occurring.
 
-![](<../../../../.gitbook/assets/image (436).png>)
+![](<../../../../.gitbook/assets/image (436) (1).png>)
 
 #### Policy Decision
 

@@ -36,7 +36,7 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 
 When you log into the SanteDB Administration Panel user interface, the default screen is the server dashboard. Depending on the plugins you have enabled (SanteMPI, SanteIMS, etc.) and your level of user access (clinical data, administrative data, etc.) you will see a series of summary dashboards for your account.
 
-![](<../../../.gitbook/assets/image (431).png>)
+![](<../../../.gitbook/assets/image (431) (1).png>)
 
 * System Menu: The system menu provides a series of links to administrative screens which your user account can access.&#x20;
 * Dashboard Area: The dashboard area of your administrative panel. This will change depending on your jurisdiction, plugins installed, and user access.
