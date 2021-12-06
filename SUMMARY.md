@@ -297,7 +297,6 @@
     * [Installing Disconnected Windows Application](installation/installation/disconnected-gateway/installing-disconnected-windows-application.md)
     * [Installing the dCDR SDK](installation/installation/disconnected-gateway/installing-the-dcdr-sdk.md)
     * [User Interface App Settings](installation/installation/disconnected-gateway/app-settings.md)
-* [SanteMPI Installation](santempi/installation.md)
 * [Securing the APIs](installation/installation/securing-the-apis.md)
 
 ## Operations

@@ -173,18 +173,7 @@ COPY custom.pak /santedb/applets/custom.pak
 
 Upon load, the SanteDB iCDR server will load your package files and will load any business rules files required.
 
-## Other Containers
-
-The `santedb-icdr` container is the generic ICDR instance for SanteDB, however SanteSuite provides other containers which are pre-configured with the necessary plugins for those functions:
-
-* `santedb-mpi` : SanteDB + SanteMPI plugins pre-deployed
-* `santedb-www` : SanteDB dCDR Web Portal
-
-### SanteMPI Application
-
-{% hint style="info" %}
-This section is being moved to the [SanteMPI installation ](../../../../santempi/installation.md#docker-containers)documentation.
-{% endhint %}
+## SanteMPI
 
 In order to run a minimal SanteMPI application, you can exchange `santedb-icdr` with the `santedb-mpi` image, and apply the appropriate service configuration.
 
@@ -231,4 +220,6 @@ The SanteMPI container adds the following plugins to SanteDB which can be enable
 | IHE\_PDQM | Enables the Patient Demographics Query for Mobile query parameters and extensions.                         |
 | IHE\_PIXM | Enables the Patient Identity Cross Reference (`$ihe-pix`) FHIR operation                                   |
 | IHE\_PMIR | Enables the Patient Master Identity Registry function (`urn:ihe:iti:pmir:2019:patient-feed` ) FHIR message |
+| IHE\_PIX  | Enables the IHE PIX (ITI-8 and ITI-9) interfaces for the MPI                                               |
+| IHE\_PDQ  | Enables the IHE PDQ profile (ITI-21) for HL7v2 interface on the MPI.                                       |
 

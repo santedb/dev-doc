@@ -49,7 +49,7 @@ The dCDR can be installed and is tested on:
 
 The dCDR Gateway can be downloaded from the [santedb-dcg GitHub](https://github.com/santedb/santedb-dcg/releases) project.
 
-### dCDR Web Host Service
+### dCDR Web Access Gateway
 
 The dCDR WWW service allows operators of SanteDB infrastructure to host dCDR applications (which are typically designed for offline use) to operate in an online-only fashion and allows for access to the user interfaces for broad internet hosting environments.
 
