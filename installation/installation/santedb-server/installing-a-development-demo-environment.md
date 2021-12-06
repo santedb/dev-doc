@@ -113,6 +113,52 @@ Configuration of the SanteDB server should be done prior to the first start of t
 
 See: [configuration-tool](../../../operations/server-administration/configuration-tool/ "mention")
 
+When first configuring SanteDB iCDR server on a Windows environment you will need to select the database persistence technology the server will be using, the options are:
+
+* PostgreSQL 9+ :  If you're running SanteDB with full functionality, select this option.
+* Firebird : If you're running SanteDB for a quick demonstration or test, select this option.
+
+#### PostgreSQL Configuration
+
+Selecting the PostgreSQL provider will expose the connection parameters for PostgreSQL. See [#postgresql-configuration](../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#postgresql-configuration "mention") for more information on these settings.
+
+![](<../../../.gitbook/assets/image (428).png>)
+
+#### Firebird Configuration
+
+Selecting the Firebird provider will expose the connection parameter for Firebird 3.x provider, SanteDB iCDR will assume you're using the embedded version of Firebird. This database connector has three parameters. See [#firebird](../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#firebird "mention") connection details in the configuration tool documentation.
+
+![](<../../../.gitbook/assets/image (426).png>)
+
+#### Multiple Instances of SanteDB on the Same Server
+
+If you're running multiple instances of SanteDB on the same server, you will need to install the software in different file locations. When configuring the iCDR on the Windows host you can then set an instance name to isolate the Windows Services and event logs.
+
+![](<../../../.gitbook/assets/image (418).png>)
+
+#### Configuration Template
+
+SanteDB iCDR server packages may be shipped with one ore more [santedb-solutions.md](../../../santedb/santedb-solutions.md "mention") included, you should select an appropriate template for the software solution that this instance of the iCDR will fulfill.
+
+![](<../../../.gitbook/assets/image (437).png>)
+
+#### Initial Configuration Tasks
+
+Once you've completed the installation options for the SanteDB server and press `Continue` you will be prompted to confirm the initial configuration tasks.
+
+![](<../../../.gitbook/assets/image (448).png>)
+
+#### Finish Configuration&#x20;
+
+You can use the configuration tooling to customize your installation of the SanteDB server. These settings are documented in [configuration-tool](../../../operations/server-administration/configuration-tool/ "mention")
+
+![](<../../../.gitbook/assets/image (444).png>)
+
+Recommended configuration panels and settings to change include:
+
+* Changing the Performance/Caching to REDIS caching and setting up REDIS
+* Turning down the Diagnostics/Logging setting to Warning or Error
+
 ## Initial Run / Initialization
 
 After you have applied the configuration from the Configuration Tool, the SanteDB service will automatically restart.&#x20;
