@@ -12,6 +12,8 @@ This tutorial uses Docker as a basis for illustrating SanteMPI functions. In ord
 
 * Have Docker installed on the host system (on Windows or Linux)
 * Have a text editor which can be used to edit the docker YML files
+* Installed SOAP UI ([https://www.soapui.org/downloads/latest-release/](https://www.soapui.org/downloads/latest-release/))
+* Downloaded the Installation Qualification Test Suite ([https://github.com/santedb/santempi/blob/master/SanteMPI-Test-Cases-soapui-project.xml](https://github.com/santedb/santempi/blob/master/SanteMPI-Test-Cases-soapui-project.xml))
 
 ## Create the Docker Application
 
@@ -113,4 +115,135 @@ This will start the SanteDB iCDR (running SanteMPI), the web access gateway and 
 
 ## Configure the Web Access Gateway
 
-You can now configure the web-access gateway, the [Configuring the Web Access Gateway ](installation/disconnected-gateway/installing-web-access-gateway.md#configure-the-web-access-gateway)article contains detailed instructions on how this is performed.
+You can now configure the web-access gateway, the [Configuring the Web Access Gateway ](installation/disconnected-gateway/installing-web-access-gateway.md#configure-the-web-access-gateway)article contains detailed instructions on how this is performed.&#x20;
+
+### Join the Realm
+
+Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:9200) in your web browser. You will be prompted for connection details. For the quick start use:
+
+* Device ID: quick-web
+* Realm: santedb-mpi
+
+The rest of the settings can be left as their defaults.
+
+![](<../.gitbook/assets/image (427).png>)
+
+Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
+
+![](<../.gitbook/assets/image (422).png>)
+
+### Select the MPI Role
+
+You will be managing a SanteMPI server, therefore you will need to instruct the web access gateway that this gateway will be acting in the "SanteDB Master Patient Index Functions" solution.
+
+![](<../.gitbook/assets/image (420).png>)
+
+{% hint style="info" %}
+Ensure you select the option to automatically download updates for applet files. This will ensure new applets uploaded to the iCDR will be downloaded by the dCDR gateway.
+{% endhint %}
+
+### Set Online Only Function Level
+
+Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
+
+
+![](<../.gitbook/assets/image (433).png>)
+
+{% hint style="danger" %}
+The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
+{% endhint %}
+
+### Accept Defaults
+
+You can accept the defaults for the following screens:
+
+* Logging - This screen sets the verbosity of the output to your Docker host log
+* Application Services - This screen allows for the enabling of third party or additional services which are not required by the web access gateway.
+* Network - This screen allows you to configure the optimization between the dCDR and iCDR
+
+Full documentation of these settings can be found on the [installing-web-access-gateway.md](installation/disconnected-gateway/installing-web-access-gateway.md "mention") and [installing-disconnected-gateway.md](installation/disconnected-gateway/installing-disconnected-gateway.md "mention") wiki articles.
+
+### Customize the User Interface
+
+You can customize the manner in which the SanteMPI user interface behaves by setting one or more [app-settings.md](installation/disconnected-gateway/app-settings.md "mention"). For example, the configuration below will only require given and family names to be registered, and will show the normally hidden fields for collecting patient Religion.
+
+&#x20;
+
+![](<../.gitbook/assets/image (418).png>)
+
+### Wait for Refresh
+
+Once your settings are saved, the web access gateway will save the settings and restart itself.
+
+![](<../.gitbook/assets/image (426).png>)
+
+## Customize the MPI
+
+You can now log into the web administration console for the Master Patient Index. You can use the administrator/Mohawk123 account to log into the administrative panel.
+
+![](<../.gitbook/assets/image (447).png>)
+
+{% hint style="info" %}
+Full documentation for the Administrative panel is available at the [system-administration](../operations/system-administration/ "mention") page.
+{% endhint %}
+
+### Give Administrators Access to MDM and Clinical Data
+
+Since this is a demonstration environment, you will probably want to change the default access policies for `Administrators` to allow them to see clinical data and perform MDM tasks. This is done by navigating to `Security -> Groups` and pressing edit on the `Administrators` group.
+
+![](<../.gitbook/assets/image (421).png>)
+
+You can scroll to `Policies` and add the following policies to the group:
+
+* Unrestricted MDM
+* Unrestricted Clinical Data
+
+![](<../.gitbook/assets/image (446).png>)
+
+After adding these policies you should observe the policies in the master list of permissions.
+
+![](<../.gitbook/assets/image (434).png>)
+
+{% hint style="info" %}
+You do not need to SAVE policy assignments, they are applied immediately.
+{% endhint %}
+
+### Re-Authenticate
+
+The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
+
+![](<../.gitbook/assets/image (435).png>)
+
+## Perform Installation Qualification
+
+An easy way to get patients into the SanteMPI instance is to run the [fhir-interface-validation](installation/installation-qualification/fhir-interface-validation/ "mention"). These tests will ensure that the MPI is operating correctly (using the default options) and in the process, will create a few test patients.
+
+### Open the SOAP UI Project
+
+In the pre-requisites, a link was provided to the SanteMPI Installation Qualification SOAP-UI project. You can launch SOAP UI on your system and import this project.
+
+![](<../.gitbook/assets/image (432).png>)
+
+This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
+
+``![](<../.gitbook/assets/image (430).png>)``
+
+### Start FHIR Mock Service
+
+The installation qualification tool uses PMIR notifications and subscriptions, it is a good idea to start the FHIR Mock service so that your docker container has an endpoint to send these messages to.
+
+![](<../.gitbook/assets/image (444).png>)
+
+### Run Installation Qualification Tests
+
+Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
+
+![](<../.gitbook/assets/image (425).png>)
+
+If all tests return green status, it indicates that your copy of SanteMPI is operating as expected for baseline FHIR functions.
+
+## Validate the User Interface
+
+After the qualification tooling has been executed, you can now use the SanteMPI Dashboard to navigate the recent patients that were created in the installation qualification tool.
+
+![](<../.gitbook/assets/image (436).png>)

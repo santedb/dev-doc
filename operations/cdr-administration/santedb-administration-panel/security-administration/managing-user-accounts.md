@@ -16,7 +16,7 @@ The summary screen provides a comprehensive list of all users found in the Sante
 
 You can sort/order the table by any field which has a sort indicator, additionally each row of the user list performs actions on each user on the same row.
 
-![](<../../../../.gitbook/assets/image (430) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (430) (1) (1) (1).png>)
 
 * Edit: Opens the detailed user information screen
 * Delete: Indicates that the user account is no longer active (i.e. the employee is fired, moved departments, etc.)
@@ -39,7 +39,7 @@ When you press the `Create` button on the user summary screen, you will be provi
 This article explains the mechanics of creating a new user. Please refer to the Standard Operating Procedure for more information about the business process surrounding this screen.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (421) (1).png>)
+![](<../../../../.gitbook/assets/image (421) (1) (1).png>)
 
 * Username: Enter a unique user name for the specific user which will be using the system. It is best practices that this map to a single, individual user account.
 * Role: Select one or more roles for the user account. Built-in roles are generally:
@@ -57,7 +57,7 @@ This article explains the mechanics of creating a new user. Please refer to the 
 
 When you use the `Edit` option to view the details of a user, you will be presented with the user information detail screen.&#x20;
 
-![](<../../../../.gitbook/assets/image (434).png>)
+![](<../../../../.gitbook/assets/image (434) (1).png>)
 
 * Security Tab: The security tab is used to edit the core security attributes of the user. This includes:
   * Resetting the user's password

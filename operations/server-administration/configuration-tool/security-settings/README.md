@@ -6,7 +6,7 @@ he Security Settings group on the SanteDB configuration tool are used to control
 
 The core security panel allows the control of the settings related to core security functions such as the validation of passwords and security policies.
 
-![](<../../../../.gitbook/assets/image (427) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (427) (1) (1) (1).png>)
 
 The options which can be configured in the security panel are:
 
@@ -35,7 +35,7 @@ The signing keys configuration allows you to specify keys that the iCDR server w
 
 Other keys may be used by specific plugins. Additionally, if an external trading partner uses a `kid` attribute in the JWS header, you can configure the specific `kid` to X509 or HMAC key.
 
-![](<../../../../.gitbook/assets/image (430) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1).png>)
 
 The options when configuring a key:
 

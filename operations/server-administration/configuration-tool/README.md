@@ -6,7 +6,7 @@ The SanteDB configuration tool is a graphical tool which is used to control the 
 
 Whenever you install SanteDB in a new environment you will be prompted to run the Configuration Tool. On initial configuration the configuration tool will show its initial configuration screen.
 
-![Initial Configuration](<../../../.gitbook/assets/image (418) (1) (1) (1).png>)
+![Initial Configuration](<../../../.gitbook/assets/image (418) (1) (1) (1) (1).png>)
 
 The options are:
 
@@ -39,7 +39,7 @@ If you do not select a template, you will need to configure each plugin in the s
 
 When you have completed initial configuration you will be presented with a user interface as shown.
 
-![](<../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1).png>)
 
 1. Feature List -> Shows a list of all features enabled in the SanteDB iCDR server which can be configured. (based on installed options)
 2. Feature Configuration -> The configuration options for the selected feature.
@@ -69,7 +69,7 @@ This view allows administrators to directly edit the configuration file - regard
 
 Editing the configuration values doesn't actually save the configuration file. When you change values in the configuration panel the tool calculates a list of changes that need to occur to apply the changes you've set. In order to apply these use the **Apply Changes** button on the command bar.
 
-![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1) (1).png>)
 
 Each feature that you've edited creates one or more tasks that will be executed. Each task can be investigated to gather details of the feature and what is being changed in your configuration file.
 

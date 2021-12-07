@@ -6,7 +6,7 @@ The SanteDB system administration area of the SanteDB administration panel allow
 
 The probes screen shows a summary of all installed `IDiagnosticsProbe` implementations on the dCDR or iCDR to which the administration panel is connected. These probes provide a real-time reading of available operating system and internal system data.
 
-![](<../../../.gitbook/assets/image (422).png>)
+![](<../../../.gitbook/assets/image (422) (1).png>)
 
 Probes are used to diagnose the overall health and status of the server. Any plugin can implement an `IDiagnosticsProbe` for any reading it wishes to emit to administrators.&#x20;
 
@@ -34,7 +34,7 @@ Jobs are run in the background and can execute without blocking other processes.
 
 When you run a system job you will be prompted to provide any job parameters (if any) which will control the execution of the task.
 
-![](<../../../.gitbook/assets/image (432).png>)
+![](<../../../.gitbook/assets/image (432) (1).png>)
 
 After setting parameters and pressing `Ok` administrators will be asked to confirm the execution of the job.
 
@@ -46,7 +46,7 @@ SanteDB server logs can be accessed using the Logs menu in the System panel. Log
 
 When an administrator opens a log, a quick preview of the log contents are shown, and an option to download the entirety of the system log is provided.
 
-![](<../../../.gitbook/assets/image (425).png>)
+![](<../../../.gitbook/assets/image (425) (1).png>)
 
 ## Server Status
 
@@ -57,7 +57,7 @@ The Server Status page allows system administrators to quickly gather server inf
 * The applets which have been enabled in the SanteDB server
 * The installed services and their current state.
 
-![](<../../../.gitbook/assets/image (427).png>)
+![](<../../../.gitbook/assets/image (427) (1).png>)
 
 {% hint style="info" %}
 Administrators can enable or disable services on the local dCDR instance. This is not recommended on a Windows or Docker instance of SanteDB and is intended primarily for the Disconnected Gateway and Android applications. The setting of these enable/disable flags requires a restart of the host environment to take full effect.
@@ -71,7 +71,7 @@ Whenever SanteDB needs to send data using a standards based interfaces to system
 Dispatcher queues differ from synchronization queues used on the dCDR in that they do not support reconciliation of conflicts or subscription management. Dispatcher queuest are intended from remote targets that aren't SanteDB such as FHIR endpoints, HL7v2 endpoints or GS1 endpoints.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (430) (1).png>)
+![](<../../../.gitbook/assets/image (430) (1) (1).png>)
 
 Users can opt to `Resubmit` a queue, which instructs the dCDR or iCDR to take all messages from a dead letter queue and place them back into the primary queue for re-submission. Additionally administrators may `Purge` a queue, which instructs the dCDR or iCDR to purge all data in the waiting dispatch list.
 

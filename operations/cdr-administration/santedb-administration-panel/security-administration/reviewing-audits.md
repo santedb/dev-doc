@@ -88,7 +88,7 @@ The event metadata is the same as that shown in the summary list, with additiona
 
 The network information section shows information about the network infrastructure when the request was made.
 
-![](<../../../../.gitbook/assets/image (425) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1).png>)
 
 ### Users and Computers
 
@@ -132,7 +132,7 @@ Each object has a lifecycle attached to it which identifies the action or state 
 
 Session objects represent a security session which was established for a user. The object carries additional contextual data about the policies with which the session was authenticated.&#x20;
 
-![](<../../../../.gitbook/assets/image (422) (1).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1).png>)
 
 #### Query Objects
 
@@ -143,13 +143,13 @@ Query events will typically append the original query being executed against the
 * The HL7v2 QBP `QPD` segment data
 * The HL7 FHIR REST Request with Headers
 
-![](<../../../../.gitbook/assets/image (420).png>)
+![](<../../../../.gitbook/assets/image (420) (1).png>)
 
 #### De-Identification Objects
 
 Whenever a policy decision is made, and the CDR needs to de-identify patient data to protect privacy of the patient, a deidentification object will be registered. This contains the identifier of the object which was the target of masking, as well as the policy which resulted in the masking occurring.
 
-![](<../../../../.gitbook/assets/image (436) (1).png>)
+![](<../../../../.gitbook/assets/image (436) (1) (1).png>)
 
 #### Policy Decision
 

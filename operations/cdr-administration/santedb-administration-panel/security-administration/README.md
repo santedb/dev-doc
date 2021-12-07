@@ -2,7 +2,7 @@
 
 When you click on the `Security` menu in the SanteDB administration panel, the solution will provide a dashboard of the security data within SanteDB. This information is based on global data (if running in the iCDR) or local clinic data (if running a disconnected dCDR).
 
-![](<../../../../.gitbook/assets/image (426) (1).png>)
+![](<../../../../.gitbook/assets/image (426) (1) (1).png>)
 
 * Users: Shows a count of all authorized users (those accounts which can access SanteDB) in the system and provides a quick access to create a new user account. In SanteDB `Users` (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
 * Groups: Shows a count of all security roles within the SanteDB server and provides a quick option to create a new security role. (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))

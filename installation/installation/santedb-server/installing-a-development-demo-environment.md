@@ -42,7 +42,7 @@ The installation programs on Windows will:
 
 The installation process is a standard Windows installer experience, administrators can elect to install particular plugins that meet their needs.&#x20;
 
-![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (420) (1) (1) (1) (1) (1) (1).png>)
 
 The plugins available at the time of writing are enumerated below.
 
@@ -128,13 +128,13 @@ Selecting the PostgreSQL provider will expose the connection parameters for Post
 
 Selecting the Firebird provider will expose the connection parameter for Firebird 3.x provider, SanteDB iCDR will assume you're using the embedded version of Firebird. This database connector has three parameters. See [#firebird](../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#firebird "mention") connection details in the configuration tool documentation.
 
-![](<../../../.gitbook/assets/image (426).png>)
+![](<../../../.gitbook/assets/image (426) (1).png>)
 
 #### Multiple Instances of SanteDB on the Same Server
 
 If you're running multiple instances of SanteDB on the same server, you will need to install the software in different file locations. When configuring the iCDR on the Windows host you can then set an instance name to isolate the Windows Services and event logs.
 
-![](<../../../.gitbook/assets/image (418).png>)
+![](<../../../.gitbook/assets/image (418) (1).png>)
 
 #### Configuration Template
 
@@ -152,7 +152,7 @@ Once you've completed the installation options for the SanteDB server and press 
 
 You can use the configuration tooling to customize your installation of the SanteDB server. These settings are documented in [configuration-tool](../../../operations/server-administration/configuration-tool/ "mention")
 
-![](<../../../.gitbook/assets/image (444).png>)
+![](<../../../.gitbook/assets/image (444) (1).png>)
 
 Recommended configuration panels and settings to change include:
 
