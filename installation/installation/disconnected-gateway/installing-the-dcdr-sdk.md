@@ -44,7 +44,9 @@ Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-proj
 
 After the mono project is installed, you can extract the provided tarball to a directory of convenience (like /opt/santedb-sdk or /usr/local/santedb-sdk). All commands in this tutorial on Linux should be prefixed with mono, so for example:
 
-`mono /opt/santedb-sdk/sdb-ade.exe --help`
+```
+mono /opt/santedb-sdk/sdb-ade.exe --help
+```
 
 ## Configuring the SDK
 
