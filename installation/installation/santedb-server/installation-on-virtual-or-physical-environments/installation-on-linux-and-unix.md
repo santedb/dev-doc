@@ -111,9 +111,13 @@ sudo mono ConfigTool.exe
 
 SanteDB's configuration tool on linux uses the Mono to GTK+ WinForms implementation. The application is the same application as documented in the [configuration-tool](../../../../operations/server-administration/configuration-tool/ "mention") documentation.
 
-![](<../../../../.gitbook/assets/image (447) (1).png>)
+![](<../../../../.gitbook/assets/image (437).png>)
 
 Details on the initial configuration of SanteDB can be followed from the [Windows Installation](../installing-a-development-demo-environment.md) guide.
+
+{% hint style="info" %}
+While the configuration tool runs on Linux it is not regularly tested and has known rendering and incompatibilities. Linux users can use the configuration tool to generate basic configurations, however advanced operations (like certificate binding, service control, etc.) may not function as expected. Linux users are encouraged to use the [host-configuration-file](../../../../operations/server-administration/host-configuration-file/ "mention")
+{% endhint %}
 
 ## Initial Run / Initialization
 

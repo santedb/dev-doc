@@ -2,6 +2,15 @@
 
 SanteDB software can be downloaded via the GitHub pages for each of the projects.
 
+## Downloads
+
+| Download Link                                                                      | Contents                                                                                                        | Installation Instructions                                                                           |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [SanteDB iCDR](https://github.com/santedb/santedb-server/releases)                 | <ul><li>SanteDB iCDR Server</li><li>SanteDB Administration Console</li></ul>                                    | [santedb-server](santedb-server/ "mention")                                                         |
+| [SanteMPI iCDR](https://github.com/santedb/santempi/releases)                      | <ul><li>SanteMPI Server</li></ul>                                                                               | [santedb-server](santedb-server/ "mention")                                                         |
+| [SanteDB dCDR Web Access Gateway](https://github.com/santedb/santedb-www/releases) | <ul><li>Web Access Gateway Service</li></ul>                                                                    | [installing-web-access-gateway.md](disconnected-gateway/installing-web-access-gateway.md "mention") |
+| [SanteDB dCDR SDK](https://github.com/santedb/santedb-sdk/releases)                | <ul><li>Applet Debugger</li><li>Business Rules Debugger</li><li>Data Importer</li><li>Package Manager</li></ul> | [installing-the-dcdr-sdk.md](disconnected-gateway/installing-the-dcdr-sdk.md "mention")             |
+
 ## SanteDB iCDR Server&#x20;
 
 ### Installers
