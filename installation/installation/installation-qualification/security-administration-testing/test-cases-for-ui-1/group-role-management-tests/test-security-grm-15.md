@@ -6,7 +6,7 @@ description: Testing successful un-deletion of a group that has previously been 
 
 ## References
 
-* [Group / Role Management](../../../../../../operations/system-administration/security-administration/group-role-management.md)
+* [Group / Role Management](broken-reference)
 * [TEST: SECURITY-GRM-03](test-security-grm-03-1.md)
 
 ## Discussion

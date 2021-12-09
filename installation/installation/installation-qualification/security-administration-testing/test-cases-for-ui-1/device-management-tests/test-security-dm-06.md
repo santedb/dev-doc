@@ -6,7 +6,7 @@ description: Testing the successful assigning a policy to a device.
 
 ## References
 
-* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
+* [Device Management](broken-reference)
 
 ## Discussion
 

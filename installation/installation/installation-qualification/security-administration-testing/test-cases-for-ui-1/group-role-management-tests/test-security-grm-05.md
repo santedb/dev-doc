@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Group / Role Management](../../../../../../operations/system-administration/security-administration/group-role-management.md)
+* [Group / Role Management](broken-reference)
 * [TEST: SECURITY-GRM-01](test-security-grm-01-1.md)
 
 ## Discussion

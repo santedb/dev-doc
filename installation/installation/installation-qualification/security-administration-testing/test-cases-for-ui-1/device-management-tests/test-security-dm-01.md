@@ -6,7 +6,7 @@ description: Testing the successful creation of a new device.
 
 ## References
 
-* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
+* [Device Management](broken-reference)
 
 ## Discussion
 

@@ -6,7 +6,7 @@ The messaging settings section allows system administrators to configure the var
 
 The REST based services in the configuration panel have two sections of configuration in their panel, as illustrated in the FHIR panel below.
 
-![](<../../../../.gitbook/assets/image (423) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (423) (1) (1) (1) (1).png>)
 
 * REST API -> This section of the configuration panel is common to all REST services and controls the ports, paths and bindings of the REST API.
 * Service -> This section varies and is specific to the actual API being configured.
@@ -36,7 +36,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 Editing the endpoints will present a collection editor where administrators can add/remove specific endpoint bindings to/from the service. Endpoint bindings dictate the port, scheme and path where the REST API can be accessed.
 
-![](<../../../../.gitbook/assets/image (424) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1) (1) (1) (1) (1).png>)
 
 
 

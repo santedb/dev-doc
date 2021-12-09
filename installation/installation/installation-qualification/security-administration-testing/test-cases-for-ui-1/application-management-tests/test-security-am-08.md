@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Application Management](../../../../../../operations/system-administration/security-administration/application-management.md)
+* [Application Management](broken-reference)
 
 ## Discussion
 

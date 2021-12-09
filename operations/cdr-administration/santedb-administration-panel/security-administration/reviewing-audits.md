@@ -74,7 +74,7 @@ When clicking the `View` button on an audit, you will be presented with a long-f
 
 The event information section of an audit indicates the overall metadata about the event.
 
-![](<../../../../.gitbook/assets/image (424) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1).png>)
 
 The event metadata is the same as that shown in the summary list, with additional context fields.
 
@@ -88,13 +88,13 @@ The event metadata is the same as that shown in the summary list, with additiona
 
 The network information section shows information about the network infrastructure when the request was made.
 
-![](<../../../../.gitbook/assets/image (425) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1).png>)
 
 ### Users and Computers
 
 The users and computers section of the audit detail show the information about the actors involved in the event.&#x20;
 
-![](<../../../../.gitbook/assets/image (438).png>)
+![](<../../../../.gitbook/assets/image (438) (1).png>)
 
 Each actor has four attributes expressed in the table:
 
@@ -155,4 +155,4 @@ Whenever a policy decision is made, and the CDR needs to de-identify patient dat
 
 When an access control decision is performed, and a policy violation exception thrown, the SanteDB audit log will carry a copy of the policy outcome object indicating the policy which failed validation and the overall action taken.
 
-![](<../../../../.gitbook/assets/image (439).png>)
+![](<../../../../.gitbook/assets/image (439) (1).png>)

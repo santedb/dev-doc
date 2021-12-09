@@ -6,7 +6,7 @@ description: Testing the successful undeleting a deleted device.
 
 ## References
 
-* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
+* [Device Management](broken-reference)
 
 ## Discussion
 

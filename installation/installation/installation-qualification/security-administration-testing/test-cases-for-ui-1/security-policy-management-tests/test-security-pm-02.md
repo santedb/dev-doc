@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Security Policy Management](../../../../../../operations/system-administration/security-administration/security-policy-management.md)
+* [Security Policy Management](broken-reference)
 
 ## Discussion
 

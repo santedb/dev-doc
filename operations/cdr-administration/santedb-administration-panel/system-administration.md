@@ -42,11 +42,11 @@ After setting parameters and pressing `Ok` administrators will be asked to confi
 
 SanteDB server logs can be accessed using the Logs menu in the System panel. Logs allow system administrators to access either dCDR or iCDR log files from the web user interface directly.
 
-![](<../../../.gitbook/assets/image (424).png>)
+![](<../../../.gitbook/assets/image (424) (1).png>)
 
 When an administrator opens a log, a quick preview of the log contents are shown, and an option to download the entirety of the system log is provided.
 
-![](<../../../.gitbook/assets/image (425) (1).png>)
+![](<../../../.gitbook/assets/image (425) (1) (1).png>)
 
 ## Server Status
 
@@ -80,4 +80,6 @@ SanteDB may be used with a queueing technology like MSMQ or a simple queue like 
 * `sys.pubsub` - Used for all outbound dispatches to standards based pub-sub broker requests. These are things like patient registrations, notifications of data changing, etc.
 * `sys.audit` - Used for dispatching audits to remote systems.
 * `sys.ami` - Used by direct connect dCDR instances to queue administrative command messages to the central iCDR.
+
+
 

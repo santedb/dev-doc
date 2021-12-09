@@ -29,7 +29,7 @@ It is best practice to lock user accounts when you are investigating a security 
 
 When you delete a user they are marked as inactive. You can access these accounts by using the `Show Deleted` option in the user interface. Deleted user accounts provide an option to restore or un-delete the account (as well as edit the information).
 
-![](<../../../../.gitbook/assets/image (438) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1).png>)
 
 ## Creating User Accounts
 
@@ -57,7 +57,7 @@ This article explains the mechanics of creating a new user. Please refer to the 
 
 When you use the `Edit` option to view the details of a user, you will be presented with the user information detail screen.&#x20;
 
-![](<../../../../.gitbook/assets/image (434) (1).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1).png>)
 
 * Security Tab: The security tab is used to edit the core security attributes of the user. This includes:
   * Resetting the user's password

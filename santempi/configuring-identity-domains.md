@@ -58,7 +58,7 @@ Since these all need to be unique, it is a good practice that your scheme for th
 
 ## Creating a New Identity Domain
 
-To create a new identity domain (for example, a new programme identifier type), you'll use the [Reference Data](../operations/system-administration/reference-data-administration.md) administration area and more specifically, the Identity Domain administration page within that administrative area. This will present you with a list of configured identity domains, you can click "CREATE" to create a new identity domain.
+To create a new identity domain (for example, a new programme identifier type), you'll use the [Reference Data](broken-reference) administration area and more specifically, the Identity Domain administration page within that administrative area. This will present you with a list of configured identity domains, you can click "CREATE" to create a new identity domain.
 
 ![](<../.gitbook/assets/image (37).png>)
 

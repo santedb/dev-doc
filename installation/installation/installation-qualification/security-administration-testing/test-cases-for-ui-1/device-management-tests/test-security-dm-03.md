@@ -6,7 +6,7 @@ description: Testing the successful unlocking a locked device.
 
 ## References
 
-* [Device Management](../../../../../../operations/system-administration/security-administration/device-management.md)
+* [Device Management](broken-reference)
 
 ## Discussion
 

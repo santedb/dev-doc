@@ -147,7 +147,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../.gitbook/assets/image (433).png>)
+![](<../.gitbook/assets/image (433) (1).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
@@ -184,7 +184,7 @@ You can now log into the web administration console for the Master Patient Index
 ![](<../.gitbook/assets/image (447).png>)
 
 {% hint style="info" %}
-Full documentation for the Administrative panel is available at the [system-administration](../operations/system-administration/ "mention") page.
+Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.
 {% endhint %}
 
 ### Give Administrators Access to MDM and Clinical Data
@@ -202,7 +202,7 @@ You can scroll to `Policies` and add the following policies to the group:
 
 After adding these policies you should observe the policies in the master list of permissions.
 
-![](<../.gitbook/assets/image (434).png>)
+![](<../.gitbook/assets/image (434) (1).png>)
 
 {% hint style="info" %}
 You do not need to SAVE policy assignments, they are applied immediately.
@@ -238,7 +238,7 @@ The installation qualification tool uses PMIR notifications and subscriptions, i
 
 Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
 
-![](<../.gitbook/assets/image (425).png>)
+![](<../.gitbook/assets/image (425) (1).png>)
 
 If all tests return green status, it indicates that your copy of SanteMPI is operating as expected for baseline FHIR functions.
 
