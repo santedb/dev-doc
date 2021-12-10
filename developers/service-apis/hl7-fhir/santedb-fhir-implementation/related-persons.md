@@ -6,13 +6,13 @@ This page discusses the manner in which FHIR RelatedPerson resources are handled
 
 The CDR storage model support robust linkages between patients and persons. Some SanteDB services such as the Immunization Management Service (IMS) represent relationships between non-patient persons as a direct relationship between an instance of a Patient entity and a Person entity with a relationship type.&#x20;
 
-![Patient Baby Joe Smith has a mother (MTH) Person Sarah Smith](<../../.gitbook/assets/image (393).png>)
+![Patient Baby Joe Smith has a mother (MTH) Person Sarah Smith](<../../../../.gitbook/assets/image (393).png>)
 
 This example illustrates a simple non-patient entity (Sarah Smith) is the mother of a Patient (Baby Joe Smith).
 
 Additionally, the CDR also supports the direct linking of patient entities to other patient entities in relationships. The illustration below illustrates a patient entity (Sarah Smith) is the mother of Patient (Baby Joe Smith).
 
-![Patient Baby Joe Smith has a mother (MTH) Patient Sarah Smith](<../../.gitbook/assets/image (392).png>)
+![Patient Baby Joe Smith has a mother (MTH) Patient Sarah Smith](<../../../../.gitbook/assets/image (392).png>)
 
 This relationship works because in SanteDB a Patient **is a** Person.
 
@@ -113,11 +113,11 @@ The behavior of the iCDR is described in Complex Relationships in this page.
 
 The manner in which HL7 FHIR views patient relationships is reversed from the CDR's view of relationships. Primarily, HL7 FHIR would represent a non-patient person relationship to a patient as.
 
-![](<../../.gitbook/assets/image (203).png>)
+![](<../../../../.gitbook/assets/image (203).png>)
 
 In effect, the FHIR resource `RelatedPerson` is a mashup of a `Person` and an `EntityRelationship`, as the `RelatedPerson` contains elements of both objects.
 
-![Relationships are Reversed from FHIR to SanteDB RIM](<../../.gitbook/assets/image (389).png>)
+![Relationships are Reversed from FHIR to SanteDB RIM](<../../../../.gitbook/assets/image (389).png>)
 
 The CDR handles these relationship types automatically. When querying from FHIR with `_revInclude=RelatedPerson:patient` , the CDR will interpret either of these relationships and will construct the appropriate response messages for broadcasts and searches.&#x20;
 
@@ -213,19 +213,19 @@ And this FHIR message
 
 Will both result in this structure in the database.
 
-![FHIR structure mapped to the RIM](<../../.gitbook/assets/image (390).png>)
+![FHIR structure mapped to the RIM](<../../../../.gitbook/assets/image (390).png>)
 
 ### Complex Relationships
 
 Relationships between Patients in FHIR are slightly more complex, take for example, a scenario where a Sarah Smith is a patient and is related to Baby Joe Smith. In FHIR the structure of this message would be as follows.
 
-![](<../../.gitbook/assets/image (208).png>)
+![](<../../../../.gitbook/assets/image (208).png>)
 
 The HL7 FHIR processor on a read will not reproduce this when a patient is read from the database and is directly related to another patient. Instead the simple case of representation is performed on a query.
 
 When creating or updating a related person in this manner the following structure is created in the RIM structure.
 
-![](<../../.gitbook/assets/image (391).png>)
+![](<../../../../.gitbook/assets/image (391).png>)
 
 This structure is also created from the HL7v2 process when an NK1 segment points at a previously registered PID segment. For example, the following HL7v2 structure also creates a similar structure as the FHIR interface.
 

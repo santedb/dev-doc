@@ -65,7 +65,7 @@ To create a production (optimized) applet:
 
 ## Bundling Branded dCDR Assets
 
-The pakman tool can produce executable files native to the operating systems that the dCDR supports. By specifying the `--dcdr `parameter in conjunction with `--compose`, the pakman tool will produce branded assets.
+The pakman tool can produce executable files native to the operating systems that the dCDR supports. By specifying the `--dcdr` parameter in conjunction with `--compose`, the pakman tool will produce branded assets.
 
 ### Android APK
 
@@ -120,7 +120,7 @@ The APK will be bundled with the packages listed as dependencies on the solution
 
 In order to publish your applet, you must first acquire a code signing certificate signed by the SanteDB community. If you don't have a code signing certificate your organization can obtain one by becoming a registered community contributor.
 
-See the [SanteDB Software Publishers ](../../../../santedb-software-publishers/)page for more information.
+See the [SanteDB Software Publishers ](../../../../santedb-software-publishers.md)page for more information.
 
 ## Package Repositories
 

@@ -7,7 +7,7 @@ The Server Status page allows system administrators to quickly gather server inf
 * The applets which have been enabled in the SanteDB server
 * The installed services and their current state.
 
-![](<../../../../.gitbook/assets/image (427) (1).png>)
+![](<../../../../.gitbook/assets/image (427) (1) (1).png>)
 
 {% hint style="info" %}
 Administrators can enable or disable services on the local dCDR instance. This is not recommended on a Windows or Docker instance of SanteDB and is intended primarily for the Disconnected Gateway and Android applications. The setting of these enable/disable flags requires a restart of the host environment to take full effect.
@@ -22,7 +22,7 @@ The server status page has two tabs:
 
 The core information section of the server status screen shows information related to the server software itself.
 
-![](<../../../../.gitbook/assets/image (434).png>)
+![](<../../../../.gitbook/assets/image (434) (1).png>)
 
 ## Installed Applets
 
@@ -30,7 +30,7 @@ The installed applets section of the server status screen shows the applets (see
 
 ![](<../../../../.gitbook/assets/image (438).png>)
 
-Applets are digitally signed when running in production (unless unsignedApplets are permitted, see: [santedb-software-publishers](../../../../developers/santedb-software-publishers/ "mention")) , the list of applets includes the applet identifier (which appears in logs), the verified publisher, and the version of the applet installed.
+Applets are digitally signed when running in production (unless unsignedApplets are permitted, see: [santedb-software-publishers.md](../../../../developers/santedb-software-publishers.md "mention")) , the list of applets includes the applet identifier (which appears in logs), the verified publisher, and the version of the applet installed.
 
 ## Services
 

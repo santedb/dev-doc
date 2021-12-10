@@ -194,7 +194,7 @@ SDB_EXTENSION=http://hl7.org/fhir/StructureDefinition/patient-citizenship;http:/
 ```
 
 {% hint style="info" %}
-`SDB_FHIR_EXTENSION` is used to enable `IFhirExtensionHandler` implementations, these are responsible for querying or transforming data from the [data-and-information-architecture](../../../../santedb/data-and-information-architecture/ "mention") to FHIR. Extensions which are stored as extensions within the data architecture are always exposed in the FHIR objects. See: [#extension-handlers](../../../../developers/santedb-software-publishers/extending-fhir-interfaces.md#extension-handlers "mention")
+`SDB_FHIR_EXTENSION` is used to enable `IFhirExtensionHandler` implementations, these are responsible for querying or transforming data from the [data-and-information-architecture](../../../../santedb/data-and-information-architecture/ "mention") to FHIR. Extensions which are stored as extensions within the data architecture are always exposed in the FHIR objects. See: [#extension-handlers](../../../../developers/service-apis/hl7-fhir/extending-fhir-interfaces.md#extension-handlers "mention")
 {% endhint %}
 
 ### HL7 Version 2.x&#x20;

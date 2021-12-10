@@ -6,7 +6,7 @@ he Security Settings group on the SanteDB configuration tool are used to control
 
 The core security panel allows the control of the settings related to core security functions such as the validation of passwords and security policies.
 
-![](<../../../../.gitbook/assets/image (427) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (427) (1) (1) (1) (1).png>)
 
 The options which can be configured in the security panel are:
 

@@ -60,7 +60,7 @@ If you're compiling a general purpose plugin or SanteDB distribution, or are wri
 
 If you're only developing software for SanteDB and wish only to publish extensions and plugins for SanteDB, you may obtain a publishing certificate from the SanteSuite community. These community certificates are only trusted by SanteDB iCDR and dCDR software packages, which means they are less suited for general purpose software development.
 
-In order to obtain a certificate from SanteSuite community you will need to become a [SanteDB Software Publisher](../../../santedb-software-publishers/).&#x20;
+In order to obtain a certificate from SanteSuite community you will need to become a [SanteDB Software Publisher](../../../santedb-software-publishers.md).&#x20;
 
 #### Self-Signed Publisher Certificate
 

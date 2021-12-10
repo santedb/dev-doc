@@ -18,19 +18,19 @@ The default job manager is the SanteDB service that is responsible for managing 
 
 The applet manager configuration panel allows for configuration of the applet repository. The applet repository is the file system location where [SanteDB Applets](../../../developers/extending-santesuite/extending-santedb/applets/) are loaded into the iCDR server context.
 
-![](<../../../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1).png>)
 
 | Option              | Description                                                                                                                                                                                                                                                    | Example           |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | Applet Directory    | The location on the file system (or on a network share) where applet PAK files should be loaded and stored.                                                                                                                                                    | `\\nas01\applets` |
-| Allow Unsigned Code | <p>When TRUE SanteDB will permit the loading of applet PAK files which have no digital signatures attached to them. </p><p>See<a href="../../../developers/santedb-software-publishers/">: SanteDB Software Publishers</a></p>                                 |                   |
+| Allow Unsigned Code | <p>When TRUE SanteDB will permit the loading of applet PAK files which have no digital signatures attached to them. </p><p>See<a href="../../../developers/santedb-software-publishers.md">: SanteDB Software Publishers</a></p>                               |                   |
 | Trusted Publishers  | <p>OBSOLETE</p><p></p><p>Publishers which are not SanteDB Community Publishers should be placed in the Trusted Publishers store of the Microsoft Windows certificate manager on the local machine - alternately they can be added to the Mono trust store.</p> |                   |
 
 ## SanteDB Core API
 
 The core API configuration panel allows administrators to change the core behavior of the SanteDB host environment.&#x20;
 
-![](<../../../.gitbook/assets/image (434) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1).png>)
 
 This includes:
 

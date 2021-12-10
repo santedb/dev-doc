@@ -126,7 +126,7 @@ Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:
 
 The rest of the settings can be left as their defaults.
 
-![](<../.gitbook/assets/image (427).png>)
+![](<../.gitbook/assets/image (427) (1).png>)
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
@@ -147,7 +147,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../.gitbook/assets/image (433) (1) (1).png>)
+![](<../.gitbook/assets/image (433) (1) (1) (1).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
@@ -181,7 +181,7 @@ Once your settings are saved, the web access gateway will save the settings and 
 
 You can now log into the web administration console for the Master Patient Index. You can use the administrator/Mohawk123 account to log into the administrative panel.
 
-![](<../.gitbook/assets/image (447).png>)
+![](<../.gitbook/assets/image (447) (1).png>)
 
 {% hint style="info" %}
 Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.
@@ -202,7 +202,7 @@ You can scroll to `Policies` and add the following policies to the group:
 
 After adding these policies you should observe the policies in the master list of permissions.
 
-![](<../.gitbook/assets/image (434) (1) (1).png>)
+![](<../.gitbook/assets/image (434) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You do not need to SAVE policy assignments, they are applied immediately.
@@ -212,7 +212,7 @@ You do not need to SAVE policy assignments, they are applied immediately.
 
 The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
 
-![](<../.gitbook/assets/image (435).png>)
+![](<../.gitbook/assets/image (435) (1).png>)
 
 ## Perform Installation Qualification
 
