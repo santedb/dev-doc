@@ -69,7 +69,7 @@ If-Match: e403940394382743823
 <Patch xmlns="http://santedb.org/model"
 ```
 
-More documentation of the PATCH operation is documented in the [Constructing Patches article. ](../gs1-bms-xml/patching.md)
+More documentation of the PATCH operation is documented in the [Constructing Patches article. ](../../santedb-software-publishers/gs1-bms-xml/patching.md)
 
 ### Obsolete Resource (DELETE)
 

@@ -78,7 +78,7 @@ Installation of the integration interfaces will allow SanteDB iCDR to interact w
 
 * [HL7 Fast Health Interoperability Resources](../../../operations-1/standard-operating-procedures/hl7-fhir/)
 * [HL7 Version 2](../../../developers/service-apis/hl7v2.md)&#x20;
-* [GS1 Business Messaging Standard (BMS)](../../../developers/service-apis/gs1-bms-xml/#gs1-stock-messaging-workflows)
+* [GS1 Business Messaging Standard (BMS)](../../../developers/santedb-software-publishers/gs1-bms-xml/#gs1-stock-messaging-workflows)
 * JIRA Integration (which allow submission of Diagnostic reports from dCDR instances directly into JIRA)
 * ATNA & DICOM Messaging (which allows for dispatch of audits via NEMA DICOM over Syslog)
 

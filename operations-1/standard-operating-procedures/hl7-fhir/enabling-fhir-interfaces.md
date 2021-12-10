@@ -140,7 +140,7 @@ Alternately, if you would like to implement a custom resource handler which can 
 
 #### Extended Operations and Extensions
 
-The [Extending FHIR Functionality](../../../developers/service-apis/hl7-fhir/extending-fhir-interfaces.md) wiki article described the process of extending the FHIR interface with custom operations and custom extensions.
+The [Extending FHIR Functionality](../../../developers/santedb-software-publishers/extending-fhir-interfaces.md) wiki article described the process of extending the FHIR interface with custom operations and custom extensions.
 
 ## Configuring Dispatcher Targets
 

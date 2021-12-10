@@ -11,17 +11,18 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 * [Logging In](logging-in.md)
 * [Managing your User Profile](managing-your-profile.md)
 * [System Administration](broken-reference)
-  * [System Probes](system-administration/#probes)
-  * [Job Administration](system-administration/#running-a-job)
-  * [Logs](system-administration/#logs)
-  * [Server Status](system-administration/#server-status)
-  * [Dispatch Queues](system-administration/#dispatcher-queues)
+  * [System Probes](system-administration/probes.md)
+  * [Job Administration](system-administration/jobs.md)
+  * [Logs](system-administration/logs.md)
+  * [Server Status](system-administration/server-status.md)
+  * [Dispatch Queues](system-administration/dispatcher-queue.md)
+  * [Pub/Sub Manager](system-administration/pub-sub-manager.md)
 * [Security Administration](security-administration/)
   * [Managing User Accounts](security-administration/managing-user-accounts.md)
-  * Managing Application Roles&#x20;
+  * [Managing Application Roles ](security-administration/managing-groups.md)
   * Managing Device Accounts
   * Managing Application Accounts
-  * Managing Application Security Policies
+  * [Managing Application Security Policies](security-administration/managing-policies.md)
   * [Reviewing Audit Log Events](security-administration/reviewing-audits.md)
 * Application Administration
   * Gathering and Reviewing Log Files

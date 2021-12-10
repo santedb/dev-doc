@@ -1,4 +1,4 @@
-# Publish/Subscribe
+# FHIR Subscriptions
 
 SanteDB supports subscribing to resource events via the creation of `Subscription` resource instances.&#x20;
 

@@ -120,7 +120,7 @@ The APK will be bundled with the packages listed as dependencies on the solution
 
 In order to publish your applet, you must first acquire a code signing certificate signed by the SanteDB community. If you don't have a code signing certificate your organization can obtain one by becoming a registered community contributor.
 
-See the [SanteDB Software Publishers ](../../../../santedb-software-publishers.md)page for more information.
+See the [SanteDB Software Publishers ](../../../../santedb-software-publishers/)page for more information.
 
 ## Package Repositories
 

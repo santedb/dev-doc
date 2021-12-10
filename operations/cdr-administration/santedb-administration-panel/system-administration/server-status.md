@@ -30,7 +30,7 @@ The installed applets section of the server status screen shows the applets (see
 
 ![](<../../../../.gitbook/assets/image (438).png>)
 
-Applets are digitally signed when running in production (unless unsignedApplets are permitted, see: [santedb-software-publishers.md](../../../../developers/santedb-software-publishers.md "mention")) , the list of applets includes the applet identifier (which appears in logs), the verified publisher, and the version of the applet installed.
+Applets are digitally signed when running in production (unless unsignedApplets are permitted, see: [santedb-software-publishers](../../../../developers/santedb-software-publishers/ "mention")) , the list of applets includes the applet identifier (which appears in logs), the verified publisher, and the version of the applet installed.
 
 ## Services
 
