@@ -247,6 +247,7 @@
     * [Security Administration](operations/cdr-administration/santedb-administration-panel/security-administration/README.md)
       * [Managing User Accounts](operations/cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md)
       * [Managing Groups](operations/cdr-administration/santedb-administration-panel/security-administration/managing-groups.md)
+      * [Managing Policies](operations/cdr-administration/santedb-administration-panel/security-administration/managing-policies.md)
       * [Reviewing Audits](operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md)
 * [Standard Operating Procedures](operations/standard-operating-procedures.md)
 
