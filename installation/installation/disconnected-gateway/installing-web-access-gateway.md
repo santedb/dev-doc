@@ -82,7 +82,7 @@ The configuration screen for the web access gateway is identical to the configur
 
 ### Join the Security Domain
 
-![](<../../../.gitbook/assets/image (442).png>)
+![](<../../../.gitbook/assets/image (442) (1).png>)
 
 * **Local Device ID**: The device identifier which this web access gateway will use to enrol itself in the iCDR security domain (example: `admin-portal` or `admin-portal-cluster-1`)
 * **Domain Address**: The IP address or host name of the iCDR server instance. If you're running the iCDR in a distributed deployment, this should be the address to a machine or group running the [administrative-management-interface.md](../../../operations/server-administration/configuration-tool/messaging-settings/administrative-management-interface.md "mention")  .

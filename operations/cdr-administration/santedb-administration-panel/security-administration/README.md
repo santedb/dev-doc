@@ -9,3 +9,24 @@ When you click on the `Security` menu in the SanteDB administration panel, the s
 * Devices: Shows a count of all authorized devices which are permitted to access the SanteDB server, and an option to create a new security device. (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
 * Applications: Shows a count of all authorized applications which are permitted to access the SanteDB server, and an option to create a new security application (see: [Security Architecture](../../../../santedb/security-architecture.md#authentication-architecture))
 
+## Contents
+
+{% content-ref url="managing-user-accounts.md" %}
+[managing-user-accounts.md](managing-user-accounts.md)
+{% endcontent-ref %}
+
+{% content-ref url="managing-groups.md" %}
+[managing-groups.md](managing-groups.md)
+{% endcontent-ref %}
+
+{% content-ref url="managing-devices.md" %}
+[managing-devices.md](managing-devices.md)
+{% endcontent-ref %}
+
+{% content-ref url="managing-applications.md" %}
+[managing-applications.md](managing-applications.md)
+{% endcontent-ref %}
+
+{% content-ref url="reviewing-audits.md" %}
+[reviewing-audits.md](reviewing-audits.md)
+{% endcontent-ref %}

@@ -57,7 +57,7 @@ When creating a new group, the name and a brief description of the group is requ
 
 When editing a group or after creating a new group, the detail view of the group will be shown.&#x20;
 
-![](<../../../../.gitbook/assets/image (434).png>)
+![](<../../../../.gitbook/assets/image (434) (1).png>)
 
 This view shows the basic details of the group, and permits editing of the group name and description, as well as access to the groups security id (SID)
 
@@ -65,11 +65,11 @@ This view shows the basic details of the group, and permits editing of the group
 
 By default a new group will have no policies associated with the group. Administrators should use the `Policies` section to add or alter policies. Policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438).png>)
+![](<../../../../.gitbook/assets/image (438) (1).png>)
 
 By default a group will be assigned the policy with a GRANT permission. You can alter these by clicking the permission.
 
-![](<../../../../.gitbook/assets/image (433).png>)
+![](<../../../../.gitbook/assets/image (433) (1).png>)
 
 The permission types in SanteDB are:
 
