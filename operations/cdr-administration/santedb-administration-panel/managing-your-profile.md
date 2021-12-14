@@ -39,7 +39,7 @@ Setting your preferred language will change the user interface language when you
 
 The security profile panel allows you to modify your security settings for SanteDB.
 
-![](<../../../.gitbook/assets/image (428) (1).png>)
+![](<../../../.gitbook/assets/image (428) (1) (1).png>)
 
 * Last Login: Shows the last time that you logged into the SanteDB iCDR server
 * Security E-Mail: The e-mail address where you would like to receive password reset codes, or TFA codes.
@@ -52,7 +52,7 @@ The security profile panel allows you to modify your security settings for Sante
 
 If you would like to reset your password, you can click the `Reset Pwd` button , this will open a new dialog which will allow you to enter your existing password and a new password.
 
-![](<../../../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1).png>)
 
 
 

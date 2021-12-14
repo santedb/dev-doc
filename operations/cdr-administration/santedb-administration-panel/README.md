@@ -51,7 +51,7 @@ When you log into the SanteDB Administration Panel user interface, the default s
 
 By default, the SanteMPI dashboard shows a summary of MPI information for any authenticated user which has `Query Clinical Data` policy enabled.
 
-![](<../../../.gitbook/assets/image (439) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (439) (1) (1) (1) (1).png>)
 
 * Recent Patients: The recent patients widget on the dashboard shows a list of all patients which have been registered on the iCDR or dCDR in the last 24 hours.
 * Quick Search: Allows for a query free-field search by name, address, or identifier. Additionally, devices with a camera can use the SanteDB Visual Resource Pointer QR code to directly open a patient profile.

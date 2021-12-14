@@ -134,7 +134,7 @@ The rest of the settings can be left as their defaults.
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
-![](<../.gitbook/assets/image (422) (1).png>)
+![](<../.gitbook/assets/image (422) (1) (1).png>)
 
 ### Select the MPI Role
 
@@ -151,7 +151,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../.gitbook/assets/image (433) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.

@@ -2,7 +2,7 @@
 
 SanteDB iCDR and dCDR supports basic subscription management. This facility allows external parties to subscribe (via a subscription) to data persistence events, at which they they will receive a notification (via a channel) using one of the available dispatch formats.
 
-![](<../../.gitbook/assets/image (439).png>)
+![](<../../.gitbook/assets/image (439) (1).png>)
 
 The components of the publish and subscribe architecture are:
 

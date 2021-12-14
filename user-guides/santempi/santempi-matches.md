@@ -17,7 +17,7 @@ The nomenclature used in SanteDB is described in detail in [master-data-storage.
 
 The first portion of the match dashboard shows the duplicate detection panel. This panel allows data administrators to quickly review duplicates which have been detected by the MPI software.
 
-![](<../../.gitbook/assets/image (437).png>)
+![](<../../.gitbook/assets/image (438).png>)
 
 * Candidate Report - Downloads the `Detected Duplicates` table in excel format
 * Linkage Report - Downloads an excel report with the entirety of the SanteMPI database linkages provided.
@@ -70,7 +70,7 @@ The `Matched Entities` tab shows summary information of the two patients which h
 
 The A/B compare tab takes the contents of the [the-patient-dashboard.md](../../santempi/the-patient-dashboard.md "mention") (which is a common place for plugins to extend the UI) and shows the panels as an A/B comparison.
 
-![](<../../.gitbook/assets/image (438).png>)
+![](<../../.gitbook/assets/image (439).png>)
 
 ### Scoring
 

@@ -18,4 +18,4 @@ SanteDB iCDR and dCDR use a common logging format which can be easily parsed wit
 Source.Name.Class@THREAD <Information|Warning|Error> [TIME-STAMP]: Message
 ```
 
-![](<../../../../.gitbook/assets/image (433) (1).png>)
+![](<../../../../.gitbook/assets/image (433) (1) (1).png>)

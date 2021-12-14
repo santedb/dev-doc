@@ -103,7 +103,7 @@ A single SanteDB iCDR server can host multiple SanteDB solutions and user interf
 
 When configuring the SanteDB Web Access Gateway (like all dCDR instances) you must select the application role that the SanteDB dCDR will be taking on.
 
-![](<../../../.gitbook/assets/image (445) (1) (1).png>)
+![](<../../../.gitbook/assets/image (445) (1) (1) (1).png>)
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 

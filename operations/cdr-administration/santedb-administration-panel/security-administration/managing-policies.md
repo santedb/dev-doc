@@ -25,7 +25,7 @@ The policy list shows view of the configured system policies in a particular iCD
 
 Administrators can create new security and privacy policies in SanteDB by using the `Create` button.
 
-![](<../../../../.gitbook/assets/image (445) (1).png>)
+![](<../../../../.gitbook/assets/image (445) (1) (1).png>)
 
 | UUID           | The unique identifier for the policy.                                                                                                                                                                                                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

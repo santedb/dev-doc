@@ -36,6 +36,6 @@ Applets are digitally signed when running in production (unless unsignedApplets 
 
 The services panel of the SanteDB iCDR server shows the currently running services which are registered and active on the SanteDB iCDR or dCDR server. On the dCDR users may enable or disable services based on performance or operational requirements.
 
-![](<../../../../.gitbook/assets/image (422).png>)
+![](<../../../../.gitbook/assets/image (422) (1).png>)
 
 See: [#service-architecture](../../../../santedb/software-architecture.md#service-architecture "mention") for more information about services.

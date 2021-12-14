@@ -132,7 +132,7 @@ Each object has a lifecycle attached to it which identifies the action or state 
 
 Session objects represent a security session which was established for a user. The object carries additional contextual data about the policies with which the session was authenticated.&#x20;
 
-![](<../../../../.gitbook/assets/image (422) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1) (1) (1).png>)
 
 #### Query Objects
 
@@ -155,4 +155,4 @@ Whenever a policy decision is made, and the CDR needs to de-identify patient dat
 
 When an access control decision is performed, and a policy violation exception thrown, the SanteDB audit log will carry a copy of the policy outcome object indicating the policy which failed validation and the overall action taken.
 
-![](<../../../../.gitbook/assets/image (439) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (439) (1) (1) (1).png>)

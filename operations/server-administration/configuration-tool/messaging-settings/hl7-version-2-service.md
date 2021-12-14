@@ -53,7 +53,7 @@ Each HL7 endpoint can support multiple message / trigger events. The messages pr
 
 ![](<../../../../.gitbook/assets/image (424) (1) (1) (1) (1) (1).png>)
 
-| Setting         | Description                                                                                                                                    | Examples                                                                   |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Message Handler | The implementation of the message handler which should be used to process messages which have any of the events listed in the events property. | ![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1).png>) |
-| Events          | The trigger events which should be forwarded to the selected message handler.                                                                  | `ADT^A01`                                                                  |
+| Setting         | Description                                                                                                                                    | Examples                                                                       |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Message Handler | The implementation of the message handler which should be used to process messages which have any of the events listed in the events property. | ![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1) (1).png>) |
+| Events          | The trigger events which should be forwarded to the selected message handler.                                                                  | `ADT^A01`                                                                      |

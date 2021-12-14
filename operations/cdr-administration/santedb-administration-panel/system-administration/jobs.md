@@ -8,7 +8,7 @@ Jobs are run in the background and can execute without blocking other processes.
 
 &#x20;
 
-![](<../../../../.gitbook/assets/image (440).png>)
+![](<../../../../.gitbook/assets/image (440) (1).png>)
 
 ## Running a Job
 
