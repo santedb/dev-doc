@@ -1,3 +1,7 @@
+---
+description: Basic and Advanced Searching
+---
+
 # SanteMPI Searching
 
 ## Basic Search

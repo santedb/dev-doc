@@ -19,7 +19,7 @@ The components of the publish and subscribe architecture are:
 
 The PubSubManager stores data for subscriptions and channels in a concise schema.&#x20;
 
-![](<../../.gitbook/assets/image (427).png>)
+![](<../../.gitbook/assets/image (427) (1).png>)
 
 ### Subscriptions
 

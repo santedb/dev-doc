@@ -6,6 +6,10 @@ This tutorial will provide an overview of how to install and run the SanteDB iCD
 Do not use these instructions to deploy SanteMPI in a production environment. These instructions are intended to provide a quick start for demonstration or evaluation only.&#x20;
 {% endhint %}
 
+{% hint style="info" %}
+The code for the quick-start guide can be found on the SanteDB GitHub page at: [https://github.com/santedb/hello-mpi](https://github.com/santedb/hello-mpi)
+{% endhint %}
+
 ## Pre-Requisites
 
 This tutorial uses Docker as a basis for illustrating SanteMPI functions. In order to complete this tutorial, users should:
@@ -126,7 +130,7 @@ Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:
 
 The rest of the settings can be left as their defaults.
 
-![](<../.gitbook/assets/image (427) (1).png>)
+![](<../.gitbook/assets/image (427) (1) (1).png>)
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
@@ -226,7 +230,7 @@ In the pre-requisites, a link was provided to the SanteMPI Installation Qualific
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 
-``![](<../.gitbook/assets/image (430).png>)``
+``![](<../.gitbook/assets/image (430) (1).png>)``
 
 ### Start FHIR Mock Service
 
@@ -246,4 +250,4 @@ If all tests return green status, it indicates that your copy of SanteMPI is ope
 
 After the qualification tooling has been executed, you can now use the SanteMPI Dashboard to navigate the recent patients that were created in the installation qualification tool.
 
-![](<../.gitbook/assets/image (436).png>)
+![](<../.gitbook/assets/image (436) (1).png>)

@@ -140,7 +140,7 @@ If you're running multiple instances of SanteDB on the same server, you will nee
 
 SanteDB iCDR server packages may be shipped with one ore more [santedb-solutions.md](../../../santedb/santedb-solutions.md "mention") included, you should select an appropriate template for the software solution that this instance of the iCDR will fulfill.
 
-![](<../../../.gitbook/assets/image (437) (1).png>)
+![](<../../../.gitbook/assets/image (437) (1) (1).png>)
 
 #### Initial Configuration Tasks
 

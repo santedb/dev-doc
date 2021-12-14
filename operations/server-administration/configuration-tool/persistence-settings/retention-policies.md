@@ -4,7 +4,7 @@ Administrators can specify optional retention policies which use the ADO.NET Dat
 
 When enabled, the retention policy feature will create a JOB on system startup which will ensure that data is retained according to the administrator configured policies.
 
-![](<../../../../.gitbook/assets/image (436) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (436) (1) (1) (1) (1) (1).png>)
 
 | Option             | Description                                                                                                                                          | Example                                                             |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |

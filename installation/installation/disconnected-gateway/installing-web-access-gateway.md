@@ -93,7 +93,7 @@ The configuration screen for the web access gateway is identical to the configur
 
 Pressing the **JOIN** button will require you to login as the system administrator for the SanteDB server.
 
-![](<../../../.gitbook/assets/image (436) (1).png>)
+![](<../../../.gitbook/assets/image (436) (1) (1).png>)
 
 You should use the administrative user account and password to authenticate yourself with the domain.
 
@@ -137,7 +137,7 @@ By default, the SanteDB dCDR instances will optimize traffic with the central iC
 
 If you're running the iCDR server on the same machine as the Web Access Gateway or are using a 10gbE connection between the two, you can set this to Local Network, since this will disable all compression (saving compute resources). If you are running the Web Access Gateway and iCDR in an environment which has a slower connection between the iCDR and dCDR it may be beneficial to select another option.
 
-![](<../../../.gitbook/assets/image (443).png>)
+![](<../../../.gitbook/assets/image (443) (1).png>)
 
 | Optimization Setting | Compression Used |
 | -------------------- | ---------------- |
@@ -153,7 +153,7 @@ You may also optionally proxy traffic flowing between the Web Access Gateway and
 
 The other settings panel allows you to configure custom behaviors for the Web Access Gateway. These settings are documented on the [app-settings.md](app-settings.md "mention")wiki page.
 
-![](<../../../.gitbook/assets/image (430) (1).png>)
+![](<../../../.gitbook/assets/image (430) (1) (1).png>)
 
 {% hint style="info" %}
 You can change the application settings for the Web Access Gateway after initial configuration via the file `%systemroot%\Windows\SYSWOW64\config\systemprofile\AppData\Roaming\SanteDB\wwww-default` on Windows or via `~/.config/santedb/santedb-www` on Linux and Docker.
