@@ -6,7 +6,7 @@ You can use the iCDR administrative console to create, list, lock and get inform
 
 You can view users in the system using the `user.list` command, specifying optional filter parameters.
 
-```text
+```
 > user.list
 SID                                    Name                     Last Auth              Lockout                ILA  A
 fadca076-3690-4a6e-af9e-f1cd68e8c7e8   SYSTEM                                                                 0    *
@@ -19,25 +19,25 @@ c96859f0-043c-4480-8dab-f69d6e86696c   ANONYMOUS                                
 
 The optional filter parameters for `user.list` are.
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-l` | Filter on locked status | `user.list -l` |
-| `-a` | Shows obsolete non-active status users. | `user.list -a` |
-| `-h` | Shows only HUMAN users and hides system users. | `user.list -h` |
-| `-s` | Shows only SYSTEM users and hides human users. | `user.list -s` |
-| `-u` | Filters by a specific user name pattern | `user.list -u Bob` |
+| Parameter | Description                                    | Example            |
+| --------- | ---------------------------------------------- | ------------------ |
+| `-l`      | Filter on locked status                        | `user.list -l`     |
+| `-a`      | Shows obsolete non-active status users.        | `user.list -a`     |
+| `-h`      | Shows only HUMAN users and hides system users. | `user.list -h`     |
+| `-s`      | Shows only SYSTEM users and hides human users. | `user.list -s`     |
+| `-u`      | Filters by a specific user name pattern        | `user.list -u Bob` |
 
 ## Adding Users
 
 You can add a user to the iCDR instance using the `user.add` command:
 
-```text
+```
 > user.add -r CLINICAL_STAFF -u console -e user@user.com -p @Testing123
 ```
 
 You may receive an error from the server, if this is the case the server will indicate the reason for the failure, for example, when adding a user where the specified password does not match the minimum password requirements:
 
-```text
+```
 > user.add -r CLINICAL_STAFF -u baduser -e bad@user.com -p blah
 ERR: Exception has been thrown by the target of an invocation.
         1:The remote server returned an error: (422) Unprocessable Entity.
@@ -46,12 +46,12 @@ ERR: Exception has been thrown by the target of an invocation.
         2:The remote server returned an error: (422) Unprocessable Entity.
 ```
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-r` | The role\(s\) to assign the user | `-r CLINICAL_STAFF -r VIP` |
-| `-u` | The username of the user | `-u BOB` |
-| `-e` | The security e-mail address of the user | `-e foo@foo.com` |
-| `-p` | The initial password to set for the user | `-p P@ssw0rd` |
+| Parameter | Description                              | Example                    |
+| --------- | ---------------------------------------- | -------------------------- |
+| `-r`      | The role(s) to assign the user           | `-r CLINICAL_STAFF -r VIP` |
+| `-u`      | The username of the user                 | `-u BOB`                   |
+| `-e`      | The security e-mail address of the user  | `-e foo@foo.com`           |
+| `-p`      | The initial password to set for the user | `-p P@ssw0rd`              |
 
 ## Locking Users
 
@@ -59,13 +59,13 @@ To lock or unlock a user, the `user.lock` command is used specifying whether the
 
 To unlock the user bob:
 
-```text
+```
 user.lock bob
 ```
 
 To lock the user bob:
 
-```text
+```
 user.lock -l bob
 ```
 
@@ -73,7 +73,7 @@ user.lock -l bob
 
 You can get extended information about a particular user by using the `user.info` command and specifying the username. For example, to get information about user bob:
 
-```text
+```
 > user.info allison
 Name: Allison
 SID: 54558ca4-c093-11ea-9f6f-00155d640b09
@@ -145,4 +145,3 @@ Roles: CLINICAL_STAFF , SENSITIVE_USERS
                 Restricted Information [1.3.6.1.4.1.33349.3.1.5.9.3] : --- (default DENY)
                 SUPER SECRET DISCLOSURE [2.25.3049340304933] : Grant (explicit)
 ```
-

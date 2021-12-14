@@ -1,4 +1,4 @@
-# SanteDB iCDR Admin Console
+# SanteDB Administration Console
 
 The SanteDB iCDR administrative console is a client tool which allows system administrators to quickly manage their iCDR instances from a command line. This tool is useful when:
 
@@ -31,7 +31,7 @@ The command line options for sdbac are listed below:
 
 ## Getting Help
 
-You can run the help command in order to get a list of commands which are available on the administrative console. 
+You can run the help command in order to get a list of commands which are available on the administrative console.&#x20;
 
 ```
 > help
@@ -83,7 +83,7 @@ Use:
 For command specific help
 ```
 
-If you require help for a specific command use the `help command `syntax, for example, to get help with user.list:
+If you require help for a specific command use the `help command` syntax, for example, to get help with user.list:
 
 ```
 > help user.list

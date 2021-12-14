@@ -39,7 +39,7 @@ When you press the `Create` button on the user summary screen, you will be provi
 This article explains the mechanics of creating a new user. Please refer to the Standard Operating Procedure for more information about the business process surrounding this screen.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (421) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (421) (1) (1) (1) (1).png>)
 
 * Username: Enter a unique user name for the specific user which will be using the system. It is best practices that this map to a single, individual user account.
 * Role: Select one or more roles for the user account. Built-in roles are generally:

@@ -76,7 +76,28 @@ The A/B compare tab takes the contents of the [the-patient-dashboard.md](../../s
 
 The scoring tab presents a list of match configurations which are active on the SanteMPI server and presents each configured attribute, the weights, and calculated score.&#x20;
 
-This panel is used by data administrators to understand **why** the particular match pair came to be flagged. This information is helpful when determining
+This panel is used by data administrators to understand **why** the particular match pair came to be flagged. This information is helpful when determining whether a configuration needs to be changed, or to understand why a match is a match.
+
+![](<../../.gitbook/assets/image (418).png>)
+
+* Classification - Indicates the match pair's classification as determined by the configuration.
+* Match Method - The method or algorithm used to score the matches&#x20;
+  * Weighted - The matching engine used a weighted scoring for the match
+  * Deterministic - The matching engine used only a deterministic score for the match pair
+  * Identifier - The matching engine made the determination based on identification of the source and target resources
+* Absolute Score - The numeric score assigned to the match pair. This score is a sum of all weighted scores for all attributes.
+* Strength - The normalized score which indicates on a scale of `0 .. 1` what the match agreement was.
+
+The detail table illustrates the calculated (and weighted) score of each object (see: [matching-engine.md](../../santedb/matching-engine.md "mention")) for more details.
+
+| E         | Indicates whether the attribute was even evaluated. If the attribute was not evaluated, then the `whenNull` action was taken on the score. | <p><span data-gb-custom-inline data-tag="emoji" data-code="2714">✔</span> - The attribute was evaluated and scored<br><span data-gb-custom-inline data-tag="emoji" data-code="2716">✖</span> - The attribute was not evaluated. The <code>whenNull</code> score was applied.</p> |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute | Indicates the attribute identifier or name which was scored.                                                                               | The path to the property in A and B values.                                                                                                                                                                                                                                      |
+| A Value   | The value of the property in record A which was evaluated.                                                                                 |                                                                                                                                                                                                                                                                                  |
+| B Value   | The value of the property in record B which was evaluated.                                                                                 |                                                                                                                                                                                                                                                                                  |
+| M / U     | Identifies the match probability (M) and the uncertainty (U) of the attributes.                                                            | <p>M - The likelihood that if the A value and B value agree, then the record represents a true match.<br>U - The likelihood that if the A value and B value agree, that they agree on a coincidence.</p>                                                                         |
+| Score     | The numeric, calculated score given to the record (before partial scoring applied)                                                         |                                                                                                                                                                                                                                                                                  |
+| Weight    | The final score applied to the overall score for the record.                                                                               |                                                                                                                                                                                                                                                                                  |
 
 ## Related Topics
 

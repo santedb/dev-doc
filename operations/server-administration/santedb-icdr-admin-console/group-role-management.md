@@ -6,7 +6,7 @@ You can use the iCDR administrative console to view, add, list, and get informat
 
 You can view groups/role in the system using the `role.list` command, specifying optional filter parameters.
 
-```text
+```
 > role.list
 SID                                    Name                 Description                                      A
 dadbd858-13c5-44a3-ad7d-1c44cecaa4b6   ANONYMOUS            Group for user ANONYMOUS. Identifies the func... *
@@ -32,31 +32,31 @@ b81e78e0-8143-11eb-b733-00155d640b09   TestyMcTester        Test Group 1        
 
 The optional filter parameters for `role.list` are:
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-a` | Show non-active \(deleted\) roles only. | `role.list -a` |
+| Parameter | Description                           | Example        |
+| --------- | ------------------------------------- | -------------- |
+| `-a`      | Show non-active (deleted) roles only. | `role.list -a` |
 
 ## Adding Group/Role
 
 You can add a group/role to the iCDR instance using the `role.add` command with required `-r` parameter for group/role name:
 
-```text
+```
 role.add -r NewRoleTest
 ```
 
 The optional filter parameters for `role.add` are.
 
-| Parameter | Description | Example |
-| :--- | :--- | :--- |
-| `-g` | Specify a policy to explicitly grant the group/role. | `role.add -r NewRoleTest1 -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-d` | Specify a policy to explicitly deny the group/role. | `role.add -r NewRoleTest2 -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
-| `-n` | Set the Description core property for a group/role. | `role.add -r NewRoleTest2 -n NO_SPACES_NOTE` |
+| Parameter | Description                                          | Example                                                       |
+| --------- | ---------------------------------------------------- | ------------------------------------------------------------- |
+| `-g`      | Specify a policy to explicitly grant the group/role. | `role.add -r NewRoleTest1 -g 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-d`      | Specify a policy to explicitly deny the group/role.  | `role.add -r NewRoleTest2 -d 1.3.6.1.4.1.33349.3.1.5.9.2.999` |
+| `-n`      | Set the Description core property for a group/role.  | `role.add -r NewRoleTest2 -n NO_SPACES_NOTE`                  |
 
 ## Viewing Group/Role Information
 
 You can view groups/role information for a specific group/role to see all properties and policies using the `role.info` command with required `-r` parameter for group/role name:
 
-```text
+```
 > role.info -r NewRole3
 Name: NewRole3
 SID: 8479182c-e0ae-11eb-bbaf-eb1f1d969e16
@@ -133,5 +133,4 @@ Updated: 2021-07-09T08:10:44.9203880-04:00 (Administrator)
 
 There are no optional filter parameters for `role.list`.
 
-## 
-
+##

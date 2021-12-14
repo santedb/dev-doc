@@ -173,7 +173,7 @@ You can customize the manner in which the SanteMPI user interface behaves by set
 
 &#x20;
 
-![](<../.gitbook/assets/image (418).png>)
+![](<../.gitbook/assets/image (418) (1).png>)
 
 ### Wait for Refresh
 
@@ -195,7 +195,7 @@ Full documentation for the Administrative panel is available at the [Broken link
 
 Since this is a demonstration environment, you will probably want to change the default access policies for `Administrators` to allow them to see clinical data and perform MDM tasks. This is done by navigating to `Security -> Groups` and pressing edit on the `Administrators` group.
 
-![](<../.gitbook/assets/image (421) (1).png>)
+![](<../.gitbook/assets/image (421) (1) (1).png>)
 
 You can scroll to `Policies` and add the following policies to the group:
 

@@ -245,12 +245,12 @@
       * [Managing Devices](operations/cdr-administration/santedb-administration-panel/security-administration/managing-devices.md)
       * [Managing Applications](operations/cdr-administration/santedb-administration-panel/security-administration/managing-applications.md)
       * [Reviewing Audits](operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md)
-  * [SanteDB Administration Console](operations/cdr-administration/santedb-icdr-admin-console/README.md)
-    * [User Administration](operations/cdr-administration/santedb-icdr-admin-console/user-administration.md)
-    * [Group / Role Administration](operations/cdr-administration/santedb-icdr-admin-console/group-role-management.md)
-    * [Policy Administration](operations/cdr-administration/santedb-icdr-admin-console/policy-administration.md)
-    * [Device Administration](operations/cdr-administration/santedb-icdr-admin-console/untitled.md)
-    * [Application Administration](operations/cdr-administration/santedb-icdr-admin-console/application-administration.md)
+  * [SanteDB Administration Console](operations/server-administration/santedb-icdr-admin-console/README.md)
+    * [User Administration](operations/server-administration/santedb-icdr-admin-console/user-administration.md)
+    * [Group / Role Administration](operations/server-administration/santedb-icdr-admin-console/group-role-management.md)
+    * [Policy Administration](operations/server-administration/santedb-icdr-admin-console/policy-administration.md)
+    * [Device Administration](operations/server-administration/santedb-icdr-admin-console/untitled.md)
+    * [Application Administration](operations/server-administration/santedb-icdr-admin-console/application-administration.md)
 * [Standard Operating Procedures](operations/standard-operating-procedures.md)
 
 ## User Guides
