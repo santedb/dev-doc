@@ -127,7 +127,6 @@ If you've installed SanteDB as a daemon the command to stop or start the daemon 
 
 ```
 systemctl stop santedb
-systemctl start santedb
 ```
 
 If you are running SanteDB on a console, you can run:
@@ -136,4 +135,49 @@ If you are running SanteDB on a console, you can run:
 mono /opt/santesuite/santedb/server/SanteDB.exe --console
 ```
 
-The contents of \`
+### Validating Installation
+
+Once started you can validate connectivity to the SanteDB iCDR server running the SanteDB Administration Console. The Administration console is executed using:
+
+```
+mono /opt/santesuite/santedb/server/sdbac.exe
+```
+
+Once the login prompt is available you can login with `Administrator` and password `Mohawk123`.
+
+```
+SanteDB Administration & Security Console v2.1.131.0 (Queenston)
+Copyright (C) 2015 - 2020, SanteSuite Community Partners (see NOTICES)
+Access denied, authentication required.
+Username:administrator
+Password:************
+* http://localhost:8080/ami -> v.2.1.116.0 (Queenston)
+Ready...
+>
+```
+
+### Service Management
+
+If the option to install the SanteDB iCDR as a Linux daemon was selected during install, then the service can be controlled with `systemctl` for example:
+
+```
+sudo systemctl start santedb
+sudo systemctl status santedb
+```
+
+Stopping the service is done with the same command:
+
+```
+sudo systemctl stop santedb
+sudo systemctl status santedb
+```
+
+The service can be enabled on startup using:
+
+```
+sudo systemctl enable santedb
+```
+
+{% hint style="info" %}
+The `/tmp/SanteDB.exe.lock` file contains the PID of the running SanteDB instance. Kill commands such as `SIGHUP` , `SIGKILL` and `SIGSEV` can be sent to this PID to terminate the SanteDB daemon.
+{% endhint %}

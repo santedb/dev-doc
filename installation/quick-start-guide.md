@@ -6,10 +6,6 @@ This tutorial will provide an overview of how to install and run the SanteDB iCD
 Do not use these instructions to deploy SanteMPI in a production environment. These instructions are intended to provide a quick start for demonstration or evaluation only.&#x20;
 {% endhint %}
 
-{% hint style="info" %}
-The code for the quick-start guide can be found on the SanteDB GitHub page at: [https://github.com/santedb/hello-mpi](https://github.com/santedb/hello-mpi)
-{% endhint %}
-
 ## Pre-Requisites
 
 This tutorial uses Docker as a basis for illustrating SanteMPI functions. In order to complete this tutorial, users should:
