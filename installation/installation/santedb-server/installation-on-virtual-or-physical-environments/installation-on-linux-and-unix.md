@@ -107,6 +107,26 @@ Finally, you can run the configuration tool in your installation directory with
 sudo mono ConfigTool.exe
 ```
 
+#### Setting SanteDB as a Daemon
+
+You can register SanteDB as a daemon on your distribution of Linux by creating a service definition file. This is done by creating a new file at `/etc/systemd/system/santedb.service` and using the contents:
+
+```ini
+[Unit]
+Description=SanteDB iCDR Server
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/usr/bin/mono-service -d:$INSTALL_ROOT /opt/santesuite/santedb/server/SanteDB.exe --console 
+ExecStop=kill \`cat /tmp/SanteDB.exe.lock\`
+
+[Install]
+WantedBy=multi-user.target
+```
+
+After this time you can run `systemctl reload-daemons` to load your service definition.
+
 ## Configuring SanteDB iCDR
 
 SanteDB's configuration tool on linux uses the Mono to GTK+ WinForms implementation. The application is the same application as documented in the [configuration-tool](../../../../operations/server-administration/configuration-tool/ "mention") documentation.
