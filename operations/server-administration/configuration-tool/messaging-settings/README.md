@@ -25,7 +25,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 
 
-![](<../../../../.gitbook/assets/image (429) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (429) (1) (1) (1) (1) (1).png>)
 
 | Setting                | Description                                                                                                                                                                                                                                                               | Examples                              |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -50,7 +50,7 @@ Editing the endpoints will present a collection editor where administrators can 
 
 When you set an endpoint address to scheme `https://` the certificate binding configuration is enabled.
 
-![](<../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1).png>)
 
 When binding an endpoint to HTTPS you must ensure:
 

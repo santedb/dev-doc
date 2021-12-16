@@ -23,7 +23,7 @@ When creating a subscription the administrator will be prompted to enter setting
 
 Subscription metadata is used to describe the subscription to other administrators using the iCDR solution.
 
-![](<../../../../.gitbook/assets/image (448).png>)
+![](<../../../../.gitbook/assets/image (448) (1).png>)
 
 * Name - A unique named identifier for the subscription which appear in logs
 * Description - A short description of the subscription, its purpose, why it exists.

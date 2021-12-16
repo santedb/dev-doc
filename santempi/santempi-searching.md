@@ -11,7 +11,7 @@ SanteMPI provides two different search pages for filtering patient data in the a
 The default mode of searching the MPI is to use the identifier search. Searching by identifier allows a user to type (or scan) a patient identifier to retrieve patient results.\
 
 
-![](<../.gitbook/assets/image (437).png>)
+![](<../.gitbook/assets/image (437) (1).png>)
 
 ### Searching by Barcode
 
@@ -44,7 +44,7 @@ Users can click on the `Advanced Search >` link on the search screen to open the
 The advanced search provides discrete inputs for the base identification which is provided in the Master Patient Index. \
 
 
-![](<../.gitbook/assets/image (428).png>)
+![](<../.gitbook/assets/image (428) (1).png>)
 
 After entering the filter details for the patient search, pressing the search button will yield results.
 
@@ -52,7 +52,7 @@ After entering the filter details for the patient search, pressing the search bu
 The SanteMPI server may impose minimum search criteria for search. For example, a jurisdiction may choose to return no results for searches with less than 3 search fields.
 {% endhint %}
 
-![](<../.gitbook/assets/image (440).png>)
+![](<../.gitbook/assets/image (440) (1).png>)
 
 ## Search Results
 

@@ -24,7 +24,7 @@ If installing SanteDB on Microsoft Windows, you should obtain a security certifi
     ![](<../../.gitbook/assets/image (426) (1) (1) (1).png>)
 3.  Select the Computer Account and ensure the local server is the target
 
-    ![](<../../.gitbook/assets/image (425) (1) (1) (1) (1) (1).png>)
+    ![](<../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1).png>)
 4.  Import your certificate and private key (which you generated to get the certificate) into the Personal store. When completed you should see the certificate with a key indicator
 
     ![](<../../.gitbook/assets/image (421) (1) (1) (1) (1) (1).png>)

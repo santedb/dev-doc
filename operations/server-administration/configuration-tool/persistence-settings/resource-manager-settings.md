@@ -2,7 +2,7 @@
 
 The resource manager settings panel is used to specify the control of automatic linking, merging and governance of resource edits in the system. The resource manager specifies the persistence strategy used (either MDM, SIM, or none which is the default mode of operation).
 
-![](<../../../../.gitbook/assets/image (437) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (437) (1) (1) (1) (1) (1).png>)
 
 You can specify the resource manager you'd like to control resources in your deployment of the iCDR.
 

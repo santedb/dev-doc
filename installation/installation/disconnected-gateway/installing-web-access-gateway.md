@@ -35,7 +35,7 @@ Installation of the Web Access Gateway should be performed on machines, containe
 
 Installation of the Web Access Gateway on Microsoft Windows Operating Systems is a standard Windows Installer experience. The application installer will copy the&#x20;
 
-![](<../../../.gitbook/assets/image (429).png>)
+![](<../../../.gitbook/assets/image (429) (1).png>)
 
 After installation is complete you will be asked to [Configure the Web Access Gateway](installing-web-access-gateway.md#undefined).
 
@@ -45,7 +45,7 @@ When updating the SanteDB Web Access Gateway, you should use the installer provi
 
 You may receive a notice to restart existing running services. It is safe to select `Automatically Close Applications`.
 
-![](<../../../.gitbook/assets/image (431).png>)
+![](<../../../.gitbook/assets/image (431) (1).png>)
 
 ### Installation on Linux Operating Systems
 
@@ -107,7 +107,7 @@ When configuring the SanteDB Web Access Gateway (like all dCDR instances) you mu
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 
-![](<../../../.gitbook/assets/image (441).png>)
+![](<../../../.gitbook/assets/image (441) (1).png>)
 
 {% hint style="info" %}
 The SanteDB dCDR software packages like the Windows Application, Android Application and dCDR Gateway may opt to not auto-update applets depending on bandwidth restrictions.
@@ -153,7 +153,7 @@ You may also optionally proxy traffic flowing between the Web Access Gateway and
 
 The other settings panel allows you to configure custom behaviors for the Web Access Gateway. These settings are documented on the [app-settings.md](app-settings.md "mention")wiki page.
 
-![](<../../../.gitbook/assets/image (430) (1) (1).png>)
+![](<../../../.gitbook/assets/image (430) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You can change the application settings for the Web Access Gateway after initial configuration via the file `%systemroot%\Windows\SYSWOW64\config\systemprofile\AppData\Roaming\SanteDB\wwww-default` on Windows or via `~/.config/santedb/santedb-www` on Linux and Docker.
