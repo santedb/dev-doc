@@ -21,8 +21,19 @@ SDB_FEATURE=...;DATA_POLICY;...
 # Set the action to apply when sensitive data is disclosed
 SDB_DATA_POLICY_ACTION=hide|redact|nullify|error|audit|none
 # Set the resources on which policies should be applied
-SDB_DATA_POLICY_RESOURCE=AssigningAuthority|Patient|Person|Place|Observation|...
+SDB_DATA_POLICY_RESOURCE=Resource=action;Resource=action;...
+# Set forbidden properties (properties which should not be disclosed, queried, or collecected
+# unless the user has the specified policy OID (if no policy is specified the attribute is forbidden
+SDB_DATA_POLICY_FORBID=Resource.property;Resource.property=policyOID;...
 ```
+
+{% hint style="info" %}
+The `SDB_DATA_POLICY_FORBID` setting restricts the use of the indicated property in the RIM from users. For example, to restrict collection, querying, or disclosing of the religion property, and to only allow collection, querying and disclosing of vip status to users with policy 2.25.349398
+
+```
+SDB_DATA_POLICY_FORBID=Patient.religion;Patient.vipStatus=2.25.349498
+```
+{% endhint %}
 
 ### Audit Repository
 
