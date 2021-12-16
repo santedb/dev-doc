@@ -330,3 +330,19 @@ To enable the `urn:ihe:iti:pmir:2019:patient-feed` operation:
 ```
 SDB_FEATURE=...;IHE_PMIR;...
 ```
+
+### IHE PIX for HL7v2
+
+To enable the specialized behaviors on ADT messages for IHE PIX for HL7v2
+
+```
+SDB_FEATURE=...;IHE_PIX;...
+```
+
+### IHE PDQ for HL7v2
+
+To enable specialized behaviors on QBP messages for IHE PDQ for HL7v2
+
+```
+SDB_FEATURE=...;IHE_PDQ;...
+```
