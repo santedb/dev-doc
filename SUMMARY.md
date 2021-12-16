@@ -214,6 +214,7 @@
     * [System Settings](operations/server-administration/configuration-tool/system-settings.md)
     * [Performance Settings](operations/server-administration/configuration-tool/performance-settings.md)
     * [Security Settings](operations/server-administration/configuration-tool/security-settings/README.md)
+      * [Data Privacy Filtering](operations/server-administration/configuration-tool/security-settings/data-privacy-filtering.md)
       * [Auditing Configuration](operations/server-administration/configuration-tool/security-settings/auditing-configuration.md)
     * [Operating System Settings](operations/server-administration/configuration-tool/operating-system-settings.md)
   * [Server Configuration File](operations/server-administration/host-configuration-file/README.md)
