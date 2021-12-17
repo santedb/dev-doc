@@ -179,7 +179,7 @@ You can customize the manner in which the SanteMPI user interface behaves by set
 
 Once your settings are saved, the web access gateway will save the settings and restart itself.
 
-![](<../.gitbook/assets/image (426).png>)
+![](<../.gitbook/assets/image (426) (1).png>)
 
 ## Customize the MPI
 

@@ -18,13 +18,13 @@ The `Data Privacy Filtering` panel controls the configuration of the data privac
 
 Expanding the resources input allows administrators to specify resources in the RIM which are subject to special protections. Clicking the ellipsis on the resources property will open a collection editor change the settings for resource controls:
 
-![](<../../../../.gitbook/assets/image (443).png>)
+![](<../../../../.gitbook/assets/image (426).png>)
 
-| Option        | Description                                                                                                                                       | Example                                                    |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Action        | The action to be applied on resources which have privacy policies applied to them, when the requesting user does not have a grant for the policy. | See: [Policy Actions](data-privacy-filtering.md#undefined) |
-| Resource Type | The type of resource that the policy applies to.                                                                                                  | Patient, Person, etc.                                      |
-| Properties    | The properties which are forbidden or have specialized sub-policy enforcement instructions.                                                       | See: Property Policies                                     |
+| Option        | Description                                                                                                                                       | Example                                                                          |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Action        | The action to be applied on resources which have privacy policies applied to them, when the requesting user does not have a grant for the policy. | See: [Policy Actions](data-privacy-filtering.md#undefined)                       |
+| Resource Type | The type of resource that the policy applies to.                                                                                                  | Patient, Person, etc.                                                            |
+| Fields        | The properties which are forbidden or have specialized sub-policy enforcement instructions.                                                       | See: [#property-policies](data-privacy-filtering.md#property-policies "mention") |
 
 {% hint style="info" %}
 You can set policies on identifiers (on entities and acts) by controlling the policy on `AssigningAuthority`.
@@ -37,9 +37,13 @@ The property policies allow implementing jurisdictions to control which properti
 * Restricting the collection, disclosure, or querying of Patient religion or ethnicity to all users
 * Restricting the disclosure, collection or querying of Patient VIP status to only users which have "Access to Taboo Information" policy.
 
-{% hint style="info" %}
-This section is being written
-{% endhint %}
+![](<../../../../.gitbook/assets/image (442).png>)
+
+| Option   | Description                                                                                   | Example                                                    |
+| -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Action   | The action to apply when the caller attempts to access, query, or write data to the field.    | See: [Policy Actions](data-privacy-filtering.md#undefined) |
+| Policy   | The policy OIDs which the user must posses in order for the Action not to result in an error. | 2.25.0303030                                               |
+| Property | The HDSI property path (root paths only) on the resource, where this policy applies.          |                                                            |
 
 ## Policy Actions
 
