@@ -21,7 +21,7 @@
 * [Software Architecture](santedb/software-architecture.md)
   * [Publish / Subscribe Architecture](santedb/software-architecture/publish-subscribe-architecture.md)
   * [SanteDB Versioning](product-overview/santesuite-products/santedb-versioning.md)
-  * [Version 3.x Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
+  * [Version 3 Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
 * [Data & Information Architecture](santedb/data-and-information-architecture/README.md)
   * [Conceptual Information Model](santedb/data-and-information-architecture/conceptual-data-model/README.md)
     * [Concept Dictionary](santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary/README.md)
