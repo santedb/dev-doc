@@ -4,13 +4,11 @@ Both the HDSI and AMI use a general purpose query syntax which provide methods f
 
 The HDSI query syntax is translated from HTTP query headers to LINQ expression trees and then used within the SanteDB iCDR and dCDR instances where needed (running business rules, filtering lists, querying against the database).
 
-## Syntax
-
 {% hint style="info" %}
 When passing HDSI queries over HTTP you must URL encode them. The examples here are not URL encoded and only suitable in matching and care planning rules.
 {% endhint %}
 
-### Property Paths
+## Property Paths
 
 In general an HDSI query is executed using parameters found in the object which is being queried. For example, an HDSI query for all patients named TEST would be:
 
@@ -28,7 +26,7 @@ The properties are traversed using dotted notation matching the property names i
 
 ![](<../../../.gitbook/assets/image (159).png>)
 
-#### And/Or Semantics
+## And/Or Semantics
 
 By default all filters passed in an HDSI query string are AND unless the property path is the same, in which case multiples are treated as OR. For example, to find patients with any name component of either JOHN or SMITH
 
@@ -48,7 +46,7 @@ If we wanted to query for given name of JOHN or JOHNNY and family name of SMITH
 name.component[Given].value=JOHN&name.component[Given].value=JOHNNY&name.component[Family].value=SMITH
 ```
 
-### Operators
+## Operators
 
 Operators allow for the filtering of values based on equality, negation, etc. The operators for HDSI query syntax are listed below:
 
@@ -64,7 +62,7 @@ Operators allow for the filtering of values based on equality, negation, etc. Th
 | Starts With           | =^       | name.component.value=^JO    |
 | Ends With             | =$       | name.componentvalue=$HN     |
 
-### Collection Guards
+## Collection Guards
 
 By default any filter which is applied to a property which is a collection (identifiers, name, addresses, etc.) is filtered as ANY. The following example illustrates a match where any identifier of a patient equals 123-234-234:
 
@@ -128,7 +126,7 @@ o => o.Names.Where(
                component => component.Value == "SMITH"))
 ```
 
-### Casting
+## Casting
 
 Sometimes an occasion arises where you wish to execute a sub-filter on a property which is of the wrong type. For example, if we wanted to filter for patients who have Mother with a date of birth before 1960, we would expect this query to work:
 
@@ -142,7 +140,7 @@ However, looking at the traversal for **target** on the **EntityRelationship** c
 relationship[Mother].target@Person.dateOfBirth=<1960
 ```
 
-### Coalesce
+## Coalesce
 
 Sometimes a traversal path may not have a value, this can cause issues when the iCDR attempts to execute filters against in-memory objects such as in the care planner or matching engine. In these scenarios you can use the coalesce operator (also known as the "Elvis" operator). This operator does null-safe traversal, for example, to match a patient with a gender code which may or may not be present:
 
@@ -150,7 +148,7 @@ Sometimes a traversal path may not have a value, this can cause issues when the 
 genderConcept?.mnemonic=Male
 ```
 
-### Variables
+## Variables
 
 Variables are either defined by the user (for example, in the data retention service) or by the host context (such as `$index` in the CDSS for repeated actions, or `$input` in the matcher for the inbound record).&#x20;
 
@@ -166,7 +164,7 @@ Variables can also be used as the root of another HDSI expression, for example, 
 address.component[City].value=$input.address.component[City].value
 ```
 
-### Extension Functions
+## Extension Functions
 
 The default matching operations may be extended via SanteDB's query extension methods. These methods allow for custom matching parameters. These extension functions are enumerated below (with a discussion on which plugins must be enabled to activate them).
 
@@ -176,7 +174,7 @@ Functions are applied in the format:
 property=:(extension|parameter1,parameter2)value
 ```
 
-#### Date Difference
+### Date Difference
 
 The date difference function is enabled on PostgreSQL and FirebirdSQL ORM providers and require no additional configuration.
 
@@ -195,7 +193,7 @@ For example, to filter for patients born within 3 years of 1990
 dateOfBirth=:(date_diff|1990)<3y
 ```
 
-#### Date Component Extract
+### Date Component Extract
 
 The date extract component extracts a part of the date compares with the property.
 
@@ -214,7 +212,7 @@ For example, to filter for patients born during the month of May
 dateOfBirth=:(date_extract|month)5
 ```
 
-#### Substring
+### Substring
 
 Extracts a portion of a string and matches it with the provided value.
 
@@ -234,7 +232,7 @@ For example, to filter for patients who have an identifier where the first 5 dig
 identifier.value=:(substr|0,5)12345
 ```
 
-#### Approximate Match
+### Approximate Match
 
 Approximate matching is enabled when the SanteDB matcher plugin is enabled in the configuration for the dCDR or iCDR. The approximate matching function will use a combination of pattern, phonetic, and string difference functions to determine matching.
 
@@ -253,7 +251,7 @@ For example, to filter for patients who have a name which sounds like, is about 
 name.component.value=:(approx|JIHN)
 ```
 
-#### Sounds Like
+### Sounds Like
 
 Uses the configured phonetic algorithm to determine whether the supplied string sounds like the stored property value.
 
@@ -273,7 +271,7 @@ For example, to filter for patients who have a name which sounds like Tyler (i.e
 name.component.value=:(soundexlike|TYLER)
 ```
 
-#### Phonetic Difference
+### Phonetic Difference
 
 The phonetic difference function is used to compare the difference in phonetic codes between two values. This function by default uses the SOUNDEX algorithm and then performs a LEVENSHTEIN function against the result.
 
