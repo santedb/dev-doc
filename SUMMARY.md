@@ -20,6 +20,7 @@
   * [Deployment Models](deployment-models.md)
 * [Software Architecture](santedb/software-architecture.md)
   * [Publish / Subscribe Architecture](santedb/software-architecture/publish-subscribe-architecture.md)
+  * [New ADO (nuado)](santedb/software-architecture/new-ado-nuado.md)
   * [SanteDB Versioning](product-overview/santesuite-products/santedb-versioning.md)
   * [Version 3 Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
 * [Data & Information Architecture](santedb/data-and-information-architecture/README.md)
