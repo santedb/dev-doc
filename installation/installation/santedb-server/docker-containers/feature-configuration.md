@@ -180,7 +180,13 @@ SDB_BIS_LISTEN=http://0.0.0.0:8080/bis
 SDB_BIS_AUTH=TOKEN|BASIC|NONE
 # Enables or disables CORS
 SDB_BIS_CORS=true|false
+# Sets the maximum number of rows a single BIS report can retrieve from the database
+SDB_BIS_MAX_RESULTS=50000
 ```
+
+{% hint style="warning" %}
+Setting `SDB_BIS_MAX_RESULTS` will impact server performance. The default size of BI report result sets is 10,000. For reports which require more than 10,000 results, it is recommended that the developer pass the `_count` parameter to the rendering API.&#x20;
+{% endhint %}
 
 ## Optional Services
 
