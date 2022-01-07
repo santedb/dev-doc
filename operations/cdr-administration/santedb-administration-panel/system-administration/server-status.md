@@ -22,7 +22,7 @@ The server status page has two tabs:
 
 The core information section of the server status screen shows information related to the server software itself.
 
-![](<../../../../.gitbook/assets/image (434) (1).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1).png>)
 
 ## Installed Applets
 

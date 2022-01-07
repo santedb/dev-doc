@@ -57,7 +57,7 @@ When creating a new group, the name and a brief description of the group is requ
 
 When editing a group or after creating a new group, the detail view of the group will be shown.&#x20;
 
-![](<../../../../.gitbook/assets/image (434) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1) (1).png>)
 
 This view shows the basic details of the group, and permits editing of the group name and description, as well as access to the groups security id (SID)
 

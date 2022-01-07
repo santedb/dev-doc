@@ -6,7 +6,7 @@ The Pub/Sub manager allows administrators to control the [publish-subscribe-arch
 
 The publish/subscribe manager shows a list of all registered subscriptions. This view allows administrators to quickly enable or disable outbound subscriptions from the iCDR or dCDR instance.
 
-![](<../../../../.gitbook/assets/image (434).png>)
+![](<../../../../.gitbook/assets/image (434) (1).png>)
 
 The commands on this screen:
 

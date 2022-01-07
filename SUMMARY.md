@@ -187,6 +187,7 @@
             * [TEST: SECURITY-AM-06](installation/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-06.md)
             * [TEST: SECURITY-AM-07](installation/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-07.md)
             * [TEST: SECURITY-AM-08](installation/installation/installation-qualification/security-administration-testing/test-cases-for-ui-1/application-management-tests/test-security-am-08.md)
+    * [Production Installation Notes](installation/installation/santedb-server/production-installation-notes.md)
   * [SanteDB dCDR Instances](installation/installation/disconnected-gateway/README.md)
     * [Installing Web Access Gateway](installation/installation/disconnected-gateway/installing-web-access-gateway.md)
     * [Installing Disconnected Gateway](installation/installation/disconnected-gateway/installing-disconnected-gateway.md)

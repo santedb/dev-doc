@@ -206,7 +206,7 @@ You can scroll to `Policies` and add the following policies to the group:
 
 After adding these policies you should observe the policies in the master list of permissions.
 
-![](<../.gitbook/assets/image (434) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (434) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You do not need to SAVE policy assignments, they are applied immediately.
