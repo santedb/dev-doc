@@ -93,7 +93,7 @@ The configuration screen for the web access gateway is identical to the configur
 
 Pressing the **JOIN** button will require you to login as the system administrator for the SanteDB server.
 
-![](<../../../.gitbook/assets/image (436) (1) (1).png>)
+![](<../../../.gitbook/assets/image (436) (1) (1) (1).png>)
 
 You should use the administrative user account and password to authenticate yourself with the domain.
 
@@ -117,7 +117,7 @@ The SanteDB dCDR software packages like the Windows Application, Android Applica
 
 Since the SanteDB Web Access Gateway is intended to be used in an environment where it can always communicate with the iCDR server directly, and because it lacks the storage capacity to operate offline, the synchronization mode of the Web Access Gateway should be set to Online Only.
 
-![](<../../../.gitbook/assets/image (446) (1).png>)
+![](<../../../.gitbook/assets/image (446) (1) (1).png>)
 
 ### Set Log Verbosity
 

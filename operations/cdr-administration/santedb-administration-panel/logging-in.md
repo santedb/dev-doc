@@ -2,7 +2,7 @@
 
 Upon navigating to the SanteDB iCDR administration panel for your deployment, the administration portal will challenge you for a login. The components of the login screen are illustrated below.
 
-![](<../../../.gitbook/assets/image (423) (1).png>)
+![](<../../../.gitbook/assets/image (423) (1) (1).png>)
 
 
 
@@ -19,7 +19,7 @@ To initiate the password reset workflow, click the `Forgot Password` button, thi
 
 Next, enter the answer to the provided security challenge question.
 
-![](<../../../.gitbook/assets/image (436) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (436) (1) (1) (1) (1) (1).png>)
 
 Finally, enter the new password for your user account, the password should adhere to the jurisdictions password complexity and history requirements.
 

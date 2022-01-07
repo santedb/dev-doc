@@ -33,7 +33,7 @@ Subscription metadata is used to describe the subscription to other administrato
 
 Next, administrators should specify the criteria under which the notification is triggered.&#x20;
 
-![](<../../../../.gitbook/assets/image (435).png>)
+![](<../../../../.gitbook/assets/image (435) (1).png>)
 
 * Applies To - The resource which this subscription applies to
 * Event(s) - The persistence events when the recipient should be notified
@@ -43,7 +43,7 @@ Next, administrators should specify the criteria under which the notification is
 
 The endpoint settings are used to control how and when the messages are sent to the remote endpoint.&#x20;
 
-![](<../../../../.gitbook/assets/image (447).png>)
+![](<../../../../.gitbook/assets/image (447) (1).png>)
 
 * Not Before - The date/time when the endpoint should start receiving messages from the iCDR
 * Not After - The date/time when the endpoint should stop receiving messages from the iCDR

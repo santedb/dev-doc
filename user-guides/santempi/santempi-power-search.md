@@ -47,7 +47,7 @@ For example, the following expression results in patients who were born between 
 
 Conversely, the following expression results in patients named Donny or Don
 
-![](<../../.gitbook/assets/image (440).png>)
+![](<../../.gitbook/assets/image (440) (1).png>)
 
 ### Concept Fields
 

@@ -51,7 +51,7 @@ Administrators may wish to create new groups for a variety of reasons. For examp
 
 When creating a new group, the name and a brief description of the group is required.
 
-![](<../../../../.gitbook/assets/image (423).png>)
+![](<../../../../.gitbook/assets/image (423) (1).png>)
 
 ## Group Details
 
