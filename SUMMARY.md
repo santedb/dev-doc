@@ -254,7 +254,14 @@
     * [Policy Administration](operations/server-administration/santedb-icdr-admin-console/policy-administration.md)
     * [Device Administration](operations/server-administration/santedb-icdr-admin-console/untitled.md)
     * [Application Administration](operations/server-administration/santedb-icdr-admin-console/application-administration.md)
-* [Standard Operating Procedures](operations/standard-operating-procedures.md)
+* [Standard Operating Procedures](operations/standard-operating-procedures/README.md)
+  * [User Management SOPs](operations/standard-operating-procedures/user-management-sops/README.md)
+    * [SOP01 - Onboarding Users](operations/standard-operating-procedures/user-management-sops/sop01-onboarding-users.md)
+  * [Role Management SOPs](operations/standard-operating-procedures/role-management-sops.md)
+  * [Device Management SOPs](operations/standard-operating-procedures/device-management-sops.md)
+  * [Application Management SOPs](operations/standard-operating-procedures/application-management-sops.md)
+  * [Trading Partner SOPs](operations/standard-operating-procedures/trading-partner-sops.md)
+  * [Standard Operating Procedure Template](operations/standard-operating-procedures/standard-operating-procedure-template.md)
 
 ## User Guides
 

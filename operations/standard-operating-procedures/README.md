@@ -8,10 +8,19 @@ The Standard Operating Procedures (SOPs) listed here are generic, and explain hy
 
 Standard operating procedures included in this section include
 
-* Onboarding new Users
-* Deactivating existing Users
-* Administrative User Password Reset
-* Onboarding new Devices / Clients
-* Onboarding new Software Applications
-* Implementing new Data Protection Policies
-* Identity Domain Registration Procedures
+* User Management
+  * Onboarding new Users
+  * Deactivating existing Users
+  * User Lockout and Password Reset
+* Device Management
+  * Onboarding new Devices
+  * Deactivation of existing Devices
+  * Device Lockout and Secret Reset
+* Application Management
+  * Onboarding new Applications
+  * Deactivation of existing Applications
+  * Application Lockout and Secret Reset
+* Onboarding new HL7 Trading Partners
+* Implementing new Data Protection Policy
+* New Identity Domain Registration
+

@@ -17,5 +17,5 @@ In this section, we discuss:
   * Application Diagnostics (reviewing logs, server status)
   * Reference Data Administration
   * Security & Audit Review Procedures
-* [Standard Operating Procedures](standard-operating-procedures.md)
+* [Standard Operating Procedures](standard-operating-procedures/)
 
