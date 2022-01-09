@@ -117,6 +117,19 @@ In SanteDB there are several tables which are candidates for partitioning, and h
 
 An example of partitioning the `ent_vrsn_tbl` and `act_vrsn_tbl` is provided in the file `ZZ-Partition-PSQL11.sql` (for PostgreSQL 11+) and `ZZ-Partition-PSQL10.sql` (for PostgreSQL 10)
 
+### Removing Semantic Validation
+
+By default SanteDB iCDR's database (on PostgreSQL and Firebird) has a series of check constraints which are used for validating the codification of fields and relationships. These checks are implemented in the database to prevent rogue SQL scripts for assigning, for example, a GenderConcept to a Status (i.e. the status of an Entity cannot be `Male`) and to prevent non-sensical relationships (i.e. adding an `Uncle` to `Good Health Hospital` ).&#x20;
+
+Depending on the resources available, and the maturity of your deployment (i.e. are all new enhancements tested prior to rollout), the size of the deployment (i.e. resources for the database server), and processes (i.e. can external objects add new data to the iCDR) you may wish to disable these checks.&#x20;
+
+To disable these checks:
+
+```
+DROP FUNCTION ck_is_cd_set_mem CASCADE; -- DROPS SEMANTIC FIELD VALIDATION
+ALTER TABLE public.ent_rel_tbl DISABLE TRIGGER ent_rel_tbl_vrfy; -- RELATIONSHIP VALIDATION
+```
+
 ## Tune Unused Services
 
 The default installation of several SanteDB solutions will enable services which may not be required in every jurisdiction. Disabling these services may drastically increase throughput of the solution.
