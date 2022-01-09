@@ -126,8 +126,13 @@ Depending on the resources available, and the maturity of your deployment (i.e. 
 To disable these checks:
 
 ```
-DROP FUNCTION ck_is_cd_set_mem CASCADE; -- DROPS SEMANTIC FIELD VALIDATION
 ALTER TABLE public.ent_rel_tbl DISABLE TRIGGER ent_rel_tbl_vrfy; -- RELATIONSHIP VALIDATION
+
+-- For Version 2.0.x, 2.1.x, 2.2.x
+DROP FUNCTION ck_is_cd_set_mem CASCADE; -- DROPS SEMANTIC FIELD VALIDATION
+-- For Version 2.3.x
+DROP FUNCTION ck_is_cd_set_mem_with_null CASCADE; -- DROPS SEMANTIC FIELD VALIDATION
+DROP FUNCTION ck_is_cd_set_mem CASCADE; -- DROPS SEMANTIC FIELD VALIDATION
 ```
 
 ## Tune Unused Services
