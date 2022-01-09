@@ -103,6 +103,20 @@ A configuration may be set as:
 </section>
 ```
 
+### Partitioning Tables
+
+SanteDB provides opportunities to partition large tables when deployed on PostgreSQL. Depending on the type of data and the volumes of data being stored, partitioning can allow PostgreSQL to break apart large tables into smaller tables based on attributes within the table.
+
+In SanteDB there are several tables which are candidates for partitioning, and how an implementer partitions these tables will depend on their use case for SanteDB.
+
+| Table                                                         | Partition List                                                               | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><code>ent_vrsn_tbl</code><br><code>act_vrsn_tbl</code></p> | `cls_cd_id` (note: in 2.1.x and 2.2.x the partition should be on `ent_tbl`). | Partitioning by entity classification codes is useful when you're using the MDM or storing a large number of varied entities (i.e. places, materials, etc.) The partitions implementers define will depend on the use case for the SanteDB deployment, for example: MDM for an MPI it may be useful to create a partition for MDM-Master, Patient, Person, Organization and everything else.                                                                     |
+| <p><code>ent_rel_tbl</code><br><code>act_rel_tbl</code></p>   |  `rel_typ_cd_id`                                                             | Partitioning by entity relationship classification codes is useful when storing large volumes of relationships (SanteIMS and SanteMPI are good candidates). The partitions created will depend on the use case of the deployment, for example, when using SanteMPI it may be useful to partition this table based on MDM relationship types (MDM-Master, MDM-Candidate, MDM-RecordOfTruth) , personal relationship types (Mother, Father, etc.), and all others. |
+| `act_ptcpt_tbl`                                               | `rol_cd_id`                                                                  | Partitioning act participations is useful when your SanteDB deployment will store large volumes of participation information (entity to act relationships). Partitioning this table is useful for IMS deployments or deployments of SanteDB with large clinical datasets.                                                                                                                                                                                        |
+
+An example of partitioning the `ent_vrsn_tbl` and `act_vrsn_tbl` is provided in the file `ZZ-Partition-PSQL11.sql` (for PostgreSQL 11+) and `ZZ-Partition-PSQL10.sql` (for PostgreSQL 10)
+
 ## Tune Unused Services
 
 The default installation of several SanteDB solutions will enable services which may not be required in every jurisdiction. Disabling these services may drastically increase throughput of the solution.
