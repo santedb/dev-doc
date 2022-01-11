@@ -1,4 +1,4 @@
-# SOP01 - Onboarding Users
+# Onboarding Users
 
 ## Summary
 
@@ -62,6 +62,11 @@ This standard operating procedure (SOP) should be used when an implementing juri
 
 ### See Also
 
-* [managing-user-accounts.md](../../cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md "mention")
-* [user-administration.md](../../server-administration/santedb-icdr-admin-console/user-administration.md "mention")
-* [group-role-management.md](../../server-administration/santedb-icdr-admin-console/group-role-management.md "mention")
+{% content-ref url="../../cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md" %}
+[managing-user-accounts.md](../../cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../server-administration/santedb-icdr-admin-console/user-administration.md" %}
+[user-administration.md](../../server-administration/santedb-icdr-admin-console/user-administration.md)
+{% endcontent-ref %}
+
