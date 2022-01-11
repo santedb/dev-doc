@@ -8,10 +8,10 @@ The Standard Operating Procedures (SOPs) listed here are generic, and explain hy
 
 Standard operating procedures included in this section include
 
-* User Management
-  * Onboarding new Users
-  * Deactivating existing Users
-  * User Lockout and Password Reset
+* [User Management](user-management-sops/)
+  * [Onboarding new Users](user-management-sops/sop-onboarding-users.md)
+  * [Deactivating existing Users](user-management-sops/sop-deactivating-users.md)
+  * [User Lockout and Password Reset](user-management-sops/sop-user-lockout.md)
 * Device Management
   * Onboarding new Devices
   * Deactivation of existing Devices
