@@ -104,7 +104,7 @@ Represents a business rules service with no behavior, but intended to help in th
 ```
 
 ## DataQualityBundleRule - (SanteDB.Core.Api)
-Business rule that calls other [DataQualityBusinessRule`1](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule`1.htm) based on the contents of a bundle
+Business rule that calls other [DataQualityBusinessRule`1](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule_1.htm) based on the contents of a bundle
 ### Description
 This business rule wraps the insertion or update of a [Bundle](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Collection_Bundle.htm) and calls individual data quality validation 
             rules for each of the objects contained withing the bundle provided.
