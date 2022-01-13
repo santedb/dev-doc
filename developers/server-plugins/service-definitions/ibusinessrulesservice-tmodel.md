@@ -1,4 +1,4 @@
-IBusinessRulesService`1 (IBusinessRulesService<TModel> in SanteDB.Core.Api)
+IBusinessRulesService&lt;TModel> (IBusinessRulesService&lt;TModel> in SanteDB.Core.Api)
 
 # Summary
 Represents a service that executes business rules based on triggers which happen in the persistence layer
@@ -30,7 +30,7 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 # Implementations
 
 
-## JavascriptBusinessRule`1 - (SanteDB.BusinessRules.JavaScript)
+## JavascriptBusinessRule&lt;TBinding> - (SanteDB.BusinessRules.JavaScript)
 Represents a rule service base binding
 
 ### Service Registration
@@ -58,7 +58,7 @@ Represents a rule which is tied JavaScript which executes a bundle
 	</serviceProviders>
 ```
 
-## BaseBusinessRulesService`1 - (SanteDB.Core.Api)
+## BaseBusinessRulesService&lt;TModel> - (SanteDB.Core.Api)
 Represents a business rules service with no behavior, but intended to help in the implementation of another
             business rules service
 
@@ -87,7 +87,7 @@ Represents a bundle data quality rule
 	</serviceProviders>
 ```
 
-## DataQualityBusinessRule`1 - (SanteDB.Core.Api)
+## DataQualityBusinessRule&lt;TModel> - (SanteDB.Core.Api)
 Represents a single data quality business rule
 
 ### Service Registration
@@ -173,9 +173,9 @@ public class MyBusinessRulesService<TModel> : SanteDB.Core.Services.IBusinessRul
 
 # References
 
-* [IBusinessRulesService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBusinessRulesService`1.htm)
-* [JavascriptBusinessRule`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_BusinessRules_JavaScript_JavascriptBusinessRule`1.htm)
+* [IBusinessRulesService&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBusinessRulesService_1.htm)
+* [JavascriptBusinessRule&lt;TBinding> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_BusinessRules_JavaScript_JavascriptBusinessRule_1.htm)
 * [BundleWrapperRule C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_BusinessRules_JavaScript_Rules_BundleWrapperRule.htm)
-* [BaseBusinessRulesService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_BaseBusinessRulesService`1.htm)
+* [BaseBusinessRulesService&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_BaseBusinessRulesService_1.htm)
 * [DataQualityBundleRule C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBundleRule.htm)
-* [DataQualityBusinessRule`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule`1.htm)
+* [DataQualityBusinessRule&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule_1.htm)

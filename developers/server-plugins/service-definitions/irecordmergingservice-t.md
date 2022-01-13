@@ -1,4 +1,4 @@
-IRecordMergingService`1 (IRecordMergingService<T> in SanteDB.Core.Api)
+IRecordMergingService&lt;T> (IRecordMergingService&lt;T> in SanteDB.Core.Api)
 
 # Summary
 Represents a service which appropriately merges / unmerges records
@@ -15,7 +15,7 @@ Represents a service which appropriately merges / unmerges records
 # Implementations
 
 
-## SimResourceMerger`1 - (SanteDB.Core.Api)
+## SimResourceMerger&lt;TModel> - (SanteDB.Core.Api)
 TODO: Document this
 
 ### Service Registration
@@ -29,7 +29,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## MdmEntityMerger`1 - (SanteDB.Persistence.MDM)
+## MdmEntityMerger&lt;TEntity> - (SanteDB.Persistence.MDM)
 An MDM merger that operates on Entities
 ### Description
 This class exists to allow callers to interact with the operations in the underlying infrastructure.
@@ -45,7 +45,7 @@ This class exists to allow callers to interact with the operations in the underl
 	</serviceProviders>
 ```
 
-## MdmResourceMerger`1 - (SanteDB.Persistence.MDM)
+## MdmResourceMerger&lt;TModel> - (SanteDB.Persistence.MDM)
 An implementation of a IRecordMergeService for an MDM controlled resource
 
 ### Service Registration
@@ -86,7 +86,7 @@ public class MyRecordMergingService<T> : SanteDB.Core.Services.IRecordMergingSer
 
 # References
 
-* [IRecordMergingService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRecordMergingService`1.htm)
-* [SimResourceMerger`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService+SimResourceMerger`1.htm)
-* [MdmEntityMerger`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmEntityMerger`1.htm)
-* [MdmResourceMerger`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmResourceMerger`1.htm)
+* [IRecordMergingService&lt;T> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRecordMergingService_1.htm)
+* [SimResourceMerger&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService+SimResourceMerger_1.htm)
+* [MdmEntityMerger&lt;TEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmEntityMerger_1.htm)
+* [MdmResourceMerger&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmResourceMerger_1.htm)

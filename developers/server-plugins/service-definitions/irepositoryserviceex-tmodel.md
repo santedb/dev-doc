@@ -1,4 +1,4 @@
-IRepositoryServiceEx`1 (IRepositoryServiceEx<TModel> in SanteDB.Core.Api)
+IRepositoryServiceEx&lt;TModel> (IRepositoryServiceEx&lt;TModel> in SanteDB.Core.Api)
 
 # Summary
 Represents a repository service wrapping an extended persistence service
@@ -13,7 +13,7 @@ Represents a repository service wrapping an extended persistence service
 # Implementations
 
 
-## GenericLocalActRepository`1 - (SanteDB.Server.Core)
+## GenericLocalActRepository&lt;TAct> - (SanteDB.Server.Core)
 Represents an act repository service.
 
 ### Service Registration
@@ -27,7 +27,7 @@ Represents an act repository service.
 	</serviceProviders>
 ```
 
-## GenericLocalClinicalDataRepository`1 - (SanteDB.Server.Core)
+## GenericLocalClinicalDataRepository&lt;TModel> - (SanteDB.Server.Core)
 Represents generic local clinical data repository
 
 ### Service Registration
@@ -41,7 +41,7 @@ Represents generic local clinical data repository
 	</serviceProviders>
 ```
 
-## GenericLocalRepositoryEx`1 - (SanteDB.Server.Core)
+## GenericLocalRepositoryEx&lt;TModel> - (SanteDB.Server.Core)
 Generic nullifiable local repository
 
 ### Service Registration
@@ -177,10 +177,10 @@ public class MyRepositoryServiceEx<TModel> : SanteDB.Core.Services.IRepositorySe
 
 # References
 
-* [IRepositoryServiceEx`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryServiceEx`1.htm)
-* [GenericLocalActRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository`1.htm)
-* [GenericLocalClinicalDataRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalClinicalDataRepository`1.htm)
-* [GenericLocalRepositoryEx`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepositoryEx`1.htm)
+* [IRepositoryServiceEx&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryServiceEx_1.htm)
+* [GenericLocalActRepository&lt;TAct> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository_1.htm)
+* [GenericLocalClinicalDataRepository&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalClinicalDataRepository_1.htm)
+* [GenericLocalRepositoryEx&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepositoryEx_1.htm)
 * [LocalManufacturedMaterialRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalManufacturedMaterialRepository.htm)
 * [LocalPatientRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalPatientRepository.htm)
 * [LocalProviderRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalProviderRepository.htm)

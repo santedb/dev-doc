@@ -1,4 +1,4 @@
-ICancelRepositoryService`1 (ICancelRepositoryService<TModel> in SanteDB.Core.Api)
+ICancelRepositoryService&lt;TModel> (ICancelRepositoryService&lt;TModel> in SanteDB.Core.Api)
 
 # Summary
 Represents a repository that can cancel an act
@@ -12,7 +12,7 @@ Represents a repository that can cancel an act
 # Implementations
 
 
-## GenericLocalActRepository`1 - (SanteDB.Server.Core)
+## GenericLocalActRepository&lt;TAct> - (SanteDB.Server.Core)
 Represents an act repository service.
 
 ### Service Registration
@@ -43,5 +43,5 @@ public class MyCancelRepositoryService<TModel> : SanteDB.Core.Services.ICancelRe
 
 # References
 
-* [ICancelRepositoryService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ICancelRepositoryService`1.htm)
-* [GenericLocalActRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository`1.htm)
+* [ICancelRepositoryService&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ICancelRepositoryService_1.htm)
+* [GenericLocalActRepository&lt;TAct> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository_1.htm)

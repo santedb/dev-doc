@@ -1,4 +1,4 @@
-IStoredQueryDataPersistenceService`1 (IStoredQueryDataPersistenceService<TEntity> in SanteDB.Core.Api)
+IStoredQueryDataPersistenceService&lt;TEntity> (IStoredQueryDataPersistenceService&lt;TEntity> in SanteDB.Core.Api)
 
 # Summary
 Represents a data persistence provider that can store and continue queries
@@ -40,7 +40,7 @@ Entity identifier persistence service
 	</serviceProviders>
 ```
 
-## ActDerivedPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## ActDerivedPersistenceService&lt;TModel,TData> - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service which is derived from an act
 
 ### Service Registration
@@ -54,7 +54,7 @@ Represents a persistence service which is derived from an act
 	</serviceProviders>
 ```
 
-## ActDerivedPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## ActDerivedPersistenceService&lt;TModel,TData,TQueryReturn> - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service which is derived from an act
 
 ### Service Registration
@@ -152,7 +152,7 @@ Assigning authority persistence service
 	</serviceProviders>
 ```
 
-## BaseDataPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## BaseDataPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 Base persistence service
 
 ### Service Registration
@@ -166,7 +166,7 @@ Base persistence service
 	</serviceProviders>
 ```
 
-## BaseDataPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## BaseDataPersistenceService&lt;TModel,TDomain,TQueryResult> - (SanteDB.Persistence.Data.ADO)
 Base data persistence service
 
 ### Service Registration
@@ -250,7 +250,7 @@ Control act persistence service
 	</serviceProviders>
 ```
 
-## CorePersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## CorePersistenceService&lt;TModel,TDomain,TQueryReturn> - (SanteDB.Persistence.Data.ADO)
 Core persistence service which contains helpful functions
 
 ### Service Registration
@@ -320,7 +320,7 @@ Entity address component persistence service
 	</serviceProviders>
 ```
 
-## EntityDerivedPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## EntityDerivedPersistenceService&lt;TModel,TData> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -334,7 +334,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## EntityDerivedPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## EntityDerivedPersistenceService&lt;TModel,TData,TQueryReturn> - (SanteDB.Persistence.Data.ADO)
 Entity derived persistence services
 
 ### Service Registration
@@ -404,7 +404,7 @@ Entity relationship persistence service
 	</serviceProviders>
 ```
 
-## IdentifiedPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## IdentifiedPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 Generic persistnece service for identified entities
 
 ### Service Registration
@@ -418,7 +418,7 @@ Generic persistnece service for identified entities
 	</serviceProviders>
 ```
 
-## IdentifiedPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## IdentifiedPersistenceService&lt;TModel,TDomain,TQueryResult> - (SanteDB.Persistence.Data.ADO)
 Generic persistence service which can persist between two simple types.
 
 ### Service Registration
@@ -716,7 +716,7 @@ Security user persistence
 	</serviceProviders>
 ```
 
-## SimpleVersionedEntityPersistenceService`4 - (SanteDB.Persistence.Data.ADO)
+## SimpleVersionedEntityPersistenceService&lt;TModel,TData,TQueryReturn,TRootEntity> - (SanteDB.Persistence.Data.ADO)
 Represents a simple versioned entity persistence service
 
 ### Service Registration
@@ -772,7 +772,7 @@ Represents a persister that can read/write user entities
 	</serviceProviders>
 ```
 
-## VersionedDataPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## VersionedDataPersistenceService&lt;TModel,TDomain,TDomainKey> - (SanteDB.Persistence.Data.ADO)
 Versioned domain data
 
 ### Service Registration
@@ -800,7 +800,7 @@ Represents a reference term persistence service.
 	</serviceProviders>
 ```
 
-## GenericBasePersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## GenericBasePersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -814,7 +814,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## GenericIdentityPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## GenericIdentityPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -828,7 +828,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## GenericBaseAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## GenericBaseAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -842,7 +842,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## GenericBaseVersionedAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## GenericBaseVersionedAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -856,7 +856,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## GenericIdentityAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## GenericIdentityAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -870,7 +870,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## GenericIdentityVersionedAssociationPersistenceService`2 - (SanteDB.Persistence.Data.ADO)
+## GenericIdentityVersionedAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
 
 ### Service Registration
@@ -901,37 +901,37 @@ public class MyStoredQueryDataPersistenceService<TEntity> : SanteDB.Core.Service
 
 # References
 
-* [IStoredQueryDataPersistenceService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IStoredQueryDataPersistenceService`1.htm)
-* [AdoBasePersistenceService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoBasePersistenceService`1.htm)
+* [IStoredQueryDataPersistenceService&lt;TEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IStoredQueryDataPersistenceService_1.htm)
+* [AdoBasePersistenceService&lt;TData> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoBasePersistenceService_1.htm)
 * [EntityIdentifierPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityIdentifierPersistenceService.htm)
-* [ActDerivedPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActDerivedPersistenceService`2.htm)
-* [ActDerivedPersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActDerivedPersistenceService`3.htm)
+* [ActDerivedPersistenceService&lt;TModel,TData> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActDerivedPersistenceService_2.htm)
+* [ActDerivedPersistenceService&lt;TModel,TData,TQueryReturn> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActDerivedPersistenceService_3.htm)
 * [ActParticipationPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActParticipationPersistenceService.htm)
 * [ActPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActPersistenceService.htm)
 * [ActRelationshipPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActRelationshipPersistenceService.htm)
 * [MailMessagePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_MailMessagePersistenceService.htm)
 * [ApplicationEntityPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ApplicationEntityPersistenceService.htm)
 * [AssigningAuthorityPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_AssigningAuthorityPersistenceService.htm)
-* [BaseDataPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_BaseDataPersistenceService`2.htm)
-* [BaseDataPersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_BaseDataPersistenceService`3.htm)
+* [BaseDataPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_BaseDataPersistenceService_2.htm)
+* [BaseDataPersistenceService&lt;TModel,TDomain,TQueryResult> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_BaseDataPersistenceService_3.htm)
 * [BundlePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_BundlePersistenceService.htm)
 * [ConceptPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ConceptPersistenceService.htm)
 * [ConceptNamePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ConceptNamePersistenceService.htm)
 * [ConceptSetPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ConceptSetPersistenceService.htm)
 * [ControlActPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ControlActPersistenceService.htm)
-* [CorePersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_CorePersistenceService`3.htm)
+* [CorePersistenceService&lt;TModel,TDomain,TQueryReturn> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_CorePersistenceService_3.htm)
 * [DeviceEntityPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_DeviceEntityPersistenceService.htm)
 * [EncounterPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EncounterPersistenceService.htm)
 * [EntityAddressPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityAddressPersistenceService.htm)
 * [EntityAddressComponentPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityAddressComponentPersistenceService.htm)
-* [EntityDerivedPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityDerivedPersistenceService`2.htm)
-* [EntityDerivedPersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityDerivedPersistenceService`3.htm)
+* [EntityDerivedPersistenceService&lt;TModel,TData> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityDerivedPersistenceService_2.htm)
+* [EntityDerivedPersistenceService&lt;TModel,TData,TQueryReturn> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityDerivedPersistenceService_3.htm)
 * [EntityNamePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityNamePersistenceService.htm)
 * [EntityNameComponentPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityNameComponentPersistenceService.htm)
 * [EntityPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityPersistenceService.htm)
 * [EntityRelationshipPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityRelationshipPersistenceService.htm)
-* [IdentifiedPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_IdentifiedPersistenceService`2.htm)
-* [IdentifiedPersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_IdentifiedPersistenceService`3.htm)
+* [IdentifiedPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_IdentifiedPersistenceService_2.htm)
+* [IdentifiedPersistenceService&lt;TModel,TDomain,TQueryResult> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_IdentifiedPersistenceService_3.htm)
 * [IdentifierTypePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_IdentifierTypePersistenceService.htm)
 * [ManufacturedMaterialPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ManufacturedMaterialPersistenceService.htm)
 * [MaterialPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_MaterialPersistenceService.htm)
@@ -952,15 +952,15 @@ public class MyStoredQueryDataPersistenceService<TEntity> : SanteDB.Core.Service
 * [SecurityPolicyPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_SecurityPolicyPersistenceService.htm)
 * [SecurityRolePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_SecurityRolePersistenceService.htm)
 * [SecurityUserPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_SecurityUserPersistenceService.htm)
-* [SimpleVersionedEntityPersistenceService`4 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_SimpleVersionedEntityPersistenceService`4.htm)
+* [SimpleVersionedEntityPersistenceService&lt;TModel,TData,TQueryReturn,TRootEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_SimpleVersionedEntityPersistenceService_4.htm)
 * [ProcedurePersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ProcedurePersistenceService.htm)
 * [SubstanceAdministrationPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_SubstanceAdministrationPersistenceService.htm)
 * [UserEntityPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_UserEntityPersistenceService.htm)
-* [VersionedDataPersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_VersionedDataPersistenceService`3.htm)
+* [VersionedDataPersistenceService&lt;TModel,TDomain,TDomainKey> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_VersionedDataPersistenceService_3.htm)
 * [ReferenceTermPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ReferenceTermPersistenceService.htm)
-* [GenericBasePersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericBasePersistenceService`2.htm)
-* [GenericIdentityPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericIdentityPersistenceService`2.htm)
-* [GenericBaseAssociationPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericBaseAssociationPersistenceService`2.htm)
-* [GenericBaseVersionedAssociationPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericBaseVersionedAssociationPersistenceService`2.htm)
-* [GenericIdentityAssociationPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericIdentityAssociationPersistenceService`2.htm)
-* [GenericIdentityVersionedAssociationPersistenceService`2 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericIdentityVersionedAssociationPersistenceService`2.htm)
+* [GenericBasePersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericBasePersistenceService_2.htm)
+* [GenericIdentityPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericIdentityPersistenceService_2.htm)
+* [GenericBaseAssociationPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericBaseAssociationPersistenceService_2.htm)
+* [GenericBaseVersionedAssociationPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericBaseVersionedAssociationPersistenceService_2.htm)
+* [GenericIdentityAssociationPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericIdentityAssociationPersistenceService_2.htm)
+* [GenericIdentityVersionedAssociationPersistenceService&lt;TModel,TDomain> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoServiceFactory+GenericIdentityVersionedAssociationPersistenceService_2.htm)

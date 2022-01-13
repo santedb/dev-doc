@@ -1,4 +1,4 @@
-IValidatingRepositoryService`1 (IValidatingRepositoryService<TModel> in SanteDB.Core.Api)
+IValidatingRepositoryService&lt;TModel> (IValidatingRepositoryService&lt;TModel> in SanteDB.Core.Api)
 
 # Summary
 Represents a repository that can validate
@@ -12,7 +12,7 @@ Represents a repository that can validate
 # Implementations
 
 
-## GenericLocalActRepository`1 - (SanteDB.Server.Core)
+## GenericLocalActRepository&lt;TAct> - (SanteDB.Server.Core)
 Represents an act repository service.
 
 ### Service Registration
@@ -26,7 +26,7 @@ Represents an act repository service.
 	</serviceProviders>
 ```
 
-## GenericLocalClinicalDataRepository`1 - (SanteDB.Server.Core)
+## GenericLocalClinicalDataRepository&lt;TModel> - (SanteDB.Server.Core)
 Represents generic local clinical data repository
 
 ### Service Registration
@@ -40,7 +40,7 @@ Represents generic local clinical data repository
 	</serviceProviders>
 ```
 
-## GenericLocalConceptRepository`1 - (SanteDB.Server.Core)
+## GenericLocalConceptRepository&lt;TModel> - (SanteDB.Server.Core)
 Generic local concept repository with sufficient permissions
 
 ### Service Registration
@@ -54,7 +54,7 @@ Generic local concept repository with sufficient permissions
 	</serviceProviders>
 ```
 
-## GenericLocalRepositoryEx`1 - (SanteDB.Server.Core)
+## GenericLocalRepositoryEx&lt;TModel> - (SanteDB.Server.Core)
 Generic nullifiable local repository
 
 ### Service Registration
@@ -68,7 +68,7 @@ Generic nullifiable local repository
 	</serviceProviders>
 ```
 
-## GenericLocalSecurityRepository`1 - (SanteDB.Server.Core)
+## GenericLocalSecurityRepository&lt;TSecurityEntity> - (SanteDB.Server.Core)
 Generic local security repository
 
 ### Service Registration
@@ -194,7 +194,7 @@ Represents a base class for entity repository services
 	</serviceProviders>
 ```
 
-## GenericLocalMetadataRepository`1 - (SanteDB.Server.Core)
+## GenericLocalMetadataRepository&lt;TMetadata> - (SanteDB.Server.Core)
 Provides generic basis for metadata editing
 
 ### Service Registration
@@ -380,12 +380,12 @@ public class MyValidatingRepositoryService<TModel> : SanteDB.Core.Services.IVali
 
 # References
 
-* [IValidatingRepositoryService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IValidatingRepositoryService`1.htm)
-* [GenericLocalActRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository`1.htm)
-* [GenericLocalClinicalDataRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalClinicalDataRepository`1.htm)
-* [GenericLocalConceptRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalConceptRepository`1.htm)
-* [GenericLocalRepositoryEx`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepositoryEx`1.htm)
-* [GenericLocalSecurityRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalSecurityRepository`1.htm)
+* [IValidatingRepositoryService&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IValidatingRepositoryService_1.htm)
+* [GenericLocalActRepository&lt;TAct> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository_1.htm)
+* [GenericLocalClinicalDataRepository&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalClinicalDataRepository_1.htm)
+* [GenericLocalConceptRepository&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalConceptRepository_1.htm)
+* [GenericLocalRepositoryEx&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepositoryEx_1.htm)
+* [GenericLocalSecurityRepository&lt;TSecurityEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalSecurityRepository_1.htm)
 * [LocalEntityRelationshipRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalEntityRelationshipRepository.htm)
 * [LocalExtensionTypeRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalExtensionTypeRepository.htm)
 * [LocalManufacturedMaterialRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalManufacturedMaterialRepository.htm)
@@ -393,8 +393,8 @@ public class MyValidatingRepositoryService<TModel> : SanteDB.Core.Services.IVali
 * [LocalProviderRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalProviderRepository.htm)
 * [LocalAssigningAuthorityRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalAssigningAuthorityRepository.htm)
 * [LocalBatchRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalBatchRepository.htm)
-* [GenericLocalRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepository`1.htm)
-* [GenericLocalMetadataRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalMetadataRepository`1.htm)
+* [GenericLocalRepository&lt;TEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepository_1.htm)
+* [GenericLocalMetadataRepository&lt;TMetadata> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalMetadataRepository_1.htm)
 * [LocalMaterialRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalMaterialRepository.htm)
 * [LocalSecurityApplicationRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalSecurityApplicationRepository.htm)
 * [LocalSecurityDeviceRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalSecurityDeviceRepository.htm)

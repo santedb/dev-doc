@@ -1,4 +1,4 @@
-IDataPersistenceServiceEx`1 (IDataPersistenceServiceEx<TModel> in SanteDB.Core.Api)
+IDataPersistenceServiceEx&lt;TModel> (IDataPersistenceServiceEx&lt;TModel> in SanteDB.Core.Api)
 
 # Summary
 Generic interface implementation
@@ -48,7 +48,7 @@ Entity persistence service
 	</serviceProviders>
 ```
 
-## VersionedDataPersistenceService`3 - (SanteDB.Persistence.Data.ADO)
+## VersionedDataPersistenceService&lt;TModel,TDomain,TDomainKey> - (SanteDB.Persistence.Data.ADO)
 Versioned domain data
 
 ### Service Registration
@@ -73,8 +73,8 @@ public class MyDataPersistenceServiceEx<TModel> : SanteDB.Core.Services.IDataPer
 
 # References
 
-* [IDataPersistenceServiceEx`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceServiceEx`1.htm)
+* [IDataPersistenceServiceEx&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceServiceEx_1.htm)
 * [ActPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ActPersistenceService.htm)
 * [ConceptPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_ConceptPersistenceService.htm)
 * [EntityPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_EntityPersistenceService.htm)
-* [VersionedDataPersistenceService`3 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_VersionedDataPersistenceService`3.htm)
+* [VersionedDataPersistenceService&lt;TModel,TDomain,TDomainKey> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_Persistence_VersionedDataPersistenceService_3.htm)

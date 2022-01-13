@@ -27,7 +27,7 @@ Record merging service
 # Implementations
 
 
-## SimResourceMerger`1 - (SanteDB.Core.Api)
+## SimResourceMerger&lt;TModel> - (SanteDB.Core.Api)
 TODO: Document this
 
 ### Service Registration
@@ -41,7 +41,7 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## MdmEntityMerger`1 - (SanteDB.Persistence.MDM)
+## MdmEntityMerger&lt;TEntity> - (SanteDB.Persistence.MDM)
 An MDM merger that operates on Entities
 ### Description
 This class exists to allow callers to interact with the operations in the underlying infrastructure.
@@ -57,7 +57,7 @@ This class exists to allow callers to interact with the operations in the underl
 	</serviceProviders>
 ```
 
-## MdmResourceMerger`1 - (SanteDB.Persistence.MDM)
+## MdmResourceMerger&lt;TModel> - (SanteDB.Persistence.MDM)
 An implementation of a IRecordMergeService for an MDM controlled resource
 
 ### Service Registration
@@ -170,6 +170,6 @@ public class MyRecordMergingService : SanteDB.Core.Services.IRecordMergingServic
 # References
 
 * [IRecordMergingService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRecordMergingService.htm)
-* [SimResourceMerger`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService+SimResourceMerger`1.htm)
-* [MdmEntityMerger`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmEntityMerger`1.htm)
-* [MdmResourceMerger`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmResourceMerger`1.htm)
+* [SimResourceMerger&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService+SimResourceMerger_1.htm)
+* [MdmEntityMerger&lt;TEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmEntityMerger_1.htm)
+* [MdmResourceMerger&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmResourceMerger_1.htm)
