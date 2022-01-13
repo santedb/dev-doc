@@ -72,6 +72,18 @@ SDB_ADO_FUZZY_TOTAL=true|false
 You can swap the SanteDB core storage technology to another technology, in this case do not use the ADO data storage feature.
 {% endhint %}
 
+### ADO Freetext Search
+
+The ADO freetext search service enables the full-text indexing feature on the docker container, and is available on SanteDB iCDR versions 2.1.155 and above.
+
+```
+SDB_FEATURE=...;ADO_FTS;...
+```
+
+{% hint style="info" %}
+The ADO free-text search service refreshes the free-text index in real time as records are added to the SanteDB iCDR. If your deployment has no need of freetext search at the iCDR level (i.e. you are using the dCDR only for user interfaces) then you can disable this feature to improve performance.
+{% endhint %}
+
 ### In-Memory Caching
 
 The in-memory caching feature instructs the iCDR container to use a local RAM-based cache (non-shared) for data operations.

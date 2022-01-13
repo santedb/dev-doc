@@ -305,9 +305,17 @@ The `_any` parameter in a search allows clients to execute a filter on any data 
 
 ### PostgreSQL tsvector Search
 
-If configured, the iCDR running on PostgreSQL will use the PostgreSQL FreeText&#x20;
+If configured, the iCDR running on PostgreSQL will use the [PostgreSQL FreeText](https://www.postgresql.org/docs/12/textsearch.html) search engine. Searches can be executed as a simple web search. For example to match based on name, address, identifier or telecom of Jim and Smith:
 
-* &#x20;&#x20;
+```
+_any=Jim Smith
+```
+
+Additionally simple logic can be applied via and/or:
+
+```
+_any='Jim Smith' and 'Beamsville ON' and 'FHR-304'
+```
 
 ## Performance Tips
 

@@ -8,7 +8,7 @@ SanteMPI provides two different search pages for filtering patient data in the a
 
 ## Basic Search
 
-The default mode of searching the MPI is to use the `_any` search method (documented in ). Searching by identifier allows a user to type (or scan) a patient identifier to retrieve patient results.\
+The default mode of searching the MPI is to use the `_any` search method (see: [#freetext-search](../developers/service-apis/hl7-fhir/hdsi-query-syntax.md#freetext-search "mention")). Searching by identifier allows a user to type (or scan) a patient identifier to retrieve patient results.\
 
 
 ![](<../.gitbook/assets/image (437) (1).png>)
