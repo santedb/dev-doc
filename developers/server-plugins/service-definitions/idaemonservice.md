@@ -1,6 +1,4 @@
----
-description: IDaemonService (IDaemonService in SanteDB.Core.Api)
----
+IDaemonService (IDaemonService in SanteDB.Core.Api)
 
 # Summary
 Defines a service which follows the daemon service pattern ([](https://help.santesuite.org/developers/server-plugins/implementing-.net-features/daemon-services))

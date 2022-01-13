@@ -1,6 +1,4 @@
----
-description: IConfigurationManager (IConfigurationManager in SanteDB.Core.Api)
----
+IConfigurationManager (IConfigurationManager in SanteDB.Core.Api)
 
 # Summary
 Represents a configuration manager service

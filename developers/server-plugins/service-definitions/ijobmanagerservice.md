@@ -1,6 +1,4 @@
----
-description: IJobManagerService (IJobManagerService in SanteDB.Core.Api)
----
+IJobManagerService (IJobManagerService in SanteDB.Core.Api)
 
 # Summary
 Job manager service

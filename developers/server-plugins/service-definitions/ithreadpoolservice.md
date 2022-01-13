@@ -1,6 +1,4 @@
----
-description: IThreadPoolService (IThreadPoolService in SanteDB.Core.Api)
----
+IThreadPoolService (IThreadPoolService in SanteDB.Core.Api)
 
 # Summary
 Represents a thread pooling service
