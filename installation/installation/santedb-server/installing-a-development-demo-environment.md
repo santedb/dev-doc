@@ -64,7 +64,7 @@ If your installation of the iCDR will be [using clinical decision support ](../.
 
 #### Messaging Interfaces
 
-The messaging interfaces option installs the core REST APIs for the iCDR server. These messaging interfaces allow administrators to customize their deployment for scale-out by assigning servers to dedicated roles. For example, in a scaled-out solution an administrator may only install the [Administrative Management Interface](../../../developers/extending-santesuite/extending-santedb/service-apis/administration-management-interface-ami/) to the server which controls the cluster, whereas other servers may only install the [Health Data Services Interfaces](../../../developers/service-apis/health-data-service-interface-hdsi/#controlling-response-format) for clinical data access.
+The messaging interfaces option installs the core REST APIs for the iCDR server. These messaging interfaces allow administrators to customize their deployment for scale-out by assigning servers to dedicated roles. For example, in a scaled-out solution an administrator may only install the [Administrative Management Interface](../../../developers/extending-santesuite/extending-santedb/service-apis/administration-management-interface-ami/) to the server which controls the cluster, whereas other servers may only install the [Health Data Services Interfaces](../../../developers/service-apis/health-data-service-interface-hdsi.md#controlling-response-format) for clinical data access.
 
 #### Business Intelligence Services
 
@@ -77,8 +77,8 @@ If you're using a third party reporting tool like Jasper Reports, Crystal Report
 Installation of the integration interfaces will allow SanteDB iCDR to interact with third party services using one of the standards based APIs such as:
 
 * [HL7 Fast Health Interoperability Resources](../../../operations-1/standard-operating-procedures/hl7-fhir/)
-* [HL7 Version 2](../../../developers/service-apis/hl7v2/)&#x20;
-* [GS1 Business Messaging Standard (BMS)](../../../developers/service-apis/gs1-bms-xml.md#gs1-stock-messaging-workflows)
+* [HL7 Version 2](../../../developers/service-apis/hl7v2.md)&#x20;
+* [GS1 Business Messaging Standard (BMS)](../../../developers/santedb-software-publishers/gs1-bms-xml/#gs1-stock-messaging-workflows)
 * JIRA Integration (which allow submission of Diagnostic reports from dCDR instances directly into JIRA)
 * ATNA & DICOM Messaging (which allows for dispatch of audits via NEMA DICOM over Syslog)
 

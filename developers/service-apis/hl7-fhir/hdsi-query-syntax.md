@@ -295,6 +295,20 @@ HDSI query control parameters are prefixed with an underscore. These query param
 | `_orderBy` | field:\[asc\|desc] | Controls the ordering of results in the result set.                                                   |
 | `_any`     | string             | Initiates a free text search (or rather, allows the server to control how the result set is queried). |
 
+## Freetext Search
+
+The `_any` parameter in a search allows clients to execute a filter on any data in the requested resource. The behavior of the `_any` parameter depends on the persistence layer and how the [ifreetextsearchservice.md](../../extending-santesuite/extending-santedb/server-plugins/service-definitions/ifreetextsearchservice.md "mention") has been configured.
+
+* On PostgreSQL this search uses the `tsvector` type to execute web search queries.
+* On SQLite (before version 2.3 of the dCDR) the search uses a simple keyword search. Integration of the Lucene engine is being developed for version 2.3 of the dCDR
+* On Firebird the search maps to a query on `name.component.value` or `address.component.value` or `identifier.value`.
+
+### PostgreSQL tsvector Search
+
+If configured, the iCDR running on PostgreSQL will use the PostgreSQL FreeText&#x20;
+
+* &#x20;&#x20;
+
 ## Performance Tips
 
 When writing your HDSI queries, you can ensure that you have higher performance by structuring your queries in a particular way. Some recommendations:

@@ -6,27 +6,27 @@ Any implementation of HL7 Version 2 messaging has its own method of processing m
 
 SanteDB uses HL7 Version 2.5 as its internal canonical model for HL7 messages. All services in SanteDB's HL7 layer are implemented using Version 2.5 structures, and wire versions are translated to/from that version.
 
-Because of this implementation, HL7v2.5 is the latest version of messaging supported by SanteDB. 
+Because of this implementation, HL7v2.5 is the latest version of messaging supported by SanteDB.&#x20;
 
 ## Transport Support
 
 SanteDB supports common HL7 Version 2.5 transports including:
 
-* TCP Sockets -&gt; Raw messages sent over a simple TCP socket, containing no special control characters.
-* Lower Layer Protocol -&gt; Unsecured TCP socket which uses the LLP control characters \(VT, FS, CR, etc.\) for delineation of message boundaries.
-* Secure Lower Layer Protocol -&gt;  A TLS wrapped TCP socket which uses the LLP control characters. This transport also supports client authentication.
+* TCP Sockets -> Raw messages sent over a simple TCP socket, containing no special control characters.
+* Lower Layer Protocol -> Unsecured TCP socket which uses the LLP control characters (VT, FS, CR, etc.) for delineation of message boundaries.
+* Secure Lower Layer Protocol ->  A TLS wrapped TCP socket which uses the LLP control characters. This transport also supports client authentication.
 
 Each service in the HL7 message handler defines an `address` attribute which has a URI. The scheme of this URI dictates the selected transport for messaging. The schemes for this URI are:
 
-| Scheme | Transport | Example |
-| :--- | :--- | :--- |
-| llp | HL7 Lower Layer Protocol \(not encrypted\) | llp://0.0.0.0:2100/ |
-| tcp | Raw TCP/IP Sockets | tcp://127.0.0.1:9990/ |
-| sllp | HL7 Lower Layer Protocol + TLS Transport | sllp://0.0.0.0:2100/ |
+| Scheme | Transport                                | Example               |
+| ------ | ---------------------------------------- | --------------------- |
+| llp    | HL7 Lower Layer Protocol (not encrypted) | llp://0.0.0.0:2100/   |
+| tcp    | Raw TCP/IP Sockets                       | tcp://127.0.0.1:9990/ |
+| sllp   | HL7 Lower Layer Protocol + TLS Transport | sllp://0.0.0.0:2100/  |
 
-Each service also requires the definition for which trigger events and which handlers should be used on that particular service endpoint which are configured using the `<handler>` element. 
+Each service also requires the definition for which trigger events and which handlers should be used on that particular service endpoint which are configured using the `<handler>` element.&#x20;
 
-### TLS + LLP \(SLLP\) 
+### TLS + LLP (SLLP)&#x20;
 
 When using the TLS option, you must provide an `<sllp>` element, which controls how the encryption for the channel is setup.
 
@@ -40,16 +40,16 @@ A simple encrypted channel over SLLP where no client authentication is required 
   
 ```
 
-| Element / Attribute | Description |
-| :--- | :--- |
-| `@checkCrl` | When true, instructs the iCDR to actively check the listed CRL on the certificate to validate whether the certificate is revoked. When enabled, there may be a performance penalty since the CRL cache on some operating systems is not present in .NET. |
-| `@requireClientCert` | When true, instructs the iCDR to challenge clients for a client certificate for node authentication.  |
-| `serverCertificate` | Specifies the manner in which the X.509 certificate for encrypting server traffic should be located. This is the certificate which the iCDR will use to authenticate itself to clients and encrypt traffic. The certificate find mechanism uses the Windows certificate store \(on Windows\) or the Mono certificate tool \(on Linux or Mac\) |
-| `clientAuthorityCertificate` | Specifies the certification authority root which is used to validate clients are permitted to access the server. This certificate should appear in the client certificate's chain, or else validation fails. Note: This is a pre-check, actual device principals are created using the certificate thumbprint and the `MSH` segment. |
+| Element / Attribute          | Description                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `@checkCrl`                  | When true, instructs the iCDR to actively check the listed CRL on the certificate to validate whether the certificate is revoked. When enabled, there may be a performance penalty since the CRL cache on some operating systems is not present in .NET.                                                                                  |
+| `@requireClientCert`         | When true, instructs the iCDR to challenge clients for a client certificate for node authentication.                                                                                                                                                                                                                                      |
+| `serverCertificate`          | Specifies the manner in which the X.509 certificate for encrypting server traffic should be located. This is the certificate which the iCDR will use to authenticate itself to clients and encrypt traffic. The certificate find mechanism uses the Windows certificate store (on Windows) or the Mono certificate tool (on Linux or Mac) |
+| `clientAuthorityCertificate` | Specifies the certification authority root which is used to validate clients are permitted to access the server. This certificate should appear in the client certificate's chain, or else validation fails. Note: This is a pre-check, actual device principals are created using the certificate thumbprint and the `MSH` segment.      |
 
 ## Identity Domain / Assigning Authority Resolution
 
-Within an HL7 message, identifiers using the `CX` datatype \(composite identifier\) carry an fourth component which indicates the authority under which the identity was assigned. 
+Within an HL7 message, identifiers using the `CX` datatype (composite identifier) carry an fourth component which indicates the authority under which the identity was assigned.&#x20;
 
 ### Simple Namespace
 
@@ -57,7 +57,7 @@ Whenever the `CX.4` component carry a simple value such as: `304-304-203^^^SSN` 
 
 ### Universal Namespace
 
-Whenever the `CX.4` component carries a universal identifier, such as : `304-304-203^^^&2.16.840.1.113883.4.1&ISO` the SanteDB server will map the `CX.4.2` to the `Oid` property of the assigning authority. 
+Whenever the `CX.4` component carries a universal identifier, such as : `304-304-203^^^&2.16.840.1.113883.4.1&ISO` the SanteDB server will map the `CX.4.2` to the `Oid` property of the assigning authority.&#x20;
 
 {% hint style="info" %}
 When using both a NamespaceID and a UniversalID , for example: `304-304-203^^^SSN&2.16.840.1.113883.4.1&ISO` then SanteDB will ensure that both components agree on the authority to be resolved.
@@ -67,7 +67,7 @@ When using both a NamespaceID and a UniversalID , for example: `304-304-203^^^SS
 
 Some older PACS systems do not include clearly specified identity domains in the `CX.4` ,  for example, if a sender issues a request such as:
 
-```text
+```
 MSH|^~\&|PACS|CENTRAL|CR1|MOH_CAAT|20211104174451||ADT^A01^ADT_A01||P|2.3.1
 EVN||20101020
 PID|||RJ-438||JOHNSTON^BOB^^^^^L
@@ -92,7 +92,7 @@ If your deployment uses the `PID-19` field to convey a national social security 
 </ssnAuthority>
 ```
 
-This will allow the resolution of the simple string in `PID-19` to map to an authority. 
+This will allow the resolution of the simple string in `PID-19` to map to an authority.&#x20;
 
 {% hint style="info" %}
 If your deployment uses `PID-19` to map to another identity such as national social insurance number, etc. you should modify the `ssnAuthority` element to match.
@@ -110,12 +110,11 @@ When SanteDB responds or receives a message in HL7v2, it is possible to referenc
 </localAuthority>
 ```
 
-For example, to allow a client to explicitly merge two discrete records \(known UUIDS\) on the SanteDB server, with the configuration above, the source system would send:
+For example, to allow a client to explicitly merge two discrete records (known UUIDS) on the SanteDB server, with the configuration above, the source system would send:
 
-```text
+```
 MSH|^~\&|PACS|CENTRAL|CR1|MOH_CAAT|20211104174451||ADT^A40^ADT_A40||P|2.3.1
 EVN||20101020
 PID|||5634a7a3-a394-4010-8681-34adff13a47e^^^LOCAL_AUTH||JOHNSTON^BOB^^^^^L
 MRG|2f4b0ac1-6edb-4b16-9d4d-339b2455f66e^^^LOCAL_AUTH
 ```
-
