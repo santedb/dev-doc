@@ -285,6 +285,16 @@ The phonetic difference function is used to compare the difference in phonetic c
 | algorithm   | Optional | Dictates the algorithm to use (soundex, metaphone, dmetaphone) |
 | (return)    |          | The difference (0 - 4) in soundex codes                        |
 
+## Control Parameters
+
+HDSI query control parameters are prefixed with an underscore. These query parameters are not mapped to the internal data structures of the RIM for filtering, and are intended, to provide control over how the result set is returned.
+
+| `_count`   | number             | Controls the number of records which are returned in the result set.                                  |
+| ---------- | ------------------ | ----------------------------------------------------------------------------------------------------- |
+| `_offset`  | number             | Controls the offset of the first record to be returned in the result set.                             |
+| `_orderBy` | field:\[asc\|desc] | Controls the ordering of results in the result set.                                                   |
+| `_any`     | string             | Initiates a free text search (or rather, allows the server to control how the result set is queried). |
+
 ## Performance Tips
 
 When writing your HDSI queries, you can ensure that you have higher performance by structuring your queries in a particular way. Some recommendations:
