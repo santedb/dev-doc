@@ -1,4 +1,4 @@
-Stock Management Provider (IStockManagementRepositoryService in SanteDB.Core.Api)
+`IStockManagementRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a stock management repository service.

@@ -1,4 +1,4 @@
-Name Alias Provider (IAliasProvider in SanteDB.Core.Api)
+`IAliasProvider` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Provider for name and place aliasing

@@ -1,4 +1,4 @@
-Record Matching Configuration Provider (IRecordMatchingConfigurationService in SanteDB.Core.Api)
+`IRecordMatchingConfigurationService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service

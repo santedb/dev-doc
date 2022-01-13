@@ -1,4 +1,4 @@
-Primary Data Caching Provider (IDataCachingService in SanteDB.Core.Api)
+`IDataCachingService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Defines a service which can be used by callers to store full [IdentifiedData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_IdentifiedData.htm) RIM objects

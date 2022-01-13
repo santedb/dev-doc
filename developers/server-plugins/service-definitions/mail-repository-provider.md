@@ -1,4 +1,4 @@
-Mail Repository Provider (IMailMessageRepositoryService in SanteDB.Core.Api)
+`IMailMessageRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents an alerting service.

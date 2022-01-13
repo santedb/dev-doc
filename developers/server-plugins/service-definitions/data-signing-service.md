@@ -1,4 +1,4 @@
-Data Signing Service (IDataSigningService in SanteDB.Core.Api)
+`IDataSigningService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which can sign arbitrary data

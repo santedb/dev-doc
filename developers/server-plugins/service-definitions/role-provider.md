@@ -1,4 +1,4 @@
-Role Provider (IRoleProviderService in SanteDB.Core.Api)
+`IRoleProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which is capableof retrieving roles

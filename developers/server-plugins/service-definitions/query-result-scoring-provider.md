@@ -1,4 +1,4 @@
-Query Result Scoring Provider (IQueryScoringService in SanteDB.Core.Api)
+`IQueryScoringService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service that can score queries

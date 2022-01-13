@@ -1,4 +1,4 @@
-Record Merging Provider (IRecordMergingService in SanteDB.Core.Api)
+`IRecordMergingService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Record merging service

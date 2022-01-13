@@ -1,4 +1,4 @@
-Stateful Query Provider (IQueryPersistenceService in SanteDB.Core.Api)
+`IQueryPersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Defines a service which can store the results of a query for later retrieval

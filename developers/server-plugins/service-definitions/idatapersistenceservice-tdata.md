@@ -1,4 +1,4 @@
-IDataPersistenceService&lt;TData> (IDataPersistenceService&lt;TData> in SanteDB.Core.Api)
+`IDataPersistenceService&lt;TData>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a data persistence service which is capable of storing and retrieving data

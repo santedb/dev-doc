@@ -1,4 +1,4 @@
-INotifyRepositoryService&lt;TModel> (INotifyRepositoryService&lt;TModel> in SanteDB.Core.Api)
+`INotifyRepositoryService&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Repreents a repository which notifies of changes
@@ -358,8 +358,7 @@ Localuser entity repository
 ```
 
 ## LocalConceptRepository - (SanteDB.Server.Core)
-Represents a service which is responsible for the
-            maintenance of concepts.
+Represents a service which is responsible for the maintenance of concepts using local persistence.
 
 ### Service Registration
 ```markup

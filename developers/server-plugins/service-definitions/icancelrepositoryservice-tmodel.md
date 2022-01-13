@@ -1,4 +1,4 @@
-ICancelRepositoryService&lt;TModel> (ICancelRepositoryService&lt;TModel> in SanteDB.Core.Api)
+`ICancelRepositoryService&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a repository that can cancel an act

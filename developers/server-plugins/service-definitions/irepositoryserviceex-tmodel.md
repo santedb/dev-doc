@@ -1,4 +1,4 @@
-IRepositoryServiceEx&lt;TModel> (IRepositoryServiceEx&lt;TModel> in SanteDB.Core.Api)
+`IRepositoryServiceEx&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a repository service wrapping an extended persistence service
@@ -140,8 +140,7 @@ Place repository that uses local persistence
 ```
 
 ## LocalConceptRepository - (SanteDB.Server.Core)
-Represents a service which is responsible for the
-            maintenance of concepts.
+Represents a service which is responsible for the maintenance of concepts using local persistence.
 
 ### Service Registration
 ```markup

@@ -1,4 +1,4 @@
-Security Challenge Storage Provider (ISecurityChallengeService in SanteDB.Core.Api)
+`ISecurityChallengeService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents an interface that allows for the retrieval of pre-configured security challenges

@@ -1,4 +1,4 @@
-dCDR Subscription Execution Provider (ISubscriptionExecutor in SanteDB.Core.Api)
+`ISubscriptionExecutor` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a subscription executor

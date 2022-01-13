@@ -1,4 +1,4 @@
-User Notification Templatey Provider (INotificationTemplateRepository in SanteDB.Core.Api)
+`INotificationTemplateRepository` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which takes / provides structured templates into structured message objects

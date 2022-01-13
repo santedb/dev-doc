@@ -1,7 +1,18 @@
-Concept/Terminology Provider (IConceptRepositoryService in SanteDB.Core.Api)
+`IConceptRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which is responsible for the maintenance of concepts.
+
+## Description
+This class is responsible for the management of [Concept](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_Concept.htm), [ConceptSet](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_ConceptSet.htm), and [ReferenceTerm](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_ReferenceTerm.htm) definitions
+            from the [SanteDB CDR's concept dictionary](https://help.santesuite.org/santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary). The
+            implementation of this service contract should provide methods for contacting the storage provider (either local database or a remote terminology service)
+            to:
+
+* Resolve [ReferenceTerm](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_ReferenceTerm.htm) instances from inbound messages from code/system pairs
+* Resolve appropriate [ReferenceTerm](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_ReferenceTerm.htm) data given a [Concept](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_Concept.htm) instance from the SanteDB CDR to be sent on an outbound message
+* Determine the membership of a [Concept](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_Concept.htm) in a [ConceptSet](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_ConceptSet.htm)
+* Determiner relationships between [Concept](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_DataTypes_Concept.htm) instances
 
 # Operations
 
@@ -24,8 +35,7 @@ Represents a service which is responsible for the maintenance of concepts.
 
 
 ## LocalConceptRepository - (SanteDB.Server.Core)
-Represents a service which is responsible for the
-            maintenance of concepts.
+Represents a service which is responsible for the maintenance of concepts using local persistence.
 
 ### Service Registration
 ```markup

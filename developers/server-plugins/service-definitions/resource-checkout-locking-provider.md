@@ -1,4 +1,4 @@
-Resource Checkout/Locking Provider (IResourceCheckoutService in SanteDB.Core.Api)
+`IResourceCheckoutService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 A resource locking service

@@ -1,4 +1,4 @@
-IRecordMergingService&lt;T> (IRecordMergingService&lt;T> in SanteDB.Core.Api)
+`IRecordMergingService&lt;T>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which appropriately merges / unmerges records

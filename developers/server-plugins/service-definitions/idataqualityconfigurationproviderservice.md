@@ -1,4 +1,4 @@
-IDataQualityConfigurationProviderService (IDataQualityConfigurationProviderService in SanteDB.Core.Api)
+`IDataQualityConfigurationProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Data quality configuration provider service

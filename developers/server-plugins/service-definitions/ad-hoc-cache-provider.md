@@ -1,4 +1,4 @@
-Ad-Hoc Cache Provider (IAdhocCacheService in SanteDB.Core.Api)
+`IAdhocCacheService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Defines a service which can store commonly used objects in a transient cache

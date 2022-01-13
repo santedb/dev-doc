@@ -1,4 +1,4 @@
-Security Challenge Authentication Provider (ISecurityChallengeIdentityService in SanteDB.Core.Api)
+`ISecurityChallengeIdentityService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a security challenge service which can provide identity

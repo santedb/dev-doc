@@ -1,4 +1,4 @@
-User Identity Provider (IIdentityProviderService in SanteDB.Core.Api)
+`IIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Identity provider service

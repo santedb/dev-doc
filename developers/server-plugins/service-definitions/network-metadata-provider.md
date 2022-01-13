@@ -1,4 +1,4 @@
-Network Metadata Provider (INetworkInformationService in SanteDB.Core.Api)
+`INetworkInformationService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents network information service

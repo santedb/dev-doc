@@ -1,4 +1,4 @@
-Policy Information Provider (PIP) (IPolicyInformationService in SanteDB.Core.Api)
+`IPolicyInformationService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a contract for a policy information service

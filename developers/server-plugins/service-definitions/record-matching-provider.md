@@ -1,4 +1,4 @@
-Record Matching Provider (IRecordMatchingService in SanteDB.Core.Api)
+`IRecordMatchingService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service that performs record matching and classification

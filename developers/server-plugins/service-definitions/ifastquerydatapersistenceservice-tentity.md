@@ -1,4 +1,4 @@
-IFastQueryDataPersistenceService&lt;TEntity> (IFastQueryDataPersistenceService&lt;TEntity> in SanteDB.Core.Api)
+`IFastQueryDataPersistenceService&lt;TEntity>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Data persistence service lean mode

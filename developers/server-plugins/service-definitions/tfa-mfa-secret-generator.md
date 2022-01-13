@@ -1,4 +1,4 @@
-TFA/MFA Secret Generator (ITwoFactorSecretGenerator in SanteDB.Core.Api)
+`ITwoFactorSecretGenerator` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Identifies a class which can generate TFA secrets

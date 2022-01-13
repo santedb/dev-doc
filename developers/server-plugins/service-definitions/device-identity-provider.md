@@ -1,4 +1,4 @@
-Device Identity Provider (IDeviceIdentityProviderService in SanteDB.Core.Api)
+`IDeviceIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents an identity service which authenticates devices.

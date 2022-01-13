@@ -1,4 +1,4 @@
-Freetext Search Provider (IFreetextSearchService in SanteDB.Core.Api)
+`IFreetextSearchService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Free text search service

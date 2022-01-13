@@ -1,4 +1,4 @@
-Audit Dispatch Provider (IAuditDispatchService in SanteDB.Core.Api)
+`IAuditDispatchService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service that dispatches audits to a central repository
@@ -30,7 +30,7 @@ The audit dispatching service is responsible for sending [AuditData](http://sant
 Represents an audit service that communicates Audits via an IHE ATNA transport
 ### Description
 This implementation of the [IAuditDispatchService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IAuditDispatchService.htm) is responsible for 
-            creating and dispatching audits in one of the appopriate formats for [IHE Audit Trail and Node Authentication](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)
+            creating and dispatching audits in one of the appropriate formats for [IHE Audit Trail and Node Authentication](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html)
             audits.
 
 The specific formats of audits supported are:

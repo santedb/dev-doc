@@ -1,4 +1,4 @@
-Resource Patching Provider (IPatchService in SanteDB.Core.Api)
+`IPatchService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a patch service which can calculate and apply patches

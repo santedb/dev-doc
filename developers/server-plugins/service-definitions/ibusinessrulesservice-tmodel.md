@@ -1,4 +1,4 @@
-IBusinessRulesService&lt;TModel> (IBusinessRulesService&lt;TModel> in SanteDB.Core.Api)
+`IBusinessRulesService&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service that executes business rules based on triggers which happen in the persistence layer

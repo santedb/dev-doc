@@ -1,4 +1,4 @@
-IThreadPoolService (IThreadPoolService in SanteDB.Core.Api)
+`IThreadPoolService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a thread pooling service

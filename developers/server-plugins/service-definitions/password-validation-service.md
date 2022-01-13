@@ -1,4 +1,4 @@
-Password Validation Service (IPasswordValidatorService in SanteDB.Core.Api)
+`IPasswordValidatorService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a password validation service

@@ -1,4 +1,4 @@
-Symmetric Encryption Provider (ISymmetricCryptographicProvider in SanteDB.Core.Api)
+`ISymmetricCryptographicProvider` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a crypto service provider that encrypts things using symmetric encryption

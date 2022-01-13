@@ -1,7 +1,12 @@
-Data Archiving Service (IDataArchiveService in SanteDB.Core.Api)
+`IDataArchiveService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Data Archive service
+Service contract for data archival and purging
+
+## Description
+The data archive service is used by various jobs throughout SanteDB iCDR (such as the [DataRetentionJob](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_DataRetentionJob.htm)) to 
+            copy records which are past their retention rules to a secondary data storage facility. This service can be used for long-term
+            archival of old (non-clinically relevant data) data and supports the purging of data which is no longer needed.
 
 # Operations
 

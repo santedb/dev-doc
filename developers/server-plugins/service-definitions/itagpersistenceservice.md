@@ -1,4 +1,4 @@
-ITagPersistenceService (ITagPersistenceService in SanteDB.Core.Api)
+`ITagPersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Taggable persistence service

@@ -1,4 +1,4 @@
-User Notification Relay Provider (INotificationService in SanteDB.Core.Api)
+`INotificationService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a notification service which manages the sending of a notification

@@ -1,4 +1,4 @@
-IExtensionTypeRepository (IExtensionTypeRepository in SanteDB.Core.Api)
+`IExtensionTypeRepository` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents the extension type repository

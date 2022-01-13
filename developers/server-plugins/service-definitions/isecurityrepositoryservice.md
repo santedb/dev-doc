@@ -1,4 +1,4 @@
-ISecurityRepositoryService (ISecurityRepositoryService in SanteDB.Core.Api)
+`ISecurityRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Security repository service is responsible for the maintenance of security entities

@@ -1,4 +1,4 @@
-IPubSubManagerService (IPubSubManagerService in SanteDB.Core.Api)
+`IPubSubManagerService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a pub/sub manager service

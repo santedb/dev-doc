@@ -1,4 +1,4 @@
-User Notification Template Provider (INotificationTemplateFiller in SanteDB.Core.Api)
+`INotificationTemplateFiller` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service that can fill the template

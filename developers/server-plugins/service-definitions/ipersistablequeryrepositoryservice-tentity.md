@@ -1,4 +1,4 @@
-IPersistableQueryRepositoryService&lt;TEntity> (IPersistableQueryRepositoryService&lt;TEntity> in SanteDB.Core.Api)
+`IPersistableQueryRepositoryService&lt;TEntity>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Persistable query provider is an extensable interface which can perform a query with state
@@ -349,8 +349,7 @@ Localuser entity repository
 ```
 
 ## LocalConceptRepository - (SanteDB.Server.Core)
-Represents a service which is responsible for the
-            maintenance of concepts.
+Represents a service which is responsible for the maintenance of concepts using local persistence.
 
 ### Service Registration
 ```markup

@@ -1,4 +1,4 @@
-Session Authentication Provider (ISessionIdentityProviderService in SanteDB.Core.Api)
+`ISessionIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a session identity service that can provide identities

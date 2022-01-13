@@ -1,4 +1,4 @@
-Localization Provider (ILocalizationService in SanteDB.Core.Api)
+`ILocalizationService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Interface which provides localization functions

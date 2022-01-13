@@ -1,4 +1,4 @@
-Policy Enforcement Provider (PEP) (IPolicyEnforcementService in SanteDB.Core.Api)
+`IPolicyEnforcementService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a PEP that receives demands

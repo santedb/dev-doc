@@ -1,4 +1,4 @@
-IJobManagerService (IJobManagerService in SanteDB.Core.Api)
+`IJobManagerService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Job manager service

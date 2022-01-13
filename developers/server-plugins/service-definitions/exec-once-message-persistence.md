@@ -1,4 +1,4 @@
-Exec-Once Message Persistence (IMessagePersistenceService in SanteDB.Core.Api)
+`IMessagePersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Identifies a structure for message persistence service implementations

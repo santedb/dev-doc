@@ -1,4 +1,4 @@
-Policy Decision Provider (PDP) (IPolicyDecisionService in SanteDB.Core.Api)
+`IPolicyDecisionService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a policy decision service

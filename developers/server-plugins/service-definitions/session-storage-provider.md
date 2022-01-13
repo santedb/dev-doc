@@ -1,4 +1,4 @@
-Session Storage Provider (ISessionProviderService in SanteDB.Core.Api)
+`ISessionProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which is responsible for the storage and retrieval of sessions

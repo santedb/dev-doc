@@ -1,4 +1,4 @@
-dCDR Subscription Definition Provider (ISubscriptionRepository in SanteDB.Core.Api)
+`ISubscriptionRepository` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents an implementation of a repository which loads subscription definitions

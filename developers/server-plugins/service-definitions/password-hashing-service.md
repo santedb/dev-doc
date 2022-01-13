@@ -1,4 +1,4 @@
-Password Hashing Service (IPasswordHashingService in SanteDB.Core.Api)
+`IPasswordHashingService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Password hashing service.

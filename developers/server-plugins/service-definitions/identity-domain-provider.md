@@ -1,4 +1,4 @@
-Identity Domain Provider (IAssigningAuthorityRepositoryService in SanteDB.Core.Api)
+`IAssigningAuthorityRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a repository service for managing assigning authorities.

@@ -1,4 +1,4 @@
-ITemplateDefinitionRepositoryService (ITemplateDefinitionRepositoryService in SanteDB.Core.Api)
+`ITemplateDefinitionRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a repository which deals with metadata such as assigning authorities,

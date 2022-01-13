@@ -1,4 +1,4 @@
-Application Identity Provider (IApplicationIdentityProviderService in SanteDB.Core.Api)
+`IApplicationIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a service which retrieves [IApplicationIdentity](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Principal_IApplicationIdentity.htm) and can authenticate to an [IPrincipal](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.iprincipal) for applications.

@@ -1,4 +1,4 @@
-IDispatcherQueueManagerService (IDispatcherQueueManagerService in SanteDB.Core.Api)
+`IDispatcherQueueManagerService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 A service which is responsible for storing messages in a reliable place for dispatching

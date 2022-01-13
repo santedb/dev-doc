@@ -1,4 +1,4 @@
-IElevatableIdentityProviderService (IElevatableIdentityProviderService in SanteDB.Core.Api)
+`IElevatableIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents an identity provider that allows for elevation

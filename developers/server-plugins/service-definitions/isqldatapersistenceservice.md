@@ -1,4 +1,4 @@
-ISqlDataPersistenceService (ISqlDataPersistenceService in SanteDB.Core.Api)
+`ISqlDataPersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a data persistence service where arbitrary SQL can be run

@@ -1,4 +1,4 @@
-IFastQueryRepositoryService&lt;TEntity> (IFastQueryRepositoryService&lt;TEntity> in SanteDB.Core.Api)
+`IFastQueryRepositoryService&lt;TEntity>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a query repository service which can find lean queries
@@ -349,8 +349,7 @@ Localuser entity repository
 ```
 
 ## LocalConceptRepository - (SanteDB.Server.Core)
-Represents a service which is responsible for the
-            maintenance of concepts.
+Represents a service which is responsible for the maintenance of concepts using local persistence.
 
 ### Service Registration
 ```markup

@@ -1,4 +1,4 @@
-IDataPersistenceServiceEx&lt;TModel> (IDataPersistenceServiceEx&lt;TModel> in SanteDB.Core.Api)
+`IDataPersistenceServiceEx&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Generic interface implementation

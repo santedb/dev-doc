@@ -1,4 +1,4 @@
-IUnionQueryDataPersistenceService&lt;TEntity> (IUnionQueryDataPersistenceService&lt;TEntity> in SanteDB.Core.Api)
+`IUnionQueryDataPersistenceService&lt;TEntity>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
 Represents a data persistence provider that can store and continue queries
