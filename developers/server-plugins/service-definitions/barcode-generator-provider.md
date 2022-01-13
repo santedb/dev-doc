@@ -12,8 +12,20 @@ Represents a barcode generator
 
 # Implementations
 
-None
 
+## QR Code Barcode Generator - (SanteDB.DisconnectedClient.UI)
+Barcode generator service that generates a QR code
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.DisconnectedClient.UI.Services.QrBarcodeGenerator, SanteDB.DisconnectedClient.UI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 # Example Implementation
 ```csharp
 /// Example Implementation
@@ -39,3 +51,4 @@ public class MyBarcodeProviderService : SanteDB.Core.Services.IBarcodeProviderSe
 # References
 
 * [IBarcodeProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBarcodeProviderService.htm)
+* [QrBarcodeGenerator C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_UI_Services_QrBarcodeGenerator.htm)

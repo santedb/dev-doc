@@ -245,6 +245,34 @@ An implementation of the ISubscriptionRepository that loads definitions from app
 	</serviceProviders>
 ```
 
+## AgsService - (SanteDB.DisconnectedClient.Ags)
+Represents the Applet Gateway Service
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.DisconnectedClient.Ags.AgsService, SanteDB.DisconnectedClient.Ags, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## BluetoothPeerToPeerShareService - (SanteDB.DisconnectedClient.UI)
+Represents a basic bluetooth peer to peer service
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.DisconnectedClient.UI.Services.Bluetooth.BluetoothPeerToPeerShareService, SanteDB.DisconnectedClient.UI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## Administrative Messaging Interface - (SanteDB.Messaging.AMI)
 AMI Message handler
 
@@ -550,6 +578,8 @@ public class MyDaemonService : SanteDB.Core.Services.IDaemonService {
 * [SimDataManagementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService.htm)
 * [DataQualityService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityService.htm)
 * [AppletSubscriptionRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_AppletSubscriptionRepository.htm)
+* [AgsService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_Ags_AgsService.htm)
+* [BluetoothPeerToPeerShareService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_UI_Services_Bluetooth_BluetoothPeerToPeerShareService.htm)
 * [The AMI provides administrative operations for SanteDB over HTTP C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_AMI_AmiMessageHandler.htm)
 * [FhirDataInitializationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_FHIR_FhirDataInitializationService.htm)
 * [Allows SanteDB iCDR to send and receive HL7 FHIR R4 messages C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_FHIR_FhirMessageHandler.htm)

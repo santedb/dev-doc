@@ -28,6 +28,20 @@ Policy enforcement service
 	</serviceProviders>
 ```
 
+## DcApplicationContext - (SanteDB.DisconnectedClient.UI)
+Test application context
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.DisconnectedClient.UI.DcApplicationContext, SanteDB.DisconnectedClient.UI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## DefaultPolicyEnforcementService - (SanteDB.Server.Core)
 Policy enforcement service
 
@@ -73,4 +87,5 @@ public class MyPolicyEnforcementService : SanteDB.Core.Security.Services.IPolicy
 
 * [IPolicyEnforcementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IPolicyEnforcementService.htm)
 * [DefaultPolicyEnforcementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_DefaultPolicyEnforcementService.htm)
+* [DcApplicationContext C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_UI_DcApplicationContext.htm)
 * [DefaultPolicyEnforcementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_DefaultPolicyEnforcementService.htm)
