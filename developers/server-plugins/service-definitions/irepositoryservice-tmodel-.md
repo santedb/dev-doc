@@ -1,23 +1,38 @@
 ---
-description: IRepositoryService (IRepositoryService in SanteDB.Core.Api)
+description: IRepositoryService`1 (IRepositoryService<TModel> in SanteDB.Core.Api)
 ---
 
 # Summary
-Repository service
+Represents a repository service base
 
 # Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Get|IdentifiedData|*Guid* **key**|Get the specified object|
-|Find|IEnumerable&lt;IdentifiedData>|*Expression* **query**|Find the specified object|
-|Find|IEnumerable&lt;IdentifiedData>|*Expression* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**|Find the specified object|
-|Insert|IdentifiedData|*Object* **data**|Inserts the specified data.|
-|Save|IdentifiedData|*Object* **data**|Saves the specified data.|
-|Obsolete|IdentifiedData|*Guid* **key**|Obsoletes the specified data.|
+|Get|TModel|*Guid* **key**|Gets the specified model.|
+|Get|TModel|*Guid* **key**<br/>*Guid* **versionKey**|Gets the specified model.|
+|Find|IEnumerable&lt;TModel>|*Expression&lt;Func&lt;TModel,Boolean>>* **query**|Finds the specified data.|
+|Find|IEnumerable&lt;TModel>|*Expression&lt;Func&lt;TModel,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Finds the specified data.|
+|Insert|TModel|*TModel* **data**|Inserts the specified data.|
+|Save|TModel|*TModel* **data**|Saves the specified data.|
+|Obsolete|TModel|*Guid* **key**|Obsoletes the specified data.|
 
 # Implementations
 
+
+## AppletSubscriptionRepository - (SanteDB.Core.Applets)
+An implementation of the ISubscriptionRepository that loads definitions from applets
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
 ## GenericLocalActRepository`1 - (SanteDB.Server.Core)
 Represents an act repository service.
@@ -159,6 +174,20 @@ Provides operations for managing organizations.
 	</serviceProviders>
 ```
 
+## Local Mail Message - (SanteDB.Server.Core)
+Represents a local alert service.
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Server.Core.Services.Impl.LocalMailMessageRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## LocalAssigningAuthorityRepository - (SanteDB.Server.Core)
 Represents a repository service for managing assigning authorities.
 
@@ -169,6 +198,20 @@ Represents a repository service for managing assigning authorities.
 	<serviceProviders>
 		...
 		<add type="SanteDB.Server.Core.Services.Impl.LocalAssigningAuthorityRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## Default Audit Repository - (SanteDB.Server.Core)
+Represents an audit repository which stores and queries audit data.
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Server.Core.Services.Impl.LocalAuditRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -374,42 +417,48 @@ Represents a service which is responsible for the
 /// Example Implementation
 using SanteDB.Core.Services;
 /// Other usings here
-public class MyRepositoryService : SanteDB.Core.Services.IRepositoryService { 
-	public String ServiceName => "My own IRepositoryService service";
+public class MyRepositoryService<TModel> : SanteDB.Core.Services.IRepositoryService<TModel> { 
+	public String ServiceName => "My own IRepositoryService`1 service";
 	/// <summary>
-	/// Get the specified object
+	/// Gets the specified model.
 	/// </summary>
-	public IdentifiedData Get(Guid key){
+	public TModel Get(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Find the specified object
+	/// Gets the specified model.
 	/// </summary>
-	public IEnumerable<IdentifiedData> Find(Expression query){
+	public TModel Get(Guid key,Guid versionKey){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Find the specified object
+	/// Finds the specified data.
 	/// </summary>
-	public IEnumerable<IdentifiedData> Find(Expression query,Int32 offset,Nullable<Int32> count,Int32& totalResults){
+	public IEnumerable<TModel> Find(Expression<Func<TModel,Boolean>> query){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Finds the specified data.
+	/// </summary>
+	public IEnumerable<TModel> Find(Expression<Func<TModel,Boolean>> query,Int32 offset,Nullable<Int32> count,Int32& totalResults,ModelSort`1[] orderBy){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Inserts the specified data.
 	/// </summary>
-	public IdentifiedData Insert(Object data){
+	public TModel Insert(TModel data){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Saves the specified data.
 	/// </summary>
-	public IdentifiedData Save(Object data){
+	public TModel Save(TModel data){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Obsoletes the specified data.
 	/// </summary>
-	public IdentifiedData Obsolete(Guid key){
+	public TModel Obsolete(Guid key){
 		throw new System.NotImplementedException();
 	}
 }
@@ -417,7 +466,8 @@ public class MyRepositoryService : SanteDB.Core.Services.IRepositoryService {
 
 # References
 
-* [IRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm)
+* [IRepositoryService`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService`1.htm)
+* [AppletSubscriptionRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_AppletSubscriptionRepository.htm)
 * [GenericLocalActRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository`1.htm)
 * [GenericLocalClinicalDataRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalClinicalDataRepository`1.htm)
 * [GenericLocalConceptRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalConceptRepository`1.htm)
@@ -428,7 +478,9 @@ public class MyRepositoryService : SanteDB.Core.Services.IRepositoryService {
 * [LocalManufacturedMaterialRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalManufacturedMaterialRepository.htm)
 * [LocalPatientRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalPatientRepository.htm)
 * [LocalProviderRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalProviderRepository.htm)
+* [LocalMailMessageRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalMailMessageRepository.htm)
 * [LocalAssigningAuthorityRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalAssigningAuthorityRepository.htm)
+* [LocalAuditRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalAuditRepository.htm)
 * [LocalBatchRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalBatchRepository.htm)
 * [GenericLocalRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepository`1.htm)
 * [GenericLocalMetadataRepository`1 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalMetadataRepository`1.htm)
