@@ -1,2 +1,0 @@
-# Identity / Session Providers
-

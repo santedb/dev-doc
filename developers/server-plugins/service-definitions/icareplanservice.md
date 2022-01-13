@@ -1,83 +1,83 @@
 ---
-description: ICarePlanService (SanteDB.Core.Api)
+description: Care Plan/CDSS Engine (ICarePlanService in SanteDB.Core.Api)
 ---
 
-# Care Plan Generator Service
-
-## Summary
-
+# Summary
 Represents a class which can create care plans
 
-## Properties
+# Properties
 
-| Property  | Type                     | Access | Description                                                                        |
-| --------- | ------------------------ | ------ | ---------------------------------------------------------------------------------- |
-| Protocols | List\<IClinicalProtocol> | R      | Gets the list of protocols which can be or should be used to create the care plans |
+|Property|Type|Access|Description|
+|-|-|-|-|
+|Protocols|List&lt;IClinicalProtocol>|R|Gets the list of protocols which can be or should be used to create the care plans|
 
-## Operations
+# Operations
 
-| Operation      | Response/Return | Input/Parameter                                                                                                                                                                                                    | Description        |
-| -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
-| CreateCarePlan | CarePlan        | _Patient_ **p**                                                                                                                                                                                                    | Create a care plam |
-| CreateCarePlan | CarePlan        | <p><em>Patient</em> <strong>p</strong><br><em>Boolean</em> <strong>asEncounters</strong></p>                                                                                                                       | Create a care plam |
-| CreateCarePlan | CarePlan        | <p><em>Patient</em> <strong>p</strong><br><em>Boolean</em> <strong>asEncounters</strong><br><em>IDictionary&#x3C;String,Object></em> <strong>parameters</strong></p>                                               | Create a care plam |
-| CreateCarePlan | CarePlan        | <p><em>Patient</em> <strong>p</strong><br><em>Boolean</em> <strong>asEncounters</strong><br><em>IDictionary&#x3C;String,Object></em> <strong>parameters</strong><br><em>Guid[]</em> <strong>protocols</strong></p> | Create a care plam |
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|CreateCarePlan|CarePlan|*Patient* **p**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary&lt;String,Object>* **parameters**|Create a care plam|
+|CreateCarePlan|CarePlan|*Patient* **p**<br/>*Boolean* **asEncounters**<br/>*IDictionary&lt;String,Object>* **parameters**<br/>*Guid[]* **protocols**|Create a care plam|
 
-## Implementations
+# Implementations
 
-### Simple Care Planning Service - (SanteDB.Core.Api)
 
-Represents a care plan service that can bundle protocol acts together based on their start/stop times
+## Simple Care Planning Service - (SanteDB.Core.Api)
+Represents a care plan service that can bundle protocol acts together
+            based on their start/stop times
 
-#### Service Registration
-
+### Service Registration
 ```markup
 ...
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-    <serviceProviders>
-        ...
-        <add type="SanteDB.Core.Protocol.SimpleCarePlanService, SanteDB.Core.Api, Version=2.0.27.0, Culture=neutral, PublicKeyToken=null" />
-        ...
-    </serviceProviders>
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Protocol.SimpleCarePlanService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
 ```
-
-## Example Implementation
-
+# Example Implementation
 ```csharp
 /// Example Implementation
 using SanteDB.Core.Services;
 /// Other usings here
 public class MyCarePlanService : SanteDB.Core.Services.ICarePlanService { 
-    public String ServiceName => "My own ICarePlanService service";
-    /// <summary>
-    /// Gets the list of protocols which can be or should be used to create the care plans
-    /// </summary>
-    public List<IClinicalProtocol> Protocols {
-        get;
-    }
-    /// <summary>
-    /// Create a care plam
-    /// </summary>
-    public CarePlan CreateCarePlan(Patient p){
-        throw new System.NotImplementedException();
-    }
-    /// <summary>
-    /// Create a care plam
-    /// </summary>
-    public CarePlan CreateCarePlan(Patient p,Boolean asEncounters){
-        throw new System.NotImplementedException();
-    }
-    /// <summary>
-    /// Create a care plam
-    /// </summary>
-    public CarePlan CreateCarePlan(Patient p,Boolean asEncounters,IDictionary<String,Object> parameters){
-        throw new System.NotImplementedException();
-    }
-    /// <summary>
-    /// Create a care plam
-    /// </summary>
-    public CarePlan CreateCarePlan(Patient p,Boolean asEncounters,IDictionary<String,Object> parameters,Guid[] protocols){
-        throw new System.NotImplementedException();
-    }
+	public String ServiceName => "My own ICarePlanService service";
+	/// <summary>
+	/// Gets the list of protocols which can be or should be used to create the care plans
+	/// </summary>
+	public List<IClinicalProtocol> Protocols {
+		get;
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public CarePlan CreateCarePlan(Patient p){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public CarePlan CreateCarePlan(Patient p,Boolean asEncounters){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public CarePlan CreateCarePlan(Patient p,Boolean asEncounters,IDictionary<String,Object> parameters){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a care plam
+	/// </summary>
+	public CarePlan CreateCarePlan(Patient p,Boolean asEncounters,IDictionary<String,Object> parameters,Guid[] protocols){
+		throw new System.NotImplementedException();
+	}
 }
 ```
+
+# References
+
+* [ICarePlanService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ICarePlanService.htm)
+* [SimpleCarePlanService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Protocol_SimpleCarePlanService.htm)
