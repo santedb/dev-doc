@@ -1,2 +1,0 @@
-# Primary Data Caching Provider
-

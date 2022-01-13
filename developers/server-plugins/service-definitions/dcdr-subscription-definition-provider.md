@@ -1,2 +1,0 @@
-# dCDR Subscription Definition Provider
-

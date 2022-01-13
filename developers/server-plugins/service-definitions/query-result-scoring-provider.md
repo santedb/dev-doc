@@ -1,2 +1,0 @@
-# Query Result Scoring Provider
-

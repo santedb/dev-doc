@@ -1,2 +1,0 @@
-# Record Matching Configuration Provider
-

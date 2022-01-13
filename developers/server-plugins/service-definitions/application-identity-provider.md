@@ -1,2 +1,0 @@
-# Application Identity Provider
-

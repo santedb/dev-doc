@@ -1,2 +1,0 @@
-# IRepositoryServiceEx{TModel}
-

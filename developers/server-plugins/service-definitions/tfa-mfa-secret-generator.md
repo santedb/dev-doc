@@ -1,2 +1,0 @@
-# TFA/MFA Secret Generator
-

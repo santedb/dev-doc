@@ -1,2 +1,0 @@
-# User Notification Templatey Provider
-

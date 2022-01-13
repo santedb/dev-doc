@@ -1,2 +1,0 @@
-# Freetext Search Provider
-

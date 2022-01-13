@@ -1,2 +1,0 @@
-# Security Challenge Authentication Provider
-

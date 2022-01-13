@@ -1,2 +1,0 @@
-# Barcode Generator Provider
-

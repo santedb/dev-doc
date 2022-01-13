@@ -1,2 +1,0 @@
-# Device Identity Provider
-

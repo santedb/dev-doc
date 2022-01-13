@@ -1,2 +1,0 @@
-# CDSS Clinical Protocol Repository
-
