@@ -40,7 +40,7 @@ Of course, keeping the cache service in a consistent state is tantamount to the 
 |Add|void|*IdentifiedData* **data**|Adds  to the cache|
 |Remove|void|*Guid* **key**|Removes/evicts an object with identifier  from the cache|
 |Remove|void|*IdentifiedData* **data**|Removes/evicts an object with identifier  from the cache|
-|Clear|void||TODO|
+|Clear|void|*none*|TODO|
 
 # Implementations
 

@@ -21,11 +21,11 @@ Represents network information service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetInterfaces|IEnumerable&lt;NetworkInterfaceInfo>||TODO|
+|GetInterfaces|IEnumerable&lt;NetworkInterfaceInfo>|*none*|TODO|
 |Ping|Int64|*String* **hostName**|Pings the specified host|
 |Nslookup|String|*String* **address**|Perform a DNS lookup|
-|GetHostName|String||TODO|
-|GetMachineName|String||TODO|
+|GetHostName|String|*none*|TODO|
+|GetMachineName|String|*none*|TODO|
 
 # Implementations
 

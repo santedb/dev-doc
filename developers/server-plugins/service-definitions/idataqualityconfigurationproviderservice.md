@@ -7,10 +7,10 @@ Data quality configuration provider service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetRuleSets|IEnumerable&lt;DataQualityRulesetConfiguration>||TODO|
+|GetRuleSets|IEnumerable&lt;DataQualityRulesetConfiguration>|*none*|TODO|
 |GetRuleSet|DataQualityRulesetConfiguration|*String* **name**|Get the rule set|
 |SaveRuleSet|DataQualityRulesetConfiguration|*DataQualityRulesetConfiguration* **configuration**|Save the specified ruleset|
-|GetRulesForType|IEnumerable&lt;DataQualityResourceConfiguration>||TODO|
+|GetRulesForType|IEnumerable&lt;DataQualityResourceConfiguration>|*none*|TODO|
 
 # Implementations
 

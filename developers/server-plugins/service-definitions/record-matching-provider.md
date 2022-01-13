@@ -12,7 +12,7 @@ Represents a service that performs record matching and classification
 |Match|IEnumerable&lt;IRecordMatchResult&lt;T>>|*T* **input**<br/>*String* **configurationId**<br/>*IEnumerable&lt;Guid>* **ignoreList**<br/>*IRecordMatchingDiagnosticSession* **collector**|Instructs the record matcher to run a block and match operation against|
 |Match|IEnumerable&lt;IRecordMatchResult>|*IdentifiedData* **input**<br/>*String* **configurationId**<br/>*IEnumerable&lt;Guid>* **ignoreList**<br/>*IRecordMatchingDiagnosticSession* **collector**|A non-generic method which uses the type of  to call Match<T>|
 |Classify|IEnumerable&lt;IRecordMatchResult>|*IdentifiedData* **input**<br/>*IEnumerable&lt;IdentifiedData>* **blocks**<br/>*String* **configurationId**<br/>*IRecordMatchingDiagnosticSession* **collector**|A non-generic method which uses the type of  to call Classify<T>|
-|CreateDiagnosticSession|IRecordMatchingDiagnosticSession||TODO|
+|CreateDiagnosticSession|IRecordMatchingDiagnosticSession|*none*|TODO|
 
 # Implementations
 

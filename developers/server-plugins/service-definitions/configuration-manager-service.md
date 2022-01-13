@@ -29,11 +29,11 @@ SanteDB plugins are expected to be portable and can run on a variety of platform
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetSection|T||TODO|
+|GetSection|T|*none*|TODO|
 |GetAppSetting|String|*String* **key**|Gets the specified application setting|
 |GetConnectionString|ConnectionString|*String* **key**|Get the specified connection string to a database|
 |SetAppSetting|void|*String* **key**<br/>*String* **value**|Set the specified application setting|
-|Reload|void||TODO|
+|Reload|void|*none*|TODO|
 
 # Implementations
 

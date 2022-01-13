@@ -13,7 +13,7 @@ Identifies a class which can generate TFA secrets
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GenerateTfaSecret|String||TODO|
+|GenerateTfaSecret|String|*none*|TODO|
 |Validate|Boolean|*String* **secret**|Validates the secret|
 
 # Implementations

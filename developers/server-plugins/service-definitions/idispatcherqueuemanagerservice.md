@@ -24,7 +24,7 @@ The purpose of the dispatcher queue is the store the outbound message locally in
 |Purge|void|*String* **queueName**|Purge the queue|
 |Move|DispatcherQueueEntry|*DispatcherQueueEntry* **entry**<br/>*String* **toQueue**|Move an entry from one queue to another|
 |GetQueueEntry|DispatcherQueueEntry|*String* **queueName**<br/>*String* **correlationId**|Get the specified queue entry|
-|GetQueues|IEnumerable&lt;DispatcherQueueInfo>||TODO|
+|GetQueues|IEnumerable&lt;DispatcherQueueInfo>|*none*|TODO|
 |GetQueueEntries|IEnumerable&lt;DispatcherQueueEntry>|*String* **queueName**|Get all queue entries|
 
 # Implementations

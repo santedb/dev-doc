@@ -12,7 +12,7 @@ Interface which provides localization functions
 |FormatString|String|*String* **stringKey**<br/>*Object* **parameters**|Format a  with|
 |FormatString|String|*String* **locale**<br/>*String* **stringKey**<br/>*Object* **parameters**|Format a  with|
 |GetStrings|KeyValuePair`2[]|*String* **locale**|Get all strings in the specified locale|
-|Reload|void||TODO|
+|Reload|void|*none*|TODO|
 
 # Implementations
 

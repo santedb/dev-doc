@@ -7,9 +7,9 @@ Represents a crypto service provider that encrypts things using symmetric encryp
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GenerateIV|Byte[]||TODO|
-|GenerateKey|Byte[]||TODO|
-|GetContextKey|Byte[]||TODO|
+|GenerateIV|Byte[]|*none*|TODO|
+|GenerateKey|Byte[]|*none*|TODO|
+|GetContextKey|Byte[]|*none*|TODO|
 |Encrypt|Byte[]|*Byte[]* **data**<br/>*Byte[]* **key**<br/>*Byte[]* **iv**|Encrypts the sepcified data|
 |Decrypt|Byte[]|*Byte[]* **data**<br/>*Byte[]* **key**<br/>*Byte[]* **iv**|Decrypts the specified data|
 

@@ -35,8 +35,8 @@ If the daemon also implements the .NET [IDisposable](https://docs.microsoft.com/
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Start|Boolean||TODO|
-|Stop|Boolean||TODO|
+|Start|Boolean|*none*|TODO|
+|Stop|Boolean|*none*|TODO|
 
 # Implementations
 

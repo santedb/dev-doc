@@ -11,7 +11,7 @@ Represents a service which is capableof retrieving roles
 |AddUsersToRoles|void|*String[]* **users**<br/>*String[]* **roles**<br/>*IPrincipal* **principal**|Add users to roles|
 |RemoveUsersFromRoles|void|*String[]* **users**<br/>*String[]* **roles**<br/>*IPrincipal* **principal**|Remove users from specified roles|
 |FindUsersInRole|String[]|*String* **role**|Find all users in a specified role|
-|GetAllRoles|String[]||Get all roles|
+|GetAllRoles|String[]|*none*|Get all roles|
 |GetAllRoles|String[]|*String* **userName**|Get all roles|
 |IsUserInRole|Boolean|*String* **userName**<br/>*String* **roleName**|User user in the specified role|
 

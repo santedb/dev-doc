@@ -13,7 +13,7 @@ Implementers of this service contract are responsible for computing and validati
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GetKeys|IEnumerable&lt;String>||TODO|
+|GetKeys|IEnumerable&lt;String>|*none*|TODO|
 |GetSignatureAlgorithm|String|*String* **keyId**|Get the siganture algorithm this service would use to sign w/the specified key|
 |AddSigningKey|void|*String* **keyId**<br/>*Byte[]* **keyData**<br/>*String* **signatureAlgorithm**|Register a key with the provider|
 |SignData|Byte[]|*Byte[]* **data**<br/>*String* **keyId**|Signs the specified data using the service's configured signing key|

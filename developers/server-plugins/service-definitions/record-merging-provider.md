@@ -16,9 +16,9 @@ Record merging service
 |UnIgnore|IdentifiedData|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **ignoredKeys**|Indicates that an ignored record should be removed from the ignore list|
 |Merge|RecordMergeResult|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **linkedDuplicates**|Merges the specified  into|
 |Unmerge|RecordMergeResult|*Guid* **masterKey**<br/>*Guid* **unmergeDuplicateKey**|Un-merges the specified  from|
-|DetectGlobalMergeCandidates|void||TODO|
-|ClearGlobalMergeCanadidates|void||TODO|
-|ClearGlobalIgnoreFlags|void||TODO|
+|DetectGlobalMergeCandidates|void|*none*|TODO|
+|ClearGlobalMergeCanadidates|void|*none*|TODO|
+|ClearGlobalIgnoreFlags|void|*none*|TODO|
 |ClearMergeCandidates|void|*Guid* **masterKey**|Clear all merge candidates|
 |ClearIgnoreFlags|void|*Guid* **masterKey**|Clear ignored flags|
 |Reset|void|*Guid* **masterKey**<br/>*Boolean* **includeVerified**<br/>*Boolean* **linksOnly**|Reset the specified merge service data on the specified record|

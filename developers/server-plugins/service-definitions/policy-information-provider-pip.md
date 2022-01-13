@@ -8,7 +8,7 @@ Represents a contract for a policy information service
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GetPolicies|IEnumerable&lt;IPolicyInstance>|*Object* **securable**|Get all active policies for the specified securable type|
-|GetPolicies|IEnumerable&lt;IPolicy>||Get all active policies for the specified securable type|
+|GetPolicies|IEnumerable&lt;IPolicy>|*none*|Get all active policies for the specified securable type|
 |GetPolicy|IPolicy|*String* **policyOid**|Get a specific policy|
 |AddPolicies|void|*Object* **securable**<br/>*PolicyGrantType* **rule**<br/>*IPrincipal* **principal**<br/>*String[]* **policyOids**|Adds the specified policies to the specified securable object|
 |GetPolicyInstance|IPolicyInstance|*Object* **securable**<br/>*String* **policyOid**|Gets the policy instance for the specified object|
