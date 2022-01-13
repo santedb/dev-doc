@@ -52,17 +52,7 @@ This implementation of the business rules wrapper is used to interface with busi
             implementers to customize the behavior of the iCDR or dCDR with JavaScript within their applets. Whenever a call to the ```SanteDBBre.AddBusinessRule()```
             interface is called from applet initialization, a new instance of this class is chained into the execution pipeline. From there, the events raised
             for before/after insert/update/obsolete/query are translated to JavaScript and the provided callback is executed.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.BusinessRules.JavaScript.JavascriptBusinessRule`1, SanteDB.BusinessRules.JavaScript, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## BundleWrapperRule - (SanteDB.BusinessRules.JavaScript)
 A business rule for [Bundle](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Collection_Bundle.htm) instances which performs a look-ahead on bundles
@@ -91,17 +81,7 @@ This business rule prevents this behavior by performing a look-ahead. It will sc
 ## BaseBusinessRulesService&lt;TModel> - (SanteDB.Core.Api)
 Represents a business rules service with no behavior, but intended to help in the implementation of another
             business rules service
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Core.Services.BaseBusinessRulesService`1, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## DataQualityBundleRule - (SanteDB.Core.Api)
 Business rule that calls other [DataQualityBusinessRule`1](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule_1.htm) based on the contents of a bundle
@@ -126,17 +106,7 @@ A business rule that applies user defined data quality rules from the [IDataQual
 This business rule template allows users to describe data quality rules (for example, using [the application configuration for data quality rules](https://help.santesuite.org/operations/server-administration/host-configuration-file/data-quality-services#configuring-data-quality-rules)) 
             to be applied to incoming data. This service uses the data quality extension to then flag any warnings or informational issues (error issues result in the object being rejected). 
             These extensions are cleaned by the [DataQualityExtensionCleanJob](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityExtensionCleanJob.htm) if the object no longer fails the quality rules.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Core.Data.Quality.DataQualityBusinessRule`1, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 # Example Implementation
 ```csharp
 /// Example Implementation

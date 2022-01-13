@@ -17,47 +17,17 @@ Represents a service which appropriately merges / unmerges records
 
 ## SimResourceMerger&lt;TModel> - (SanteDB.Core.Api)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Core.Data.SimDataManagementService+SimResourceMerger`1, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## MdmEntityMerger&lt;TEntity> - (SanteDB.Persistence.MDM)
 An MDM merger that operates on Entities
 ### Description
 This class exists to allow callers to interact with the operations in the underlying infrastructure.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.MDM.Services.Resources.MdmEntityMerger`1, SanteDB.Persistence.MDM, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## MdmResourceMerger&lt;TModel> - (SanteDB.Persistence.MDM)
 An implementation of a IRecordMergeService for an MDM controlled resource
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.MDM.Services.Resources.MdmResourceMerger`1, SanteDB.Persistence.MDM, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 # Example Implementation
 ```csharp
 /// Example Implementation

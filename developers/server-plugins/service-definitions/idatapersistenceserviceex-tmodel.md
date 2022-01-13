@@ -50,17 +50,7 @@ Entity persistence service
 
 ## VersionedDataPersistenceService&lt;TModel,TDomain,TDomainKey> - (SanteDB.Persistence.Data.ADO)
 Versioned domain data
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.VersionedDataPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 # Example Implementation
 ```csharp
 /// Example Implementation

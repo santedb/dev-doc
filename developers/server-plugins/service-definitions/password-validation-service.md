@@ -14,17 +14,7 @@ Represents a password validation service
 
 ## RegexPasswordValidator - (SanteDB.Core.Api)
 Represents a regular expression password validator
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Core.Services.Impl.RegexPasswordValidator, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## Default Password Validator - (SanteDB.Server.Core)
 Represents a local regex password validator

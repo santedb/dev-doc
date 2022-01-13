@@ -19,17 +19,7 @@ Represents a service that performs record matching and classification
 
 ## BaseRecordMatchingService - (SanteDB.Matcher)
 Represents base record matching service for SanteDB Matcher
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Matcher.Matchers.BaseRecordMatchingService, SanteDB.Matcher, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## SanteMatch Deterministic Matcher - (SanteDB.Matcher)
 Represents a deterministic record matching service

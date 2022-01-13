@@ -14,17 +14,7 @@ Represents a data persistence provider that can store and continue queries
 
 ## ADO.NET Generic Persistence Provider - (SanteDB.Persistence.Data.ADO)
 Represents a data persistence service which stores data in the local SQLite data store
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoBasePersistenceService`1, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## EntityIdentifierPersistenceService - (SanteDB.Persistence.Data.ADO)
 Entity identifier persistence service
@@ -42,31 +32,11 @@ Entity identifier persistence service
 
 ## ActDerivedPersistenceService&lt;TModel,TData> - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service which is derived from an act
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ActDerivedPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## ActDerivedPersistenceService&lt;TModel,TData,TQueryReturn> - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service which is derived from an act
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.ActDerivedPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## ActParticipationPersistenceService - (SanteDB.Persistence.Data.ADO)
 Act participation persistence service
@@ -154,31 +124,11 @@ Assigning authority persistence service
 
 ## BaseDataPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 Base persistence service
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.BaseDataPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## BaseDataPersistenceService&lt;TModel,TDomain,TQueryResult> - (SanteDB.Persistence.Data.ADO)
 Base data persistence service
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.BaseDataPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## BundlePersistenceService - (SanteDB.Persistence.Data.ADO)
 Bundle persistence service
@@ -252,17 +202,7 @@ Control act persistence service
 
 ## CorePersistenceService&lt;TModel,TDomain,TQueryReturn> - (SanteDB.Persistence.Data.ADO)
 Core persistence service which contains helpful functions
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.CorePersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## DeviceEntityPersistenceService - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service for a device entity
@@ -322,31 +262,11 @@ Entity address component persistence service
 
 ## EntityDerivedPersistenceService&lt;TModel,TData> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityDerivedPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## EntityDerivedPersistenceService&lt;TModel,TData,TQueryReturn> - (SanteDB.Persistence.Data.ADO)
 Entity derived persistence services
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.EntityDerivedPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## EntityNamePersistenceService - (SanteDB.Persistence.Data.ADO)
 Entity name persistence service
@@ -406,31 +326,11 @@ Entity relationship persistence service
 
 ## IdentifiedPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 Generic persistnece service for identified entities
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.IdentifiedPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## IdentifiedPersistenceService&lt;TModel,TDomain,TQueryResult> - (SanteDB.Persistence.Data.ADO)
 Generic persistence service which can persist between two simple types.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.IdentifiedPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## IdentifierTypePersistenceService - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service for an identifier type.
@@ -718,17 +618,7 @@ Security user persistence
 
 ## SimpleVersionedEntityPersistenceService&lt;TModel,TData,TQueryReturn,TRootEntity> - (SanteDB.Persistence.Data.ADO)
 Represents a simple versioned entity persistence service
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.SimpleVersionedEntityPersistenceService`4, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## ProcedurePersistenceService - (SanteDB.Persistence.Data.ADO)
 Represents a persistence service for substance administrations
@@ -774,17 +664,7 @@ Represents a persister that can read/write user entities
 
 ## VersionedDataPersistenceService&lt;TModel,TDomain,TDomainKey> - (SanteDB.Persistence.Data.ADO)
 Versioned domain data
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.Persistence.VersionedDataPersistenceService`3, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## ReferenceTermPersistenceService - (SanteDB.Persistence.Data.ADO)
 Represents a reference term persistence service.
@@ -802,87 +682,27 @@ Represents a reference term persistence service.
 
 ## GenericBasePersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoServiceFactory+GenericBasePersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## GenericIdentityPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoServiceFactory+GenericIdentityPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## GenericBaseAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoServiceFactory+GenericBaseAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## GenericBaseVersionedAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoServiceFactory+GenericBaseVersionedAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## GenericIdentityAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoServiceFactory+GenericIdentityAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## GenericIdentityVersionedAssociationPersistenceService&lt;TModel,TDomain> - (SanteDB.Persistence.Data.ADO)
 TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoServiceFactory+GenericIdentityVersionedAssociationPersistenceService`2, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
+{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 # Example Implementation
 ```csharp
 /// Example Implementation
