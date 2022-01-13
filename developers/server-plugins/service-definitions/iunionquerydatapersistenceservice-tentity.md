@@ -1,0 +1,2 @@
+# IUnionQueryDataPersistenceService{TEntity}
+
