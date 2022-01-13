@@ -1,28 +1,48 @@
-`INotifyRepositoryService&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
+`IRepositoryService&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Repreents a repository which notifies of changes
+Represents a repository service
 
-# Events
+## Description
+In the [SanteDB Software Architecture](https://help.santesuite.org/santedb/software-architecture#repository-services) the repository service 
+            layer is the layer responsible for coordinating business rules, privacy, auditing, and other activities from the messaging or other 
+            services in the SanteDB iCDR or dCDR.
 
-|Event|Type|Description|
-|-|-|-|
-|Inserting|EventHandler&lt;DataPersistingEventArgs&lt;TModel>>|Data is inserting|
-|Inserted|EventHandler&lt;DataPersistedEventArgs&lt;TModel>>|Fired after data was inserted|
-|Saving|EventHandler&lt;DataPersistingEventArgs&lt;TModel>>|Fired before saving|
-|Saved|EventHandler&lt;DataPersistedEventArgs&lt;TModel>>|Fired after data was saved|
-|Obsoleting|EventHandler&lt;DataPersistingEventArgs&lt;TModel>>|Fired before obsoleting|
-|Obsoleted|EventHandler&lt;DataPersistedEventArgs&lt;TModel>>|Fired after data was obsoleted|
-|Retrieving|EventHandler&lt;DataRetrievingEventArgs&lt;TModel>>|Retrieving the data|
-|Retrieved|EventHandler&lt;DataRetrievedEventArgs&lt;TModel>>|Fired after data was retrieved|
-|Querying|EventHandler&lt;QueryRequestEventArgs&lt;TModel>>|Fired after data was queried|
-|Queried|EventHandler&lt;QueryResultEventArgs&lt;TModel>>|Fired after data was queried|
+Repository services should be the primary method of interacting with the SanteDB server infrastructure, as it indicates a user, application or
+            device process is not intending to modify underlying persistence data directly (as would be the case for a system process), rather it wishes SanteDB
+            to execute all validation and rules as normal.
+
+# Operations
+
+|Operation|Response/Return|Input/Parameter|Description|
+|-|-|-|-|
+|Get|TModel|*Guid* **key**|Gets the specified model data|
+|Get|TModel|*Guid* **key**<br/>*Guid* **versionKey**|Gets the specified model data|
+|Find|IEnumerable&lt;TModel>|*Expression&lt;Func&lt;TModel,Boolean>>* **query**|Finds the specified data where the current version matches the query provided|
+|Find|IEnumerable&lt;TModel>|*Expression&lt;Func&lt;TModel,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Finds the specified data where the current version matches the query provided|
+|Insert|TModel|*TModel* **data**|Inserts the specified model information|
+|Save|TModel|*TModel* **data**|Inserts or updates the specified data|
+|Obsolete|TModel|*Guid* **key**|Obsoletes the specified object|
 
 # Implementations
 
 
+## AppletSubscriptionRepository - (SanteDB.Core.Applets)
+An implementation of the ISubscriptionRepository that loads definitions from applets
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## GenericLocalActRepository&lt;TAct> - (SanteDB.Server.Core)
-Represents an act repository service.
+Represents an [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) which stores [Act](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Acts_Act.htm)s and their derivative classes
 
 ### Service Registration
 ```markup
@@ -161,6 +181,20 @@ Provides operations for managing organizations.
 	</serviceProviders>
 ```
 
+## Local Mail Message - (SanteDB.Server.Core)
+Represents a local alert service.
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Server.Core.Services.Impl.LocalMailMessageRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## LocalAssigningAuthorityRepository - (SanteDB.Server.Core)
 Represents a repository service for managing assigning authorities.
 
@@ -171,6 +205,20 @@ Represents a repository service for managing assigning authorities.
 	<serviceProviders>
 		...
 		<add type="SanteDB.Server.Core.Services.Impl.LocalAssigningAuthorityRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## Default Audit Repository - (SanteDB.Server.Core)
+Represents an audit repository which stores and queries audit data.
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Server.Core.Services.Impl.LocalAuditRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -375,54 +423,57 @@ Represents a service which is responsible for the maintenance of concepts using 
 /// Example Implementation
 using SanteDB.Core.Services;
 /// Other usings here
-public class MyNotifyRepositoryService<TModel> : SanteDB.Core.Services.INotifyRepositoryService<TModel> { 
-	public String ServiceName => "My own INotifyRepositoryService`1 service";
+public class MyRepositoryService<TModel> : SanteDB.Core.Services.IRepositoryService<TModel> { 
+	public String ServiceName => "My own IRepositoryService`1 service";
 	/// <summary>
-	/// Data is inserting
+	/// Gets the specified model data
 	/// </summary>
-	public event EventHandler<DataPersistingEventArgs<TModel>> Inserting;
+	public TModel Get(Guid key){
+		throw new System.NotImplementedException();
+	}
 	/// <summary>
-	/// Fired after data was inserted
+	/// Gets the specified model data
 	/// </summary>
-	public event EventHandler<DataPersistedEventArgs<TModel>> Inserted;
+	public TModel Get(Guid key,Guid versionKey){
+		throw new System.NotImplementedException();
+	}
 	/// <summary>
-	/// Fired before saving
+	/// Finds the specified data where the current version matches the query provided
 	/// </summary>
-	public event EventHandler<DataPersistingEventArgs<TModel>> Saving;
+	public IEnumerable<TModel> Find(Expression<Func<TModel,Boolean>> query){
+		throw new System.NotImplementedException();
+	}
 	/// <summary>
-	/// Fired after data was saved
+	/// Finds the specified data where the current version matches the query provided
 	/// </summary>
-	public event EventHandler<DataPersistedEventArgs<TModel>> Saved;
+	public IEnumerable<TModel> Find(Expression<Func<TModel,Boolean>> query,Int32 offset,Nullable<Int32> count,Int32& totalResults,ModelSort`1[] orderBy){
+		throw new System.NotImplementedException();
+	}
 	/// <summary>
-	/// Fired before obsoleting
+	/// Inserts the specified model information
 	/// </summary>
-	public event EventHandler<DataPersistingEventArgs<TModel>> Obsoleting;
+	public TModel Insert(TModel data){
+		throw new System.NotImplementedException();
+	}
 	/// <summary>
-	/// Fired after data was obsoleted
+	/// Inserts or updates the specified data
 	/// </summary>
-	public event EventHandler<DataPersistedEventArgs<TModel>> Obsoleted;
+	public TModel Save(TModel data){
+		throw new System.NotImplementedException();
+	}
 	/// <summary>
-	/// Retrieving the data
+	/// Obsoletes the specified object
 	/// </summary>
-	public event EventHandler<DataRetrievingEventArgs<TModel>> Retrieving;
-	/// <summary>
-	/// Fired after data was retrieved
-	/// </summary>
-	public event EventHandler<DataRetrievedEventArgs<TModel>> Retrieved;
-	/// <summary>
-	/// Fired after data was queried
-	/// </summary>
-	public event EventHandler<QueryRequestEventArgs<TModel>> Querying;
-	/// <summary>
-	/// Fired after data was queried
-	/// </summary>
-	public event EventHandler<QueryResultEventArgs<TModel>> Queried;
+	public TModel Obsolete(Guid key){
+		throw new System.NotImplementedException();
+	}
 }
 ```
 
 # References
 
-* [INotifyRepositoryService&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_INotifyRepositoryService_1.htm)
+* [IRepositoryService&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService_1.htm)
+* [AppletSubscriptionRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_AppletSubscriptionRepository.htm)
 * [GenericLocalActRepository&lt;TAct> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalActRepository_1.htm)
 * [GenericLocalClinicalDataRepository&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalClinicalDataRepository_1.htm)
 * [GenericLocalConceptRepository&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalConceptRepository_1.htm)
@@ -433,7 +484,9 @@ public class MyNotifyRepositoryService<TModel> : SanteDB.Core.Services.INotifyRe
 * [LocalManufacturedMaterialRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalManufacturedMaterialRepository.htm)
 * [LocalPatientRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalPatientRepository.htm)
 * [LocalProviderRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalProviderRepository.htm)
+* [LocalMailMessageRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalMailMessageRepository.htm)
 * [LocalAssigningAuthorityRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalAssigningAuthorityRepository.htm)
+* [LocalAuditRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalAuditRepository.htm)
 * [LocalBatchRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalBatchRepository.htm)
 * [GenericLocalRepository&lt;TEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalRepository_1.htm)
 * [GenericLocalMetadataRepository&lt;TMetadata> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_GenericLocalMetadataRepository_1.htm)

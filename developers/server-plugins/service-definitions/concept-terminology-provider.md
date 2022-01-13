@@ -18,18 +18,18 @@ This class is responsible for the management of [Concept](http://santesuite.org/
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindConceptsByName|IEnumerable&lt;Concept>|*String* **name**<br/>*String* **language**|Searches for a concept by name and language.|
-|FindConceptsByReferenceTerm|IEnumerable&lt;ConceptReferenceTerm>|*String* **code**<br/>*Uri* **codeSystem**|Finds a concept by reference term.|
-|GetConceptSetMembers|IEnumerable&lt;Concept>|*String* **mnemonic**|Get concept set members|
-|GetConceptByReferenceTerm|Concept|*String* **code**<br/>*String* **codeSystemDomain**|Finds a concept by reference term only where the concept is equivalent|
-|FindConceptsByReferenceTerm|IEnumerable&lt;ConceptReferenceTerm>|*String* **code**<br/>*String* **codeSystemDomain**|Finds a concept by reference term.|
-|GetConcept|Concept|*String* **mnemonic**|Gets a concept by mnemonic.|
-|Implies|Boolean|*Concept* **a**<br/>*Concept* **b**|Returns a value which indicates whether  implies|
+|FindConceptsByName|IEnumerable&lt;Concept>|*String* **name**<br/>*String* **language**|Searches for a  by name and language.|
+|FindConceptsByReferenceTerm|IEnumerable&lt;ConceptReferenceTerm>|*String* **code**<br/>*Uri* **codeSystem**|Finds a concept by reference term information, returning the              so the caller can determine if the  and  are equivalent,            narrower than, etc.|
+|GetConceptSetMembers|IEnumerable&lt;Concept>|*String* **mnemonic**|Gets all the  members of the specified concept set|
+|GetConceptByReferenceTerm|Concept|*String* **code**<br/>*String* **codeSystemDomain**|Finds a concept by reference term only where the concept is equivalent to the reference term|
+|FindConceptsByReferenceTerm|IEnumerable&lt;ConceptReferenceTerm>|*String* **code**<br/>*String* **codeSystemDomain**|Finds a concept by reference term information, returning the              so the caller can determine if the  and  are equivalent,            narrower than, etc.|
+|GetConcept|Concept|*String* **mnemonic**|Get a  instance given the concept's unique mnemonic|
+|Implies|Boolean|*Concept* **a**<br/>*Concept* **b**|Returns a value which indicates whether concept  implies concept  through             a  indicating the two are the same|
 |IsMember|Boolean|*ConceptSet* **set**<br/>*Concept* **concept**|Returns true if the concept  is a member of set|
 |IsMember|Boolean|*Guid* **set**<br/>*Guid* **concept**|Returns true if the concept  is a member of set|
 |GetConceptReferenceTerm|ReferenceTerm|*Guid* **conceptId**<br/>*String* **codeSystem**<br/>*Boolean* **exact**|Gets the concept reference term for the specified code system|
 |GetConceptReferenceTerm|ReferenceTerm|*String* **conceptMnemonic**<br/>*String* **codeSystem**|Gets the concept reference term for the specified code system|
-|FindReferenceTermsByConcept|IEnumerable&lt;ConceptReferenceTerm>|*Guid* **conceptId**<br/>*String* **codeSystem**|Gets the concept reference term for the specified code system|
+|FindReferenceTermsByConcept|IEnumerable&lt;ConceptReferenceTerm>|*Guid* **conceptId**<br/>*String* **codeSystem**|Finds all reference terms for the concept with  in the specified  system.|
 
 # Implementations
 
@@ -55,43 +55,43 @@ using SanteDB.Core.Services;
 public class MyConceptRepositoryService : SanteDB.Core.Services.IConceptRepositoryService { 
 	public String ServiceName => "My own IConceptRepositoryService service";
 	/// <summary>
-	/// Searches for a concept by name and language.
+	/// Searches for a  by name and language.
 	/// </summary>
 	public IEnumerable<Concept> FindConceptsByName(String name,String language){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Finds a concept by reference term.
+	/// Finds a concept by reference term information, returning the              so the caller can determine if the  and  are equivalent,            narrower than, etc.
 	/// </summary>
 	public IEnumerable<ConceptReferenceTerm> FindConceptsByReferenceTerm(String code,Uri codeSystem){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Get concept set members
+	/// Gets all the  members of the specified concept set
 	/// </summary>
 	public IEnumerable<Concept> GetConceptSetMembers(String mnemonic){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Finds a concept by reference term only where the concept is equivalent
+	/// Finds a concept by reference term only where the concept is equivalent to the reference term
 	/// </summary>
 	public Concept GetConceptByReferenceTerm(String code,String codeSystemDomain){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Finds a concept by reference term.
+	/// Finds a concept by reference term information, returning the              so the caller can determine if the  and  are equivalent,            narrower than, etc.
 	/// </summary>
 	public IEnumerable<ConceptReferenceTerm> FindConceptsByReferenceTerm(String code,String codeSystemDomain){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Gets a concept by mnemonic.
+	/// Get a  instance given the concept's unique mnemonic
 	/// </summary>
 	public Concept GetConcept(String mnemonic){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Returns a value which indicates whether  implies
+	/// Returns a value which indicates whether concept  implies concept  through             a  indicating the two are the same
 	/// </summary>
 	public Boolean Implies(Concept a,Concept b){
 		throw new System.NotImplementedException();
@@ -121,7 +121,7 @@ public class MyConceptRepositoryService : SanteDB.Core.Services.IConceptReposito
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Gets the concept reference term for the specified code system
+	/// Finds all reference terms for the concept with  in the specified  system.
 	/// </summary>
 	public IEnumerable<ConceptReferenceTerm> FindReferenceTermsByConcept(Guid conceptId,String codeSystem){
 		throw new System.NotImplementedException();

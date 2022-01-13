@@ -1,13 +1,29 @@
 `IConfigurationManager` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Represents a configuration manager service
+Contract for service implementations that manage the core SanteDB configuration
+
+## Description
+SanteDB plugins are expected to be portable and can run on a variety of platforms, in a variety of deployments, and a variety 
+            of environments. This necessitates a consistent manner to manage configuration data for the SanteDB services. The [IConfigurationManager](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IConfigurationManager.htm)
+            is responsible for this duty. Example implementations of this service may include:
+            
+
+* Loading configuration from a file stored on a local file system
+* Loading configuration from a shared document-based database (for distributed configurations)
+* Loading configuration from environment variables or synthesization classes (like in Docker)
+* Loading/chaining configuration from another or central iCDR instance
+
+
+
+            By default, the SanteDB iCDR and dCDR will use an XML or JSON file to store the configuration information, however the [SanteDBConfiguration](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Configuration_SanteDBConfiguration.htm)
+            class can be shared on any number of transports.
 
 # Properties
 
 |Property|Type|Access|Description|
 |-|-|-|-|
-|Configuration|SanteDBConfiguration|R|Get the configuration object|
+|Configuration|SanteDBConfiguration|R|Get the entirety of the SanteDB configuration|
 
 # Operations
 
@@ -15,7 +31,7 @@ Represents a configuration manager service
 |-|-|-|-|
 |GetSection|T||TODO|
 |GetAppSetting|String|*String* **key**|Gets the specified application setting|
-|GetConnectionString|ConnectionString|*String* **key**|Get the specified connection string|
+|GetConnectionString|ConnectionString|*String* **key**|Get the specified connection string to a database|
 |SetAppSetting|void|*String* **key**<br/>*String* **value**|Set the specified application setting|
 |Reload|void||TODO|
 
@@ -36,8 +52,12 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## Local Configuration Manager - (SanteDB.Server.Core)
-Provides a redirected configuration service which reads configuration from a different file
+## Local File Configuration Manager - (SanteDB.Server.Core)
+Provides a redirected configuration service which reads configuration information from a file
+### Description
+This configuration manager implementation  reads from the configuration file ```santedb.config.xml``` in the same directory
+            as the installed iCDR instance. This file is create either manually ([as documented here](https://help.santesuite.org/operations/server-administration/host-configuration-file)), or
+            using the [Configuration Tool](https://help.santesuite.org/operations/server-administration/configuration-tool).
 
 ### Service Registration
 ```markup
@@ -57,7 +77,7 @@ using SanteDB.Core.Services;
 public class MyConfigurationManager : SanteDB.Core.Services.IConfigurationManager { 
 	public String ServiceName => "My own IConfigurationManager service";
 	/// <summary>
-	/// Get the configuration object
+	/// Get the entirety of the SanteDB configuration
 	/// </summary>
 	public SanteDBConfiguration Configuration {
 		get;
@@ -72,7 +92,7 @@ public class MyConfigurationManager : SanteDB.Core.Services.IConfigurationManage
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Get the specified connection string
+	/// Get the specified connection string to a database
 	/// </summary>
 	public ConnectionString GetConnectionString(String key){
 		throw new System.NotImplementedException();

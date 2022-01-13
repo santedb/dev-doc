@@ -37,8 +37,17 @@ Additionally, the ValidateQuery method is invoked prior to querying to ensure th
 # Implementations
 
 
-## Data Privacy Filtering - (SanteDB.Core.Api)
-Local policy enforcement point service
+## Default Privacy Enforcement - (SanteDB.Core.Api)
+Privacy enforcement service that uses the local [IPolicyInformationService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IPolicyInformationService.htm) and takes
+            default behaviors (as described in the [SanteDB Privacy Architecture](https://help.santesuite.org/santedb/privacy-architecture)
+### Description
+This privacy enforcement service provides a baseline implementation of a privacy filter in SanteDB. The service supports:
+
+* Hiding, Masking, Hashing, Redacting data which is about to be disclosed according to the [DataPolicyFilterConfigurationSection](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Configuration_DataPolicyFilterConfigurationSection.htm)
+* Removing any forbidden / restricted fields from disclosure based on policy (or global removal)
+* Ensuring that inbound messages do not contain masked or partial data
+* Validating that queries are not performed against forbidden fields
+* Ensuring that inbound data does not contain forbidden field data
 
 ### Service Registration
 ```markup
@@ -52,7 +61,11 @@ Local policy enforcement point service
 ```
 
 ## ExemptablePolicyFilterService - (SanteDB.Server.Core)
-Local policy enforcement point service
+A data privacy filter service which supports exemption based on configuration
+### Description
+This class is an extension of the [DataPolicyFilterService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Privacy_DataPolicyFilterService.htm) which adds support for exempting certain types
+            of principals from the enforcement action. This is useful for scenarios where, for example, a [IDeviceIdentity](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Principal_IDeviceIdentity.htm)
+            may be a node that is synchronizing data.
 
 ### Service Registration
 ```markup

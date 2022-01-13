@@ -1,7 +1,13 @@
 `IDataSigningService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Represents a service which can sign arbitrary data
+Contract for services which can sign data using configured digital signature algorithms
+
+## Description
+Implementers of this service contract are responsible for computing and validating
+            digital signatures against arbitrary data streams. Implementers of this service are responsible for 
+            maintaining (or acquiring) a master list of keys which can be used for data signing, and validating 
+            digital signatures.
 
 # Operations
 
@@ -18,6 +24,14 @@ Represents a service which can sign arbitrary data
 
 ## DefaultDataSigningService - (SanteDB.Server.Core)
 Default data signature service
+### Description
+This digital signature service uses the keys configured in the [SecurityConfigurationSection](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Configuration_SecurityConfigurationSection.htm)
+            to sign data based on the type of signature algorithm in the [SecurityConfigurationSection](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Configuration_SecurityConfigurationSection.htm). Supported signature 
+            algorithms are:
+
+* HMAC256 (HMAC + SHA256) using shared secrets
+* RS256 (RSA+SHA256) using X.509 certificates (generation of a signature requires private key)
+* RS512 (RSA+SHA512)
 
 ### Service Registration
 ```markup

@@ -1,27 +1,32 @@
 `ISubscriptionExecutor` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Represents a subscription executor
+Contract which defines a dCDR subscription executor
+
+## Description
+The subscription executor is responsible for the translation of a dCDR [SubscriptionDefinition](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Subscription_SubscriptionDefinition.htm)
+            from the [ISubscriptionRepository](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISubscriptionRepository.htm) to the appropriate database technology. The subscription executor
+            gathers any new records requested by the dCDR and prepares them for download by the dCDR.
 
 # Events
 
 |Event|Type|Description|
 |-|-|-|
-|Executed|EventHandler&lt;QueryResultEventArgs&lt;IdentifiedData>>|Occurs when queried.|
-|Executing|EventHandler&lt;QueryRequestEventArgs&lt;IdentifiedData>>|Occurs when querying.|
+|Executed|EventHandler&lt;QueryResultEventArgs&lt;IdentifiedData>>|Occurs after a subscription has been executed, and allows subscribers to modify the data being            sent back to the dCDR|
+|Executing|EventHandler&lt;QueryRequestEventArgs&lt;IdentifiedData>>|Occurs prior to a subscription being executed, and allows subscribers to modify the query being            executed.|
 
 # Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Execute|IEnumerable&lt;Object>|*Guid* **subscriptionKey**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
-|Execute|IEnumerable&lt;Object>|*SubscriptionDefinition* **subscription**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the specified subscription mechanism|
+|Execute|IEnumerable&lt;Object>|*Guid* **subscriptionKey**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the identified subscription agianst the persistence layer.|
+|Execute|IEnumerable&lt;Object>|*SubscriptionDefinition* **subscription**<br/>*NameValueCollection* **parameters**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**|Executes the identified subscription agianst the persistence layer.|
 
 # Implementations
 
 
 ## ADO.NET Subscription Executor - (SanteDB.Persistence.Data.ADO)
-Represents a default implementation of the subscription executor
+An implementation of the [ISubscriptionExecutor](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISubscriptionExecutor.htm) which uses an ADO persistence layer
 
 ### Service Registration
 ```markup
@@ -41,21 +46,21 @@ using SanteDB.Core.Services;
 public class MySubscriptionExecutor : SanteDB.Core.Services.ISubscriptionExecutor { 
 	public String ServiceName => "My own ISubscriptionExecutor service";
 	/// <summary>
-	/// Occurs when queried.
+	/// Occurs after a subscription has been executed, and allows subscribers to modify the data being            sent back to the dCDR
 	/// </summary>
 	public event EventHandler<QueryResultEventArgs<IdentifiedData>> Executed;
 	/// <summary>
-	/// Occurs when querying.
+	/// Occurs prior to a subscription being executed, and allows subscribers to modify the query being            executed.
 	/// </summary>
 	public event EventHandler<QueryRequestEventArgs<IdentifiedData>> Executing;
 	/// <summary>
-	/// Executes the specified subscription mechanism
+	/// Executes the identified subscription agianst the persistence layer.
 	/// </summary>
 	public IEnumerable<Object> Execute(Guid subscriptionKey,NameValueCollection parameters,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Executes the specified subscription mechanism
+	/// Executes the identified subscription agianst the persistence layer.
 	/// </summary>
 	public IEnumerable<Object> Execute(SubscriptionDefinition subscription,NameValueCollection parameters,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId){
 		throw new System.NotImplementedException();

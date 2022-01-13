@@ -13,7 +13,7 @@ Represents a query repository service which can find lean queries
 
 
 ## GenericLocalActRepository&lt;TAct> - (SanteDB.Server.Core)
-Represents an act repository service.
+Represents an [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) which stores [Act](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Acts_Act.htm)s and their derivative classes
 
 ### Service Registration
 ```markup

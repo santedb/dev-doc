@@ -1,7 +1,21 @@
 `IDeviceIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Represents an identity service which authenticates devices.
+Represents a service which retrieves [IDeviceIdentity](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Principal_IDeviceIdentity.htm) and can authenticate to an [IPrincipal](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.iprincipal) for devices.
+
+## Description
+In SanteDB, a security session is comprised of up to three security identities/principals:
+
+* (Optional) User identity representing the human using the application
+* (Optional) A [IDeviceIdentity](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Principal_IDeviceIdentity.htm) representing the device running the application, and
+* An [IApplicationIdentity](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Principal_IApplicationIdentity.htm) representing the application
+
+
+This service is what is used to authenticate the device identity from a central credential store of registered devices. This service may be 
+            called with a shared device id/secret (like a user name and password), or may be called with a device ID and x509 certificate (if used for authenticating
+            sessions with a client certificate)
+
+See: [SanteDB authentication architecture](https://help.santesuite.org/santedb/security-architecture#principals-and-identities)
 
 # Events
 
@@ -17,7 +31,7 @@ Represents an identity service which authenticates devices.
 |Authenticate|IPrincipal|*String* **deviceId**<br/>*String* **deviceSecret**<br/>*AuthenticationMethod* **authMethod**|Authenticates the specified device identifier.|
 |GetIdentity|IIdentity|*String* **name**|Gets the specified identity for an device.|
 |SetLockout|void|*String* **name**<br/>*Boolean* **lockoutState**<br/>*IPrincipal* **principal**|Set the lockout status|
-|ChangeSecret|void|*String* **name**<br/>*String* **deviceSecret**<br/>*IPrincipal* **systemPrincipal**|Change the device secret|
+|ChangeSecret|void|*String* **name**<br/>*String* **deviceSecret**<br/>*IPrincipal* **principal**|Change the device secret|
 
 # Implementations
 
@@ -71,7 +85,7 @@ public class MyDeviceIdentityProviderService : SanteDB.Core.Security.Services.ID
 	/// <summary>
 	/// Change the device secret
 	/// </summary>
-	public void ChangeSecret(String name,String deviceSecret,IPrincipal systemPrincipal){
+	public void ChangeSecret(String name,String deviceSecret,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }

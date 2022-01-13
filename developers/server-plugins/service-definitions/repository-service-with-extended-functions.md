@@ -1,20 +1,20 @@
 `IRepositoryServiceEx&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Represents a repository service wrapping an extended persistence service
+Represents a [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) service which has extended functionality
 
 # Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Touch|void|*Guid* **key**|Touch the specified object|
-|Nullify|TModel|*Guid* **id**|Nullifies a specific instance|
+|Touch|void|*Guid* **key**|Touch the specified object by updating its last modified time (forcing a re-synchronization) however             not modifying the data in the object|
+|Nullify|TModel|*Guid* **id**|Nullifies the specified object (mark as "Entered in Error")|
 
 # Implementations
 
 
 ## GenericLocalActRepository&lt;TAct> - (SanteDB.Server.Core)
-Represents an act repository service.
+Represents an [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) which stores [Act](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Acts_Act.htm)s and their derivative classes
 
 ### Service Registration
 ```markup
@@ -160,13 +160,13 @@ using SanteDB.Core.Services;
 public class MyRepositoryServiceEx<TModel> : SanteDB.Core.Services.IRepositoryServiceEx<TModel> { 
 	public String ServiceName => "My own IRepositoryServiceEx`1 service";
 	/// <summary>
-	/// Touch the specified object
+	/// Touch the specified object by updating its last modified time (forcing a re-synchronization) however             not modifying the data in the object
 	/// </summary>
 	public void Touch(Guid key){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Nullifies a specific instance
+	/// Nullifies the specified object (mark as "Entered in Error")
 	/// </summary>
 	public TModel Nullify(Guid id){
 		throw new System.NotImplementedException();

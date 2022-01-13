@@ -1,7 +1,14 @@
 `ISubscriptionRepository` in assembly SanteDB.Core.Api version 2.1.151.0
 
 # Summary
-Represents an implementation of a repository which loads subscription definitions
+Represents a repository which maintains subscription definitions
+
+## Description
+This service is used to maintain instances of [SubscriptionDefinition](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Subscription_SubscriptionDefinition.htm) which 
+            contain SQL (or other query grammar) to allow dCDR instances to easily query data on the HDSI interface
+            using the ```_subscription``` parameter. The HDSI maps the subscription ID with the local data provider
+            and then executes the appopriate query against the persistence layer to ensure fast synchronization of
+            new data.
 
 # Implementations
 
