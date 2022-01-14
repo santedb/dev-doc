@@ -11,6 +11,10 @@ SanteDB software can be downloaded via the GitHub pages for each of the projects
 | [SanteDB dCDR Web Access Gateway](https://github.com/santedb/santedb-www/releases) | <ul><li>Web Access Gateway Service</li></ul>                                                                    | [installing-web-access-gateway.md](disconnected-gateway/installing-web-access-gateway.md "mention") |
 | [SanteDB dCDR SDK](https://github.com/santedb/santedb-sdk/releases)                | <ul><li>Applet Debugger</li><li>Business Rules Debugger</li><li>Data Importer</li><li>Package Manager</li></ul> | [installing-the-dcdr-sdk.md](disconnected-gateway/installing-the-dcdr-sdk.md "mention")             |
 
+{% hint style="info" %}
+You can download the latest versions (even if release notes aren't prepared for them on GitHub) from the [SanteDB Experimental Releases](http://santesuite.org/assets/uploads/santedb/community/release/) repository.
+{% endhint %}
+
 ## SanteDB iCDR Server&#x20;
 
 ### Installers
