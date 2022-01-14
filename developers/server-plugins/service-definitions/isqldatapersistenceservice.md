@@ -19,7 +19,16 @@ Represents a data persistence service where arbitrary SQL can be run
 
 
 ## ADO.NET Data Persistence Service - (SanteDB.Persistence.Data.ADO)
-Represents a dummy service which just adds the persistence services to the context
+Registers and configures the necessary sub-services and [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) implementations
+            to allow SanteDB iCDR to persist, query, and read messages from available ADO.NET data providers
+### Description
+This service is responsible for registering the necessary [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) providers
+            which are responsible for interfacing the SanteDB [Physical Model](https://help.santesuite.org/santedb/data-and-information-architecture/physical-model) 
+            with the SanteDB [Business / Object Model](https://help.santesuite.org/santedb/data-and-information-architecture/conceptual-data-model). Each 
+            persistence implementation is derived from the [ModelMap](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Map_ModelMap.htm) configuration, and is uses the ADO.NET classes to via the [IDbProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_OrmLite_Providers_IDbProvider.htm) configured.
+
+Additionally, on start of the SanteDB iCDR or dCDR, this service is responsible for applying any [Data Patches](https://help.santesuite.org/developers/server-plugins/database-patching)
+            which have been provided (compiled via an embedded resource) by any of the validated SanteDB plugins.
 
 ### Service Registration
 ```markup

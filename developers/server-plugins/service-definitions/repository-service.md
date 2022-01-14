@@ -28,7 +28,7 @@ Repository services should be the primary method of interacting with the SanteDB
 
 
 ## AppletSubscriptionRepository - (SanteDB.Core.Applets)
-An implementation of the ISubscriptionRepository that loads definitions from applets
+An implementation of the [ISubscriptionRepository](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISubscriptionRepository.htm) that loads definitions from applets
 
 ### Service Registration
 ```markup
