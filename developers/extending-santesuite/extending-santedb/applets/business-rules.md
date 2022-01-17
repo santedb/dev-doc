@@ -19,6 +19,10 @@ SanteDB provides a series of extension points where developers can write custom 
 * Merging patients before they are persisted based on specified criteria
 * Validating that a substance administration is correct before persisting it
 
+{% hint style="info" %}
+This article covers writing business rules in JavaScript in your applets. While this method is convenient, if you require higher performing business rules, consider implementing a [business-rules-service.md](../../../server-plugins/service-definitions/business-rules-service.md "mention")in C# instead.
+{% endhint %}
+
 ### &#x20;How does SanteDB treat Business Rules?
 
 Business rules subscribe to persistence events on the repository layer of the architecture. Whenever a piece of data is modified, these events fire, and the correlated business rules are triggered.
