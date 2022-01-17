@@ -10,6 +10,28 @@ Examples where a Master Patient Index are leveraged are:
 
 This section is concerned with the data administration of the screens provided by the SanteMPI solution. For general iCDR administration tasks such as registering identity domains, managing users, etc. please consult the [cdr-administration](../operations/cdr-administration/ "mention")guide.
 
+## Topics
 
+{% content-ref url="../santempi/santempi-dashboard.md" %}
+[santempi-dashboard.md](../santempi/santempi-dashboard.md)
+{% endcontent-ref %}
 
-&#x20;
+{% content-ref url="santempi/santempi-matches.md" %}
+[santempi-matches.md](santempi/santempi-matches.md)
+{% endcontent-ref %}
+
+{% content-ref url="../santempi/santempi-searching.md" %}
+[santempi-searching.md](../santempi/santempi-searching.md)
+{% endcontent-ref %}
+
+{% content-ref url="santempi/santempi-power-search.md" %}
+[santempi-power-search.md](santempi/santempi-power-search.md)
+{% endcontent-ref %}
+
+{% content-ref url="../santempi/the-patient-dashboard.md" %}
+[the-patient-dashboard.md](../santempi/the-patient-dashboard.md)
+{% endcontent-ref %}
+
+{% content-ref url="santempi/matching-configuration.md" %}
+[matching-configuration.md](santempi/matching-configuration.md)
+{% endcontent-ref %}
