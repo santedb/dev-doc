@@ -1,2 +1,0 @@
-# Using VRP QR Codes
-
