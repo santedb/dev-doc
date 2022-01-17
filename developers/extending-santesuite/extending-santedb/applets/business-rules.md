@@ -20,7 +20,7 @@ SanteDB provides a series of extension points where developers can write custom 
 * Validating that a substance administration is correct before persisting it
 
 {% hint style="info" %}
-This article covers writing business rules in JavaScript in your applets. While this method is convenient, if you require higher performing business rules, consider implementing a [business-rules-service.md](../../../server-plugins/service-definitions/business-rules-service.md "mention")in C# instead.
+This article covers writing business rules in JavaScript in your applets. While this method is convenient and allows sharing of a single business rule implementation in all dCDR instances and the iCDR, if you require higher performing business rules on the iCDR, consider implementing a [business-rules-service.md](../../../server-plugins/service-definitions/business-rules-service.md "mention")in C# instead.
 {% endhint %}
 
 ### &#x20;How does SanteDB treat Business Rules?
