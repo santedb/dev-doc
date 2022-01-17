@@ -81,8 +81,8 @@ Next, declare the `santedb-mpi` service , this service will host the the actual 
 This section of the file:
 
 * Creates a service named `santedb-mpi` in the docker environment
-* Enables feature via the `SDB_FEATURE` environment variable (for reference see: [feature-configuration.md](installation-1/santedb-server/installation-using-appliances/docker-containers/feature-configuration.md "mention")
-* Instructs the iCDR to enable [master-data-storage.md](../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md "mention") for `Patient` resources
+* Enables feature via the `SDB_FEATURE` environment variable (for reference see: [feature-configuration.md](installation/santedb-server/docker-containers/feature-configuration.md "mention")
+* Instructs the iCDR to enable [master-data-storage.md](../santedb/data-storage-patterns/master-data-storage.md "mention") for `Patient` resources
 * Connects the main database to `santedb` on the `db` container.
 * Connects the audit database to `auditdb` on the db container
 * Instructs the iCDR to `hide` any data which is tagged with a privacy policy (other options are `redact`, `audit, none`
@@ -119,7 +119,7 @@ This will start the SanteDB iCDR (running SanteMPI), the web access gateway and 
 
 ## Configure the Web Access Gateway
 
-You can now configure the web-access gateway, the [Configuring the Web Access Gateway ](installation-1/disconnected-gateway/installing-web-access-gateway.md#configure-the-web-access-gateway)article contains detailed instructions on how this is performed.&#x20;
+You can now configure the web-access gateway, the [Configuring the Web Access Gateway ](installation/disconnected-gateway/installing-web-access-gateway.md#configure-the-web-access-gateway)article contains detailed instructions on how this is performed.&#x20;
 
 ### Join the Realm
 
@@ -165,11 +165,11 @@ You can accept the defaults for the following screens:
 * Application Services - This screen allows for the enabling of third party or additional services which are not required by the web access gateway.
 * Network - This screen allows you to configure the optimization between the dCDR and iCDR
 
-Full documentation of these settings can be found on the [installing-web-access-gateway.md](installation-1/disconnected-gateway/installing-web-access-gateway.md "mention") and [installing-disconnected-gateway.md](installation-1/disconnected-gateway/installing-disconnected-gateway.md "mention") wiki articles.
+Full documentation of these settings can be found on the [installing-web-access-gateway.md](installation/disconnected-gateway/installing-web-access-gateway.md "mention") and [installing-disconnected-gateway.md](installation/disconnected-gateway/installing-disconnected-gateway.md "mention") wiki articles.
 
 ### Customize the User Interface
 
-You can customize the manner in which the SanteMPI user interface behaves by setting one or more [app-settings.md](installation-1/disconnected-gateway/app-settings.md "mention"). For example, the configuration below will only require given and family names to be registered, and will show the normally hidden fields for collecting patient Religion.
+You can customize the manner in which the SanteMPI user interface behaves by setting one or more [app-settings.md](installation/disconnected-gateway/app-settings.md "mention"). For example, the configuration below will only require given and family names to be registered, and will show the normally hidden fields for collecting patient Religion.
 
 &#x20;
 
@@ -220,7 +220,7 @@ The policies associated with your session for Administrator were established whe
 
 ## Perform Installation Qualification
 
-An easy way to get patients into the SanteMPI instance is to run the [fhir-interface-validation](installation-1/santedb-server/installation-qualification/fhir-interface-validation/ "mention"). These tests will ensure that the MPI is operating correctly (using the default options) and in the process, will create a few test patients.
+An easy way to get patients into the SanteMPI instance is to run the [fhir-interface-validation](installation/installation-qualification/fhir-interface-validation/ "mention"). These tests will ensure that the MPI is operating correctly (using the default options) and in the process, will create a few test patients.
 
 ### Open the SOAP UI Project
 
@@ -240,7 +240,7 @@ The installation qualification tool uses PMIR notifications and subscriptions, i
 
 ### Run Installation Qualification Tests
 
-Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](installation-1/santedb-server/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
+Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
 
 ![](<../.gitbook/assets/image (425) (1) (1).png>)
 

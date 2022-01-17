@@ -14,14 +14,14 @@ It is recommended that readers review the [Broken link](broken-reference "mentio
 [releases.md](installation/releases.md)
 {% endcontent-ref %}
 
-{% content-ref url="installation-1/" %}
-[installation-1](installation-1/)
+{% content-ref url="installation/" %}
+[installation](installation/)
 {% endcontent-ref %}
 
 {% content-ref url="installation/securing-the-apis.md" %}
 [securing-the-apis.md](installation/securing-the-apis.md)
 {% endcontent-ref %}
 
-{% content-ref url="demonstration-environment.md" %}
-[demonstration-environment.md](demonstration-environment.md)
+{% content-ref url="../santedb/demonstration-environment.md" %}
+[demonstration-environment.md](../santedb/demonstration-environment.md)
 {% endcontent-ref %}

@@ -3,7 +3,7 @@
 When the instance of SanteDB iCDR was installed in your environment, the Administration User Interface may have been installed. The administrative user interface is a specialized form of the SanteDB dCDR which services web-based requests.
 
 {% hint style="info" %}
-You may use the [Demonstration Server's](../../../installation/demonstration-environment.md) administration panel as a reference for this document.
+You may use the [Demonstration Server's](../../../santedb/demonstration-environment.md) administration panel as a reference for this document.
 {% endhint %}
 
 ## Table of Contents
