@@ -1,4 +1,4 @@
-# Overall Architecture
+# SanteDB Architecture
 
 This page provides a summary of the SanteDB architecture. A more detailed description of this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))
 
@@ -58,3 +58,24 @@ Care should be taken in planning the local network security environment when usi
 
 The dCDR Web Portal is a specialized dCDR environment which has no offline capability. It is primarily designed to operate as a daemon and to serve out, on the internet, the user interfaces directly connected to the central iCDR. This is the technology used to host the administrative panels, any shared/central infrastructure, etc.
 
+## Topics
+
+{% content-ref url="../architecture/solution-architecture.md" %}
+[solution-architecture.md](../architecture/solution-architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="software-architecture.md" %}
+[software-architecture.md](software-architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="data-and-information-architecture/" %}
+[data-and-information-architecture](data-and-information-architecture/)
+{% endcontent-ref %}
+
+{% content-ref url="security-architecture.md" %}
+[security-architecture.md](security-architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="privacy-architecture.md" %}
+[privacy-architecture.md](privacy-architecture.md)
+{% endcontent-ref %}

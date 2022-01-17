@@ -1,6 +1,6 @@
 # Reviewing Audits
 
-SanteDB iCDR and dCDR instances implement a local [iauditrepositoryservice.md](../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/security-services/auditing-services/iauditrepositoryservice.md "mention")where local audits are stored for events related to SanteDB , as well as an [iauditdispatchservice.md](../../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/security-services/auditing-services/iauditdispatchservice.md "mention")which is responsible for shipping audits to a centralized audit repository (if the iCDR or dCDR are participating in an OpenHIE instance).
+SanteDB iCDR and dCDR instances implement a local [Broken link](broken-reference "mention")where local audits are stored for events related to SanteDB , as well as an [Broken link](broken-reference "mention")which is responsible for shipping audits to a centralized audit repository (if the iCDR or dCDR are participating in an OpenHIE instance).
 
 In the SanteDB administrative panel, audits are accessed using the `Audit Repository` function in the `Security` section of the Administrative Panel.&#x20;
 

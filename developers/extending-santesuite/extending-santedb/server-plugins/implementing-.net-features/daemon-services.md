@@ -1,6 +1,6 @@
 # Daemon Services
 
-In SanteDB, a daemon service represents a service which is activated on startup and is shut down on service stop. Daemon services can exist on the iCDR and dCDR interfaces. Daemon services are implemented using the [`IDaemonService`](../service-definitions/idaemonservice.md)``
+In SanteDB, a daemon service represents a service which is activated on startup and is shut down on service stop. Daemon services can exist on the iCDR and dCDR interfaces. Daemon services are implemented using the [`IDaemonService`](broken-reference)``
 
 Daemons are particularly useful when:
 
@@ -10,7 +10,7 @@ Daemons are particularly useful when:
 
 ### Lifecycle
 
-Daemons go through the same lifecycle as the primary application host. Daemons have their `.Start() `method called at Stage 2 of the application startup and their `.Stop()` method called when the application host is shutting down.
+Daemons go through the same lifecycle as the primary application host. Daemons have their `.Start()` method called at Stage 2 of the application startup and their `.Stop()` method called when the application host is shutting down.
 
 ## Implementation
 
@@ -56,7 +56,7 @@ The IDaemonService implementation has four events which daemons are expected to 
 
 ### Current Status
 
-You should allow other services to detect whether your daemon has completed startup and is currently active. This state is indicated by the `IsRunning `property.
+You should allow other services to detect whether your daemon has completed startup and is currently active. This state is indicated by the `IsRunning` property.
 
 ### Start/Stop Methods
 

@@ -6,7 +6,7 @@ The matching dashboard is used to show the registered matches (i.e. those which 
 
 ## Nomenclature
 
-The nomenclature used in SanteDB is described in detail in [master-data-storage.md](../../santedb/data-storage-patterns/master-data-storage.md "mention"), when describing the patients in the user interface documentation the data will be referred to as:
+The nomenclature used in SanteDB is described in detail in [master-data-storage.md](../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md "mention"), when describing the patients in the user interface documentation the data will be referred to as:
 
 * `LOCAL_A` - The source record submitted from a third party system, representing the `$input` record
 * `MASTER_A` - The master/golden record established by SanteMPI's master data management layer for `LOCAL_A` (note there may be multiple locals attached to this record)

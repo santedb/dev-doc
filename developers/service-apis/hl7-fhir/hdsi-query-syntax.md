@@ -297,7 +297,7 @@ HDSI query control parameters are prefixed with an underscore. These query param
 
 ## Freetext Search
 
-The `_any` parameter in a search allows clients to execute a filter on any data in the requested resource. The behavior of the `_any` parameter depends on the persistence layer and how the [ifreetextsearchservice.md](../../extending-santesuite/extending-santedb/server-plugins/service-definitions/ifreetextsearchservice.md "mention") has been configured.
+The `_any` parameter in a search allows clients to execute a filter on any data in the requested resource. The behavior of the `_any` parameter depends on the persistence layer and how the [Broken link](broken-reference "mention") has been configured.
 
 * On PostgreSQL this search uses the `tsvector` type to execute web search queries.
 * On SQLite (before version 2.3 of the dCDR) the search uses a simple keyword search. Integration of the Lucene engine is being developed for version 2.3 of the dCDR

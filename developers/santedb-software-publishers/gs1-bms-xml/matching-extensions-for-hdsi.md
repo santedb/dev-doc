@@ -1,6 +1,6 @@
 # MDM Extensions for HDSI
 
-The [Master Data Management](../../../santedb/data-storage-patterns/master-data-storage.md) plugin for SanteDB provides controls for the management of the MDM metadata via the HDSI interface using custom interfaces.
+The [Master Data Management](../../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md) plugin for SanteDB provides controls for the management of the MDM metadata via the HDSI interface using custom interfaces.
 
 {% hint style="warning" %}
 When using the MDM extensions on the dCDR (like in the user interface, or on a client) you must provide the `_upstream=true` indicator so the dCDR service sends the original request to the central server directly. This means that these functions should only be called when online and connected to the iCDR

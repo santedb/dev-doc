@@ -23,16 +23,37 @@ SanteDB is a general purpose clinical data repository based loosely on the HL7 R
 * dCDR Gateway - The **Disconnected Gateway** is a specialized version of the dCDR which combines plugins for HL7v2, ATNA, (and in the future FHIR) and allows clinics who are using third party software such as OpenMRS or OSCAR to leverage dCDR features with standards based interfaces.&#x20;
 * Android / Windows / Linux Apps - These applications are built on the dCDR and provide an extensible user interface platform based on HTML5 and JavaScript. By default, AngularJS is the bundled UI framework, however these applications (and applets) may override this and implement their own interfaces to SanteDB's dCDR services.
 
-### Quick Links
+## Topics
 
-* [Architecture Documentation](santedb/architecture.md)
-* [Operations Management](operations/operations.md)
-  * [Installation](installation/installation/)
-  * [Knowledgebase](knowledgebase/sdb-kb/)
-  * [Fixes & Patches](knowledgebase/fixpatch/)
-* [Extending the Platform (SDK)](broken-reference)
-* SanteDB Solution Projects
-  * [SanteDB Master Patient Index (SanteMPI](broken-reference))
-  * [SanteDB Audit Repository (SanteGuard)](santeguard/introduction.md)
-  * [OpenIZ](openiz/about-openiz/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="installation/installation-1/" %}
+[installation-1](installation/installation-1/)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
