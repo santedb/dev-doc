@@ -88,7 +88,7 @@ The event metadata is the same as that shown in the summary list, with additiona
 
 The network information section shows information about the network infrastructure when the request was made.
 
-![](<../../../../.gitbook/assets/image (425) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1).png>)
 
 ### Users and Computers
 

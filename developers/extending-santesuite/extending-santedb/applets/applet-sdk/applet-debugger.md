@@ -1,10 +1,8 @@
 # BRE Debugger
 
-## SanteDB Debugger Reference
-
 The SanteDB debugger is a tool that allows developers to interactively debug business rules, and clinical protocols before pushing these changes to a production or staging environment.
 
-### Command Line Options
+## Command Line Options
 
 **Tool:** sdb-dbg.exe
 
@@ -20,11 +18,9 @@ The following parameters are supported by the SanteDB debugger
 | bre     | Launches the debugger in BusinessRules mode (debug JavaScript rules)   | --bre                                    |
 | xprot   | Launches the debugger in ClinicalProtocol mode (debug XProtocol files) | --xprot                                  |
 
-### Debug Shell
+## Debug Shell
 
 The debug shell provides basic common commands as well as debugger specific commands (for JavaScript or XProtocol).
-
-### Common Commands
 
 | Command | Name                        |
 | ------- | --------------------------- |
@@ -51,27 +47,27 @@ The debug shell provides basic common commands as well as debugger specific comm
 | sfj     | Set Scope - JSON File       |
 | sfx     | Set Scope - XML File        |
 
-#### cd - Change Directory
+### cd - Change Directory
 
 Changes the working directory **Example:** cd C:\sources
 
-#### sn - Scope to null
+### sn - Scope to null
 
 Sets the current scope to NULL
 
-#### clear - Clear Screen
+### clear - Clear Screen
 
 Clears the current screen
 
-#### ds - Dump Scope
+### ds - Dump Scope
 
 Dumps the current scope to the screen in .NET format
 
-**Parameters**
+#### **Parameters**
 
 * \[path] - The object property path to be dumped
 
-**Example: Dump Scope**
+#### **Example: Dump Scope**
 
 ```
 dbg >ds
@@ -84,7 +80,7 @@ ClassConcept              Concept                   null
 ClassConceptKey           Nullable`1                bacd9c6f-3fa9-481e-9636-37457962804d
 ```
 
-**Example: Dump Scope with Path**
+#### **Example: Dump Scope with Path**
 
 ```
 dbg >ds DateOfBirth
@@ -95,15 +91,15 @@ Path: DateOfBirth
 5/22/1986 12:00:00 AM
 ```
 
-#### dj - Dump JSON
+### dj - Dump JSON
 
 Dumps the current scope object to HDSI JSON format
 
-**Parameters**
+#### **Parameters**
 
 * \[path] - The object property path to be dumped
 
-**Example: Dump Scope as JSON**
+#### **Example: Dump Scope as JSON**
 
 ```
 dbg >dj
@@ -117,13 +113,13 @@ dbg >dj
 }
 ```
 
-#### dv - Dump View Model
+### dv - Dump View Model
 
 Dumps the current scope object as ViewModel format
 
 **Remarks**: This command is useful when debugging data which is being sent to the view model in the AngularJS controllers
 
-**Example: Dump Scope as ViewModel**
+#### **Example: Dump Scope as ViewModel**
 
 ```
 dbg >dv
@@ -140,15 +136,15 @@ dbg >dv
 }
 ```
 
-#### dx - Dump XML
+### dx - Dump XML
 
 Dumps the current scope object as IMSI XML format
 
-**Parameters:**
+#### **Parameters:**
 
 * \[path] - The path within the object which should be dumped to screen
 
-**Example: Dump Scope as XML**
+#### **Example: Dump Scope as XML**
 
 ```
 dbg >dx
@@ -163,15 +159,17 @@ dbg >dx
 </Patient>
 ```
 
-#### xs - Exchange Scope
+### xs - Exchange Scope
 
 Exchanges the scope for a child element of the current scope.
 
-**Parameters:**
+#### **Parameters:**
 
 * \[path] - The path within the current scope object to exchange the debugging scope with
 
-**Example: Exchange Scope for Array Item** Sets scope to a query then exchanges scope to first search result:
+#### **Example: Exchange Scope for Array Item**&#x20;
+
+Sets scope to a query then exchanges scope to first search result:
 
 ```
 dbg >ds
@@ -196,39 +194,41 @@ Type: SanteDB.Core.Model.Roles.Patient
 Asm:  SanteDB.Core.Model, Version=1.0.0.22772, Culture=neutral, PublicKeyToken=null
 ```
 
-#### q - Quit
+### q - Quit
 
 Exits the debugger
 
-#### ? - Show Help
+### ? - Show Help
 
 Shows a complete list of commands for the current debugger
 
-#### dbi - Database Insert
+### dbi - Database Insert
 
 Inserts the current scope object into the database, setting the scope variable to the inserted instance.
 
-#### lds - List Data Services
+### lds - List Data Services
 
 Lists all loaded services in the debugger environment
 
-#### ls - List Directory
+### ls - List Directory
 
 Lists the current working directory contents
 
-**Parameters:**
+#### **Parameters:**
 
 * \[dir] - The subdirectory to list contents of
 
-#### ofs - Output Full Stack
+### ofs - Output Full Stack
 
 Output full stack traces instead of the summarized stack traces.
 
-#### pdq - Print Data Query
+### pdq - Print Data Query
 
 Executes a database query against the attached database, however does not set the scope.
 
-**Remarks:** This is useful when you want to query the database but do not want to set the scope (i.e. finding a record you will later set the scope to) **Parameters**
+**Remarks:** This is useful when you want to query the database but do not want to set the scope (i.e. finding a record you will later set the scope to)&#x20;
+
+#### **Parameters**
 
 * \[type] - The type of resource being queried
 * \[qry] - The HDSI format query to be executed
@@ -236,14 +236,14 @@ Executes a database query against the attached database, however does not set th
 * \[take] - Takes the specified number of records from the dataset
 * \[path] - The sub-path within the query result to show
 
-**Valid Uses:**
+#### **Valid Uses:**
 
 * &#x20;`pdq [type] [qry]` - Simple query
 * &#x20;`pdq [type] [qry] [path]` - Simple query, printing path
 * &#x20;`pdq [type] [qry] [skip] [take]` - Query with result control limits
 * &#x20;`pdq [type] [qry] [skip] [take] [path]` - Query with control limits, output selected path
 
-**Example: Query for patients with name Justin and show the first result's address**
+#### **Example: Query for patients with name Justin and show the first result's address**
 
 ```
 dbg >pdq Patient name.component.value=Justin [0].Addresses
@@ -253,26 +253,26 @@ Count:1
 [0] SanteDB.Core.Model.Entities.EntityAddress
 ```
 
-#### pwd - Print Working Directory
+### pwd - Print Working Directory
 
 Prints the current working directory to the screen.
 
-#### ss - Set Scope
+### ss - Set Scope
 
 Sets the scope to the specified simple object
 
-**Parameters:**
+#### **Parameters:**
 
 * \[scope] - The simple object to set to scope
 * \[type] - The type of resource to set scope to
 * \[data] - The JSON formatted data to set the typed scope to (can only be used with type)
 
-**Valid Uses:**
+#### **Valid Uses:**
 
 * &#x20;`ss [scope]` - Simple Data
 * &#x20;`ss [type] [data]` - Complex data from JSON
 
-**Example: Set scope to 'hello world!'**
+#### **Example: Set scope to 'hello world!'**
 
 ```
 dbg >ss 'Hello World!'
@@ -283,7 +283,7 @@ Str:  Hello World!
 Hello World!
 ```
 
-**Example: Set scope to a patient with date of birth of March 1, 2017**
+#### **Example: Set scope to a patient with date of birth of March 1, 2017**
 
 ```
 dbg >ss Patient '{"dateOfBirth":"2018-03-17"}'
@@ -304,18 +304,18 @@ CreationTimeXml           String                    null
 DateOfBirth               Nullable`1                3/17/2018 12:00:00 AM
 ```
 
-#### sd - Set Database Scope
+### sd - Set Database Scope
 
 Sets the current scope from the specified database object.
 
 **Remarks:** This command is useful when reproducing bugs with a known patient identifier.
 
-**Parameters:**
+#### **Parameters:**
 
 * \[type] - The resource type of data to load
 * \[id] - The identifier of the data to be loaded
 
-**Example: Load patient with ID be6420ac-6ba8-4faa-98f6-7d9efdcd04a0 to scope**
+#### **Example: Load patient with ID be6420ac-6ba8-4faa-98f6-7d9efdcd04a0 to scope**
 
 ```
 dbg >sd Patient be6420ac-6ba8-4faa-98f6-7d9efdcd04a0
@@ -326,25 +326,25 @@ Str:  Patient (K:be6420ac-6ba8-4faa-98f6-7d9efdcd04a0, V:1c0749f3-bcdf-42af-a36a
 ...
 ```
 
-#### sdq - Set Database Scope Query
+### sdq - Set Database Scope Query
 
 Sets the current scope to the result of a query with optional controls
 
 **Remarks:** This operation is useful when you don't know the key of the data in a database to reproduce an issue, however you know attributes of the data.
 
-**Parameters:**
+#### **Parameters:**
 
 * \[type] - The type of data to be queried
 * \[qry] - The query to be executed
 * \[skip] - The number of results to skip in the result set
 * \[take] - The number of results to take
 
-**Valid Uses:**
+#### **Valid Uses:**
 
 * &#x20;`sdq [type] [qry]` - Set scope to results of query
 * &#x20;`sdq [type] [qry] [skip] [take]` - Set scope to results of query with result control
 
-**Example: Set scope to all Patients having an external identifier of 1234567890**
+#### **Example: Set scope to all Patients having an external identifier of 1234567890**
 
 ```
 dbg >sdq Patient identifier.value=1234567890
@@ -352,7 +352,7 @@ INF: Patient where o => o.Identifiers.Any(identifier => (identifier.Value == "12
 INF: 1 set to scope
 ```
 
-**Example: Set scope to first 10 patients with name containing 'a'**\*
+#### **Example: Set scope to first 10 patients with name containing 'a'**\*
 
 ```
 dbg >sdq Patient name.component.value=~*a* 0 10
@@ -360,30 +360,30 @@ INF: Patient where o => o.Names.Any(name => name.Component.Any(component => (com
 INF: 15 result (0..10 set to scope)
 ```
 
-#### sfv - Set File (View Model)
+### sfv - Set File (View Model)
 
 Sets the current scope to the contents of a JSON file formatted in ViewModel format
 
-**Parameters:**
+#### **Parameters:**
 
 * \[type] - The type of data the JSON View Model file contains
 * \[file] - The name of the file to load
 
-#### sfj - Set File JSON
+### sfj - Set File JSON
 
 Sets the current scope to the contents of a IMSI JSON file.
 
 **Remarks:** The JSON file must carry a valid "$type" property.
 
-**Parameters:**
+#### **Parameters:**
 
 * \[file] - The file to be loaded
 
-#### sfx - Set File XML
+### sfx - Set File XML
 
 Sets the current scope to the contents of an IMSI XML file
 
-**Parameters:**
+#### **Parameters:**
 
 * \[type] - The type of resource the file contains
 * \[file] - The path to the XML file to load

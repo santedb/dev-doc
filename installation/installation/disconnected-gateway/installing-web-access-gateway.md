@@ -137,7 +137,7 @@ By default, the SanteDB dCDR instances will optimize traffic with the central iC
 
 If you're running the iCDR server on the same machine as the Web Access Gateway or are using a 10gbE connection between the two, you can set this to Local Network, since this will disable all compression (saving compute resources). If you are running the Web Access Gateway and iCDR in an environment which has a slower connection between the iCDR and dCDR it may be beneficial to select another option.
 
-![](<../../../.gitbook/assets/image (443) (1) (1).png>)
+![](<../../../.gitbook/assets/image (443) (1) (1) (1).png>)
 
 | Optimization Setting | Compression Used |
 | -------------------- | ---------------- |

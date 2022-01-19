@@ -242,7 +242,7 @@ The installation qualification tool uses PMIR notifications and subscriptions, i
 
 Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
 
-![](<../.gitbook/assets/image (425) (1) (1).png>)
+![](<../.gitbook/assets/image (425) (1) (1) (1).png>)
 
 If all tests return green status, it indicates that your copy of SanteMPI is operating as expected for baseline FHIR functions.
 
