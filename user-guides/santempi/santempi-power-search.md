@@ -8,7 +8,7 @@ Some SanteMPI servers impose minimum search criteria and/or restricted search cr
 
 When a user visits the power search screen, they are presented with an empty search input area.
 
-![](<../../.gitbook/assets/image (448).png>)
+![](<../../.gitbook/assets/image (448) (1).png>)
 
 ## Creating Search Criteria
 
@@ -69,5 +69,5 @@ Using the cast operator `@` the input can be filtered to places only.
 
 If the SanteDB instance is collecting data other than patient registrations (such as vaccinations), the properties of patient can be linked deeply. For example, if we wanted to filter on patients who have received a vaccination of a particular product.
 
-![](<../../.gitbook/assets/image (441).png>)
+![](<../../.gitbook/assets/image (441) (1).png>)
 

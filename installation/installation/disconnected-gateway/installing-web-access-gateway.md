@@ -107,7 +107,7 @@ When configuring the SanteDB Web Access Gateway (like all dCDR instances) you mu
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 
-![](<../../../.gitbook/assets/image (441) (1).png>)
+![](<../../../.gitbook/assets/image (441) (1) (1).png>)
 
 {% hint style="info" %}
 The SanteDB dCDR software packages like the Windows Application, Android Application and dCDR Gateway may opt to not auto-update applets depending on bandwidth restrictions.
@@ -129,7 +129,7 @@ By default, SanteDB Web Access Gateway release builds will only log events which
 
 It is recommended you leave the default application services selected for the Web Access Gateway. These settings are primarily intended for disconnected client gateways which require fine tuning of HL7, FHIR, ATNA and other services for local clinics.
 
-![](<../../../.gitbook/assets/image (444) (1) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1) (1).png>)
 
 ### Set Networking Parameters
 
