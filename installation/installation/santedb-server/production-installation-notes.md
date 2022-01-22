@@ -173,3 +173,40 @@ Disabling this service means that no data quality validation is performed. This 
 {% hint style="info" %}
 The SanteDB team is implementing a background method for running data quality rules.
 {% endhint %}
+
+## Distributed / Clustered Environments
+
+SanteDB iCDR can be deployed in a distributed nature, however there are some caveats to choosing this type of deployment which will impact the rollout of SanteDB.
+
+### Caching
+
+The caching environment in a clustered SanteDB iCDR application server environment should be configured such that.
+
+|                         | Single Server       | Clustered                                  |
+| ----------------------- | ------------------- | ------------------------------------------ |
+| Data Cache              | In-Process or REDIS | REDIS recommended (In-Process inefficient) |
+| Ad-Hoc Cache            | In-Process or REDIS | REDIS required                             |
+| Query Persistence Cache | In-Process or REDIS | REDIS required                             |
+
+### Service Configuration
+
+Currently, in SanteDB iCDR - the service hosts use a local configuration file to start up and read application configuration settings (the exception to this is the Docker host which uses environment variables for settings). If clustering your application servers, it is important that these files reflect the role of the application server in the SanteDB cluster, and that each configuration file in the cluster is synchronized based on that role.&#x20;
+
+For example, a clustered environment may be deployed as:
+
+| Logical Role           | Servers                                                                                | Configuration                                                                                                                                                         |
+| ---------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Database Server        | <p>master.db.santedb.org<br>secondary1.db.santedb.org<br>secondary2.db.santedb.org</p> | Standard PostgreSQL streaming replication                                                                                                                             |
+| REDIS cache server     | cache.santedb.org                                                                      | Memory-Only REDIS                                                                                                                                                     |
+| AMI APP Server         | ami.santedb.org                                                                        | <ul><li>Job Schedules</li><li>Applet files</li><li>ADO.NET match configuration source</li></ul>                                                                       |
+| HDSI + BIS APP Servers | <p>hdsi1.santedb.org<br>hdsi2.santedb.org</p>                                          | <ul><li>ADO.NET match configuration source</li><li>ADO.NET Data Quality </li><li>ADO.NET Clinical Protocol Repository</li><li>AMI applet repository source.</li></ul> |
+
+### Match Configuration Service
+
+At the time of writing, only file-system based match configuration services are supported by SanteDB iCDR. Since a distributed application environment would yield varying results as clients bounce between application servers, it using SanteDB in a distributed application server environment, it is recommended that the match configuration service be set to a UNC network share (where each application server can read configuration data from a common directory).
+
+{% hint style="info" %}
+The SanteDB community is working on a solution for match configurations which uses database configurations to ease clustering.
+{% endhint %}
+
+###
