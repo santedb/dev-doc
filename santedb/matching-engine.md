@@ -330,13 +330,24 @@ The batch matching process registers 4 primary threads on the actively configure
 * Writer Thread: Once the match thread workers have completed their matching task, the results are queued for the writer thread. The writer thread is responsible for committing the matches to the read/write database.&#x20;
 * Monitor Thread: The monitoring thread is responsible for updating the status of the job.
 
-The performance of the batch matching will depend on the speed of the host machine as well as the version of SanteDB that is being used. On the SanteSuite test environment (8 VCPU + 4 GB RAM for app server and 8 VCPU + 12 GB RAM for DB server using REDIS caching):
+The performance of the batch matching will depend on the speed of the host machine as well as the version of SanteDB that is being used.&#x20;
+
+SanteSuite's community server  was used for testing in the following configuration:
+
+* Application Server:&#x20;
+  * 4 VCPU&#x20;
+  * 4 GB RAM&#x20;
+  * Non-persistent (ram-only) REDIS Cache
+* Database Server:&#x20;
+  * 12 VCPU&#x20;
+  * 12 GB RAM&#x20;
+  * RAID 1+0 SSD disk infrastructure (4+4 SSD)
+
+The versions of SanteDB tested yielded the following results:
 
 * Version < 2.1.160 of SanteDB: \~28,000 records per hour
 * Version > 2.1.165 of SanteDB: \~50,000 records per hour
 * Version 2.3.x of SanteDB (internal alpha): \~100,000 records per hour
-
-Additional scaling of the persistence layer and application server would yield higher match throughput.
 
 {% hint style="info" %}
 It is important to ensure that your host system is configured such that the thread pool (accessed through the Probes administrative panel) has at minimum, 5 available worker threads to complete batch matching.&#x20;
