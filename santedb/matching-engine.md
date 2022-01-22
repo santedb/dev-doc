@@ -310,3 +310,34 @@ Here, the matching engine would alter the given scores for each of the patients 
 | Kimberleigh Smith | Kimberleigh       | KMPR       | PASS      | 0.429      | 42% of match score   |
 | Kimberly Smith    | Kimberly          | KMPR       | PASS      | 1.0        | 100% of match score  |
 | Kimber Smith      | Kimber            | KMPR       | PASS      | 0.715      | 71.5% of match score |
+
+## Bulk / Batch Matching
+
+Each data type which is registered in the [Master Data Management](data-storage-patterns/master-data-storage.md) pattern has a corresponding [Match Job](../operations/cdr-administration/santedb-administration-panel/system-administration/jobs.md) registered. This job resets the suspected ground truth using the following rules:
+
+| Remove / Delete:                                                                              | Keep:                                                                                  |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| <ul><li>Suspected Client Links (MDM-Candidate links)</li><li>Automatic Master Links</li></ul> | <ul><li>Verified Ignore</li><li>Verified Matches</li><li>System Master Links</li></ul> |
+
+After the suspected truth is cleared, the job will begin the process of re-matching the registered dataset for SanteDB. The matching process is multi-threaded, and designed to ensure that the machine on which the match process is as efficient as possible. To do this, the following pattern is used:
+
+![](<../.gitbook/assets/image (444).png>)
+
+The batch matching process registers 4 primary threads on the actively configured thread pool to control the match process:
+
+* Gather Thread: This worker is responsible for querying data from the source dataset in 1,000 record batches. The rate at which the records are loaded will depend on the speed of the persistence layer (SanteDB 2.1.x or 2.3.x) as well as the disk performance of the storage technology.
+* Match Thread: This worker is responsible for breaking the 1,000 record batches into smaller partitions of records (depending on CPU of host machine). The configured matching algorithm is then launched for each record in the batch on independent threads (i.e. matching is done concurrently on the host machine).&#x20;
+* Writer Thread: Once the match thread workers have completed their matching task, the results are queued for the writer thread. The writer thread is responsible for committing the matches to the read/write database.&#x20;
+* Monitor Thread: The monitoring thread is responsible for updating the status of the job.
+
+The performance of the batch matching will depend on the speed of the host machine as well as the version of SanteDB that is being used. On the SanteSuite test environment (8 VCPU + 4 GB RAM for app server and 8 VCPU + 12 GB RAM for DB server using REDIS caching):
+
+* Version < 2.1.160 of SanteDB: \~28,000 records per hour
+* Version > 2.1.165 of SanteDB: \~50,000 records per hour
+* Version 2.3.x of SanteDB (internal alpha): \~100,000 records per hour
+
+Additional scaling of the persistence layer and application server would yield higher match throughput.
+
+{% hint style="info" %}
+It is important to ensure that your host system is configured such that the thread pool (accessed through the Probes administrative panel) has at minimum, 5 available worker threads to complete batch matching.&#x20;
+{% endhint %}
