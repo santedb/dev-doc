@@ -10,6 +10,10 @@ The docker containers all use the mono:latest as their root container.
 * santedb\_mpi: The generic iCDR project with the SanteGuard and SanteMPI plugins enabled.
 * santedb\_dcdr: The disconnected dCDR project
 
+{% hint style="info" %}
+SanteDB iCDR and dCDR images use the Mono Framework to operate. Depending on your host environment, you may need to modify the `MONO_THREADS_PER_CPU` environment variable for the iCDR and dCDR if the default thread pool (accessed via the [probes.md](../../../../operations/cdr-administration/santedb-administration-panel/system-administration/probes.md "mention")screen in the portal) indicates a small number of threads available.
+{% endhint %}
+
 ## Configuring the Docker Containers
 
 ### Container Directory/File Structures

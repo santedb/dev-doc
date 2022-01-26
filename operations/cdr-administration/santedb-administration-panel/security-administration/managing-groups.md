@@ -69,7 +69,7 @@ By default a new group will have no policies associated with the group. Administ
 
 By default a group will be assigned the policy with a GRANT permission. You can alter these by clicking the permission.
 
-![](<../../../../.gitbook/assets/image (433) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
 
 The permission types in SanteDB are:
 

@@ -151,7 +151,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (433) (1) (1) (1) (1) (1).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
@@ -216,7 +216,7 @@ You do not need to SAVE policy assignments, they are applied immediately.
 
 The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
 
-![](<../.gitbook/assets/image (435) (1) (1).png>)
+![](<../.gitbook/assets/image (435) (1) (1) (1).png>)
 
 ## Perform Installation Qualification
 

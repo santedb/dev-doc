@@ -38,7 +38,7 @@ The application secret should be saved and sent to the integration partner or ap
 
 When editing an application from the application list or after creating an application, the properties of the device can be modified.
 
-![](<../../../../.gitbook/assets/image (441).png>)
+![](<../../../../.gitbook/assets/image (441) (1).png>)
 
 ### Resetting Security State
 
@@ -46,7 +46,7 @@ Applications, like users and devices, can become locked if they fail to authenti
 
 Each time an application authentication attempt fails, the invalid authentication counter will be incremented until the application locks.&#x20;
 
-![](<../../../../.gitbook/assets/image (443).png>)
+![](<../../../../.gitbook/assets/image (443) (1).png>)
 
 An administrator the security settings:
 
@@ -62,7 +62,7 @@ By default a new application will copy its policies from the `APPLICATIONS` grou
 
 By default an application will be assigned the policy with a GRANT permission. You can alter these by clicking the permission type.
 
-![](<../../../../.gitbook/assets/image (433) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
 
 The permission types in SanteDB are:
 
