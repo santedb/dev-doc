@@ -55,7 +55,9 @@
 ## Installation
 
 * [Installation](installation/installation.md)
-* [Releases](installation/installation/releases.md)
+* [Releases](installation/releases/README.md)
+  * [Community Technology Preview Release Notes](installation/releases/community-technology-preview-release-notes/README.md)
+    * [Queenston Releases (2.1.150 - 2.1.180)](installation/releases/community-technology-preview-release-notes/queenston-releases-2.1.150-2.1.180.md)
 * [Quick Start Guide](installation/quick-start-guide.md)
 * [Installing SanteDB](installation/installation/README.md)
   * [Planning & Preparation Work](installation/installation/planning-and-preparation-work/README.md)
