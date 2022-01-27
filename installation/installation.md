@@ -10,8 +10,8 @@ It is recommended that readers review the [Broken link](broken-reference "mentio
 [quick-start-guide.md](quick-start-guide.md)
 {% endcontent-ref %}
 
-{% content-ref url="releases/" %}
-[releases](releases/)
+{% content-ref url="installation/releases.md" %}
+[releases.md](installation/releases.md)
 {% endcontent-ref %}
 
 {% content-ref url="installation/" %}

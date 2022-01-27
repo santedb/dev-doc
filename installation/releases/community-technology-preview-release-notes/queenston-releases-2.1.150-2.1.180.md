@@ -21,6 +21,7 @@ Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases
 * The entity relationship graph on the patient profile screen will show duplicate links
 * Caching of some entities shows erroneous data on the relationship graphs. Validation of the state at database reveals this is a caching issue.&#x20;
 * Running the background matching task in Linux or Docker can result in CPU use at 100% as the `ThreadPool` and `ConcurrentQueue<T>` implementations in Mono framework appear to be implemented in a slightly, less efficient manner.
+* There is a display bug for entities which have been auto-merged using the `$mdm.auto-link` flag where the resulting source record will display multiple relationships (indicating they are active when they are not).&#x20;
 
 ### PostgreSQL FreeText Search
 
