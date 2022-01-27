@@ -1,17 +1,29 @@
 # Jobs
 
-tThe jobs panel shows the available system jobs within the SanteDB server. System jobs are implementations of the `IJob` interface and may be run on a schedule (such as cleaning or maintenance jobs) or might be one off jobs. Jobs are shown with their last execution time and current status.
+The jobs panel shows the available system jobs within the SanteDB server. System jobs are implementations of the `IJob` interface and may be run on a schedule (such as cleaning or maintenance jobs) or might be one off jobs. Jobs are shown with their last execution time and current status.
 
 {% hint style="info" %}
 Jobs are run in the background and can execute without blocking other processes. The Jobs panel can be used to see the last time a job was run, its outcome and to manually kickstart the job.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (443).png>)
+The jobs panel summary shows the list of jobs registered on the dCDR or iCDR.
+
+![](<../../../../.gitbook/assets/image (437).png>)
 
 The columns for the job indicate:
 
 * Name - The name and description of the job which is represented.
-* Schedule / Repeat - Indicates the&#x20;
+* Schedule / Repeat - Indicates the configured schedule for the job.
+* Current State - Shows the current status of the job.
+  * Running - The job is currently executing in the background
+  * Aborted - The job started, however due to an error it had to stop
+  * Not Yet Run - The job has never been run
+  * Complete - The job has completed successfully
+  * Cancelled - The job was cancelled before it could be completed
+* Actions - Allows the administrator to control the job:
+  * Run - Run the job immediately
+  * Cancel - (if supported) Send a cancellation request to the job
+  * Schedule - Modify or set the job's schedule
 
 ## Running a Job
 
