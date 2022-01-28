@@ -88,5 +88,11 @@ When running the background matching job in Docker , users may experience period
 
 Users may experiment with the `MONO_THREADS_PER_CPU` environment variable to tune the performance of their deployment.
 
+## Version 2.1.170.1
 
+This version is a patch for the 2.1.170 release. It fixes the following issues found in 2.1.170:
+
+* Fixes logic for timer jobs based on calendar to reduce the "greedyness" of the jobs
+* Fixes display caching issue (was an issue with the BulkPurge function) so new data is properly rendered.
+* Fixes some threading issues with the .NET ThreadPool on background matching
 
