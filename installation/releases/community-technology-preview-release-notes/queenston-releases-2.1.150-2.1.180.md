@@ -90,6 +90,8 @@ Users may experiment with the `MONO_THREADS_PER_CPU` environment variable to tun
 
 ## Version 2.1.170.1
 
+**Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/)
+
 This version is a patch for the 2.1.170 release. It fixes the following issues found in 2.1.170:
 
 * Fixes logic for timer jobs based on calendar to reduce the "greedyness" of the jobs
