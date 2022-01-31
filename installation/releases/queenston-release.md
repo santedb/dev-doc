@@ -1,8 +1,8 @@
-# 2.1.x Community Technology Previews
+# Queenston Release
 
 Releases which are "preview" releases for the 2.2.x series are in the 2.1.x branch listing. The minor revisions on 2.1.x are incremented at a different rate than the 2.2.0 series. For example, 2.1.175 is the CTP for 2.2.0 , and 2.1.190 may be the CTP for 2.2.1. Generally, the informational version will track between both branches.
 
-## Version 2.1.170
+## Version 2.1.170 (CTP)
 
 Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170/)
 
@@ -90,7 +90,7 @@ When running the background matching job in Docker , users may experience period
 
 Users may experiment with the `MONO_THREADS_PER_CPU` environment variable to tune the performance of their deployment.
 
-## Version 2.1.170.1
+## Version 2.1.170.1 (CTP)
 
 **Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/)
 
@@ -100,7 +100,7 @@ This version is a patch for the 2.1.170 release. It fixes the following issues f
 * Fixes display caching issue (was an issue with the BulkPurge function) so new data is properly rendered.
 * Fixes some threading issues with the .NET ThreadPool on background matching
 
-## Version 2.1.175
+## Version 2.1.175 (CTP)
 
 **Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.175/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.175/)
 
@@ -118,3 +118,4 @@ This is a minor release which correct small performance and caching issues. Incl
   * Fixes issues with ignored records when blocking is performed in SOURCE mode
 * Adds new `date_trunc` filter expression for HDSI queries. This is more efficient than `date_diff` in that it allows date column indexes to be used.
 * Increases performance of `levenshtein` filter function on PostgreSQL by changing logic from : `where levenshtein(column_name, ?) < value` to `where column_name % ? and levenshtein(column_name, ?) < value` which allows PostgreSQL to use the GIN indexing to reduce the number of rows passed to levenshtein function.
+
