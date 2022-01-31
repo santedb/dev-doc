@@ -251,7 +251,7 @@ For example, to filter for patients who have a name which sounds like, is about 
 name.component.value=:(approx|JIHN)
 ```
 
-### Sounds Like
+### Sounds Like (santedb-match plugin)
 
 Uses the configured phonetic algorithm to determine whether the supplied string sounds like the stored property value.
 
@@ -271,7 +271,7 @@ For example, to filter for patients who have a name which sounds like Tyler (i.e
 name.component.value=:(soundexlike|TYLER)
 ```
 
-### Phonetic Difference
+### Phonetic Difference (santedb-match plugin)
 
 The phonetic difference function is used to compare the difference in phonetic codes between two values. This function by default uses the SOUNDEX algorithm and then performs a LEVENSHTEIN function against the result.
 
@@ -284,6 +284,59 @@ The phonetic difference function is used to compare the difference in phonetic c
 | otherString | Required | The other string to compare                                    |
 | algorithm   | Optional | Dictates the algorithm to use (soundex, metaphone, dmetaphone) |
 | (return)    |          | The difference (0 - 4) in soundex codes                        |
+
+### Soundex Comparison (santedb-match plugin)
+
+The soundex comparison is used to compare the difference in SOUNDEX codes of each input.
+
+```
+:(soundex)OTHER
+```
+
+### Metaphone Comparison (santedb-match plugin)
+
+The metaphone comparison is used to compare the values based on their metaphone code. Metaphone filter takes an optional length specifier.
+
+```
+:(metaphone)OTHER
+:(metaphone|3)OTHER
+```
+
+### Double Metaphone Comparison (santedb-match plugin)
+
+The double metaphone comparison is used to compare values based on the double metaphone code.
+
+```
+:(dmetaphone)OTHER
+```
+
+### Levenshtein Difference (santedb-match plugin)
+
+The levenshtein difference is used to compute the difference in edit distance between the source and input.
+
+```
+:(levenshtein|OTHER)<3
+```
+
+{% hint style="info" %}
+Using the `levenshtein` function has a performance penalty in that the database tables storing the values (identifiers, addresses, etc.) needs to be sequentially scanned. If you can, consider using `similarity` which can use PostgreSQL's trigram indexes.
+{% endhint %}
+
+### Similarity (santedb-match plugin)
+
+The similarity function will use the database's string matching similarity functionality to perform an indexed match (in PostgreSQL the similarity operator used). For example, to compare similarity of given names > 0.8 from SMITH
+
+```
+name.component[Family].value=:(similarity|SMITH)>0.8
+```
+
+{% hint style="info" %}
+When using PostgreSQL the `:(similarity)` filter function will be translated into an optimized lookup of `column % 'SMITH' AND similarity(column, 'SMITH') > 0.8` . It is therefore important to properly set the default (used by the `%` operator) via:&#x20;
+
+```sql
+ALTER DATABASE santedb SET pg_trgm.word_similarity_threshold = 0.6;
+```
+{% endhint %}
 
 ## Control Parameters
 
