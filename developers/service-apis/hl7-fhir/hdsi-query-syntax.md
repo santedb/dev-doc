@@ -338,6 +338,27 @@ ALTER DATABASE santedb SET pg_trgm.word_similarity_threshold = 0.6;
 ```
 {% endhint %}
 
+### Similarity + Levenshtein (santedb-match plugin)
+
+The `similarity_lev` filter acts similar to the similarity in that it uses the underlying database technology's GIN indexing to perform a similarity, however the final result is run through the `levenshtein` function.&#x20;
+
+```
+identifier[SSN].value=:(similarity_lev|304-304-3049)<3
+```
+
+Would be queried in PostgreSQL as:
+
+```
+WHERE id_val % '304-304-3049' AND levenshtein(id_val, '304-304-3049') < 3
+```
+
+This method should be used over similarity when:
+
+* The strings being compared require an exact number of modifications to pass the filter (like identifiers accounting for type-o's)
+* The use case has too many values for a plain levenshtein and a pre-index of similarity is preferred.
+
+Implementers should note that the default similarity threshold will impact what is passed to levenshtein and the database will need be tuned based on the implementation specific data. For example, if using Canadian Social Insurance Numbers, with a desired levenshtein test of 5 then it would best to set `word_similarity_threshold` to 0.4 since SIN numbers with 5 edits would be represent a 60% difference in source strings.
+
 ## Control Parameters
 
 HDSI query control parameters are prefixed with an underscore. These query parameters are not mapped to the internal data structures of the RIM for filtering, and are intended, to provide control over how the result set is returned.
