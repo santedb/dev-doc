@@ -2,6 +2,35 @@
 
 Releases which are "preview" releases for the 2.2.x series are in the 2.1.x branch listing. The minor revisions on 2.1.x are incremented at a different rate than the 2.2.0 series. For example, 2.1.175 is the CTP for 2.2.0 , and 2.1.190 may be the CTP for 2.2.1. Generally, the informational version will track between both branches.
 
+## Version 2.1.175 (CTP)
+
+**Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.175/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.175/)
+
+This is a minor release which correct small performance and caching issues. Included in this fix are:
+
+* Addresses over-threading of the rest and internal background job thread pool (adds option to use .NET thread pool for all services)
+* Addresses under-caching issues where client using `If-None-Match` would not receive a cached version but would hit the database.
+* Fixes issues with the new version of NPGSQL related to handing of DateTime and DateTimeOffset
+* Adds units of measure to the dCDR Web Access Gateway admin portal on probes
+* Fixes issue where scheduled tasks (starting before date of startup) are executed on start rather than waiting until the next execution window
+* Adds performance probes for:
+  * .NET Thread Pool I/O and Worker Threads
+  * ADO.NET Database Connections (active read/write, statements being executed)
+* Adds ability to change blocking instructions to operate on MASTER or SOURCE mode
+  * Fixes issues with ignored records when blocking is performed in SOURCE mode
+* Adds new `date_trunc` filter expression for HDSI queries. This is more efficient than `date_diff` in that it allows date column indexes to be used.
+* Increases performance of `levenshtein` filter function on PostgreSQL by changing logic from : `where levenshtein(column_name, ?) < value` to `where column_name % ? and levenshtein(column_name, ?) < value` which allows PostgreSQL to use the GIN indexing to reduce the number of rows passed to levenshtein function.
+
+## Version 2.1.170.1 (CTP)
+
+**Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/)
+
+This version is a patch for the 2.1.170 release. It fixes the following issues found in 2.1.170:
+
+* Fixes logic for timer jobs based on calendar to reduce the "greedyness" of the jobs
+* Fixes display caching issue (was an issue with the BulkPurge function) so new data is properly rendered.
+* Fixes some threading issues with the .NET ThreadPool on background matching
+
 ## Version 2.1.170 (CTP)
 
 Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170/)
@@ -90,32 +119,5 @@ When running the background matching job in Docker , users may experience period
 
 Users may experiment with the `MONO_THREADS_PER_CPU` environment variable to tune the performance of their deployment.
 
-## Version 2.1.170.1 (CTP)
 
-**Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.170.1/)
-
-This version is a patch for the 2.1.170 release. It fixes the following issues found in 2.1.170:
-
-* Fixes logic for timer jobs based on calendar to reduce the "greedyness" of the jobs
-* Fixes display caching issue (was an issue with the BulkPurge function) so new data is properly rendered.
-* Fixes some threading issues with the .NET ThreadPool on background matching
-
-## Version 2.1.175 (CTP)
-
-**Release Assets:** [http://santesuite.org/assets/uploads/santedb/community/releases/2.1.175/](http://santesuite.org/assets/uploads/santedb/community/releases/2.1.175/)
-
-This is a minor release which correct small performance and caching issues. Included in this fix are:
-
-* Addresses over-threading of the rest and internal background job thread pool (adds option to use .NET thread pool for all services)
-* Addresses under-caching issues where client using `If-None-Match` would not receive a cached version but would hit the database.
-* Fixes issues with the new version of NPGSQL related to handing of DateTime and DateTimeOffset
-* Adds units of measure to the dCDR Web Access Gateway admin portal on probes
-* Fixes issue where scheduled tasks (starting before date of startup) are executed on start rather than waiting until the next execution window
-* Adds performance probes for:
-  * .NET Thread Pool I/O and Worker Threads
-  * ADO.NET Database Connections (active read/write, statements being executed)
-* Adds ability to change blocking instructions to operate on MASTER or SOURCE mode
-  * Fixes issues with ignored records when blocking is performed in SOURCE mode
-* Adds new `date_trunc` filter expression for HDSI queries. This is more efficient than `date_diff` in that it allows date column indexes to be used.
-* Increases performance of `levenshtein` filter function on PostgreSQL by changing logic from : `where levenshtein(column_name, ?) < value` to `where column_name % ? and levenshtein(column_name, ?) < value` which allows PostgreSQL to use the GIN indexing to reduce the number of rows passed to levenshtein function.
 
