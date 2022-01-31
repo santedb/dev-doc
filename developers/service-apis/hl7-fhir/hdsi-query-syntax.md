@@ -319,7 +319,7 @@ The levenshtein difference is used to compute the difference in edit distance be
 ```
 
 {% hint style="info" %}
-Using the `levenshtein` function has a performance penalty in that the database tables storing the values (identifiers, addresses, etc.) needs to be sequentially scanned. If you can, consider using `similarity` which can use PostgreSQL's trigram indexes.
+Using the `levenshtein` function has a performance penalty in that the database tables storing the values (identifiers, addresses, etc.) needs to be sequentially scanned. If you can, consider using  `similarity_lev` which can uses PostgreSQL's trigram index (see `similarity` extension).
 {% endhint %}
 
 ### Similarity (santedb-match plugin)
