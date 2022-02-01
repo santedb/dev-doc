@@ -94,7 +94,7 @@ X-Delete-Mode: nullify
 
 You may execute a general query against any of the provided resources on the HDSI, AMI or BIS using the query resource type operation. Query resource type is executed via an HTTP GET against the root resource path.
 
-The query parameters are structured using [HDSI Query Syntax](hdsi-query-syntax.md).
+The query parameters are structured using [HDSI Query Syntax](../health-data-service-interface-hdsi/hdsi-query-syntax/).
 
 ```http
 GET /hdsi/Patient?name.component.value=PETER HTTP/1.1
