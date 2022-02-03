@@ -14,7 +14,7 @@ When a user visits the power search screen, they are presented with an empty sea
 
 To begin, enter the HDSI query expression clause. The software will provide suggestions for property clause paths which match the Patient resource. Users can select the property they wish to filter on.
 
-![](<../../.gitbook/assets/image (449).png>)
+![](<../../.gitbook/assets/image (449) (1).png>)
 
 Users may use keyboard shortcuts to navigate the suggestions:
 

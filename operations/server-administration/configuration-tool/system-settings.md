@@ -6,7 +6,7 @@ The system settings group of features is used to control core system functions r
 
 Some SanteDB services which need to send messages will use a persistence queue to store messages in case of delivery failure. The File System Manager queue is a simple queue which uses the local file system as a persistent queue (there are future work items for MSMQ and other technologies).
 
-![](<../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1).png>)
 
 The only setting for the file system queue is the local directory / path where the persistent queue messages should be stored.
 

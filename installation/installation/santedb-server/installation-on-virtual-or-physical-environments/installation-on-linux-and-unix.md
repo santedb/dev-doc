@@ -131,7 +131,7 @@ After this time you can run `systemctl reload-daemons` to load your service defi
 
 SanteDB's configuration tool on linux uses the Mono to GTK+ WinForms implementation. The application is the same application as documented in the [configuration-tool](../../../../operations/server-administration/configuration-tool/ "mention") documentation.
 
-![](<../../../../.gitbook/assets/image (437) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (437) (1) (1) (1) (1).png>)
 
 Details on the initial configuration of SanteDB can be followed from the [Windows Installation](../installing-a-development-demo-environment.md) guide.
 

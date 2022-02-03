@@ -6,8 +6,8 @@ SanteDB solutions such as SanteMPI, SanteIMS, and the generic CDR are installed 
 It is recommended that readers review the [Broken link](broken-reference "mention") documentation to become familiar with the high level concepts of SanteDB architecture.
 {% endhint %}
 
-{% content-ref url="quick-start-guide.md" %}
-[quick-start-guide.md](quick-start-guide.md)
+{% content-ref url="quick-start-guide/" %}
+[quick-start-guide](quick-start-guide/)
 {% endcontent-ref %}
 
 {% content-ref url="installation/releases.md" %}

@@ -46,7 +46,7 @@ Applications, like users and devices, can become locked if they fail to authenti
 
 Each time an application authentication attempt fails, the invalid authentication counter will be incremented until the application locks.&#x20;
 
-![](<../../../../.gitbook/assets/image (443) (1).png>)
+![](<../../../../.gitbook/assets/image (443) (1) (1).png>)
 
 An administrator the security settings:
 
