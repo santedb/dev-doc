@@ -105,8 +105,8 @@ The detail table illustrates the calculated (and weighted) score of each object 
 [master-data-management-tab.md](the-patient-dashboard/master-data-management-tab.md)
 {% endcontent-ref %}
 
-{% content-ref url="matching-configuration.md" %}
-[matching-configuration.md](matching-configuration.md)
+{% content-ref url="matching-configuration/" %}
+[matching-configuration](matching-configuration/)
 {% endcontent-ref %}
 
 {% content-ref url="../../santedb/matching-engine.md" %}

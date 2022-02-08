@@ -286,7 +286,8 @@
       * [Local Records](santempi/correcting-data/local-records.md)
     * [Master Data Management Tab](user-guides/santempi/the-patient-dashboard/master-data-management-tab.md)
     * [Data Quality Tab](user-guides/santempi/the-patient-dashboard/data-quality-tab.md)
-  * [Matching Configuration](user-guides/santempi/matching-configuration.md)
+  * [Matching Configuration](user-guides/santempi/matching-configuration/README.md)
+    * [Match Configuration XML Definition](user-guides/santempi/matching-configuration/match-configuration-xml-definition.md)
 
 ## Developers
 

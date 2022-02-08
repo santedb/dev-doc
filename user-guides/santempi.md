@@ -32,6 +32,6 @@ This section is concerned with the data administration of the screens provided b
 [the-patient-dashboard.md](../santempi/the-patient-dashboard.md)
 {% endcontent-ref %}
 
-{% content-ref url="santempi/matching-configuration.md" %}
-[matching-configuration.md](santempi/matching-configuration.md)
+{% content-ref url="santempi/matching-configuration/" %}
+[matching-configuration](santempi/matching-configuration/)
 {% endcontent-ref %}
