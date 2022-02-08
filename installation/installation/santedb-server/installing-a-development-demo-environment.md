@@ -146,7 +146,7 @@ SanteDB iCDR server packages may be shipped with one ore more [santedb-solutions
 
 Once you've completed the installation options for the SanteDB server and press `Continue` you will be prompted to confirm the initial configuration tasks.
 
-![](<../../../.gitbook/assets/image (448) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (448) (1) (1) (1) (1).png>)
 
 #### Finish Configuration&#x20;
 

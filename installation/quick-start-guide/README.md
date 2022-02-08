@@ -130,7 +130,7 @@ Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:
 
 The rest of the settings can be left as their defaults.
 
-![](<../../.gitbook/assets/image (427) (1) (1).png>)
+![](<../../.gitbook/assets/image (427) (1) (1) (1).png>)
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
@@ -185,7 +185,7 @@ Once your settings are saved, the web access gateway will save the settings and 
 
 You can now log into the web administration console for the Master Patient Index. You can use the administrator/Mohawk123 account to log into the administrative panel.
 
-![](<../../.gitbook/assets/image (447) (1) (1).png>)
+![](<../../.gitbook/assets/image (447) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.

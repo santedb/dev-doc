@@ -7,7 +7,7 @@ The Server Status page allows system administrators to quickly gather server inf
 * The applets which have been enabled in the SanteDB server
 * The installed services and their current state.
 
-![](<../../../../.gitbook/assets/image (427) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (427) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Administrators can enable or disable services on the local dCDR instance. This is not recommended on a Windows or Docker instance of SanteDB and is intended primarily for the Disconnected Gateway and Android applications. The setting of these enable/disable flags requires a restart of the host environment to take full effect.

@@ -60,3 +60,12 @@ Search results are presented in a compact form on the search results page. These
 
 ![](<../.gitbook/assets/image (422).png>)
 
+## Related Topics
+
+{% content-ref url="the-patient-dashboard.md" %}
+[the-patient-dashboard.md](the-patient-dashboard.md)
+{% endcontent-ref %}
+
+{% content-ref url="../user-guides/santempi/santempi-power-search.md" %}
+[santempi-power-search.md](../user-guides/santempi/santempi-power-search.md)
+{% endcontent-ref %}

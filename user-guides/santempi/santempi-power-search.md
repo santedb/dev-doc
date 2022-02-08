@@ -8,7 +8,7 @@ Some SanteMPI servers impose minimum search criteria and/or restricted search cr
 
 When a user visits the power search screen, they are presented with an empty search input area.
 
-![](<../../.gitbook/assets/image (448) (1).png>)
+![](<../../.gitbook/assets/image (448) (1) (1).png>)
 
 ## Creating Search Criteria
 
@@ -59,7 +59,7 @@ Whenever the HDSI expression is a filter on a property of type `Concept` the val
 
 Whenever the HDSI expression is a filter on a property of type `Entity` or when of its derivatives, the search box will be a drop down of entities. For example, searching by citizen results in a search of entities (since `.target` is bound to Entity) .
 
-![](<../../.gitbook/assets/image (429).png>)
+![](<../../.gitbook/assets/image (429) (1).png>)
 
 Using the cast operator `@` the input can be filtered to places only.
 
@@ -71,3 +71,12 @@ If the SanteDB instance is collecting data other than patient registrations (suc
 
 ![](<../../.gitbook/assets/image (441) (1) (1).png>)
 
+## Related Topics
+
+{% content-ref url="../../santempi/santempi-searching.md" %}
+[santempi-searching.md](../../santempi/santempi-searching.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../santempi/the-patient-dashboard.md" %}
+[the-patient-dashboard.md](../../santempi/the-patient-dashboard.md)
+{% endcontent-ref %}

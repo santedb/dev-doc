@@ -79,7 +79,7 @@ A device account's lockout can be reset using the `Unlock` button.
 
 The device secret allows an administrator to set a new device secret. The existing secret for the device is not shown (unless the device is new). Administrators can either `Edit` the secret to a custom value:
 
-![](<../../../../.gitbook/assets/image (447).png>)
+![](<../../../../.gitbook/assets/image (447) (1).png>)
 
 After which, pressing the `Save` button will commit the change. Alternately the administrator can set the secret to a random value with `Reset`.
 

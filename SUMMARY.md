@@ -277,7 +277,7 @@
   * [SanteMPI Matches](user-guides/santempi/santempi-matches.md)
   * [SanteMPI Searching](santempi/santempi-searching.md)
   * [SanteMPI Power Search](user-guides/santempi/santempi-power-search.md)
-  * [SanteMPI Patient Dashboard](santempi/the-patient-dashboard.md)
+  * [SanteMPI Patient Detail](santempi/the-patient-dashboard.md)
     * [Demographics Tab](santempi/correcting-data/README.md)
       * [Editing Demographic Information](santempi/correcting-data/editing-demographic-information.md)
       * [Editing Identifiers](santempi/correcting-data/editing-identifiers.md)

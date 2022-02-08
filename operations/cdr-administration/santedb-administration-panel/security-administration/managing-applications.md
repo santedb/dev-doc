@@ -30,7 +30,7 @@ If creating a security application for HL7 Version 2.x trading partners, the nam
 
 Once created, the administrative interface will show the created application. The administrator must generate an application secret using the **Reset** option.
 
-![](<../../../../.gitbook/assets/image (448).png>)
+![](<../../../../.gitbook/assets/image (448) (1).png>)
 
 The application secret should be saved and sent to the integration partner or application developer.
 

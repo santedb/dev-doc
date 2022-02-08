@@ -23,7 +23,7 @@ When creating a subscription the administrator will be prompted to enter setting
 
 Subscription metadata is used to describe the subscription to other administrators using the iCDR solution.
 
-![](<../../../../.gitbook/assets/image (448) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (448) (1) (1) (1).png>)
 
 * Name - A unique named identifier for the subscription which appear in logs
 * Description - A short description of the subscription, its purpose, why it exists.
@@ -43,7 +43,7 @@ Next, administrators should specify the criteria under which the notification is
 
 The endpoint settings are used to control how and when the messages are sent to the remote endpoint.&#x20;
 
-![](<../../../../.gitbook/assets/image (447) (1).png>)
+![](<../../../../.gitbook/assets/image (447) (1) (1).png>)
 
 * Not Before - The date/time when the endpoint should start receiving messages from the iCDR
 * Not After - The date/time when the endpoint should stop receiving messages from the iCDR

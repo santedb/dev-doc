@@ -35,7 +35,7 @@ Installation of the Web Access Gateway should be performed on machines, containe
 
 Installation of the Web Access Gateway on Microsoft Windows Operating Systems is a standard Windows Installer experience. The application installer will copy the&#x20;
 
-![](<../../../.gitbook/assets/image (429) (1).png>)
+![](<../../../.gitbook/assets/image (429) (1) (1).png>)
 
 After installation is complete you will be asked to [Configure the Web Access Gateway](installing-web-access-gateway.md#undefined).
 
