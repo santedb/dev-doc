@@ -117,7 +117,7 @@ The SanteDB dCDR software packages like the Windows Application, Android Applica
 
 Since the SanteDB Web Access Gateway is intended to be used in an environment where it can always communicate with the iCDR server directly, and because it lacks the storage capacity to operate offline, the synchronization mode of the Web Access Gateway should be set to Online Only.
 
-![](<../../../.gitbook/assets/image (446) (1) (1).png>)
+![](<../../../.gitbook/assets/image (446) (1) (1) (1).png>)
 
 ### Set Log Verbosity
 
@@ -129,7 +129,7 @@ By default, SanteDB Web Access Gateway release builds will only log events which
 
 It is recommended you leave the default application services selected for the Web Access Gateway. These settings are primarily intended for disconnected client gateways which require fine tuning of HL7, FHIR, ATNA and other services for local clinics.
 
-![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1).png>)
 
 ### Set Networking Parameters
 

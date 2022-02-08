@@ -128,7 +128,7 @@ Selecting the PostgreSQL provider will expose the connection parameters for Post
 
 Selecting the Firebird provider will expose the connection parameter for Firebird 3.x provider, SanteDB iCDR will assume you're using the embedded version of Firebird. This database connector has three parameters. See [#firebird](../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#firebird "mention") connection details in the configuration tool documentation.
 
-![](<../../../.gitbook/assets/image (426) (1) (1).png>)
+![](<../../../.gitbook/assets/image (426) (1) (1) (1).png>)
 
 #### Multiple Instances of SanteDB on the Same Server
 
@@ -152,7 +152,7 @@ Once you've completed the installation options for the SanteDB server and press 
 
 You can use the configuration tooling to customize your installation of the SanteDB server. These settings are documented in [configuration-tool](../../../operations/server-administration/configuration-tool/ "mention")
 
-![](<../../../.gitbook/assets/image (444) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1).png>)
 
 Recommended configuration panels and settings to change include:
 

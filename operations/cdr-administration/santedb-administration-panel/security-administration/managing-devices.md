@@ -83,7 +83,7 @@ The device secret allows an administrator to set a new device secret. The existi
 
 After which, pressing the `Save` button will commit the change. Alternately the administrator can set the secret to a random value with `Reset`.
 
-![](<../../../../.gitbook/assets/image (446).png>)
+![](<../../../../.gitbook/assets/image (446) (1).png>)
 
 {% hint style="info" %}
 When using X509 client certificate authentication, the secret of the device account should be X509 thumbprint of the certificate which the device will be presenting to the server. The value of the secret should be the `THUMBPRINT` attribute of the certificate in hexidecimal format in lower case. For example: `a11164321e30c84bd825ab20225421434622c52a`

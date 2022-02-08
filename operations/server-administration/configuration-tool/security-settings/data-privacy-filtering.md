@@ -18,7 +18,7 @@ The `Data Privacy Filtering` panel controls the configuration of the data privac
 
 Expanding the resources input allows administrators to specify resources in the RIM which are subject to special protections. Clicking the ellipsis on the resources property will open a collection editor change the settings for resource controls:
 
-![](<../../../../.gitbook/assets/image (426).png>)
+![](<../../../../.gitbook/assets/image (426) (1).png>)
 
 | Option        | Description                                                                                                                                       | Example                                                                          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |

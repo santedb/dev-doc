@@ -321,7 +321,7 @@ Each data type which is registered in the [Master Data Management](data-storage-
 
 After the suspected truth is cleared, the job will begin the process of re-matching the registered dataset for SanteDB. The matching process is multi-threaded, and designed to ensure that the machine on which the match process is as efficient as possible. To do this, the following pattern is used:
 
-![](<../.gitbook/assets/image (444).png>)
+![](<../.gitbook/assets/image (444) (1).png>)
 
 The batch matching process registers 4 primary threads on the actively configured thread pool to control the match process:
 
