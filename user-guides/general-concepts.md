@@ -57,7 +57,7 @@ Individual records, depending on their type, will permit actions directly from t
 
 SanteDB provides a robust user interface extension mechanism which is exposed using [html-widgets.md](../developers/extending-santesuite/extending-santedb/applets/assets/html-widgets.md "mention"). These widgets are provided by plugins in the SanteDB administrative or user interface panels and render as either new tabs or new panels in a detail screen.
 
-![](<../.gitbook/assets/image (439).png>)
+![](<../.gitbook/assets/image (439) (1).png>)
 
 The panel may optionally show one or more action buttons (or alternate views):
 

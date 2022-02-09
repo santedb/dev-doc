@@ -289,7 +289,7 @@
     * [Data Quality Tab](user-guides/santempi/the-patient-dashboard/data-quality-tab.md)
   * [Matching Configuration](user-guides/santempi/matching-configuration/README.md)
     * [Creating / Viewing Configurations](user-guides/santempi/matching-configuration/creating-viewing-configurations.md)
-    * [General Properties](user-guides/santempi/matching-configuration/general-properties.md)
+    * [General Configuration](user-guides/santempi/matching-configuration/general-configuration.md)
     * [Blocking Configuration](user-guides/santempi/matching-configuration/blocking-configuration.md)
     * [Scoring Configuration](user-guides/santempi/matching-configuration/scoring-configuration.md)
     * [Classification Configuration](user-guides/santempi/matching-configuration/classification-configuration.md)

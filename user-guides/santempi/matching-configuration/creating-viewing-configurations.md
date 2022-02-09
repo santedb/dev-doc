@@ -34,8 +34,8 @@ When a user needs to share a match configuration with others (such as those usin
 
 ## Configuration Sections
 
-{% content-ref url="general-properties.md" %}
-[general-properties.md](general-properties.md)
+{% content-ref url="general-configuration.md" %}
+[general-configuration.md](general-configuration.md)
 {% endcontent-ref %}
 
 {% content-ref url="blocking-configuration.md" %}

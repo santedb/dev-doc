@@ -6,7 +6,7 @@ The persistence settings group in the configuration tool contains the control pa
 
 The persistence settings typically share a common configuration structure as illustrated below.
 
-![](<../../../../.gitbook/assets/image (426) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (426) (1) (1) (1) (1) (1) (1) (1).png>)
 
 | Option                       | Description                                                                                                                                                                                                          | Example                                              |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |

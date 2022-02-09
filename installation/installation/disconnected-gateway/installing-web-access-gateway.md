@@ -35,7 +35,7 @@ Installation of the Web Access Gateway should be performed on machines, containe
 
 Installation of the Web Access Gateway on Microsoft Windows Operating Systems is a standard Windows Installer experience. The application installer will copy the&#x20;
 
-![](<../../../.gitbook/assets/image (429) (1) (1).png>)
+![](<../../../.gitbook/assets/image (429) (1) (1) (1).png>)
 
 After installation is complete you will be asked to [Configure the Web Access Gateway](installing-web-access-gateway.md#undefined).
 
@@ -107,7 +107,7 @@ When configuring the SanteDB Web Access Gateway (like all dCDR instances) you mu
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 
-![](<../../../.gitbook/assets/image (441) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (441) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SanteDB dCDR software packages like the Windows Application, Android Application and dCDR Gateway may opt to not auto-update applets depending on bandwidth restrictions.
@@ -117,13 +117,13 @@ The SanteDB dCDR software packages like the Windows Application, Android Applica
 
 Since the SanteDB Web Access Gateway is intended to be used in an environment where it can always communicate with the iCDR server directly, and because it lacks the storage capacity to operate offline, the synchronization mode of the Web Access Gateway should be set to Online Only.
 
-![](<../../../.gitbook/assets/image (446) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (446) (1) (1) (1) (1) (1).png>)
 
 ### Set Log Verbosity
 
 By default, SanteDB Web Access Gateway release builds will only log events which are errors or warnings. If you desire more verbose logging you can alter the setting for logging in this panel.
 
-![](<../../../.gitbook/assets/image (421) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (421) (1) (1) (1) (1).png>)
 
 ### Application Services
 
@@ -137,7 +137,7 @@ By default, the SanteDB dCDR instances will optimize traffic with the central iC
 
 If you're running the iCDR server on the same machine as the Web Access Gateway or are using a 10gbE connection between the two, you can set this to Local Network, since this will disable all compression (saving compute resources). If you are running the Web Access Gateway and iCDR in an environment which has a slower connection between the iCDR and dCDR it may be beneficial to select another option.
 
-![](<../../../.gitbook/assets/image (443) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (443) (1) (1) (1) (1) (1) (1).png>)
 
 | Optimization Setting | Compression Used |
 | -------------------- | ---------------- |

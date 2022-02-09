@@ -6,7 +6,7 @@ In SanteDB the a security application represents a piece of software code which 
 
 The application list screen shows a listing of all registered security applications (and profiles) in the implementation of SanteDB.&#x20;
 
-![](<../../../../.gitbook/assets/image (425).png>)
+![](<../../../../.gitbook/assets/image (425) (1).png>)
 
 * Create Application Identity: Used to establish a new authenticated application.
 * Details / Edit : Used to view the security details of the authenticated application and change if needed.
@@ -30,7 +30,7 @@ If creating a security application for HL7 Version 2.x trading partners, the nam
 
 Once created, the administrative interface will show the created application. The administrator must generate an application secret using the **Reset** option.
 
-![](<../../../../.gitbook/assets/image (448) (1).png>)
+![](<../../../../.gitbook/assets/image (448) (1) (1).png>)
 
 The application secret should be saved and sent to the integration partner or application developer.
 
@@ -38,7 +38,7 @@ The application secret should be saved and sent to the integration partner or ap
 
 When editing an application from the application list or after creating an application, the properties of the device can be modified.
 
-![](<../../../../.gitbook/assets/image (441) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (441) (1) (1) (1).png>)
 
 ### Resetting Security State
 
@@ -46,7 +46,7 @@ Applications, like users and devices, can become locked if they fail to authenti
 
 Each time an application authentication attempt fails, the invalid authentication counter will be incremented until the application locks.&#x20;
 
-![](<../../../../.gitbook/assets/image (443) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (443) (1) (1) (1).png>)
 
 An administrator the security settings:
 

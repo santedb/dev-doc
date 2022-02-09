@@ -10,7 +10,7 @@ Users which belong to multiple groups follow a most-restrictive policy enforceme
 
 The summary screen for SanteDB groups shows a comprehensive list of all roles registered in the system. The group list provides controls to create, edit and delete groups in the iCDR system.
 
-![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1) (1).png>)
 
 The are available in the group list screen are:
 
@@ -23,7 +23,7 @@ The are available in the group list screen are:
 
 You can use the `Show Deleted` button to list the groups which are not active (i.e. deleted) in the SanteDB system.&#x20;
 
-![](<../../../../.gitbook/assets/image (425) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1).png>)
 
 Pressing the `Un-Delete` button will re-activate the group.&#x20;
 
@@ -57,7 +57,7 @@ When creating a new group, the name and a brief description of the group is requ
 
 When editing a group or after creating a new group, the detail view of the group will be shown.&#x20;
 
-![](<../../../../.gitbook/assets/image (434) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1) (1) (1).png>)
 
 This view shows the basic details of the group, and permits editing of the group name and description, as well as access to the groups security id (SID)
 

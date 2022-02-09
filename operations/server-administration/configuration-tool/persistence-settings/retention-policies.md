@@ -22,7 +22,7 @@ When enabled, the retention policy feature will create a JOB on system startup w
 
 The retention service requires the definition of retention policies which need to be applied.&#x20;
 
-![](<../../../../.gitbook/assets/image (429) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (429) (1) (1) (1) (1) (1).png>)
 
 | Option           | Description                                                                                                                                                                                                             | Example                                                                                                             |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |

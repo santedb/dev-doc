@@ -35,7 +35,7 @@ To create a new security device click the `Create` button. Administrators may wi
 * A new HL7v2 trading partner is being setup&#x20;
 * An new node-authentication partner account needs to be created (for Client Certificate Mapping)
 
-![](<../../../../.gitbook/assets/image (440).png>)
+![](<../../../../.gitbook/assets/image (440) (1).png>)
 
 The `Name` of the device should be unique within the context of the SanteDB solution which has been deployed.&#x20;
 
@@ -79,11 +79,11 @@ A device account's lockout can be reset using the `Unlock` button.
 
 The device secret allows an administrator to set a new device secret. The existing secret for the device is not shown (unless the device is new). Administrators can either `Edit` the secret to a custom value:
 
-![](<../../../../.gitbook/assets/image (447) (1).png>)
+![](<../../../../.gitbook/assets/image (447) (1) (1).png>)
 
 After which, pressing the `Save` button will commit the change. Alternately the administrator can set the secret to a random value with `Reset`.
 
-![](<../../../../.gitbook/assets/image (446) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (446) (1) (1) (1).png>)
 
 {% hint style="info" %}
 When using X509 client certificate authentication, the secret of the device account should be X509 thumbprint of the certificate which the device will be presenting to the server. The value of the secret should be the `THUMBPRINT` attribute of the certificate in hexidecimal format in lower case. For example: `a11164321e30c84bd825ab20225421434622c52a`

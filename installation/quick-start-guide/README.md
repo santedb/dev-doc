@@ -130,7 +130,7 @@ Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:
 
 The rest of the settings can be left as their defaults.
 
-![](<../../.gitbook/assets/image (427) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (427) (1) (1) (1) (1).png>)
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
@@ -179,13 +179,13 @@ You can customize the manner in which the SanteMPI user interface behaves by set
 
 Once your settings are saved, the web access gateway will save the settings and restart itself.
 
-![](<../../.gitbook/assets/image (426) (1) (1).png>)
+![](<../../.gitbook/assets/image (426) (1) (1) (1).png>)
 
 ## Customize the MPI
 
 You can now log into the web administration console for the Master Patient Index. You can use the administrator/Mohawk123 account to log into the administrative panel.
 
-![](<../../.gitbook/assets/image (447) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (447) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.
@@ -195,18 +195,18 @@ Full documentation for the Administrative panel is available at the [Broken link
 
 Since this is a demonstration environment, you will probably want to change the default access policies for `Administrators` to allow them to see clinical data and perform MDM tasks. This is done by navigating to `Security -> Groups` and pressing edit on the `Administrators` group.
 
-![](<../../.gitbook/assets/image (421) (1) (1).png>)
+![](<../../.gitbook/assets/image (421) (1) (1) (1).png>)
 
 You can scroll to `Policies` and add the following policies to the group:
 
 * Unrestricted MDM
 * Unrestricted Clinical Data
 
-![](<../../.gitbook/assets/image (446) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (446) (1) (1) (1) (1).png>)
 
 After adding these policies you should observe the policies in the master list of permissions.
 
-![](<../../.gitbook/assets/image (434) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (434) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You do not need to SAVE policy assignments, they are applied immediately.
@@ -242,7 +242,7 @@ The installation qualification tool uses PMIR notifications and subscriptions, i
 
 Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](../installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
 
-![](<../../.gitbook/assets/image (425) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (425) (1) (1) (1) (1).png>)
 
 If all tests return green status, it indicates that your copy of SanteMPI is operating as expected for baseline FHIR functions.
 

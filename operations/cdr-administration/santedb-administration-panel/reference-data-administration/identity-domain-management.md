@@ -6,7 +6,7 @@ Identity domains must be registered in the SanteDB iCDR before they can be used 
 
 When opening the Reference Data page for Identity Domains, administrators will be presented with a listing of all active identity domains configured on the iCDR or dCDR instance.
 
-![](<../../../../.gitbook/assets/image (426).png>)
+![](<../../../../.gitbook/assets/image (426) (1).png>)
 
 The controls for this table are shared with other administrative panel functions (edit, delete, un-delete, etc.).
 

@@ -1,8 +1,12 @@
-# General Properties
+# General Configuration
+
+The general configuration tab shows metadata related to the configuration as well as an overall explanation of the configuration's matching process.
+
+## Properties Panel
 
 The general properties tab of the match configuration is used to control the general settings of the match configuration. When creating a new match configuration, the panel will default to edit mode to allow for capture of the properties.
 
-![](<../../../.gitbook/assets/image (441).png>)
+![](<../../../.gitbook/assets/image (441) (1).png>)
 
 The fields on this properties panel are:
 
@@ -11,7 +15,7 @@ The fields on this properties panel are:
 * **Tags:** Tags provide implementation specific (or plugin specific) controls for the match configuration. These can vary depending on the use of the match configuration (i.e. in MDM, import, etc.)
 * **Description:** Provides a human readable description of the configuration.
 
-## Tags
+### Tags
 
 By default, only the MDM layer in the SanteDB iCDR will use the tags setting.&#x20;
 
@@ -19,4 +23,29 @@ By default, only the MDM layer in the SanteDB iCDR will use the tags setting.&#x
 | ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `$mdm.auto-link` | Boolean | When true, instructs the MDM layer to automatically link records together when the `$input` and `$block` records are classified as a match. Otherwise, matches are flagged. |
 
-###
+## Explain Diagram
+
+The explain diagram for a configuration illustrates the overall matching process which will be undertaken for the overall matching process.&#x20;
+
+![](<../../../.gitbook/assets/image (447).png>)
+
+The explain diagram shows:
+
+* The source resource type which will be read from the database
+* The blocking instructions (or blocking filter instructions) which will be used to filter the source resource from the database.
+* The scoring instructions and attributes to be used
+* The classification thresholds for the classification stage.
+
+## Related Topics
+
+{% content-ref url="blocking-configuration.md" %}
+[blocking-configuration.md](blocking-configuration.md)
+{% endcontent-ref %}
+
+{% content-ref url="scoring-configuration.md" %}
+[scoring-configuration.md](scoring-configuration.md)
+{% endcontent-ref %}
+
+{% content-ref url="classification-configuration.md" %}
+[classification-configuration.md](classification-configuration.md)
+{% endcontent-ref %}

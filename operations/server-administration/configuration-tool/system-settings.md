@@ -14,7 +14,7 @@ The only setting for the file system queue is the local directory / path where t
 
 The Microsoft Messaging Queue configuration panel allows SanteDB iCDR to send queue messages to an MSMQ server (either local or remote). This has a performance benefit in that MSMQ is well suited for higher traffic scenarios than the file system manager.
 
-![](<../../../.gitbook/assets/image (434).png>)
+![](<../../../.gitbook/assets/image (434) (1).png>)
 
 The configuration setting for `MSMQ Path` should be in one of the following formats:
 
@@ -43,7 +43,7 @@ The applet manager configuration panel allows for configuration of the applet re
 
 The core API configuration panel allows administrators to change the core behavior of the SanteDB host environment.&#x20;
 
-![](<../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1) (1).png>)
 
 This includes:
 

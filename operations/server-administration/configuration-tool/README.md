@@ -39,7 +39,7 @@ If you do not select a template, you will need to configure each plugin in the s
 
 When you have completed initial configuration you will be presented with a user interface as shown.
 
-![](<../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 1. Feature List -> Shows a list of all features enabled in the SanteDB iCDR server which can be configured. (based on installed options)
 2. Feature Configuration -> The configuration options for the selected feature.

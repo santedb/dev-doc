@@ -52,7 +52,7 @@ After entering the filter details for the patient search, pressing the search bu
 The SanteMPI server may impose minimum search criteria for search. For example, a jurisdiction may choose to return no results for searches with less than 3 search fields.
 {% endhint %}
 
-![](<../.gitbook/assets/image (440) (1) (1).png>)
+![](<../.gitbook/assets/image (440) (1) (1) (1).png>)
 
 ## Search Results
 
