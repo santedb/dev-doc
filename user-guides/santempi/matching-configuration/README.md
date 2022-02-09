@@ -6,51 +6,32 @@ The **Match Settings** page is used to provide users assigned the **Alter Match 
 For more information about SanteDB's matching engine please consult [matching-engine.md](../../../santedb/matching-engine.md "mention") architecture documentation, as it will provide context to the configuration screens.
 {% endhint %}
 
-## Configuration List
+## Contents
 
+{% content-ref url="creating-viewing-configurations.md" %}
+[creating-viewing-configurations.md](creating-viewing-configurations.md)
+{% endcontent-ref %}
 
+{% content-ref url="general-properties.md" %}
+[general-properties.md](general-properties.md)
+{% endcontent-ref %}
 
-### Enabling / Disabling Configurations
+{% content-ref url="blocking-configuration.md" %}
+[blocking-configuration.md](blocking-configuration.md)
+{% endcontent-ref %}
 
+{% content-ref url="scoring-configuration.md" %}
+[scoring-configuration.md](scoring-configuration.md)
+{% endcontent-ref %}
 
+{% content-ref url="classification-configuration.md" %}
+[classification-configuration.md](classification-configuration.md)
+{% endcontent-ref %}
 
-### Cloning Configurations
+{% content-ref url="testing-configurations.md" %}
+[testing-configurations.md](testing-configurations.md)
+{% endcontent-ref %}
 
-
-
-## Creating / Editing a Match Configuration
-
-
-
-###
-
-### Blocking Configuration
-
-
-
-### Scoring Configuration
-
-
-
-### Classification Configuration
-
-
-
-## Testing Match Configurations
-
-
-
-### Tuning Blocking
-
-
-
-### Tuning Scoring
-
-
-
-### Tuning Classification
-
-
-
-
-
+{% content-ref url="match-configuration-xml-definition.md" %}
+[match-configuration-xml-definition.md](match-configuration-xml-definition.md)
+{% endcontent-ref %}
