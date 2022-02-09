@@ -6,32 +6,27 @@ When the instance of SanteDB iCDR was installed in your environment, the Adminis
 You may use the [Demonstration Server's](../../../santedb/demonstration-environment.md) administration panel as a reference for this document.
 {% endhint %}
 
-## Table of Contents
+## Contents
 
-* [Logging In](logging-in.md)
-* [Managing your User Profile](managing-your-profile.md)
-* [System Administration](broken-reference)
-  * [System Probes](system-administration/probes.md)
-  * [Job Administration](system-administration/jobs.md)
-  * [Logs](system-administration/logs.md)
-  * [Server Status](system-administration/server-status.md)
-  * [Dispatch Queues](system-administration/dispatcher-queue.md)
-  * [Pub/Sub Manager](system-administration/pub-sub-manager.md)
-* [Security Administration](security-administration/)
-  * [Managing User Accounts](security-administration/managing-user-accounts.md)
-  * [Managing Application Roles ](security-administration/managing-groups.md)
-  * Managing Device Accounts
-  * Managing Application Accounts
-  * [Managing Application Security Policies](security-administration/managing-policies.md)
-  * [Reviewing Audit Log Events](security-administration/reviewing-audits.md)
-* Application Administration
-  * Gathering and Reviewing Log Files
-  * Running and Maintaining System Jobs
-  * Enabling and Collecting Bug Reports
-* Reference Data Administration
-  * Identity Domain Management
-  * Place Management
-  * Facilities Management
+{% content-ref url="logging-in.md" %}
+[logging-in.md](logging-in.md)
+{% endcontent-ref %}
+
+{% content-ref url="managing-your-profile.md" %}
+[managing-your-profile.md](managing-your-profile.md)
+{% endcontent-ref %}
+
+{% content-ref url="system-administration/" %}
+[system-administration](system-administration/)
+{% endcontent-ref %}
+
+{% content-ref url="reference-data-administration/" %}
+[reference-data-administration](reference-data-administration/)
+{% endcontent-ref %}
+
+{% content-ref url="security-administration/" %}
+[security-administration](security-administration/)
+{% endcontent-ref %}
 
 ## Dashboard
 
