@@ -30,7 +30,7 @@ In a production system, it is recommended that users clone a match configuration
 
 When a user needs to share a match configuration with others (such as those using another software package) or requires unchangeable description of the match configuration (for their implementation documentation, for example) an HTML export of the configuration file can be obtained using the `HTML` button. This produces a report which details the configuration and allows for printing of the logic and settings used.
 
-![](<../../../.gitbook/assets/image (445).png>)
+![](<../../../.gitbook/assets/image (445) (1).png>)
 
 ## Configuration Sections
 

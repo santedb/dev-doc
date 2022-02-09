@@ -43,7 +43,7 @@ Note that the property extraction is to the root element rather than the value e
 
 If the administrator wishes to provide multiple paths for extraction they can provide either a single HDSI expression or multiple properties in the property list. For example, if `HomeAddress` or `VacationHome` they may provide separate extraction properties.
 
-![](<../../../.gitbook/assets/image (452).png>)
+![](<../../../.gitbook/assets/image (453).png>)
 
 This instructs the scoring engine to attempt an extract of `HomeAddress` from both `$input` and `$block`. If either are null, then an attempt is made to extract `VacationHome` from both `$input` and `$block`.&#x20;
 
@@ -58,7 +58,7 @@ The **When Null** input on the attribute instructs the scoring process, how to h
 | When Null  | Behavior                                                                                                                                                                                                                                                                                        | Diagram                                         |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | None       | No special behavior is performed. The assertions are evaluated as specified.                                                                                                                                                                                                                    | ![](<../../../.gitbook/assets/image (422).png>) |
-| Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (444).png>) |
+| Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (445).png>) |
 | Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440).png>) |
 | Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (449).png>) |
 | NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442).png>) |
@@ -175,7 +175,7 @@ The administrator then configures each sub-assertion as they would a normal asse
 
 Continuing the example above, perhaps the administrator would like the logic to score the state only if the country code also matches.&#x20;
 
-![](<../../../.gitbook/assets/image (454).png>)
+![](<../../../.gitbook/assets/image (455).png>)
 
 The explanation flow diagram will be updated to reflect that multiple assertions are being made independently and then the logical operator selected applied.
 
@@ -190,7 +190,7 @@ The scoring engine requires information in order to assign a match and non-match
 
 the M and U values can be set in the user interface by either sliding the indicators to adjust the values, or by entering an exact number.
 
-![](<../../../.gitbook/assets/image (443).png>)
+![](<../../../.gitbook/assets/image (444).png>)
 
 The calculated scores are shown below the entry for M and U. These scores are calculated via $$weight_m=\frac{log_e(\frac{m}{u})}{log_e(2.0)}$$ and $$weight_u=\frac{log_e(\frac{1-m}{1-u})}{log_e(2.0)}$$.
 

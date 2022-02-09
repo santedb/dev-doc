@@ -22,7 +22,7 @@ Each block (or group of filters) is shown in an accordion which can be expanded 
 
 Users can edit blocking instructions by clicking the pencil on the blocking instruction panel.
 
-![](<../../../.gitbook/assets/image (453).png>)
+![](<../../../.gitbook/assets/image (454).png>)
 
 When in edit mode, the administrator should configure the settings for each block with the provided inputs.
 
