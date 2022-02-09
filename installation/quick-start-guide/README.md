@@ -134,7 +134,7 @@ The rest of the settings can be left as their defaults.
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
-![](<../../.gitbook/assets/image (422) (1) (1).png>)
+![](<../../.gitbook/assets/image (422) (1) (1) (1).png>)
 
 ### Select the MPI Role
 
@@ -151,7 +151,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../../.gitbook/assets/image (433) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
@@ -216,7 +216,7 @@ You do not need to SAVE policy assignments, they are applied immediately.
 
 The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
 
-![](<../../.gitbook/assets/image (435) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (435) (1) (1) (1) (1) (1).png>)
 
 ## Perform Installation Qualification
 
@@ -226,7 +226,7 @@ An easy way to get patients into the SanteMPI instance is to run the [fhir-inter
 
 In the pre-requisites, a link was provided to the SanteMPI Installation Qualification SOAP-UI project. You can launch SOAP UI on your system and import this project.
 
-![](<../../.gitbook/assets/image (432) (1) (1).png>)
+![](<../../.gitbook/assets/image (432) (1) (1) (1).png>)
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 
@@ -236,7 +236,7 @@ This will expose a new project in your SOAP UI project with the SanteMPI endpoin
 
 The installation qualification tool uses PMIR notifications and subscriptions, it is a good idea to start the FHIR Mock service so that your docker container has an endpoint to send these messages to.
 
-![](<../../.gitbook/assets/image (444) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (444) (1) (1) (1) (1).png>)
 
 ### Run Installation Qualification Tests
 

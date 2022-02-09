@@ -66,7 +66,7 @@ During the scoring phase, the records from the blocking stage are compared to th
 
 Overall, the process of comparing a blocked record (named `$block`) with the `$input` record is:
 
-![](<../.gitbook/assets/image (428).png>)
+![](<../.gitbook/assets/image (428) (1).png>)
 
 1. The scoring attribute may declare that it depends on another attribute being scored (i.e. don't evaluate the `city` attribute unless `state` attribute has passed. If the dependent attribute was not scored as a positive (match) then the current attribute is assigned the whenNull() score.
 2. The attribute path on the configuration is read from both `$block` and `$input`.&#x20;
@@ -127,7 +127,7 @@ Each data type which is registered in the [Master Data Management](data-storage-
 
 After the suspected truth is cleared, the job will begin the process of re-matching the registered dataset for SanteDB. The matching process is multi-threaded, and designed to ensure that the machine on which the match process is as efficient as possible. To do this, the following pattern is used:
 
-![](<../.gitbook/assets/image (444) (1).png>)
+![](<../.gitbook/assets/image (444) (1) (1).png>)
 
 The batch matching process registers 4 primary threads on the actively configured thread pool to control the match process:
 

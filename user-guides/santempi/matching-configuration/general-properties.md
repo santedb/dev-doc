@@ -27,7 +27,7 @@ By default, only the MDM layer in the SanteDB iCDR will use the tags setting.&#x
 
 The explain diagram for a configuration illustrates the overall matching process which will be undertaken for the overall matching process.&#x20;
 
-![](<../../../.gitbook/assets/image (447).png>)
+![](<../../../.gitbook/assets/image (448).png>)
 
 The explain diagram shows:
 

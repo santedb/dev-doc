@@ -45,7 +45,7 @@ When updating the SanteDB Web Access Gateway, you should use the installer provi
 
 You may receive a notice to restart existing running services. It is safe to select `Automatically Close Applications`.
 
-![](<../../../.gitbook/assets/image (431) (1).png>)
+![](<../../../.gitbook/assets/image (431) (1) (1).png>)
 
 ### Installation on Linux Operating Systems
 
@@ -82,7 +82,7 @@ The configuration screen for the web access gateway is identical to the configur
 
 ### Join the Security Domain
 
-![](<../../../.gitbook/assets/image (442) (1) (1).png>)
+![](<../../../.gitbook/assets/image (442) (1) (1) (1).png>)
 
 * **Local Device ID**: The device identifier which this web access gateway will use to enrol itself in the iCDR security domain (example: `admin-portal` or `admin-portal-cluster-1`)
 * **Domain Address**: The IP address or host name of the iCDR server instance. If you're running the iCDR in a distributed deployment, this should be the address to a machine or group running the [administrative-management-interface.md](../../../operations/server-administration/configuration-tool/messaging-settings/administrative-management-interface.md "mention")  .
@@ -129,7 +129,7 @@ By default, SanteDB Web Access Gateway release builds will only log events which
 
 It is recommended you leave the default application services selected for the Web Access Gateway. These settings are primarily intended for disconnected client gateways which require fine tuning of HL7, FHIR, ATNA and other services for local clinics.
 
-![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1).png>)
 
 ### Set Networking Parameters
 

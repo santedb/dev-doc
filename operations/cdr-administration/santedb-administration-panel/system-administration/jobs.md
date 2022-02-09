@@ -29,7 +29,7 @@ The columns for the job indicate:
 
 When you run a system job you will be prompted to provide any job parameters (if any) which will control the execution of the task.
 
-![](<../../../../.gitbook/assets/image (432) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1).png>)
 
 After setting parameters and pressing `Ok` administrators will be asked to confirm the execution of the job.
 
@@ -51,12 +51,12 @@ Upon opening the job schedule, a window will appear allowing the user to configu
 
 An interval schedule is used when the job should be run on a regular timed interval. This timer is started when the SanteDB host process is started and repeats at the specified timing.
 
-![](<../../../../.gitbook/assets/image (433).png>)
+![](<../../../../.gitbook/assets/image (433) (1).png>)
 
 ### Calendar Schedule
 
 A calendar schedule should be used whenever the job needs to be executed on a repeated calendar day. For example, to refresh the materialized views at 11 PM every day starting January 26, 2022.
 
-![](<../../../../.gitbook/assets/image (435) (1).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1).png>)
 
 If a future date or time is specified, then the job will only run&#x20;

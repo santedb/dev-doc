@@ -51,7 +51,7 @@ Administrators may wish to create new groups for a variety of reasons. For examp
 
 When creating a new group, the name and a brief description of the group is required.
 
-![](<../../../../.gitbook/assets/image (423) (1).png>)
+![](<../../../../.gitbook/assets/image (423) (1) (1).png>)
 
 ## Group Details
 
@@ -65,11 +65,11 @@ This view shows the basic details of the group, and permits editing of the group
 
 By default a new group will have no policies associated with the group. Administrators should use the `Policies` section to add or alter policies. Policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
 
 By default a group will be assigned the policy with a GRANT permission. You can alter these by clicking the permission.
 
-![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1).png>)
 
 The permission types in SanteDB are:
 

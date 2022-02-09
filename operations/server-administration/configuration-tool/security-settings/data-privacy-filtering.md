@@ -37,7 +37,7 @@ The property policies allow implementing jurisdictions to control which properti
 * Restricting the collection, disclosure, or querying of Patient religion or ethnicity to all users
 * Restricting the disclosure, collection or querying of Patient VIP status to only users which have "Access to Taboo Information" policy.
 
-![](<../../../../.gitbook/assets/image (442).png>)
+![](<../../../../.gitbook/assets/image (442) (1).png>)
 
 | Option   | Description                                                                                   | Example                                                    |
 | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |

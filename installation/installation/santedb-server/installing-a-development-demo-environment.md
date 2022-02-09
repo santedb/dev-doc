@@ -122,7 +122,7 @@ When first configuring SanteDB iCDR server on a Windows environment you will nee
 
 Selecting the PostgreSQL provider will expose the connection parameters for PostgreSQL. See [#postgresql-configuration](../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#postgresql-configuration "mention") for more information on these settings.
 
-![](<../../../.gitbook/assets/image (428) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1).png>)
 
 #### Firebird Configuration
 
@@ -152,7 +152,7 @@ Once you've completed the installation options for the SanteDB server and press 
 
 You can use the configuration tooling to customize your installation of the SanteDB server. These settings are documented in [configuration-tool](../../../operations/server-administration/configuration-tool/ "mention")
 
-![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1).png>)
 
 Recommended configuration panels and settings to change include:
 

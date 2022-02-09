@@ -94,7 +94,7 @@ The network information section shows information about the network infrastructu
 
 The users and computers section of the audit detail show the information about the actors involved in the event.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1).png>)
 
 Each actor has four attributes expressed in the table:
 
@@ -132,7 +132,7 @@ Each object has a lifecycle attached to it which identifies the action or state 
 
 Session objects represent a security session which was established for a user. The object carries additional contextual data about the policies with which the session was authenticated.&#x20;
 
-![](<../../../../.gitbook/assets/image (422) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1) (1) (1) (1).png>)
 
 #### Query Objects
 
