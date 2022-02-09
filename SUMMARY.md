@@ -272,6 +272,7 @@
 ## User Guides
 
 * [SanteDB User Guides](user-guides/santedb-user-guides.md)
+* [General Concepts](user-guides/general-concepts.md)
 * [SanteMPI](user-guides/santempi.md)
   * [SanteMPI Dashboard](santempi/santempi-dashboard.md)
   * [SanteMPI Matches](user-guides/santempi/santempi-matches.md)
@@ -287,6 +288,12 @@
     * [Master Data Management Tab](user-guides/santempi/the-patient-dashboard/master-data-management-tab.md)
     * [Data Quality Tab](user-guides/santempi/the-patient-dashboard/data-quality-tab.md)
   * [Matching Configuration](user-guides/santempi/matching-configuration/README.md)
+    * [Creating / Viewing Configurations](user-guides/santempi/matching-configuration/creating-viewing-configurations.md)
+    * [General Properties](user-guides/santempi/matching-configuration/general-properties.md)
+    * [Blocking Configuration](user-guides/santempi/matching-configuration/blocking-configuration.md)
+    * [Scoring Configuration](user-guides/santempi/matching-configuration/scoring-configuration.md)
+    * [Classification Configuration](user-guides/santempi/matching-configuration/classification-configuration.md)
+    * [Testing Configurations](user-guides/santempi/matching-configuration/testing-configurations.md)
     * [Match Configuration XML Definition](user-guides/santempi/matching-configuration/match-configuration-xml-definition.md)
 
 ## Developers

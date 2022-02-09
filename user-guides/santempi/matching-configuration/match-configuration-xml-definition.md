@@ -2,6 +2,10 @@
 
 For most users the [.](./ "mention")user interface should be sufficient for defining matching rules. There are, however, advanced use cases, where the use of the XML configuration is desired.&#x20;
 
+{% hint style="info" %}
+Before editing the matching configuration, administrators should review the [matching-engine.md](../../../santedb/matching-engine.md "mention")architecture documentation.
+{% endhint %}
+
 ## Match Configuration
 
 Matches are configured using match configuration XML, the schema for this XML can be located in %INSTALL\_DIR%\Schemas and referenced in an XML editor of your choice to obtain auto-complete data.

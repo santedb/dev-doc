@@ -10,7 +10,7 @@ Users which belong to multiple groups follow a most-restrictive policy enforceme
 
 The summary screen for SanteDB groups shows a comprehensive list of all roles registered in the system. The group list provides controls to create, edit and delete groups in the iCDR system.
 
-![](<../../../../.gitbook/assets/image (439) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1).png>)
 
 The are available in the group list screen are:
 
@@ -65,7 +65,7 @@ This view shows the basic details of the group, and permits editing of the group
 
 By default a new group will have no policies associated with the group. Administrators should use the `Policies` section to add or alter policies. Policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1).png>)
 
 By default a group will be assigned the policy with a GRANT permission. You can alter these by clicking the permission.
 

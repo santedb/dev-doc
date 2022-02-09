@@ -22,7 +22,7 @@ The HL7 Version 2 Service configuration panel is used to enable or disable the s
 
 The HL7 Services configuration property allows administrators to edit one or more IP/Endpoints which can receive HL7v2 messages.
 
-![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1).png>)
 
 
 

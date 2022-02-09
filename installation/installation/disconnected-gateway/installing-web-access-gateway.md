@@ -103,11 +103,11 @@ A single SanteDB iCDR server can host multiple SanteDB solutions and user interf
 
 When configuring the SanteDB Web Access Gateway (like all dCDR instances) you must select the application role that the SanteDB dCDR will be taking on.
 
-![](<../../../.gitbook/assets/image (445) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (445) (1) (1) (1) (1) (1) (1).png>)
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 
-![](<../../../.gitbook/assets/image (441) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (441) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SanteDB dCDR software packages like the Windows Application, Android Application and dCDR Gateway may opt to not auto-update applets depending on bandwidth restrictions.
@@ -117,7 +117,7 @@ The SanteDB dCDR software packages like the Windows Application, Android Applica
 
 Since the SanteDB Web Access Gateway is intended to be used in an environment where it can always communicate with the iCDR server directly, and because it lacks the storage capacity to operate offline, the synchronization mode of the Web Access Gateway should be set to Online Only.
 
-![](<../../../.gitbook/assets/image (446) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (446) (1) (1) (1) (1).png>)
 
 ### Set Log Verbosity
 
@@ -153,7 +153,7 @@ You may also optionally proxy traffic flowing between the Web Access Gateway and
 
 The other settings panel allows you to configure custom behaviors for the Web Access Gateway. These settings are documented on the [app-settings.md](app-settings.md "mention")wiki page.
 
-![](<../../../.gitbook/assets/image (430) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (430) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You can change the application settings for the Web Access Gateway after initial configuration via the file `%systemroot%\Windows\SYSWOW64\config\systemprofile\AppData\Roaming\SanteDB\wwww-default` on Windows or via `~/.config/santedb/santedb-www` on Linux and Docker.

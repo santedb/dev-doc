@@ -16,7 +16,7 @@ The summary screen provides a comprehensive list of all users found in the Sante
 
 You can sort/order the table by any field which has a sort indicator, additionally each row of the user list performs actions on each user on the same row.
 
-![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1) (1).png>)
 
 * Edit: Opens the detailed user information screen
 * Delete: Indicates that the user account is no longer active (i.e. the employee is fired, moved departments, etc.)
@@ -29,7 +29,7 @@ It is best practice to lock user accounts when you are investigating a security 
 
 When you delete a user they are marked as inactive. You can access these accounts by using the `Show Deleted` option in the user interface. Deleted user accounts provide an option to restore or un-delete the account (as well as edit the information).
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1).png>)
 
 ## Creating User Accounts
 

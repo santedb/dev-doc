@@ -43,7 +43,7 @@ SanteDB jobs can be run on a schedule. The schedule for jobs are persisted (by d
 
 Scheduling a job is performed by clicking on the `Schedule` button on the job summary page.
 
-![](<../../../../.gitbook/assets/image (441).png>)
+![](<../../../../.gitbook/assets/image (441) (1).png>)
 
 Upon opening the job schedule, a window will appear allowing the user to configure a job schedule. There are two methods for setting a job schedule:
 
@@ -57,6 +57,6 @@ An interval schedule is used when the job should be run on a regular timed inter
 
 A calendar schedule should be used whenever the job needs to be executed on a repeated calendar day. For example, to refresh the materialized views at 11 PM every day starting January 26, 2022.
 
-![](<../../../../.gitbook/assets/image (435).png>)
+![](<../../../../.gitbook/assets/image (435) (1).png>)
 
 If a future date or time is specified, then the job will only run&#x20;

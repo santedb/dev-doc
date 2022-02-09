@@ -94,7 +94,7 @@ The network information section shows information about the network infrastructu
 
 The users and computers section of the audit detail show the information about the actors involved in the event.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
 
 Each actor has four attributes expressed in the table:
 
@@ -155,4 +155,4 @@ Whenever a policy decision is made, and the CDR needs to de-identify patient dat
 
 When an access control decision is performed, and a policy violation exception thrown, the SanteDB audit log will carry a copy of the policy outcome object indicating the policy which failed validation and the overall action taken.
 
-![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1) (1).png>)
