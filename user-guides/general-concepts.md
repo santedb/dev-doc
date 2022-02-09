@@ -1,4 +1,4 @@
-# General Concepts
+# Common User Interface Elements
 
 All SanteDB administrative interfaces leverage a common user interface framework and design language. These common elements are consistent throughout any administrative or data panel regardless of the solution, plugin, or screen users are viewing.&#x20;
 
