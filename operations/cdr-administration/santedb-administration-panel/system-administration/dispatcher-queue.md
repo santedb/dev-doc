@@ -15,3 +15,17 @@ SanteDB may be used with a queueing technology like MSMQ or a simple queue like 
 * `sys.pubsub` - Used for all outbound dispatches to standards based pub-sub broker requests. These are things like patient registrations, notifications of data changing, etc.
 * `sys.audit` - Used for dispatching audits to remote systems.
 * `sys.ami` - Used by direct connect dCDR instances to queue administrative command messages to the central iCDR.
+
+## Related Topics
+
+{% content-ref url="pub-sub-manager.md" %}
+[pub-sub-manager.md](pub-sub-manager.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../../developers/santedb-software-publishers/publish-subscribe.md" %}
+[publish-subscribe.md](../../../../developers/santedb-software-publishers/publish-subscribe.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../../developers/server-plugins/service-definitions/audit-dispatch-service.md" %}
+[audit-dispatch-service.md](../../../../developers/server-plugins/service-definitions/audit-dispatch-service.md)
+{% endcontent-ref %}

@@ -57,3 +57,14 @@ The endpoint settings are used to control how and when the messages are sent to 
 | --------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | fhir-rest-hook        | Send messages using FHIR REST operations such as POST, PUT, DELETE.                                    | <ul><li>Content-Type - Controls the format with <code>application/fhir+xml</code> sending XML format messages and <code>application/fhir+json</code> sending JSON</li></ul>                                                                                                                                                                                          |
 | hl7-llp (coming soon) | Sends LLP messages to a remote HL7v2 receiver using ADT^A01 , ADT^A08 and ADT^A40 (optionally ADT^A38) | <ul><li>MSH8 - The MSH8 security setting to be used</li><li>Transport - <code>sllp</code> to use secure LLP and <code>llp</code> to use unsecure llp</li><li>MSH34 - The MSH3 | MSH4 to send (default is the SanteDB server's)</li><li>SendAs - <code>Client</code> if sending ADT^A01, ADT^A08, ADT^A40 messages, or <code>Server</code> if using ADT^A38</li></ul> |
+
+## Related Topics
+
+{% content-ref url="../../../../developers/santedb-software-publishers/publish-subscribe.md" %}
+[publish-subscribe.md](../../../../developers/santedb-software-publishers/publish-subscribe.md)
+{% endcontent-ref %}
+
+{% content-ref url="dispatcher-queue.md" %}
+[dispatcher-queue.md](dispatcher-queue.md)
+{% endcontent-ref %}
+
