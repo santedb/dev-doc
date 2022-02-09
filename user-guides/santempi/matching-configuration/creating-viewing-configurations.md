@@ -2,7 +2,7 @@
 
 When editing or creating a match configuration, users will be presented with the match configuration detail screen.
 
-![](<../../../.gitbook/assets/image (430).png>)
+![](<../../../.gitbook/assets/image (430) (1).png>)
 
 When creating a new configuration, the sections of the configuration are shown based on the current required information contained within the configuration. For example, the scoring section tab will not appear until after the blocking configuration has been entered and saved.
 
@@ -50,6 +50,6 @@ When a user needs to share a match configuration with others (such as those usin
 [classification-configuration.md](classification-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="testing-configurations.md" %}
-[testing-configurations.md](testing-configurations.md)
+{% content-ref url="testing-match-configuration.md" %}
+[testing-match-configuration.md](testing-match-configuration.md)
 {% endcontent-ref %}

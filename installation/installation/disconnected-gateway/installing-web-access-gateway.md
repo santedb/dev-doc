@@ -153,7 +153,7 @@ You may also optionally proxy traffic flowing between the Web Access Gateway and
 
 The other settings panel allows you to configure custom behaviors for the Web Access Gateway. These settings are documented on the [app-settings.md](app-settings.md "mention")wiki page.
 
-![](<../../../.gitbook/assets/image (430) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You can change the application settings for the Web Access Gateway after initial configuration via the file `%systemroot%\Windows\SYSWOW64\config\systemprofile\AppData\Roaming\SanteDB\wwww-default` on Windows or via `~/.config/santedb/santedb-www` on Linux and Docker.

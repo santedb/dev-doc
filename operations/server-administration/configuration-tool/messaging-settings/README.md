@@ -36,7 +36,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 Editing the endpoints will present a collection editor where administrators can add/remove specific endpoint bindings to/from the service. Endpoint bindings dictate the port, scheme and path where the REST API can be accessed.
 
-![](<../../../../.gitbook/assets/image (424) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 
 

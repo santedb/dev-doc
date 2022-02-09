@@ -74,7 +74,7 @@ When clicking the `View` button on an audit, you will be presented with a long-f
 
 The event information section of an audit indicates the overall metadata about the event.
 
-![](<../../../../.gitbook/assets/image (424) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1) (1) (1).png>)
 
 The event metadata is the same as that shown in the summary list, with additional context fields.
 

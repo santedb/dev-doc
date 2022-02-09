@@ -8,7 +8,7 @@ Jobs are run in the background and can execute without blocking other processes.
 
 The jobs panel summary shows the list of jobs registered on the dCDR or iCDR.
 
-![](<../../../../.gitbook/assets/image (437) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (437) (1) (1) (1).png>)
 
 The columns for the job indicate:
 

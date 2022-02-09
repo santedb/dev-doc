@@ -28,8 +28,8 @@ For more information about SanteDB's matching engine please consult [matching-en
 [classification-configuration.md](classification-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="testing-configurations.md" %}
-[testing-configurations.md](testing-configurations.md)
+{% content-ref url="testing-match-configuration.md" %}
+[testing-match-configuration.md](testing-match-configuration.md)
 {% endcontent-ref %}
 
 {% content-ref url="match-configuration-xml-definition.md" %}

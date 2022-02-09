@@ -18,7 +18,7 @@ If installing SanteDB on Microsoft Windows, you should obtain a security certifi
 
 1.  Press (WIN)+R and type `mmc`&#x20;
 
-    ``![](<../../.gitbook/assets/image (424) (1) (1) (1) (1).png>)``
+    ``![](<../../.gitbook/assets/image (424) (1) (1) (1) (1) (1).png>)``
 2.  Use File -> Add/Remove Snap-In and select Certificates
 
     ![](<../../.gitbook/assets/image (426) (1) (1) (1) (1) (1) (1).png>)

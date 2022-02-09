@@ -22,7 +22,7 @@ Each block (or group of filters) is shown in an accordion which can be expanded 
 
 Users can edit blocking instructions by clicking the pencil on the blocking instruction panel.
 
-![](<../../../.gitbook/assets/image (454).png>)
+![](<../../../.gitbook/assets/image (457).png>)
 
 When in edit mode, the administrator should configure the settings for each block with the provided inputs.
 
@@ -40,7 +40,7 @@ Blocks are loaded as atomic queries, however there are situations where implemen
 
 For example, the following blocking instruction would load patients where a record in the database has a gender, name, state, and SSN which match the `$input` criteria.
 
-![](<../../../.gitbook/assets/image (429).png>)
+![](<../../../.gitbook/assets/image (430).png>)
 
 However, a jurisdiction may wish to block patients whose gender, name, state match OR has a matching SSN. In this case two blocks would be defined. To do this the jurisdiction would remove the SSN clause from the first block, and would, instead, create a second block for just SSN and UNION the two blocks together:
 

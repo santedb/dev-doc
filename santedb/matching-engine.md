@@ -34,7 +34,7 @@ In the example below, the SanteDB matching engine will load records for an `$inp
   * If the `$input` has a dateOfBirth then the date of birth must match, AND
   * If the `$input` has a gender concept then the gender must match
 
-![](<../.gitbook/assets/image (437).png>)
+![](<../.gitbook/assets/image (437) (1).png>)
 
 In pseudocode terms, the blocking query for an `$input` of John Smith, Male, SSN 203-204-3049 born 1980-03-02 would resemble:
 

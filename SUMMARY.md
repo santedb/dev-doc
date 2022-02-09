@@ -272,7 +272,7 @@
 ## User Guides
 
 * [SanteDB User Guides](user-guides/santedb-user-guides.md)
-* [General Concepts](user-guides/general-concepts.md)
+* [Common User Interface Elements](user-guides/common-user-interface-elements.md)
 * [SanteMPI](user-guides/santempi.md)
   * [SanteMPI Dashboard](santempi/santempi-dashboard.md)
   * [SanteMPI Matches](user-guides/santempi/santempi-matches.md)
@@ -293,7 +293,7 @@
     * [Blocking Configuration](user-guides/santempi/matching-configuration/blocking-configuration.md)
     * [Scoring Configuration](user-guides/santempi/matching-configuration/scoring-configuration.md)
     * [Classification Configuration](user-guides/santempi/matching-configuration/classification-configuration.md)
-    * [Testing Configurations](user-guides/santempi/matching-configuration/testing-configurations.md)
+    * [Testing Match Configuration](user-guides/santempi/matching-configuration/testing-match-configuration.md)
     * [Match Configuration XML Definition](user-guides/santempi/matching-configuration/match-configuration-xml-definition.md)
 
 ## Developers

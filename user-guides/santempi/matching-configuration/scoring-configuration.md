@@ -4,7 +4,7 @@
 
 As described in the [matching-engine.md](../../../santedb/matching-engine.md "mention") architecture article, scoring is the process whereby a blocked record has its properties/attributes compared and scored between the `$input` and `$block` records. Attribute scores, like blocks in the blocking configuration are displayed in an accordion control.
 
-![](<../../../.gitbook/assets/image (451).png>)
+![](<../../../.gitbook/assets/image (453).png>)
 
 Each scored attribute contains:
 
@@ -21,7 +21,7 @@ Each scored attribute contains:
 
 Users can edit the scored attribute list to modify scored attributes and/or add new attributes to the configuration.
 
-![](<../../../.gitbook/assets/image (446).png>)
+![](<../../../.gitbook/assets/image (448).png>)
 
 New attributes for scoring can be added with the `Add Scored Attribute` button and removed with the `Remove Scored Attribute` button on each attribute. A match configuration must contain at least one scoring statement.
 
@@ -43,7 +43,7 @@ Note that the property extraction is to the root element rather than the value e
 
 If the administrator wishes to provide multiple paths for extraction they can provide either a single HDSI expression or multiple properties in the property list. For example, if `HomeAddress` or `VacationHome` they may provide separate extraction properties.
 
-![](<../../../.gitbook/assets/image (453).png>)
+![](<../../../.gitbook/assets/image (455).png>)
 
 This instructs the scoring engine to attempt an extract of `HomeAddress` from both `$input` and `$block`. If either are null, then an attempt is made to extract `VacationHome` from both `$input` and `$block`.&#x20;
 
@@ -58,17 +58,17 @@ The **When Null** input on the attribute instructs the scoring process, how to h
 | When Null  | Behavior                                                                                                                                                                                                                                                                                        | Diagram                                         |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | None       | No special behavior is performed. The assertions are evaluated as specified.                                                                                                                                                                                                                    | ![](<../../../.gitbook/assets/image (422).png>) |
-| Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (445).png>) |
+| Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (447).png>) |
 | Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440).png>) |
-| Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (449).png>) |
+| Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (451).png>) |
 | NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442).png>) |
-| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (450).png>) |
+| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452).png>) |
 
 ### Attribute Transforms
 
 The matching attribute evaluation can be considered a type of data flow. Consider our example using address, the flow of data in the evaluation of the transform may initially resemble
 
-![](<../../../.gitbook/assets/image (447).png>)
+![](<../../../.gitbook/assets/image (449).png>)
 
 The steps which would be executed are:
 
@@ -175,7 +175,7 @@ The administrator then configures each sub-assertion as they would a normal asse
 
 Continuing the example above, perhaps the administrator would like the logic to score the state only if the country code also matches.&#x20;
 
-![](<../../../.gitbook/assets/image (455).png>)
+![](<../../../.gitbook/assets/image (458).png>)
 
 The explanation flow diagram will be updated to reflect that multiple assertions are being made independently and then the logical operator selected applied.
 
@@ -266,3 +266,17 @@ Using the example above, if the city portion of the home address were to be eval
 The explain diagram on the scoring tab shows the detailed blocking logic of the configuration. Users are able to see the concrete steps which, in the general tab, are only displayed as procedures.
 
 ![](<../../../.gitbook/assets/image (439).png>)
+
+## Related Topics
+
+{% content-ref url="../../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/" %}
+[hdsi-query-syntax](../../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/)
+{% endcontent-ref %}
+
+{% content-ref url="../../../santedb/matching-engine.md" %}
+[matching-engine.md](../../../santedb/matching-engine.md)
+{% endcontent-ref %}
+
+{% content-ref url="blocking-configuration.md" %}
+[blocking-configuration.md](blocking-configuration.md)
+{% endcontent-ref %}

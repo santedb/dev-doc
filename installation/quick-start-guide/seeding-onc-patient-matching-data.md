@@ -77,4 +77,4 @@ Now you can open a command prompt and type `seed-onc.bat` to start the seeding p
 
 The overall health of your deployment can be monitored on the Probes page.
 
-![](<../../.gitbook/assets/image (437) (1).png>)
+![](<../../.gitbook/assets/image (437) (1) (1).png>)

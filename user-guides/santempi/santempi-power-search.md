@@ -53,7 +53,7 @@ Conversely, the following expression results in patients named Donny or Don
 
 Whenever the HDSI expression is a filter on a property of type `Concept` the value will be a search, of concepts.
 
-![](<../../.gitbook/assets/image (430) (1).png>)
+![](<../../.gitbook/assets/image (430) (1) (1).png>)
 
 ### Entity Fields
 

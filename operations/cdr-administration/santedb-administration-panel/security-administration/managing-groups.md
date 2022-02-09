@@ -83,7 +83,7 @@ Policies can be removed from a group  by clicking the `Remove` button. When a po
 
 Users can be assigned and removed directly from the group using the group detail page. Users are assigned and removed in the `Members` section of the group panel.
 
-![](<../../../../.gitbook/assets/image (424) (1).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1).png>)
 
 Adding users to the group is a similar process as adding policies, the user account is searched and then added to the group using the `+` button.
 
