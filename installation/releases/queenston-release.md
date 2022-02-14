@@ -4,6 +4,19 @@ As part of improving documentation of the SanteDB release documentation, each co
 
 Since this new method of documenting releases has only started with 2.1.170, this page is partial. One should consult the GitHub release schedules for more information.
 
+## Version 2.2.1
+
+Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases/2.2.1.10/](http://santesuite.org/assets/uploads/santedb/community/releases/2.2.1.10/)
+
+This release of SanteDB builds on the fixes in 2.2.0 and corrects adds the following enhancements:
+
+* Fixes bug with blocking on `metaphone` and `dmetaphone` on PostgreSQL (improper parameter exception)
+* Adds better descriptions to the SanteGuard view screens for user activity and audit trail.
+* Updates to the audit detail view which uses the registered resource viewer (in order to open more types of data)
+* Adds link to the detailed audit entry in the audit trail and activity tabs
+* Fixes issue with job scheduling (present in 2.2.0) setting the appropriate type of schedule in the `xcron.xml` file.
+* Adds ability to download match configuration source files in XML to port the configuration over to other systems.
+
 ## Version 2.2.0 (Official)  / 2.1.180 (CTP)
 
 Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases/2.2.0/ ](http://santesuite.org/assets/uploads/santedb/community/releases/2.2.0/)
