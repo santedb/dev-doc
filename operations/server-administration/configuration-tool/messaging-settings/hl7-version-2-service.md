@@ -22,7 +22,7 @@ The HL7 Version 2 Service configuration panel is used to enable or disable the s
 
 The HL7 Services configuration property allows administrators to edit one or more IP/Endpoints which can receive HL7v2 messages.
 
-![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 
 
@@ -38,7 +38,7 @@ The HL7 Services configuration property allows administrators to edit one or mor
 
 When `sllp://` is used as the transport for the HL7 endpoint, the security settings for the endpoint.
 
-![](<../../../../.gitbook/assets/image (417) (1).png>)
+![](<../../../../.gitbook/assets/image (417) (1) (1).png>)
 
 | Setting                        | Description                                                                                                                                                                 | Examples                                                                                                  |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |

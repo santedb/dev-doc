@@ -45,6 +45,6 @@ When Firebird is selected as the database software, SanteDB will assume you're u
 
 You can create a new database from the configuration tool on the database software of your choice by selecting New Database as the database option. You will be prompted to enter the details of the database you're creating:
 
-![](<../../../../.gitbook/assets/image (417) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (417) (1) (1) (1) (1).png>)
 
 You will need to provide the superuser account of a user which has `CREATE DATABASE` permission on the selected provider. Upon pressing OK the database will be created and initialized, and you will be returned to the initial configuration screen.

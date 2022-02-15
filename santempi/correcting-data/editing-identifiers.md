@@ -1,4 +1,8 @@
-# Editing Identifiers
+# Identifiers Panel
+
+The identifiers panel shows the collected identification numbers collected from source systems in the MPI. This function is what allows the MPI to cross reference identification between different systems.
+
+## Editing Identifiers
 
 Identifiers can be edited within the administrative portal if :
 
@@ -6,9 +10,7 @@ Identifiers can be edited within the administrative portal if :
 * The identifier type is scoped in a way that it can be assigned to a ROT
   * For example: If an identifier is scoped to a Master Entity (such as a national health id) then the portal cannot change or assign a new identifier in that domain.
 
-To start the editing process, click the pencil icon on the **Identity** panel.
-
-![](<../../.gitbook/assets/image (14) (1).png>)
+![](<../../.gitbook/assets/image (435).png>)
 
 ### Changing Identifiers
 
@@ -18,9 +20,7 @@ Changing an identifier is not recommended if the administrative panel was not th
 If you're editing an identifier on a master record, then the identifier originally sent by the source system will not be changed, only the Record Of Truth record will carry the new identifier.
 {% endhint %}
 
-To change an identifier you can simply edit the identifier. Additionally, you can remove any identifiers you do not wish to be attached to the record.
-
-![Editing an Identifier](<../../.gitbook/assets/image (54).png>)
+To change an identifier users should first remove the existing identifier from the list and save the patient record, then re-add the identifier value to the list.
 
 ### Adding an Identifier
 

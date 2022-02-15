@@ -51,7 +51,7 @@ The `Extended Properties` panel is used to capture non-security related informat
 
 When editing a device, administrators will be shown the device security information. The `Core Properties` panel shows the provenance information (last update, creation, etc.) as well as the security ID (UUID for the object) and the name with which the device authenticates itself.
 
-![](<../../../../.gitbook/assets/image (435) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The core properties of a security device cannot be edited once a device is created. It is recommended that administrators delete the device and re-add the device credentials.
@@ -83,7 +83,7 @@ The device secret allows an administrator to set a new device secret. The existi
 
 After which, pressing the `Save` button will commit the change. Alternately the administrator can set the secret to a random value with `Reset`.
 
-![](<../../../../.gitbook/assets/image (446) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (446) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 When using X509 client certificate authentication, the secret of the device account should be X509 thumbprint of the certificate which the device will be presenting to the server. The value of the secret should be the `THUMBPRINT` attribute of the certificate in hexidecimal format in lower case. For example: `a11164321e30c84bd825ab20225421434622c52a`

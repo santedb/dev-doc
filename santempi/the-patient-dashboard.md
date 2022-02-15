@@ -68,7 +68,7 @@ All edits by the administrative panel to the MASTER record are redirected to the
 
 The remainder of the patient detail screen is occupied by the patient demographics and information tabs. These tabs can be extended based on the plugins enabled on the SanteDB server.&#x20;
 
-![](<../.gitbook/assets/image (451) (1).png>)
+![](<../.gitbook/assets/image (451) (1) (1).png>)
 
 By default the following tabs may appear based on your user access level:
 

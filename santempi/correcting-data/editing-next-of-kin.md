@@ -1,50 +1,40 @@
-# Editing Next of Kin
+# Related Persons Panel
 
 {% hint style="info" %}
-Next of Kin (or Family Members) are linked entities to the patient. When you edit the information for a family member within the patient view, you're actually editing information on another record. This may result in a shared update if the target family member is strongly linked between entities.
+Related persons are linked entities to the patient. When you edit the information for a family member within the patient view, you're actually editing information on another record. This may result in a shared update if the target family member is strongly linked between entities.
 {% endhint %}
 
-A patient's next of kin is displayed in the **Next of Kin** panel and can be edited by clicking the **pencil** icon.
+A patient's next of kin is displayed in the **Related Persons** panel and can be edited by clicking the **pencil** icon.
 
-![](<../../.gitbook/assets/image (126).png>)
+![](<../../.gitbook/assets/image (417).png>)
 
-### Patients as Family Members of Patients
+## Editing Existing Family Members
 
-When a strong record exists (i.e. a patient's family member has been promoted to a proper Patient type in SanteDB), you will not be permitted to edit the record inline (as this would cause an update without proper context). You'll first need to visit the local record for the target of the link.
+Clicking the edit button on the related persons panel will allow the administrator to change the demographic information about the related person.&#x20;
 
-This can be done by clicking the **View** action when instructed, and editing the details of the family member on the Patient demographics page.
+{% hint style="info" %}
+In SanteDB (and SanteMPI) the family members of patients may be a Person record (a non-patient person) or may be a patient record. This distinction will depend on the nature in which the related person is registered. For example, if the registration occurs via an HL7v2 NK1 segment and the identifier points to an existing patient, then the MPI constructs a Patient<>Patient link, however if the NK1 links to a new record then the relationship is created as Patient<>Person link.
+{% endhint %}
 
-![](<../../.gitbook/assets/image (76).png>)
+![](<../../.gitbook/assets/image (451).png>)
 
-### Person Family Members
+### Editing Patient Family Members
 
-Editing a patient's family members when linked to a person (not a patient) is done inline, the tabs for this edit process is the same as [Editing Demographic Information](editing-demographic-information.md) for patients.
+In the case where a related person is another patient, the act of editing the information on the related persons tab will result in a new MASTER record being created for the patient which is the family member. This is indicated on the **Advanced** relationship graph as a MDM rewrite.
 
-![](<../../.gitbook/assets/image (49).png>)
-
-### Converting a Person to Patient
-
-There are use cases where a family member should be upgraded from a Person reference to a Patient reference. This process happens:
-
-1. Automatically when an HL7 ADT message is received containing a known identifier for the family member (automatic conversion from Person to Patient), or
-2. Manually, when an administrator converts the patient.
-
-The reason for this conversion is:
-
-* You might want to take advantage of MDM functionalities not available to related persons
-* You want to indicate that the family member is receiving care, however don't want to re-key the information
-
-Manual conversion is a two-step process. Start by clicking the **Convert** option in the edit window
-
-![](<../../.gitbook/assets/image (132).png>)
-
-Complete the **Birth** information tab that appears when selecting this option. Complete the suspected DOB for the patient and gender. Once complete, press **Convert** again to complete the process.
-
-![](<../../.gitbook/assets/image (80).png>)
-
-You will note that the edit screen now instructs you to view the detail page for the newly created patient. Doing so will open the newly created patient record for that family member.
-
-![](<../../.gitbook/assets/image (136).png>)
+For example, the record for **Baby Abels** has a mother **Sarah Abels** both of which are Patient types (this record is registered in[test-ohie-cr-05-fhir.md](../../installation/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-05-fhir.md "mention")).\
 
 
+![](<../../.gitbook/assets/image (434).png>)
 
+When editing the data in the relationship panel, the information appears as illustrated below:
+
+![](<../../.gitbook/assets/image (454).png>)
+
+The editing of information on this panel (in this particular case) is redirected as an edit of the Record of Truth which is attached to Sarah Abels.
+
+## Adding Related Persons
+
+Related persons can be added to the patient's profile using the **New** tab. Before adding a new relationship, the user must select the nature of the relationship and complete the minimum dataset for the related person (depending on implementation, usually this is only name).
+
+![](<../../.gitbook/assets/image (446).png>)

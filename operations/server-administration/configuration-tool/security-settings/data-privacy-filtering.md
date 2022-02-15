@@ -7,7 +7,7 @@ The `Data Privacy Filtering` panel controls the configuration of the data privac
 * Control how sensitive records are disclosed or updated
 * Control which properties on which resources are forbidden (and will result in a privacy violation exception when collected, or queried).
 
-![](<../../../../.gitbook/assets/image (439) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (439) (1) (1) (1).png>)
 
 | Option         | Description                                                                                                                           | Example                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
