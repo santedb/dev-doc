@@ -8,7 +8,7 @@ Devices have a secret (like an application) and may optionally have a public sig
 
 The device list is accessed using the `Devices` menu item in the security menu. The device list shows a list of all active (non-deleted) devices which are permitted to access the SanteDB iCDR instance.
 
-![](<../../../../.gitbook/assets/image (432) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (432) (1) (1) (1).png>)
 
 The actions which are available under this panel are:
 
@@ -79,7 +79,7 @@ A device account's lockout can be reset using the `Unlock` button.
 
 The device secret allows an administrator to set a new device secret. The existing secret for the device is not shown (unless the device is new). Administrators can either `Edit` the secret to a custom value:
 
-![](<../../../../.gitbook/assets/image (447) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (447) (1) (1) (1).png>)
 
 After which, pressing the `Save` button will commit the change. Alternately the administrator can set the secret to a random value with `Reset`.
 
@@ -93,7 +93,7 @@ When using X509 client certificate authentication, the secret of the device acco
 
 By default a new device will copy its policies from the `DEVICES` group. After creation policies can be customized using the policies panel. New policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1).png>)
 
 By default a device will be assigned the policy with a GRANT permission. You can alter these by clicking the permission type.
 

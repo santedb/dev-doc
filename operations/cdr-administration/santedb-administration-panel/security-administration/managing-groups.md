@@ -65,7 +65,7 @@ This view shows the basic details of the group, and permits editing of the group
 
 By default a new group will have no policies associated with the group. Administrators should use the `Policies` section to add or alter policies. Policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1).png>)
 
 By default a group will be assigned the policy with a GRANT permission. You can alter these by clicking the permission.
 

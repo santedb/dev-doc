@@ -40,7 +40,7 @@ To change the match configuration, click on **SanteMPI** then **Match Settings**
 
 On the **Blocking** tab if we expand a blocking instruction we see the default method of matching is Source/Master:
 
-![](<../../.gitbook/assets/image (432) (1).png>)
+![](<../../.gitbook/assets/image (432) (1) (1).png>)
 
 We can change this by pressing **Edit** (pencil) and modifying both blocking instructions. After this step the configuration should appear as:
 
@@ -77,4 +77,4 @@ Now you can open a command prompt and type `seed-onc.bat` to start the seeding p
 
 The overall health of your deployment can be monitored on the Probes page.
 
-![](<../../.gitbook/assets/image (437) (1) (1).png>)
+![](<../../.gitbook/assets/image (437) (1) (1) (1).png>)

@@ -8,7 +8,7 @@ Jobs are run in the background and can execute without blocking other processes.
 
 The jobs panel summary shows the list of jobs registered on the dCDR or iCDR.
 
-![](<../../../../.gitbook/assets/image (437) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (437) (1) (1) (1) (1).png>)
 
 The columns for the job indicate:
 
@@ -29,7 +29,7 @@ The columns for the job indicate:
 
 When you run a system job you will be prompted to provide any job parameters (if any) which will control the execution of the task.
 
-![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1).png>)
 
 After setting parameters and pressing `Ok` administrators will be asked to confirm the execution of the job.
 

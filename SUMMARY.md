@@ -280,7 +280,7 @@
   * [SanteMPI Power Search](user-guides/santempi/santempi-power-search.md)
   * [SanteMPI Patient Detail](santempi/the-patient-dashboard.md)
     * [Demographics Tab](santempi/correcting-data/README.md)
-      * [Editing Demographic Information](santempi/correcting-data/editing-demographic-information.md)
+      * [Demographic Information Panel](santempi/correcting-data/editing-demographic-information.md)
       * [Editing Identifiers](santempi/correcting-data/editing-identifiers.md)
       * [Editing Next of Kin](santempi/correcting-data/editing-next-of-kin.md)
       * [Records of Truth](santempi/correcting-data/records-of-truth.md)

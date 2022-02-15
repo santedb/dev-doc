@@ -29,7 +29,7 @@ It is best practice to lock user accounts when you are investigating a security 
 
 When you delete a user they are marked as inactive. You can access these accounts by using the `Show Deleted` option in the user interface. Deleted user accounts provide an option to restore or un-delete the account (as well as edit the information).
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Creating User Accounts
 

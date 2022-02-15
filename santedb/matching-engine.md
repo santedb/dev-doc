@@ -34,7 +34,7 @@ In the example below, the SanteDB matching engine will load records for an `$inp
   * If the `$input` has a dateOfBirth then the date of birth must match, AND
   * If the `$input` has a gender concept then the gender must match
 
-![](<../.gitbook/assets/image (437) (1).png>)
+![](<../.gitbook/assets/image (437) (1) (1).png>)
 
 In pseudocode terms, the blocking query for an `$input` of John Smith, Male, SSN 203-204-3049 born 1980-03-02 would resemble:
 
@@ -66,7 +66,7 @@ During the scoring phase, the records from the blocking stage are compared to th
 
 Overall, the process of comparing a blocked record (named `$block`) with the `$input` record is:
 
-![](<../.gitbook/assets/image (428) (1).png>)
+![](<../.gitbook/assets/image (428) (1) (1).png>)
 
 1. The scoring attribute may declare that it depends on another attribute being scored (i.e. don't evaluate the `city` attribute unless `state` attribute has passed. If the dependent attribute was not scored as a positive (match) then the current attribute is assigned the whenNull() score.
 2. The attribute path on the configuration is read from both `$block` and `$input`.&#x20;

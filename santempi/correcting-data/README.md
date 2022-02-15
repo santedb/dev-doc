@@ -1,12 +1,29 @@
-# Correcting Data
+# Demographics Tab
 
 This section discusses various topics related to the editing of information within the administrative portal for SanteDB.
-
-* [Editing Demographic Information](editing-demographic-information.md)
-* [Editing Identifiers](editing-identifiers.md)
-* [Editing Records of Truth](records-of-truth.md)
-* [Editing Local Records](local-records.md)
 
 {% hint style="info" %}
 The MPI is intended to keep records of truth, and therefore editing details of patients sourced from other systems is only recommended when establishing a record of truth, or running in a simple deployment.
 {% endhint %}
+
+## Contents
+
+{% content-ref url="editing-demographic-information.md" %}
+[editing-demographic-information.md](editing-demographic-information.md)
+{% endcontent-ref %}
+
+{% content-ref url="editing-identifiers.md" %}
+[editing-identifiers.md](editing-identifiers.md)
+{% endcontent-ref %}
+
+{% content-ref url="editing-next-of-kin.md" %}
+[editing-next-of-kin.md](editing-next-of-kin.md)
+{% endcontent-ref %}
+
+{% content-ref url="records-of-truth.md" %}
+[records-of-truth.md](records-of-truth.md)
+{% endcontent-ref %}
+
+{% content-ref url="local-records.md" %}
+[local-records.md](local-records.md)
+{% endcontent-ref %}

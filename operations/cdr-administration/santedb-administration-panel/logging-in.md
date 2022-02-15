@@ -19,11 +19,11 @@ To initiate the password reset workflow, click the `Forgot Password` button, thi
 
 Next, enter the answer to the provided security challenge question.
 
-![](<../../../.gitbook/assets/image (436) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (436) (1) (1) (1) (1) (1) (1).png>)
 
 Finally, enter the new password for your user account, the password should adhere to the jurisdictions password complexity and history requirements.
 
-![](<../../../.gitbook/assets/image (437) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (437) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Your jurisdiction may have enabled SMS or e-mail password reset mechanisms. If this is the case, you will receive an e-mail link or SMS code with a one time password for password reset.

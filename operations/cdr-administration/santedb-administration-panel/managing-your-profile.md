@@ -2,7 +2,7 @@
 
 SanteDB's administration panel provides user self-service operations which allow any user to self-administer their profile. The profile administration screen is accessed by clicking on the user name on the top right side of your browser window.
 
-![](<../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1) (1).png>)
 
 After visiting this page, the user profile screen will be displayed. SanteDB's security subsystem separates user information into two components:
 
@@ -39,7 +39,7 @@ Setting your preferred language will change the user interface language when you
 
 The security profile panel allows you to modify your security settings for SanteDB.
 
-![](<../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * Last Login: Shows the last time that you logged into the SanteDB iCDR server
 * Security E-Mail: The e-mail address where you would like to receive password reset codes, or TFA codes.

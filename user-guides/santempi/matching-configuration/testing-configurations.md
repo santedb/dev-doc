@@ -34,7 +34,7 @@ The hints and analysis panel provides (currently, basic) feedback on your config
 * Excessive records being loaded from the database (i.e. > 10% of the blocked records were discarded or non-matches. Which indicates too many results are being loaded form database)
 * Too restrictive scoring or inappropriate blocking (i.e. many records are blocked but none are matched)
 
-![](<../../../.gitbook/assets/image (437).png>)
+![](<../../../.gitbook/assets/image (437) (1).png>)
 
 ### Match Test Results
 
@@ -46,7 +46,7 @@ Users may select the **view** option to see a detailed report of the attributes 
 
 For example, one of the non-match records, by viewing the data, can be seen that the state of the records match however the city do not. Resulting in the computed score.
 
-![](<../../../.gitbook/assets/image (429).png>)
+![](<../../../.gitbook/assets/image (429) (1).png>)
 
 {% hint style="info" %}
 The settings for the match configuration can be changed on the [blocking-configuration.md](blocking-configuration.md "mention") , [scoring-configuration.md](scoring-configuration.md "mention") or [classification-configuration.md](classification-configuration.md "mention") tabs and re-tested in an iterative fashion to tune your match configuration.

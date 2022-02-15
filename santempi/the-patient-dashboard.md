@@ -6,7 +6,7 @@ When opening a patient in a search result, match result, or via direct link, use
 
 Located at the top of the patient detail is the patient header. The header shows summary information about the patent record.
 
-![](<../.gitbook/assets/image (429) (1).png>)
+![](<../.gitbook/assets/image (429) (1) (1).png>)
 
 ### Record Status
 
@@ -14,7 +14,7 @@ The SanteDB CDR supports assigning a status identifier to a record in the system
 
 
 
-![](<../.gitbook/assets/image (448) (1).png>)
+![](<../.gitbook/assets/image (448) (1) (1).png>)
 
 | State       | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ In SanteMPI all LOCAL records must have a single MASTER record. When a master re
 
 The **Advanced** view of the **Entity Relationship** panel shows the local records which have been used to represent the master record. For example, Gustavo Osorio's relationship with a mother record (Guerra) is inferred (indicated by the dotted line) via the local from a source system (indicated by a solid line). However, this relationship exists on one local, the other local does not have any information about Gustavo's mother.
 
-![](<../.gitbook/assets/image (447) (1).png>)
+![](<../.gitbook/assets/image (447) (1) (1).png>)
 
 {% hint style="info" %}
 Master records don't contain data beyond identifiers. They are abstract Entity objects which act as a linker between different sources of information.

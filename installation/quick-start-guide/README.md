@@ -185,7 +185,7 @@ Once your settings are saved, the web access gateway will save the settings and 
 
 You can now log into the web administration console for the Master Patient Index. You can use the administrator/Mohawk123 account to log into the administrative panel.
 
-![](<../../.gitbook/assets/image (447) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (447) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.
@@ -226,7 +226,7 @@ An easy way to get patients into the SanteMPI instance is to run the [fhir-inter
 
 In the pre-requisites, a link was provided to the SanteMPI Installation Qualification SOAP-UI project. You can launch SOAP UI on your system and import this project.
 
-![](<../../.gitbook/assets/image (432) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (432) (1) (1) (1) (1).png>)
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 
@@ -250,4 +250,4 @@ If all tests return green status, it indicates that your copy of SanteMPI is ope
 
 After the qualification tooling has been executed, you can now use the SanteMPI Dashboard to navigate the recent patients that were created in the installation qualification tool.
 
-![](<../../.gitbook/assets/image (436) (1) (1).png>)
+![](<../../.gitbook/assets/image (436) (1) (1) (1).png>)
