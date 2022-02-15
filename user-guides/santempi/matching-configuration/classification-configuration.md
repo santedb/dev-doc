@@ -10,7 +10,7 @@ The screen shows the thresholds at which a candidate `$block` record will be cla
 
 Pressing the edit button on the classification panel will enable sliders for modifying the classification thresholds.
 
-![](<../../../.gitbook/assets/image (443).png>)
+![](<../../../.gitbook/assets/image (443) (1).png>)
 
 The administrator may select an evaluation mode which can be one of:
 

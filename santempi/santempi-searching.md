@@ -22,7 +22,7 @@ If your system is equipped with a camera, you can choose to search for a patient
 
 To search by barcode, press the `Scan` option, and accept the permission to access the device camera. Hold the QR code for the patient in front of the camera and scan the information.
 
-![](<../.gitbook/assets/image (433) (1) (1).png>)
+![](<../.gitbook/assets/image (433) (1) (1) (1).png>)
 
 * Ensure the QR code or barcode fits in the area indicated on the camera preview.
 * Ensure the QR code is close to the camera and is clear
@@ -52,7 +52,7 @@ After entering the filter details for the patient search, pressing the search bu
 The SanteMPI server may impose minimum search criteria for search. For example, a jurisdiction may choose to return no results for searches with less than 3 search fields.
 {% endhint %}
 
-![](<../.gitbook/assets/image (440) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (440) (1) (1) (1) (1).png>)
 
 ## Search Results
 

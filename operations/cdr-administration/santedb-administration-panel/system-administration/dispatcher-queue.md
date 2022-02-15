@@ -6,7 +6,7 @@ Whenever SanteDB needs to send data using a standards based interfaces to system
 Dispatcher queues differ from synchronization queues used on the dCDR in that they do not support reconciliation of conflicts or subscription management. Dispatcher queuest are intended from remote targets that aren't SanteDB such as FHIR endpoints, HL7v2 endpoints or GS1 endpoints.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Users can opt to `Resubmit` a queue, which instructs the dCDR or iCDR to take all messages from a dead letter queue and place them back into the primary queue for re-submission. Additionally administrators may `Purge` a queue, which instructs the dCDR or iCDR to purge all data in the waiting dispatch list.
 

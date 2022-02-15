@@ -52,7 +52,7 @@ The quick ignore option allows the data administrator to quickly instruct SanteM
 
 Clicking on the `View` option, will display a more detailed analysis of the match pair. This view assists data administrators in determining the validity of the match, such that the match can be verified or ignored.
 
-![](<../../.gitbook/assets/image (430) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (430) (1) (1) (1) (1).png>)
 
 * Match Summary Information Tab - Shows a side-by-side comparison of basic attributes on both the A and B records.
   * Either patient record can be opened using the `View` option.
@@ -101,8 +101,8 @@ The detail table illustrates the calculated (and weighted) score of each object 
 
 ## Related Topics
 
-{% content-ref url="the-patient-dashboard/master-data-management-tab.md" %}
-[master-data-management-tab.md](the-patient-dashboard/master-data-management-tab.md)
+{% content-ref url="the-patient-dashboard/master-data-management-tab/" %}
+[master-data-management-tab](the-patient-dashboard/master-data-management-tab/)
 {% endcontent-ref %}
 
 {% content-ref url="matching-configuration/" %}

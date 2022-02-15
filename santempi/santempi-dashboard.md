@@ -2,7 +2,7 @@
 
 SanteDB's default dashboard provides a few key indicators for your MPI (patient population, etc.) as well as recent registrations which may be of interest to an administrator. In the screenshot below, for example, we can see most of the patients in the sample MPI are young patients.
 
-![](<../.gitbook/assets/image (427) (1) (1).png>)
+![](<../.gitbook/assets/image (427) (1) (1) (1).png>)
 
 * Search All Patients - Takes the user to the basic search screen for SanteMPI&#x20;
 * Filter Recent Patients - Quickly find a recent patient by name

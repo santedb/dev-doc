@@ -2,7 +2,7 @@
 
 The demographics panel shows information related to the current patient record being viewed. This information includes key tombstone information (date of birth, name, etc.) as well as extended data such as telephone numbers, addresses, birthplaces, etc.
 
-![](<../../.gitbook/assets/image (428).png>)
+![](<../../.gitbook/assets/image (429).png>)
 
 Information which may be of critical use (such as VIP status or other sensitive fields) will be indicated with a highlight.
 
@@ -15,7 +15,7 @@ When the demographics panel is placed into edit mode, a multi-part form will be 
 {% hint style="success" %}
 When attempting to edit a master record, users must have the `Establish MDM Record Of Truth` policy permission. This state will be indicated with a notice about the establishment of a record of truth.&#x20;
 
-![](<../../.gitbook/assets/image (437).png>)
+![](<../../.gitbook/assets/image (443).png>)
 {% endhint %}
 
 {% hint style="info" %}
@@ -26,7 +26,7 @@ The optionality of data in the user interface depends on the national profile fo
 
 The birth details tab is used to capture information about each of the demographics fields related to the birth of the person/patient being edited.
 
-![](<../../.gitbook/assets/image (436).png>)
+![](<../../.gitbook/assets/image (442).png>)
 
 | Field       | Data      | Purpose                                                                                                                                                                                                                                                                                       |
 | ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -74,7 +74,7 @@ The name use is derived from the **NameUse** concept set, the default values of 
 
 SanteDB allows a single patient to have multiple addresses each with a different purpose. Accessing the address entry is done clicking on the **Address** tab.
 
-![](<../../.gitbook/assets/image (448).png>)
+![](<../../.gitbook/assets/image (451).png>)
 
 This input area can change based on the configuration of your instance of SanteMPI. There are three types of address entry generally provided:
 
@@ -144,7 +144,7 @@ The types of addresses are:
 
 When a patient dies, or is reported as deceased the demographic record can be updated to reflect this. To report a patient as deceased use the **Death** tab.
 
-![](<../../.gitbook/assets/image (447).png>)
+![](<../../.gitbook/assets/image (450).png>)
 
 Here the patient has been indicated as deceased on Feb 15, 2022. It is also possible to record the place of death of the patient.
 
@@ -156,7 +156,7 @@ The death details on the patient's demographic record is merely to mark the pati
 
 The extra tab allows administrators to append additional information to the demographic profile.
 
-![](<../../.gitbook/assets/image (429).png>)
+![](<../../.gitbook/assets/image (430).png>)
 
 {% hint style="info" %}
 Jurisdictions may additionally enable additional, sensitive fields such as Religion, Ethnicity, Tribe, Nationality, etc.

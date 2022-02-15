@@ -20,10 +20,3 @@ The MPI is intended to keep records of truth, and therefore editing details of p
 [editing-next-of-kin.md](editing-next-of-kin.md)
 {% endcontent-ref %}
 
-{% content-ref url="records-of-truth.md" %}
-[records-of-truth.md](records-of-truth.md)
-{% endcontent-ref %}
-
-{% content-ref url="local-records.md" %}
-[local-records.md](local-records.md)
-{% endcontent-ref %}

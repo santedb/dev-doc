@@ -33,7 +33,7 @@ When editing a scored attribute, the explain diagram for that attribute is autom
 
 The first section of the attribute configuration are descriptive fields (ID and Notes) and the selector (the HDSI expression that extracts the values from `$input` and `$block`). For example, to score based on the patient's home address state, the administrator may provide an attribute id, a note, and an extraction path of `address[HomeAddress]`.&#x20;
 
-![](<../../../.gitbook/assets/image (427).png>)
+![](<../../../.gitbook/assets/image (427) (1).png>)
 
 {% hint style="info" %}
 Note that the property extraction is to the root element rather than the value element of `address[HomeAddress].component[State].value` , this is done since the extraction of the root property allows for more granular transforms (i.e. we can perform multiple extractions on the address property rather than just the state portion).
@@ -43,7 +43,7 @@ Note that the property extraction is to the root element rather than the value e
 
 If the administrator wishes to provide multiple paths for extraction they can provide either a single HDSI expression or multiple properties in the property list. For example, if `HomeAddress` or `VacationHome` they may provide separate extraction properties.
 
-![](<../../../.gitbook/assets/image (455).png>)
+![](<../../../.gitbook/assets/image (455) (1).png>)
 
 This instructs the scoring engine to attempt an extract of `HomeAddress` from both `$input` and `$block`. If either are null, then an attempt is made to extract `VacationHome` from both `$input` and `$block`.&#x20;
 
@@ -59,16 +59,16 @@ The **When Null** input on the attribute instructs the scoring process, how to h
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | None       | No special behavior is performed. The assertions are evaluated as specified.                                                                                                                                                                                                                    | ![](<../../../.gitbook/assets/image (422).png>)     |
 | Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (447) (1).png>) |
-| Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440).png>)     |
+| Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440) (1).png>) |
 | Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (451) (1).png>) |
-| NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442).png>)     |
-| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452).png>)     |
+| NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442) (1).png>) |
+| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452) (1).png>) |
 
 ### Attribute Transforms
 
 The matching attribute evaluation can be considered a type of data flow. Consider our example using address, the flow of data in the evaluation of the transform may initially resemble
 
-![](<../../../.gitbook/assets/image (449).png>)
+![](<../../../.gitbook/assets/image (449) (1).png>)
 
 The steps which would be executed are:
 
@@ -104,7 +104,7 @@ If the `$input` address contained `123 Main Street West, Some City, Some State, 
 
 If the state is selected from a drop down or a known codification of states, then this may be sufficient. However, if the state entry is a free-text input, the implementer may wish to apply a string comparison operation (a binary transform) of levenshtein string difference to both inputs.
 
-![](<../../../.gitbook/assets/image (433).png>)
+![](<../../../.gitbook/assets/image (433) (1).png>)
 
 The related data flow here, would be expressed as:
 
@@ -190,7 +190,7 @@ The scoring engine requires information in order to assign a match and non-match
 
 the M and U values can be set in the user interface by either sliding the indicators to adjust the values, or by entering an exact number.
 
-![](<../../../.gitbook/assets/image (444).png>)
+![](<../../../.gitbook/assets/image (444) (1).png>)
 
 The calculated scores are shown below the entry for M and U. These scores are calculated via $$weight_m=\frac{log_e(\frac{m}{u})}{log_e(2.0)}$$ and $$weight_u=\frac{log_e(\frac{1-m}{1-u})}{log_e(2.0)}$$.
 

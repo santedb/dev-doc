@@ -44,7 +44,7 @@ On the **Blocking** tab if we expand a blocking instruction we see the default m
 
 We can change this by pressing **Edit** (pencil) and modifying both blocking instructions. After this step the configuration should appear as:
 
-![](<../../.gitbook/assets/image (449) (1).png>)
+![](<../../.gitbook/assets/image (449) (1) (1).png>)
 
 ## Prepare ONC Dataset
 
@@ -73,7 +73,7 @@ The batch file will look at all the CSV files in the current directory and for e
 
 Now you can open a command prompt and type `seed-onc.bat` to start the seeding process. There will 9 consoles opened and 9 clients will begin seeding data to the MPI.
 
-![](<../../.gitbook/assets/image (443) (1).png>)
+![](<../../.gitbook/assets/image (443) (1) (1).png>)
 
 The overall health of your deployment can be monitored on the Probes page.
 

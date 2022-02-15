@@ -9,7 +9,7 @@ Testing a match configuration can be performed on the **Testing** tab. This tab 
 
 First, users should search for a `$input` record for which they would like to test their configuration. The search is performed by identifier, as an example, a patient has been selected and selected.
 
-![](<../../../.gitbook/assets/image (445).png>)
+![](<../../../.gitbook/assets/image (445) (1).png>)
 
 If performing a match test against the underlying data store, the user can press the **Run** button.
 
@@ -25,7 +25,7 @@ Once test results are available they are gathered and the data displayed in a se
 
 The overview panel shows summary information about the test results. These summary indicators provide a brief insight into scores from results of the test run.
 
-![](<../../../.gitbook/assets/image (459).png>)
+![](<../../../.gitbook/assets/image (459) (1).png>)
 
 ### Hints / Analysis
 
@@ -40,7 +40,7 @@ The hints and analysis panel provides (currently, basic) feedback on your config
 
 The test results panel show the individual records which were evaluated (up to 100 of them) against the input record. This includes basic demographics information about the match pair, the score assigned from evaluation and the classification.
 
-![](<../../../.gitbook/assets/image (456).png>)
+![](<../../../.gitbook/assets/image (456) (1).png>)
 
 Users may select the **view** option to see a detailed report of the attributes which were considered and the values which were compared as well as the computed score of the current configuration compared with other configurations).
 

@@ -43,7 +43,7 @@ SanteDB jobs can be run on a schedule. The schedule for jobs are persisted (by d
 
 Scheduling a job is performed by clicking on the `Schedule` button on the job summary page.
 
-![](<../../../../.gitbook/assets/image (441) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (441) (1) (1) (1).png>)
 
 Upon opening the job schedule, a window will appear allowing the user to configure a job schedule. There are two methods for setting a job schedule:
 
@@ -51,7 +51,7 @@ Upon opening the job schedule, a window will appear allowing the user to configu
 
 An interval schedule is used when the job should be run on a regular timed interval. This timer is started when the SanteDB host process is started and repeats at the specified timing.
 
-![](<../../../../.gitbook/assets/image (433) (1).png>)
+![](<../../../../.gitbook/assets/image (433) (1) (1).png>)
 
 ### Calendar Schedule
 

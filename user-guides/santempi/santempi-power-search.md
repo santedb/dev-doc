@@ -14,7 +14,7 @@ When a user visits the power search screen, they are presented with an empty sea
 
 To begin, enter the HDSI query expression clause. The software will provide suggestions for property clause paths which match the Patient resource. Users can select the property they wish to filter on.
 
-![](<../../.gitbook/assets/image (449) (1) (1).png>)
+![](<../../.gitbook/assets/image (449) (1) (1) (1).png>)
 
 Users may use keyboard shortcuts to navigate the suggestions:
 
@@ -47,13 +47,13 @@ For example, the following expression results in patients who were born between 
 
 Conversely, the following expression results in patients named Donny or Don
 
-![](<../../.gitbook/assets/image (440) (1) (1).png>)
+![](<../../.gitbook/assets/image (440) (1) (1) (1).png>)
 
 ### Concept Fields
 
 Whenever the HDSI expression is a filter on a property of type `Concept` the value will be a search, of concepts.
 
-![](<../../.gitbook/assets/image (430) (1) (1).png>)
+![](<../../.gitbook/assets/image (430) (1) (1) (1).png>)
 
 ### Entity Fields
 
@@ -69,7 +69,7 @@ Using the cast operator `@` the input can be filtered to places only.
 
 If the SanteDB instance is collecting data other than patient registrations (such as vaccinations), the properties of patient can be linked deeply. For example, if we wanted to filter on patients who have received a vaccination of a particular product.
 
-![](<../../.gitbook/assets/image (441) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (441) (1) (1) (1) (1) (1).png>)
 
 ## Related Topics
 

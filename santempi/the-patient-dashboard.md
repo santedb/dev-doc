@@ -36,13 +36,13 @@ When [master-data-storage.md](../santedb/data-storage-patterns/master-data-stora
 
 A local or source record indicates that the data being viewed is the SanteDB representation of data submitted directly from a source system.  Source records are read only in the user interface, this is because editing a source record would cause a mis-match of data between SanteDB and the source system which submitted the data (and loss of context). Corrections to local records should be performed on the local system which submitted the data.
 
-![](<../.gitbook/assets/image (427) (1).png>)
+![](<../.gitbook/assets/image (427) (1) (1).png>)
 
 #### Master Records
 
 A master record indicates that the data being viewed is collected form a series of local records and is being presented as a logical projection of the data contained in the underlying records.&#x20;
 
-![](<../.gitbook/assets/image (450) (1).png>)
+![](<../.gitbook/assets/image (450) (1) (1).png>)
 
 In SanteMPI all LOCAL records must have a single MASTER record. When a master record has not been adjusted to contain official data, the notification bar will indicate this.&#x20;
 
@@ -58,7 +58,7 @@ Master records don't contain data beyond identifiers. They are abstract Entity o
 
 When a data administrator uses the administrative panel to edit a patient record, the administrative panel (granted with **Establish MDM Record of Truth**) will construct a new SOURCE/LOCAL record (which belongs to the administrative panel) which is promoted to **Record of Truth**. This will be indicated with a green bar and an option to view the ROT and/or EDIT the master.
 
-![](<../.gitbook/assets/image (452) (1).png>)
+![](<../.gitbook/assets/image (452) (1) (1).png>)
 
 {% hint style="info" %}
 All edits by the administrative panel to the MASTER record are redirected to the record of truth. It is recommended that administrators and data officers edit new official information on the ROT directly.
@@ -82,8 +82,8 @@ By default the following tabs may appear based on your user access level:
 [correcting-data](correcting-data/)
 {% endcontent-ref %}
 
-{% content-ref url="../user-guides/santempi/the-patient-dashboard/master-data-management-tab.md" %}
-[master-data-management-tab.md](../user-guides/santempi/the-patient-dashboard/master-data-management-tab.md)
+{% content-ref url="../user-guides/santempi/the-patient-dashboard/master-data-management-tab/" %}
+[master-data-management-tab](../user-guides/santempi/the-patient-dashboard/master-data-management-tab/)
 {% endcontent-ref %}
 
 {% content-ref url="../user-guides/santempi/the-patient-dashboard/data-quality-tab.md" %}

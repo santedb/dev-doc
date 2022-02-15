@@ -4,7 +4,7 @@
 
 The blocking filters panel on the blocking configuration tab allows administrators to view and edit the filters which will be used to block data from the underlying data persistence source to select candidates which may be a good candidate for the more computationally complex process of scoring.
 
-![](<../../../.gitbook/assets/image (441).png>)
+![](<../../../.gitbook/assets/image (441) (1).png>)
 
 Each block (or group of filters) is shown in an accordion which can be expanded using the **Block 0** through **Block n** links. Each block contains:
 
@@ -40,7 +40,7 @@ Blocks are loaded as atomic queries, however there are situations where implemen
 
 For example, the following blocking instruction would load patients where a record in the database has a gender, name, state, and SSN which match the `$input` criteria.
 
-![](<../../../.gitbook/assets/image (430).png>)
+![](<../../../.gitbook/assets/image (430) (1).png>)
 
 However, a jurisdiction may wish to block patients whose gender, name, state match OR has a matching SSN. In this case two blocks would be defined. To do this the jurisdiction would remove the SSN clause from the first block, and would, instead, create a second block for just SSN and UNION the two blocks together:
 

@@ -130,7 +130,7 @@ Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:
 
 The rest of the settings can be left as their defaults.
 
-![](<../../.gitbook/assets/image (427) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (427) (1) (1) (1) (1) (1).png>)
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
@@ -151,7 +151,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
@@ -230,13 +230,13 @@ In the pre-requisites, a link was provided to the SanteMPI Installation Qualific
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 
-``![](<../../.gitbook/assets/image (430) (1) (1) (1) (1).png>)``
+``![](<../../.gitbook/assets/image (430) (1) (1) (1) (1) (1).png>)``
 
 ### Start FHIR Mock Service
 
 The installation qualification tool uses PMIR notifications and subscriptions, it is a good idea to start the FHIR Mock service so that your docker container has an endpoint to send these messages to.
 
-![](<../../.gitbook/assets/image (444) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (444) (1) (1) (1) (1) (1).png>)
 
 ### Run Installation Qualification Tests
 
