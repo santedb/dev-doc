@@ -38,3 +38,9 @@ The editing of information on this panel (in this particular case) is redirected
 Related persons can be added to the patient's profile using the **New** tab. Before adding a new relationship, the user must select the nature of the relationship and complete the minimum dataset for the related person (depending on implementation, usually this is only name).
 
 ![](<../../.gitbook/assets/image (449).png>)
+
+## Related Topics
+
+{% content-ref url="../../santedb/data-and-information-architecture/conceptual-data-model/entities/entity-relationships.md" %}
+[entity-relationships.md](../../santedb/data-and-information-architecture/conceptual-data-model/entities/entity-relationships.md)
+{% endcontent-ref %}

@@ -1,4 +1,4 @@
-# Entity Relationships
+# Entity Relationships Panel
 
 The entity relationships panel is a display only panel that illustrates the physical and logical relationships between different entities in the SanteDB database.
 
@@ -40,3 +40,9 @@ Administrators looking at the same entity in advanced mode will be able to deter
 With advanced view mode enabled, administrators can now see that the Citizen relationship is actually physically linked via the record of truth and the mother relationship has been linked via the SOURCE record.
 
 ![](<../../../../.gitbook/assets/image (437).png>)
+
+## Related Topics
+
+{% content-ref url="../../../../santedb/data-and-information-architecture/conceptual-data-model/entities/entity-relationships.md" %}
+[entity-relationships.md](../../../../santedb/data-and-information-architecture/conceptual-data-model/entities/entity-relationships.md)
+{% endcontent-ref %}

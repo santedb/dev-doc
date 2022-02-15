@@ -101,8 +101,8 @@ The detail table illustrates the calculated (and weighted) score of each object 
 
 ## Related Topics
 
-{% content-ref url="the-patient-dashboard/master-data-management-tab/" %}
-[master-data-management-tab](the-patient-dashboard/master-data-management-tab/)
+{% content-ref url="the-patient-dashboard/master-data-management-tab.md" %}
+[master-data-management-tab.md](the-patient-dashboard/master-data-management-tab.md)
 {% endcontent-ref %}
 
 {% content-ref url="matching-configuration/" %}

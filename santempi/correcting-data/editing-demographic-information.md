@@ -180,3 +180,10 @@ The relationship types are listed below for additional assistance:
 | Employer           | Organization             | One or more organizations where the patient is known to work.                                                                                                                                  |
 | Primary Provider   | Provider or Organization | The patient's primary care provider (family doctor) or other known providers.                                                                                                                  |
 | School             | Organization             | One or more educational institutions where the patient is attending school.                                                                                                                    |
+
+## Related Topics
+
+{% content-ref url="../../santedb/data-and-information-architecture/conceptual-data-model/entities/data-dictionary.md" %}
+[data-dictionary.md](../../santedb/data-and-information-architecture/conceptual-data-model/entities/data-dictionary.md)
+{% endcontent-ref %}
+

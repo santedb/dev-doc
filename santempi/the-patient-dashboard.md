@@ -82,8 +82,8 @@ By default the following tabs may appear based on your user access level:
 [correcting-data](correcting-data/)
 {% endcontent-ref %}
 
-{% content-ref url="../user-guides/santempi/the-patient-dashboard/master-data-management-tab/" %}
-[master-data-management-tab](../user-guides/santempi/the-patient-dashboard/master-data-management-tab/)
+{% content-ref url="../user-guides/santempi/the-patient-dashboard/master-data-management-tab.md" %}
+[master-data-management-tab.md](../user-guides/santempi/the-patient-dashboard/master-data-management-tab.md)
 {% endcontent-ref %}
 
 {% content-ref url="../user-guides/santempi/the-patient-dashboard/data-quality-tab.md" %}

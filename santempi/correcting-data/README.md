@@ -20,3 +20,6 @@ The MPI is intended to keep records of truth, and therefore editing details of p
 [editing-next-of-kin.md](editing-next-of-kin.md)
 {% endcontent-ref %}
 
+{% content-ref url="../../user-guides/santempi/the-patient-dashboard/correcting-data/entity-relationships-panel.md" %}
+[entity-relationships-panel.md](../../user-guides/santempi/the-patient-dashboard/correcting-data/entity-relationships-panel.md)
+{% endcontent-ref %}

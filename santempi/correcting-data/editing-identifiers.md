@@ -33,3 +33,13 @@ To add an identifier to the patient's record you can select the identity domain 
 SanteMPI provides API hooks to generate random identifiers based on some sort of algorithm. If an identity domain has a generator attached, a generation icon will appear next to the add button which can be used to generate the identifier.
 
 ![](<../../.gitbook/assets/image (87).png>)
+
+## Related Topics
+
+{% content-ref url="../../operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md" %}
+[identity-domain-management.md](../../operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
+{% endcontent-ref %}
+
+{% content-ref url="../configuring-identity-domains.md" %}
+[configuring-identity-domains.md](../configuring-identity-domains.md)
+{% endcontent-ref %}
