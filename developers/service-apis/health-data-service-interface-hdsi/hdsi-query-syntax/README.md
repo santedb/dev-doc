@@ -164,6 +164,32 @@ Variables can also be used as the root of another HDSI expression, for example, 
 address.component[City].value=$input.address.component[City].value
 ```
 
+### Built-In Variables
+
+The following variables are available when using the HDSI query syntax in any context.
+
+| Variable | Type           | Description                                                       |
+| -------- | -------------- | ----------------------------------------------------------------- |
+| `$now`   | DateTimeOffset | The current timestamp on the iCDR or dCDR sever.                  |
+| `$today` | DateTime       | The current date (year, month and day) on the iCDR or dCDR server |
+
+### Matching Variables
+
+When using the SanteDB matching engine the HDSI query syntax is extended to include additional variables.
+
+| Variable | Type   | Description                                      |
+| -------- | ------ | ------------------------------------------------ |
+| `$input` | Entity | The entity which is attempting to be registered. |
+
+### CDSS Variables
+
+When evaluating HDSI expressions in the CDSS engine the following additional variables are exposed.
+
+| Variable      | Type    | Description                                                                                                                                                               |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$index`      | Integer | When the `repeat` clause is specified on a rule, this represents the current index of the repetition                                                                      |
+| `$background` | Boolean | When true, indicates that the CDSS rule is being called as part of a background process, when false indicates that the CDSS rule is being executed in the user interface. |
+
 ## Extension Functions
 
 The default matching operations may be extended via SanteDB's query extension methods. These methods allow for custom matching parameters. These extension functions are enumerated below (with a discussion on which plugins must be enabled to activate them).
