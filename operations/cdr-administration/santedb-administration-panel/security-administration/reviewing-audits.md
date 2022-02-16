@@ -8,7 +8,7 @@ In the SanteDB administrative panel, audits are accessed using the `Audit Reposi
 
 The audit list provides an overview of the complete audit trail available in the SanteDB iCDR or dCDR instance to which the administrative panel is connected.&#x20;
 
-![](<../../../../.gitbook/assets/image (419).png>)
+![](<../../../../.gitbook/assets/image (419) (1).png>)
 
 Audits are displayed with the event summary fields visible.
 
@@ -88,7 +88,7 @@ The event metadata is the same as that shown in the summary list, with additiona
 
 The network information section shows information about the network infrastructure when the request was made.
 
-![](<../../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Users and Computers
 

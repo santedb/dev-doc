@@ -29,7 +29,7 @@ For example, the record for **Baby Abels** has a mother **Sarah Abels** both of 
 
 When editing the data in the relationship panel, the information appears as illustrated below:
 
-![](<../../.gitbook/assets/image (455).png>)
+![](<../../.gitbook/assets/image (455) (1).png>)
 
 The editing of information on this panel (in this particular case) is redirected as an edit of the Record of Truth which is attached to Sarah Abels.
 
@@ -37,7 +37,7 @@ The editing of information on this panel (in this particular case) is redirected
 
 Related persons can be added to the patient's profile using the **New** tab. Before adding a new relationship, the user must select the nature of the relationship and complete the minimum dataset for the related person (depending on implementation, usually this is only name).
 
-![](<../../.gitbook/assets/image (449).png>)
+![](<../../.gitbook/assets/image (449) (1).png>)
 
 ## Related Topics
 

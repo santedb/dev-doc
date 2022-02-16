@@ -20,7 +20,7 @@ In the **Master Data Management** tab of the patient view this record will be in
 
 Whenever a record has a record of truth associated with it, the user interface and MPI will redirect all administrative panel updates from the MASTER to the record of truth (as indicated on the header).
 
-![](<../../.gitbook/assets/image (434).png>)
+![](<../../.gitbook/assets/image (434) (1).png>)
 
 Records of truth are used by the SanteMPI system to determine what data is returned in queries and fetches of the master record. This type of functionality can be used to establish a curated **Golden Record** for the patient with official data.
 

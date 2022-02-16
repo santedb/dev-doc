@@ -144,7 +144,7 @@ The types of addresses are:
 
 When a patient dies, or is reported as deceased the demographic record can be updated to reflect this. To report a patient as deceased use the **Death** tab.
 
-![](<../../.gitbook/assets/image (450).png>)
+![](<../../.gitbook/assets/image (450) (1).png>)
 
 Here the patient has been indicated as deceased on Feb 15, 2022. It is also possible to record the place of death of the patient.
 

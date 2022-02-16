@@ -15,7 +15,7 @@ Most plugins and solutions will seed data and action policies into the iCDR when
 
 The policy list shows view of the configured system policies in a particular iCDR instance. The policy list provides basic functionality for managing policies including:
 
-![](<../../../../.gitbook/assets/image (421) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (421) (1) (1) (1).png>)
 
 * Creating security and privacy new policies in the iCDR instance
 * Deleting non-system policies (system policies cannot be deleted)

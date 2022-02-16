@@ -57,6 +57,6 @@ An interval schedule is used when the job should be run on a regular timed inter
 
 A calendar schedule should be used whenever the job needs to be executed on a repeated calendar day. For example, to refresh the materialized views at 11 PM every day starting January 26, 2022.
 
-![](<../../../../.gitbook/assets/image (435) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1).png>)
 
 If a future date or time is specified, then the job will only run&#x20;

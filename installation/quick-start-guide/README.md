@@ -195,7 +195,7 @@ Full documentation for the Administrative panel is available at the [Broken link
 
 Since this is a demonstration environment, you will probably want to change the default access policies for `Administrators` to allow them to see clinical data and perform MDM tasks. This is done by navigating to `Security -> Groups` and pressing edit on the `Administrators` group.
 
-![](<../../.gitbook/assets/image (421) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (421) (1) (1) (1) (1).png>)
 
 You can scroll to `Policies` and add the following policies to the group:
 
@@ -206,7 +206,7 @@ You can scroll to `Policies` and add the following policies to the group:
 
 After adding these policies you should observe the policies in the master list of permissions.
 
-![](<../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 You do not need to SAVE policy assignments, they are applied immediately.
@@ -216,7 +216,7 @@ You do not need to SAVE policy assignments, they are applied immediately.
 
 The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
 
-![](<../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Perform Installation Qualification
 
@@ -242,7 +242,7 @@ The installation qualification tool uses PMIR notifications and subscriptions, i
 
 Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](../installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
 
-![](<../../.gitbook/assets/image (425) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (425) (1) (1) (1) (1) (1).png>)
 
 If all tests return green status, it indicates that your copy of SanteMPI is operating as expected for baseline FHIR functions.
 

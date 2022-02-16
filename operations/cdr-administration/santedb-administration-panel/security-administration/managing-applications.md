@@ -6,7 +6,7 @@ In SanteDB the a security application represents a piece of software code which 
 
 The application list screen shows a listing of all registered security applications (and profiles) in the implementation of SanteDB.&#x20;
 
-![](<../../../../.gitbook/assets/image (425) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1).png>)
 
 * Create Application Identity: Used to establish a new authenticated application.
 * Details / Edit : Used to view the security details of the authenticated application and change if needed.

@@ -39,7 +39,7 @@ When you press the `Create` button on the user summary screen, you will be provi
 This article explains the mechanics of creating a new user. Please refer to the Standard Operating Procedure for more information about the business process surrounding this screen.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (421) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (421) (1) (1) (1) (1) (1) (1).png>)
 
 * Username: Enter a unique user name for the specific user which will be using the system. It is best practices that this map to a single, individual user account.
 * Role: Select one or more roles for the user account. Built-in roles are generally:
@@ -57,7 +57,7 @@ This article explains the mechanics of creating a new user. Please refer to the 
 
 When you use the `Edit` option to view the details of a user, you will be presented with the user information detail screen.&#x20;
 
-![](<../../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * Security Tab: The security tab is used to edit the core security attributes of the user. This includes:
   * Resetting the user's password

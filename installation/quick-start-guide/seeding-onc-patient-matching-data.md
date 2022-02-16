@@ -44,7 +44,7 @@ On the **Blocking** tab if we expand a blocking instruction we see the default m
 
 We can change this by pressing **Edit** (pencil) and modifying both blocking instructions. After this step the configuration should appear as:
 
-![](<../../.gitbook/assets/image (449) (1) (1).png>)
+![](<../../.gitbook/assets/image (449) (1) (1) (1).png>)
 
 ## Prepare ONC Dataset
 

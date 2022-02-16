@@ -123,7 +123,7 @@ Since the SanteDB Web Access Gateway is intended to be used in an environment wh
 
 By default, SanteDB Web Access Gateway release builds will only log events which are errors or warnings. If you desire more verbose logging you can alter the setting for logging in this panel.
 
-![](<../../../.gitbook/assets/image (421) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (421) (1) (1) (1) (1) (1).png>)
 
 ### Application Services
 

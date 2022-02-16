@@ -44,7 +44,7 @@ For example, the following blocking instruction would load patients where a reco
 
 However, a jurisdiction may wish to block patients whose gender, name, state match OR has a matching SSN. In this case two blocks would be defined. To do this the jurisdiction would remove the SSN clause from the first block, and would, instead, create a second block for just SSN and UNION the two blocks together:
 
-![](<../../../.gitbook/assets/image (425).png>)
+![](<../../../.gitbook/assets/image (425) (1).png>)
 
 ## Explain Diagram
 

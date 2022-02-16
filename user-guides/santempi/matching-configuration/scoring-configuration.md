@@ -43,7 +43,7 @@ Note that the property extraction is to the root element rather than the value e
 
 If the administrator wishes to provide multiple paths for extraction they can provide either a single HDSI expression or multiple properties in the property list. For example, if `HomeAddress` or `VacationHome` they may provide separate extraction properties.
 
-![](<../../../.gitbook/assets/image (455) (1).png>)
+![](<../../../.gitbook/assets/image (455) (1) (1).png>)
 
 This instructs the scoring engine to attempt an extract of `HomeAddress` from both `$input` and `$block`. If either are null, then an attempt is made to extract `VacationHome` from both `$input` and `$block`.&#x20;
 
@@ -68,7 +68,7 @@ The **When Null** input on the attribute instructs the scoring process, how to h
 
 The matching attribute evaluation can be considered a type of data flow. Consider our example using address, the flow of data in the evaluation of the transform may initially resemble
 
-![](<../../../.gitbook/assets/image (449) (1).png>)
+![](<../../../.gitbook/assets/image (449) (1) (1).png>)
 
 The steps which would be executed are:
 
@@ -226,7 +226,7 @@ Consider, for example, an evaluation of given name where the transforms are:
 
 The flow of this evaluation would be illustrated as:
 
-![](<../../../.gitbook/assets/image (421).png>)
+![](<../../../.gitbook/assets/image (421) (1).png>)
 
 In this configuration, if `$input` has a given name of `Kimberly` then the following `$block` records would match and all would be assigned a score of 3.2.
 
@@ -259,7 +259,7 @@ To do this, the Evaluation Guard property is used. In order to relate two attrib
 
 Using the example above, if the city portion of the home address were to be evaluated, then a dependency to the `address_state` attribute created above must be linked:
 
-![](<../../../.gitbook/assets/image (435) (1).png>)
+![](<../../../.gitbook/assets/image (435) (1) (1).png>)
 
 ## Explain Diagram
 
