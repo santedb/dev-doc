@@ -1,6 +1,6 @@
 # Identity Domain Management
 
-Identity domains must be registered in the SanteDB iCDR before they can be used in messaging applications. For more information about the planning and purpose of identity domains consult [configuring-identity-domains.md](../../../../santempi/configuring-identity-domains.md "mention")
+Identity domains must be registered in the SanteDB iCDR before they can be used in messaging applications. For more information about the planning and purpose of identity domains consult [configuring-identity-domains.md](../../../../installation/installation-1/planning-and-preparation-work/develop-an-information-architecture/configuring-identity-domains.md "mention")
 
 ## Identity Domain List
 

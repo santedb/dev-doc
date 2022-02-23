@@ -16,12 +16,15 @@ This section will guide your through some of the common planning activities that
 
 ## Contents
 
-{% content-ref url="../../installation-1/planning-and-preparation-work/developing-a-business-architecture.md" %}
-[developing-a-business-architecture.md](../../installation-1/planning-and-preparation-work/developing-a-business-architecture.md)
+{% content-ref url="../../installation-1/planning-and-preparation-work/develop-a-business-architecture.md" %}
+[develop-a-business-architecture.md](../../installation-1/planning-and-preparation-work/develop-a-business-architecture.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../installation-1/planning-and-preparation-work/developing-an-information-architecture/" %}
-[developing-an-information-architecture](../../installation-1/planning-and-preparation-work/developing-an-information-architecture/)
+{% content-ref url="../../installation-1/planning-and-preparation-work/develop-an-information-architecture/" %}
+[develop-an-information-architecture](../../installation-1/planning-and-preparation-work/develop-an-information-architecture/)
 {% endcontent-ref %}
 
-#### &#x20;
+{% content-ref url="../../installation-1/planning-and-preparation-work/develop-operational-technology-architecture.md" %}
+[develop-operational-technology-architecture.md](../../installation-1/planning-and-preparation-work/develop-operational-technology-architecture.md)
+{% endcontent-ref %}
+

@@ -40,6 +40,6 @@ SanteMPI provides API hooks to generate random identifiers based on some sort of
 [identity-domain-management.md](../../operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
 {% endcontent-ref %}
 
-{% content-ref url="../configuring-identity-domains.md" %}
-[configuring-identity-domains.md](../configuring-identity-domains.md)
+{% content-ref url="../../installation/installation-1/planning-and-preparation-work/develop-an-information-architecture/configuring-identity-domains.md" %}
+[configuring-identity-domains.md](../../installation/installation-1/planning-and-preparation-work/develop-an-information-architecture/configuring-identity-domains.md)
 {% endcontent-ref %}
