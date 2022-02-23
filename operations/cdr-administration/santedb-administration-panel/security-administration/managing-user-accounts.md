@@ -12,7 +12,7 @@ It is best practice to keep user accounts as **Human Users** which are using the
 
 The summary screen provides a comprehensive list of all users found in the SanteDB solution. This user list is scoped to the system on which the panel is running (i.e if you're accessing the panel from a disconnected client, these are the local users which can access the dCDR, if you're accessing the panel on an iCDR these are all users).
 
-![](<../../../../.gitbook/assets/image (440) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (440) (1) (1) (1) (1) (1) (1) (1).png>)
 
 You can sort/order the table by any field which has a sort indicator, additionally each row of the user list performs actions on each user on the same row.
 
@@ -29,7 +29,7 @@ It is best practice to lock user accounts when you are investigating a security 
 
 When you delete a user they are marked as inactive. You can access these accounts by using the `Show Deleted` option in the user interface. Deleted user accounts provide an option to restore or un-delete the account (as well as edit the information).
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Creating User Accounts
 

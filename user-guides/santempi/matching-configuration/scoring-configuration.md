@@ -55,14 +55,14 @@ The HDSI expression `address[HomeAddress|VacationHome]` is also a valid extracti
 
 The **When Null** input on the attribute instructs the scoring process, how to handle the case when data is missing from either `$block` or `$input`.&#x20;
 
-| When Null  | Behavior                                                                                                                                                                                                                                                                                        | Diagram                                             |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| None       | No special behavior is performed. The assertions are evaluated as specified.                                                                                                                                                                                                                    | ![](<../../../.gitbook/assets/image (422).png>)     |
-| Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (447) (1).png>) |
-| Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440) (1).png>) |
-| Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (451) (1).png>) |
-| NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442) (1).png>) |
-| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452) (1).png>) |
+| When Null  | Behavior                                                                                                                                                                                                                                                                                        | Diagram                                                 |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| None       | No special behavior is performed. The assertions are evaluated as specified.                                                                                                                                                                                                                    | ![](<../../../.gitbook/assets/image (422).png>)         |
+| Zero       | When the value extracted form  `$input` or `$block` are null, a score of 0 is assigned to the attribute.                                                                                                                                                                                        | ![](<../../../.gitbook/assets/image (447) (1).png>)     |
+| Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440) (1) (1).png>) |
+| Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (451) (1).png>)     |
+| NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442) (1).png>)     |
+| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452) (1).png>)     |
 
 ### Attribute Transforms
 
@@ -88,7 +88,7 @@ Transforms can be added by clicking the `Add Value Transform` to the configurati
 
 For example, adding the **Address Part Extract** to the attribute configuration and specifying `City` as the parameter:
 
-![](<../../../.gitbook/assets/image (438) (1).png>)
+![](<../../../.gitbook/assets/image (438) (1) (1).png>)
 
 Can be translated to : Extract the `State` part from both `$a` and `$b` addresses. This is reflected in the explain diagram as a transform.
 
@@ -179,7 +179,7 @@ Continuing the example above, perhaps the administrator would like the logic to 
 
 The explanation flow diagram will be updated to reflect that multiple assertions are being made independently and then the logical operator selected applied.
 
-![](<../../../.gitbook/assets/image (431).png>)
+![](<../../../.gitbook/assets/image (431) (1).png>)
 
 ### M and U Values
 
@@ -190,7 +190,7 @@ The scoring engine requires information in order to assign a match and non-match
 
 the M and U values can be set in the user interface by either sliding the indicators to adjust the values, or by entering an exact number.
 
-![](<../../../.gitbook/assets/image (444) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1).png>)
 
 The calculated scores are shown below the entry for M and U. These scores are calculated via $$weight_m=\frac{log_e(\frac{m}{u})}{log_e(2.0)}$$ and $$weight_u=\frac{log_e(\frac{1-m}{1-u})}{log_e(2.0)}$$.
 

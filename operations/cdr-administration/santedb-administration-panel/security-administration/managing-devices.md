@@ -35,7 +35,7 @@ To create a new security device click the `Create` button. Administrators may wi
 * A new HL7v2 trading partner is being setup&#x20;
 * An new node-authentication partner account needs to be created (for Client Certificate Mapping)
 
-![](<../../../../.gitbook/assets/image (440) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (440) (1) (1) (1).png>)
 
 The `Name` of the device should be unique within the context of the SanteDB solution which has been deployed.&#x20;
 
@@ -93,7 +93,7 @@ When using X509 client certificate authentication, the secret of the device acco
 
 By default a new device will copy its policies from the `DEVICES` group. After creation policies can be customized using the policies panel. New policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1).png>)
 
 By default a device will be assigned the policy with a GRANT permission. You can alter these by clicking the permission type.
 

@@ -4,7 +4,7 @@ The entity relationships panel is a display only panel that illustrates the phys
 
 The relationships panel is useful when administrators are attempting to understand the underlying data relationships for the current record being displayed.
 
-![](<../../../../.gitbook/assets/image (444).png>)
+![](<../../../../.gitbook/assets/image (444) (1).png>)
 
 The current focal object for the diagram (the object which the current page is displaying) is always shown as a green circle. In this case the focal record is **KATHLEEN R SKERSIES** entity.
 
@@ -20,12 +20,12 @@ Entities can be related in several manners:
 
 The entities which are being related to one another are shown as boxes with a colour coding and icon which indicates the type of object.
 
-| Entity Type                          | Example                                            | Description                                                                                                                                                   |
-| ------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Entity (no special attributes)       | ![](<../../../../.gitbook/assets/image (448).png>) | Entities which are the target of a relationship and are navigable (normal condition) are shown with a solid border, and a link to the entity being expressed. |
-| Record of Truth / Verified           | ![](<../../../../.gitbook/assets/image (456).png>) | Entities which are validated, sources of truth are shown in gold with a solid border and a link to the data which has been validated.                         |
-| Entity (target / no viewer)          | ![](<../../../../.gitbook/assets/image (438).png>) | Entities which are not validated, and do not have a special viewer are shown as a dotted border in pink.                                                      |
-| Source / Reverse Relationship Entity | ![](<../../../../.gitbook/assets/image (454).png>) | Entities which are the source (or which point AT the focal record) are shown with a dotted border.                                                            |
+| Entity Type                          | Example                                                | Description                                                                                                                                                   |
+| ------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Entity (no special attributes)       | ![](<../../../../.gitbook/assets/image (448).png>)     | Entities which are the target of a relationship and are navigable (normal condition) are shown with a solid border, and a link to the entity being expressed. |
+| Record of Truth / Verified           | ![](<../../../../.gitbook/assets/image (456).png>)     | Entities which are validated, sources of truth are shown in gold with a solid border and a link to the data which has been validated.                         |
+| Entity (target / no viewer)          | ![](<../../../../.gitbook/assets/image (438) (1).png>) | Entities which are not validated, and do not have a special viewer are shown as a dotted border in pink.                                                      |
+| Source / Reverse Relationship Entity | ![](<../../../../.gitbook/assets/image (454).png>)     | Entities which are the source (or which point AT the focal record) are shown with a dotted border.                                                            |
 
 ## View Mode
 

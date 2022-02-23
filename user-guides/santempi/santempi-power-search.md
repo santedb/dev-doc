@@ -43,11 +43,11 @@ Multiple repetitions of the same HDSI path result in logic as described below.
 
 For example, the following expression results in patients who were born between `1980-01-01` and `1980-12-31`
 
-![](<../../.gitbook/assets/image (438) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (438) (1) (1) (1) (1).png>)
 
 Conversely, the following expression results in patients named Donny or Don
 
-![](<../../.gitbook/assets/image (440) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (440) (1) (1) (1) (1).png>)
 
 ### Concept Fields
 
@@ -63,7 +63,7 @@ Whenever the HDSI expression is a filter on a property of type `Entity` or when 
 
 Using the cast operator `@` the input can be filtered to places only.
 
-![](<../../.gitbook/assets/image (431) (1).png>)
+![](<../../.gitbook/assets/image (431) (1) (1).png>)
 
 ### Deep Linking Queries
 

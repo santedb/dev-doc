@@ -17,7 +17,7 @@ The nomenclature used in SanteDB is described in detail in [master-data-storage.
 
 The first portion of the match dashboard shows the duplicate detection panel. This panel allows data administrators to quickly review duplicates which have been detected by the MPI software.
 
-![](<../../.gitbook/assets/image (438) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
 
 * Candidate Report - Downloads the `Detected Duplicates` table in excel format
 * Linkage Report - Downloads an excel report with the entirety of the SanteMPI database linkages provided.

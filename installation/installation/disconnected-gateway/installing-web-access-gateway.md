@@ -45,7 +45,7 @@ When updating the SanteDB Web Access Gateway, you should use the installer provi
 
 You may receive a notice to restart existing running services. It is safe to select `Automatically Close Applications`.
 
-![](<../../../.gitbook/assets/image (431) (1) (1).png>)
+![](<../../../.gitbook/assets/image (431) (1) (1) (1).png>)
 
 ### Installation on Linux Operating Systems
 
@@ -129,7 +129,7 @@ By default, SanteDB Web Access Gateway release builds will only log events which
 
 It is recommended you leave the default application services selected for the Web Access Gateway. These settings are primarily intended for disconnected client gateways which require fine tuning of HL7, FHIR, ATNA and other services for local clinics.
 
-![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Set Networking Parameters
 

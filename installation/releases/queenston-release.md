@@ -4,6 +4,15 @@ As part of improving documentation of the SanteDB release documentation, each co
 
 Since this new method of documenting releases has only started with 2.1.170, this page is partial. One should consult the GitHub release schedules for more information.
 
+## Version 2.2.3
+
+Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases/2.2.3/](http://santesuite.org/assets/uploads/santedb/community/releases/2.2.3/)
+
+* Fixes bug with the deletion of pub-sub subscriptions from the user interface
+* Fixes un-delete operation on the pub-sub subscription manager
+* Adds persistent job state service
+* Adds default implementation of job state service (local XML file - work is being performed on the shared state service).
+
 ## Version 2.2.1
 
 Release Assets: [http://santesuite.org/assets/uploads/santedb/community/releases/2.2.1.10/](http://santesuite.org/assets/uploads/santedb/community/releases/2.2.1.10/)

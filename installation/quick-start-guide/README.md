@@ -236,7 +236,7 @@ This will expose a new project in your SOAP UI project with the SanteMPI endpoin
 
 The installation qualification tool uses PMIR notifications and subscriptions, it is a good idea to start the FHIR Mock service so that your docker container has an endpoint to send these messages to.
 
-![](<../../.gitbook/assets/image (444) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1).png>)
 
 ### Run Installation Qualification Tests
 

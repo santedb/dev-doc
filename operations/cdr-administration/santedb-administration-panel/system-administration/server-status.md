@@ -28,7 +28,7 @@ The core information section of the server status screen shows information relat
 
 The installed applets section of the server status screen shows the applets (see: [applets](../../../../developers/extending-santesuite/extending-santedb/applets/ "mention")) which are active and installed on the iCDR or dCDR. Applets are responsible for adding new user interface screens, clinical decision support rules, business rules, etc.
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1).png>)
 
 Applets are digitally signed when running in production (unless unsignedApplets are permitted, see: [santedb-software-publishers](../../../../developers/santedb-software-publishers/ "mention")) , the list of applets includes the applet identifier (which appears in logs), the verified publisher, and the version of the applet installed.
 
