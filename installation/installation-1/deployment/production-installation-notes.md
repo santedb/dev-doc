@@ -1,4 +1,4 @@
-# Production Installation Notes
+# Post Deployment Tuning
 
 When you install SanteDB iCDR server or any of the SanteDB solutions (like SanteMPI or SanteIMS), the default installer uses a "quick start" configuration. These configurations are intended to get implementers up and running quickly, however the default options will not result in optimal performance. A common source of system performance issues is interfaces to external systems. To decouple SanteDB responsiveness from external systems and obtain the best possible performance, SanteDB makes use of message queue services to manage outbound messages. The default message queue installation automatically supports all operating systems, however further optimization is possible by directing SanteDB to make use of third party tools. Please read below to learn more about optimizations that are available.     &#x20;
 

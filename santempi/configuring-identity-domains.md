@@ -74,9 +74,3 @@ To use the spreadsheet:
 1. Enumerate the issuing organizations in the implementation context (organizations, ministries, etc.) and complete the **Issuing Authority** sheet.
 2. Enumerate each of the identification domains which are used in the context to which SanteDB or SanteMPI will be deployed.
 3. Update the cover sheet of your worksheet with relevant metadata about the sheet.
-
-
-
-###
-
-##
