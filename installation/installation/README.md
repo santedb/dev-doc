@@ -93,7 +93,7 @@ Overall, the installation process can be described as:
 1. Choose one of the appropriate [santedb-solutions.md](../../santedb/santedb-solutions.md "mention") for your use case.
 2. Complete the necessary [planning-and-preparation-work](planning-and-preparation-work/ "mention")which includes:
    1. Establishing a master list requirements, of identity and data elements for your deployment.
-      1. [configuring-identity-domains.md](../installation-1/planning-and-preparation-work/developing-an-information-architecture/configuring-identity-domains.md "mention")&#x20;
+      1. [configuring-identity-domains.md](../../santempi/configuring-identity-domains.md "mention")&#x20;
    2. Creating an operational deployment architecture document outlining the ports/servers/etc. your deployment will use.
    3. Performing a Threat Risk Assessment (TRA)&#x20;
    4. Performing a Privacy Impact Assessment (PIA)

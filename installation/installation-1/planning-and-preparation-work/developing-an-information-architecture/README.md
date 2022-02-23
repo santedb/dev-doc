@@ -22,6 +22,6 @@ SanteDB is designed to have a common [conceptual-data-model](../../../../santedb
 [developing-privacy-impact-assessments.md](developing-privacy-impact-assessments.md)
 {% endcontent-ref %}
 
-{% content-ref url="configuring-identity-domains.md" %}
-[configuring-identity-domains.md](configuring-identity-domains.md)
+{% content-ref url="../../../../santempi/configuring-identity-domains.md" %}
+[configuring-identity-domains.md](../../../../santempi/configuring-identity-domains.md)
 {% endcontent-ref %}

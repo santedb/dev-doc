@@ -65,7 +65,7 @@
     * [Developing an Information Architecture](installation/installation-1/planning-and-preparation-work/developing-an-information-architecture/README.md)
       * [Establishing Minimum Datasets](installation/installation-1/planning-and-preparation-work/developing-an-information-architecture/establishing-minimum-datasets.md)
       * [Developing Privacy Impact Assessments](installation/installation-1/planning-and-preparation-work/developing-an-information-architecture/developing-privacy-impact-assessments.md)
-      * [Documenting Identifiers](installation/installation-1/planning-and-preparation-work/developing-an-information-architecture/configuring-identity-domains.md)
+      * [Documenting Identifiers](santempi/configuring-identity-domains.md)
     * [Developing Operational Technology Architecture](installation/installation-1/planning-and-preparation-work/developing-operational-technology-architecture.md)
     * [Pre-flight Checklist](pre-flight-checklist.md)
     * [Infrastructure Planning](infrastructure-planning.md)

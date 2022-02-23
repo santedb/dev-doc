@@ -67,7 +67,7 @@ Since these all need to be unique, it is a good practice that your scheme for th
 
 An identity domain worksheet has been created and shared below. This worksheet contains instructions and example data which should assist implementers in the organization of their identity domain planning work.
 
-{% file src="../../../../.gitbook/assets/SanteMPI Identity Domain Worksheet.xlsx" %}
+{% file src="../.gitbook/assets/SanteMPI Identity Domain Worksheet.xlsx" %}
 
 To use the spreadsheet:
 
