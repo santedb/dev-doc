@@ -102,12 +102,12 @@ Overall, the installation process can be described as:
    7. Planning your budget for hardware, software licensing and services
    8. Acquiring and installing any server, network, hosting or pre-requisite software purchases
 3. Install and configure your physical environment according to the Operational Deployment Architecture.
-4. Install and configure the [santedb-server](santedb-server/ "mention")
+4. Install and configure the [santedb-server](../installation-1/deployment/santedb-server/ "mention")
 5. [securing-the-apis.md](securing-the-apis.md "mention") using one of the documented methods
-6. [installing-web-access-gateway.md](disconnected-gateway/installing-web-access-gateway.md "mention") to setup the [santedb-administration-panel](../../operations/cdr-administration/santedb-administration-panel/ "mention")
+6. [installing-web-access-gateway.md](../installation-1/deployment/disconnected-gateway/installing-web-access-gateway.md "mention") to setup the [santedb-administration-panel](../../operations/cdr-administration/santedb-administration-panel/ "mention")
 7. Complete the relevant configuration steps for your solution.
    1. If using SanteMPI:
-      1. Perform the [fhir-interface-validation](installation-qualification/fhir-interface-validation/ "mention") to test your installation
+      1. Perform the [fhir-interface-validation](../installation-1/deployment/santedb-server/installation-qualification/fhir-interface-validation/ "mention") to test your installation
       2. Configure your Data Access Policies
       3. Configure your Identity Domains
       4. Configure and Test your Match Configurations

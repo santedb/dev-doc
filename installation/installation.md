@@ -8,7 +8,7 @@ It is recommended that readers review the [Broken link](broken-reference "mentio
 
 ## Installation for Development&#x20;
 
-When installing SanteDB in a development environment, we recommend[docker-containers](installation/santedb-server/docker-containers/ "mention")for your iCDR instance and then [installing-the-dcdr-sdk.md](installation/disconnected-gateway/installing-the-dcdr-sdk.md "mention").
+When installing SanteDB in a development environment, we recommend[docker-containers](installation-1/deployment/santedb-server/installation-using-appliances/docker-containers/ "mention")for your iCDR instance and then [installing-the-dcdr-sdk.md](installation-1/deployment/disconnected-gateway/installing-the-dcdr-sdk.md "mention").
 
 You can then clone the start code and follow the [getting-started.md](../developers/extending-santesuite/extending-santedb/applets/getting-started.md "mention") article to start developing SanteDB applications!
 

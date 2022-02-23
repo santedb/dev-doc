@@ -22,7 +22,7 @@ In SanteDB (and SanteMPI) the family members of patients may be a Person record 
 
 In the case where a related person is another patient, the act of editing the information on the related persons tab will result in a new MASTER record being created for the patient which is the family member. This is indicated on the **Advanced** relationship graph as a MDM rewrite.
 
-For example, the record for **Baby Abels** has a mother **Sarah Abels** both of which are Patient types (this record is registered in[test-ohie-cr-05-fhir.md](../../installation/installation/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-05-fhir.md "mention")).\
+For example, the record for **Baby Abels** has a mother **Sarah Abels** both of which are Patient types (this record is registered in[test-ohie-cr-05-fhir.md](../../installation/installation-1/deployment/santedb-server/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/test-ohie-cr-05-fhir.md "mention")).\
 
 
 ![](<../../.gitbook/assets/image (436).png>)
