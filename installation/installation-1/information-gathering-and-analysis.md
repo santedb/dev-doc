@@ -1,8 +1,6 @@
 # Information Gathering & Analysis
 
-
-
-The first step to deploying SanteDB solutions is to gather information about problem domain and jurisdiction in which the solution will be deployed. Activities may include
+The first step to deploying SanteDB solutions is to gather information about problem domain and jurisdiction in which the solution will be deployed.&#x20;
 
 ## Identify Stakeholders
 

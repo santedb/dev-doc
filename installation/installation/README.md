@@ -8,6 +8,10 @@ The overall operationalization of a SanteDB service can be illustrated with 5 ma
 
 ![](<../../.gitbook/assets/image (438).png>)
 
+{% hint style="info" %}
+This guide is intended to supplement internal project management procedures and activities of the implementing organization. The sections focus primarily on the SanteDB specific aspects of project planning and analysis.
+{% endhint %}
+
 ## Information Gathering
 
 Many implementations don't start with a concrete idea of what the deployment of SanteDB will be achieving beyond "we need X". The information gathering phase of an operationalization project is intended to establish a concrete consensus among stakeholder of **what** the SanteDB CDR will be used for.
