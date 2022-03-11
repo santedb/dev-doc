@@ -18,8 +18,8 @@ SanteDB is designed to have a common [conceptual-data-model](../../../../santedb
 [establishing-minimum-datasets.md](establishing-minimum-datasets.md)
 {% endcontent-ref %}
 
-{% content-ref url="developing-privacy-impact-assessments.md" %}
-[developing-privacy-impact-assessments.md](developing-privacy-impact-assessments.md)
+{% content-ref url="../developing-privacy-impact-assessments.md" %}
+[developing-privacy-impact-assessments.md](../developing-privacy-impact-assessments.md)
 {% endcontent-ref %}
 
 {% content-ref url="configuring-identity-domains.md" %}

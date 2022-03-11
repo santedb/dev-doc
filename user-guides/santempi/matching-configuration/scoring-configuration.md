@@ -259,7 +259,7 @@ To do this, the Evaluation Guard property is used. In order to relate two attrib
 
 Using the example above, if the city portion of the home address were to be evaluated, then a dependency to the `address_state` attribute created above must be linked:
 
-![](<../../../.gitbook/assets/image (435) (1) (1).png>)
+![](<../../../.gitbook/assets/image (435) (1) (1) (1).png>)
 
 ## Explain Diagram
 

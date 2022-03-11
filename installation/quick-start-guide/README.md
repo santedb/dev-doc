@@ -216,7 +216,7 @@ You do not need to SAVE policy assignments, they are applied immediately.
 
 The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
 
-![](<../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Perform Installation Qualification
 

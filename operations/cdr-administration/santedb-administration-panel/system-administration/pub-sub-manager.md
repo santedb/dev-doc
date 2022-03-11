@@ -33,7 +33,7 @@ Subscription metadata is used to describe the subscription to other administrato
 
 Next, administrators should specify the criteria under which the notification is triggered.&#x20;
 
-![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * Applies To - The resource which this subscription applies to
 * Event(s) - The persistence events when the recipient should be notified

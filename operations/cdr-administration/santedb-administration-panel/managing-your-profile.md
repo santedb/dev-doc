@@ -17,7 +17,7 @@ The difference between the two is your security profile is only shared when you 
 
 By clicking on the pencil icon in the `Profile` panel, you will enter `Edit` mode. Here you can update your personal user profile for the solution.
 
-![](<../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 You can edit the following information on the tabs provided:
 

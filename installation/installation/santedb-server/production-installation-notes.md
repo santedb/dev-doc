@@ -135,6 +135,23 @@ DROP FUNCTION ck_is_cd_set_mem_with_null CASCADE; -- DROPS SEMANTIC FIELD VALIDA
 DROP FUNCTION ck_is_cd_set_mem CASCADE; -- DROPS SEMANTIC FIELD VALIDATION
 ```
 
+### Encryption at Rest
+
+The contents of the PostgreSQL database are, by default, not encrypted. If your context requires encryption at rest, you may do so by placing sensitive data in SanteDB onto a tablespace which is stored on an encrypted volume.
+
+To do this:
+
+1. Create a data volume which will be used to store the PostgreSQL database
+2. Format the new volume
+3. Encrypt the new volume using either [BitLocker ](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-basic-deployment)(on Microsoft Windows) or [LUKS ](https://www.redhat.com/sysadmin/disk-encryption-luks)(on Linux)
+4. Mount the new volume (in Windows as a drive letter, or on Linux as a mount point)
+5. Create a new tablespace in PostgreSQL which is on the protected volume (`CREATE TABLESPACE encrypted LOCATION '/var/......';`)
+6. Move tables which require encryption (or the entire database) to the new tablespace. For example, to place identifier values on the encrypted table space `ALTER TABLE ent_id_tbl SET TABLESPACE encrypted;`)
+
+{% hint style="info" %}
+If you use disk encryption, you may wish to do so in the Virtual Machine instance which will protect the disk contents even when the VHD is moved by the host (and in backups). If the disk encryption is turned on the host, then the VHD data will be decrypted during backups or copying of the VHD files (however, VM disk encryption may impact dynamic/hot migration VMs in a clustered environment using technologist like VMotion). Determine the best method of encrypting your data based on the technology used locally in your deployment.
+{% endhint %}
+
 ## Tune Unused Services
 
 The default installation of several SanteDB solutions will enable services which may not be required in every jurisdiction. Disabling these services may drastically increase throughput of the solution.

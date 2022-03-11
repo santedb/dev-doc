@@ -77,4 +77,4 @@ As part of improving the usability of the SanteDB administrative panel, several 
 
 To access contextual help, simply hover the mouse cursor over the `?` icon in the user interface (or tap on a mobile device) and information about that data element, or function will appear.
 
-![](<../.gitbook/assets/image (435) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (435) (1) (1) (1) (1).png>)

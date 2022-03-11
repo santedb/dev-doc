@@ -61,7 +61,7 @@ Click on the candidate details button will open a popup window which illustrates
 
 The ignored candidates panel shows the list of candidate (source) records for the current master which are considered definite non-matches (and should be ignored for future matching).
 
-![](<../../../.gitbook/assets/image (435).png>)
+![](<../../../.gitbook/assets/image (435) (1).png>)
 
 Like the candidates view, it is possible to perform gather an updated match report by clicking on **Details**. Users may also un-ignore the record if they feel the ignored (non-match) candidate may be a candidate for matching the master.
 
