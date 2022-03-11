@@ -6,7 +6,7 @@ The operating system settings panel controls SanteDB iCDR's interaction with the
 
 The Windows Service configuration panel allows for the configuration of the Windows Service Manager (`services.msc`) registration. This is what allows SanteDB to auto-start on Microsoft Windows Operating Systems.
 
-![](<../../../.gitbook/assets/image (418) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (418) (1) (1) (1) (1) (1).png>)
 
 | Setting                  | Description                                                                                                                                                                                                                                                                                              | Values                                                                                                                       |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |

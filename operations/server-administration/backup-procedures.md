@@ -28,19 +28,27 @@ Additionally, backups should be kept in a location which is onsite (rapidly avai
 | Cloud Storage Provider | <ul><li>Easy to setup </li><li>Storage space is unlimited (depending on the plan)</li><li>Great offsite backup option </li></ul>                                                                                                                                       | <ul><li>Ongoing bandwidth, storage and cloud provider costs.</li><li>Uploading of larger backups is slower than via NAS.</li><li>Compromised cloud host provider or inappropriate setup may result in data breaches.</li></ul>     |
 | Tape / Removable Media | <ul><li>Great for long-term storage of backups.</li><li>Can be shipped offsite and stored securely.</li><li>Large capacity of storage space is relatively cheap.</li></ul>                                                                                             | <ul><li>Can be easily lost/stolen and result in compromised data from backup.</li><li>Restoration can be time consuming</li><li>Requires physical access to the server infrastructure to remove/insert media for backup.</li></ul> |
 
-### Backup Pipeline
+### 3-2-1 Backup Strategy
 
-The best solution for a backup technology for SanteMPI iCDR products is often a combination of the onsite/offsite backups with varying technology. For example, the SanteDB community servers use a staged approach as illustrated in .
+The 3-2-1 backup strategy is highly recommended for use in production deployments of the SanteDB iCDR. This strategy is illustrated below.
+
+* **3 Copies of Data:** At least 3 copies of the data should be available. At minimum the active or primary copy and at least 2 other copies.
+* **2 Different Media:** The copies of data should be stored on at least 2 different media or hosts. For example, the data exists on production server **and** a NAS **and** a cloud provider.
+* **1 Copy Offsite:** At least one copy of the backup should always be kept offsite on a cloud provider or physical media.
+
+There are many ways to realize this backup strategy using various technologies, to illustrate this, the SanteDB community server backup strategy is shown below:
 
 &#x20;
 
-![](<../../.gitbook/assets/image (435).png>)
+![](<../../.gitbook/assets/image (432).png>)
 
 The backup on the community server:
 
-1. Every night at 12:00 AM Microsoft Windows Server Backup performs an incremental backup of the most recent copy of all Virtual Disks from the physical host to a FreeNAS server using UNC Windows Shares and Volume Shadow Copy (live backups) to a fast pool (using SSD based disks in a RAID Z1). Snapshots of the fast pool are taken every 24 H and only 2 snapshots are kept on fast storage (2 days of backups). This pool is used for immediate restore if issues are detected within 24 H
-2. The FreeNAS server then, every morning at 6:00 AM replicates the fast pool on SSD disks to a slow pool using 7200 RPM disks in RAID Z1. Snapshots of this pool are taken every 48 H and 30 snapshots are kept (30 days of backups). This pool is used for restore of infrastructure in the event data corruption occurred prior to a 48 H window.
-3. The FreeNAS server then, every month, copies any old snapshots from the slow storage pool to a physically attached USB hard drive. This hard drive has no limitation (beyond storage space) on snapshot lifetimes.&#x20;
+1. Every night at 12:00 AM Microsoft Windows Server Backup performs an incremental backup of the most recent copy of all Virtual Disks from the physical host to a FreeNAS server using UNC Windows Shares and Volume Shadow Copy (live backups) to a fast pool (using SSD based disks in a RAID Z1). Snapshots of the fast pool are taken every 24 H and only 2 snapshots are kept on fast storage (2 days of backups). This pool is used for immediate restore if issues are detected within 24 H (**2 copies of the data now exist**)
+2. The FreeNAS server then, every morning at 6:00 AM replicates the fast pool on SSD disks to a slow pool using 7200 RPM disks in RAID Z1. Snapshots of this pool are taken every 48 H and 30 snapshots are kept (30 days of backups). This pool is used for restore of infrastructure in the event data corruption occurred prior to a 48 H window (**3 copies of the data now exist**)
+3. The FreeNAS server then, copies older snapshots from the slow storage pool to a physically attached USB hard drive. This hard drive has no limitation (beyond storage space) on snapshot lifetimes. When full, the drive is unmounted and stored at a different location.
+
+The community server is not mission critical and therefore an MTO of months is permissible. If your deployment has a MTO value which indicates that only 24 H or 48 H of missing data is tolerable, then a different strategy may be employed.&#x20;
 
 ### Virtual Disk Backups
 
@@ -49,6 +57,7 @@ The simplest way to backup your SanteDB VM is to back up the virtual hard drives
 * Restoration of the iCDR is relatively straightforward (i.e. restore the VM)
 * No need for special backup software or processes (many operating systems and hypervisors provide methods of copying VMs)
 * &#x20;Incremental backups can be taken using snapshotting technology (for example, Hyper-V can perform live, in-flight backups using Volume Shadow Copies).
+* No need to fiddle with database restore procedures.
 
 There are disadvantages to virtual disk backups, these can include:
 
@@ -56,4 +65,30 @@ There are disadvantages to virtual disk backups, these can include:
 * The amount of data which needs to be shared/shipped to network backups may be larger.
 * Some hypervisors may require the VM to be shut down during backup
 
-####
+### Data Dump Backups
+
+It is also possible to leverage database backups for your backup strategy of the iCDR. Implementers may use the build-in `pg_dump` backup method ([see tutorial here](https://snapshooter.com/learn/postgresql/pg\_dump\_pg\_restore)) or they may use a third party software tools ([see Bacula as an example](https://www.bacula.org/postgresql-backup-software/)).
+
+The advantages of performing data dump backups are:
+
+* Size of the backup files are typically smaller
+* Does not rely on a hypervisor technology (works on bare-metal deployments, cloud deployments, docker, etc.)
+* Data backups can be encrypted and compressed by piping output to different utilities
+
+The disadvantages of performing data dump backups are:
+
+* Restoration is more complex (requires a new PostgreSQL server to restore the copy of the data to, and often binary backups require the same version of PostgreSQL)
+* Foreign key and data constraints can interrupt backup restore procedures.
+* Slower to restore data (especially if using a SQL based dump).
+
+To perform a backup of the SanteDB database you can use the following command:
+
+```
+pg_dump -h localhost -d DATABASE -E UTF8 -U username -W | gzip -e > backup.bak.gz
+```
+
+If you wish to encrypt and compress the backup, then you may additionally use the 7ZIP tool
+
+```
+pg_dump -h localhost -d DATABASE -E UTF8 -U username -W | 7z a -si -pSOMEPASSWORD backup.bak.7z -mhe=on
+```

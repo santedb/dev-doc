@@ -16,7 +16,7 @@ Whenever an administrator uses the administrative panel to edit this record, it 
 
 In the **Master Data Management** tab of the patient view this record will be indicated as the record of truth with a gavel icon.
 
-![](<../../.gitbook/assets/image (432).png>)
+![](<../../.gitbook/assets/image (432) (1).png>)
 
 Whenever a record has a record of truth associated with it, the user interface and MPI will redirect all administrative panel updates from the MASTER to the record of truth (as indicated on the header).
 

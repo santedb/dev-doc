@@ -40,7 +40,7 @@ To change the match configuration, click on **SanteMPI** then **Match Settings**
 
 On the **Blocking** tab if we expand a blocking instruction we see the default method of matching is Source/Master:
 
-![](<../../.gitbook/assets/image (432) (1) (1).png>)
+![](<../../.gitbook/assets/image (432) (1) (1) (1).png>)
 
 We can change this by pressing **Edit** (pencil) and modifying both blocking instructions. After this step the configuration should appear as:
 

@@ -6,7 +6,7 @@ The SanteDB configuration tool is a graphical tool which is used to control the 
 
 Whenever you install SanteDB in a new environment you will be prompted to run the Configuration Tool. On initial configuration the configuration tool will show its initial configuration screen.
 
-![Initial Configuration](<../../../.gitbook/assets/image (418) (1) (1) (1) (1) (1).png>)
+![Initial Configuration](<../../../.gitbook/assets/image (418) (1) (1) (1) (1) (1) (1).png>)
 
 The options are:
 

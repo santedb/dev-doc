@@ -78,7 +78,7 @@ The scoring tab presents a list of match configurations which are active on the 
 
 This panel is used by data administrators to understand **why** the particular match pair came to be flagged. This information is helpful when determining whether a configuration needs to be changed, or to understand why a match is a match.
 
-![](<../../.gitbook/assets/image (418).png>)
+![](<../../.gitbook/assets/image (418) (1).png>)
 
 * Classification - Indicates the match pair's classification as determined by the configuration.
 * Match Method - The method or algorithm used to score the matches&#x20;

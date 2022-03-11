@@ -134,7 +134,7 @@ Selecting the Firebird provider will expose the connection parameter for Firebir
 
 If you're running multiple instances of SanteDB on the same server, you will need to install the software in different file locations. When configuring the iCDR on the Windows host you can then set an instance name to isolate the Windows Services and event logs.
 
-![](<../../../../../../.gitbook/assets/image (418) (1) (1).png>)
+![](<../../../../../../.gitbook/assets/image (418) (1) (1) (1).png>)
 
 #### Configuration Template
 
