@@ -1,4 +1,4 @@
-# SanteDB iCDR Command
+# SanteDB iCDR Host Command
 
 The SanteDB iCDR server runs via the SanteDB.exe file located in the following default installation directories:
 
@@ -19,18 +19,18 @@ For more information, see the [SanteDB Configuration](host-configuration-file/) 
 
 The following options can be used on the SanteDB.exe command
 
-| Option          | Use                                                                                     | Example             |
-| --------------- | --------------------------------------------------------------------------------------- | ------------------- |
-| --console       | Run as an application rather than a service.                                            | --console           |
-| --test-startup  | Tests the configuration file (for startup) then stops .                                 | --test-startup      |
-| --name=INSTANCE | Named instance to configure as a windows service                                        | --name=IMS1         |
-| --config=file   | Load an alternate configuration file                                                    | --config=myconf.xml |
-| --genconfig     | Generate an empty configuration file.                                                   |                     |
-| --install-certs | Install the SanteSuite community certificates into the local trust store for the server |                     |
+| Option            | Use                                                                                     | Example             |
+| ----------------- | --------------------------------------------------------------------------------------- | ------------------- |
+| `--console`       | Run as an application rather than a service.                                            | --console           |
+| `--test-startup`  | Tests the configuration file (for startup) then stops .                                 | --test-startup      |
+| `--name=INSTANCE` | Named instance to configure as a windows service                                        | --name=IMS1         |
+| `--config=file`   | Load an alternate configuration file                                                    | --config=myconf.xml |
+| `--genconfig`     | Generate an empty configuration file.                                                   |                     |
+| `--install-certs` | Install the SanteSuite community certificates into the local trust store for the server |                     |
 
 ### Running in Linux / MacOS
 
-To run the SanteDB.exe process in a terminal you can the following command:
+To run the `SanteDB.exe` process in a terminal you can the following command:
 
 `mono /opt/sante-suite/santedb/server/SanteDB.exe --console`
 
@@ -60,18 +60,5 @@ The folders are:
   * psql/ - Core SQL in PL/PGSQL syntax to create a new database
   * updates/ - Patches to the database which should be applied in-order
 
-### Log Files
 
-Log files are located at %installdir%/santedb\_YYYYMMDD.log and have a format as described below:
 
-```
-Source@ThreadID <Level> [TIMESTAMP]: Log Message
-```
-
-For example, this log entry indicates an ERROR on 2021-01-05 from the FHIR plugin on thread 7:
-
-```
-SanteDB.Messaging.FHIR@RSRVR-ThreadPoolThread-7 <Error> [2021-01-05T00:45:15.9914111-05:00]: Error on WCF FHIR Pipeline: SanteDB.Core.Exceptions.PolicyViolationException: Policy '1.3.6.1.4.1.33349.3.1.5.9.2.2.0' was violated by 'Administrator' with outcome 'Deny'
-```
-
-Using the ThreadID is helpful when diagnosing issues in a production environment as it allows for the tracking of a client's execution pathway through the solution.

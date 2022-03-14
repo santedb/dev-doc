@@ -40,7 +40,7 @@ There are many ways to realize this backup strategy using various technologies, 
 
 &#x20;
 
-![](<../../.gitbook/assets/image (432).png>)
+![](<../../.gitbook/assets/image (432) (1).png>)
 
 The backup on the community server:
 

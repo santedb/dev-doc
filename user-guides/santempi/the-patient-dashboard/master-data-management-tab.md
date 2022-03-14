@@ -55,7 +55,7 @@ To resolve a candidate link:
 
 Click on the candidate details button will open a popup window which illustrates the individual attribute values in both the current master and the candidate. This allows administrators to determine the reason why the two records are considered candidates for linking.
 
-![](<../../../.gitbook/assets/image (450).png>)
+![](<../../../.gitbook/assets/image (450) (1).png>)
 
 ## Ignored Candidates
 

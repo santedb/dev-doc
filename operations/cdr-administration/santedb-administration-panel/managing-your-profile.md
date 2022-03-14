@@ -2,7 +2,7 @@
 
 SanteDB's administration panel provides user self-service operations which allow any user to self-administer their profile. The profile administration screen is accessed by clicking on the user name on the top right side of your browser window.
 
-![](<../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 After visiting this page, the user profile screen will be displayed. SanteDB's security subsystem separates user information into two components:
 

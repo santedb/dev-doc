@@ -226,7 +226,7 @@ An easy way to get patients into the SanteMPI instance is to run the [fhir-inter
 
 In the pre-requisites, a link was provided to the SanteMPI Installation Qualification SOAP-UI project. You can launch SOAP UI on your system and import this project.
 
-![](<../../.gitbook/assets/image (432) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1).png>)
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 

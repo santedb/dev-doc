@@ -92,7 +92,7 @@ For example, adding the **Address Part Extract** to the attribute configuration 
 
 Can be translated to : Extract the `State` part from both `$a` and `$b` addresses. This is reflected in the explain diagram as a transform.
 
-![](<../../../.gitbook/assets/image (432) (1) (1).png>)
+![](<../../../.gitbook/assets/image (432) (1) (1) (1).png>)
 
 If the `$input` address contained `123 Main Street West, Some City, Some State, Some Country` and the `$block` address contained `321 West 5th St., Some Other City, Some State, Some Country` then the data flow would be:
 

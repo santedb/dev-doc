@@ -42,7 +42,7 @@ A local or source record indicates that the data being viewed is the SanteDB rep
 
 A master record indicates that the data being viewed is collected form a series of local records and is being presented as a logical projection of the data contained in the underlying records.&#x20;
 
-![](<../.gitbook/assets/image (450) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (450) (1) (1) (1) (1).png>)
 
 In SanteMPI all LOCAL records must have a single MASTER record. When a master record has not been adjusted to contain official data, the notification bar will indicate this.&#x20;
 

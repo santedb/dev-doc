@@ -8,7 +8,7 @@ Devices have a secret (like an application) and may optionally have a public sig
 
 The device list is accessed using the `Devices` menu item in the security menu. The device list shows a list of all active (non-deleted) devices which are permitted to access the SanteDB iCDR instance.
 
-![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1).png>)
 
 The actions which are available under this panel are:
 

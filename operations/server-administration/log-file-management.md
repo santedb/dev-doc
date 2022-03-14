@@ -28,3 +28,18 @@ dCDR log files are stored in the following locations:
   * dCDR Applications: `~/.local/log`
 * **Docker**: `/root/.local/log`&#x20;
 
+## Log Format
+
+Log files for the dCDR and iCDR have a format as described below:
+
+```
+Source@ThreadID <Level> [TIMESTAMP]: Log Message
+```
+
+For example, this log entry indicates an ERROR on 2021-01-05 from the FHIR plugin on thread 7:
+
+```
+SanteDB.Messaging.FHIR@RSRVR-ThreadPoolThread-7 <Error> [2021-01-05T00:45:15.9914111-05:00]: Error on WCF FHIR Pipeline: SanteDB.Core.Exceptions.PolicyViolationException: Policy '1.3.6.1.4.1.33349.3.1.5.9.2.2.0' was violated by 'Administrator' with outcome 'Deny'
+```
+
+Using the ThreadID is helpful when diagnosing issues in a production environment as it allows for the tracking of a client's execution pathway through the solution.
