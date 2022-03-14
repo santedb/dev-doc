@@ -126,5 +126,33 @@ The compression algorithms supported by SanteDB are:
 | Deflate Compress | deflate | Uses the ZIP deflate compression algorithm (df)                                                                                                            |
 | LZMA Compress    | lzma    | <p>Uses the LZMA / 7ZIP compression algorithm. </p><p>This option uses more CPU resources on compression however results in much slower payload sizes.</p> |
 
-###
+## Related Topics
+
+{% content-ref url="hl7-fhir/http-request-verbs.md" %}
+[http-request-verbs.md](hl7-fhir/http-request-verbs.md)
+{% endcontent-ref %}
+
+{% content-ref url="health-data-service-interface-hdsi/hdsi-query-syntax/" %}
+[hdsi-query-syntax](health-data-service-interface-hdsi/hdsi-query-syntax/)
+{% endcontent-ref %}
+
+{% content-ref url="../santedb-software-publishers/gs1-bms-xml/digitally-signed-visual-code-api.md" %}
+[digitally-signed-visual-code-api.md](../santedb-software-publishers/gs1-bms-xml/digitally-signed-visual-code-api.md)
+{% endcontent-ref %}
+
+{% content-ref url="health-data-service-interface-hdsi/hdsi-query-syntax/" %}
+[hdsi-query-syntax](health-data-service-interface-hdsi/hdsi-query-syntax/)
+{% endcontent-ref %}
+
+{% content-ref url="../santedb-software-publishers/gs1-bms-xml/api-responses.md" %}
+[api-responses.md](../santedb-software-publishers/gs1-bms-xml/api-responses.md)
+{% endcontent-ref %}
+
+{% content-ref url="../santedb-software-publishers/gs1-bms-xml/patching.md" %}
+[patching.md](../santedb-software-publishers/gs1-bms-xml/patching.md)
+{% endcontent-ref %}
+
+{% content-ref url="../santedb-software-publishers/gs1-bms-xml/matching-extensions-for-hdsi.md" %}
+[matching-extensions-for-hdsi.md](../santedb-software-publishers/gs1-bms-xml/matching-extensions-for-hdsi.md)
+{% endcontent-ref %}
 

@@ -8,7 +8,7 @@ Parameter definitions allow you to define common, reusable parameters within San
 | org.santedb.bi.core.parameter.common.date.to   | DATE | A date picker input which has a min value of from-date |
 | org.santedb.bi.core.parameter.user.class       | UUID | User class parameters.                                 |
 
-### Parameter Definition Files
+## Parameter Definition Files
 
 Parameter definitions are used to provide common input controls to reports and queries. These parameters, like data sources can also be annotated with metadata including permission directives.
 

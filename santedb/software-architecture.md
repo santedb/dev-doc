@@ -127,4 +127,4 @@ Synchronization services are responsible for integrating the SanteDB iCDR and dC
 
 ### Additional Services
 
-SanteDB contains hundreds of service contracts for various system tasks which are not covered at a high level on this page. These services can be found on the [Service Definitions](../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/) page.
+SanteDB contains hundreds of service contracts for various system tasks which are not covered at a high level on this page. These services can be found on the [Service Definitions](../developers/server-plugins/implementing-.net-features/service-definitions/) page.

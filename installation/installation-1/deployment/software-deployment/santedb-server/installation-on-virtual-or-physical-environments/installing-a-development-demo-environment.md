@@ -64,7 +64,7 @@ If your installation of the iCDR will be [using clinical decision support ](../.
 
 #### Messaging Interfaces
 
-The messaging interfaces option installs the core REST APIs for the iCDR server. These messaging interfaces allow administrators to customize their deployment for scale-out by assigning servers to dedicated roles. For example, in a scaled-out solution an administrator may only install the [Administrative Management Interface](../../../../../../developers/extending-santesuite/extending-santedb/service-apis/administration-management-interface-ami/) to the server which controls the cluster, whereas other servers may only install the [Health Data Services Interfaces](../../../../../../developers/service-apis/health-data-service-interface-hdsi.md#controlling-response-format) for clinical data access.
+The messaging interfaces option installs the core REST APIs for the iCDR server. These messaging interfaces allow administrators to customize their deployment for scale-out by assigning servers to dedicated roles. For example, in a scaled-out solution an administrator may only install the [Administrative Management Interface](../../../../../../developers/service-apis/administration-management-interface-ami.md) to the server which controls the cluster, whereas other servers may only install the [Health Data Services Interfaces](../../../../../../developers/service-apis/health-data-service-interface-hdsi.md#controlling-response-format) for clinical data access.
 
 #### Business Intelligence Services
 

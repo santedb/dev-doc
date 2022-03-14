@@ -36,14 +36,14 @@ An example of a simple FHIR API configuration is illustrated below.
 
 The following services are bound to the REST API in the default SanteDB installation.
 
-| Service Name | Plugin                                                                                                                                                     |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OAuth2       | [SanteDB OpenID Connect IdP](../../../../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/)                                   |
-| FHIR         | [HL7 FHIR Interface](../../../../operations-1/standard-operating-procedures/hl7-fhir/)                                                                     |
-| AMI          | [Administrative Management Interface](../../../../developers/extending-santesuite/extending-santedb/service-apis/administration-management-interface-ami/) |
-| BIS          | [Business Intelligence Service](broken-reference)                                                                                                          |
-| HDSI         | [Health Data Service Interface](../../../../developers/service-apis/health-data-service-interface-hdsi.md)                                                 |
-| META         | OpenAPI (Swagger) Metadata Exchange                                                                                                                        |
+| Service Name | Plugin                                                                                                                   |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| OAuth2       | [SanteDB OpenID Connect IdP](../../../../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/) |
+| FHIR         | [HL7 FHIR Interface](../../../../operations-1/standard-operating-procedures/hl7-fhir/)                                   |
+| AMI          | [Administrative Management Interface](../../../../developers/service-apis/administration-management-interface-ami.md)    |
+| BIS          | [Business Intelligence Service](broken-reference)                                                                        |
+| HDSI         | [Health Data Service Interface](../../../../developers/service-apis/health-data-service-interface-hdsi.md)               |
+| META         | OpenAPI (Swagger) Metadata Exchange                                                                                      |
 
 ## Service Behaviors
 

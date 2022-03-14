@@ -108,3 +108,10 @@ When launching this you should be presented with the Elbonia customizations of t
   * %localappdata%\log => Logs from the debugging environment
   * %localappdata%\SDBADE => Data files (databases, preferences, etc.)
   * %appdata%\SDBADE => Configuration files
+
+## Related Topics
+
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}
+

@@ -2,7 +2,7 @@
 
 Many of the core SanteDB applets allow for easy customization of their default look and feel, routes, etc. This customization is done by giving your assets a higher priority than the built in assets in SanteDB.&#x20;
 
-### Overriding Default UI Text
+## Overriding Default UI Text
 
 You can override any textual elements in SanteDB by setting the priority on the string you'd like to override. For example, if you'd like to change the title of the default landing page you can use:
 
@@ -11,7 +11,11 @@ You can override any textual elements in SanteDB by setting the priority on the 
     <string key="ui.title" priority="1">My Custom SanteDB App</string>
 ```
 
-### Overriding UI Elements
+{% hint style="info" %}
+When using a `strings.xml` file (as with Mozilla Pontoon) it is not possible to override the priority of the translation.
+{% endhint %}
+
+## Overriding UI Elements
 
 You can override certain portions of the default user interface by setting a priority on your state with the same route name. For example, if you want to provide a custom login screen you merely need to override the login route
 

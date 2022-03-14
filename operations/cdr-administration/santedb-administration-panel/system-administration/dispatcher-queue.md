@@ -26,6 +26,6 @@ SanteDB may be used with a queueing technology like MSMQ or a simple queue like 
 [publish-subscribe.md](../../../../developers/santedb-software-publishers/publish-subscribe.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../../developers/server-plugins/service-definitions/audit-dispatch-service.md" %}
-[audit-dispatch-service.md](../../../../developers/server-plugins/service-definitions/audit-dispatch-service.md)
+{% content-ref url="../../../../developers/server-plugins/implementing-.net-features/service-definitions/audit-dispatch-service.md" %}
+[audit-dispatch-service.md](../../../../developers/server-plugins/implementing-.net-features/service-definitions/audit-dispatch-service.md)
 {% endcontent-ref %}

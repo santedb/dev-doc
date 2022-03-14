@@ -39,3 +39,60 @@ To test your applet, you can run the Applet Debugging Environment (ADE)&#x20;
 sdb-ade --applet=path_to_source_code --ref=org.santedb.core --ref=org.santedb.uicore ...
 ```
 
+## Topics
+
+{% content-ref url="applet-use-and-lifecycle.md" %}
+[applet-use-and-lifecycle.md](applet-use-and-lifecycle.md)
+{% endcontent-ref %}
+
+{% content-ref url="applet-sdk/" %}
+[applet-sdk](applet-sdk/)
+{% endcontent-ref %}
+
+{% content-ref url="applet-structure.md" %}
+[applet-structure.md](applet-structure.md)
+{% endcontent-ref %}
+
+{% content-ref url="javascript-api.md" %}
+[javascript-api.md](javascript-api.md)
+{% endcontent-ref %}
+
+{% content-ref url="business-intelligence-bi-assets/" %}
+[business-intelligence-bi-assets](business-intelligence-bi-assets/)
+{% endcontent-ref %}
+
+{% content-ref url="localization.md" %}
+[localization.md](localization.md)
+{% endcontent-ref %}
+
+{% content-ref url="customization-and-branding.md" %}
+[customization-and-branding.md](customization-and-branding.md)
+{% endcontent-ref %}
+
+{% content-ref url="assets/" %}
+[assets](assets/)
+{% endcontent-ref %}
+
+{% content-ref url="angularjs.md" %}
+[angularjs.md](angularjs.md)
+{% endcontent-ref %}
+
+{% content-ref url="cdss-protocols.md" %}
+[cdss-protocols.md](cdss-protocols.md)
+{% endcontent-ref %}
+
+{% content-ref url="business-rules.md" %}
+[business-rules.md](business-rules.md)
+{% endcontent-ref %}
+
+{% content-ref url="distributing-data.md" %}
+[distributing-data.md](distributing-data.md)
+{% endcontent-ref %}
+
+{% content-ref url="applet-solution-packages.md" %}
+[applet-solution-packages.md](applet-solution-packages.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../../santempi/recipes/" %}
+[recipes](../../../../santempi/recipes/)
+{% endcontent-ref %}

@@ -293,3 +293,10 @@ Content-Length: 112
 
 grant_type=password&scope=2.25.3049340304933&username=allison&password=Mohawk123&client_id=fiddler&client_secret=fiddler
 ```
+
+## Related Topics
+
+{% content-ref url="consent-and-privacy.md" %}
+[consent-and-privacy.md](consent-and-privacy.md)
+{% endcontent-ref %}
+

@@ -1,9 +1,3 @@
----
-description: >-
-  This page describes the planning and preparation work that must be undertaken
-  prior to installing SanteDB in a production environment.
----
-
 # Planning & Preparation Work
 
 A SanteDB deployment is not like installing Microsoft Office, or a video game. SanteDB is responsible for storing very sensitive personal health information (PHI) and the deployment of SanteDB in any role (MPI, MFR, MPR, SHR, etc.) warrants careful planning and consideration.&#x20;

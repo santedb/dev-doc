@@ -18,3 +18,18 @@ When an inbound message is received via any registered transport, the following 
 7. The message handler returns a `Bundle` instance which the processor (again) calls `IHl7SegmentHandler` instances to parse the RIM based objects back into HL7v2
 8. The server appends the necessary sending information and message metadata,&#x20;
 9. The response is sent via the same channel it was received
+
+## Related Topics
+
+{% content-ref url="administration-management-interface-ami/enabling-hl7v2-interfaces.md" %}
+[enabling-hl7v2-interfaces.md](administration-management-interface-ami/enabling-hl7v2-interfaces.md)
+{% endcontent-ref %}
+
+{% content-ref url="administration-management-interface-ami/hl7-authentication.md" %}
+[hl7-authentication.md](administration-management-interface-ami/hl7-authentication.md)
+{% endcontent-ref %}
+
+{% content-ref url="administration-management-interface-ami/santedb-hl7v2-implementation.md" %}
+[santedb-hl7v2-implementation.md](administration-management-interface-ami/santedb-hl7v2-implementation.md)
+{% endcontent-ref %}
+

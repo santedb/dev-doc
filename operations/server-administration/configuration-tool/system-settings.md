@@ -51,6 +51,6 @@ This includes:
 * Changing the primary [Passive Service](../../../developers/extending-santesuite/extending-santedb/server-plugins/implementing-.net-features/passive-services.md) assigned to a Service Contract.
 
 {% hint style="info" %}
-SanteDB Services are described in the [Service Definitions](../../../developers/extending-santesuite/extending-santedb/server-plugins/service-definitions/) wiki page.
+SanteDB Services are described in the [Service Definitions](../../../developers/server-plugins/implementing-.net-features/service-definitions/) wiki page.
 {% endhint %}
 

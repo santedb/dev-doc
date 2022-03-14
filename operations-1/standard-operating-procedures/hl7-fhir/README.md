@@ -8,3 +8,17 @@ SanteDB is not a FHIR based CDR however uses a version of the [Reference Informa
 
 
 
+## Related Topics
+
+{% content-ref url="enabling-fhir-interfaces.md" %}
+[enabling-fhir-interfaces.md](enabling-fhir-interfaces.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../developers/service-apis/hl7-fhir/santedb-fhir-implementation.md" %}
+[santedb-fhir-implementation.md](../../../developers/service-apis/hl7-fhir/santedb-fhir-implementation.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../developers/santedb-software-publishers/extending-fhir-interfaces.md" %}
+[extending-fhir-interfaces.md](../../../developers/santedb-software-publishers/extending-fhir-interfaces.md)
+{% endcontent-ref %}
+

@@ -1,10 +1,10 @@
-# Implementation Details
+# SanteDB FHIR Implementation
 
 Unlike CDRs which use FHIR as the basis of their data storage throughout the stack, SanteDB treats FHIR as an edge messaging format. Therefore FHIR resource requests are considered **transient** and are never persisted into the database.
 
 Because of this, there are several implementation notes which are important to remember when interacting with the SanteDB FHIR service handlers.
 
-### Resource URLS and ID
+## Resource URLS and ID
 
 When submitting a FHIR bundle, each entry in the bundle may contain a `fullUrl` property which point to an absolute URL where the resource originated and/or was referenced. For example:
 
@@ -37,7 +37,7 @@ There are several reasons that SanteDB doesn't store this information:
 The behavior of the logical id and full URL are aligned with the [FHIR behaviors specified on Logical ID](https://www.hl7.org/fhir/R4/resource.html#id) , it is recommended that production deployments use [business identifiers ](https://www.hl7.org/fhir/R4/resource.html#identifiers)when referencing objects in FHIR.
 {% endhint %}
 
-### Offsite Resource Links
+## Offsite Resource Links
 
 In FHIR, it is possible to link to clinical data hosted offsite, or on another server. There are several reasons why this is a bad practice:
 
@@ -125,11 +125,11 @@ Or you can manually register the Organization using the REST api and then includ
 }
 ```
 
-### FHIR References
+## FHIR References
 
 In FHIR a `Reference` object is used to link two resources together in a role. This is similar to SanteDB's `EntityRelationship` class, with the limitation that `EntityRelationship` does not permit the linking of objects which are not stored within the SanteDB instance.&#x20;
 
-#### Reference By UUID
+### Reference By UUID
 
 Referencing an object by UUID is the most preferred mechanism of resource referencing. Resources which are linked by UUID are first cross referenced in the current processing scope (the bundle), followed by database linkage. Reference by UUID is commonly represented as:
 
@@ -173,7 +173,7 @@ Business identifier references are also supported by the reference resolver:
 }
 ```
 
-#### Reference Bundle Object
+### Reference Bundle Object
 
 Referencing an object which is being processed within the same scope is also permitted. The reference is subject to the following limitations:
 
@@ -204,7 +204,7 @@ Referencing an object which is being processed within the same scope is also per
   }
 ```
 
-### Re-Submission of Unidentified Resources
+## Re-Submission of Unidentified Resources
 
 Whenever a client system submits an unidentified resource to the SanteDB iCDR FHIR interface, SanteDB will create a new copy of that resource and generate a unique UUID for it. An unidentified resource is a resource which lacks any of:
 

@@ -13,13 +13,13 @@ Applet solution packages are described using a solution XML file and composed fr
 3. Compile your applets (see Packaging Applets)
 4. Compose the applet packages into a single solution file
 
-### Solution Manifest
+## Solution Manifest
 
 An applet solution manifest is really just a point to other applets which are composed. The format of the solution manifest is illustrated below:
 
 ```markup
 <AppletManifest xmlns="http://santedb.org/applet">
-  <info id="santedb.sample.sln" version="1.0.0.0">
+  <info id="santedb.sample.sln" version="1.0.0.0" uuid="a-unique-uuid-for-your-project">
     <icon>/org.santedb.core/img/icon.png</icon>
     <name lang="en">SanteDB Sample</name>
     <author>SanteSuite Contributors</author>
@@ -36,7 +36,7 @@ An applet solution manifest is really just a point to other applets which are co
 
 In this example, only the org.santedb.sample package needs to be written, the rest of the applets would simply need their pak files in the directory while composing.
 
-### Composing your Solution
+## Composing your Solution
 
 Once you are ready to distribute your applet solution you use the sdb-pakr command (the same as used to package your applet).&#x20;
 

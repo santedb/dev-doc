@@ -1,4 +1,4 @@
-# Custom Algorithms
+# Custom Match Algorithms
 
 Adding custom algorithms or enhanced comparison between values is quite simple using the default match engine in SanteDB. If extending the blocking algorithm, you should implement:
 
@@ -10,7 +10,7 @@ If exposing a custom algorithm for scoring, you must implement either:
 1. IUnaryTransform - Which transforms a single operand into another value for subsequent analysis, or
 2. IBinaryTransform - Which transforms two operands into a single result
 
-### Implementing Custom IQueryFilterExtension
+## Implementing Custom IQueryFilterExtension
 
 An IQueryFilter extension is responsible for exposing your filter algorithm on the HDSI query interface. For example, if we wanted to expose a custom query extension for the length of a string.
 
@@ -42,7 +42,7 @@ public class StringLengthFilter : IQueryFilterExtension
 
 The primary responsibilities of an IQueryFilterExpression are:
 
-* Reserve a name \(in this case length\_difference\) for use on the HDSI interfaces
+* Reserve a name (in this case length\_difference) for use on the HDSI interfaces
 * Compose the parsed expression into a method call and comparison in a LINQ expression tree
 * Expose the method information to the LINQ composer so it may transform to/from HDSI / LINQ.
 
@@ -73,7 +73,7 @@ Your filter expression composition method will be invoked and should result in a
 patient => patient.Names.Any(name => name.Component.Any(component => component.Value.LengthDifference("steve") < 2));
 ```
 
-### Implementing Custom IDbFilterFunction
+## Implementing Custom IDbFilterFunction
 
 The IQueryFilterExpression is responsible for taking wire-level HTTP queries and constructing LINQ expressions. This is useful for in-memory objects, however to expose the filter expression to a database, a IDbFilterFunction from the ORM Lite library needs to be implemented.
 
@@ -107,7 +107,7 @@ public class PostgreStringLengthFilter : IDbFilterFunction
 }
 ```
 
-### Implementing Custom IDataTransform for Scoring
+## Implementing Custom IDataTransform for Scoring
 
 If we wanted to use or expose our extended algorithm to the scoring engine as a string transform, we can implement an IDataTransform interface. For example, if we wanted to allow users to configure a scoring attribute:
 
@@ -147,5 +147,4 @@ In the configuration above, the matching engine would:
 1. Extract the `name.component.value` of record A and record B
 2. Resolve length\_difference to our implementation of IBinaryDataTransformer
 3. Call the `Apply()` method of our transformer
-4. Pass the result to the next transform or compare it with the assertion provided \(in this case the result is less than 2\).
-
+4. Pass the result to the next transform or compare it with the assertion provided (in this case the result is less than 2).
