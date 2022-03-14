@@ -9,7 +9,7 @@ Testing a match configuration can be performed on the **Testing** tab. This tab 
 
 First, users should search for a `$input` record for which they would like to test their configuration. The search is performed by identifier, as an example, a patient has been selected and selected.
 
-![](<../../../.gitbook/assets/image (445) (1).png>)
+![](<../../../.gitbook/assets/image (445) (1) (1).png>)
 
 If performing a match test against the underlying data store, the user can press the **Run** button.
 

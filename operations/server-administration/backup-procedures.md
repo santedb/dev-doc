@@ -92,3 +92,87 @@ If you wish to encrypt and compress the backup, then you may additionally use th
 ```
 pg_dump -h localhost -d DATABASE -E UTF8 -U username -W | 7z a -si -pSOMEPASSWORD backup.bak.7z -mhe=on
 ```
+
+#### Restoring Data Dump Backups
+
+Restoring a backup which was created using the data dump pattern is relatively straightforward process.
+
+1. Decrypt your backup file (if you encrypted it)
+2. Decompress the backup file
+3. Run the contents through `pg_restore` or the `psql` command.
+
+For example, to extract a backup to a new database called `newdb` from an encrypted backup in 7zip.
+
+```bash
+~$ psql -U postgres -h localhost -W 
+-#: CREATE DATABASE newdb;
+CREATE DATABASE
+-#: \q
+~$ 7z e mybackup.7z -so -pSOMEPASSWORD | psql -U postgres -h localhost --dbname=newdb -W
+```
+
+## Backup of dCDR&#x20;
+
+The following dCDR products automatically backup their local database upon system service startup and according to the backup job in their software:
+
+* SanteDB dCDR Gateway
+* SanteDB dCDR Windows Client
+* SanteDB dCDR Android Client
+
+Each of these dCDR instances will provide a system job for the backup task
+
+![](<../../.gitbook/assets/image (445).png>)
+
+{% hint style="warning" %}
+Backups are encrypted AES256 encryption with a passphrase matching the name of the device which produced the backup. It is important to keep the name of the machine in order to restore the backup.
+{% endhint %}
+
+Backup files can be accessed in the following locations:
+
+* On Windows Operating Systems the backups are stored in `%appdata%\local\SanteDB\<instance-name>\backup`&#x20;
+* On Linux Operating Systems backups are stored in `~/.local/SanteDB/<instance-name>/backup`
+* On Android Operating Systems backups are stored in `~/Documents/SanteDB`
+
+### Restoring dCDR Backups
+
+To restore a dCDR backup is a straightforward process which differs based on the technology used.&#x20;
+
+{% hint style="info" %}
+Performing a restore will overwrite any data in the current dCDR instance. Ensure that all necessary data is properly synchronized prior to continuing a restore operation.
+{% endhint %}
+
+#### Restoring on dCDR Gateway
+
+To restore on the dCDR gateway, administrators should run the `santedb-dcg` command with the `--restore` option:
+
+```
+C:\Program Files\SanteSuite\SanteDB\dCG\santedb-dcg --restore=<path_to_file> --sysrestore
+```
+
+{% hint style="info" %}
+The `--sysrestore` should be used in an elevated command prompt on Windows and is used to restore the backup not to the current user's `%appdata%` directory but to the System `%appdata%` directory usually located in `C:\Windows\SysWOW64\config\systemprofile`.
+{% endhint %}
+
+You will be prompted for a backup password (the name of the original device which produced the backup). On Windows the restore process:
+
+1. Shuts down the SanteDB dCDR (on Windows)
+2. Decrypts and restores the data files to the appropriate directories
+3. Starts the SanteDB dCDR (on Windows)
+
+#### Restoring Windows Client
+
+To restore files on the Windows (or Linux in the future) standalone clients, users should follow the process:
+
+1. Ensure that the Windows application is configured with the same device name as the backup file.
+2. Copy the `sdbk` file to the `%localappdata%\santedb\<instance-name>\restore` directory
+3. Start the SanteDB Windows Application
+4. Backup will automatically be processed and imported.
+
+#### Restoring on Android
+
+To restore a database on Android:
+
+1. Ensure the `*.sdbk` file you want to restore is placed in the `Documents` folder of the tablet.
+2. Wipe the data for the SanteDB dCDR application (in the Application Manager clear the data for the application)
+3. Configure the application using the same tablet name and subscription settings as before
+4. When prompted at startup, answer "YES" to the restore from backup prompt provided
