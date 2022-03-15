@@ -14,7 +14,6 @@ The implementation of even a transparent data sharing project (like SanteMPI) ca
   * [ ] [APIs Secured](deployment/securing-the-apis.md)&#x20;
 * [ ] [Privacy Impact Assessment Performed](planning-and-preparation-work/developing-privacy-impact-assessments.md) on iCDR
 * [ ] [Threat/Risk Assessment Performed](planning-and-preparation-work/develop-threat-risk-assessments.md) on iCDR
-*
 
 ## Establish a Help / Support Desk
 
