@@ -62,7 +62,7 @@ The **When Null** input on the attribute instructs the scoring process, how to h
 | Disqualify | When the value extracted from `$input` or `$block` are null, the entirety of `$input` and `$block` are assigned a non-match score (a score of negative infinity)                                                                                                                                | ![](<../../../.gitbook/assets/image (440) (1) (1).png>) |
 | Match      | When a value extracted from `$input` and `$block` are null, then the attribute is assumed to have matched and the matchWeight is applied.                                                                                                                                                       | ![](<../../../.gitbook/assets/image (451) (1).png>)     |
 | NonMatch   | When a value extracted from `$input` or `$block` are null, then the attribute is assumed to have not-matched and the nonMatchWeight is applied.                                                                                                                                                 | ![](<../../../.gitbook/assets/image (442) (1).png>)     |
-| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452) (1).png>)     |
+| Ignore     | When a value extracted  from `$input` or `$block` are null, then the attribute is ignored. The attribute is assigned a score of 0 and the total weight which the records under consideration could have is decreased (i.e. it is as though, for that pair, the attribute was never configured). | ![](<../../../.gitbook/assets/image (452) (1) (1).png>) |
 
 ### Attribute Transforms
 
@@ -265,7 +265,7 @@ Using the example above, if the city portion of the home address were to be eval
 
 The explain diagram on the scoring tab shows the detailed blocking logic of the configuration. Users are able to see the concrete steps which, in the general tab, are only displayed as procedures.
 
-![](<../../../.gitbook/assets/image (439) (1).png>)
+![](<../../../.gitbook/assets/image (439) (1) (1).png>)
 
 ## Related Topics
 

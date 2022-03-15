@@ -4,7 +4,7 @@
 
 The blocking filters panel on the blocking configuration tab allows administrators to view and edit the filters which will be used to block data from the underlying data persistence source to select candidates which may be a good candidate for the more computationally complex process of scoring.
 
-![](<../../../.gitbook/assets/image (441) (1).png>)
+![](<../../../.gitbook/assets/image (441) (1) (1).png>)
 
 Each block (or group of filters) is shown in an accordion which can be expanded using the **Block 0** through **Block n** links. Each block contains:
 

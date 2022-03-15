@@ -43,7 +43,7 @@ SanteDB jobs can be run on a schedule. The schedule for jobs are persisted (by d
 
 Scheduling a job is performed by clicking on the `Schedule` button on the job summary page.
 
-![](<../../../../.gitbook/assets/image (441) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (441) (1) (1) (1) (1).png>)
 
 Upon opening the job schedule, a window will appear allowing the user to configure a job schedule. There are two methods for setting a job schedule:
 

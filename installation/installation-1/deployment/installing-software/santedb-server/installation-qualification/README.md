@@ -30,5 +30,30 @@ It is important that you use the default configurations for SanteMPI when runnin
 It is recommended that, after [securing-the-apis.md](../../../securing-the-apis.md "mention") is performed that a complete network scan be performed to ensure that the attack surface area of the environment is minimal.
 
 * [ ] Perform a security scan of the applications involved (see: [OWASP ZAP](https://www.zaproxy.org/download/)) to ensure SSL, XSS, CORS, and other web security practices have been configured appropriately
-* [ ] Perform a network port scan/attach tool to ensure that opened ports and services are minimal (see: [NMAP](https://nmap.org))&#x20;
-* [ ] Use OpenSSL to validate the SSL certificate configuration (example: `openssl s_client -connect demompi.santesuite.net:8443 -showcerts`)
+  * [ ] Add any blocking scripts to browser headers your Application Firewall may be adding
+  * [ ] Ensure proper caching policies and login policies are in place
+
+
+
+* [ ] Perform a network port scan/attach tool to ensure that opened ports and services are minimal (see: [NMAP](https://nmap.org))
+  * [ ] Ensure that only ports you want opened are open
+  * [ ] Ensure that ports that are open are secured.
+
+![](<../../../../../../.gitbook/assets/image (439).png>)
+
+* [ ] Use OpenSSL to validate that your SSL certificates are properly configured
+
+```
+openssl s_client -connect demompi.santesuite.net:443 -showcerts
+CONNECTED(00000003)
+depth=2 C = BE, O = GlobalSign nv-sa, OU = Root CA, CN = GlobalSign Root CA
+verify return:1
+depth=1 C = BE, O = GlobalSign nv-sa, CN = AlphaSSL CA - SHA256 - G2
+verify return:1
+depth=0 CN = *.santesuite.net
+verify return:1
+---
+Certificate chain
+ 0 s:CN = *.santesuite.net
+   i:C = BE, O = GlobalSign nv-sa, CN = AlphaSSL CA - SHA256 - G2
+```

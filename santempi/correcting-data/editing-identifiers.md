@@ -10,7 +10,7 @@ Identifiers can be edited within the administrative portal if :
 * The identifier type is scoped in a way that it can be assigned to a ROT
   * For example: If an identifier is scoped to a Master Entity (such as a national health id) then the portal cannot change or assign a new identifier in that domain.
 
-![](<../../.gitbook/assets/image (439).png>)
+![](<../../.gitbook/assets/image (439) (1).png>)
 
 ### Changing Identifiers
 

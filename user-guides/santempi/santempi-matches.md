@@ -70,7 +70,7 @@ The `Matched Entities` tab shows summary information of the two patients which h
 
 The A/B compare tab takes the contents of the [the-patient-dashboard.md](../../santempi/the-patient-dashboard.md "mention") (which is a common place for plugins to extend the UI) and shows the panels as an A/B comparison.
 
-![](<../../.gitbook/assets/image (439) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (439) (1) (1) (1) (1) (1).png>)
 
 ### Scoring
 

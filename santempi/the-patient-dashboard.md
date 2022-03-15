@@ -58,7 +58,7 @@ Master records don't contain data beyond identifiers. They are abstract Entity o
 
 When a data administrator uses the administrative panel to edit a patient record, the administrative panel (granted with **Establish MDM Record of Truth**) will construct a new SOURCE/LOCAL record (which belongs to the administrative panel) which is promoted to **Record of Truth**. This will be indicated with a green bar and an option to view the ROT and/or EDIT the master.
 
-![](<../.gitbook/assets/image (452) (1) (1).png>)
+![](<../.gitbook/assets/image (452) (1) (1) (1).png>)
 
 {% hint style="info" %}
 All edits by the administrative panel to the MASTER record are redirected to the record of truth. It is recommended that administrators and data officers edit new official information on the ROT directly.

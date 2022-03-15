@@ -16,7 +16,7 @@ Clicking the edit button on the related persons panel will allow the administrat
 In SanteDB (and SanteMPI) the family members of patients may be a Person record (a non-patient person) or may be a patient record. This distinction will depend on the nature in which the related person is registered. For example, if the registration occurs via an HL7v2 NK1 segment and the identifier points to an existing patient, then the MPI constructs a Patient<>Patient link, however if the NK1 links to a new record then the relationship is created as Patient<>Person link.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (452).png>)
+![](<../../.gitbook/assets/image (452) (1).png>)
 
 ### Editing Patient Family Members
 

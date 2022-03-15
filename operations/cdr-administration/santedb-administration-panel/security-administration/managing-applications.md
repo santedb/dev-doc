@@ -38,7 +38,7 @@ The application secret should be saved and sent to the integration partner or ap
 
 When editing an application from the application list or after creating an application, the properties of the device can be modified.
 
-![](<../../../../.gitbook/assets/image (441) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (441) (1) (1) (1) (1) (1).png>)
 
 ### Resetting Security State
 

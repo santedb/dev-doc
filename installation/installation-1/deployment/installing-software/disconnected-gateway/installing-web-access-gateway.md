@@ -107,7 +107,7 @@ When configuring the SanteDB Web Access Gateway (like all dCDR instances) you mu
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 
-![](<../../../../../.gitbook/assets/image (441) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (441) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SanteDB dCDR software packages like the Windows Application, Android Application and dCDR Gateway may opt to not auto-update applets depending on bandwidth restrictions.

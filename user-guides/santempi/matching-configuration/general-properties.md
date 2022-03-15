@@ -6,7 +6,7 @@ The general configuration tab shows metadata related to the configuration as wel
 
 The general properties tab of the match configuration is used to control the general settings of the match configuration. When creating a new match configuration, the panel will default to edit mode to allow for capture of the properties.
 
-![](<../../../.gitbook/assets/image (441) (1) (1).png>)
+![](<../../../.gitbook/assets/image (441) (1) (1) (1).png>)
 
 The fields on this properties panel are:
 
