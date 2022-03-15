@@ -16,6 +16,7 @@ This procedure should be used when a new classification of user within the Sante
 
 * [ ] Approvals to create a new role gathered
 * [ ] Role has been documented and initial members list established
+* [ ] Familiarize yourself with the [security-architecture.md](../../../santedb/security-architecture.md "mention")
 * [ ] Necessary, context specific approvals and conventions
   * [ ] Include things like signatures required
   * [ ] Or whether the incident needs to be documented

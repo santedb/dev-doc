@@ -14,10 +14,8 @@ Standard operating procedures included in this section include
   * [User Lockout and Password Reset](user-management-sops/sop-user-lockout.md)
 * Role Management
   * [Creating New Roles](role-management-sops/creating-new-roles.md)
-  * Adding Users to Roles
-  * Removing Users from Roles
-  * Granting Policies to Roles
-  * Blocking Polies based on Roles
+  * [Managing Role Membership](role-management-sops/assigning-users-to-roles.md)
+  * Managing Role Policies
 * Device Management
   * Onboarding new Devices
   * Deactivation of existing Devices

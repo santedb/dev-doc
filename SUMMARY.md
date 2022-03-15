@@ -273,6 +273,7 @@
     * [SOP: User Lockout](operations/standard-operating-procedures/user-management-sops/sop-user-lockout.md)
     * [SOP: Deactivating Users](operations/standard-operating-procedures/user-management-sops/sop-deactivating-users.md)
   * [Role Management SOPs](operations/standard-operating-procedures/role-management-sops/README.md)
+    * [Role Policy Assignment](operations/standard-operating-procedures/role-management-sops/role-policy-assignment.md)
     * [Assigning Users to Roles](operations/standard-operating-procedures/role-management-sops/assigning-users-to-roles.md)
     * [Creating New Roles](operations/standard-operating-procedures/role-management-sops/creating-new-roles.md)
   * [Device Management SOPs](operations/standard-operating-procedures/device-management-sops.md)
