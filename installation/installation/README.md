@@ -1,6 +1,6 @@
 # Operationalizing SanteDB
 
-Operationalizing SanteDB (or any SanteDB solution) is not a trivial task, any large scale deployment of the solution requires planning and coordination between stakeholders. Implementers are encouraged to use a formal methodology for enterprise architecture (such as CMMI or TOGAF) to manage the operationalization of the MPI projects.
+Operationalizing SanteDB (or any SanteDB solution) is not a trivial task, any large scale deployment of the solution requires planning and coordination between stakeholders. Implementers are encouraged to use formal methodologies for enterprise projects and architecture (examples: [CMMI](https://www.pmi.org/learning/library/cmmi-bring-pm-process-next-level-7538) , [TOGAF](https://www.opengroup.org/togaf), [DAD](https://www.pmi.org/disciplined-agile/process/introduction-to-dad), etc.) to manage the operationalization of the MPI projects.
 
 Because operationalization is specific to the problem domain, local jurisdiction, size requirements, etc. SanteDB provides high level tasks for deployment as a reference guide, and provides operational templates for use by implementers which may be of use.
 
