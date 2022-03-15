@@ -1,8 +1,8 @@
 # Rollout
 
-The rollout phase of your project occurs after the deployment has been completed. Typically a rollout will involve context specific activities (for the clinical domain, the deployment pattern, etc.).&#x20;
+The rollout phase of your project occurs after the deployment has been completed. The rollout phase expands the user base of your installation from the pilot-scale operation to the full-scale operation. Typically the rollout phase will involve context-specific activities for the users in the clinical domain and will depend somewhat on the deployment pattern of the solution.&#x20;
 
-The implementation of even a transparent data sharing project (like SanteMPI) can represent a shift in the thinking for users who previously may have not had to worry about sharing, privacy and security of data in their context.&#x20;
+The implementation of a data sharing project like SanteMPI may require a shift in thinking for users who previously may have not had to worry about data sharing outside of their normal clinic, and awareness of privacy and security of data in their context becomes very important during this phase.&#x20;
 
 ## Pre-Flight Checklist
 
@@ -17,15 +17,15 @@ The implementation of even a transparent data sharing project (like SanteMPI) ca
 
 ## Establish a Help / Support Desk
 
-No software environment is perfect. When deploying large scale systems many users will encounter issues which need to be documented and resolved in a coherent manner. For example:
+No electronic system is perfect. When deploying large scale systems many users will encounter issues which need to be documented and resolved in a structured manner. For example:
 
 * Users forget their passwords or require assistance logging into the solution,&#x20;
 * Hardware (tablets, laptops, routers, etc.) breaks and needs to be replaced,
 * Users forget a procedure or process or require assistance to complete a workflow.
 
-It is recommended that, during rollout, the establishment of an operational help desk and ticketing software is created. This should reference the [#describe-service-contacts-and-responsibilities](planning-and-preparation-work/develop-operational-technology-architecture.md#describe-service-contacts-and-responsibilities "mention") documentation developed for the project. As a rule of thumb, for every 75 to 100 terminals/clients/users a single IT support resource should be available (note: support staff can be a power user, clinic representative, IT operations staff already servicing a location, etc.)
+It is recommended that, during rollout, the establishment of an operational help desk and ticketing software is created. This should reference the [#describe-service-contacts-and-responsibilities](planning-and-preparation-work/develop-operational-technology-architecture.md#describe-service-contacts-and-responsibilities "mention") documentation developed for the project. It is recommended as a general guideline that, for every 100 terminals/clients/users, a single IT support resource should be available (note: support staff can be a power user, clinic representative, IT operations staff already servicing a location, etc.)
 
-## Creating Job Aides & SOPs
+## Creating Job Aides & Standard Operating Procedures (SOPs)
 
 During the rollout of the SanteDB software, it is important that all users of the system follow common procedures and have ready access to assistance. This will help ensure the consistency of data captured and shared via SanteDB, adherence to privacy and security best practices, documentation requirements, etc.
 
@@ -39,7 +39,7 @@ Useful assets which should be developed include:
 
 When onboarding new clinics or sites which are using the dCDR technology, or when onboarding new trading partners it is important to perform an assessment.
 
-It may seem benign, however, onboarding a software product or site which is not accustomed to sharing PHI can be quite a shift in thinking.&#x20;
+It may seem benign, however, onboarding a software product or site which is not accustomed to sharing personal health information (PHI) can be quite a shift in thinking.&#x20;
 
 * Users may need to alter their workflows for patient registration or data capture to implement best practices for ensuring data shared with a central level is accurate,
 * Users may need to capture additional details about patients or events which they have not needed to capture before,&#x20;
@@ -48,7 +48,7 @@ It may seem benign, however, onboarding a software product or site which is not 
 
 Additionally, from a technical standpoint, highly sensitive and confidential data is being disclosed and stored between sites. This requires updates to the local operating environments to ensure that an attempt is made to protect the data.&#x20;
 
-Additionally, when onboarding new sites which will share discrete data with a central system or other clinics, it is important that there patients are informed as well. This may include:
+Additionally, when onboarding new sites which will share discrete data with a central system or other clinics, it is important that their patients are informed as well. This may include:
 
 * Producing or sharing informational posters or notices about the sharing of personal health information,
 * Creating brochures which inform patients of the type of data being capture, and the intended use of the data sharing,
