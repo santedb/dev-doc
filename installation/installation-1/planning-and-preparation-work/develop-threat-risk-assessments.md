@@ -10,6 +10,14 @@ TRAs should be completed for new or significantly modified information systems a
 
 Each jurisdiction will have a unique security threat landscape and may have specific requirements for TRAs, but we have provided a sample TRA template here that should at least help to start the security conversation in your project.
 
+Disclaimers for SanteSuite Inc.
+
+All the information on this website is published in good faith and for general information purpose only. SanteSuite Inc. does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website and/or in related documents is strictly at your own risk. SanteSuite Inc. will not be liable for any losses and/or damages in connection with the use of the content.
+
+Consent
+
+By using our website and/or content, you hereby consent to our disclaimer and agree to its terms.
+
 {% file src="../../../.gitbook/assets/ThreatRiskAssessment_Template.docx" %}
 Threat Risk Assessment&#x20;
 {% endfile %}
