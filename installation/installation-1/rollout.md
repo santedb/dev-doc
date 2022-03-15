@@ -4,6 +4,16 @@ The rollout phase of your project occurs after the deployment has been completed
 
 The implementation of even a transparent data sharing project (like SanteMPI) can represent a shift in the thinking for users who previously may have not had to worry about sharing, privacy and security of data in their context.&#x20;
 
+## Establish a Help / Support Desk
+
+No software environment is perfect. When deploying large scale systems many users will encounter issues which need to be documented and resolved in a coherent manner. For example:
+
+* Users forget their passwords or require assistance logging into the solution,&#x20;
+* Hardware (tablets, laptops, routers, etc.) breaks and needs to be replaced,
+* Users forget a procedure or process or require assistance to complete a workflow.
+
+It is recommended that, during rollout, the establishment of an operational help desk and ticketing software is created. This should reference the [#describe-service-contacts-and-responsibilities](planning-and-preparation-work/develop-operational-technology-architecture.md#describe-service-contacts-and-responsibilities "mention") documentation developed for the project. As a rule of thumb, for every 75 to 100 terminals/clients/users a single IT support resource should be available (note: support staff can be a power user, clinic representative, IT operations staff already servicing a location, etc.)
+
 ## Creating Job Aides & SOPs
 
 During the rollout of the SanteDB software, it is important that all users of the system follow common procedures and have ready access to assistance. This will help ensure the consistency of data captured and shared via SanteDB, adherence to privacy and security best practices, documentation requirements, etc.
