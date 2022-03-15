@@ -10,6 +10,6 @@ If you are just getting started using the MPI software as an end-user, we recomm
 
 [Setting up your user profile](../operations/cdr-administration/santedb-administration-panel/managing-your-profile.md)
 
-Setting your password reset questions
+[Setting your password reset questions](../operations/cdr-administration/santedb-administration-panel/managing-your-profile.md#security-profile)
 
-Resetting your password
+[Resetting your password](../operations/cdr-administration/santedb-administration-panel/managing-your-profile.md#resetting-your-password)
