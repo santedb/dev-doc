@@ -11,7 +11,10 @@ The implementation of even a transparent data sharing project (like SanteMPI) ca
   * [ ] iCDR Environment (SanteMPI, SanteDB, etc.) installed
   * [ ] [Relevant Installation Qualification Completed](deployment/installing-software/santedb-server/installation-qualification/)
   * [ ] [Services Properly Tuned & Configured](../installation/santedb-server/production-installation-notes.md)
-  * [ ] APIs Secured&#x20;
+  * [ ] [APIs Secured](deployment/securing-the-apis.md)&#x20;
+* [ ] [Privacy Impact Assessment Performed](planning-and-preparation-work/developing-privacy-impact-assessments.md) on iCDR
+* [ ] [Threat/Risk Assessment Performed](planning-and-preparation-work/develop-threat-risk-assessments.md) on iCDR
+*
 
 ## Establish a Help / Support Desk
 
