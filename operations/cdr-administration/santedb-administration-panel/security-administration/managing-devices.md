@@ -63,7 +63,7 @@ The security properties of the device are used for viewing lockout status, inval
 
 &#x20;
 
-![](<../../../../.gitbook/assets/image (423) (1).png>)
+![](<../../../../.gitbook/assets/image (423) (1) (1).png>)
 
 #### Invalid Authentications
 

@@ -6,7 +6,7 @@ The messaging settings section allows system administrators to configure the var
 
 The REST based services in the configuration panel have two sections of configuration in their panel, as illustrated in the FHIR panel below.
 
-![](<../../../../.gitbook/assets/image (423) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (423) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * REST API -> This section of the configuration panel is common to all REST services and controls the ports, paths and bindings of the REST API.
 * Service -> This section varies and is specific to the actual API being configured.

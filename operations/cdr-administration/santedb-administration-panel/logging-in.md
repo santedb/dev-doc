@@ -2,7 +2,7 @@
 
 Upon navigating to the SanteDB iCDR administration panel for your deployment, the administration portal will challenge you for a login. The components of the login screen are illustrated below.
 
-![](<../../../.gitbook/assets/image (423) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (423) (1) (1) (1) (1).png>)
 
 
 

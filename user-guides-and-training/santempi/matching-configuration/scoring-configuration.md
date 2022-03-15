@@ -238,7 +238,7 @@ In this configuration, if `$input` has a given name of `Kimberly` then the follo
 
 However, looking at the source data, we can see that each of the blocks are not equally strong. SanteDB provides a mechanism for modifying the resulting score based on some algorithm. For example, we could apply a similarity to partial weight.
 
-![](<../../../.gitbook/assets/image (423).png>)
+![](<../../../.gitbook/assets/image (423) (1).png>)
 
 Similarity returns a value between `0.0 .. 1.0` , based on the string similarity with higher numbers being more similar strings. This means that our score of `3.2` would now be adjusted based on the similarity of the input strings. With this modification:
 
