@@ -17,14 +17,12 @@ Standard operating procedures included in this section include
   * [Managing Role Membership](role-management-sops/assigning-users-to-roles.md)
   * [Managing Role Policies](role-management-sops/sop-role-policy-assignment.md)
 * [Device Management](device-management-sops.md)
-  * Onboarding new Devices
-  * Deactivation of existing Devices
-  * Device Lockout and Secret Reset
+  * [Onboarding new Devices (dCDR)](device-management-sops/sop-onboarding-new-dcdr-device.md)
+  * [Onboarding new Devices (HL7v2)](device-management-sops/sop-onboarding-new-hl7v2-device.md)
 * [Application Management](application-management-sops.md)
   * Onboarding new Applications
   * Deactivation of existing Applications
   * Application Lockout and Secret Reset
-* Onboarding new HL7 Trading Partners
 * Implementing new Data Protection Policy
 * New Identity Domain Registration
 * Patient Administration
