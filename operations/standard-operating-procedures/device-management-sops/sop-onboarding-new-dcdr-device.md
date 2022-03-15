@@ -17,6 +17,7 @@ SanteDB's dCDR software support self-service registration of dCDR instances prov
 
 ### Before Beginning
 
+* [ ] Connected to the Internet
 * [ ] Ensure the device is protected from threats
   * [ ] Ensure the device has the latest operating system installed
   * [ ] Ensure the device has its local firewall enabled and configured
@@ -62,8 +63,3 @@ SanteDB's dCDR software support self-service registration of dCDR instances prov
 |                          |            |                 |
 |                          |            |                 |
 
-### See Also
-
-_Provide links to other documents or SOPs or related resources_
-
-*

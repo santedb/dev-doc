@@ -16,7 +16,7 @@ Standard operating procedures included in this section include
   * [Creating New Roles](role-management-sops/creating-new-roles.md)
   * [Managing Role Membership](role-management-sops/assigning-users-to-roles.md)
   * [Managing Role Policies](role-management-sops/sop-role-policy-assignment.md)
-* [Device Management](device-management-sops/)
+* [Device Management](device-management-sops.md)
   * Onboarding new Devices
   * Deactivation of existing Devices
   * Device Lockout and Secret Reset
