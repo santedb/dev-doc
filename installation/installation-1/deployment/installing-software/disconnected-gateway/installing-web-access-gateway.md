@@ -71,7 +71,7 @@ You can use the `santedb-www:latest` Docker container to leverage the SanteDB we
 Once configured you can access the portal by navigating to : http://localhost:9200
 
 {% hint style="warning" %}
-Never expose the SanteDB WWW host container to the internet. If you are running the santedb-www container and wish to expose it to external clients, it is recommended you use SSL termination with either IIS or NGINX. See [securing-the-apis.md](../../../../installation/securing-the-apis.md "mention")
+Never expose the SanteDB WWW host container to the internet. If you are running the santedb-www container and wish to expose it to external clients, it is recommended you use SSL termination with either IIS or NGINX. See [securing-the-apis.md](../../securing-the-apis.md "mention")
 {% endhint %}
 
 ## Configure the Web Access Gateway

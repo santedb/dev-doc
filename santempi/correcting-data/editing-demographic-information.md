@@ -19,7 +19,7 @@ When attempting to edit a master record, users must have the `Establish MDM Reco
 {% endhint %}
 
 {% hint style="info" %}
-The optionality of data in the user interface depends on the national profile for minimum dataset and is enforced using the [app-settings.md](../../installation/installation-1/deployment/software-deployment/disconnected-gateway/app-settings.md "mention")
+The optionality of data in the user interface depends on the national profile for minimum dataset and is enforced using the [app-settings.md](../../installation/installation-1/deployment/installing-software/disconnected-gateway/app-settings.md "mention")
 {% endhint %}
 
 ### Birth Details Tab

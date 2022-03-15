@@ -8,7 +8,7 @@ This will require obtaining an SSL certificate, installing the certificate into 
 * `certmgr` on Mono (Linux or Mac)
 * SSL Termination (for REST APIs only)
 
-Securing the HL7v2 interfaces is documented in [SanteDB HL7v2 Implementation](../../developers/service-apis/administration-management-interface-ami/santedb-hl7v2-implementation.md#tls-+-llp-sllp) and is not covered here.
+Securing the HL7v2 interfaces is documented in [SanteDB HL7v2 Implementation](../../../developers/service-apis/administration-management-interface-ami/santedb-hl7v2-implementation.md#tls-+-llp-sllp) and is not covered here.
 
 ## Securing iCDR and dCDR Directly
 
@@ -18,20 +18,20 @@ If installing SanteDB on Microsoft Windows, you should obtain a security certifi
 
 1.  Press (WIN)+R and type `mmc`&#x20;
 
-    ``![](<../../.gitbook/assets/image (424) (1) (1) (1) (1) (1).png>)``
+    ``![](<../../../.gitbook/assets/image (424) (1) (1) (1) (1) (1).png>)``
 2.  Use File -> Add/Remove Snap-In and select Certificates
 
-    ![](<../../.gitbook/assets/image (426) (1) (1) (1) (1) (1) (1).png>)
+    ![](<../../../.gitbook/assets/image (426) (1) (1) (1) (1) (1) (1).png>)
 3.  Select the Computer Account and ensure the local server is the target
 
-    ![](<../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+    ![](<../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 4.  Import your certificate and private key (which you generated to get the certificate) into the Personal store. When completed you should see the certificate with a key indicator
 
-    ![](<../../.gitbook/assets/image (421) (1) (1) (1) (1) (1) (1) (1).png>)
+    ![](<../../../.gitbook/assets/image (421) (1) (1) (1) (1) (1) (1) (1).png>)
 
 
 
-Once this is complete, you should use the [SanteDB Configuration Tool Certificate Binding](../../operations/server-administration/configuration-tool/messaging-settings/#certificate-binding) to bind the certificate to the service and endpoint.
+Once this is complete, you should use the [SanteDB Configuration Tool Certificate Binding](../../../operations/server-administration/configuration-tool/messaging-settings/#certificate-binding) to bind the certificate to the service and endpoint.
 
 #### Securing dCDR Installations
 
@@ -39,19 +39,13 @@ You can also secure dCDR instances, however the process is a manual one. First, 
 
 1.  Obtain the certificate thumbprint information from the certificate details:
 
-    ![](<../../.gitbook/assets/image (422) (1) (1) (1) (1) (1) (1).png>)
+    ![](<../../../.gitbook/assets/image (422) (1) (1) (1) (1) (1) (1).png>)
 2. In an elevated command prompt, bind the dCDR HTTP listener port to the certificate via `netsh` for example: `netsh http add sslcert ipport=0.0.0.0:9200 appid={A97FB5DE-7627-401C-8E70-5B96C1A0073B} certhash=<hash-of-your-cert>`
 3. If your dCDR instance is running as a less privileged account (other than `LOCAL SERVICE`) then you will need to reserve the URL: `netsh http add urlacl url=http://+:9200 user=<user-of-service>`
 4. In an elevated text editor (like notepad) open `%systemroot%\SysWOW64\config\systemprofile\AppData\Roaming\santedb-www\default\SanteDB.config`
 5. You should edit the `RestConfigurationSection` and bind each of the service ports from `http://127.0.0.1:9200` to `https://127.0.0.1:9200`&#x20;
 6. Save the configuration file
 7. Restart the SanteDBWWW service
-
-### Linux and MacOS Servers
-
-{% hint style="info" %}
-This section is being written. Check back soon!
-{% endhint %}
 
 ## Using NGINX Reverse Proxy
 

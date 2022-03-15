@@ -8,9 +8,9 @@ It is recommended that readers review the [Broken link](broken-reference "mentio
 
 ## Installation for Development&#x20;
 
-When installing SanteDB in a development environment, we recommend[docker-containers](installation-1/deployment/software-deployment/santedb-server/installation-using-appliances/docker-containers/ "mention")for your iCDR instance and then [installing-the-dcdr-sdk.md](installation-1/deployment/software-deployment/disconnected-gateway/installing-the-dcdr-sdk.md "mention").
+When installing SanteDB in a development environment, we recommend[docker-containers](installation-1/deployment/installing-software/santedb-server/installation-using-appliances/docker-containers/ "mention")for your iCDR instance and then [installing-the-dcdr-sdk.md](installation-1/deployment/installing-software/disconnected-gateway/installing-the-dcdr-sdk.md "mention").
 
-You can then clone the start code and follow the [getting-started.md](../developers/extending-santesuite/extending-santedb/applets/getting-started.md "mention") article to start developing SanteDB applications!
+You can then [clone the starter code project](https://github.com/santedb/applet-starter) and follow the [getting-started.md](../developers/extending-santesuite/extending-santedb/applets/getting-started.md "mention") article to start developing SanteDB applications!
 
 ## Production Deployments
 
@@ -32,8 +32,8 @@ The SanteDB has collected a high-level guide to the deployment of the SanteDB se
 [installation](installation/)
 {% endcontent-ref %}
 
-{% content-ref url="installation/securing-the-apis.md" %}
-[securing-the-apis.md](installation/securing-the-apis.md)
+{% content-ref url="installation-1/deployment/securing-the-apis.md" %}
+[securing-the-apis.md](installation-1/deployment/securing-the-apis.md)
 {% endcontent-ref %}
 
 {% content-ref url="../santedb/demonstration-environment.md" %}

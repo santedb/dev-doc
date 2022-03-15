@@ -1,4 +1,4 @@
-# Developing a Business Architecture
+# Develop a Business Architecture
 
 SanteDB, SanteIMS and SanteMPI are interoperable software solutions for managing clinical data. While a software solution is a means to implement business use cases, it is not the end in itself. Typically the software implements or realizes business processes.&#x20;
 
@@ -11,12 +11,6 @@ It is important, therefore, to develop a business architecture which describes t
 {% hint style="info" %}
 Implementers of SanteDB, SanteMPI or SanteIMS are encouraged to follow practices established by their own project management office (PMO) and local country patterns. This article serves as general guidance to the contents/structure of the business level architecture.
 {% endhint %}
-
-## Documenting Requirements
-
-
-
-## Establishing Use Cases
 
 
 

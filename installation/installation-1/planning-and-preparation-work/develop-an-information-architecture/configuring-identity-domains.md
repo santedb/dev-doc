@@ -1,4 +1,4 @@
-# Documenting Identifiers
+# Identity Environment
 
 The primary duty of a centralized CDR (and more specifically an MPI) is to maintain records from various sources of information. Identity of that information (patient identity, place identity, event identity, etc.) within a health enterprise (a hospital, province or state, country, etc.) is of paramount importance.&#x20;
 
@@ -12,7 +12,7 @@ Furthermore, the governing of those identities should also be considered. For ex
 SanteDB provides built-in control of identity domains, however, as this topic is quite important to the functioning of an MPI relevant topics are reproduced here.
 {% endhint %}
 
-## Surveying Identifiers
+## Surveying Identity
 
 It is important in any SanteDB deployment (especially for SanteMPI) to perform a survey of identifiers which are used in the context in which the solution will be deployed.&#x20;
 
@@ -29,7 +29,7 @@ Implementers should note:
   * Is it normal for the identifier to be readily available?
   * Is it culturally acceptable (or legally acceptable) to use this identifier? (for example: disclosure of Social Security Number to a pharmacist)
 
-## Planning Identity Domains
+## Operationalizing Identity Domains
 
 SanteDB (and by extension SanteMPI) supports a variety of standards, each of which use different labels to identify an identity domain. For example, in FHIR an identity may appear as:
 
@@ -67,7 +67,7 @@ Since these all need to be unique, it is a good practice that your scheme for th
 
 An identity domain worksheet has been created and shared below. This worksheet contains instructions and example data which should assist implementers in the organization of their identity domain planning work.
 
-{% file src="../.gitbook/assets/SanteMPI Identity Domain Worksheet.xlsx" %}
+{% file src="../../../../.gitbook/assets/SanteMPI Identity Domain Worksheet.xlsx" %}
 
 To use the spreadsheet:
 

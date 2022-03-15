@@ -18,7 +18,7 @@ Identify the reason why SanteDB or a SanteDB solution is needed in the context, 
 1. What problems are being solved?
 2. Why do we need to solve them?
 3. What are the timelines in which a solution should/needs to be found?
-4. What are the [deployment-models.md](../../deployment-models.md "mention") which apply to the project?
+4. What are the [deployment-models.md](../../santedb/deployment-models.md "mention") which apply to the project?
 
 It is useful to prepare a vision statement for the overall deployment of SanteDB project. This vision statement is a short (1 - 2 sentences) statement which encapsulates the project and can be referenced as a guiding raison d'être as the project progresses.&#x20;
 

@@ -1,4 +1,4 @@
-# Deployment Models
+# Solution Architecture
 
 There are a variety of ways in which SanteDB can be deployed within your architecture. You can use any of the SanteDB technologies to fill any one of a number of logical roles within your broader e-health strategy.
 
@@ -14,7 +14,7 @@ In this deployment, the iCDR interface can be interacted with directly (as shown
 
 This model is most effectively used when leveraging SanteDB within a single organization, or within a single site (like a hospital). You can also leverage this solution over the internet, however it is recommended laying the iCDR infrastructure behind an application firewall or integration services.&#x20;
 
-![SanteDB Operating as an Interoperable Repository/Registry](<.gitbook/assets/image (144).png>)
+![SanteDB Operating as an Interoperable Repository/Registry](<../.gitbook/assets/image (144).png>)
 
 Examples of third party applications which may integrate with the iCDR engine may include:
 
@@ -32,7 +32,7 @@ In this deployment pattern SanteDB's iCDR is bundled with a web portal solution 
 
 This solution is most useful when you have robust internet infrastructure and users can easily access internet based resources.
 
-![](<.gitbook/assets/image (146).png>)
+![](<../.gitbook/assets/image (146).png>)
 
 ## Disconnected / Offline Patterns
 
@@ -44,13 +44,13 @@ In this deployment pattern, SanteDB acts as a disconnected integrator and CDR fo
 
 These clinic systems may require no additional software updates, since the dCDR behaves like a remote endpoint using any one of the standards supported (HL7 v2, HL7 FHIR, etc.). Additionally, the dCDR will execute any business rules which have been configured from the central server while offline. The connection to the iCDR is not necessary to support the operation of the solution.
 
-![](<.gitbook/assets/image (145).png>)
+![](<../.gitbook/assets/image (145).png>)
 
 ### Disconnected Clinical Portal
 
 In this deployment, clinic users leverage the dCDR applications to directly interact with the iCDR interface in an online/offline manner, using the end-user portal written in the SanteDB UI framework.&#x20;
 
-![](<.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (148).png>)
 
 The software / portal use in this environment can be:
 
@@ -65,3 +65,13 @@ The software / portal use in this environment can be:
 * Users connecting using the Android application whereby they may operate in a clinic environment (Wi-Fi against the dCDR) or in the field (offline from the clinic's dCDR). This is a chained synchronization deployment pattern whereby the Android/Windows/Linux app synchronizes against a clinic dCDR, which in turn, synchronizes against the master.&#x20;
   * Larger clinic/hospitals where WI-FI may drop in areas of the clinic
   * Clinics which perform outreach programmes in the community
+
+## Related Topics
+
+{% content-ref url="architecture.md" %}
+[architecture.md](architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="../installation/installation/" %}
+[installation](../installation/installation/)
+{% endcontent-ref %}

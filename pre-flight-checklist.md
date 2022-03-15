@@ -8,3 +8,6 @@ This page provides a convenient pre-flight checklist to ensure that you have suf
   * [ ] Leadership (Ministry of Health, Hospital Administrators, etc.)
   * [ ] Implementation Partners (NGOs, Vendors, etc.)
   * [ ] End-User Groups
+* [ ] [Current State Analysis / Environment Scan Complete](installation/installation-1/information-gathering-and-analysis.md#perform-environmental-scan)
+  * [ ] Understand which systems collect patient identity
+  * [ ] Understand/Document workflows or business processes in use&#x20;

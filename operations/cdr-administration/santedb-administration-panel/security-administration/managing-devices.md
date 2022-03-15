@@ -24,7 +24,7 @@ When locking or deleting a device account - no users or applications running on 
 
 ### Device Self-Enrolment
 
-The SanteDB dCDR service onboarding process well self-enrol the dCDR device with the central iCDR server (see: [installing-disconnected-gateway.md](../../../../installation/installation-1/deployment/software-deployment/disconnected-gateway/installing-disconnected-gateway.md "mention"), [installing-web-access-gateway.md](../../../../installation/installation-1/deployment/software-deployment/disconnected-gateway/installing-web-access-gateway.md "mention")).&#x20;
+The SanteDB dCDR service onboarding process well self-enrol the dCDR device with the central iCDR server (see: [installing-disconnected-gateway.md](../../../../installation/installation-1/deployment/installing-software/disconnected-gateway/installing-disconnected-gateway.md "mention"), [installing-web-access-gateway.md](../../../../installation/installation-1/deployment/installing-software/disconnected-gateway/installing-web-access-gateway.md "mention")).&#x20;
 
 These enrolments can be disabled from the central iCDR device administration panel. When a dCDR device account is disabled, all synchronization and login activity from the web or disconnected gateway device are restricted.
 

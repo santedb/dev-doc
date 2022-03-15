@@ -96,3 +96,25 @@ user.list parms - Lists users in the SanteDB instance
  -u                 The username of the user
 ```
 
+## Topics
+
+{% content-ref url="user-administration.md" %}
+[user-administration.md](user-administration.md)
+{% endcontent-ref %}
+
+{% content-ref url="group-role-management.md" %}
+[group-role-management.md](group-role-management.md)
+{% endcontent-ref %}
+
+{% content-ref url="policy-administration.md" %}
+[policy-administration.md](policy-administration.md)
+{% endcontent-ref %}
+
+{% content-ref url="untitled.md" %}
+[untitled.md](untitled.md)
+{% endcontent-ref %}
+
+{% content-ref url="application-administration.md" %}
+[application-administration.md](application-administration.md)
+{% endcontent-ref %}
+
