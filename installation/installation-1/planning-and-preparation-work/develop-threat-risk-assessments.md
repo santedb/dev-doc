@@ -10,6 +10,12 @@ TRAs should be completed for new or significantly modified information systems a
 
 Each jurisdiction will have a unique security threat landscape and may have specific requirements for TRAs, but we have provided a sample TRA template here that should at least help to start the security conversation in your project.
 
+As always, before making use of any of our resources, please read and accept our disclaimer:
+
+{% content-ref url="../../../readme/disclaimer.md" %}
+[disclaimer.md](../../../readme/disclaimer.md)
+{% endcontent-ref %}
+
 {% file src="../../../.gitbook/assets/ThreatRiskAssessment_Template.docx" %}
 Threat Risk Assessment&#x20;
 {% endfile %}

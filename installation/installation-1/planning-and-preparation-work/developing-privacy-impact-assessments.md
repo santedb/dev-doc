@@ -10,11 +10,13 @@ PIAs allow institutions to identify and mitigate risks as early and as completel
 
 Each jurisdiction will have a unique privacy landscape and may have specific requirements for PIAs, but we have provided a sample PIA guide and template here that should at least help to start the privacy conversation in your project.
 
-As always, before making use of any of our resources, please read and accept our disclaimer:
+Disclaimers for SanteSuite Inc.
 
-{% content-ref url="../../../readme/disclaimer.md" %}
-[disclaimer.md](../../../readme/disclaimer.md)
-{% endcontent-ref %}
+All the information on this website is published in good faith and for general information purpose only. SanteSuite Inc. does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website and/or in related documents is strictly at your own risk. SanteSuite Inc. will not be liable for any losses and/or damages in connection with the use of the content.
+
+Consent
+
+By using our website and/or content, you hereby consent to our disclaimer and agree to its terms.
 
 {% file src="../../../.gitbook/assets/PrivacyImpactAssessment-Template.docx" %}
 Privacy Impact Assessment Template
