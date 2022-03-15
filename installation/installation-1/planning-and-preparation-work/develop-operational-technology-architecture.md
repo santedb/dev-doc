@@ -11,8 +11,9 @@ The documentation prepared for the operational architecture should aim to:
 * Describe the disaster recovery options, backup requirements, and security environment (remote access requirements, etc.)
 * Enumerate the IP addresses, host names, and network infrastructure of where components of the SanteDB software is operating
 * Describe the business continuity plans&#x20;
-* Describe how the SanteDB infrastructure integrates with other local systems (network addresses, data formats, type of data, etc.)
-* Describe specific data configurations, concept sets, extensions, locations, etc. found in the country deployment.
+* Describe how the SanteDB infrastructure interfaces with other local systems (peer network addresses, data formats, type of data, etc.)
+* Describe specific data configurations, concept sets, extensions, locations, etc. found in the country deployment
+* Document SanteDB server configuration settings.
 
 ### Summarize Software Environment
 
@@ -23,7 +24,7 @@ The operational documentation should keep discussion of software components and 
 Consider, for example, the software architecture for the Demoland example. \
 
 
-![](<../../../.gitbook/assets/image (432).png>)
+![Demoland Operational System Architecture](<../../../.gitbook/assets/image (432).png>)
 
 You will note that the software summary is concerned about the overall deployment of the software components onto various server infrastructure, and illustrating how data is shared and flows between these components.
 
@@ -31,25 +32,25 @@ The operational architecture of your SanteDB deployment will be highly variable,
 
 ### Describe the Physical Environment
 
-The operational architecture should describe the operational environment on which the SanteDB software solution will be running. It is convenient to just claim "we're running SaaS", but system administrators will need detailed descriptions of the physical environment.&#x20;
+The operational architecture should describe the operational environment on which the SanteDB software solution will be running. Regardless if the system is hosted in an on-premise data centre, as a managed service, in cloud or as Software-as-a-Service (SaaS), system administrators will still require detailed descriptions of the physical environment in order to manage the system.&#x20;
 
-This description should include a server deployment diagram (see below for an example), or if using cloud services, how those services are deployed. If the solution is deployed in clinics with special software or hardware, those deployments should also be documented. The goal is the clearly illustrate how the software is deployed so the operators can maintain the system.
+The system description should include a server deployment diagram (see below for an example), or if using cloud services, how those services are deployed. If the solution is deployed in clinics with special software or hardware, those deployments should also be documented. The goal is the clearly illustrate how the software is deployed so the operators can maintain the system.
 
-![](<../../../.gitbook/assets/image (450).png>)
+![Demoland Production Server Environment](<../../../.gitbook/assets/image (450).png>)
 
 Additionally, any hardware specifications or network specifications should be clearly enumerated in the operational documentation. This includes:
 
 * The brand name of any equipment being used (example: Lenovo ThinkServer ST550) - this helps maintainers understand how to get support for the hardware.
 * The configuration of the equipment including any options which were configured (example: 2x Intel Xeon Silver 4220 , 128 GB RAM, 1 PCIe nVME Boot Drive, 2x GBe NIC, etc.). This helps maintainers understand the scope and size of the deployment, as well as providing a concrete list of parts which can (or need) to be reordered in case of failure.
-* The software environment of the physical equipment such as any operating systems, SIEM or APM software, antivirus configuration, etc. This helps maintainers understand the third party software in use in the operational deployment.
+* The software environment of the physical equipment such as any operating systems, Security Information and Event Management (SIEM) or Application Performance Management (APM) software, antivirus configuration, etc. This helps maintainers understand the third party software in use in the operational deployment.
 
 {% hint style="info" %}
-The documentation samples refer to POSE and VOSE which is the Microsoft Licensing nomenclature for Physical Operating System Environment and Virtual Operating System Environment respectively.&#x20;
+SanteSuite documentation examples refer to POSE and VOSE, which is the Microsoft Licensing nomenclature for Physical Operating System Environment and Virtual Operating System Environment respectively.&#x20;
 {% endhint %}
 
 #### Sizing a Server Environment
 
-The sizing of your physical environment will depend heavily on a variety of factors such as the use of the SanteDB product, whether offline mode is leveraged, how many users and systems are connecting to the system, etc.
+The sizing of your physical environment will depend heavily on a variety of factors such as the type of use of the SanteDB product, whether offline mode is leveraged, how many users and systems are connecting to the system, etc.
 
 As a general rule, when deploying SanteDB on a physical environment the iCDR components can be computed as:
 
@@ -66,12 +67,12 @@ Additional hints for sizing a physical environment:
 * Buy two of everything instead of one physical server, buy two smaller ones - this is beneficial because:
   * It provides load balancing opportunities
   * It provides a failover environment when the hardware fails
-* Always purchase SSD or NVMe based storage for your database servers
+* Always purchase SSD or NVMe based storage for your database servers (as opposed to spinning/spindle disk types)
 * Always run your storage in a redundant mode (i.e. run in RAID1, RAID1+0, RAID5+0 or RAID6)
 * Where possible use PostgreSQL streaming replication on the primary CDR database to balance queries and writes
-* Where possible use a Storage Area Network with lots of IOPS for throughput
+* Where possible use a Storage Area Network with the highest possible Input/Output Operations (IOPS) ratings for throughput
   * If using a SAN ensure the storage network is on a different NIC than other network traffic
-  * A SAN allows hypervisors to ship VMs between hosts to balance load or to provide rapid failover (using VMotion)
+  * A SAN allows hypervisors to move Virtual Machines (VMs) between hosts to balance load or to provide rapid failover (using technologies such as VMotion)
 * Always buy spare parts (disks, RAM, network cards, etc.) matching the configuration of the hardware in the original equipment (this provides quick replacement for failed hardware)
 
 ### Describe the Network Environment
@@ -80,8 +81,8 @@ Your operational documentation should describe the networking environment used i
 
 * IP addresses and host names of each POSE and VOSE in use in your deployment
 * All ports which are opened on the operating system firewalls (if any) including their port number, protocol and type of data flowing through the port (including if they are secured or not)
-* How load balancers, SSL termination, or application firewalls should be configured to handle traffic (example: external host `https://mpi.gov.demoland.com:8443` is routed to `http://mpi-prod:8080`)
-* Any remote access ports or requirements which are opened. This could include SSH access points, Microsoft Remote Desktop, VNC, or even VPN settings which will be used to access the console or host operating systems.
+* How load balancers, SSL termination, or application firewalls are to be configured to handle traffic (example: external host `https://mpi.gov.demoland.com:8443` is routed to `http://mpi-prod:8080`) Tip: offloading encryption to a dedicated endpoint can free application server resources -- for more information see [https://www.nginx.com/blog/nginx-ssl/](https://www.nginx.com/blog/nginx-ssl/)&#x20;
+* Any remote access ports which are opened for system administration. This could include SSH access points, Microsoft Remote Desktop, VNC, or even VPN settings which will be used to access the console or host operating systems.
 
 ### Describe Service Availability Requirements
 
@@ -89,8 +90,8 @@ SanteDB often acts as an integration point for many different systems and often 
 
 It is fact of life that servers fail, networks are unreachable, or other any other combination of issues can arise. The operational architecture should at least identify how this will impact business users. For each component in your deployment, the availability section should describe:
 
-* The observed impact of an outage of the particular component (for example: what happens when the database server is offline)
-* Mitigations that can be taken to recover or prevent the outage condition
+* The observed impact of an outage of the particular component (for example: how does the system behave when the database server is offline?)
+* Mitigations that can be taken to prevent or recover from the outage condition
 * Descriptions of what the business impact of a component being absent would have on users (example: If the one of the SanteMPI host servers is unavailable, what impact would it have on users? What options are there to continue doing business?)
 
 ### Describe Service Contacts and Responsibilities
@@ -101,12 +102,14 @@ Large deployments often involve a large number of staff, companies, agencies and
 * What are the hours of operation (or expected availability) of each partner?
 * What are the escalation procedures and tiers for supporting the deployment?
 
+In general, we recommend using information technology service management frameworks and best practices published by organizations such as ITIL, ITSM and COBIT to establish a Service Desk process and supporting tools for the ongoing support of the end-users of your solution.  &#x20;
+
 ### Describe Business Continuity Procedures
 
-When an issue is detected and impacts business users, they will often need to continue doing their work (even though the software is unavailable). Your operational architecture document should include a business continuity plan. The continuity plan should identify:
+When an issue is detected that impacts business users, they will often need to continue doing their work (even though the software is unavailable). Your operational architecture document should include a business continuity plan. The continuity plan should identify:
 
-* What should users do when the system is unavailable? (go back to paper? replace devices? change sites? etc.)
-* How should users report their issues when they experience an outage? (Is there a helpdesk? A bug tracker? etc.)
+* What should users do when the system is unavailable? (use a paper based process? replace devices? change sites to a backup installation? etc.)
+* How should users report their issues when they experience an outage? (Is there a helpdesk? A bug tracker? A support line to call? etc.)
 * What are the RPO, RTO and MTO values for the deployment? (see below)
 * What are the procedures (for each component) to recover from a failure condition?
 
@@ -114,19 +117,19 @@ When an issue is detected and impacts business users, they will often need to co
 
 * Recovery Time Objective (RTO) – The maximum amount of time that could be tolerated between unexpected failure and the resumption of normal service. (i.e. How long can clinics operate without the system?). RTO dictates the goal for recovering the service operation.
 * Recovery Point Objective (RPO) – The maximum period of time which data might be lost if service unexpectedly fails. (i.e. How far back can you fail without being a catastrophic loss to business?). RPO usually informs the frequency of your backups and impacts the cost of your backup infrastructure.
-* Maximum Tolerable Outage (MTO) – The maximum amount of time that the business can tolerate complete cessation of the project during normal business days before it becomes impossible to continue doing work.
+* Maximum Tolerable Outage (MTO) – The maximum amount of time that the business can tolerate complete outage of the system during normal business days before it becomes impossible to continue doing work.
 
 ### Describe Update Procedures
 
-Software is a living product and evolves over time and it is important to ensure that operating systems, clinical systems, antivirus software, firewalls, etc. are all updated to ensure that the latest security and features are present in the environment.
+Software is a living product and evolves over time and it is important to ensure that operating systems, clinical systems, antivirus software, firewalls, etc. are regularly updated to ensure that the latest security and features are present in the environment.
 
-Typically updates require organizational planning to ensure that maintenance windows do not overlap with business operations, and that any special processes (like backups, snapshots, service stop/start, etc.) are done in a particular order.
+Typically, updates require organizational planning to ensure that maintenance windows do not overlap with business operations, and that any special processes (like backups, snapshots, service stop/start, upgrades, etc.) are done in a particular order.
 
 The operational architecture should describe all of these impacts on the environment, as well as any special procedures that must be followed. For example:
 
 > Prior to updating the SanteDB dCDR software in clinics, ensure:
 >
-> * The OpenMRS server is shut down and users logged out.
+> * Any OpenMRS servers are shut down and users logged out.
 > * The SanteDB dCDR synchronization center indicates no conflicts and no remaining upload data (in the outbox)
 > * The backup job is run to produce a recent copy of data in the dCDR
 >
@@ -136,15 +139,17 @@ The operational architecture should describe all of these impacts on the environ
 
 Your operational architecture document should describe the security environment which is being used in your deployment. This should include:
 
-* When are new devices or applications integrated into the SanteDB infrastructure? What approvals are required and/or sign offs?
-* When are new users added to the SanteDB infrastructure? What groups are they assigned to? What control do they have over the solution and hardware?
+* How are new devices or applications integrated into the SanteDB infrastructure? What approvals are required and/or sign offs?
+* How are new users added to the SanteDB infrastructure? What groups are they assigned to? What access controls do they have over the solution and hardware?
 * What firewalls are in place and/or configured?
-* How is data encrypted by integrated software solutions in transit between systems and at rest? (example: How are the HL7v2 messages encrypted between a Hospital Information System and the SanteDB iCDR?)
-* How are systems authenticated? What are the policies in the deployment for password and account expiration?
+* How is data encrypted in transit between systems and at rest, including via intermediaries? (example: How are the HL7v2 messages encrypted between a Hospital Information System and the SanteDB iCDR?)
+* How are systems and users authenticated? What are the policies in the deployment for password and account expiration?
 * What are the custom policies applied or configured in the operational environment?
 
 ## Resources
 
-The SanteDB team has prepared a template which may be helpful for organizing your Operational Architecture. The document contains instructions and a limited example of content for Demoland to get writers started in authoring operational architectures.
+The SanteDB team has prepared a template which may be helpful for organizing your Operational Architecture. The document contains instructions and a limited example of content for Demoland to get writers started in authoring operational architectures.&#x20;
+
+As always, please refer to the [Disclaimer](../../../readme/disclaimer.md).&#x20;
 
 {% file src="../../../.gitbook/assets/Operational Architecture Template.docx" %}
