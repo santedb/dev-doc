@@ -4,6 +4,15 @@ The rollout phase of your project occurs after the deployment has been completed
 
 The implementation of even a transparent data sharing project (like SanteMPI) can represent a shift in the thinking for users who previously may have not had to worry about sharing, privacy and security of data in their context.&#x20;
 
+## Pre-Flight Checklist
+
+* [ ] [SanteDB Deployment Completed](deployment/)
+  * [ ] Physical & Virtual Environment Installed & Documented
+  * [ ] iCDR Environment (SanteMPI, SanteDB, etc.) installed
+  * [ ] [Relevant Installation Qualification Completed](deployment/installing-software/santedb-server/installation-qualification/)
+  * [ ] [Services Properly Tuned & Configured](../installation/santedb-server/production-installation-notes.md)
+  * [ ] APIs Secured&#x20;
+
 ## Establish a Help / Support Desk
 
 No software environment is perfect. When deploying large scale systems many users will encounter issues which need to be documented and resolved in a coherent manner. For example:
