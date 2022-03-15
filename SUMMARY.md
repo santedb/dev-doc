@@ -1,6 +1,7 @@
 # Table of contents
 
 * [SanteSuite Help Portal](README.md)
+  * [Disclaimer](readme/disclaimer.md)
 
 ## Product Overview
 
