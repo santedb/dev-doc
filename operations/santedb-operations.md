@@ -64,6 +64,6 @@ The [standard-operating-procedures](standard-operating-procedures/ "mention") to
 [application-management-sops.md](standard-operating-procedures/application-management-sops.md)
 {% endcontent-ref %}
 
-{% content-ref url="standard-operating-procedures/trading-partner-sops.md" %}
-[trading-partner-sops.md](standard-operating-procedures/trading-partner-sops.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

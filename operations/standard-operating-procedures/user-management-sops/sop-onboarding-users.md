@@ -1,4 +1,4 @@
-# Onboarding Users
+# SOP: Onboarding Users
 
 ## Summary
 
@@ -29,6 +29,7 @@ This standard operating procedure (SOP) should be used when an implementing juri
   * [ ] The user's telephone number (where they can be contacted for OTP and auditing/compliance reasons)
   * [ ] The user's e-mail address (where they can be contacted for OTP and auditing/compliance reasons)
 * [ ] Determine a unique user name for the new user, in the format `familyNamefirstInitial` (for example: Bob Smith becomes `smithb` , subsequent Bob Smiths become `smithb1`, `smithb2`, etc.)
+* [ ] Your user account has the **Create Identity** policy granted
 
 ### Procedures / Tasks
 

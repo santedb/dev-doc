@@ -30,5 +30,3 @@ Standard operating procedures included in this section include
   * Editing a Record of Truth
   * Investigating a Candidate Match
   * Searching by Patient Demographics
-  *
-

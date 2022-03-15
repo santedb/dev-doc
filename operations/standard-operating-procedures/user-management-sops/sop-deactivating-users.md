@@ -1,4 +1,4 @@
-# Deactivating Users
+# SOP: Deactivating Users
 
 ## Summary
 
@@ -20,6 +20,7 @@ This standard operating procedure intends to guide system administrators through
   * [ ] Notice of employment change or duty change
 * [ ] The e-mail address for the user account in question has been notified of the deactivation (or pending deactivation)
 * [ ] The administrator has collected the username (system login name) of the user to be deactivated.
+* [ ] Your user account has the **Alter Identity** policy granted
 
 ### Procedures / Tasks
 

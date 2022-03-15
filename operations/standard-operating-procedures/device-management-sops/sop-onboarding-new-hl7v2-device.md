@@ -18,6 +18,7 @@ This procedure follows the correct procedures to follow when onboarding a new HL
   * [ ] Device has the latest operating system installed
   * [ ] Device has its local firewall enabled and configured
   * [ ] Device has antivirus software and anti-malware software installed
+  * [ ] Latest patches for OpenMRS 1.9.x installed
 * [ ] Ensure device name selected complies with the device naming conventions in the operational architecture documentation developed.
 * [ ] Ensure that a most responsible person and/or facility has been documented for the device
 * [ ] Ensure the users of the OpenMRS instance have received proper instructions on care and use of the device:

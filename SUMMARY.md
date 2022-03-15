@@ -280,7 +280,6 @@
     * [SOP: Onboarding new HL7v2 Device](operations/standard-operating-procedures/device-management-sops/sop-onboarding-new-hl7v2-device.md)
     * [SOP: Onboarding new dCDR Device](operations/standard-operating-procedures/device-management-sops/sop-onboarding-new-dcdr-device.md)
   * [Application Management SOPs](operations/standard-operating-procedures/application-management-sops.md)
-  * [Trading Partner SOPs](operations/standard-operating-procedures/trading-partner-sops.md)
   * [Standard Operating Procedure Template](operations/standard-operating-procedures/standard-operating-procedure-template.md)
 
 ## User Guides & Training
