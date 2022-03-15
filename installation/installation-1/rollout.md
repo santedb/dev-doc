@@ -1,8 +1,8 @@
 # Rollout
 
-The rollout phase of your project occurs after the deployment has been completed. Typically a rollout will involve context specific activities (for the clinical domain, the deployment pattern, etc.).&#x20;
+The rollout phase of your project occurs after the deployment has been completed. The rollout phase expands the user base of your installation from the pilot-scale operation to the full-scale operation. Typically the rollout phase will involve context-specific activities for the users in the clinical domain and will depend somewhat on the deployment pattern of the solution.&#x20;
 
-The implementation of even a transparent data sharing project (like SanteMPI) can represent a shift in the thinking for users who previously may have not had to worry about sharing, privacy and security of data in their context.&#x20;
+The implementation of a data sharing project like SanteMPI may require a shift in thinking for users who previously may have not had to worry about data sharing outside of their normal clinic, and awareness of privacy and security of data in their context becomes very important during this phase.&#x20;
 
 ## Pre-Flight Checklist
 
