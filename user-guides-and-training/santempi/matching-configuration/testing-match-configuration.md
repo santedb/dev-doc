@@ -40,7 +40,7 @@ The hints and analysis panel provides (currently, basic) feedback on your config
 
 The test results panel show the individual records which were evaluated (up to 100 of them) against the input record. This includes basic demographics information about the match pair, the score assigned from evaluation and the classification.
 
-![](<../../../.gitbook/assets/image (456) (1).png>)
+![](<../../../.gitbook/assets/image (456) (1) (1).png>)
 
 Users may select the **view** option to see a detailed report of the attributes which were considered and the values which were compared as well as the computed score of the current configuration compared with other configurations).
 

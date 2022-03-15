@@ -10,8 +10,7 @@
     * [SanteDB Solutions](santedb/santedb-solutions.md)
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
-  * [Privacy & Security - SanteGuard](santeguard/introduction.md)
-    * [SanteGuard Patient Insights](santeguard/santeguard-patient-insights.md)
+  * [Privacy & Security - SanteGuard](product-overview/santesuite-products/introduction.md)
 
 ## Architecture <a href="#santedb" id="santedb"></a>
 
@@ -309,6 +308,7 @@
     * [Testing Match Configuration](user-guides-and-training/santempi/matching-configuration/testing-match-configuration.md)
     * [Match Configuration XML Definition](user-guides-and-training/santempi/matching-configuration/match-configuration-xml-definition.md)
   * [SanteMPI Dashboard](user-guides-and-training/santempi/santempi-dashboard.md)
+* [SanteGuard](user-guides-and-training/santeguard.md)
 
 ## Developers
 

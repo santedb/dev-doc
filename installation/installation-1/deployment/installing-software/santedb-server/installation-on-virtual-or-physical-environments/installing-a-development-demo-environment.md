@@ -122,7 +122,7 @@ When first configuring SanteDB iCDR server on a Windows environment you will nee
 
 Selecting the PostgreSQL provider will expose the connection parameters for PostgreSQL. See [#postgresql-configuration](../../../../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#postgresql-configuration "mention") for more information on these settings.
 
-![](<../../../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1) (1).png>)
 
 #### Firebird Configuration
 
@@ -134,7 +134,7 @@ Selecting the Firebird provider will expose the connection parameter for Firebir
 
 If you're running multiple instances of SanteDB on the same server, you will need to install the software in different file locations. When configuring the iCDR on the Windows host you can then set an instance name to isolate the Windows Services and event logs.
 
-![](<../../../../../../.gitbook/assets/image (418) (1) (1) (1).png>)
+![](<../../../../../../.gitbook/assets/image (418) (1) (1) (1) (1).png>)
 
 #### Configuration Template
 

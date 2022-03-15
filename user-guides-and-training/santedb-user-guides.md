@@ -9,3 +9,8 @@ SanteDB solutions provide their own client and administrative environments for t
 {% content-ref url="santempi/" %}
 [santempi](santempi/)
 {% endcontent-ref %}
+
+{% content-ref url="santeguard.md" %}
+[santeguard.md](santeguard.md)
+{% endcontent-ref %}
+

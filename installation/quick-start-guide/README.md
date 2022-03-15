@@ -173,7 +173,7 @@ You can customize the manner in which the SanteMPI user interface behaves by set
 
 &#x20;
 
-![](<../../.gitbook/assets/image (418) (1) (1).png>)
+![](<../../.gitbook/assets/image (418) (1) (1) (1).png>)
 
 ### Wait for Refresh
 

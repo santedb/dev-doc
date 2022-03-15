@@ -8,7 +8,7 @@ For example, if two clinics have sent records which have been linked together by
 
 Within the tool's [.](./ "mention") **** tab you will see both locals listed.
 
-![](<../../../../.gitbook/assets/image (428).png>)
+![](<../../../../.gitbook/assets/image (428) (1).png>)
 
 Whenever an administrator uses the administrative panel to edit this record, it does not alter the data within the record, rather it establishes a record of truth. In the CDR this type of data can be thought of as:
 

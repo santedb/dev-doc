@@ -44,7 +44,7 @@ Users can click on the `Advanced Search >` link on the search screen to open the
 The advanced search provides discrete inputs for the base identification which is provided in the Master Patient Index. \
 
 
-![](<../../.gitbook/assets/image (428) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1).png>)
 
 After entering the filter details for the patient search, pressing the search button will yield results.
 

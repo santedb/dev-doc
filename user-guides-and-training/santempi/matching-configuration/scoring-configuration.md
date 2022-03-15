@@ -108,7 +108,7 @@ If the state is selected from a drop down or a known codification of states, the
 
 The related data flow here, would be expressed as:
 
-![](<../../../.gitbook/assets/image (428) (1).png>)
+![](<../../../.gitbook/assets/image (428) (1) (1).png>)
 
 Tracing data from the example above, the evaluation of the attribute is now performed as:
 

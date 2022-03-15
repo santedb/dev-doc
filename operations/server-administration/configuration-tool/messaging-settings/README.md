@@ -50,7 +50,7 @@ Editing the endpoints will present a collection editor where administrators can 
 
 When you set an endpoint address to scheme `https://` the certificate binding configuration is enabled.
 
-![](<../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 When binding an endpoint to HTTPS you must ensure:
 

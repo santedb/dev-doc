@@ -66,7 +66,7 @@ During the scoring phase, the records from the blocking stage are compared to th
 
 Overall, the process of comparing a blocked record (named `$block`) with the `$input` record is:
 
-![](<../.gitbook/assets/image (428) (1) (1).png>)
+![](<../.gitbook/assets/image (428) (1) (1) (1).png>)
 
 1. The scoring attribute may declare that it depends on another attribute being scored (i.e. don't evaluate the `city` attribute unless `state` attribute has passed. If the dependent attribute was not scored as a positive (match) then the current attribute is assigned the whenNull() score.
 2. The attribute path on the configuration is read from both `$block` and `$input`.&#x20;

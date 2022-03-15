@@ -31,3 +31,18 @@ Administration Management – SantéMPI provides extensive administrative user i
 Mobile Registration App – A mobile registration app has been developed to support search and registration of patients in real time in the field, offering the ability to issue a health identifier to a new client. This app also leverages QR codes as temporary health identifier for easy generation and recognition of a health identifier.
 
 SanteMPI bundles together existing functions of SanteDB (MDM, Matching, Entity Linking, etc.) and exposes additional logic on top of those interfaces to ensure it is a PIX/PDQ compliant product. SanteMPI works in both the SanteDB iCDR and the dCDR, that's right, you can run a mini-MPI offline in a local clinic between systems.
+
+## Related Topics
+
+{% content-ref url="../../santedb/architecture.md" %}
+[architecture.md](../../santedb/architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../installation/installation/" %}
+[installation](../../installation/installation/)
+{% endcontent-ref %}
+
+{% content-ref url="../../user-guides-and-training/santempi/" %}
+[santempi](../../user-guides-and-training/santempi/)
+{% endcontent-ref %}
+
