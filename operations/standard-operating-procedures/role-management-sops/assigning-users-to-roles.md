@@ -15,6 +15,7 @@ This procedure is intended to provide readers with a standardized procedure for 
 
 * [ ] Validate the username of the account to be removed or added to the group
 * [ ] Familiarize yourself with the [security-architecture.md](../../../santedb/security-architecture.md "mention")
+* [ ] Your account has the **Alter Identities & Alter Roles** security permissions
 
 ### Procedures / Tasks
 

@@ -12,15 +12,15 @@ Standard operating procedures included in this section include
   * [Onboarding new Users](user-management-sops/sop-onboarding-users.md)
   * [Deactivating existing Users](user-management-sops/sop-deactivating-users.md)
   * [User Lockout and Password Reset](user-management-sops/sop-user-lockout.md)
-* Role Management
+* [Role Management](role-management-sops/)
   * [Creating New Roles](role-management-sops/creating-new-roles.md)
   * [Managing Role Membership](role-management-sops/assigning-users-to-roles.md)
-  * Managing Role Policies
-* Device Management
+  * [Managing Role Policies](role-management-sops/sop-role-policy-assignment.md)
+* [Device Management](device-management-sops/)
   * Onboarding new Devices
   * Deactivation of existing Devices
   * Device Lockout and Secret Reset
-* Application Management
+* [Application Management](application-management-sops.md)
   * Onboarding new Applications
   * Deactivation of existing Applications
   * Application Lockout and Secret Reset

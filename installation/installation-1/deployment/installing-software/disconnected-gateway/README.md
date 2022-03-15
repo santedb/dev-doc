@@ -19,4 +19,3 @@ In order to install SanteDB's dCG platform you'll need one of the following envi
 
 These specifications represent the minimum specifications on which SanteDB's dCG will operate. Depending on the size of the clinic in which the software will be serving (number of connected tablets, computers, software applications, etc.) these will change.
 
-###

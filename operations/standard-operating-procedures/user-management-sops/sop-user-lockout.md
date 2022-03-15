@@ -1,4 +1,4 @@
-# User Lockout
+# SOP: User Lockout
 
 ## Summary
 
@@ -18,6 +18,7 @@ This standard operating procedure is intended to illustrate the process for unlo
   * [ ] Validate the user's demographic information with the information on the CDR user administration screen.
 * [ ] Document (in the helpdesk or other shared note area) that the user account has been locked, the length of lock and the number of invalid logins
 * [ ] Note the user which has locked the account (`SYSTEM` indicates invalid access attempt lock or other system security lock, whereas a user name indicates another administrative user has locked the account)
+* [ ] Your account has the **Alter Identity** permission
 
 ### Procedures / Tasks
 

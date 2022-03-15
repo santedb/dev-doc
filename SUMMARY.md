@@ -276,18 +276,18 @@
     * [SOP: Role Policy Assignment](operations/standard-operating-procedures/role-management-sops/sop-role-policy-assignment.md)
     * [SOP: Assigning Users to Roles](operations/standard-operating-procedures/role-management-sops/assigning-users-to-roles.md)
     * [SOP: Creating New Roles](operations/standard-operating-procedures/role-management-sops/creating-new-roles.md)
-  * [Device Management SOPs](operations/standard-operating-procedures/device-management-sops.md)
+  * [Device Management SOPs](operations/standard-operating-procedures/device-management-sops/README.md)
+    * [SOP: Onboarding new dCDR Device](operations/standard-operating-procedures/device-management-sops/sop-onboarding-new-dcdr-device.md)
   * [Application Management SOPs](operations/standard-operating-procedures/application-management-sops.md)
   * [Trading Partner SOPs](operations/standard-operating-procedures/trading-partner-sops.md)
   * [Standard Operating Procedure Template](operations/standard-operating-procedures/standard-operating-procedure-template.md)
 
 ## User Guides & Training
 
-* [Getting Started with the MPI](user-guides-and-training/getting-started-with-the-mpi.md)
 * [SanteDB User Guides](user-guides-and-training/santedb-user-guides.md)
 * [Common User Interface Elements](user-guides-and-training/common-user-interface-elements.md)
 * [SanteMPI](user-guides-and-training/santempi/README.md)
-  * [SanteMPI Dashboard](user-guides-and-training/santempi/santempi-dashboard.md)
+  * [Getting Started with the MPI](user-guides-and-training/santempi/getting-started-with-the-mpi.md)
   * [SanteMPI Matches](user-guides-and-training/santempi/santempi-matches.md)
   * [SanteMPI Searching](user-guides-and-training/santempi/santempi-searching.md)
   * [SanteMPI Power Search](user-guides-and-training/santempi/santempi-power-search.md)
@@ -308,6 +308,7 @@
     * [Classification Configuration](user-guides-and-training/santempi/matching-configuration/classification-configuration.md)
     * [Testing Match Configuration](user-guides-and-training/santempi/matching-configuration/testing-match-configuration.md)
     * [Match Configuration XML Definition](user-guides-and-training/santempi/matching-configuration/match-configuration-xml-definition.md)
+  * [SanteMPI Dashboard](user-guides-and-training/santempi/santempi-dashboard.md)
 
 ## Developers
 

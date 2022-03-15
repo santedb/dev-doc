@@ -56,8 +56,8 @@ The [standard-operating-procedures](standard-operating-procedures/ "mention") to
 [role-management-sops](standard-operating-procedures/role-management-sops/)
 {% endcontent-ref %}
 
-{% content-ref url="standard-operating-procedures/device-management-sops.md" %}
-[device-management-sops.md](standard-operating-procedures/device-management-sops.md)
+{% content-ref url="standard-operating-procedures/device-management-sops/" %}
+[device-management-sops](standard-operating-procedures/device-management-sops/)
 {% endcontent-ref %}
 
 {% content-ref url="standard-operating-procedures/application-management-sops.md" %}

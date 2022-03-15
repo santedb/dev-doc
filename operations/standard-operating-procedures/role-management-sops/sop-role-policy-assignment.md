@@ -18,6 +18,7 @@ Whenever a role needs to be granted (or denied) permission to perform an action,
 * [ ] Ensure that the policy has been created&#x20;
 * [ ] Ensure that the administrative design matches the desired policy assignment (i.e. should this really be an assignment to an existing group, or should it be an assignment to a new group)&#x20;
 * [ ] Familiarize yourself with the [security-architecture.md](../../../santedb/security-architecture.md "mention")
+* [ ] Your account has the **Alter Role** security permission
 
 ### Procedures / Tasks
 
