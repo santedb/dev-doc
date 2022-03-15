@@ -39,19 +39,24 @@ This procedure should be used when a new classification of user within the Sante
 
 ## Summary Information
 
-**Current Status:** \
-**Reviewed By:**
+**Current Status:** Sample\
+**Reviewed By:** SanteSuite Team
 
 ### **Revision History**
 
-| Author | Date | Changes |
-| ------ | ---- | ------- |
-|        |      |         |
-|        |      |         |
-|        |      |         |
+| Author                   | Date       | Changes         |
+| ------------------------ | ---------- | --------------- |
+| Justin Fyfe (SanteSuite) | 2022-03-15 | Initial Version |
+|                          |            |                 |
+|                          |            |                 |
 
 ### See Also
 
-_Provide links to other documents or SOPs or related resources_
+{% content-ref url="../../cdr-administration/santedb-administration-panel/security-administration/managing-groups.md" %}
+[managing-groups.md](../../cdr-administration/santedb-administration-panel/security-administration/managing-groups.md)
+{% endcontent-ref %}
 
-*
+{% content-ref url="../../server-administration/santedb-icdr-admin-console/group-role-management.md" %}
+[group-role-management.md](../../server-administration/santedb-icdr-admin-console/group-role-management.md)
+{% endcontent-ref %}
+

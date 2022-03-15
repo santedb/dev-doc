@@ -36,5 +36,8 @@ The deployment phase of SanteDB involves the installation, configuration, valida
 
 See: [deployment](../installation-1/deployment/ "mention") for detailed information about deploying SanteDB software.
 
-## &#x20;Rollout
+## Rollout
 
+The rollout phase of SanteDB involves the actual onboarding of users and using the solution in an operational context.&#x20;
+
+See: [rollout.md](../installation-1/rollout.md "mention") for more information about activities related to rollout of the SanteDB solution.

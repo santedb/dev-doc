@@ -1,6 +1,6 @@
 # New ADO (nuado)
 
-The persistence layer in SanteDB is largely a maintenance of the OpenIZ persistence layer which itself was originally written in 2009 for the MEDIC CR and MEDIC SHR. This data layer has over a decade of modifications, changes, etc. to it from a variety of authors during its lifetime.
+The persistence layer in SanteDB is largely a maintenance codebase of the OpenIZ persistence layer, which itself was originally written in 2009 for the MEDIC CR and MEDIC SHR. This data layer has over a decade of modifications, changes, etc. to it from a variety of authors during its lifetime.
 
 This has lead to several performance issues with SanteDB, namely:
 
@@ -26,7 +26,7 @@ The new persistence layer modifies all the data access classes to use the `IQuer
 The code below illustrates the modification of the SQL statement sent to the database by using the result set methods.
 
 ```
-var dpe = ApplicationServiceContext.GetService<IRepositoryService<Patient>();
+var dpe = ApplicationServiceContext.GetService<IRepositoryService<Patient>>();
 
 // Prepares the statement SELECT * FROM pat_tbl....
 var patients = dpe.Find(o=>o.DateOfBirth <= DateTime.Now);

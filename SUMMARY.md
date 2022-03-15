@@ -204,6 +204,7 @@
     * [Post Deployment Tuning](installation/installation/santedb-server/production-installation-notes.md)
     * [Installation Qualification](installation/installation-1/deployment/installing-software/santedb-server/installation-qualification/README.md)
     * [Securing SanteDB APIs](installation/installation-1/deployment/securing-the-apis.md)
+  * [Rollout](installation/installation-1/rollout.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
 
 ## Operations
@@ -271,6 +272,7 @@
     * [SOP: User Lockout](operations/standard-operating-procedures/user-management-sops/sop-user-lockout.md)
     * [SOP: Deactivating Users](operations/standard-operating-procedures/user-management-sops/sop-deactivating-users.md)
   * [Role Management SOPs](operations/standard-operating-procedures/role-management-sops/README.md)
+    * [Assigning Users to Roles](operations/standard-operating-procedures/role-management-sops/assigning-users-to-roles.md)
     * [Creating New Roles](operations/standard-operating-procedures/role-management-sops/creating-new-roles.md)
   * [Device Management SOPs](operations/standard-operating-procedures/device-management-sops.md)
   * [Application Management SOPs](operations/standard-operating-procedures/application-management-sops.md)
