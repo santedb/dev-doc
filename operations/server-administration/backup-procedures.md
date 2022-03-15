@@ -1,25 +1,28 @@
 # Backup Procedures
 
-The SanteDB iCDR and dCDR installed at clinics should be regularly backed up. As part of the [develop-operational-technology-architecture.md](../../installation/installation-1/planning-and-preparation-work/develop-operational-technology-architecture.md "mention") activities performed during the planning phase of your deployment, there should have been an effort to establish a maximum tolerable outage (MTO).&#x20;
+The SanteDB iCDR and dCDR installed at clinics should be regularly backed up. As part of the [develop-operational-technology-architecture.md](../../installation/installation-1/planning-and-preparation-work/develop-operational-technology-architecture.md "mention") activities performed during the planning phase of your deployment, there should have been an effort to establish a Maximum Tolerable Outage (MTO).&#x20;
 
-The MTO is the point at which it is tolerable to lose data. This value will dictate the frequency of your backup schedule. For example, if operating SanteMPI in a context where real-time registration is performed without any re-queueing mechanisms from the client, then that would mean data corruption of the SanteMPI server would result in lost data.&#x20;
+The MTO is the point at which it is tolerable to lose data. The obvious desire would be to never lose data, however the amount of additional equipment to provide that amount of system redundancy is almost always cost-prohibitive.&#x20;
 
-If a backup is taken every 24 hours, then the maximum amount of data that would be lost in the case of a catastrophic failure would be the number of hours to restore backup since the previous day's backup.
+This value of the MTO will dictate the frequency of your backup schedule. For example, if operating SanteMPI in a context where real-time registration is performed without any re-queueing mechanisms from the client, then that would mean data corruption of the SanteMPI server would result in lost data.&#x20;
+
+If a backup is taken every 24 hours, then the maximum amount of data that would be lost in the case of a catastrophic failure would be the number of hours that have elapsed since the previous day's backup was completed.
 
 ## Backup of iCDR
 
-The method of backup for the iCDR will depend on the requirements of your environment. The process of your backup and the architecture of the backup will depend on your recovery and storage space available. &#x20;
+The method of backup for the iCDR will depend on the requirements of your environment. The process of your backup and the system architecture of the backup design will depend somewhat on your recovery and storage space available. &#x20;
 
 Whatever the method of backup, it is generally a good idea to keep backups of the iCDR in several places:
 
-* **Online Backups:** A hot backup should be available to the host environment and usually keeps one or two of the most recent backups (imagine on a daily schedule that the previous 2 days of backups are kept). Examples include:
+* **Online "Hot" Backups:** A "hot" backup should be online and accessible by the host environment and usually provides one or two of the most recent backups (imagine on a daily schedule that the previous 2 days of backups are kept). Example approaches include using:
   * Local Network Attached Storage (NAS) devices
   * Local Attached Disk devices
   * Cloud Based Storage options
-* **Cold / Offline Backups:** These are backups which are available only after media (such as tapes, removable media, etc.) is retrieved and restored. These are typically used for longer term backups and mitigate against malware, randomware, or viruses which may lay dormant (i.e. a copy of the backup prior to infection can be restored). Examples include:
+* **Offline "Cold" Backups:** These are backups which are available only after media (such as tapes, removable media, etc.) is retrieved and restored. These are typically used for longer term backups and mitigate against active malware, randomware, or viruses which may lay dormant (i.e. a copy of the backup prior to infection can be restored). Examples include:
   * Tape / Removable Mass Media Storage
+  * Disconnected disk devices
 
-Additionally, backups should be kept in a location which is onsite (rapidly available for restoration) as well as copies kept offsite (in case of natural disaster or loss of the data center).
+Additionally, copies of backups should be kept both in a location which is onsite (rapidly available for restoration) as well as offsite (in case of natural disaster, loss or damage to the data center).
 
 | Backup Technology      | Benefits                                                                                                                                                                                                                                                               | Risks                                                                                                                                                                                                                              |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,23 +35,23 @@ Additionally, backups should be kept in a location which is onsite (rapidly avai
 
 The 3-2-1 backup strategy is highly recommended for use in production deployments of the SanteDB iCDR. This strategy is illustrated below.
 
-* **3 Copies of Data:** At least 3 copies of the data should be available. At minimum the active or primary copy and at least 2 other copies.
+* **3 Copies of Data:** At least 3 copies of the data should be available. At minimum the active (or primary copy) and at least 2 other copies should be available.
 * **2 Different Media:** The copies of data should be stored on at least 2 different media or hosts. For example, the data exists on production server **and** a NAS **and** a cloud provider.
-* **1 Copy Offsite:** At least one copy of the backup should always be kept offsite on a cloud provider or physical media.
+* **1 Copy Offsite:** At least one copy of the backup should always be kept offsite on a cloud provider or remote physical media.
 
 There are many ways to realize this backup strategy using various technologies, to illustrate this, the SanteDB community server backup strategy is shown below:
 
 &#x20;
 
-![](<../../.gitbook/assets/image (432) (1).png>)
+![Basic 3-2-1 Backup Strategy](<../../.gitbook/assets/image (432) (1).png>)
 
 The backup on the community server:
 
 1. Every night at 12:00 AM Microsoft Windows Server Backup performs an incremental backup of the most recent copy of all Virtual Disks from the physical host to a FreeNAS server using UNC Windows Shares and Volume Shadow Copy (live backups) to a fast pool (using SSD based disks in a RAID Z1). Snapshots of the fast pool are taken every 24 H and only 2 snapshots are kept on fast storage (2 days of backups). This pool is used for immediate restore if issues are detected within 24 H (**2 copies of the data now exist**)
 2. The FreeNAS server then, every morning at 6:00 AM replicates the fast pool on SSD disks to a slow pool using 7200 RPM disks in RAID Z1. Snapshots of this pool are taken every 48 H and 30 snapshots are kept (30 days of backups). This pool is used for restore of infrastructure in the event data corruption occurred prior to a 48 H window (**3 copies of the data now exist**)
-3. The FreeNAS server then, copies older snapshots from the slow storage pool to a physically attached USB hard drive. This hard drive has no limitation (beyond storage space) on snapshot lifetimes. When full, the drive is unmounted and stored at a different location.
+3. The FreeNAS server then, copies older snapshots from the slow storage pool to a physically attached USB hard drive. This hard drive has no limitation (beyond storage space) on snapshot lifetimes. After 30 days or earlier (when full), the drive is unmounted and stored at a different location.
 
-The community server is not mission critical and therefore an MTO of months is permissible. If your deployment has a MTO value which indicates that only 24 H or 48 H of missing data is tolerable, then a different strategy may be employed.&#x20;
+The community server is not mission critical and therefore an MTO of months is permissible. If your deployment has a MTO value which indicates that only 24 H or 48 H of missing data is tolerable, then a different strategy should be employed.&#x20;
 
 ### Virtual Disk Backups
 
@@ -57,7 +60,7 @@ The simplest way to backup your SanteDB VM is to back up the virtual hard drives
 * Restoration of the iCDR is relatively straightforward (i.e. restore the VM)
 * No need for special backup software or processes (many operating systems and hypervisors provide methods of copying VMs)
 * &#x20;Incremental backups can be taken using snapshotting technology (for example, Hyper-V can perform live, in-flight backups using Volume Shadow Copies).
-* No need to fiddle with database restore procedures.
+* No need to understand complex database restore procedures.
 
 There are disadvantages to virtual disk backups, these can include:
 
@@ -67,7 +70,7 @@ There are disadvantages to virtual disk backups, these can include:
 
 ### Data Dump Backups
 
-It is also possible to leverage database backups for your backup strategy of the iCDR. Implementers may use the build-in `pg_dump` backup method ([see tutorial here](https://snapshooter.com/learn/postgresql/pg\_dump\_pg\_restore)) or they may use a third party software tools ([see Bacula as an example](https://www.bacula.org/postgresql-backup-software/)).
+It is also possible to leverage database backups for your backup strategy of the iCDR. Implementers may use the built-in `pg_dump` backup method ([see tutorial here](https://snapshooter.com/learn/postgresql/pg\_dump\_pg\_restore)) or they may use a third party software tools ([see Bacula as an example](https://www.bacula.org/postgresql-backup-software/)).
 
 The advantages of performing data dump backups are:
 

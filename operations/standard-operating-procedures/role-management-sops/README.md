@@ -1,11 +1,11 @@
 # Role Management SOPs
 
-{% content-ref url="sop-creating-new-roles.md" %}
-[sop-creating-new-roles.md](sop-creating-new-roles.md)
+{% content-ref url="creating-new-roles.md" %}
+[creating-new-roles.md](creating-new-roles.md)
 {% endcontent-ref %}
 
-{% content-ref url="sop-assigning-users-to-roles.md" %}
-[sop-assigning-users-to-roles.md](sop-assigning-users-to-roles.md)
+{% content-ref url="assigning-users-to-roles.md" %}
+[assigning-users-to-roles.md](assigning-users-to-roles.md)
 {% endcontent-ref %}
 
 {% content-ref url="sop-role-policy-assignment.md" %}
