@@ -2,14 +2,14 @@
 
 Operationalizing SanteDB (or any SanteDB solution) is not a trivial task, any large scale deployment of the solution requires planning and coordination between stakeholders. Implementers are encouraged to use formal methodologies for enterprise projects and architecture (examples: [CMMI](https://www.pmi.org/learning/library/cmmi-bring-pm-process-next-level-7538) , [TOGAF](https://www.opengroup.org/togaf), [DAD](https://www.pmi.org/disciplined-agile/process/introduction-to-dad), etc.) to manage the operationalization of the MPI projects.
 
-Because operationalization is specific to the problem domain, local jurisdiction, size requirements, etc. SanteDB provides high level tasks for deployment as a reference guide, and provides operational templates for use by implementers which may be of use.
+Because operationalization is specific to the problem domain, local jurisdiction, size requirements, and other factors, the SanteDB wiki merely provides high level activities for operationalization as a reference. Any of the articles or templates found on the SanteSuite wiki are expected to be adapted by implementers, or to provide SanteDB specific considerations within their existing project management methodology.
 
 The overall operationalization of a SanteDB service can be illustrated with 5 major activities.
 
 ![](<../../.gitbook/assets/image (438).png>)
 
 {% hint style="info" %}
-This guide is intended to supplement internal project management procedures and activities of the implementing organization. The sections focus primarily on the SanteDB specific aspects of project planning and analysis.
+This guide is intended to supplement internal project management procedures and activities of the implementing organization. The sections focus primarily on the SanteDB specific aspects of project planning and analysis. Templates, worksheets, and other toolkits are provided on an as-is basis and should be adapted for appropriateness in the local context into which SanteDB is being deployed.
 {% endhint %}
 
 ## Information Gathering
