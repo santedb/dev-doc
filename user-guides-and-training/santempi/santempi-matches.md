@@ -68,7 +68,7 @@ The `Matched Entities` tab shows summary information of the two patients which h
 * To view next of kin records on both A and B records.
 * &#x20;To view additional identification information (from third party plugins) which would otherwise be rendered in the patient dashboard.
 
-The A/B compare tab takes the contents of the [the-patient-dashboard.md](../../santempi/the-patient-dashboard.md "mention") (which is a common place for plugins to extend the UI) and shows the panels as an A/B comparison.
+The A/B compare tab takes the contents of the [the-patient-dashboard](the-patient-dashboard/ "mention") (which is a common place for plugins to extend the UI) and shows the panels as an A/B comparison.
 
 ![](<../../.gitbook/assets/image (439) (1) (1) (1) (1) (1).png>)
 
@@ -101,8 +101,8 @@ The detail table illustrates the calculated (and weighted) score of each object 
 
 ## Related Topics
 
-{% content-ref url="the-patient-dashboard/master-data-management-tab.md" %}
-[master-data-management-tab.md](the-patient-dashboard/master-data-management-tab.md)
+{% content-ref url="the-patient-dashboard/master-data-management-tab/" %}
+[master-data-management-tab](the-patient-dashboard/master-data-management-tab/)
 {% endcontent-ref %}
 
 {% content-ref url="matching-configuration/" %}

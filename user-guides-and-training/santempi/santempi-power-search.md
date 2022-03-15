@@ -73,10 +73,10 @@ If the SanteDB instance is collecting data other than patient registrations (suc
 
 ## Related Topics
 
-{% content-ref url="../../santempi/santempi-searching.md" %}
-[santempi-searching.md](../../santempi/santempi-searching.md)
+{% content-ref url="santempi-searching.md" %}
+[santempi-searching.md](santempi-searching.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../santempi/the-patient-dashboard.md" %}
-[the-patient-dashboard.md](../../santempi/the-patient-dashboard.md)
+{% content-ref url="the-patient-dashboard/" %}
+[the-patient-dashboard](the-patient-dashboard/)
 {% endcontent-ref %}
