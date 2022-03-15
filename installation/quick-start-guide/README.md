@@ -202,7 +202,7 @@ You can scroll to `Policies` and add the following policies to the group:
 * Unrestricted MDM
 * Unrestricted Clinical Data
 
-![](<../../.gitbook/assets/image (446) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (446) (1) (1) (1) (1) (1) (1).png>)
 
 After adding these policies you should observe the policies in the master list of permissions.
 

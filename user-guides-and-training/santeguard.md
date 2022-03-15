@@ -12,7 +12,7 @@ The tabs which are discussed in this wiki page may not be present on your copy o
 
 The user activity tab is added to the [managing-user-accounts.md](../operations/cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md "mention")detail page in the administrative panel and is designed to show activities that the currently viewed user has undertaken in the context of the SanteDB deployment.
 
-![](<../.gitbook/assets/image (428).png>)
+![](<../.gitbook/assets/image (446).png>)
 
 The columns in this view are similar to those in the [#audit-list](../operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md#audit-list "mention")view.&#x20;
 

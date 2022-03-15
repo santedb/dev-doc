@@ -117,7 +117,7 @@ The SanteDB dCDR software packages like the Windows Application, Android Applica
 
 Since the SanteDB Web Access Gateway is intended to be used in an environment where it can always communicate with the iCDR server directly, and because it lacks the storage capacity to operate offline, the synchronization mode of the Web Access Gateway should be set to Online Only.
 
-![](<../../../../../.gitbook/assets/image (446) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (446) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Set Log Verbosity
 
