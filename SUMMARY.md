@@ -10,7 +10,7 @@
     * [SanteDB Solutions](santedb/santedb-solutions.md)
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
-  * [Privacy & Security - SanteGuard](product-overview/santesuite-products/introduction.md)
+  * [Privacy & Security - SanteGuard](santeguard/introduction.md)
 
 ## Architecture <a href="#santedb" id="santedb"></a>
 

@@ -19,11 +19,11 @@ SanteGuard is a plugin to SanteDB that integrates a powerful audit trail into th
 
 ## Related Topics
 
-{% content-ref url="../../operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md" %}
-[reviewing-audits.md](../../operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md)
+{% content-ref url="../operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md" %}
+[reviewing-audits.md](../operations/cdr-administration/santedb-administration-panel/security-administration/reviewing-audits.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../user-guides-and-training/santeguard.md" %}
-[santeguard.md](../../user-guides-and-training/santeguard.md)
+{% content-ref url="../user-guides-and-training/santeguard.md" %}
+[santeguard.md](../user-guides-and-training/santeguard.md)
 {% endcontent-ref %}
 
