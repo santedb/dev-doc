@@ -8,10 +8,6 @@ Furthermore, the governing of those identities should also be considered. For ex
 * You may not want to disclose mental health identifiers to a community outreach application (correct disclosure)
 * You don't want facility associated identifiers being mistakenly assigned to patients  (correct usage)
 
-{% hint style="info" %}
-SanteDB provides built-in control of identity domains, however, as this topic is quite important to the functioning of an MPI relevant topics are reproduced here.
-{% endhint %}
-
 ## Surveying Identity
 
 It is important in any SanteDB deployment (especially for SanteMPI) to perform a survey of identifiers which are used in the context in which the solution will be deployed.&#x20;
@@ -74,3 +70,9 @@ To use the spreadsheet:
 1. Enumerate the issuing organizations in the implementation context (organizations, ministries, etc.) and complete the **Issuing Authority** sheet.
 2. Enumerate each of the identification domains which are used in the context to which SanteDB or SanteMPI will be deployed.
 3. Update the cover sheet of your worksheet with relevant metadata about the sheet.
+
+### Unique Health Identifier Assessment Toolkit
+
+The Asian Development Bank (ADB) has prepared a useful unique health identifier assessment toolkit which may be of use in collecting, documenting and enumerating identity within your jurisdiction.&#x20;
+
+See: [Unique Health Identifier Assessment Toolkit from ADB](https://www.adb.org/documents/unique-health-identifier-assessment-toolkit)
