@@ -78,3 +78,9 @@ Engage with relevant stakeholders to perform an environmental scan of the curren
 5. How are users authenticated or identified?&#x20;
 6. What non-technical (business) processes are enforced?&#x20;
 7. Perform Policy / Legislative Scan - Identify, collect, and document the relevant legal statutes, policies, laws, culture norms, etc. which may impact the project.&#x20;
+
+### Unique Health Identifier Assessment Toolkit
+
+The Asian Development Bank (ADB) has prepared a useful unique health identifier assessment toolkit which may be of use in performing an environmental scan of the current identities and policy frameworks in your jurisdiction.
+
+See: [Unique Health Identifier Assessment Toolkit from ADB](https://www.adb.org/documents/unique-health-identifier-assessment-toolkit)

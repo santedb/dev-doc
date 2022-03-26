@@ -71,8 +71,4 @@ To use the spreadsheet:
 2. Enumerate each of the identification domains which are used in the context to which SanteDB or SanteMPI will be deployed.
 3. Update the cover sheet of your worksheet with relevant metadata about the sheet.
 
-### Unique Health Identifier Assessment Toolkit
-
-The Asian Development Bank (ADB) has prepared a useful unique health identifier assessment toolkit which may be of use in collecting, documenting and enumerating identity within your jurisdiction.&#x20;
-
-See: [Unique Health Identifier Assessment Toolkit from ADB](https://www.adb.org/documents/unique-health-identifier-assessment-toolkit)
+###
