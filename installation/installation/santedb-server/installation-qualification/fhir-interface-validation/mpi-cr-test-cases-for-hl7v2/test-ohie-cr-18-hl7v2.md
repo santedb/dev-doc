@@ -8,13 +8,13 @@ description: >-
 
 This test ensures that the receiver is able to merge patient data from an assigning authority (TEST\_A) which has an national identifier (not assigned by central authority as a PID). The demographics data does not match, this is to test that matching is done on explicit identifiers.
 
-#### Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.2 has assigning authority of TEST\_A which can be assigned from TEST\_HARNESS\_A
+Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.2 has assigning authority of TEST\_A which can be assigned from TEST\_HARNESS\_A
 
-#### Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.B has assigning authority of TEST\_A which can be assigned from TEST\_HARNESS\_B
+Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.B has assigning authority of TEST\_A which can be assigned from TEST\_HARNESS\_B
 
-#### Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.9 has assigning authority of NID
+Setup the receiver such that OID 2.16.840.1.113883.3.72.5.9.9 has assigning authority of NID
 
-#### Perform necessary steps to ensure that the receiver is configured to merge patients based on the SSN field (PID-19)
+Perform necessary steps to ensure that the receiver is configured to merge patients based on the SSN field (PID-19)
 
 ## Test Step 1:
 
