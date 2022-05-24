@@ -32,7 +32,7 @@ Import FHIR test cases which are located at santempi/SanteMPI-Test-Cases-soapui-
 
 They can be run as an entire test suite
 
-![](../../../../../../../../.gitbook/assets/EntireTestSuite.jpg)
+![](<../../../../../../../../.gitbook/assets/EntireTestSuite (1).jpg>)
 
 &#x20;or an individual test case
 

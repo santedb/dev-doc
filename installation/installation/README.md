@@ -6,7 +6,7 @@ Because operationalization is specific to the problem domain, local jurisdiction
 
 The overall operationalization of a SanteDB service can be illustrated with 5 major activities.
 
-![](<../../.gitbook/assets/image (438).png>)
+![](<../../.gitbook/assets/image (431).png>)
 
 {% hint style="info" %}
 This guide is intended to supplement internal project management procedures and activities of the implementing organization. The sections focus primarily on the SanteDB specific aspects of project planning and analysis. Templates, worksheets, and other toolkits are provided on an as-is basis and should be adapted for appropriateness in the local context into which SanteDB is being deployed.

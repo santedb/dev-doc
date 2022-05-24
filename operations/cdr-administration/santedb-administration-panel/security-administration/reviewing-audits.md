@@ -94,7 +94,7 @@ The network information section shows information about the network infrastructu
 
 The users and computers section of the audit detail show the information about the actors involved in the event.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (494).png>)
 
 Each actor has four attributes expressed in the table:
 
@@ -149,10 +149,10 @@ Query events will typically append the original query being executed against the
 
 Whenever a policy decision is made, and the CDR needs to de-identify patient data to protect privacy of the patient, a deidentification object will be registered. This contains the identifier of the object which was the target of masking, as well as the policy which resulted in the masking occurring.
 
-![](<../../../../.gitbook/assets/image (436) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (491).png>)
 
 #### Policy Decision
 
 When an access control decision is performed, and a policy violation exception thrown, the SanteDB audit log will carry a copy of the policy outcome object indicating the policy which failed validation and the overall action taken.
 
-![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1) (1) (1).png>)

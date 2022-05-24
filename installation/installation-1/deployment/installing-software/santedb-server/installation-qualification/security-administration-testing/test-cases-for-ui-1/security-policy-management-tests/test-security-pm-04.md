@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button.
 
-![](<../../../../../../../../../.gitbook/assets/1 (10).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (11).jpg>)
 
 2- Fill out all the fields appropriately and for the Name field, use a name with which a policy exists. (for example "Create-Policy-Test").
 
@@ -39,7 +39,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should navigate to the new Create Policy page.
 
-![](<../../../../../../../../../.gitbook/assets/dnld1 (2).jpg>)
+![](<../../../../../../../../../.gitbook/assets/2 (5).jpg>)
 
 2- Should show an error message below Name field indicating that duplicate record detected.
 

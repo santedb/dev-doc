@@ -6,7 +6,7 @@ Whenever your .NET plugin exposes functionality to the iCDR service instance, an
 
 Features are located on the left hand side of the configuration tool, as shown below:
 
-![](<../../../../../../.gitbook/assets/image (401).png>)
+![](<../../../../../../.gitbook/assets/image (398).png>)
 
 Each of these features is discovered by scanning your .NET assembly for implementations of `IFeature` , an `IFeature` defines the following properties:
 

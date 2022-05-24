@@ -38,7 +38,7 @@ SanteSuite allows users to register multiple **Address** objects each with State
 
 4\. By default, the "Home Address" **Address Type** is selected and blank. Enter valid address field values.
 
-![](<../../../../../../../../../.gitbook/assets/image (274).png>)
+![](<../../../../../../../../../.gitbook/assets/image (260).png>)
 
 5\. Click the **Add** button in the bottom-right corner of the **Profile** to start adding a new Address Registration form group.
 

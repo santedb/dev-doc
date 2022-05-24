@@ -31,7 +31,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should navigate to the new Create Policy page.
 
-![](../../../../../../../../../.gitbook/assets/2.jpg)
+![](<../../../../../../../../../.gitbook/assets/dnld1 (1).jpg>)
 
 2-
 

@@ -22,7 +22,7 @@ Applets are the foundation of extending SanteDB. An applet can contain:
 In order to develop SanteDB applets, you'll need a few tools:
 
 * **The SanteDB Software Development Kit** - Contains the necessary tools to debug and package your applet.
-* **An HTML5 + JavaScript Editor -** We recommend [Visual Studio Code](https://code.visualstudio.com), but any editor will do the trick
+* **An HTML5 + JavaScript Editor -** We recommend [Visual Studio Code](https://code.visualstudio.com/), but any editor will do the trick
 * **(Optional) An XML Editor -** An XML editor is highly recommended, especially if you're going to be doing heavy editing of SanteDB's CDSS, BI, DataSet, ViewModel or Subscription services.
 
 ### Getting Started

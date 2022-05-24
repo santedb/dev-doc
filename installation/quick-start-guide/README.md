@@ -123,7 +123,7 @@ You can now configure the web-access gateway, the [Configuring the Web Access Ga
 
 ### Join the Realm
 
-Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:9200) in your web browser. You will be prompted for connection details. For the quick start use:
+Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:9200/) in your web browser. You will be prompted for connection details. For the quick start use:
 
 * Device ID: quick-web
 * Realm: santedb-mpi

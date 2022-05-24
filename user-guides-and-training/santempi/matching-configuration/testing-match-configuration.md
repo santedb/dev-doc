@@ -34,7 +34,7 @@ The hints and analysis panel provides (currently, basic) feedback on your config
 * Excessive records being loaded from the database (i.e. > 10% of the blocked records were discarded or non-matches. Which indicates too many results are being loaded form database)
 * Too restrictive scoring or inappropriate blocking (i.e. many records are blocked but none are matched)
 
-![](<../../../.gitbook/assets/image (437) (1).png>)
+![](<../../../.gitbook/assets/image (446) (1) (1).png>)
 
 ### Match Test Results
 

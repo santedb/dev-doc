@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Edit** button.
 
-![](<../../../../../../../../../.gitbook/assets/18 (2).jpg>)
+![](<../../../../../../../../../.gitbook/assets/18 (1).jpg>)
 
 2- Under the Security Properties tab, click the Device Secret **Reset** button.
 

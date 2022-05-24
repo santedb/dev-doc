@@ -23,7 +23,7 @@ Users can be updated with a Status of Locked (for a maximum amount of time).
 
 1\.  Click the **Lock** button corresponding to a user with a Status of Active to be locked (e.g. "ClinicalStaffUser123").
 
-![](<../../../../../../../../../.gitbook/assets/image (300).png>)
+![](<../../../../../../../../../.gitbook/assets/image (333).png>)
 
 2\. Click the **OK** button on the confirmation modal that appears in the browser.
 

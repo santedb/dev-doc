@@ -24,7 +24,7 @@ New users being created can be assigned multiple primary facilities in the **Pri
 
 1\. Select the **Primary Facility** textbox within the **Demographic Properties** section.
 
-![](<../../../../../../../../../.gitbook/assets/image (243).png>)
+![](<../../../../../../../../../.gitbook/assets/image (285).png>)
 
 2\. Select an existing **Primary Facility** listed in the dropdown (e.g. "ELBONIA" is used in this test).
 

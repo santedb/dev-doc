@@ -6,13 +6,13 @@ This page discusses the manner in which FHIR RelatedPerson resources are handled
 
 The CDR storage model support robust linkages between patients and persons. Some SanteDB services such as the Immunization Management Service (IMS) represent relationships between non-patient persons as a direct relationship between an instance of a Patient entity and a Person entity with a relationship type.&#x20;
 
-![Patient Baby Joe Smith has a mother (MTH) Person Sarah Smith](<../../.gitbook/assets/image (393).png>)
+![Patient Baby Joe Smith has a mother (MTH) Person Sarah Smith](<../../.gitbook/assets/image (390).png>)
 
 This example illustrates a simple non-patient entity (Sarah Smith) is the mother of a Patient (Baby Joe Smith).
 
 Additionally, the CDR also supports the direct linking of patient entities to other patient entities in relationships. The illustration below illustrates a patient entity (Sarah Smith) is the mother of Patient (Baby Joe Smith).
 
-![Patient Baby Joe Smith has a mother (MTH) Patient Sarah Smith](<../../.gitbook/assets/image (392).png>)
+![Patient Baby Joe Smith has a mother (MTH) Patient Sarah Smith](<../../.gitbook/assets/image (391).png>)
 
 This relationship works because in SanteDB a Patient **is a** Person.
 
@@ -213,7 +213,7 @@ And this FHIR message
 
 Will both result in this structure in the database.
 
-![FHIR structure mapped to the RIM](<../../.gitbook/assets/image (390).png>)
+![FHIR structure mapped to the RIM](<../../.gitbook/assets/image (393).png>)
 
 ### Complex Relationships
 
@@ -225,7 +225,7 @@ The HL7 FHIR processor on a read will not reproduce this when a patient is read 
 
 When creating or updating a related person in this manner the following structure is created in the RIM structure.
 
-![](<../../.gitbook/assets/image (391).png>)
+![](<../../.gitbook/assets/image (392).png>)
 
 This structure is also created from the HL7v2 process when an NK1 segment points at a previously registered PID segment. For example, the following HL7v2 structure also creates a similar structure as the FHIR interface.
 

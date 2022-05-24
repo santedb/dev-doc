@@ -27,7 +27,7 @@ When a user's properties are edited, the user's corresponding **Updated By** cor
 
 1\. Click the pencil in the top right-hand corner of **Security Properties** to edit them.&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/image (257).png>)
+![](<../../../../../../../../../.gitbook/assets/image (241).png>)
 
 2\. Follow similar actions/steps from [TEST: SECURITY-UM-06](test-security-um-06.md) to add an additional role.
 

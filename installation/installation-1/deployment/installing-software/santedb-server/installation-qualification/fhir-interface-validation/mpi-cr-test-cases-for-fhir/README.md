@@ -130,44 +130,7 @@ The minimal bundle which is required to process a PMIR message has:
 }
 ```
 
-### PMIR Implementation Notes
-
-Unfortunately some of the specified behaviors in PMIR are not fully compatible with SanteMPI. The SanteDB team will be working with stakeholders to submit change requests to the PMIR solution. The workarounds are listed below:
-
-#### Related Person in the \<link> element
-
-Section 3.93.4.1.2.5 describes a mechanism for linking `Patient` to `RelatedPerson`using the link mechanism on the `Patient` resource. Unfortunately, SanteDB reserves the link and seealso relationship types to distinguish between objects which are equivalent in some way (i.e. Patient>Patient, or Person>Person). When adding mother's or other person's information, it is recommended to use the native FHIR expression for these, namely, the `RelatedPerson` pointing at the `Patient` to which they are related via the `patient/reference` attribute. For example:
-
-```javascript
-{
-    "resourceType": "Bundle",
-    "type": "history",
-    "entry": [
-        {
-            "fullUrl": "Patient/1",
-            "resource": {
-                "resourceType": "Patient",
-                /** Patient Information **/
-            }
-        },
-        {
-            "fullUrl": "RelatedPerson/1",
-            "resource": {
-                "resourceType": "RelatedPerson",
-                "id": "1",
-                "active": true,
-                /** Related Person Points back at Patient in Bundle */
-                "patient": {
-                    "reference": "Patient/1"
-                },
-                /** Related Person Information **/
-            }
-        }
-    ]
-}
-```
-
-#### Master Identity Merge
+### PMIR Implementation Notes (Master Merge)
 
 SanteMPI maintains strict authority over which systems are permitted to perform `MASTER->MASTER` merges. The SanteMPI implementation of PMIR allows callers (such as an EMR, LAB, HIS, etc.) to merge only their own LOCAL records in a `LOCAL->LOCAL` merge using the `replaces` relationship type.&#x20;
 

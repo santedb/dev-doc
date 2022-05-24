@@ -43,7 +43,7 @@ There are many ways to realize this backup strategy using various technologies, 
 
 &#x20;
 
-![Basic 3-2-1 Backup Strategy](<../../.gitbook/assets/image (432) (1).png>)
+![Basic 3-2-1 Backup Strategy](<../../.gitbook/assets/image (435).png>)
 
 The backup on the community server:
 

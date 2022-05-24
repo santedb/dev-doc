@@ -21,7 +21,7 @@ description: >-
 
 1\. Click the **x** on the left side of a **Role Name** tag that has been added to the **Role** textbox.
 
-![](../../../../../../../../../.gitbook/assets/role\_removehover.png)
+![](../../../../../../../../../.gitbook/assets/Role\_RemoveHover.png)
 
 ## Expected Behaviour
 

@@ -43,4 +43,4 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 * Page is redirected to **Administration Panel / Security / Groups / Edit Group** for the new group create successfully.
 
-![](<../../../../../../../../../.gitbook/assets/image (303).png>)
+![](<../../../../../../../../../.gitbook/assets/image (318).png>)

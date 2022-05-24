@@ -12,11 +12,11 @@ It is best practice to keep user accounts as **Human Users** which are using the
 
 The summary screen provides a comprehensive list of all users found in the SanteDB solution. This user list is scoped to the system on which the panel is running (i.e if you're accessing the panel from a disconnected client, these are the local users which can access the dCDR, if you're accessing the panel on an iCDR these are all users).
 
-![](<../../../../.gitbook/assets/image (440) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 You can sort/order the table by any field which has a sort indicator, additionally each row of the user list performs actions on each user on the same row.
 
-![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (469).png>)
 
 * Edit: Opens the detailed user information screen
 * Delete: Indicates that the user account is no longer active (i.e. the employee is fired, moved departments, etc.)
@@ -29,7 +29,7 @@ It is best practice to lock user accounts when you are investigating a security 
 
 When you delete a user they are marked as inactive. You can access these accounts by using the `Show Deleted` option in the user interface. Deleted user accounts provide an option to restore or un-delete the account (as well as edit the information).
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (499).png>)
 
 ## Creating User Accounts
 
@@ -57,7 +57,7 @@ This article explains the mechanics of creating a new user. Please refer to the 
 
 When you use the `Edit` option to view the details of a user, you will be presented with the user information detail screen.&#x20;
 
-![](<../../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (485).png>)
 
 * Security Tab: The security tab is used to edit the core security attributes of the user. This includes:
   * Resetting the user's password

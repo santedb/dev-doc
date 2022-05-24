@@ -15,7 +15,7 @@ When the demographics panel is placed into edit mode, a multi-part form will be 
 {% hint style="success" %}
 When attempting to edit a master record, users must have the `Establish MDM Record Of Truth` policy permission. This state will be indicated with a notice about the establishment of a record of truth.&#x20;
 
-![](<../../../../.gitbook/assets/image (443).png>)
+<img src="../../../../.gitbook/assets/image (433).png" alt="" data-size="original">
 {% endhint %}
 
 {% hint style="info" %}

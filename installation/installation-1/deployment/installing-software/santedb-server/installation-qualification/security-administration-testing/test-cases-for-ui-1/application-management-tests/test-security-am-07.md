@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button
 
-![](<../../../../../../../../../.gitbook/assets/1 (9).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (14).jpg>)
 
 2- Leave Name and Software Name fields blank and click the **Save** button.( Name and Software Name fields are required fields )&#x20;
 
@@ -35,6 +35,6 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should navigate to the new Create Application page.
 
-![](<../../../../../../../../../.gitbook/assets/2 (5).jpg>)
+![](<../../../../../../../../../.gitbook/assets/2 (7).jpg>)
 
 2- Should show an error message below Name field and Software Name field indicating that required field is missing.

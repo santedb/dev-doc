@@ -21,7 +21,7 @@ A **Member** is removable from a group.
 
 &#x20;1\. Click on the **Remove** button on a **Member** to be removed from a **Group/Role** that has been created.
 
-![](<../../../../../../../../../.gitbook/assets/image (361).png>)
+![](<../../../../../../../../../.gitbook/assets/image (356).png>)
 
 2\. Click the **OK** button on the confirmation prompt appearing in the browser.
 

@@ -133,4 +133,4 @@ SanteDB community translations are collected via the SanteDB Pontoon service. Th
 4. Prior to a major release the `i18n` branch is merged into `develop`(all community translations are present)
 5. The build is validated and the `develop` branch is merged into `master` where a new release is packaged.
 
-If you would like to translate the core applets (for the administrative panel, MPI user interfaces, SanteGuard screens, or IMS) you can visit the [SanteDB Community Pontoon Server](https://pontoon.santesuite.net)
+If you would like to translate the core applets (for the administrative panel, MPI user interfaces, SanteGuard screens, or IMS) you can visit the [SanteDB Community Pontoon Server](https://pontoon.santesuite.net/)

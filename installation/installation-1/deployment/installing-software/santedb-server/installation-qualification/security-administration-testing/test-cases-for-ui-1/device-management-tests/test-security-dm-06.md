@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Edit** button.
 
-![](<../../../../../../../../../.gitbook/assets/18 (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/18 (2).jpg>)
 
 2- Choose the to be added policy ( for example: Create Local Users ) from the dropdown list and click the **+** button.
 

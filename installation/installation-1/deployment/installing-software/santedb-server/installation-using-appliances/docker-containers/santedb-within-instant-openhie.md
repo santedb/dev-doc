@@ -111,7 +111,7 @@ You can navigate to http://localhost:9000 and be brought to the login screen.&#x
 
 If you've used the example project, or have used an Importer, you should be able to see santedb channels.&#x20;
 
-![Currently the channels need to be public, in order to access SanteDB](../../../../../../../.gitbook/assets/screen-shot-2021-06-30-at-2.52.26-pm.png)
+![Currently the channels need to be public, in order to access SanteDB](<../../../../../../../.gitbook/assets/Screen Shot 2021-06-30 at 2.52.26 PM.png>)
 
 #### Channels - If creating manually
 
@@ -124,7 +124,7 @@ For r**equest matching** there are two things you need to do
 * enter a URL pattern (in our case **/ami**) - make sure you unclick Auto-add regex delimiters
 * Make the channel public
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-06-30-at-2.58.22-pm.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-06-30 at 2.58.22 PM.png>)
 
 Finally, for **Routes**, add a new route with the following info:
 
@@ -135,7 +135,7 @@ Finally, for **Routes**, add a new route with the following info:
 
 Click set route.&#x20;
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-06-30-at-3.01.40-pm.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-06-30 at 3.01.40 PM.png>)
 
 ####
 
@@ -158,7 +158,7 @@ The above command is specifying to run docker, specifying the package santempi (
 
 The kubernetes deployments will take much longer to build than the docker deployments. Afterwards it will look something like the following image (Note: This might change depending on what packages you're running)
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-08-06-at-9.29.05-am.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-08-06 at 9.29.05 AM.png>)
 
 You can navigate to http://localhost:9000 and be brought to the login screen.&#x20;
 
@@ -185,19 +185,19 @@ kubectl describe pod santedb-66bf68f744-xpsnh
 
 The above command will display the details of this pod. At the top of the JSON blob you can see the IP Address.
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-08-06-at-9.41.35-am.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-08-06 at 9.41.35 AM.png>)
 
 Now you can add the IP Address as the **host** for the route.
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-08-06-at-9.43.35-am.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-08-06 at 9.43.35 AM.png>)
 
 One quick note when manually adding channels, you may need to check to ensure the role has permission to access the channel. You can check by clicking on the **Clients** tab on the left hand side. Check the role you are attempting to use, if you see an X over the santedb channels, you can click the **x** and it will change the permission.
 
 &#x20;
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-08-06-at-3.45.44-pm.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-08-06 at 3.45.44 PM.png>)
 
-![](../../../../../../../.gitbook/assets/screen-shot-2021-08-06-at-3.46.15-pm.png)
+![](<../../../../../../../.gitbook/assets/Screen Shot 2021-08-06 at 3.46.15 PM.png>)
 
 ## Testing, and viewing transactions
 
@@ -231,7 +231,7 @@ We're targeting port 5001 here, as this is one of the ports open in the openhim-
 
 You should see a 200 response. Now, go back to the OpenHIM console. You should see transactions being displayed. It will look similar to the image below:
 
-![Transactions](../../../../../../../.gitbook/assets/screen-shot-2021-06-30-at-3.10.13-pm.png)
+![Transactions](<../../../../../../../.gitbook/assets/Screen Shot 2021-06-30 at 3.10.13 PM.png>)
 
 
 

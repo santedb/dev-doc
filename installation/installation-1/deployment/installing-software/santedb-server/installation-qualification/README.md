@@ -35,7 +35,7 @@ It is recommended that, after [securing-the-apis.md](../../../securing-the-apis.
 
 
 
-* [ ] Perform a network port scan/attach tool to ensure that opened ports and services are minimal (see: [NMAP](https://nmap.org))
+* [ ] Perform a network port scan/attach tool to ensure that opened ports and services are minimal (see: [NMAP](https://nmap.org/))
   * [ ] Ensure that only ports you want opened are open
   * [ ] Ensure that ports that are open are secured.
 

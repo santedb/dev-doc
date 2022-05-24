@@ -53,27 +53,27 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 
 &#x20;   1\. Click the **Create** button to navigate from **Administration Panel / Security / Users / Index** to **Administration Panel / Security / Users / Create User**.
 
-![](../../../../../../../../../.gitbook/assets/test1\_createbutton.png)&#x20;
+<img src="../../../../../../../../../.gitbook/assets/test1_createButton.png" alt="" data-size="original">&#x20;
 
 &#x20;   2\. Enter valid text into the **Core Properties** drop-down form group.
 
-![](../../../../../../../../../.gitbook/assets/test1\_coreproperties.png)
+![](../../../../../../../../../.gitbook/assets/test1\_coreProperties.png)
 
 &#x20;   3\. Enter valid text into the **Security Properties** drop-down form group.
 
-![](../../../../../../../../../.gitbook/assets/test1\_securityproperties.png)
+![](../../../../../../../../../.gitbook/assets/test1\_securityProperties.png)
 
 &#x20;   4\. Enter valid text into the **Demographic Properties** drop-down form group.
 
-![](../../../../../../../../../.gitbook/assets/test1\_demographicproperties.png)
+![](../../../../../../../../../.gitbook/assets/test1\_demographicProperties.png)
 
 &#x20;   5\. Click the **Save** button.
 
-&#x20;   ![](../../../../../../../../../.gitbook/assets/test1\_savebutton.png)&#x20;
+&#x20;   <img src="../../../../../../../../../.gitbook/assets/test1_saveButton (1) (1).png" alt="" data-size="original">&#x20;
 
 ## Expected Behaviour
 
 * Automatically navigate to the **Administration Panel / Security / Users / Index** page.
-* Momentarily display success message in top right corner: ![](../../../../../../../../../.gitbook/assets/user\_successtoast.png)&#x20;
+* Momentarily display success message in top right corner: <img src="../../../../../../../../../.gitbook/assets/user_successtoast.png" alt="" data-size="original">&#x20;
 * New user (**ClinicalStaffUser123**) **** should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
 

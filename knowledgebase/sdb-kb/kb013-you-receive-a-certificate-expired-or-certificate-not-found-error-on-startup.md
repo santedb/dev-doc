@@ -58,7 +58,7 @@
             </serviceCredentials>
         ```
     2. Open a command prompt as a Windows Administrative user.
-    3. Generate a random UUID for your registry entry (you can use [https://www.uuidgenerator.net/](https://www.uuidgenerator.net))
+    3. Generate a random UUID for your registry entry (you can use [https://www.uuidgenerator.net/](https://www.uuidgenerator.net/))
     4.  Run the following command to reserve the SSL certificate substituting **ipport** with the public IP of the machine (or 0.0.0.0 for all IP addresses) and port the service is listening on, substituting **certhash** with the copied **findValue** from step #3.
 
         ```

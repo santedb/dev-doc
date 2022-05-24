@@ -25,7 +25,7 @@ The top banner on the **Administrative Panel / Security / Users / Edit User** pa
 
 1\. Click the **Edit** button for an existing user (e.g. "ClinicalStaffUser123" from [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
-![](<../../../../../../../../../.gitbook/assets/image (267).png>)
+![](<../../../../../../../../../.gitbook/assets/image (275).png>)
 
 ## Expected Behaviour
 

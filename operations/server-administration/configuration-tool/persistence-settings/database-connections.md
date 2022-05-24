@@ -8,11 +8,11 @@ Connection strings are named settings which provide SanteDB with the necessary i
 
 When editing a connection string in an existing configuration file, you will be presented with a list of connection strings which have already been configured:
 
-![](<../../../../.gitbook/assets/image (427) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (500).png>)
 
 In the example above, a user could select a an existing Read/Write connection string which has already been configured or they can create a NEW connection string to, for example, bind the read/write connection string to a read/write primary node.
 
-![](<../../../../.gitbook/assets/image (426) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (498).png>)
 
 ## Connection Types
 
