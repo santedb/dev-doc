@@ -202,7 +202,6 @@
         * [Installing the dCDR SDK](installation/installation-1/deployment/installing-software/disconnected-gateway/installing-the-dcdr-sdk.md)
         * [User Interface App Settings](installation/installation-1/deployment/installing-software/disconnected-gateway/app-settings.md)
     * [Post Deployment Tuning](installation/installation/santedb-server/production-installation-notes.md)
-    *
     * [Securing SanteDB APIs](installation/installation-1/deployment/securing-the-apis.md)
   * [Rollout](installation/installation-1/rollout.md)
 * [Demonstration Environment](santedb/demonstration-environment.md)
@@ -451,6 +450,7 @@
     * [API Responses](developers/santedb-software-publishers/gs1-bms-xml/api-responses.md)
     * [Patching](developers/santedb-software-publishers/gs1-bms-xml/patching.md)
     * [MDM Extensions for HDSI](developers/santedb-software-publishers/gs1-bms-xml/matching-extensions-for-hdsi.md)
+    * [Synchronization API](developers/service-apis/health-data-service-interface-hdsi/synchronization-api.md)
     * [Visual Resource Pointer API](developers/santedb-software-publishers/gs1-bms-xml/digitally-signed-visual-code-api.md)
   * [HL7v2](developers/service-apis/hl7v2.md)
     * [Enabling HL7v2 Interfaces](developers/service-apis/administration-management-interface-ami/enabling-hl7v2-interfaces.md)

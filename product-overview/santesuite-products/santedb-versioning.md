@@ -43,7 +43,7 @@ Starting with SanteDB 2.x, versions are differentiated between a technology prev
 
 CTP releases may, however, contain new features or enhancements which have not been deployed by the SanteDB team in a production context. These releases typically follow on another. For example, the 2.1.x CTP releases are used as the basis for the 2.2.x stable releases.&#x20;
 
-As an example, the New ADO refactor represents a major re-write of the database access layer. When this layer is ready for CTP rollout they will fill the 2.3.x release series. Once the SanteDB team confirms the new versions for performance and stability in a production context (in at least one country) the minor of 2.3.x will be released as 2.4.x , at which time no changes are permitted to the APIs.
+### New Data Layer Version
 
-##
+The SanteDB has performed significant work in refactoring the persistence layer and MDM layer during 2021 and 2022 to improve the manner in which data is loaded and filtered from the underlying datastore. This version on branch `feature/nuado` represents the last version of the 2.x series of the SanteDB platform code prior to the next-gen redesign (version 3.0)&#x20;
 
