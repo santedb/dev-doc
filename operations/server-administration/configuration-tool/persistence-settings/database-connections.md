@@ -41,6 +41,16 @@ When Firebird is selected as the database software, SanteDB will assume you're u
 | password        | If password protecting the database, the password of SYSDBA                |         |
 | initial catalog | The name of the FDB file to connect to or a new database.                  |         |
 
+### SQLite / SQLCipher
+
+SanteDB iCDR version 3.0 and higher supports the configuration of the SQLite and SQLCipher persistence layer. This is ideal for test environments and lightweight deployments.
+
+| Option       | Description                                                                       | Example     |
+| ------------ | --------------------------------------------------------------------------------- | ----------- |
+| data source  | The name of the SQLite database file which should be used for connection          | test.sqlite |
+| password     | If using SQLCipher the password indicates the passkey for the encrypted database. |             |
+| foreign keys | True when the SQLite engine should enforce foreign keys.                          |             |
+
 ## Creating a new Database
 
 You can create a new database from the configuration tool on the database software of your choice by selecting New Database as the database option. You will be prompted to enter the details of the database you're creating:

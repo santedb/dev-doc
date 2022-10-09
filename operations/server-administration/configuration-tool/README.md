@@ -79,3 +79,42 @@ You can disable a feature step by clicking on the checkmark beside it. This inst
 Disabling a configuration task may result in the feature being partially enabled and not operating correctly.&#x20;
 {% endhint %}
 
+## Protected Configurations
+
+Starting with SanteDB 3.0, configuration files can be partially encrypted using a certificate in the machine's store. When configuring SanteDB 3.0, you will be prompted if you wish to encrypt sensitive parts of the configuration file. This will encrypt:
+
+* The connection strings to the SanteDB databases
+* The Security Configuration including any HMAC secrets
+
+When applying a configuration, the configuration tool will prompt the administrator if protection should be enabled:
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Selecting "yes" will prompt for the selection of a security certificate to protect the configuraiton file.
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Ensure that the selected certificate is available to all application hosts which are using the configuration file.
+{% endhint %}
+
+
+
+For an example of the impact of protecting the configuration file, the data persistence configuration section in an unprotected configuration file will expose all connection details:
+
+```xml
+<section xsi:type="DataConfigurationSection">
+    <connectionStrings>
+      <add name="main" value="Data Source=testmpi_pwd.sqlite;Password=Test123" provider="sqlite" />
+    </connectionStrings>
+  </section>
+```
+
+However, in a protected configuration, the contents of this section are encrypted:
+
+```xml
+<section xsi:type="SanteDBProtectedConfigurationSectionWrapper" t="SanteDB.Core.Configuration.Data.DataConfigurationSection, SanteDB.Core.Api, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <c>fhVkQ/wvv299hVNlQBtku9q7Cm2fR8GGk6MoiGqQ2l/xDtWN989oCsWcwJSRSji/8Uwp9Jubzx2yWRq6tdABSjWvopSx0SPN/O4+b3f9UUbuI/NPR1qzAKzFRfJU1Ox8YyACs6wWI7hfgC1M3VsGsyF3X2jzuxiu7CwFxk2U56vujj1OXl9gdA6WX9uc/87gFP7yC9oGmBcBCPl2KHHdE5WODeNutzjRXx+zJYqHPoNIadA/4wyVNKNY0VJ3wG6Lm5FybOmYkvID6g4J7euSCkmgHcOyyq44C2yHc86OjLdxvJP43hqv8id9zUKakomen9xGdj2I5GOgF0W80haQZE2u+7MqKfwC4rAm3aMXwRT4QbOZ9o+KcOCtPX091BHX/gmw+dXNgjkPIEUXL+CKXxZnD6B+VMAF9DQsSKOilN11JYJidn1p1rAJ6SG6ds1MJZzwzScwxsV+cnMXR1WTMVk42D2OaXiDhePnB5vFXIA=</c>
+    <i>xL08UczD2pAZygPQ34CFdQ==</i>
+  </section>
+```
