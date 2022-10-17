@@ -1,6 +1,6 @@
 # Class Concepts
 
-Acts are classified into one of these four types based upon their ClassConcept code. This dictates what type of Act the particular tuple in the database represents. 
+Acts are classified into one of these types based upon their ClassConcept code. This dictates what type of Act the particular tuple in the database represents. 
 
 | Act Class | Code | Description |
 | :--- | :--- | :--- |
