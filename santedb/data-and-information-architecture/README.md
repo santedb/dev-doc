@@ -18,7 +18,7 @@ By realizing the SanteDB conceptual model as these three layers, we observe the 
 
 ## Data Lifecycle
 
-SanteDB iCDR and dCDR never store or or directly with external messaging formats inside of the core components. All communications are transformed between components and their destined system software.&#x20;
+SanteDB iCDR and dCDR never store or interact directly with external messaging formats inside of the core components. All communications are transformed between components and their destined system software.&#x20;
 
 Take, for example, a client which is querying the SanteDB iCDR using HL7 FHIR (the pattern is identical regardless of message format).
 
