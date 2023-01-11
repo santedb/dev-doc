@@ -55,6 +55,7 @@
 
 * [Installation](installation/installation.md)
 * [Releases](installation/installation/releases.md)
+  * [3.0 Releases](installation/releases/3.0-releases.md)
   * [Queenston Release](installation/releases/queenston-release.md)
 * [Quick Start Guide](installation/quick-start-guide/README.md)
   * [Seeding ONC Patient Matching Data](installation/quick-start-guide/seeding-onc-patient-matching-data.md)
