@@ -252,6 +252,7 @@
       * [Dispatcher Queue](operations/cdr-administration/santedb-administration-panel/system-administration/dispatcher-queue.md)
       * [Probes](operations/cdr-administration/santedb-administration-panel/system-administration/probes.md)
     * [Reference Data Administration](operations/cdr-administration/santedb-administration-panel/reference-data-administration/README.md)
+      * [Importing Data](operations/cdr-administration/santedb-administration-panel/reference-data-administration/importing-data.md)
       * [Identity Domain Management](operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
     * [Security Administration](operations/cdr-administration/santedb-administration-panel/security-administration/README.md)
       * [Managing User Accounts](operations/cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md)

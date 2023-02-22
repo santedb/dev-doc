@@ -92,7 +92,7 @@ When applying a configuration, the configuration tool will prompt the administra
 
 Selecting "yes" will prompt for the selection of a security certificate to protect the configuraiton file.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Ensure that the selected certificate is available to all application hosts which are using the configuration file.

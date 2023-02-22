@@ -25,6 +25,10 @@ No electronic system is perfect. When deploying large scale systems many users w
 
 It is recommended that, during rollout, the establishment of an operational help desk and ticketing software is created. This should reference the [#describe-service-contacts-and-responsibilities](planning-and-preparation-work/develop-operational-technology-architecture.md#describe-service-contacts-and-responsibilities "mention") documentation developed for the project. It is recommended as a general guideline that, for every 100 terminals/clients/users, a single IT support resource should be available (note: support staff can be a power user, clinic representative, IT operations staff already servicing a location, etc.)
 
+The design of the support desk will depend on the nature of the deployment and the size of the installation. Typically this will be accompanied by an escalation model, similar to that illustrated below.
+
+
+
 ## Creating Job Aides & Standard Operating Procedures (SOPs)
 
 During the rollout of the SanteDB software, it is important that all users of the system follow common procedures and have ready access to assistance. This will help ensure the consistency of data captured and shared via SanteDB, adherence to privacy and security best practices, documentation requirements, etc.
