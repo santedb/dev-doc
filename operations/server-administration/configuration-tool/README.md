@@ -88,11 +88,11 @@ Starting with SanteDB 3.0, configuration files can be partially encrypted using 
 
 When applying a configuration, the configuration tool will prompt the administrator if protection should be enabled:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Selecting "yes" will prompt for the selection of a security certificate to protect the configuraiton file.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Ensure that the selected certificate is available to all application hosts which are using the configuration file.

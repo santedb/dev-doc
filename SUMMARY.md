@@ -342,6 +342,7 @@
   * [Clinical Decision-Support](developers/extending-santesuite/extending-santedb/applets/cdss-protocols.md)
   * [Business Rules](developers/extending-santesuite/extending-santedb/applets/business-rules.md)
   * [Dataset Files](developers/extending-santesuite/extending-santedb/applets/distributing-data.md)
+  * [External Data Maps](developers/applets/external-data-maps.md)
   * [Applet Solution Packages](developers/extending-santesuite/extending-santedb/applets/applet-solution-packages.md)
   * [JavaScript API Reference](http://santesuite.org/assets/doc/js/santedb/)
   * [Recipes](santempi/recipes/README.md)

@@ -124,7 +124,7 @@ Because the dCG operates offline, it must maintain security settings which dicta
 
 The network configuration page allows you to specify parameters about your local network and how it connects to the master server. Here you can specify how heavily you would like to compress traffic (to save bandwidth and time), as well as any proxy settings
 
-![](<../../../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../../../.gitbook/assets/image (12).png>)
 
 {% hint style="info" %}
 Putting the dCG into 2g optimization mode will use LZMA Max compression. This saves quite a bit of bandwidth, however introduces quite a bit of CPU pressure on the dCG (as it requires more computing power to compress traffic). Only use this mode if you are really on a 2g or slow connection where CPU time is less valuable than bandwidth time.
