@@ -47,7 +47,7 @@ The user can manually initiate the import process.
 
 After import, the file may be placed in the **Completed With Errors** state. This indicates that not all records could be processed in the file. Users can view the issues by clicking on the import details screen.
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 To correct import errors, you may download the **Rejected Records** file to your hard disk. This file matches the format of the original import file, with an additional column named `import_error`. This column indicates the issue that needs to be corrected.&#x20;
 
