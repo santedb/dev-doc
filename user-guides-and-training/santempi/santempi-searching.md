@@ -46,6 +46,10 @@ The advanced search provides discrete inputs for the base identification which i
 
 ![](<../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1).png>)
 
+{% hint style="info" %}
+By default the search fields are exact matches. You can force the SanteMPI server to use fuzzy matches by prepending your search term with the "approximate" operator `~` , for example: `~Jon` will search: Starts with John, within 1 levenshtein edit of Jon. Additionally `~Jo*` can be used to search "starts with Jo"
+{% endhint %}
+
 After entering the filter details for the patient search, pressing the search button will yield results.
 
 {% hint style="info" %}

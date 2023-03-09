@@ -115,3 +115,6 @@ This minimal payload is used on purpose to ensure:
 2. Authentication is required to query the iCDR or dCDR to obtain full context of the code.
 3. Authorization is applied on querying the iCDR or dCDR to ensure that appropriate privacy controls are enforced.
 
+### SanteDB Version 3.0
+
+SanteDB 3.0 has been expanded to include searches for different types of barcode information such as [Smart Health Cards (SHC)](https://smarthealth.cards/en/). Because of this the formatting of the VRP barcodes has been changed. The payload still uses JWS and the JWS payload remains the same, however the QR code is encoded with `svrp://HEX_ENCODED_BYTES`. This payload should be sent to the `_ptr` and search operations.
