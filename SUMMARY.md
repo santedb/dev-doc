@@ -205,7 +205,7 @@
     * [Post Deployment Tuning](installation/installation/santedb-server/production-installation-notes.md)
     * [Securing SanteDB APIs](installation/installation-1/deployment/securing-the-apis.md)
   * [Rollout](installation/installation-1/rollout.md)
-* [Demonstration Environment](santedb/demonstration-environment.md)
+* [Demonstration Environments](santedb/demonstration-environment.md)
 
 ## Operations
 

@@ -1,4 +1,4 @@
-# Demonstration Environment
+# Demonstration Environments
 
 The SanteSuite community partner Fyfe Software ([https://fyfesoftware.ca](https://fyfesoftware.ca)) hosts a demonstration environment which can be used to illustrate the use of SanteSuite products. These demonstration servers are open to community members and provide a quick way to start writing extensions with the SDK.
 
@@ -8,7 +8,25 @@ Note that demonstration servers may become unavailable at any time and/or may be
 
 ## Demonstration Environments
 
-### Sample Ministry Of Health (SanteMPI)
+### Sample Ministry of Heatlh (SanteMPI) - Version 3.0
+
+This demonstration server uses Version 3.0 of the SanteDB engine and can be used to evaluate the differences between v2 and v3 of the SanteDB platform.&#x20;
+
+{% hint style="info" %}
+The maximum upload size of any files to this server is 256KB. Please ensure that any import data sets being uploaded do not exceed this size.
+{% endhint %}
+
+Administrative URL: [https://ncc-1701.santesuite.net/](https://ncc-1701.santesuite.net/)  \
+User: demoadmin\
+Password: @Training2023\
+OpenAPI Docs: [https://ncc-1701.santesuite.net:8443/api-docs](https://ncc-1701.santesuite.net:8443/api-docs)\
+Realm URI: ncc-1701.santesuite.net (TLS = on, Port = 8443)\
+HL7v2: sllp://ncc-1701.santesuite.net:2100\
+FHIR: https://ncc-1701.santesuite.net:8443/fhir\
+GS1 AS.2 Endpoint: disabled\
+RFC3881 / DICOM SYSLOG: disabled
+
+### Sample Ministry Of Health (SanteMPI) - Version 2.2
 
 The first series of demonstration servers are used to illustrate the SanteMPI services provided by SanteDB. The fake country  to illustrate functions typical of a nationally deployed SanteMPI solution.&#x20;
 
