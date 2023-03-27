@@ -10,7 +10,7 @@ The SanteDB [Business Intelligence Services](../../../developers/extending-sante
 
 The report centre home screen provides a list of all developed public reports that have been installed on the SanteDB server.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 You may launch a report with the **View** option.
 
@@ -40,7 +40,7 @@ Only the first 1,000 results are rendered in the preview. The search bar in the 
 
 The entirety of the dataset can be downloaded by selecting the **Download** option and selecting the desired output format.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Large datasets (>10,000 results) on output formats such as XLSX may consume large amounts of memory.

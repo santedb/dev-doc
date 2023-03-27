@@ -12,7 +12,7 @@ The import dashboard is accessed under the **Reference Data** menu in the **Impo
 
 The dashboard shows the foreign data files which have been upload to the SanteDB server.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 The status column indicates the state of the file:
 
@@ -31,7 +31,7 @@ Imports for data are processed on the server in the background. To begin the pro
 Currently only CSV is supported as a data import format.
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. Select the file which should be imported. Your file should be within the allowable file upload limit for your environment.
 2. Select the import mapping which has been created by your development team. The **ONC Patient Matching Dataset** is included standard with SanteDB ([https://github.com/onc-healthit/patient-matching](https://github.com/onc-healthit/patient-matching))

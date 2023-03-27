@@ -20,7 +20,7 @@ To create a new identity domain (for example, a new programme identifier type), 
 
 The first data collected by SanteDB when creating a new identity domain are the key identity domain properties including those discussed above as well as validation information for the identity domain.
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../../.gitbook/assets/image (21) (1).png>)
 
 The core properties are:
 

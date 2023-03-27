@@ -4,7 +4,7 @@ When you edit a record which has been identified as a master record, you are act
 
 For example, if two clinics have sent records which have been linked together by the matching algorithm, the logical relation of these elements would be as illustrated below:
 
-![](<../../../../.gitbook/assets/image (23).png>)
+![](<../../../../.gitbook/assets/image (23) (1).png>)
 
 Within the tool's [.](./ "mention") **** tab you will see both locals listed.
 

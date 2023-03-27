@@ -224,7 +224,7 @@ The provenance filter is used to render the provenance data related to the objec
 
 The output of this is a control which allows examination of the event including user, application, device, timestamp and session id.
 
-![Rendering of the Provenance Filter](<../../../../.gitbook/assets/image (51).png>)
+![Rendering of the Provenance Filter](<../../../../.gitbook/assets/image (51) (1).png>)
 
 ###
 

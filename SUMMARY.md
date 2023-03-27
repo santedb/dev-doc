@@ -253,6 +253,7 @@
       * [Probes](operations/cdr-administration/santedb-administration-panel/system-administration/probes.md)
     * [Reference Data Administration](operations/cdr-administration/santedb-administration-panel/reference-data-administration/README.md)
       * [Importing Data](operations/cdr-administration/santedb-administration-panel/reference-data-administration/importing-data.md)
+      * [Place Administration](operations/cdr-administration/santedb-administration-panel/reference-data-administration/place-administration.md)
       * [Identity Domain Management](operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
     * [Reports Centre](operations/cdr-administration/santedb-administration-panel/reports-centre.md)
     * [Security Administration](operations/cdr-administration/santedb-administration-panel/security-administration/README.md)
