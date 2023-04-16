@@ -332,6 +332,7 @@
       * [Parameters](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/parameters.md)
       * [Queries](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/queries.md)
       * [Views](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/views.md)
+      * [Data Marts](developers/applets/business-intelligence-bi-assets/bi-asset-definitions/data-marts.md)
       * [Reports](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/reports.md)
     * [BI Render Controls](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-render-controls.md)
   * [Localization](developers/extending-santesuite/extending-santedb/applets/localization.md)
