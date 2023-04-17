@@ -6,7 +6,7 @@ For example, if two clinics have sent records which have been linked together by
 
 ![](<../../../../.gitbook/assets/image (23) (1).png>)
 
-Within the tool's [.](./ "mention") **** tab you will see both locals listed.
+Within the tool's [.](./ "mention") tab you will see both locals listed.
 
 ![](<../../../../.gitbook/assets/image (428) (1).png>)
 

@@ -1,6 +1,6 @@
 # Daemon Services
 
-In SanteDB, a daemon service represents a service which is activated on startup and is shut down on service stop. Daemon services can exist on the iCDR and dCDR interfaces. Daemon services are implemented using the [`IDaemonService`](broken-reference)``
+In SanteDB, a daemon service represents a service which is activated on startup and is shut down on service stop. Daemon services can exist on the iCDR and dCDR interfaces. Daemon services are implemented using the [`IDaemonService`](broken-reference)
 
 Daemons are particularly useful when:
 

@@ -13,7 +13,7 @@ description: >-
 
 ## Discussion
 
-The **Decription** field is the only **Core Property** that can be edited for an existing group. ****&#x20;
+The **Decription** field is the only **Core Property** that can be edited for an existing group.&#x20;
 
 ## Pre-Conditions / Setup
 

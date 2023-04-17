@@ -76,7 +76,7 @@ When a caller asks the CDR for the MASTER, the MDM service will call the `IPolic
 * Only data from Good Health Clinic when TABOO policy outcome is **DENY**, or
 * Only the data from Good Health Clinic and an indicator of elevation required (i.e. indicator more data is present) when the TABOO policy outcome is **ELEVATE.**
 
-****
+
 
 ## MDM Service Relationships
 

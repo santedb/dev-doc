@@ -24,7 +24,7 @@ Users can be assigned multiple roles/groups that could have various policies and
 
 ![](<../../../../../../../../../.gitbook/assets/image (228).png>)
 
-2\. Enter a string that does not match the **Role Name** for any existing group **** (e.g. "NOT\_A\_ROLE" is being entered here and role names are searched as each character is modified).&#x20;
+2\. Enter a string that does not match the **Role Name** for any existing group (e.g. "NOT\_A\_ROLE" is being entered here and role names are searched as each character is modified).&#x20;
 
 ![](<../../../../../../../../../.gitbook/assets/image (71).png>)
 

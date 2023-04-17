@@ -13,7 +13,7 @@ description: >-
 
 ## Discussion
 
-A user's **Detailed Audit Log** may be filtered using 3 dropdowns to choose from static lists of **** a possible **Actions**, **Events**, or **Outcomes**.
+A user's **Detailed Audit Log** may be filtered using 3 dropdowns to choose from static lists of a possible **Actions**, **Events**, or **Outcomes**.
 
 ## Pre-Conditions / Setup
 

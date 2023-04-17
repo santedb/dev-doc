@@ -230,7 +230,7 @@ In the pre-requisites, a link was provided to the SanteMPI Installation Qualific
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 
-``![](<../../.gitbook/assets/image (430) (1) (1) (1) (1) (1).png>)``
+![](<../../.gitbook/assets/image (430) (1) (1) (1) (1) (1).png>)
 
 ### Start FHIR Mock Service
 

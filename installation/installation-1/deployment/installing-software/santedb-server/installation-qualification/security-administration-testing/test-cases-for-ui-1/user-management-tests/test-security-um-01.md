@@ -75,5 +75,5 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 
 * Automatically navigate to the **Administration Panel / Security / Users / Index** page.
 * Momentarily display success message in top right corner: <img src="../../../../../../../../../.gitbook/assets/user_successtoast.png" alt="" data-size="original">&#x20;
-* New user (**ClinicalStaffUser123**) **** should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
+* New user (**ClinicalStaffUser123**) should appear in the table of users on the Index page with properties matching those in the "Pre-Conditions / Setup" above.
 
