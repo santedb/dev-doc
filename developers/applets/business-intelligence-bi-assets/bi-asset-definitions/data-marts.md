@@ -119,7 +119,7 @@ The primary purpose of the data mart is to provide a [BI data source](../../../e
 
 If you would like to output your data mart to an existing BI data source, use the `ref` option.
 
-```
+```xml
 <produces ref="#org.santedb.bi.dataSource.main" />
 ```
 
@@ -189,7 +189,7 @@ For example, to define a data mart which has two tables `FACILITY_TBL`, `PATIENT
 
 The basic table definition in a schema is expanded below:
 
-```
+```xml
 <table name="{NAME_OF_TABLE}" temporary="true|false" tableSpace="{NAME_OF_TABLESPACE}">
     <column
         name="NAME_OF_COLUMN"
@@ -208,7 +208,7 @@ The basic table definition in a schema is expanded below:
 
 Links between tables can be established using a `type="ref"` on your column and including an `<otherTable>` reference. For example, to link an `ADDRESS` table to a `PATIENTS` table:
 
-```
+```xml
 <table name="PATIENTS">
     <column type="uuid" name="PATIENT_ID" key="true" />
     <column type="date" name="DATE_OF_BIRTH" />
@@ -224,13 +224,13 @@ Links between tables can be established using a `type="ref"` on your column and 
 
 Would result in a schema where:
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Parent Tables
 
 SanteDB's primary CDR stores data as a series of objects in a hierarchy (see:  [Conceptual Information Model](../../../../santedb/data-and-information-architecture/conceptual-data-model/)). In a relational database this is represented as "table per class" pattern, using the entity classes, this can be represented as.
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 This means that every `Place`, `Person`, `Patient`, and `Provider` should have an entry in `Entity` as well with the core data elements. Each other table merely adds more data to the previous.&#x20;
 
@@ -367,7 +367,7 @@ The execution engine analysis would conclude that the terminal node of this pipe
 
 The `<pipeline>` element of a flow represents the activities which are to be performed for the flow. Each pipeline step must carry a `name=""` attribute, and should reference other steps where possible. For example, referencing components is performed with the `ref=""` attribute as illustrated below:
 
-```
+```xml
 <connection name="myConnection">
     ...
 </connection>
@@ -481,7 +481,7 @@ For example:
 
 The `<call>` pipeline instruction can be used to call another flow and pass parameter arguments to the called flow.
 
-```
+```xml
 <call name="{NAME_OF_CALL}">
     <dataFlow ref="{OTHER_FLOW_TO_CALL}" />
     <args>
@@ -527,7 +527,7 @@ For example, to call `FOO_FLOW` passing the input connection and a flag, and the
 
 A data reader is used to open a streaming result set based on a SQL query executed against a connection.
 
-```
+```xml
 <reader name="{NAME_OF_RESULTING_READER_STREAM}">
     <connection ref="{CONNECTION_TO_READ_FROM}" />
     <sql>
@@ -600,17 +600,113 @@ For example, to read all identiifers in the SanteDB primary database.
 **Input:** `DataStream`\
 **Output:** `DataStream`
 
-### Column Mapping
+A data writer is used to write data to a connection. The output of the data writer is a stream of the records that were written.
+
+```xml
+<writer name="{NAME_OF_OUTPUT_STREAM}" 
+    truncate="true|false"
+    mode="insert|update|delete|insert-update"
+    rejects="output|halt|log">
+    <input ref="{NAME_OF_INPUT_STREAM}" />
+    <connection ref="{NAME_OF_CONNECTION}" />
+    <!-- If output to a schema table -->
+    <target ref="{REF_OF_TABLE}" />
+    <!-- If output to a temporary table -->
+    <target temporary="true" name="name_of_temp_table">
+        <column ... />
+    </target>
+</writer>
+```
+
+{% hint style="warning" %}
+Records that could not be written to the output connection are streamed out of the data writer with an additional `$reject` and `$reject.reason` fields added to the output object. Use a `<filter>` or `<split>` pipeline component to filter for these records.
+{% endhint %}
+
+### Column Transform&#x20;
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
+
+A column mapping pipeline step is used to change the names of input data stream fields to other output stream field names, and to apply transforms.
+
+```xml
+<transform name="{NAME_OF_OUTPUT_STREAM}">
+    <input ref="{NAME_OF_INPUT_STREAM}" />
+    <map>
+        <source name="{NAME_OF_INPUT_COLUMN}">
+            <!-- If transforming according to an expression -->
+            <transform>{C# EXPRESSION HERE}</transform>
+            <!-- If mapping based on a lookup table or column -->
+            <lookup joinColumn="{NAME_OF_COLUMN_IN_OTHER_TABLE}">
+                <input ref="{INPUT_STREAM_NAME}" />
+            </lookup>
+        </source>
+        <target name="{NAME_OF_TARGET_COLUMN}" />
+    </map>
+</transform>            
+```
+
+{% hint style="danger" %}
+Using the `lookup` option requires loading of the entire source of the lookup into memory, and is intended for very small reference lookups. If a larger join is desired use a `<join>` pipeline component.&#x20;
+{% endhint %}
 
 ### Crosstab
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
 
+The crosstab pipeline step allows developers to pivot a dataset based on an accumulator.
+
+```xml
+<crosstab name="pivot_names">
+    <input ref="{NAME_OF_INPUT_DATA_STREAM}" />
+    <pivot fn="first|last|sum|avg|min|max|count" 
+        key="{COLUMN_REPRESENTING_THE_KEY}"
+        value="{COLUMN_REPRESENTING_THE_ACCUMULATOR}"
+        columnDef="{COLUMN_FOR_PIVOTING}">
+        <columns>
+            <add>{NAME_OF_COLUMNS_IN_OUTPUT_STREAM}</add>
+        </columns>
+    </pivot>
+</crosstab>
+```
+
+{% hint style="warning" %}
+The `<input>` stream MUST be sorted by the `@key` as the most significant sorting column. Failure to sort the input result set may result in the crosstab being unpredictable.
+{% endhint %}
+
 ### Output to Log
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
+
+For diagnostic purposes, it is often useful to log data and messages to the output. SanteDB data flows can log to one of the following places:
+
+* The application log (the trace log)
+* The registration for the particular execution of the datamart refresh
+* The console
+
+Logs may be sourced from an input stream or may be standalone components.
+
+```xml
+<log priority="Informational|Verbose|Error|Warning"
+    logTo="any|execution|console|trace">
+    <input ref="{NAME_OF_STREAM_TO_USE_AS_LOG_INPUT}" />
+    MESSAGE TO LOG
+</log>
+```
+
+For example, to log a simple message to the console:
+
+```xml
+<log priority="Informational" logTo="console">{{ $principal }} is running me!</log>
+```
+
+To log the contents of an input stream to the execution log (which would require an administrator to log in to view):
+
+```xml
+<log priority="Verbose" logTo="execution">
+    <input ref="patient_reader" />
+    Mapped {{ ent_id }} successfully!
+</log>
+```
