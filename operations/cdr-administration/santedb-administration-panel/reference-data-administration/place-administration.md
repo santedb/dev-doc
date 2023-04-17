@@ -118,7 +118,7 @@ The address on a place (City, Province, Country, etc.) often serves the address 
 
 The place hierarchy is used to establish the parent and children of the geographic place within the SanteDB system. The hierarchy is listed in the Hierarchy panel on the place details screen.
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Child places can be removed directly from the hierarchy window without entering edit mode. However, if the parent or new children are to be added, the administrator must click on the Pencil icon to enter edit mode which will enable the form inputs.
 

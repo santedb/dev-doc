@@ -224,13 +224,13 @@ Links between tables can be established using a `type="ref"` on your column and 
 
 Would result in a schema where:
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Parent Tables
 
 SanteDB's primary CDR stores data as a series of objects in a hierarchy (see:  [Conceptual Information Model](../../../../santedb/data-and-information-architecture/conceptual-data-model/)). In a relational database this is represented as "table per class" pattern, using the entity classes, this can be represented as.
 
-<figure><img src="../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 This means that every `Place`, `Person`, `Patient`, and `Provider` should have an entry in `Entity` as well with the core data elements. Each other table merely adds more data to the previous.&#x20;
 
@@ -382,7 +382,7 @@ The `<pipeline>` element of a flow represents the activities which are to be per
 </writer>
 ```
 
-#### Connect to Database
+### Connect to Database
 
 **Input:** None\
 **Output:** `DataIntegrationConnection`
@@ -410,7 +410,7 @@ For example, to define a connection to the main SanteDB iCDR database:
 </connection>
 ```
 
-#### Execute in Transaction
+### Execute in Transaction
 
 **Input:** `DataIntegrationConnection`\
 **Output**: `DataStream`
@@ -474,7 +474,7 @@ For example:
 </transaction>        
 ```
 
-#### Call Flow
+### Call Another Flow
 
 **Input:** None\
 **Output:** `DataStream`
@@ -520,7 +520,7 @@ For example, to call `FOO_FLOW` passing the input connection and a flag, and the
 </log>
 ```
 
-#### Data Reader
+### Data Reader
 
 **Input:** `DataIntegrationConnection`\
 **Output:** `DataStream`
@@ -595,22 +595,22 @@ For example, to read all identiifers in the SanteDB primary database.
  </reader>
 ```
 
-#### Data Writer
+### Data Writer
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
 
-#### Column Mapping
+### Column Mapping
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
 
-#### Crosstab
+### Crosstab
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
 
-#### Output to Log
+### Output to Log
 
 **Input:** `DataStream`\
 **Output:** `DataStream`
