@@ -224,13 +224,13 @@ Links between tables can be established using a `type="ref"` on your column and 
 
 Would result in a schema where:
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Parent Tables
 
 SanteDB's primary CDR stores data as a series of objects in a hierarchy (see:  [Conceptual Information Model](../../../../santedb/data-and-information-architecture/conceptual-data-model/)). In a relational database this is represented as "table per class" pattern, using the entity classes, this can be represented as.
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 This means that every `Place`, `Person`, `Patient`, and `Provider` should have an entry in `Entity` as well with the core data elements. Each other table merely adds more data to the previous.&#x20;
 
@@ -413,7 +413,7 @@ For example, to define a connection to the main SanteDB iCDR database:
 ### Execute in Transaction
 
 **Input:** `DataIntegrationConnection`\
-**Output**: `DataStream`
+**Output**: `IEnumerable`
 
 When executing multiple operations, it is often desirable to execute the output in a transaction. Transactions represent an atomic series of updates, and either all the components succeed, or none do. Transactions create a new sub-scope from the data flow which contains them.
 
@@ -477,7 +477,7 @@ For example:
 ### Call Another Flow
 
 **Input:** None\
-**Output:** `DataStream`
+**Output:** `IEnumerable`
 
 The `<call>` pipeline instruction can be used to call another flow and pass parameter arguments to the called flow.
 
@@ -523,7 +523,7 @@ For example, to call `FOO_FLOW` passing the input connection and a flag, and the
 ### Data Reader
 
 **Input:** `DataIntegrationConnection`\
-**Output:** `DataStream`
+**Output:** `IEnumerable`
 
 A data reader is used to open a streaming result set based on a SQL query executed against a connection.
 
@@ -597,8 +597,8 @@ For example, to read all identiifers in the SanteDB primary database.
 
 ### Data Writer
 
-**Input:** `DataStream`\
-**Output:** `DataStream`
+**Input:** `IEnumerable`\
+**Output:** `IEnumerable`
 
 A data writer is used to write data to a connection. The output of the data writer is a stream of the records that were written.
 
@@ -624,8 +624,8 @@ Records that could not be written to the output connection are streamed out of t
 
 ### Column Transform&#x20;
 
-**Input:** `DataStream`\
-**Output:** `DataStream`
+**Input:** `IEnumerable`\
+**Output:** `IEnumerable`
 
 A column mapping pipeline step is used to change the names of input data stream fields to other output stream field names, and to apply transforms.
 
@@ -652,8 +652,8 @@ Using the `lookup` option requires loading of the entire source of the lookup in
 
 ### Crosstab
 
-**Input:** `DataStream`\
-**Output:** `DataStream`
+**Input:** `IEnumerable`\
+**Output:** `IEnumerable`
 
 The crosstab pipeline step allows developers to pivot a dataset based on an accumulator.
 
@@ -677,8 +677,8 @@ The `<input>` stream MUST be sorted by the `@key` as the most significant sortin
 
 ### Output to Log
 
-**Input:** `DataStream`\
-**Output:** `DataStream`
+**Input:** `IEnumerable`\
+**Output:** `IEnumerable`
 
 For diagnostic purposes, it is often useful to log data and messages to the output. SanteDB data flows can log to one of the following places:
 
@@ -709,4 +709,104 @@ To log the contents of an input stream to the execution log (which would require
     <input ref="patient_reader" />
     Mapped {{ ent_id }} successfully!
 </log>
+
 ```
+
+### Filter
+
+The filter object allows developers to filter an incoming result set and pass only those records which match the specified criteria to the next stage of the pipeline.
+
+```
+<filter name="{NAME_OF_FILTER_STREAM}">
+    <input ref="{INPUT_STREAM_NAME}" />
+    <all|any>
+        <when field="{NAME_OF_FIELD}" op="eq|ne|gt|lt|gte|lte">
+            <bool|string|int|uuid>value</bool|string|int|uuid>
+        </when>
+    </all|any>
+</filter>
+```
+
+| Property                                               | Value                                                                                                                           | Description                                                                                                                                   |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `@name`                                                | Name                                                                                                                            | The name of the flow step                                                                                                                     |
+| `input/@ref`                                           | `IEnumerable`                                                                                                                   | The input data source                                                                                                                         |
+| `all` or `any`                                         | Array                                                                                                                           | Collection of conditions to be satisfied to pass a record through the filter (all = all conditions must pass , any = one condition must pass) |
+| `all/when`                                             | Condition                                                                                                                       | A single condition on the filter                                                                                                              |
+| `all/when/@field`                                      | Column                                                                                                                          | The name of the column in the input stream to use as the LHS.                                                                                 |
+| `all/when/@op`                                         | <p>eq - Equal<br>ne - Not Equal<br>lt - Less Than<br>gt - Greater Than<br>lte - Less Than Equal<br>gte - Greater Than Equal</p> | Indicates the manner in which `@field` is compared to `value`                                                                                 |
+| `all/when/bool` or `all/when/string` or `all/when/int` | bool or string or int or uuid                                                                                                   | The value to compare as the RHS of the when condition                                                                                         |
+
+This logic can be used to filter out rejects and log them to a separate table.
+
+```xml
+<writer mode="insert" truncate="true" name="write_patients">
+  <input ref="map_patients" />
+  <connection ref="output" />
+  <target ref="patients_tbl" />
+</writer>
+<!-- Filter for those rejected records -->
+<filter name="filter_rejects">
+  <input ref="write_patients" />
+  <all>
+    <when field="$reject" op="eq">
+      <bool>true</bool>
+    </when>
+  </all>
+</filter>
+<!-- Transform the Rejects -->
+<transform name="transform_rejects">
+  <input ref="filter_rejects" />
+  <map>
+    <source name="patient_id" />
+    <target name="patient_id" />
+  </map>
+  <map>
+    <source name="$reject.reason" />
+    <target name="REASON" />
+  </map>
+</transform>
+<writer mode="insertUpdate" truncate="false" name="write_rejects">
+  <input ref="transform_rejects" />
+  <connection ref="output" />
+  <target ref="rejected_patients_tbl" />
+</writer>
+<!-- OPTIONAL: HALT the entire pipeline if writing the rejects fails -->
+<filter name="filter_rejects_from_write">
+  <input ref="write_rejects" />
+  <all>
+    <when field="$reject" op="eq">
+      <bool>true</bool>
+    </when>
+  </all>
+</filter>
+<!-- Halt on first failure to even persist a reject -->
+<halt name="halt_rejects">
+  <input ref="filter_rejects_from_write" />
+  Committing patient reject {{patient_id}} failed.
+</halt>
+```
+
+### Union Result Sets
+
+Two or more result sets can be unioned together. The result is a new enumerable with the union result sets in the order they were included.
+
+```xml
+<union name="{NAME_OF_UNION}">
+    <input ref="{NAME_OF_FIRST_RESULT_SET}" />
+    <with ref="{NAME_OF_OTHER_STREAM}" />
+    <with...
+</union>
+```
+
+### Halt Execution
+
+The result set can be halted at any time with the `<halt>` pipeline step. The HALT operation currently halts on the first encounter of a record being processed.
+
+```xml
+<halt name="{NAME_OF_HALT}">
+    <input ref="{INPUT_STREAM}" />
+    MESSAGE FOR YOUR HALT MESSAGE WITH {{ROW_NUMBER}} IN BRACES
+</halt>
+```
+
