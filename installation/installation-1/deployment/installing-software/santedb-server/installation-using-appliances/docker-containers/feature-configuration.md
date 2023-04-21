@@ -321,6 +321,50 @@ The supported resources for MDM management are:
 | Place                | Places the Place resource into MDM storage management. This is useful for centralized Geographic or Facility Registries                                                       |
 | Organization         | Organizations (such as companies, government agencies, etc.) in MDM control.                                                                                                  |
 
+### E-Mail Configuration
+
+{% hint style="info" %}
+This section documents a SanteDB 3.0 feature.
+{% endhint %}
+
+The e-mail configuration allows you to configure the SMTP settings for SanteDB to send e-mails. This option is used for MFA codes, administrative alerts, etc.
+
+```
+SDB_FEATURE=...;EMAIL;...
+# The SMTP server to use for sending mail
+EMAIL_SERVER=smtp://server.com:port
+# The "from" address for all e-mails being sent by SanteDB
+EMAIL_FROM=no-reply@example.com
+# True if the STMP server requires TLS
+EMAIL_TLS=true
+# If the SMTP server requires authentication - the username
+EMAIL_USER=key_to_authenticate_smtp_if_needed
+# If the SMTP server requires authentication - the password
+EMAIL_PASSWORD=password_to_authenticate_smtp_if_needed
+# The Administrative contacts which should be CC'd on relevant admin events
+EMAIL_ADMIN=admin@example.com;helpdesk@example.com
+```
+
+### Signing Configuration
+
+{% hint style="info" %}
+This section documents a SanteDB 3.0 feature.
+{% endhint %}
+
+The signing configuration allows administrators of the Docker server to change how the server software signs tokens.
+
+```
+SDB_FEATURE=...;SIGN;...
+# Set the primary algorithm for the signing of data
+SIGN_ALG=HS256|RS256
+# Set the secret if using HMAC256 signing
+SIGN_HS256_SECRET=A SECRET PASSPHRASE
+# Set the subject name of a new self-signed certificate to generate
+SIGN_RS256_GEN=SUBJECT_NAME_OF_CERTIFICATE
+# Set the thumbprint of an existing certificate to use for signing
+SIGN_RS256_CERT=thumbprint of existing cert
+```
+
 ## SanteMPI Features
 
 You can enable specific SanteMPI features by enabling the `IHE_*` interfaces on the `santedb-mpi` container.
