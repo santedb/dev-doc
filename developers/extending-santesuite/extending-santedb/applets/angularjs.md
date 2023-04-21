@@ -19,7 +19,22 @@ The entity-search directive is used to render a search box which can be used to 
 ```markup
 <entity-search
     type="[Patient|Person|Place|Organization|Act|AssigningAuthority|SecurityUser|..]"
+    display="'property.to.display'"
+    search-field="'field-to-search-resources-on'"
+    default-results="{ results to show by default }"
+    filter="'hdsi expression'"
+    group-display="'Group Display Selector'"
     group-by="[Group Selector]"
+    key="'property path in ng-model to use as value'"
+    selector="'property path to use as <option value='"
+    value-property="path on scope to set selected value"
+    value-selector="path on returned objects to set as selected value"
+    multi-select="true|false"
+    auto-tab-next="true|false"
+    copy-nulls="true|false"
+    min-render="10"
+    change-clear="other object to watch - if its value changes then clear this"
+    is-required="true|false"
     filter="[Filter Expression]"
   />  
 ```
@@ -38,8 +53,8 @@ For example, if you were to provide a search for all Places which are of type Se
 
 The address editing control provides a common input control for `EntityAddress` types.&#x20;
 
-```
-<address-edit address="entity.address.HomeAddress"
+```html
+<address-edit address="address-to-update"
     no-add="true|false"
     no-type="true|false"
     simple-entry="true|false"
@@ -48,15 +63,15 @@ The address editing control provides a common input control for `EntityAddress` 
     control-prefix="'some-prefix'"/>
 ```
 
-| Attribute      | Description                                                                                   |
-| -------------- | --------------------------------------------------------------------------------------------- |
-| address        | The `entity.address` field to bind to.                                                        |
-| no-add         | When true, the user will not be permitted to add new types of this address to the entity.     |
-| no-type        | When true, no type address (Home, Vacation, Work, etc.) will be shown.                        |
-| simple-entry   | When true, a simplified version of the data entry form will be shown.                         |
-| is-required    | When true, the address is required.                                                           |
-| owner-form     | The name of the AngularJS form to which the address entry belongs.                            |
-| control-prefix | When using multiple address entry forms on a single page, the prefix to add to each input id. |
+| Attribute      | Type                                                                            | Description                                                                                   |
+| -------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| address        | [EntityAddress](http://santesuite.org/assets/doc/js/santedb/EntityAddress.html) | The `entity.address` field to bind to. Note that ng-scope is not used on this directive.      |
+| no-add         | Boolean                                                                         | When true, the user will not be permitted to add new types of this address to the entity.     |
+| no-type        | Boolean                                                                         | When true, no type address (Home, Vacation, Work, etc.) will be shown.                        |
+| simple-entry   | Boolean                                                                         | When true, a simplified version of the data entry form will be shown.                         |
+| is-required    | Boolean                                                                         | When true, the address is required.                                                           |
+| owner-form     | Form                                                                            | The name of the AngularJS form to which the address entry belongs.                            |
+| control-prefix | String                                                                          | When using multiple address entry forms on a single page, the prefix to add to each input id. |
 
 #### Example of Use
 
@@ -66,38 +81,129 @@ The address editing control provides a common input control for `EntityAddress` 
 </div>
 ```
 
+### Geographic Edit (geo-edit)
+
+Allows for the editing of a geo-tag on an object.
+
+```html
+<geo-edit geo="entity.geo"
+     is-required="true|false"
+     owner-form="nameOfForm"
+     control-prefix="'some-prefix'" />
+```
+
+| Attribute      | Type                                                              | Description                                                                               |
+| -------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| geo            | [GeoTag](http://santesuite.org/assets/doc/js/santedb/GeoTag.html) | The geographic tag which should be edited on this object (note that ng-scope is not used) |
+| is-required    | Boolean                                                           | True if the information for the GEO tag must be entered.                                  |
+| owner-form     | Form                                                              | The angular form which owns this input collection.                                        |
+| control-prefix | String                                                            | The prefix to append to all inputs (for multiple geo-tag inputs)                          |
+
 ### Name Edit (name-edit)
 
 The name edit input control allows for the common reuse of a name entry component.
 
-```
+```html
 <name-edit
     name="name-to-bind-to"
-    simple-name="true|false"
+    simple-entry="true|false"
     no-add="true|false"
     no-type="true|false"
-    simple-entry="true|false"
     is-required="true|false"
     owner-form="'name-of-form'"
+    input-style="tag|simple"
+    allowed-components="prefix,given,family,suffix"
     control-prefix="'prefix-to-add'" />
 ```
 
-| Attribute      | Description                                                                                   |
-| -------------- | --------------------------------------------------------------------------------------------- |
-| name           | The `entity.name` field to bind to                                                            |
-| no-add         | When true, the user will not be permitted to add new types of this name to the entity.        |
-| no-type        | When true, no type name (legal, official, license, etc.) will be shown.                       |
-| simple-name    | When true, the name input is shown as a single text box and names are not split into parts.   |
-| simple-entry   | When true, a simplified version of the data entry form will be shown.                         |
-| is-required    | When true, the address is required.                                                           |
-| owner-form     | The name of the AngularJS form to which the address entry belongs.                            |
-| control-prefix | When using multiple address entry forms on a single page, the prefix to add to each input id. |
+| Attribute          | Type                                                                      | Description                                                                                      |
+| ------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| name               | [EntityName](http://santesuite.org/assets/doc/js/santedb/EntityName.html) | The `entity.name` field to bind to                                                               |
+| no-add             | Boolean                                                                   | When true, the user will not be permitted to add new types of this name to the entity.           |
+| no-type            | Boolean                                                                   | When true, no type name (legal, official, license, etc.) will be shown.                          |
+| simple-entry       | Boolean                                                                   | When true, a simplified version of the data entry form will be shown.                            |
+| is-required        | Boolean                                                                   | When true, the address is required.                                                              |
+| owner-form         | Form                                                                      | The name of the AngularJS form to which the address entry belongs.                               |
+| control-prefix     | String                                                                    | When using multiple address entry forms on a single page, the prefix to add to each input id.    |
+| input-style        | simple or tag                                                             | When `tag` is specified, each component of the name is a tag to split the name component values. |
+| allowed-components | prefix, suffix, given, family                                             | A comma separated list of parts of the name which are permitted for entry.                       |
+
+### Telecom Edit (telecom-edit)
+
+The telecom editing control allows the UI to capture telecommunications addresses for an entity.
+
+```html
+<telecom-edit telecom="entity.telecom"
+    single-edit="true|false"
+    owner-form="true|false"
+    no-label="true|false" />
+```
+
+### Identifier List Editor (identifier-list-edit)
+
+The identifier list editing control allows the UI to capture identiifers on a key/value pair entry.
+
+```html
+<identifier-list-edit identifier="entity.identifier"
+    owner-form="form that owns this control"
+    container-class="entity.classConcept" />
+```
+
+### Identifier Edit (identifier-edit)
+
+The identifier edit allows for the easy capture of a single identifier.
+
+```html
+<identifier-edit identifier="entity.identifier['SSN']"
+    owner-form="name of owner form"
+    container-class="entity.classConcept"
+    no-domain="true|false"
+    is-required="true|false"
+    no-scan="true|false"
+    no-label="true|false" />
+```
+
+### Relationship Edit (admin-relation-edit)
+
+The relationship editor provides a generic entry for relationships to/from entities with one another.
+
+```html
+<admin-relation-edit 
+    relationship="entity.relationship"
+    container-class="entity.classConcept" />
+```
+
+### Schedule Editor (schedule-edit)
+
+The schedule editor allows for editing of a [PlaceService ](http://santesuite.org/assets/doc/js/santedb/PlaceService.html)entry.
+
+```
+<schedule-edit
+    json-schedule="json object | PlaceService.schedule" />
+```
+
+### Entity History (entity-history)
+
+The entity history control allow for the display of a table outlining the history of an object.
+
+```
+<entity-history target="object_to_display_history" />
+```
+
+### Entity Policy Assignment (entity-policy-admin)
+
+The policy assignment directive allows the UI to assign policies to any of the securable objects in SanteDB such as [SecurityDevice](http://santesuite.org/assets/doc/js/santedb/SecurityDevice.html), [SecurityRole](http://santesuite.org/assets/doc/js/santedb/SecurityRole.html), [SecurityApplication](http://santesuite.org/assets/doc/js/santedb/SecurityApplication.html), [Entity](http://santesuite.org/assets/doc/js/santedb/Entity.html), and [Act](http://santesuite.org/assets/doc/js/santedb/Act.html).
+
+```
+<entity-policy-admin securable="object-to-apply-policy-to"
+    policy="collection of policy objects" />
+```
 
 ### Demand (demand)
 
 The demand directive is an attribute that can be attached to any button or link and is used to easily disable the link whenever the currently authenticated user does not have adequate permission to access the function.
 
-```
+```html
 <[button|a]
     demand="[Policy OID]"
 >[text]</[button|a]>
@@ -105,7 +211,7 @@ The demand directive is an attribute that can be attached to any button or link 
 
 For example, if you want to place a button on the page that will delete something important and wish to ensure that the user has been granted the "Unrestricted Administrative Function" policy (1.3.6.1.4.1.33349.3.1.5.9.2.0) you would use this syntax:
 
-```
+```html
 <button
     ng-click="deleteSomethingImportant()"
     demand="1.3.6.1.4.1.33349.3.1.5.9.2.0"
@@ -119,15 +225,31 @@ The entity table is used to render a dynamic client side table which allows for 
 ```markup
 <entity-table
     id="[id of table]"
-    type="[SecurityUser|SecurityRole|Patient|Place|...]"
-    search-field="[Property Path]"
-    default-query="[Default Filter]"
-    property-path="[Path To Display Property]"
-    i18n-prefix="[Localization Prefix]"
-    render="{ column: 'renderFunc' }"
-    properties="[ column1, column2, ... ]"
-    item-actions="[ { action settings } ]"
-    actions="[ { table action settings } ]"
+    type="SecurityUser|SecurityRole|Patient|Place|..."
+    properties="[ 'list', 'of', 'properties', 'as', 'columns' ]"
+    external="true|false"
+    default-query="{ 'filter':value, 'filter': value }"
+    item-actions="[{ name: 'button_name', 
+        sref: 'nav-to-state', 
+        action: 'callback',
+        demand: 'required policy',
+        className: 'button css class',
+        icon: 'button icon',
+        when: 'expression-when-to-show' 
+    }]"
+    actions="see item-actions"
+    render="{ 'columnName' : 'renderingFunction' }",
+    i18n-prefix="prefix-for-columns-in-translation"
+    sort="true|false"
+    default-filter="default search filter value"
+    can-filter="true|false"
+    can-size="true|false"
+    no-buttons="true|false"
+    button-bar="#refToButtonBarDiv"
+    item-class="css class for items"
+    stateless="true|false"
+    sub-resource-holder="id-of-parent-resource"
+    key-property="property of table key"
 />
 ```
 
@@ -187,23 +309,25 @@ The authority select directive creates a drop-down selection which allows a user
 
 The concept select shows a searchable input which is bound to a concept set.
 
-```
+```html
 <concept-select 
     ng-scope="[value]"
     concept-set="'name-of-concept-set'"
-    exclude-c        oncepts="[ 'uuid-of-concept-to-exclude' ]
+    exclude-concepts="[ 'uuid-of-concept-to-exclude' ]"
+    add-concept="[ 'uuid-of-extra-concepts' ]"
     key="'path-to-key'"
 />
 ```
 
 #### Parameters
 
-| Attribute        | Type   | Description                                                                                                               |
-| ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
-| ng-scope         | \*     | The property/attribute where the value of the selected concept selection should be placed                                 |
-| key              | String | The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted. |
-| concept-set      | String | The name of the concept set to use to populate the searchable drop-down.                                                  |
-| exclude-concepts | UUID   | The concepts to exclude from the selection box                                                                            |
+| Attribute        | Type    | Description                                                                                                               |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| ng-scope         | \*      | The property/attribute where the value of the selected concept selection should be placed                                 |
+| key              | String  | The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted. |
+| concept-set      | String  | The name of the concept set to use to populate the searchable drop-down.                                                  |
+| exclude-concepts | UUID\[] | The concepts to exclude from the selection box                                                                            |
+| add-concept      | UUID\[] | Concepts which are to be added to the concept select (this is useful for adding null-flavor options)                      |
 
 #### Example Use
 
