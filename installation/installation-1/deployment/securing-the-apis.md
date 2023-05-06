@@ -133,12 +133,14 @@ Then the configuration to use client certificates should be updated to:
     implementationType="SanteDB.Rest.OAuth.Rest.OAuthServiceBehavior, SanteDB.Rest.OAuth">
   <behaviors>
     <add type="SanteDB.Rest.Common.Security.ClientCertificateAccessBehavior, SanteDB.Rest.Common">
-      <configuration revokeCheck="Online">
-        <allowClientHeader>false</allowClientHeader>
-        <trustedIssuers>
-          <add findType="FindByThumbprint" storeName="My" storeLocation="LocalMachine" findValue="59EC967D51DA999AB4EE0E082C12ED288DD05FAB" />
-        </trustedIssuers>
-      </configuration>
+      <configuration>
+          <ClientCertificateAccessConfiguration revokeCheck="Online">
+            <allowClientHeader>false</allowClientHeader>
+            <trustedIssuers>
+              <add findType="FindByThumbprint" storeName="My" storeLocation="LocalMachine" findValue="59EC967D51DA999AB4EE0E082C12ED288DD05FAB" />
+            </trustedIssuers>
+          </ClientCertificateAccessConfiguration>
+        </configuration>
     </add>
   </behaviors>
   <endpoint contract="SanteDB.Rest.OAuth.Rest.IOAuthServiceContract, SanteDB.Rest.OAuth" 
