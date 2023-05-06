@@ -112,6 +112,12 @@ netsh http add sslcert ipport=0.0.0.0:8443 certhash={your-certificate-for-the-se
    appid={A97FB5DE-7627-401C-8E70-5B96C1A0073B} clientcertnegotiation=true
 ```
 
+Next an implementation of the `ICertificateIdentityProvider` must be configured in the SanteDB service. This service maps an X509 certificate to a user, device, or application. In your `<services>` node, add a reference to the certificate handler.&#x20;
+
+```
+<add type="SanteDB.Persistence.Data.Services.AdoCertificateIdentityProvider, SanteDB.Persistence.Data" />
+```
+
 Next, the endpoints in the SanteDB configuration file need to be changed from `http://` scheme to `https://` scheme, and the `ClientCertificateAccessBehavior` added to the service. For example, if your OAUTH configuration is:
 
 ```xml
