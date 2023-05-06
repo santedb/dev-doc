@@ -94,3 +94,66 @@ server {
 
 You should then link this file to the `/etc/nginx/sites-enabled` directory and restart nginx.
 
+## Client Certificates
+
+You can secure the SanteDB APIs using dual-PKI (public key infrastructure) authentication. This method of API security will require that a remote node present a valid, trusted RSA certificate prior to any application level logic being executed. There are some configurations where this strategy can be deployed:
+
+1. Securing the OAUTH endpoint so that devices must present a certificate prior to obtaining an access token.
+2. Securing all API endpoints so that even those with valid access tokens must present the certificate.
+
+{% hint style="info" %}
+In order to use client certificate authentication, the SanteDB iCDR or dCDR must be configured to use HTTPS as described in the above instructions. If using NGINX as a TLS termination point, the PEM for the certificate must be passed to the SanteDB server in the `X-SSL-ClientCert` header.
+{% endhint %}
+
+Configuring the client certificates first requires the `netsh` command to be used to require client certificates:
+
+```
+netsh http add sslcert ipport=0.0.0.0:8443 certhash={your-certificate-for-the-server} 
+   appid={A97FB5DE-7627-401C-8E70-5B96C1A0073B} clientcertnegotiation=true
+```
+
+Next, the endpoints in the SanteDB configuration file need to be changed from `http://` scheme to `https://` scheme, and the `ClientCertificateAccessBehavior` added to the service. For example, if your OAUTH configuration is:
+
+```xml
+<service name="OAuth2" 
+  implementationType="SanteDB.Rest.OAuth.Rest.OAuthServiceBehavior, SanteDB.Rest.OAuth">
+  <behaviors>
+  </behaviors>
+  <endpoint contract="SanteDB.Rest.OAuth.Rest.IOAuthServiceContract, SanteDB.Rest.OAuth" 
+     address="http://0.0.0.0:8443/auth">
+    <behaviors />
+  </endpoint>
+</service>
+```
+
+Then the configuration to use client certificates should be updated to:
+
+```xml
+<service name="OAuth2" 
+    implementationType="SanteDB.Rest.OAuth.Rest.OAuthServiceBehavior, SanteDB.Rest.OAuth">
+  <behaviors>
+    <add type="SanteDB.Rest.Common.Security.ClientCertificateAccessBehavior, SanteDB.Rest.Common">
+      <configuration revokeCheck="Online">
+        <allowClientHeader>false</allowClientHeader>
+        <trustedIssuers>
+          <add findType="FindByThumbprint" storeName="My" storeLocation="LocalMachine" findValue="59EC967D51DA999AB4EE0E082C12ED288DD05FAB" />
+        </trustedIssuers>
+      </configuration>
+    </add>
+  </behaviors>
+  <endpoint contract="SanteDB.Rest.OAuth.Rest.IOAuthServiceContract, SanteDB.Rest.OAuth" 
+    address="https://0.0.0.0:8443/auth">
+    <behaviors />
+    <certificate findType="FindByThumbprint" storeName="My" storeLocation="LocalMachine" findValue="59EC967D51DA999AB4EE0E082C12ED288DD05FAB" />
+    <clientCerts>true</clientCerts>
+  </endpoint>
+</service>
+```
+
+The `<configuration>` element of the client certificate access behavior controls how the access behavior validates the client certificate including.
+
+| Option            | Values                | Description                                                                                                                                                                                                |
+| ----------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| revokeCheck       | Online, Offline, None | Controls how client certificates' revokation status is validated.                                                                                                                                          |
+| allowClientHeader | true, false           | Indicates whether the `X-SSL-ClientCert` header is to be allowed. Note: **If running behind NGINX with SSL termination this must be true, if not it is recommended to be false.**                          |
+| trustedIssuers    | X509 Certificate      | The trusted issuers of client certificates. If the client presents a certificate that is valid to the operating system, however is not issued by a CA in this list then the access request will be denied. |
