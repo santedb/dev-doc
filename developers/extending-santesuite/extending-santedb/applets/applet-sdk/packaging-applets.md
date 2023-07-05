@@ -27,6 +27,8 @@ The following parameters are supported by the applet compiler:
 | install     | Instructs the pakman tool to place the output file into its reference cache.                                                                                                                                                                            | --install                     |
 | dcdr        | <p>Instructs the pakman tool to create a branded SanteDB executable assets. Options:</p><ul><li>android = Android APK</li><li>gateway = dCDR Gateway Installer</li><li>windows = dCDR Windows UI Installer</li><li>web = Web Portal Installer</li></ul> | --dcdr=android --dcdr=gateway |
 | msbuild     | Specifies the path to the MSBuild instance you want to use. (By default the tool will scan your C:\Program Files\Microsoft Visual Studio\\\* directory for an MSBuild executable)                                                                       | --msbuild="path"              |
+| certHash    | Specifies an X509 thumprint in your CurrentUser\My certificate store to use for signing                                                                                                                                                                 | --certHash=ABCDEF012345678    |
+| info        | Displays the contents of the applet package file.                                                                                                                                                                                                       | --info                        |
 
 ## **Packaging your Applet**
 
@@ -165,3 +167,52 @@ pakman --compile --source=~/myproject --optimize --keyFile=XXXXX --embedCert
 ```
 
 This will package your application and then push the packaged application to the remote repository.
+
+## Inspecting Packages
+
+{% hint style="info" %}
+This section documents a SanteDB 3.0 Feature
+{% endhint %}
+
+The package manager can be used to inspect a packaged file (`.pak`) using the `--info` flag and specifying a source package. This command is useful for diagnosing package problems such as missing files, inappropriate embedded resources, etc.
+
+The output of this command for a solution file is illustrated below:
+
+```
+> pakman --info --source=sln\santedb.admin.sln.pak
+SanteDB HTML Applet Compiler v3.0.920.0 (Alberta)
+Copyright (C) 2022 SanteSuite Inc. and the SanteSuite Contributors (See NOTICE.md)
+Package Type: AppletSolution
+Tooling Version: 2.2.1.10
+ID: santedb.admin.sln
+Version: 2.1.55.0
+Author: SanteSuite Contributors
+Name(s): SanteDB Administration
+Public Key ID: 5A21255E8CA1A6938A3105AFF4EF9E82FAFD79B1
+Content Hash: 20C5C2ACA8857BAC358F59B54520D88BF02E70FEDA3A6E35E9A2BBC0317818F3
+Timestamp: 2023-07-04T15:26:12.1005879-04:00
+=== Embedded Publisher Information ===
+SN: CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+TUMB: 5A21255E8CA1A6938A3105AFF4EF9E82FAFD79B1
+ISSUER: CN=SanteSuite Community Applet Code Signature CA, OU=SanteSuite Applet Code Signing, O=SanteSuite Community, S=ON, C=CA
+VALIDITY: 2021-09-30 8:30:14 AM THRU 2023-09-30 8:30:14 AM
+-- INCLUDES --
+        1 - org.santedb.admin v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+        2 - org.santedb.core v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+        3 - org.santedb.uicore v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+        4 - org.santedb.bicore v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+        5 - org.santedb.config v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+        6 - org.santedb.config.init v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+        7 - org.santedb.i18n.en v. 2.5.12, CN=Fyfe Software Inc., O=Fyfe Software Inc., L=Hamilton, S=ON, C=CA
+```
+
+The output contains:
+
+* Package Type: Indicating whether a package file contains a solution (AppletSolution) or a single package (AppletPackage)
+* Tooling Version: Indicating the version of the SanteDB tooling which was used to create the package
+* ID: The unique identifier for the package
+* Version: The version of the package itself.
+* Public Key ID: The thumbprint of the publisher's certificate used to sign the content
+* Content Hash: The hash of the content which was signed with the issuing key
+* Timestamp: The time that the package was created
+* Embedded Publisher Information: If the `--embedcert` option was included on the command prompt, this is the certificate that was used by the publisher to sign the package.
