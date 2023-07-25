@@ -13,12 +13,12 @@ The dispatcher queue service is used to reliably store an outbound message to a 
 
 ### File-Based Dispatcher Queue&#x20;
 
-The default dispatcher queue used by SanteDB on all installations is a file-system based queue. This allows for a simplistic reliable messaging management where each outbound request or queue request is written and read as a file on the file system. This service is useful when:
+The default dispatcher queue used by SanteDB installations is a file-system based queue. This allows for a simplistic, reliable messaging management where each outbound request or queue request is written and read as a file on the file system. This service is useful when:
 
 * The server will have a low volume of messages sent to it
 * The server will have low latency connections to any subscribed services
 
-The file-based dispatcher queue, however can severely impact performance on high volume SanteDB iCDR services.&#x20;
+The file-based dispatcher queue, however, can severely impact performance on high volume SanteDB iCDR services.&#x20;
 
 {% hint style="info" %}
 It is not recommended to use the File-Based dispatcher queue in a production environment.
@@ -26,7 +26,7 @@ It is not recommended to use the File-Based dispatcher queue in a production env
 
 ### Windows Server Optimization - Microsoft Message Queue (MSMQ)
 
-In installations where Microsoft Windows Server is used exclusively as the underlying operating system for SanteDB, it is recommended that Microsoft Message Queue (MSMQ) is used for message queueing services. MSMQ offers extremely high performance and reliable message delivery but is an operating system level service provided by Microsoft Windows Server. When deploying SanteDB in non-Windows or mixed operating system environments, please see the following section on RabbitMQ.&#x20;
+In installations where Microsoft Windows Server is used exclusively as the underlying operating system for SanteDB's iCDR, Microsoft Message Queue (MSMQ) is recommended for use as a message queueing service. MSMQ offers extremely high performance and reliable message delivery but is an operating system level service provided by Microsoft Windows Server. When deploying SanteDB in non-Windows or mixed operating system environments, please see the following section on RabbitMQ.&#x20;
 
 In a MSMQ deployment, the MSMQ _dispatcher_ allows SanteDB iCDR to connect to a Microsoft Message Queue _server_. This service allows SanteDB iCDR servers to queue messages to the MSMQ service on a local machine (`.\\$Private`) or on a remote machine (with appropriate configuration).  MSMQ is suitable when:
 
