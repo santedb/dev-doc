@@ -45,11 +45,7 @@ Whenever a role needs to be granted (or denied) permission to perform an action,
 
 ### **Revision History**
 
-| Author                   | Date       | Changes         |
-| ------------------------ | ---------- | --------------- |
-| Justin Fyfe (SanteSuite) | 2022-03-15 | Initial Version |
-|                          |            |                 |
-|                          |            |                 |
+<table><thead><tr><th width="150">Author</th><th width="245">Date</th><th>Changes</th></tr></thead><tbody><tr><td>Justin Fyfe (SanteSuite)</td><td>2022-03-15</td><td>Initial Version</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
 ### See Also
 

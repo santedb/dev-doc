@@ -27,10 +27,7 @@ The ONC dataset has two identity domains which need to be created in the SanteDB
 
 You will need to register two identity domains:
 
-| Namespace | URL                | OID              | Unique |
-| --------- | ------------------ | ---------------- | ------ |
-| ONC       | http://onc.org/eid | 2.25.4949384934  | true   |
-| MRN       | http://onc.org/mrn | 2.25.17237262721 | false  |
+<table><thead><tr><th width="150">Namespace</th><th>URL</th><th width="193">OID</th><th>Unique</th></tr></thead><tbody><tr><td>ONC </td><td>http://onc.org/eid</td><td>2.25.4949384934</td><td>true</td></tr><tr><td>MRN</td><td>http://onc.org/mrn</td><td>2.25.17237262721</td><td>false</td></tr></tbody></table>
 
 ### Optimizing Match Configuration
 

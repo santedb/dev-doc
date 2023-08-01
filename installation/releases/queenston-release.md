@@ -218,12 +218,7 @@ Users can implement custom search term parsing/filtering based on their use case
 
 The SanteDB matching job has been updated to modify the behavior of the job based on the configuration of the environment it is running in. The table below provides a summary of this change:&#x20;
 
-| OS            | CPU       | Matching / Strategy                                         |
-| ------------- | --------- | ----------------------------------------------------------- |
-| Windows       | < 4 Cores | <p>Multi-Threaded Load (PLINQ)<br>Single Threaded Match</p> |
-|               | 4+ Cores  | <p>Multi-Threaded Load (PLINQ)<br>Multi-Threaded Match</p>  |
-| Docker / Mono | < 4 Cores | <p>Single-Threaded Load<br>Single Threaded Match</p>        |
-|               | 4+ Cores  | <p>Single-Threaded Load<br>Multi-Threaded Match</p>         |
+<table><thead><tr><th>OS</th><th width="182.377245508982">CPU</th><th>Matching / Strategy</th></tr></thead><tbody><tr><td>Windows</td><td>&#x3C; 4 Cores</td><td>Multi-Threaded Load (PLINQ)<br>Single Threaded Match</td></tr><tr><td></td><td>4+ Cores</td><td>Multi-Threaded Load (PLINQ)<br>Multi-Threaded Match</td></tr><tr><td>Docker / Mono</td><td>&#x3C; 4 Cores</td><td>Single-Threaded Load<br>Single Threaded Match</td></tr><tr><td></td><td>4+ Cores</td><td>Single-Threaded Load<br>Multi-Threaded Match</td></tr></tbody></table>
 
 When running the background matching job in Docker , users may experience periods of time where the available threads in the thread pool are consumed by the worker tasks. This appears to be the Mono implementation of `ConcurrentQueue` and/or the method in which Mono allocates threads.&#x20;
 

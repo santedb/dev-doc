@@ -299,9 +299,5 @@ When evaluating a match the a attribute configuration will generate the Double M
 
 Here, the matching engine would alter the given scores for each of the patients under consideration:
 
-| Name              | namepart\_extract | dmetaphone | assertion | similarity | Score                |
-| ----------------- | ----------------- | ---------- | --------- | ---------- | -------------------- |
-| Kimberleigh Smith | Kimberleigh       | KMPR       | PASS      | 0.429      | 42% of match score   |
-| Kimberly Smith    | Kimberly          | KMPR       | PASS      | 1.0        | 100% of match score  |
-| Kimber Smith      | Kimber            | KMPR       | PASS      | 0.715      | 71.5% of match score |
+<table data-header-hidden><thead><tr><th>Name</th><th>namepart_extract</th><th width="150">dmetaphone</th><th>assertion</th><th>similarity</th><th>Score</th></tr></thead><tbody><tr><td>Name</td><td>namepart_extract</td><td>dmetaphone</td><td>assertion</td><td>similarity</td><td>Score</td></tr><tr><td>Kimberleigh Smith</td><td>Kimberleigh</td><td>KMPR</td><td>PASS</td><td>0.429</td><td>42% of match score</td></tr><tr><td>Kimberly Smith</td><td>Kimberly</td><td>KMPR</td><td>PASS</td><td>1.0</td><td>100% of match score</td></tr><tr><td>Kimber Smith</td><td>Kimber</td><td>KMPR</td><td>PASS</td><td>0.715</td><td>71.5% of match score</td></tr></tbody></table>
 

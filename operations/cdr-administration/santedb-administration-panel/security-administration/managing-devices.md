@@ -107,3 +107,21 @@ The permission types in SanteDB are:
 
 Policies can be removed from a device by clicking the `Remove` button. When a policy is removed, it means that the device (or any application or using using it) has no specific grant applied to the policy (i.e. if the user is in a group its grant will apply, otherwise the default of DENY is applied).
 
+### Certificate Mapping
+
+{% hint style="info" %}
+This section describes a feature in SanteDB v3.0
+{% endhint %}
+
+SanteDB 3.0 introduces the ability to map certificates for either authentication or digital signatures to devices, applications or users.&#x20;
+
+* Authentication: Authentication certificates are used when the SanteDB server is running in HTTPS mode which requires client certificates, or operating behind NGINX with the correct HTTP headers passed for client authentication.&#x20;
+* Digital Signatures: Digital signatures are used in the generation of SanteDB VRP, JWS payloads, sessions, etc. issued by the device.
+
+<figure><img src="../../../../.gitbook/assets/image (464).png" alt=""><figcaption></figcaption></figure>
+
+Certificates are mapped by selecting a PEM encoded file (a `cer, crt` or `der` file extension) and uploading it.&#x20;
+
+{% hint style="warning" %}
+Ensure that the uploaded file does not contain the private key. Authentication certificates are identified via thumbprint, and only one security device, application or user may use a single certificate for authentication or digital signature.
+{% endhint %}

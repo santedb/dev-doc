@@ -39,11 +39,7 @@ _This section of the standard operating procedure documentation indicates the ov
 
 ### **Revision History**
 
-| Author | Date | Changes |
-| ------ | ---- | ------- |
-|        |      |         |
-|        |      |         |
-|        |      |         |
+<table><thead><tr><th width="150">Author</th><th width="245">Date</th><th>Changes</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
 ### See Also
 

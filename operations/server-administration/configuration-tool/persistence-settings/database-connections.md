@@ -35,21 +35,13 @@ When PostgreSQL is selected as the database software, you should enter the conne
 
 When Firebird is selected as the database software, SanteDB will assume you're using an embedded IBSQL (Firebird) database.
 
-| Option          | Description                                                                | Example |
-| --------------- | -------------------------------------------------------------------------- | ------- |
-| user id         | The user identifier to connect to the database provider (should be SYSDBA) | SYSDBA  |
-| password        | If password protecting the database, the password of SYSDBA                |         |
-| initial catalog | The name of the FDB file to connect to or a new database.                  |         |
+<table><thead><tr><th>Option</th><th width="222.33333333333331">Description</th><th>Example</th></tr></thead><tbody><tr><td>user id</td><td>The user identifier to connect to the database provider (should be SYSDBA)</td><td>SYSDBA</td></tr><tr><td>password</td><td>If password protecting the database, the password of SYSDBA</td><td></td></tr><tr><td>initial catalog</td><td>The name of the FDB file to connect to or a new database.</td><td></td></tr></tbody></table>
 
 ### SQLite / SQLCipher
 
 SanteDB iCDR version 3.0 and higher supports the configuration of the SQLite and SQLCipher persistence layer. This is ideal for test environments and lightweight deployments.
 
-| Option       | Description                                                                       | Example     |
-| ------------ | --------------------------------------------------------------------------------- | ----------- |
-| data source  | The name of the SQLite database file which should be used for connection          | test.sqlite |
-| password     | If using SQLCipher the password indicates the passkey for the encrypted database. |             |
-| foreign keys | True when the SQLite engine should enforce foreign keys.                          |             |
+<table><thead><tr><th>Option</th><th width="222.33333333333331">Description</th><th>Example</th></tr></thead><tbody><tr><td>data source</td><td>The name of the SQLite database file which should be used for connection</td><td>test.sqlite</td></tr><tr><td>password</td><td>If using SQLCipher the password indicates the passkey for the encrypted database.</td><td></td></tr><tr><td>foreign keys</td><td>True when the SQLite engine should enforce foreign keys.</td><td></td></tr></tbody></table>
 
 ## Creating a new Database
 

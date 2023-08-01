@@ -37,15 +37,37 @@ The core properties are:
 If there are more than one administrator be sure to use the search function first to ensure you're not configuring a duplicate identifier.
 {% endhint %}
 
+### Validation
+
+The validation section of the identity domain screen allows administrators to specify how identifiers in the domain are subjected to the [DataQualityValidation](../../../../user-guides-and-training/santempi/the-patient-dashboard/data-quality-tab.md) when objects are registered. These also control the input controls for identifier information in the user interface.
+
+<figure><img src="../../../../.gitbook/assets/image (278).png" alt=""><figcaption></figcaption></figure>
+
+#### Validation Regex
+
+The validation regex is used to validate the format of the identifier. This is how the identifier appears when presented on cards, and what is expected to be submitted to the CDR. As the validation regex is entered, an example of an identifier in the format provided will be provided. Some simple regular expressions are included below for the reader's convenience, and can be combined as necessary.
+
+| Regular Expression | Validates                            | Example |
+| ------------------ | ------------------------------------ | ------- |
+| `[A-Z]{1,3}`       | 1-3 upper-case letters               | ABC     |
+| `\d{5}`            | Exactly 5 digits (0-9)               | 029382  |
+| \[MF]              | Only M or F                          | M       |
+| \[A-Za-z]{6}       | Exactly 6 upper or lower-case letter | AJFHDJS |
+| \\-                | A -                                  |         |
+
+#### Check Digit Type
+
+If the identifier has a check digit scheme which does not appear in the identifier number itself (or if you would like a check digit generated when the UI stores the data) you can supply an independent checkdigit algorithm.
+
+#### Custom Format Validator
+
+The custom format validator is used to validate identifiers using special implementation logic. Custom validators can be used to validate generated identifiers (using information in the submitted Patient for example), or can be used to validate inline check-digit algorithms (i.e. if the check digit is the last 2 digits of the identifier value).
+
 ### Authority and Scope
 
 The authority and scope configuration area will dictate how SanteDB discloses the specified identifier, which system(s) can assign the identifier, and the scope (objects which can be assigned the identifier).
 
 ![](<../../../../.gitbook/assets/image (116).png>)
-
-#### Assigning App
-
-In the example above, this new **MOH\_ID\_HIV\_EMR\_MRN**  identity domain, only authenticated devices running the application org.santedb.disconnected\_client.android (the Android SanteDB Client) is the authoritative source of identifiers for this domain. Other systems can register patients and provide this identifier, however if the MPI doesn't recognize a new identity (say from OpenMRS) it will flag it as a DQ issue.
 
 #### Scope
 
@@ -58,3 +80,15 @@ Whenever SanteMPI receives a registration that attempts to assign an identity in
 When specified, this parameter dictates the policy which must be granted to the principal which is accessing it, otherwise the identifier will be masked. For example, the set disclosure policy would require the user, device, and application to not have been prohibited access to the DISCLOSE HIV INFORMATION policy.&#x20;
 
 If the user or remote system has not been explicitly granted that policy, it will be masked and the issuer of the request can establish an ELEVATED session with the MPI to gain access to the identifiers.
+
+### Assigning Authority
+
+{% hint style="info" %}
+This section describes a feature that is only in SanteDB v3.0&#x20;
+{% endhint %}
+
+The assigning authority of the identity domain allows an administrator to prohibit the issuance of new authoritative identifiers, save for the list of designated applications provided.&#x20;
+
+<figure><img src="../../../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
+
+The application is assigned by selecting the [security application credential ](../../../server-administration/santedb-icdr-admin-console/application-administration.md)which is permitted to issue identifiers in the domain. The administrator may also specify whether submissions from the indicated source are authoritative or informative.

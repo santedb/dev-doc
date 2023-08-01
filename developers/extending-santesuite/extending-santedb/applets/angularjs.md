@@ -299,11 +299,7 @@ The authority select directive creates a drop-down selection which allows a user
    ng-scope="[value]" />
 ```
 
-| Attribute      | Description                                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| ng-scope       | The property/attribute where the value of the authority selection should be placed                                        |
-| key            | The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted. |
-| identity-scope | The scope of the authorities to show in the selector (i.e. the types of authorities to show)                              |
+<table><thead><tr><th width="230.61443261852793">Attribute</th><th>Description</th></tr></thead><tbody><tr><td>ng-scope</td><td>The property/attribute where the value of the authority selection should be placed</td></tr><tr><td>key</td><td>The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted.</td></tr><tr><td>identity-scope</td><td>The scope of the authorities to show in the selector (i.e. the types of authorities to show)</td></tr></tbody></table>
 
 ### Concept Select (concept-select)
 
@@ -321,13 +317,7 @@ The concept select shows a searchable input which is bound to a concept set.
 
 #### Parameters
 
-| Attribute        | Type    | Description                                                                                                               |
-| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
-| ng-scope         | \*      | The property/attribute where the value of the selected concept selection should be placed                                 |
-| key              | String  | The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted. |
-| concept-set      | String  | The name of the concept set to use to populate the searchable drop-down.                                                  |
-| exclude-concepts | UUID\[] | The concepts to exclude from the selection box                                                                            |
-| add-concept      | UUID\[] | Concepts which are to be added to the concept select (this is useful for adding null-flavor options)                      |
+<table><thead><tr><th width="230.61443261852793">Attribute</th><th width="150">Type</th><th>Description</th></tr></thead><tbody><tr><td>ng-scope</td><td>*</td><td>The property/attribute where the value of the selected concept selection should be placed</td></tr><tr><td>key</td><td>String</td><td>The path on the objects returned from the server API where the "value" (what gets put into ng-scope) should be extracted.</td></tr><tr><td>concept-set</td><td>String</td><td>The name of the concept set to use to populate the searchable drop-down.</td></tr><tr><td>exclude-concepts</td><td>UUID[]</td><td>The concepts to exclude from the selection box</td></tr><tr><td>add-concept</td><td>UUID[]</td><td>Concepts which are to be added to the concept select (this is useful for adding null-flavor options)</td></tr></tbody></table>
 
 #### Example Use
 
