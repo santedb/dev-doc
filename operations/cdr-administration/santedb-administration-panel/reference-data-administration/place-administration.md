@@ -39,7 +39,7 @@ SanteDB contains place registrations for countries - when implementing a place h
 
 To create a place press the **Create** button, this will present the administrator with a basic entry form to enter the key details about new place:
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 The form fields to be provided are:
 
@@ -72,7 +72,7 @@ After creating a place, or viewing a place from the existing list of places regi
 
 To change the place status, administrators should click on the status indicator and select another state to place the Place instance into:
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Statuses here follow the normal [Entity State Machine](../../../../santedb/data-and-information-architecture/conceptual-data-model/entities/state-machine.md).
 
@@ -112,13 +112,13 @@ Identifiers can be removed using the **X** button beside the identifier to be re
 
 The address on a place (City, Province, Country, etc.) often serves the address template whenever a structure address is selected for this place. Addresses should be updated whenever the parent relationship changes, or can be used to specify the address template for objects created within this place.
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Editing Hierarchy
 
 The place hierarchy is used to establish the parent and children of the geographic place within the SanteDB system. The hierarchy is listed in the Hierarchy panel on the place details screen.
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Child places can be removed directly from the hierarchy window without entering edit mode. However, if the parent or new children are to be added, the administrator must click on the Pencil icon to enter edit mode which will enable the form inputs.
 
@@ -140,7 +140,7 @@ SanteDB supports the assignment of dedicate service delivery locations (faciliti
 
 The default option when adding a dedicated service delivery location is to link an existing facility. This is done by searching for an existing facility and pressing ADD.
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Associating a New Facility
 

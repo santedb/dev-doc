@@ -255,6 +255,8 @@
       * [Importing Data](operations/cdr-administration/santedb-administration-panel/reference-data-administration/importing-data.md)
       * [Place Administration](operations/cdr-administration/santedb-administration-panel/reference-data-administration/place-administration.md)
       * [Identity Domain Management](operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
+    * [Concept Dictionary Administration](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/README.md)
+      * [Code Systems](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/code-systems.md)
     * [Reports Centre](operations/cdr-administration/santedb-administration-panel/reports-centre.md)
     * [Security Administration](operations/cdr-administration/santedb-administration-panel/security-administration/README.md)
       * [Managing User Accounts](operations/cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md)

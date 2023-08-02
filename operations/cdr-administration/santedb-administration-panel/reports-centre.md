@@ -30,7 +30,7 @@ The types of parameters will depend on the report, the general types of report p
 
 After selecting the parameters, the report output can be previewed by pressing **Apply**.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Only the first 1,000 results are rendered in the preview. The search bar in the tabular preview will only filter on the first 1,000 results.

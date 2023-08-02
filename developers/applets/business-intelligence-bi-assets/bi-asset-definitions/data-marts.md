@@ -224,13 +224,13 @@ Links between tables can be established using a `type="ref"` on your column and 
 
 Would result in a schema where:
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Parent Tables
 
 SanteDB's primary CDR stores data as a series of objects in a hierarchy (see:  [Conceptual Information Model](../../../../santedb/data-and-information-architecture/conceptual-data-model/)). In a relational database this is represented as "table per class" pattern, using the entity classes, this can be represented as.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 This means that every `Place`, `Person`, `Patient`, and `Provider` should have an entry in `Entity` as well with the core data elements. Each other table merely adds more data to the previous.&#x20;
 
