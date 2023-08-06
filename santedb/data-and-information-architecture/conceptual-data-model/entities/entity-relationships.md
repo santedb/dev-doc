@@ -6,7 +6,7 @@ Figure 2 represents a sample information model of a kit of BCG vaccine. The mode
 
 Figure 3 represents a complex scenario of kitting a vaccine and then deriving a specific type of kit. The relationship between the instantiation and the generic concepts of the material would have a type of “Manufactured” meaning the “GSK 5 ml BCG” is a manufactured representation of the generic BCGvaccine.
 
-![Figure 3 - Instantiating BCG Vaccine kit to Manufactured Materials ](<../../../../.gitbook/assets/image (1) (1) (1).png>)
+![Figure 3 - Instantiating BCG Vaccine kit to Manufactured Materials ](<../../../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 The SanteDB model also supports more simplistic representation of a “BCG Vaccine” if kits are not required by the jurisdiction that is implementing SanteDB. Figure 4 illustrates a valid representation of BCG in a jurisdiction where only the antigen is tracked.
 

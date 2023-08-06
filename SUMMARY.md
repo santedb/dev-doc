@@ -203,6 +203,7 @@
         * [Installing the dCDR SDK](installation/installation-1/deployment/installing-software/disconnected-gateway/installing-the-dcdr-sdk.md)
         * [User Interface App Settings](installation/installation-1/deployment/installing-software/disconnected-gateway/app-settings.md)
     * [Post Deployment Tuning](installation/installation/santedb-server/production-installation-notes.md)
+    * [Securing SanteDB Databases](installation/installation-1/deployment/securing-santedb-databases.md)
     * [Securing SanteDB APIs](installation/installation-1/deployment/securing-the-apis.md)
   * [Rollout](installation/installation-1/rollout.md)
 * [Demonstration Environments](santedb/demonstration-environment.md)
