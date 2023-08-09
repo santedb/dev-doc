@@ -91,6 +91,7 @@ To enable, ALE, in a supported `<section>` element in your configuration file, a
       storeName="My" 
       storeLocation="CurrentUser" 
       findValue="e3829c6d1db995abcc4fc0a1a7cde9445e411e10"/>
+  <saltSeed>AEAD43FD3E4FE3FDB432F032348090232F</saltSeed>
   <fields>
     <enable>entity.identifier</enable>
     <enable>address.component</enable>
@@ -106,5 +107,40 @@ The configuration attributes are:
   * **random**: Each field is encrypted with a unique IV generated randomly. When this mode is enabled, any ALE fields **CANNOT BE QUERIED** , rather the data is securely stored in the database file.
   * **off**: Disables the ALE encryption. If a database was previously encrypted, the data in the columns will be decrypted.
 * **certificate:** This specifies the application master key in your application server's secure certificate store.
-* **fields:** The field identifiers that are to be included in ALE encryption (note: if **random** is configured as the **aleMode** of random, these fiels are no longer queryable).
+* **fields:** The field identifiers that are to be included in ALE encryption (note: if **random** is configured as the **aleMode** of random, these fields are no longer queryable).
+* **saltSeed:** To better protect the values encrypted using **deterministic** mode (to prevent rainbow value attacks) the IV and encrypted values are salted using this value as a seed. This value should be a 128-bit number.
+
+After configuring ALE, stop the SanteDB host process on all application servers:&#x20;
+
+{% tabs %}
+{% tab title="Windows" %}
+```
+net stop santedb
+santedb --config=santedb.config.xml --test-start
+net start santedb
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+```
+sudo systemctl stop santedb
+sudo mono /opt/santedb/santedb.exe --config=/opt/santedb/santedb.config.xml --test-start
+sudo systemctl start santedb
+```
+{% endtab %}
+{% endtabs %}
+
+### Disabling/Changing ALE Parameters
+
+If, for any reason, the ALE parameters need to be disabled or changed, you must instruct SanteDB to decrypt the database fields (prior optionally to re-encrypting them with another key).&#x20;
+
+The first step is to allow SanteDB to decrypt the database, this is done by changing `aleMode="deterministic"` to `aleMode="off"` and allowing SanteDB to process the ALE change with the `--test-start` option.
+
+When this operation is complete, the ALE parameters (such as fields, or keys) can be changed, and the database is then re-encrypted with the new settings.
+
+{% hint style="danger" %}
+It is important, in the decryption process that the existing ALE settings for key and fields do not change - as these may impede the decryption and re-encryption process.
+{% endhint %}
+
+
 
