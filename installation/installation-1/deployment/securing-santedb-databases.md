@@ -38,7 +38,17 @@ TDE is enabled by default on SanteDB when using SQLCipher and setting the `passw
 This section describes a feature in SanteDB 3.0
 {% endhint %}
 
-SanteDB 3.0 introduces ALE. ALE is database intdependent and transparently handles the encryption of selected columns before they are written and/or read from the database. ALE can be used to selectively encrypt portions of the database. For example, when storing JOHN SMITH via any of the SanteDB APIs, the values are transparently encrypted so in the database an encrypted string is stored.
+SanteDB 3.0 introduces ALE. ALE is database intdependent and transparently handles the encryption of selected columns before they are written and/or read from the database. ALE can be used to selectively encrypt portions of the database.&#x20;
+
+For example, by default the SanteDB entity name table may appear as:
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+However, when ALE is enabled, the data in the database column appears as:
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+The original values remain for any of the SanteDB APIs, the values are transparently encrypted so in the database an encrypted string is stored.
 
 ALE has advantages in that:
 
@@ -67,8 +77,34 @@ In SanteDB ALE is comprised of the following components:
 
 The encryption is performed transparently to the applications using the data.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Enabling ALE
 
-This feature is currently being documented.
+When ALE is enabled in the Configuration Tool via the `Application Level Encryption` option , the configuration tool will either encrypt or decrypt the entire database. When enabled via configuration, existing data is encrypted or decrypted on service start.&#x20;
+
+To enable, ALE, in a supported `<section>` element in your configuration file, add the `<aleConfiguration>` element.&#x20;
+
+```xml
+<aleConfiguration aleMode="deterministic">
+  <certificate findType="FindByThumbprint" 
+      storeName="My" 
+      storeLocation="CurrentUser" 
+      findValue="e3829c6d1db995abcc4fc0a1a7cde9445e411e10"/>
+  <fields>
+    <enable>entity.identifier</enable>
+    <enable>address.component</enable>
+    <enable>name.component</enable>
+  </fields>
+</aleConfiguration>
+```
+
+The configuration attributes are:
+
+* **aleMode**: Sets the method of encryption. The values for this attribute are:
+  * **deterministic:** Each field is encrypted with an IV based on the input value. When deterministic mode is enabled, the data is encrypted in a way that queries may still be executed on the fields, however multiple fields with the same un-encrypted value will have the same ciphertext, and thus, this method is less secure.
+  * **random**: Each field is encrypted with a unique IV generated randomly. When this mode is enabled, any ALE fields **CANNOT BE QUERIED** , rather the data is securely stored in the database file.
+  * **off**: Disables the ALE encryption. If a database was previously encrypted, the data in the columns will be decrypted.
+* **certificate:** This specifies the application master key in your application server's secure certificate store.
+* **fields:** The field identifiers that are to be included in ALE encryption (note: if **random** is configured as the **aleMode** of random, these fiels are no longer queryable).
+
