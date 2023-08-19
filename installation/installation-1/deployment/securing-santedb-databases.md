@@ -111,7 +111,7 @@ The configuration attributes are:
   * **deterministic:** Each field is encrypted with an IV based on the input value. When deterministic mode is enabled, the data is encrypted in a way that queries may still be executed on the fields, however multiple fields with the same un-encrypted value will have the same ciphertext, and thus, this method is less secure.
   * **random**: Each field is encrypted with a unique IV generated randomly. When this mode is enabled, any ALE fields **CANNOT BE QUERIED** , rather the data is securely stored in the database file.
   * **off**: Disables the ALE encryption. If a database was previously encrypted, the data in the columns will be decrypted.
-* **certificate:** This specifies the application master key in your application server's secure certificate store
+* **certificate:** This specifies the application master key in your application server's secure certificate store (note: you can also use the `--reencrypt` prompt to select the certificate)
 * **saltSeed:** To better protect the values encrypted using **deterministic** mode (to prevent rainbow value attacks) the IV and encrypted values are salted using this value as a seed. This value should be a 128-bit number.
 
 After configuring ALE, stop the SanteDB host process on all application servers:&#x20;
@@ -120,7 +120,7 @@ After configuring ALE, stop the SanteDB host process on all application servers:
 {% tab title="Windows" %}
 ```
 net stop santedb
-santedb --config=santedb.config.xml --test-start
+santedb --config=santedb.config.xml --reencrypt
 net start santedb
 ```
 {% endtab %}
@@ -128,11 +128,17 @@ net start santedb
 {% tab title="Linux" %}
 ```
 sudo systemctl stop santedb
-sudo mono /opt/santedb/santedb.exe --config=/opt/santedb/santedb.config.xml --test-start
+sudo mono /opt/santedb/santedb.exe --config=/opt/santedb/santedb.config.xml --reencrypt
 sudo systemctl start santedb
 ```
+
+
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+When ALE is enabled via the --reencrypt option, your configuration file will be protected.
+{% endhint %}
 
 ### Disabling/Changing ALE Parameters
 
@@ -151,7 +157,7 @@ It is important, in the decryption process that the existing ALE settings for ke
 There may arise a time when you need to change the application master key or symmetric master key due to certificate expiration, disclosure, etc. To perform key rotation, SanteDB needs to decrypt your ALE data, and then re-encrypt it using the new parameters. This process can be performed by running:
 
 ```
-santedb --key-rotate --config=myconfig.xml
+santedb --reencrypt --config=santedb.config.xml
 ```
 
 {% hint style="danger" %}
@@ -160,4 +166,8 @@ To not modify your `santedb.config.xml` file prior to running this command. Your
 
 {% hint style="warning" %}
 You will need to propogate your configuration to other SanteDB server hosts if you are running with multiple application servers.
+{% endhint %}
+
+{% hint style="info" %}
+You can disable ALE by entering an empty value when prompted for the new ALE encryption certificate thumbprint.
 {% endhint %}
