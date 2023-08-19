@@ -86,28 +86,32 @@ When ALE is enabled in the Configuration Tool via the `Application Level Encrypt
 To enable, ALE, in a supported `<section>` element in your configuration file, add the `<aleConfiguration>` element.&#x20;
 
 ```xml
-<aleConfiguration aleMode="deterministic">
+<aleConfiguration enabled="true">
   <certificate findType="FindByThumbprint" 
       storeName="My" 
       storeLocation="CurrentUser" 
       findValue="e3829c6d1db995abcc4fc0a1a7cde9445e411e10"/>
   <saltSeed>AEAD43FD3E4FE3FDB432F032348090232F</saltSeed>
-  <fields>
-    <enable>entity.identifier</enable>
-    <enable>address.component</enable>
-    <enable>name.component</enable>
-  </fields>
+  <!-- Need exact matching -->
+  <field mode="deterministic">entity.identifier</field>
+  <!-- Need exact matching -->
+  <field mode="deterministic">address.component</field>
+  <!-- Need soundex and levenshtein so no encryption -->
+  <field mode="off">name.component</field>
+  <!-- Don't need to query by note text -->
+  <field mode="random">entityNote.text</field>
+
 </aleConfiguration>
 ```
 
 The configuration attributes are:
 
-* **aleMode**: Sets the method of encryption. The values for this attribute are:
+* **enabled**: Enables the global ALE system.
+* **field:** The fields to be enabled for encryption, wth the specified mode:
   * **deterministic:** Each field is encrypted with an IV based on the input value. When deterministic mode is enabled, the data is encrypted in a way that queries may still be executed on the fields, however multiple fields with the same un-encrypted value will have the same ciphertext, and thus, this method is less secure.
   * **random**: Each field is encrypted with a unique IV generated randomly. When this mode is enabled, any ALE fields **CANNOT BE QUERIED** , rather the data is securely stored in the database file.
   * **off**: Disables the ALE encryption. If a database was previously encrypted, the data in the columns will be decrypted.
-* **certificate:** This specifies the application master key in your application server's secure certificate store.
-* **fields:** The field identifiers that are to be included in ALE encryption (note: if **random** is configured as the **aleMode** of random, these fields are no longer queryable).
+* **certificate:** This specifies the application master key in your application server's secure certificate store
 * **saltSeed:** To better protect the values encrypted using **deterministic** mode (to prevent rainbow value attacks) the IV and encrypted values are salted using this value as a seed. This value should be a 128-bit number.
 
 After configuring ALE, stop the SanteDB host process on all application servers:&#x20;
@@ -142,5 +146,18 @@ When this operation is complete, the ALE parameters (such as fields, or keys) ca
 It is important, in the decryption process that the existing ALE settings for key and fields do not change - as these may impede the decryption and re-encryption process.
 {% endhint %}
 
+### Key Rotation
 
+There may arise a time when you need to change the application master key or symmetric master key due to certificate expiration, disclosure, etc. To perform key rotation, SanteDB needs to decrypt your ALE data, and then re-encrypt it using the new parameters. This process can be performed by running:
 
+```
+santedb --key-rotate --config=myconfig.xml
+```
+
+{% hint style="danger" %}
+To not modify your `santedb.config.xml` file prior to running this command. Your configuration file should contain the settings for the current ALE settings. The key rotation will automatically set your configuration file with the new certificate parameters.
+{% endhint %}
+
+{% hint style="warning" %}
+You will need to propogate your configuration to other SanteDB server hosts if you are running with multiple application servers.
+{% endhint %}
