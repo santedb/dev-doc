@@ -39,7 +39,7 @@ It is expected that callers will use the HTTP GET to GET the resulting location 
 Visual codes will only ever resolve to a single resource. This means codes which represent multiple patients, substance administrations, locations, materials, etc. are considered invalid by the API and return a 500 error.
 {% endhint %}
 
-## Visual Code Specification&#x20;
+## Visual Code Specification  (SanteDB 2.x)
 
 The default visual code generator in SanteDB iCDR and dCDR is a structured QR code containing an RFC7515 payload. A sample of a resource pointer code is:
 
@@ -115,6 +115,60 @@ This minimal payload is used on purpose to ensure:
 2. Authentication is required to query the iCDR or dCDR to obtain full context of the code.
 3. Authorization is applied on querying the iCDR or dCDR to ensure that appropriate privacy controls are enforced.
 
-### SanteDB Version 3.0
+## Visual Code Specification (SanteDB 3.x)
 
 SanteDB 3.0 has been expanded to include searches for different types of barcode information such as [Smart Health Cards (SHC)](https://smarthealth.cards/en/). Because of this the formatting of the VRP barcodes has been changed. The payload still uses JWS and the JWS payload remains the same, however the QR code is encoded with `svrp://HEX_ENCODED_BYTES`. This payload should be sent to the `_ptr` and search operations.
+
+### Visual Code Header
+
+The header of a SanteDB 3.x VRP QR code is identified by the type `application/x.santedb.vrp` in the JWS header.&#x20;
+
+```
+{
+  "alg": "RS256",
+  "typ": "application/x.santedb.vrp",
+  "kid": "6DF462EB94ECD87D57B1ECF53CAA436673FA02A4",
+  "x5t": "bfRi65Ts2H1Xsez1PKpDZnP6AqQ",
+  "zip": "DEF",
+  "cty": null
+}
+```
+
+The following headers are included in a SanteDB VRP:
+
+* alg: Must be either RS256 (if x509 certificates are used - as it the default for QR codes generated from the web clients) or HS256
+* typ: Fixed to `application/x.santedb.vrp`
+* kid: The named key identifier in the `/.well-known/jwks` endpoint on the SanteDB server (note: this KID is the configured digital signature certificate for the device which generated the code)
+* x5t: The key thumbprint
+* zip: All VRP codes are compressed with the `deflate` algorithm, indicated by the DEF value in this header.
+
+### Visual Code Payload
+
+The visual resource pointer payload includes metadata about the resource which is being pointed to. The payload is formatted as metadata + resource data:
+
+```
+{
+  "ver": "3.0.1041.0",
+  "iat": 1693325183,
+  "sub": "09cd5d98-20d8-40b2-95a0-ad0b209592d1",
+  "gen_by": "Administrator",
+  "data": {
+    "$type": "Patient",
+    "identifier": {
+      "SLB_MHMS_GEN_MPI_UHID": [
+        {
+          "value": "XXXXXXXXX874",
+          "checkDigit": null
+        }
+      ]
+    }
+  }
+}
+```
+
+* ver: The version of SanteDB which generated the VRP
+* iat: The timestamp that the VRP was generated
+* sub: The KEY of the resource which the VRP is pointing at
+* gen\_by: The user which generated the VRP
+* data.$type: The type of data being pointed at
+* data.identifier: The identifier of the object being pointed at. Note: That these identifiers are masked on VRPs which point at PHI.
