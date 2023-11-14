@@ -4,13 +4,13 @@
 This feature is only available on SanteDB Version 3.0
 {% endhint %}
 
-The SanteDB [Business Intelligence Services](../../../developers/applets/business-intelligence-bi-assets/), provide developers with a method of expressing queries which can aggregate, pivot and otherwise generate informative reports for users. These reports vary depending on the configuration of SanteDB, however they are all available through the report centre on the SanteDB administrative panel menu.
+The SanteDB [Business Intelligence Services](../../../developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/), provide developers with a method of expressing queries which can aggregate, pivot and otherwise generate informative reports for users. These reports vary depending on the configuration of SanteDB, however they are all available through the report centre on the SanteDB administrative panel menu.
 
 ## Report Centre
 
 The report centre home screen provides a list of all developed public reports that have been installed on the SanteDB server.
 
-<figure><img src="../../../.gitbook/assets/image (756).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 You may launch a report with the **View** option.
 
@@ -18,7 +18,7 @@ You may launch a report with the **View** option.
 
 When clicking the View button the report launcher will be opened. Depending on whether the report accepts parameters or not, you will be presented with either the report rendering or a parameter input screen as shown below:
 
-<figure><img src="../../../.gitbook/assets/image (739).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
 
 The types of parameters will depend on the report, the general types of report parameters are:
 
@@ -30,7 +30,7 @@ The types of parameters will depend on the report, the general types of report p
 
 After selecting the parameters, the report output can be previewed by pressing **Apply**.
 
-<figure><img src="../../../.gitbook/assets/image (757).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Only the first 1,000 results are rendered in the preview. The search bar in the tabular preview will only filter on the first 1,000 results.
@@ -40,7 +40,7 @@ Only the first 1,000 results are rendered in the preview. The search bar in the 
 
 The entirety of the dataset can be downloaded by selecting the **Download** option and selecting the desired output format.
 
-<figure><img src="../../../.gitbook/assets/image (771).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Large datasets (>10,000 results) on output formats such as XLSX may consume large amounts of memory.

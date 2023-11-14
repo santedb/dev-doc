@@ -21,18 +21,18 @@ After a group record has been deleted, it is not permanently destroyed. Deleted 
 
 &#x20;1\. While the **Show Deleted** button is toggled (darkened), deleted groups can be un-deleted by clicking the **Un-Delete** button corresponding to the group to be recovered.
 
-![](<../../../../../../../../../.gitbook/assets/image (195).png>)
+![](<../../../../../../../../../.gitbook/assets/image (311).png>)
 
 2\. Click the **OK** button on the confirmation prompt appearing in the browser.
 
-![](<../../../../../../../../../.gitbook/assets/image (206).png>)
+![](<../../../../../../../../../.gitbook/assets/image (291).png>)
 
 ## Expected Behaviour
 
 * Table is reloaded to show deleted groups and should no longer include the group that was just reactivated (e.g. "Muddsville").
 
-![](<../../../../../../../../../.gitbook/assets/image (198).png>)
+![](<../../../../../../../../../.gitbook/assets/image (335).png>)
 
 * After toggling back to the un-deleted groups, the reactivated group should appear there.
 
-![](<../../../../../../../../../.gitbook/assets/image (607).png>)
+![](<../../../../../../../../../.gitbook/assets/image (310).png>)

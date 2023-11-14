@@ -43,7 +43,7 @@ There are many ways to realize this backup strategy using various technologies, 
 
 &#x20;
 
-![Basic 3-2-1 Backup Strategy](<../../.gitbook/assets/image (400).png>)
+![Basic 3-2-1 Backup Strategy](<../../.gitbook/assets/image (435).png>)
 
 The backup on the community server:
 
@@ -124,7 +124,7 @@ The following dCDR products automatically backup their local database upon syste
 
 Each of these dCDR instances will provide a system job for the backup task
 
-![](<../../.gitbook/assets/image (40).png>)
+![](<../../.gitbook/assets/image (445).png>)
 
 {% hint style="warning" %}
 Backups are encrypted AES256 encryption with a passphrase matching the name of the device which produced the backup. It is important to keep the name of the machine in order to restore the backup.

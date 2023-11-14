@@ -1,8 +1,8 @@
 # Code Systems
 
-The code system management index is where administrators will manage the global list of code systems in SanteDB. A [Code System](../../../../santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary/#reference-terms) is a collection of reference terms defined by a standards body and is typically used on the SanteDB [FHIR](../../../../developers/service-apis/hl7-fhir/), [HL7v2](../../../../developers/service-apis/hl7v2/), or GS1 interfaces.
+The code system management index is where administrators will manage the global list of code systems in SanteDB. A [Code System](../../../../santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary/#reference-terms) is a collection of reference terms defined by a standards body and is typically used on the SanteDB [FHIR](../../../../operations-1/standard-operating-procedures/hl7-fhir/), [HL7v2](../../../../developers/service-apis/hl7v2.md), or GS1 interfaces.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Code systems can be viewed, deleted, or created using the relevant buttons in the user interface.
 
@@ -10,7 +10,7 @@ Code systems can be viewed, deleted, or created using the relevant buttons in th
 
 The process of creating a new code system commences with the **Create** button on the code system list.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Fields for this user interface are:
 
@@ -30,7 +30,7 @@ Once the administrator has completed the necessary fields, the **Save** button m
 
 Existing code systems can be edited by selecting **Edit** from the code system list. This will present a code system dashboard.
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Core Properties
 
@@ -40,7 +40,7 @@ The core properties of the code system captured in the creation step of the code
 
 To add a reference term, the **Add** option can be used above the reference term list.
 
-<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 The mnemonic (or wire code) is entered into the reference term creation dialog, this needs to be unique within the scope of the code system. Additionally, one or more names can be added to the reference term. These should be the official translation of the code as they are expected to appear in HL7 messages.
 
@@ -54,7 +54,7 @@ Additionally, one or more internal concepts in the SanteDB concept dictionary ne
 
 iThe administrator should then search for a concept in the SanteDB database to be mapped. Alternatively, selecting the Magic Wand button will allow the user to create a brand new concept (with the same names as entered on the reference term).
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 It is **highly recommended** that users do not use the wire-level reference term mnemonic as the mnemonic for the concept being created. SanteDB concept mnemonics are like labels or variable names, and should be globally unique within the SanteDB instance and should be descriptive in their nature.
@@ -62,7 +62,7 @@ It is **highly recommended** that users do not use the wire-level reference term
 
 After the necessary information is entered into the creation dialog, clicking **Add** will complete the necessary opterations to associate the concept with the reference term. Additionally, users may use the **Add and Create Another** option to enter multiple codes.
 
-<figure><img src="../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Importing Code System Terms
 
@@ -73,6 +73,6 @@ For larger terminologies with thousands of codes, it may be easier to adapt a fl
 * `Concept` (optional) - Containing the Mnemonic of an existing (or new) concept to be created
 * `Mapping` (optional) - Containing the nature of the mapping between `Concept` and `Mnemonic` (`SameAs`,`NarrowerThan`, etc.)
 
-<figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 This file can be uploaded into the reference term dialog, and uploaded.

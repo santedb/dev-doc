@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button.
 
-![](<../../../../../../../../../.gitbook/assets/1 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (9).jpg>)
 
 &#x20;Fill out all the fields appropriately and for the Name field, use a name with which an application exists. (for example "Create-Application-Test")
 
@@ -33,7 +33,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should navigate to the new Create Application page.
 
-![](<../../../../../../../../../.gitbook/assets/2 (2).jpg>)
+![](<../../../../../../../../../.gitbook/assets/2 (5) (1).jpg>)
 
 2- Should show an error message below Name field indicating that duplicate record detected.
 

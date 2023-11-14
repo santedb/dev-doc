@@ -34,12 +34,12 @@ SanteMPI bundles together existing functions of SanteDB (MDM, Matching, Entity L
 
 ## Related Topics
 
-{% content-ref url="../../santedb/architecture/" %}
-[architecture](../../santedb/architecture/)
+{% content-ref url="../../santedb/architecture.md" %}
+[architecture.md](../../santedb/architecture.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../installation/installation-1/" %}
-[installation-1](../../installation/installation-1/)
+{% content-ref url="../../installation/installation/" %}
+[installation](../../installation/installation/)
 {% endcontent-ref %}
 
 {% content-ref url="../../user-guides-and-training/santempi/" %}

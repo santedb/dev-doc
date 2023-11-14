@@ -31,8 +31,8 @@ A new password and confirmation password must match to be accepted as valid duri
 
 * A red error message should appear below the **Confirm Password** textbox stating that "passwords must match".&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/image (557).png>)
+![](<../../../../../../../../../.gitbook/assets/image (74).png>)
 
 * Nothing should occur if all other required fields are provided valid values and the **Save** button is clicked (see [TEST: SECURITY-UM-01](test-security-um-01.md) for successful creation and [TEST: SECURITY-UM-02](test-security-um-02.md) for required fields missing).
 
-![](<../../../../../../../../../.gitbook/assets/image (222).png>)
+![](<../../../../../../../../../.gitbook/assets/image (134).png>)

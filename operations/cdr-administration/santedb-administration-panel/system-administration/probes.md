@@ -2,7 +2,7 @@
 
 The probes screen shows a summary of all installed `IDiagnosticsProbe` implementations on the dCDR or iCDR to which the administration panel is connected. These probes provide a real-time reading of available operating system and internal system data.
 
-![](<../../../../.gitbook/assets/image (271).png>)
+![](<../../../../.gitbook/assets/image (422) (1) (1) (1) (1).png>)
 
 Probes are used to diagnose the overall health and status of the server. Any plugin can implement an `IDiagnosticsProbe` (see: [Documentation](http://santesuite.org/assets/doc/net/html/T\_SanteDB\_Core\_Diagnostics\_IDiagnosticsProbe\_1.htm)) for any reading it wishes to emit to administrators.&#x20;
 

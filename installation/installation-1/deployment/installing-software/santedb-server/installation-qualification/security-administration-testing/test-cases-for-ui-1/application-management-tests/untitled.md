@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Navigate to the Applications/List page and click the **Show Deleted** button
 
-![](<../../../../../../../../../.gitbook/assets/17 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/17.jpg)
 
 2- Click the **Un-Delete** button to undelete the application
 

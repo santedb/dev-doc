@@ -26,10 +26,10 @@ While editing a user account, the **Audit Trail** of events where the user objec
 
 1\. Click on the **Audit Trail** tab.
 
-![](<../../../../../../../../../.gitbook/assets/image (242).png>)
+![](<../../../../../../../../../.gitbook/assets/image (313).png>)
 
 ## Expected Behaviour
 
 * A table of Audit Events appears and is filtered to show events where the current user object was accessed.
 
-![](<../../../../../../../../../.gitbook/assets/image (247).png>)
+![](<../../../../../../../../../.gitbook/assets/image (305).png>)

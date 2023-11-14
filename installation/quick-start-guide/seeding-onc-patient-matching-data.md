@@ -12,7 +12,7 @@ In order to complete this tutorial you will require the following tools:
 
 * A setup version of SanteMPI (you can use the [.](./ "mention"))
 * The ONC Patient Matching Challenge Data ([https://github.com/onc-healthit/patient-matching](https://github.com/onc-healthit/patient-matching))
-* The SanteDB SDK (you can see [installation-1](../installation-1/ "mention"))
+* The SanteDB SDK (you can see [installation](../installation/ "mention"))
 
 ## Prepare SanteMPI for ONC Data
 
@@ -37,11 +37,11 @@ To change the match configuration, click on **SanteMPI** then **Match Settings**
 
 On the **Blocking** tab if we expand a blocking instruction we see the default method of matching is Source/Master:
 
-![](<../../.gitbook/assets/image (501).png>)
+![](<../../.gitbook/assets/image (432) (1) (1) (1) (1).png>)
 
 We can change this by pressing **Edit** (pencil) and modifying both blocking instructions. After this step the configuration should appear as:
 
-![](<../../.gitbook/assets/image (737).png>)
+![](<../../.gitbook/assets/image (449) (1) (1) (1).png>)
 
 ## Prepare ONC Dataset
 
@@ -70,8 +70,8 @@ The batch file will look at all the CSV files in the current directory and for e
 
 Now you can open a command prompt and type `seed-onc.bat` to start the seeding process. There will 9 consoles opened and 9 clients will begin seeding data to the MPI.
 
-![](<../../.gitbook/assets/image (373).png>)
+![](<../../.gitbook/assets/image (443) (1) (1).png>)
 
 The overall health of your deployment can be monitored on the Probes page.
 
-![](<../../.gitbook/assets/image (568).png>)
+![](<../../.gitbook/assets/image (437) (1) (1) (1).png>)

@@ -26,27 +26,27 @@ SanteSuite allows users to register multiple **Name** objects each with Prefix, 
 
 1\. Click the **User Profile** tab.
 
-![](<../../../../../../../../../.gitbook/assets/image (203).png>)
+![](<../../../../../../../../../.gitbook/assets/image (249).png>)
 
 2\. Click the pencil in the top right-hand corner of the **Profile** to edit the properties.&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/image (220).png>)
+![](<../../../../../../../../../.gitbook/assets/image (272).png>)
 
 3\. Click the **Add** button to start adding a new Name Registration form group.
 
-![](<../../../../../../../../../.gitbook/assets/image (227).png>)
+![](<../../../../../../../../../.gitbook/assets/image (254).png>)
 
 4\. Choose a different **Name Type** from the dropdown list (e.g. "Religious")
 
-![](<../../../../../../../../../.gitbook/assets/image (196).png>)
+![](<../../../../../../../../../.gitbook/assets/image (244).png>)
 
 5\. Select a **Suffix** and **Prefix** from the corresponding dropdown lists and enter any **Given** or **Family** name(s) similar to how it is done in [TEST: SECURITY-UM-13](test-security-um-13.md) and [TEST: SECURITY-UM-14](test-security-um-14.md).
 
-![](<../../../../../../../../../.gitbook/assets/image (711).png>)
+![](<../../../../../../../../../.gitbook/assets/image (256).png>)
 
 6\. Click the green checkmark to save the newly registered **Name** object.
 
-![](<../../../../../../../../../.gitbook/assets/image (252).png>)
+![](<../../../../../../../../../.gitbook/assets/image (264).png>)
 
 ## Expected Behaviour
 
@@ -55,4 +55,4 @@ SanteSuite allows users to register multiple **Name** objects each with Prefix, 
 * Notice the red circle with exclamation mark next to the **Name** tab in step 4 when a Name Registration form group is blank. Clicking the green checkmark like in step 6 without providing a **Name Type** first like in step 5 has a result of nothing occurring.
 * A toast message appears in the top-right corner of the window stating "User updated successfully" when the steps above are followed correctly.
 
-![](<../../../../../../../../../.gitbook/assets/image (229).png>)
+![](<../../../../../../../../../.gitbook/assets/image (269).png>)

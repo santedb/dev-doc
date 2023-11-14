@@ -1,6 +1,6 @@
 # Master Data Management Tab
 
-The **Master Data Management** tab is used to control the links controlled by the [master-data-storage.md](../../../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md "mention") plugin in SanteDB.&#x20;
+The **Master Data Management** tab is used to control the links controlled by the [master-data-storage.md](../../../../santedb/data-storage-patterns/master-data-storage.md "mention") plugin in SanteDB.&#x20;
 
 {% hint style="info" %}
 The Master Data Management tab will not appear when:
@@ -10,13 +10,13 @@ The Master Data Management tab will not appear when:
 * The MDM plugin is not enabled on the iCDR server
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (287).png>)
+![](<../../../../.gitbook/assets/image (425).png>)
 
 ## Local Records
 
-The local records panel shows the currently attached/established local or source records for the current master view (including the record of truth). These records are those which have been sent by a patient identity source (see: [#mdm-data-storage-pattern](../../../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md#mdm-data-storage-pattern "mention")). These are source records which are used to derive the master record (if no record of truth is established).
+The local records panel shows the currently attached/established local or source records for the current master view (including the record of truth). These records are those which have been sent by a patient identity source (see: [#mdm-data-storage-pattern](../../../../santedb/data-storage-patterns/master-data-storage.md#mdm-data-storage-pattern "mention")). These are source records which are used to derive the master record (if no record of truth is established).
 
-![](<../../../../.gitbook/assets/image (59).png>)
+![](<../../../../.gitbook/assets/image (449).png>)
 
 ### Link Classification
 
@@ -39,9 +39,9 @@ When a source record is unlinked from the master, the MDM layer will perform its
 
 ## Candidate Records
 
-The candidates panel shows the identified [#candidate-links](../../../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md#candidate-links "mention") for the current master record.&#x20;
+The candidates panel shows the identified [#candidate-links](../../../../santedb/data-storage-patterns/master-data-storage.md#candidate-links "mention") for the current master record.&#x20;
 
-![](<../../../../.gitbook/assets/image (465).png>)
+![](<../../../../.gitbook/assets/image (455).png>)
 
 To resolve a candidate link:
 
@@ -55,13 +55,13 @@ To resolve a candidate link:
 
 Click on the candidate details button will open a popup window which illustrates the individual attribute values in both the current master and the candidate. This allows administrators to determine the reason why the two records are considered candidates for linking.
 
-![](<../../../../.gitbook/assets/image (285).png>)
+![](<../../../../.gitbook/assets/image (450) (1).png>)
 
 ## Ignored Candidates
 
 The ignored candidates panel shows the list of candidate (source) records for the current master which are considered definite non-matches (and should be ignored for future matching).
 
-![](<../../../../.gitbook/assets/image (481).png>)
+![](<../../../../.gitbook/assets/image (435) (1).png>)
 
 Like the candidates view, it is possible to perform gather an updated match report by clicking on **Details**. Users may also un-ignore the record if they feel the ignored (non-match) candidate may be a candidate for matching the master.
 

@@ -22,11 +22,11 @@ Only one group property is specifically required from user input during new grou
 
 1\. Click the **Create** button.
 
-![](<../../../../../../../../../.gitbook/assets/image (699).png>)
+![](<../../../../../../../../../.gitbook/assets/image (295).png>)
 
 2\. Click the **Save** button.
 
-![](<../../../../../../../../../.gitbook/assets/image (678).png>)
+![](<../../../../../../../../../.gitbook/assets/image (338).png>)
 
 ## Expected Behaviour
 
@@ -34,4 +34,4 @@ Only one group property is specifically required from user input during new grou
 * Remain on **Administration Panel / Security / Groups / Create Group** page.
 * Display a prompt below the required **Name** textbox with a validation message as follows:
 
-![](<../../../../../../../../../.gitbook/assets/image (681).png>)
+![](<../../../../../../../../../.gitbook/assets/image (296).png>)

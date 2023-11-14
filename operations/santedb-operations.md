@@ -40,8 +40,8 @@ The [cdr-administration](cdr-administration/ "mention") topic area covers the ad
 [santedb-administration-panel](cdr-administration/santedb-administration-panel/)
 {% endcontent-ref %}
 
-{% content-ref url="cdr-administration/santedb-icdr-admin-console/" %}
-[santedb-icdr-admin-console](cdr-administration/santedb-icdr-admin-console/)
+{% content-ref url="server-administration/santedb-icdr-admin-console/" %}
+[santedb-icdr-admin-console](server-administration/santedb-icdr-admin-console/)
 {% endcontent-ref %}
 
 ## Standard Operating Procedures
@@ -56,8 +56,8 @@ The [standard-operating-procedures](standard-operating-procedures/ "mention") to
 [role-management-sops](standard-operating-procedures/role-management-sops/)
 {% endcontent-ref %}
 
-{% content-ref url="standard-operating-procedures/device-management-sops/" %}
-[device-management-sops](standard-operating-procedures/device-management-sops/)
+{% content-ref url="standard-operating-procedures/device-management-sops.md" %}
+[device-management-sops.md](standard-operating-procedures/device-management-sops.md)
 {% endcontent-ref %}
 
 {% content-ref url="standard-operating-procedures/application-management-sops.md" %}

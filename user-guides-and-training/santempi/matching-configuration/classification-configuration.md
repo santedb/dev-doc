@@ -2,7 +2,7 @@
 
 The classification tab of the match configuration screen allows administrators the opportunity to view and edit the thresholds and method of classification for any results which have been scored in the scoring stage.
 
-![](<../../../.gitbook/assets/image (95).png>)
+![](<../../../.gitbook/assets/image (454) (1).png>)
 
 The screen shows the thresholds at which a candidate `$block` record will be classified as a match, non-match or probable match.
 
@@ -10,7 +10,7 @@ The screen shows the thresholds at which a candidate `$block` record will be cla
 
 Pressing the edit button on the classification panel will enable sliders for modifying the classification thresholds.
 
-![](<../../../.gitbook/assets/image (376).png>)
+![](<../../../.gitbook/assets/image (443) (1).png>)
 
 The administrator may select an evaluation mode which can be one of:
 

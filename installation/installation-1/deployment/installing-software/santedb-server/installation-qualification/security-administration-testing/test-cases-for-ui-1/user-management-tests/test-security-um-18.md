@@ -29,4 +29,4 @@ While creating new users, any Employer being added to a new user's profile must 
 
 * The dropdown of possible existing employers should only have a single disabled option that simply prompts users: "No results found".
 
-![](<../../../../../../../../../.gitbook/assets/image (214).png>)
+![](<../../../../../../../../../.gitbook/assets/image (262).png>)

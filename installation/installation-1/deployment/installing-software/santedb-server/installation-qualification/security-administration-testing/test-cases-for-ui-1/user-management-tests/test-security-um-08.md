@@ -36,4 +36,4 @@ As more of each of the items listed above are used, the password is stronger. **
 * A status bar should be displayed green and labelled to the right of the status bar as either **Strong** (using "Clinic@l12"; shown below) or **Very Strong** (using "Clinic@l123").
 * A new user can successfully be created after entering remaining required fields (see [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
-![](<../../../../../../../../../.gitbook/assets/image (207).png>)
+![](<../../../../../../../../../.gitbook/assets/image (231).png>)

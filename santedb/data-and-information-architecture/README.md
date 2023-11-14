@@ -22,7 +22,7 @@ SanteDB iCDR and dCDR never store or or directly with external messaging formats
 
 Take, for example, a client which is querying the SanteDB iCDR using HL7 FHIR (the pattern is identical regardless of message format).
 
-![](<../../.gitbook/assets/image (322).png>)
+![](<../../.gitbook/assets/image (180).png>)
 
 In this example, the objects are passed as.
 

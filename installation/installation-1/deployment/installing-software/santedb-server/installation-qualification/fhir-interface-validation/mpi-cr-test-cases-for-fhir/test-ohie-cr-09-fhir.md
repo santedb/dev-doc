@@ -18,7 +18,7 @@ It is generally bad practice to allow clients full control over merging/de-activ
 * LOCAL>LOCAL: In which a client indicates that a registration they have previously sent is a duplicate of another record they had previously sent. This action requires no special permissions and is the default method of using a `replaces` link.
 * MASTER>MASTER: In which two golden or `MASTER` records are merged. This process includes the migration of all local references, and the record from truth from one master (the victim) to another (the survivor). Generally this merge is not permitted by clients unless the `Merge MDM Master` permissions is granted (which is bad practice as it bypasses all governance controls on the server).
 
-These merge strategies and the conditions under which they are permitted are described in the [Master Data Management](../../../../../../../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md#merging-linking) architecture article.
+These merge strategies and the conditions under which they are permitted are described in the [Master Data Management](../../../../../../../../santedb/data-storage-patterns/master-data-storage.md#merging-linking) architecture article.
 
 Furthermore SanteDB requires establishing ownership over a particular `LOCAL` record in order to determine if a source is permitted to merge two records. Generally, source `HOSPITAL_A` is only permitted to indicate merges of data only submitted from `HOSPITAL_A` and should not allow `HOSPITAL_B` records to be merged into `HOSPITAL_A`.
 

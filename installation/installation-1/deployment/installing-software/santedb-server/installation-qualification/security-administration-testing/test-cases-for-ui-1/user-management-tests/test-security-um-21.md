@@ -25,11 +25,11 @@ The top banner on the **Administrative Panel / Security / Users / Edit User** pa
 
 1\. Click the **Edit** button for an existing user (e.g. "ClinicalStaffUser123" from [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
-![](<../../../../../../../../../.gitbook/assets/image (200).png>)
+![](<../../../../../../../../../.gitbook/assets/image (275).png>)
 
 ## Expected Behaviour
 
 * Banner displays Official Record (Suffix, Given Name(s), Family Name(s), Prefix), Username, and Role(s) for the user.
 * If any Official Record (Suffix, Given Name(s), Family Name(s), Prefix), or Role(s) are edited, the banner should show these changes.
 
-![](<../../../../../../../../../.gitbook/assets/image (527).png>)
+![](<../../../../../../../../../.gitbook/assets/image (283).png>)

@@ -19,11 +19,11 @@ The PMIR profile makes the assumption that the client is controlling the process
 
 Furthermore, the SanteDB implementation of merging behaves as described in `Chapter 3 - Patient Administration` in HL7 Version 2 (see: `3.6.2.1.2`). For example, if two patients from `HOSPITAL_A` are registered as illustrated below (patient 1 with two identifiers and patient 2 with one):
 
-![](<../../../../../../../../.gitbook/assets/image (403).png>)
+![](<../../../../../../../../.gitbook/assets/image (395).png>)
 
 Then a merge requests where Patient 1 is replaced by Patient 2 would result in a merge such that:
 
-![](<../../../../../../../../.gitbook/assets/image (377).png>)
+![](<../../../../../../../../.gitbook/assets/image (396).png>)
 
 Subsequent requests to query for a patient using `GREEN_TRIANGLE` would result in `Patient 2` being resolved. This behavior differs from the prescribed behavior of PMIR whereby the victim (in this case Patient 2) is not returned, or continues to be resolved with an inactive flag.
 

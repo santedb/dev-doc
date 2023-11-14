@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Unlock** button
 
-![](<../../../../../../../../../.gitbook/assets/10 (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/10 (3).jpg>)
 
 2- Click  **Ok** to confirm the unlock.
 
@@ -31,7 +31,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should display a message asking to confirm the unlock.
 
-![](<../../../../../../../../../.gitbook/assets/11 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/11.jpg)
 
 2- Should appear the Status of the application changed to Active.
 

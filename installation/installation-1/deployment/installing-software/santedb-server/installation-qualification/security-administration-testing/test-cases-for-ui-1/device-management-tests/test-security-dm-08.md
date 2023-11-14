@@ -25,18 +25,18 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button.
 
-![](<../../../../../../../../../.gitbook/assets/1 (6).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (12).jpg>)
 
 2- Leave Name, Model Name and Operating System fields blank and click the **Save** button.( Name, Model Name and Operating System fields are required fields )&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/3 (9).jpg>)
+![](<../../../../../../../../../.gitbook/assets/3 (13).jpg>)
 
 ## Expected Behaviour
 
 1- Should navigate to the new Create Device page.
 
-![](../../../../../../../../../.gitbook/assets/2.jpg)
+![](<../../../../../../../../../.gitbook/assets/2 (6).jpg>)
 
 2- Should show an error message below Name field, Model Name field and Operating System field indicating that required field is missing.
 
-![](<../../../../../../../../../.gitbook/assets/4 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/4 (5).jpg>)

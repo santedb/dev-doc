@@ -10,7 +10,7 @@ Users which belong to multiple groups follow a most-restrictive policy enforceme
 
 The summary screen for SanteDB groups shows a comprehensive list of all roles registered in the system. The group list provides controls to create, edit and delete groups in the iCDR system.
 
-![](<../../../../.gitbook/assets/image (516).png>)
+![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1) (1) (1) (1).png>)
 
 The are available in the group list screen are:
 
@@ -23,7 +23,7 @@ The are available in the group list screen are:
 
 You can use the `Show Deleted` button to list the groups which are not active (i.e. deleted) in the SanteDB system.&#x20;
 
-![](<../../../../.gitbook/assets/image (393).png>)
+![](<../../../../.gitbook/assets/image (425) (1) (1) (1) (1).png>)
 
 Pressing the `Un-Delete` button will re-activate the group.&#x20;
 
@@ -51,13 +51,13 @@ Administrators may wish to create new groups for a variety of reasons. For examp
 
 When creating a new group, the name and a brief description of the group is required.
 
-![](<../../../../.gitbook/assets/image (384).png>)
+![](<../../../../.gitbook/assets/image (423) (1) (1) (1).png>)
 
 ## Group Details
 
 When editing a group or after creating a new group, the detail view of the group will be shown.&#x20;
 
-![](<../../../../.gitbook/assets/image (441).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1).png>)
 
 This view shows the basic details of the group, and permits editing of the group name and description, as well as access to the groups security id (SID)
 
@@ -65,11 +65,11 @@ This view shows the basic details of the group, and permits editing of the group
 
 By default a new group will have no policies associated with the group. Administrators should use the `Policies` section to add or alter policies. Policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (644).png>)
+![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1).png>)
 
 By default a group will be assigned the policy with a GRANT permission. You can alter these by clicking the permission.
 
-![](<../../../../.gitbook/assets/image (468).png>)
+![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1).png>)
 
 The permission types in SanteDB are:
 
@@ -83,7 +83,7 @@ Policies can be removed from a group  by clicking the `Remove` button. When a po
 
 Users can be assigned and removed directly from the group using the group detail page. Users are assigned and removed in the `Members` section of the group panel.
 
-![](<../../../../.gitbook/assets/image (305).png>)
+![](<../../../../.gitbook/assets/image (424) (1) (1).png>)
 
 Adding users to the group is a similar process as adding policies, the user account is searched and then added to the group using the `+` button.
 

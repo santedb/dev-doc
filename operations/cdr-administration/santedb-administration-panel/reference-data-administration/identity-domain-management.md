@@ -6,7 +6,7 @@ Identity domains must be registered in the SanteDB iCDR before they can be used 
 
 When opening the Reference Data page for Identity Domains, administrators will be presented with a listing of all active identity domains configured on the iCDR or dCDR instance.
 
-![](<../../../../.gitbook/assets/image (538).png>)
+![](<../../../../.gitbook/assets/image (444) (1) (1) (1).png>)
 
 The controls for this table are shared with other administrative panel functions (edit, delete, un-delete, etc.).
 
@@ -14,13 +14,13 @@ The controls for this table are shared with other administrative panel functions
 
 To create a new identity domain (for example, a new programme identifier type), you'll use the [Reference Data](broken-reference) administration area and more specifically, the Identity Domain administration page within that administrative area. This will present you with a list of configured identity domains, you can click "CREATE" to create a new identity domain.
 
-![](<../../../../.gitbook/assets/image (724).png>)
+![](<../../../../.gitbook/assets/image (37).png>)
 
 ### Configuring Core Properties
 
 The first data collected by SanteDB when creating a new identity domain are the key identity domain properties including those discussed above as well as validation information for the identity domain.
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (21) (1).png>)
 
 The core properties are:
 
@@ -41,7 +41,7 @@ If there are more than one administrator be sure to use the search function firs
 
 The validation section of the identity domain screen allows administrators to specify how identifiers in the domain are subjected to the [DataQualityValidation](../../../../user-guides-and-training/santempi/the-patient-dashboard/data-quality-tab.md) when objects are registered. These also control the input controls for identifier information in the user interface.
 
-<figure><img src="../../../../.gitbook/assets/image (788).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (278).png" alt=""><figcaption></figcaption></figure>
 
 #### Validation Regex
 
@@ -67,7 +67,7 @@ The custom format validator is used to validate identifiers using special implem
 
 The authority and scope configuration area will dictate how SanteDB discloses the specified identifier, which system(s) can assign the identifier, and the scope (objects which can be assigned the identifier).
 
-![](<../../../../.gitbook/assets/image (762).png>)
+![](<../../../../.gitbook/assets/image (116).png>)
 
 #### Scope
 
@@ -89,6 +89,6 @@ This section describes a feature that is only in SanteDB v3.0&#x20;
 
 The assigning authority of the identity domain allows an administrator to prohibit the issuance of new authoritative identifiers, save for the list of designated applications provided.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (789).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
-The application is assigned by selecting the [security application credential ](../../santedb-icdr-admin-console/application-administration.md)which is permitted to issue identifiers in the domain. The administrator may also specify whether submissions from the indicated source are authoritative or informative.
+The application is assigned by selecting the [security application credential ](../../../server-administration/santedb-icdr-admin-console/application-administration.md)which is permitted to issue identifiers in the domain. The administrator may also specify whether submissions from the indicated source are authoritative or informative.

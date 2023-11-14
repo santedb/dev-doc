@@ -2,7 +2,7 @@
 
 SanteDB Act support attribution of the current status of an act using the state machine illustrated in Figure 2.&#x20;
 
-![Figure 2 - Act States](<../../../../.gitbook/assets/image (726).png>)
+![Figure 2 - Act States](<../../../../.gitbook/assets/image (46).png>)
 
 The states of an act are:
 

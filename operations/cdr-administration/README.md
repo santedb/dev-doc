@@ -13,7 +13,7 @@ There are two ways to administer a SanteDB iCDR server:
 [santedb-administration-panel](santedb-administration-panel/)
 {% endcontent-ref %}
 
-{% content-ref url="santedb-icdr-admin-console/" %}
-[santedb-icdr-admin-console](santedb-icdr-admin-console/)
+{% content-ref url="../server-administration/santedb-icdr-admin-console/" %}
+[santedb-icdr-admin-console](../server-administration/santedb-icdr-admin-console/)
 {% endcontent-ref %}
 

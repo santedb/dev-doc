@@ -28,19 +28,19 @@ Entries in the table being filtered here are subject to change very frequently.
 
 1\. Select any option from the **Actions** dropdown.
 
-![](<../../../../../../../../../.gitbook/assets/image (683).png>)
+![](<../../../../../../../../../.gitbook/assets/image (314).png>)
 
 2\. Select any option from the **Events** dropdown.
 
-![](<../../../../../../../../../.gitbook/assets/image (219).png>)
+![](<../../../../../../../../../.gitbook/assets/image (301).png>)
 
 3\. Select any option from the **Outcomes** dropdown.
 
-![](<../../../../../../../../../.gitbook/assets/image (237).png>)
+![](<../../../../../../../../../.gitbook/assets/image (294).png>)
 
 ## Expected Behaviour
 
 * The **Detailed Audit Log** table should be updated between each of steps 1, 2, and 3 to reflect the filter that has been applied.
 * The final result should filter all 3 of the **Action**, **Event**, and **Outcome** columns.&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/image (234).png>)
+![](<../../../../../../../../../.gitbook/assets/image (329).png>)

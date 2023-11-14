@@ -4,7 +4,7 @@ SanteDB software packages support many different environments and use cases. The
 
 ## iCDR - Integrated CDR
 
-The iCDR is typically installed once per application role in a jurisdiction. (See:[#icdr-server](../../../../santedb/architecture/#icdr-server "mention")).&#x20;
+The iCDR is typically installed once per application role in a jurisdiction. (See:[#icdr-server](../../../../santedb/architecture.md#icdr-server "mention")).&#x20;
 
 {% content-ref url="santedb-server/" %}
 [santedb-server](santedb-server/)

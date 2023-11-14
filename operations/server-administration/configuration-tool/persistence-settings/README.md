@@ -6,7 +6,7 @@ The persistence settings group in the configuration tool contains the control pa
 
 The persistence settings typically share a common configuration structure as illustrated below.
 
-![](<../../../../.gitbook/assets/image (449).png>)
+![](<../../../../.gitbook/assets/image (419) (1) (1) (3).png>)
 
 | Option                       | Description                                                                                                                                                                                                          | Example                                              |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -19,7 +19,7 @@ The persistence settings typically share a common configuration structure as ill
 
 The ADO.NET data persistence service as well as the archiving service share a common configuration options.&#x20;
 
-![](<../../../../.gitbook/assets/image (352).png>)
+![](<../../../../.gitbook/assets/image (420) (1) (1) (1).png>)
 
 | Option                          | Description                                                                                                                                                                                                                                                          | Example       |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |

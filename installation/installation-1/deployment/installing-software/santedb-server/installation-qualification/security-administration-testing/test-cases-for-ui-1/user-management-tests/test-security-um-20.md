@@ -26,10 +26,10 @@ When more than one **Employer** is entered during user creation, individual **Em
 
 1\. Click the **x** on the left side of a **Employer** tag that has been added to the **Employer** textbox.
 
-![](<../../../../../../../../../.gitbook/assets/image (571).png>)
+![](<../../../../../../../../../.gitbook/assets/image (268).png>)
 
 ## Expected Behaviour
 
 * The **Employer** tag corresponding to the **x** clicked is removed from the **Employer** textbox.
 
-![](<../../../../../../../../../.gitbook/assets/image (566).png>)
+![](<../../../../../../../../../.gitbook/assets/image (263).png>)

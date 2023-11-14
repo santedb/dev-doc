@@ -46,7 +46,7 @@ This procedure is intended to provide readers with a standardized procedure for 
 [managing-groups.md](../../cdr-administration/santedb-administration-panel/security-administration/managing-groups.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../cdr-administration/santedb-icdr-admin-console/group-role-management.md" %}
-[group-role-management.md](../../cdr-administration/santedb-icdr-admin-console/group-role-management.md)
+{% content-ref url="../../server-administration/santedb-icdr-admin-console/group-role-management.md" %}
+[group-role-management.md](../../server-administration/santedb-icdr-admin-console/group-role-management.md)
 {% endcontent-ref %}
 

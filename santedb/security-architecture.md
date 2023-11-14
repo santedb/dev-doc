@@ -4,13 +4,13 @@
 
 The figure below illustrates how a remote client can obtain a token from a federated security token service (STS) representing an IPrincipal and pass it to the SanteDB HDS. The creation of a local IPrincipal is controlled by a local IIdentityProviderService implementation. It is imperative that the ACS generate a token format which is suitable for the HDS messaging interface to consume (i.e. the configurations match), otherwise the HDS will have no mechanism for verifying tokens.
 
-![](<../.gitbook/assets/image (320).png>)
+![](<../.gitbook/assets/image (160).png>)
 
 Any ACS service can be used with SanteDB, however it is recommended that the ACS being used support the OAuth token service’s password grant and provide client/device authentication via TLS and/or HTTP basic auth.
 
 ### Principals and Identities
 
-When a authentication request is made against the ACS, depending on the type of authentication request (see [OpenID Connect](../developers/service-apis/openid-connect/#grant-types)) the ACS will call the identity providers to authenticate the identity information provided. The identity providers called are one of:
+When a authentication request is made against the ACS, depending on the type of authentication request (see [OpenID Connect](../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/#grant-types)) the ACS will call the identity providers to authenticate the identity information provided. The identity providers called are one of:
 
 * Application Identity Provider - Authenticates a single piece of software to establish an `ApplicationIdentity` which identifies the scope of grants permitted to the application identity.
 * Device Identity Provider - Authenticates the physical device (computer, server, phone, etc.) using either:
@@ -63,7 +63,7 @@ The enforcement of privacy and policies is handled through a series of services 
 
 The process for enforcement is illustrated below.
 
-![](<../.gitbook/assets/image (290).png>)
+![](<../.gitbook/assets/image (161).png>)
 
 ### Most-Restrictive Policy Enforcement
 

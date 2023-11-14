@@ -16,7 +16,7 @@ The Place administration screen is used to edit non-service delivery locations a
 
 Places in SanteDB can be established in a hierarchy using the place editing screen. The place editing process allows the linkages of places in a Parent/Child relationship. To illustrate this using Ontario Canada as an example:
 
-<figure><img src="../../../../.gitbook/assets/image (734).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 The example, would consist of 4 places in the SanteDB database:
 
@@ -29,7 +29,7 @@ The example, would consist of 4 places in the SanteDB database:
 
 The master place list is accessed via the **Reference Data > Places** menu item. Upon visiting the place screen, users will be presented with a list of all the places which have been registered in the SanteDB solution which are not service delivery locations.
 
-<figure><img src="../../../../.gitbook/assets/image (738).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 SanteDB contains place registrations for countries - when implementing a place hierarchy it is recommended that implementers bind the top level of their hierarchy (typically provinces or states) to the SanteDB registered country.
@@ -39,7 +39,7 @@ SanteDB contains place registrations for countries - when implementing a place h
 
 To create a place press the **Create** button, this will present the administrator with a basic entry form to enter the key details about new place:
 
-<figure><img src="../../../../.gitbook/assets/image (332).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 The form fields to be provided are:
 
@@ -66,13 +66,13 @@ SanteDB also includes a generic **Place** classification which should be used wh
 
 After creating a place, or viewing a place from the existing list of places registered in the SanteDB service, the Administrator will be presented with the place details screen illustrating the hierarchy, the facilities which service this area (facilities where the place is in catchment) and the relationships the place carries.
 
-<figure><img src="../../../../.gitbook/assets/image (339).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 ### Changing Status
 
 To change the place status, administrators should click on the status indicator and select another state to place the Place instance into:
 
-<figure><img src="../../../../.gitbook/assets/image (327).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Statuses here follow the normal [Entity State Machine](../../../../santedb/data-and-information-architecture/conceptual-data-model/entities/state-machine.md).
 
@@ -80,7 +80,7 @@ Statuses here follow the normal [Entity State Machine](../../../../santedb/data-
 
 The core properties can be edited by clicking the pencil icon in the **Place Properties** panel. This will switch the editing panel into edit mode:
 
-<figure><img src="../../../../.gitbook/assets/image (328).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Changing the Classification of the place is only recommended if the place does not have any active relationships. Modification of the classification may invalidate some relationships and may cause issues for any existing data.
@@ -92,7 +92,7 @@ In many contexts, places may have additional pseudonyms which can be used to ref
 
 The Name tab on the edit screen can be used to modify these aliases and can be used to add other names to the place:
 
-<figure><img src="../../../../.gitbook/assets/image (732).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 #### Adding Identifiers
 
@@ -102,29 +102,29 @@ Geographical places may carry official identifiers which are referenced in addre
 2. Enter the ID number&#x20;
 3. Press the **+** button to add the identifier to the list
 
-<figure><img src="../../../../.gitbook/assets/image (330).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 Identifiers can be removed using the **X** button beside the identifier to be removed.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (749).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 #### Adding Addresses
 
 The address on a place (City, Province, Country, etc.) often serves the address template whenever a structure address is selected for this place. Addresses should be updated whenever the parent relationship changes, or can be used to specify the address template for objects created within this place.
 
-<figure><img src="../../../../.gitbook/assets/image (769).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Editing Hierarchy
 
 The place hierarchy is used to establish the parent and children of the geographic place within the SanteDB system. The hierarchy is listed in the Hierarchy panel on the place details screen.
 
-<figure><img src="../../../../.gitbook/assets/image (784).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Child places can be removed directly from the hierarchy window without entering edit mode. However, if the parent or new children are to be added, the administrator must click on the Pencil icon to enter edit mode which will enable the form inputs.
 
 Adding a child link requires searching for the child place to add and pressing the **Add** button.
 
-<figure><img src="../../../../.gitbook/assets/image (746).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 A place can have only one Parent. When changing the parent of the current place or when changing the parent by associating a child, you will be prompted to confirm the action. Changing the place hierarchy may require editing other data such as addresses.
@@ -134,13 +134,13 @@ A place can have only one Parent. When changing the parent of the current place 
 
 SanteDB supports the assignment of dedicate service delivery locations (facilities) which service the geographic region. This can be performed via the facility editing screen, or can be performed directly in the Place editing screen. Assigning a facility starts with pressing the **Add** button on the **Service Facilities** panel.
 
-<figure><img src="../../../../.gitbook/assets/image (340).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 ### Associating an Existing Facility
 
 The default option when adding a dedicated service delivery location is to link an existing facility. This is done by searching for an existing facility and pressing ADD.
 
-<figure><img src="../../../../.gitbook/assets/image (735).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Associating a New Facility
 
@@ -148,7 +148,7 @@ Alternately, an administrator can create a new facility selecting **Associate a 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (764).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 The administrator should complete the minimum fields, select the additional data elements (if known) and then press the ADD button.
 

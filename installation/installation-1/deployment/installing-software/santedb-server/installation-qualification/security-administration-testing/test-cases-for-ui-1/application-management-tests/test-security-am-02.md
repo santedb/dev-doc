@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 2- Click  **Ok** to confirm the lock.
 
-![](<../../../../../../../../../.gitbook/assets/8 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/8 (1).jpg>)
 
 ## Expected Behaviour
 
@@ -35,4 +35,4 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 2- Should appear the Status of the application changed to locked.
 
-![](<../../../../../../../../../.gitbook/assets/9 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/9.jpg)

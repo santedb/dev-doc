@@ -26,30 +26,30 @@ SanteSuite user accounts can be edited to hold extended **Contact Info** that pr
 
 1\. Click the **User Profile** tab.
 
-![](<../../../../../../../../../.gitbook/assets/image (255).png>)
+![](<../../../../../../../../../.gitbook/assets/image (265).png>)
 
 2\. Click the pencil in the top right-hand corner of the **Profile** card to edit the properties.&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/image (220).png>)
+![](<../../../../../../../../../.gitbook/assets/image (272).png>)
 
 3\. Click the **Contact info** tab.
 
-![](<../../../../../../../../../.gitbook/assets/image (687).png>)
+![](<../../../../../../../../../.gitbook/assets/image (286).png>)
 
 4\. Click the toggle for an available Contact Info field to select either an email address or phone number and input the email address or phone number into the corresponding textbox.
 
-![](<../../../../../../../../../.gitbook/assets/image (517).png>)
+![](<../../../../../../../../../.gitbook/assets/image (289).png>)
 
 5\. Click the green checkmark to save the **Contact Info** field(s) modified.
 
-![](<../../../../../../../../../.gitbook/assets/image (252).png>)
+![](<../../../../../../../../../.gitbook/assets/image (264).png>)
 
 ## Expected Behaviour
 
 * A toast message appears in the top-right corner of the window stating "User updated successfully" when the steps above are followed correctly.
 
-![](<../../../../../../../../../.gitbook/assets/image (229).png>)
+![](<../../../../../../../../../.gitbook/assets/image (269).png>)
 
 * The **Profile** card should be updated to show the new **Contact Info**.
 
-![](<../../../../../../../../../.gitbook/assets/image (545).png>)
+![](<../../../../../../../../../.gitbook/assets/image (288).png>)

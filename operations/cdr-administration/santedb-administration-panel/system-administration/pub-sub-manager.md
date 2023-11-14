@@ -6,7 +6,7 @@ The Pub/Sub manager allows administrators to control the [publish-subscribe-arch
 
 The publish/subscribe manager shows a list of all registered subscriptions. This view allows administrators to quickly enable or disable outbound subscriptions from the iCDR or dCDR instance.
 
-![](<../../../../.gitbook/assets/image (780).png>)
+![](<../../../../.gitbook/assets/image (434) (1) (1) (1) (1).png>)
 
 The commands on this screen:
 
@@ -23,7 +23,7 @@ When creating a subscription the administrator will be prompted to enter setting
 
 Subscription metadata is used to describe the subscription to other administrators using the iCDR solution.
 
-![](<../../../../.gitbook/assets/image (167).png>)
+![](<../../../../.gitbook/assets/image (448) (1) (1) (1) (1) (1).png>)
 
 * Name - A unique named identifier for the subscription which appear in logs
 * Description - A short description of the subscription, its purpose, why it exists.
@@ -33,7 +33,7 @@ Subscription metadata is used to describe the subscription to other administrato
 
 Next, administrators should specify the criteria under which the notification is triggered.&#x20;
 
-![](<../../../../.gitbook/assets/image (77).png>)
+![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1).png>)
 
 * Applies To - The resource which this subscription applies to
 * Event(s) - The persistence events when the recipient should be notified
@@ -43,7 +43,7 @@ Next, administrators should specify the criteria under which the notification is
 
 The endpoint settings are used to control how and when the messages are sent to the remote endpoint.&#x20;
 
-![](<../../../../.gitbook/assets/image (462).png>)
+![](<../../../../.gitbook/assets/image (447) (1) (1) (1) (1).png>)
 
 * Not Before - The date/time when the endpoint should start receiving messages from the iCDR
 * Not After - The date/time when the endpoint should stop receiving messages from the iCDR
@@ -60,8 +60,8 @@ The endpoint settings are used to control how and when the messages are sent to 
 
 ## Related Topics
 
-{% content-ref url="../../../../developers/service-apis/hl7-fhir/santedb-fhir-implementation/publish-subscribe.md" %}
-[publish-subscribe.md](../../../../developers/service-apis/hl7-fhir/santedb-fhir-implementation/publish-subscribe.md)
+{% content-ref url="../../../../developers/santedb-software-publishers/publish-subscribe.md" %}
+[publish-subscribe.md](../../../../developers/santedb-software-publishers/publish-subscribe.md)
 {% endcontent-ref %}
 
 {% content-ref url="dispatcher-queue.md" %}

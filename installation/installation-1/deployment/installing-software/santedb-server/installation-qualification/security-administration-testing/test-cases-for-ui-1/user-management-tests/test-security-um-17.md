@@ -26,10 +26,10 @@ When more than one **Primary Facility** is entered during user creation, individ
 
 1\. Click the **x** on the left side of a **Primary Facility** tag that has been added to the **Primary Facility** textbox.
 
-![](<../../../../../../../../../.gitbook/assets/image (223).png>)
+![](<../../../../../../../../../.gitbook/assets/image (240).png>)
 
 ## Expected Behaviour
 
 * The **Primary Facility** tag corresponding to the **x** clicked is removed from the **Primary Facility** textbox.
 
-![](<../../../../../../../../../.gitbook/assets/image (189).png>)
+![](<../../../../../../../../../.gitbook/assets/image (250).png>)

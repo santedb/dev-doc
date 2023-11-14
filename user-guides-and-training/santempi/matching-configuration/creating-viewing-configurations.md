@@ -2,7 +2,7 @@
 
 When editing or creating a match configuration, users will be presented with the match configuration detail screen.
 
-![](<../../../.gitbook/assets/image (606).png>)
+![](<../../../.gitbook/assets/image (430) (1) (1).png>)
 
 When creating a new configuration, the sections of the configuration are shown based on the current required information contained within the configuration. For example, the scoring section tab will not appear until after the blocking configuration has been entered and saved.
 
@@ -30,7 +30,7 @@ In a production system, it is recommended that users clone a match configuration
 
 When a user needs to share a match configuration with others (such as those using another software package) or requires unchangeable description of the match configuration (for their implementation documentation, for example) an HTML export of the configuration file can be obtained using the `HTML` button. This produces a report which details the configuration and allows for printing of the logic and settings used.
 
-![](<../../../.gitbook/assets/image (110).png>)
+![](<../../../.gitbook/assets/image (445) (1) (1) (1).png>)
 
 ## Configuration Sections
 

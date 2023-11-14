@@ -9,7 +9,7 @@ Testing a match configuration can be performed on the **Testing** tab. This tab 
 
 First, users should search for a `$input` record for which they would like to test their configuration. The search is performed by identifier, as an example, a patient has been selected and selected.
 
-![](<../../../.gitbook/assets/image (321).png>)
+![](<../../../.gitbook/assets/image (445) (1) (1).png>)
 
 If performing a match test against the underlying data store, the user can press the **Run** button.
 
@@ -25,7 +25,7 @@ Once test results are available they are gathered and the data displayed in a se
 
 The overview panel shows summary information about the test results. These summary indicators provide a brief insight into scores from results of the test run.
 
-![](<../../../.gitbook/assets/image (464).png>)
+![](<../../../.gitbook/assets/image (459) (1).png>)
 
 ### Hints / Analysis
 
@@ -34,19 +34,19 @@ The hints and analysis panel provides (currently, basic) feedback on your config
 * Excessive records being loaded from the database (i.e. > 10% of the blocked records were discarded or non-matches. Which indicates too many results are being loaded form database)
 * Too restrictive scoring or inappropriate blocking (i.e. many records are blocked but none are matched)
 
-![](<../../../.gitbook/assets/image (483).png>)
+![](<../../../.gitbook/assets/image (446) (1) (1).png>)
 
 ### Match Test Results
 
 The test results panel show the individual records which were evaluated (up to 100 of them) against the input record. This includes basic demographics information about the match pair, the score assigned from evaluation and the classification.
 
-![](<../../../.gitbook/assets/image (44).png>)
+![](<../../../.gitbook/assets/image (456) (1) (1).png>)
 
 Users may select the **view** option to see a detailed report of the attributes which were considered and the values which were compared as well as the computed score of the current configuration compared with other configurations).
 
 For example, one of the non-match records, by viewing the data, can be seen that the state of the records match however the city do not. Resulting in the computed score.
 
-![](<../../../.gitbook/assets/image (379).png>)
+![](<../../../.gitbook/assets/image (429) (1).png>)
 
 {% hint style="info" %}
 The settings for the match configuration can be changed on the [blocking-configuration.md](blocking-configuration.md "mention") , [scoring-configuration.md](scoring-configuration.md "mention") or [classification-configuration.md](classification-configuration.md "mention") tabs and re-tested in an iterative fashion to tune your match configuration.
@@ -58,7 +58,7 @@ Additionally, the administrator can review the full details of how this match pa
 
 The test result diagram shows the flow of actual data through the match configuration test run. This data is fed by telemetry information in the matching engine as the test is executed.
 
-![](<../../../.gitbook/assets/image (758).png>)
+![](<../../../.gitbook/assets/image (424).png>)
 
 The diagram above illustrates:
 

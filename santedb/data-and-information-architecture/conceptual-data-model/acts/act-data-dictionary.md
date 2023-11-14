@@ -2,7 +2,7 @@
 
 The act data model describes the tables and fields required for the tracking of acts in the SanteDB logical model.
 
-![](<../../../../.gitbook/assets/image (256).png>)
+![](<../../../../.gitbook/assets/image (170).png>)
 
 ### Act Entity
 

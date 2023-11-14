@@ -47,7 +47,7 @@ All extensions are in the http://santedb.org/extensions URL base.
 | /stock/contrib/gs1/shipmentDate          | Date       | The original shipment date of an action                                                       |
 | /stock/contrib/gs1/packgingType          | String     | The type of packaging (crate, box, etc.) from the GS1 sender                                  |
 
-You can register your own extensions by using the [HDSI interface](../../../developers/service-apis/health-data-service-interface-hdsi/) and POSTing a new ExtensionType resource.
+You can register your own extensions by using the [HDSI interface](../../../developers/service-apis/health-data-service-interface-hdsi.md) and POSTing a new ExtensionType resource.
 
 ## Tags
 

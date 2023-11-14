@@ -21,21 +21,21 @@ A **Member** is removable from a group.
 
 &#x20;1\. Click on the **Remove** button on a **Member** to be removed from a **Group/Role** that has been created.
 
-![](<../../../../../../../../../.gitbook/assets/image (30).png>)
+![](<../../../../../../../../../.gitbook/assets/image (356).png>)
 
 2\. Click the **OK** button on the confirmation prompt appearing in the browser.
 
-![](<../../../../../../../../../.gitbook/assets/image (17).png>)
+![](<../../../../../../../../../.gitbook/assets/image (339).png>)
 
 ## Expected Behaviour
 
 * The specific **Member** removed should not appear in the list after it is reloaded.
 
-![](<../../../../../../../../../.gitbook/assets/image (554).png>)
+![](<../../../../../../../../../.gitbook/assets/image (359).png>)
 
 *   Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
 
-    ![](<../../../../../../../../../.gitbook/assets/image (682).png>)
+    ![](<../../../../../../../../../.gitbook/assets/image (378).png>)
 
 {% hint style="info" %}
 No need to click the **Save** button to updated the role successfully.

@@ -42,7 +42,7 @@ The installation programs on Windows will:
 
 The installation process is a standard Windows installer experience, administrators can elect to install particular plugins that meet their needs.&#x20;
 
-![](<../../../../../../.gitbook/assets/image (79).png>)
+![](<../../../../../../.gitbook/assets/image (513).png>)
 
 The plugins available at the time of writing are enumerated below.
 
@@ -56,15 +56,15 @@ The SanteDB Core option installs the core Windows Service executable (`santedb.e
 
 #### JINT Business Rules Engine
 
-The JINT business rules engine allows applets to customize the iCDR and dCDR application behavior by writing [JavaScript Business Rules](../../../../../../developers/applets/business-rules.md#introduction).
+The JINT business rules engine allows applets to customize the iCDR and dCDR application behavior by writing [JavaScript Business Rules](../../../../../../developers/extending-santesuite/extending-santedb/applets/business-rules.md#introduction).
 
 #### XML Clinical Support Decision Engine
 
-If your installation of the iCDR will be [using clinical decision support ](../../../../../../developers/applets/cdss-protocols.md#introduction)(CDSS) via the built-in XML protocol format, you should enable CDSS support.
+If your installation of the iCDR will be [using clinical decision support ](../../../../../../developers/extending-santesuite/extending-santedb/applets/cdss-protocols.md#introduction)(CDSS) via the built-in XML protocol format, you should enable CDSS support.
 
 #### Messaging Interfaces
 
-The messaging interfaces option installs the core REST APIs for the iCDR server. These messaging interfaces allow administrators to customize their deployment for scale-out by assigning servers to dedicated roles. For example, in a scaled-out solution an administrator may only install the [Administrative Management Interface](../../../../../../developers/service-apis/administration-management-interface-ami.md) to the server which controls the cluster, whereas other servers may only install the [Health Data Services Interfaces](../../../../../../developers/service-apis/health-data-service-interface-hdsi/#controlling-response-format) for clinical data access.
+The messaging interfaces option installs the core REST APIs for the iCDR server. These messaging interfaces allow administrators to customize their deployment for scale-out by assigning servers to dedicated roles. For example, in a scaled-out solution an administrator may only install the [Administrative Management Interface](../../../../../../developers/service-apis/administration-management-interface-ami.md) to the server which controls the cluster, whereas other servers may only install the [Health Data Services Interfaces](../../../../../../developers/service-apis/health-data-service-interface-hdsi.md#controlling-response-format) for clinical data access.
 
 #### Business Intelligence Services
 
@@ -76,9 +76,9 @@ If you're using a third party reporting tool like Jasper Reports, Crystal Report
 
 Installation of the integration interfaces will allow SanteDB iCDR to interact with third party services using one of the standards based APIs such as:
 
-* [HL7 Fast Health Interoperability Resources](../../../../../../developers/service-apis/hl7-fhir/)
-* [HL7 Version 2](../../../../../../developers/service-apis/hl7v2/)&#x20;
-* [GS1 Business Messaging Standard (BMS)](../../../../../../developers/service-apis/gs1-bms-xml.md#gs1-stock-messaging-workflows)
+* [HL7 Fast Health Interoperability Resources](../../../../../../operations-1/standard-operating-procedures/hl7-fhir/)
+* [HL7 Version 2](../../../../../../developers/service-apis/hl7v2.md)&#x20;
+* [GS1 Business Messaging Standard (BMS)](../../../../../../developers/santedb-software-publishers/gs1-bms-xml/#gs1-stock-messaging-workflows)
 * JIRA Integration (which allow submission of Diagnostic reports from dCDR instances directly into JIRA)
 * ATNA & DICOM Messaging (which allows for dispatch of audits via NEMA DICOM over Syslog)
 
@@ -122,37 +122,37 @@ When first configuring SanteDB iCDR server on a Windows environment you will nee
 
 Selecting the PostgreSQL provider will expose the connection parameters for PostgreSQL. See [#postgresql-configuration](../../../../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#postgresql-configuration "mention") for more information on these settings.
 
-![](<../../../../../../.gitbook/assets/image (173).png>)
+![](<../../../../../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1) (1).png>)
 
 #### Firebird Configuration
 
 Selecting the Firebird provider will expose the connection parameter for Firebird 3.x provider, SanteDB iCDR will assume you're using the embedded version of Firebird. This database connector has three parameters. See [#firebird](../../../../../../operations/server-administration/configuration-tool/persistence-settings/database-connections.md#firebird "mention") connection details in the configuration tool documentation.
 
-![](<../../../../../../.gitbook/assets/image (98).png>)
+![](<../../../../../../.gitbook/assets/image (426) (1) (1) (1) (1).png>)
 
 #### Multiple Instances of SanteDB on the Same Server
 
 If you're running multiple instances of SanteDB on the same server, you will need to install the software in different file locations. When configuring the iCDR on the Windows host you can then set an instance name to isolate the Windows Services and event logs.
 
-![](<../../../../../../.gitbook/assets/image (390).png>)
+![](<../../../../../../.gitbook/assets/image (418) (1) (1) (1) (1).png>)
 
 #### Configuration Template
 
-SanteDB iCDR server packages may be shipped with one ore more [santedb-solutions.md](../../../../../../product-overview/santesuite-products/santedb/santedb-solutions.md "mention") included, you should select an appropriate template for the software solution that this instance of the iCDR will fulfill.
+SanteDB iCDR server packages may be shipped with one ore more [santedb-solutions.md](../../../../../../santedb/santedb-solutions.md "mention") included, you should select an appropriate template for the software solution that this instance of the iCDR will fulfill.
 
-![](<../../../../../../.gitbook/assets/image (265).png>)
+![](<../../../../../../.gitbook/assets/image (437) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 #### Initial Configuration Tasks
 
 Once you've completed the installation options for the SanteDB server and press `Continue` you will be prompted to confirm the initial configuration tasks.
 
-![](<../../../../../../.gitbook/assets/image (85).png>)
+![](<../../../../../../.gitbook/assets/image (448) (1) (1) (1) (1) (1) (1).png>)
 
 #### Finish Configuration&#x20;
 
 You can use the configuration tooling to customize your installation of the SanteDB server. These settings are documented in [configuration-tool](../../../../../../operations/server-administration/configuration-tool/ "mention")
 
-![](<../../../../../../.gitbook/assets/image (74).png>)
+![](<../../../../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Recommended configuration panels and settings to change include:
 

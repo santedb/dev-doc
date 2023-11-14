@@ -113,7 +113,7 @@ Deriving a data-mart is done with the `basedOn` element.
 
 ## Produced Data Source
 
-The primary purpose of the data mart is to provide a [BI data source](data-sources.md) which can be used for reports, queries, or like any other connection in SanteDB. The data source which is created or used as the output for the data mart is identified in the `<produces` element of the datamart definition.
+The primary purpose of the data mart is to provide a [BI data source](../../../extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/data-sources.md) which can be used for reports, queries, or like any other connection in SanteDB. The data source which is created or used as the output for the data mart is identified in the `<produces` element of the datamart definition.
 
 ### Existing Data Source
 
@@ -224,13 +224,13 @@ Links between tables can be established using a `type="ref"` on your column and 
 
 Would result in a schema where:
 
-<figure><img src="../../../../.gitbook/assets/image (755).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Parent Tables
 
 SanteDB's primary CDR stores data as a series of objects in a hierarchy (see:  [Conceptual Information Model](../../../../santedb/data-and-information-architecture/conceptual-data-model/)). In a relational database this is represented as "table per class" pattern, using the entity classes, this can be represented as.
 
-<figure><img src="../../../../.gitbook/assets/image (336).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 This means that every `Place`, `Person`, `Patient`, and `Provider` should have an entry in `Entity` as well with the core data elements. Each other table merely adds more data to the previous.&#x20;
 

@@ -2,7 +2,7 @@
 
 The SanteDB entity model represents a series of tables which are responsible for the tracking of entities within the SanteDB data model. Entities represent people, places, organizations, things, etc. and are responsible for participating within acts in some capacity.
 
-![](<../../../../.gitbook/assets/image (250).png>)
+![](<../../../../.gitbook/assets/image (165).png>)
 
 ### Entity
 

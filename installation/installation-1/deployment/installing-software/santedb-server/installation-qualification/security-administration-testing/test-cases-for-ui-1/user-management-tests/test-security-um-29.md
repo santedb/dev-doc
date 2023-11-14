@@ -26,10 +26,10 @@ While editing a user account, the **User Activity** can be reviewed and is repre
 
 1\. Click the **User Activity** tab.
 
-![](<../../../../../../../../../.gitbook/assets/image (702).png>)
+![](<../../../../../../../../../.gitbook/assets/image (337).png>)
 
 ## Expected Behaviour
 
 * A table of Audit Events appears and is filtered to show events involving the user being edited (based on user activity).
 
-![](<../../../../../../../../../.gitbook/assets/image (688).png>)
+![](<../../../../../../../../../.gitbook/assets/image (299).png>)

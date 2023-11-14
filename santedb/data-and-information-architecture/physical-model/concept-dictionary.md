@@ -2,7 +2,7 @@
 
 The [Conceptual Concept Dictionary](../conceptual-data-model/concept-dictionary/data-dictionary.md) expressed in the physical data model in ADO.NET providers is illustrated below.
 
-![](<../../../.gitbook/assets/image (513).png>)
+![](<../../../.gitbook/assets/image (410).png>)
 
 | Physical Table          | Conceptual Entity                                                                                                     | Description                                                                                     |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
