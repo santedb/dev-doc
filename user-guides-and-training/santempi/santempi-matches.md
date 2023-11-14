@@ -6,7 +6,7 @@ The matching dashboard is used to show the registered matches (i.e. those which 
 
 ## Nomenclature
 
-The nomenclature used in SanteDB is described in detail in [master-data-storage.md](../../santedb/data-storage-patterns/master-data-storage.md "mention"), when describing the patients in the user interface documentation the data will be referred to as:
+The nomenclature used in SanteDB is described in detail in [master-data-storage.md](../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md "mention"), when describing the patients in the user interface documentation the data will be referred to as:
 
 * `LOCAL_A` - The source record submitted from a third party system, representing the `$input` record
 * `MASTER_A` - The master/golden record established by SanteMPI's master data management layer for `LOCAL_A` (note there may be multiple locals attached to this record)
@@ -17,7 +17,7 @@ The nomenclature used in SanteDB is described in detail in [master-data-storage.
 
 The first portion of the match dashboard shows the duplicate detection panel. This panel allows data administrators to quickly review duplicates which have been detected by the MPI software.
 
-![](<../../.gitbook/assets/image (436) (1) (1).png>)
+![](<../../.gitbook/assets/image (172).png>)
 
 * Candidate Report - Downloads the `Detected Duplicates` table in excel format
 * Linkage Report - Downloads an excel report with the entirety of the SanteMPI database linkages provided.
@@ -52,7 +52,7 @@ The quick ignore option allows the data administrator to quickly instruct SanteM
 
 Clicking on the `View` option, will display a more detailed analysis of the match pair. This view assists data administrators in determining the validity of the match, such that the match can be verified or ignored.
 
-![](<../../.gitbook/assets/image (430) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (46).png>)
 
 * Match Summary Information Tab - Shows a side-by-side comparison of basic attributes on both the A and B records.
   * Either patient record can be opened using the `View` option.
@@ -70,7 +70,7 @@ The `Matched Entities` tab shows summary information of the two patients which h
 
 The A/B compare tab takes the contents of the [the-patient-dashboard](the-patient-dashboard/ "mention") (which is a common place for plugins to extend the UI) and shows the panels as an A/B comparison.
 
-![](<../../.gitbook/assets/image (439) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (258).png>)
 
 ### Scoring
 
@@ -78,7 +78,7 @@ The scoring tab presents a list of match configurations which are active on the 
 
 This panel is used by data administrators to understand **why** the particular match pair came to be flagged. This information is helpful when determining whether a configuration needs to be changed, or to understand why a match is a match.
 
-![](<../../.gitbook/assets/image (418) (1) (1).png>)
+![](<../../.gitbook/assets/image (642).png>)
 
 * Classification - Indicates the match pair's classification as determined by the configuration.
 * Match Method - The method or algorithm used to score the matches&#x20;

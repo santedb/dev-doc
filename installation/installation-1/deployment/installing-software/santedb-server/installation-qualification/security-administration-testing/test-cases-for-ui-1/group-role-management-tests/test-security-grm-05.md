@@ -24,11 +24,11 @@ The **Decription** field is the only **Core Property** that can be edited for an
 
 1\. Change the **Description** text area.
 
-![](<../../../../../../../../../.gitbook/assets/image (344).png>)
+![](<../../../../../../../../../.gitbook/assets/image (592).png>)
 
 2\. Click the **Save** button.
 
-![](<../../../../../../../../../.gitbook/assets/image (372).png>)
+![](<../../../../../../../../../.gitbook/assets/image (68).png>)
 
 ## Expected Behaviour
 
@@ -36,4 +36,4 @@ The **Decription** field is the only **Core Property** that can be edited for an
 * Changes are saved.
 * Green toast appears briefly in top-right corner of window stating: "Role updated successfully".
 
-![](<../../../../../../../../../.gitbook/assets/image (378).png>)
+![](<../../../../../../../../../.gitbook/assets/image (682).png>)

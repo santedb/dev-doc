@@ -23,8 +23,8 @@ These installation procedures assume that readers are familiar with the mechanic
 [installing-software](installing-software/)
 {% endcontent-ref %}
 
-{% content-ref url="../../installation/santedb-server/production-installation-notes.md" %}
-[production-installation-notes.md](../../installation/santedb-server/production-installation-notes.md)
+{% content-ref url="production-installation-notes.md" %}
+[production-installation-notes.md](production-installation-notes.md)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference" %}

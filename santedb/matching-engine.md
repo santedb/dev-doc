@@ -34,7 +34,7 @@ In the example below, the SanteDB matching engine will load records for an `$inp
   * If the `$input` has a dateOfBirth then the date of birth must match, AND
   * If the `$input` has a gender concept then the gender must match
 
-![](<../.gitbook/assets/image (437) (1) (1).png>)
+![](<../.gitbook/assets/image (504).png>)
 
 In pseudocode terms, the blocking query for an `$input` of John Smith, Male, SSN 203-204-3049 born 1980-03-02 would resemble:
 
@@ -66,7 +66,7 @@ During the scoring phase, the records from the blocking stage are compared to th
 
 Overall, the process of comparing a blocked record (named `$block`) with the `$input` record is:
 
-![](<../.gitbook/assets/image (428) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (257).png>)
 
 1. The scoring attribute may declare that it depends on another attribute being scored (i.e. don't evaluate the `city` attribute unless `state` attribute has passed. If the dependent attribute was not scored as a positive (match) then the current attribute is assigned the whenNull() score.
 2. The attribute path on the configuration is read from both `$block` and `$input`.&#x20;
@@ -119,7 +119,7 @@ The scores for each of the scored attributes are then summed for each `$block` r
 
 ## Bulk / Batch Matching
 
-Each data type which is registered in the [Master Data Management](data-storage-patterns/master-data-storage.md) pattern has a corresponding [Match Job](../operations/cdr-administration/santedb-administration-panel/system-administration/jobs.md) registered. This job resets the suspected ground truth using the following rules:
+Each data type which is registered in the [Master Data Management](data-and-information-architecture/data-storage-patterns/master-data-storage.md) pattern has a corresponding [Match Job](../operations/cdr-administration/santedb-administration-panel/system-administration/jobs.md) registered. This job resets the suspected ground truth using the following rules:
 
 | Remove / Delete:                                                                              | Keep:                                                                                  |
 | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -127,7 +127,7 @@ Each data type which is registered in the [Master Data Management](data-storage-
 
 After the suspected truth is cleared, the job will begin the process of re-matching the registered dataset for SanteDB. The matching process is multi-threaded, and designed to ensure that the machine on which the match process is as efficient as possible. To do this, the following pattern is used:
 
-![](<../.gitbook/assets/image (444) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (492).png>)
 
 The batch matching process registers 4 primary threads on the actively configured thread pool to control the match process:
 

@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Navigate to the Devices/Devices page and click the **Show Deleted** button.
 
-![](<../../../../../../../../../.gitbook/assets/14 (2).jpg>)
+![](<../../../../../../../../../.gitbook/assets/14 (1).jpg>)
 
 2- Click the **Un-Delete** button to undelete the device.
 
@@ -29,7 +29,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 3- Click  **Ok** to confirm the undelete.
 
-![](<../../../../../../../../../.gitbook/assets/16-1 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/16-1.jpg)
 
 ## Expected Behaviour
 
@@ -39,7 +39,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 2- Should display a message asking to confirm the undelete.
 
-![](<../../../../../../../../../.gitbook/assets/16 (2).jpg>)
+![](<../../../../../../../../../.gitbook/assets/16 (1).jpg>)
 
 3-
 

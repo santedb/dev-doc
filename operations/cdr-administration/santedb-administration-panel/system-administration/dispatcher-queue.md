@@ -6,7 +6,7 @@ Whenever SanteDB needs to send data using a standards based interfaces to system
 Dispatcher queues differ from synchronization queues used on the dCDR in that they do not support reconciliation of conflicts or subscription management. Dispatcher queuest are intended from remote targets that aren't SanteDB such as FHIR endpoints, HL7v2 endpoints or GS1 endpoints.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (442).png>)
 
 Users can opt to `Resubmit` a queue, which instructs the dCDR or iCDR to take all messages from a dead letter queue and place them back into the primary queue for re-submission. Additionally administrators may `Purge` a queue, which instructs the dCDR or iCDR to purge all data in the waiting dispatch list.
 
@@ -22,8 +22,8 @@ SanteDB may be used with a queueing technology like MSMQ or a simple queue like 
 [pub-sub-manager.md](pub-sub-manager.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../../developers/santedb-software-publishers/publish-subscribe.md" %}
-[publish-subscribe.md](../../../../developers/santedb-software-publishers/publish-subscribe.md)
+{% content-ref url="../../../../developers/service-apis/hl7-fhir/santedb-fhir-implementation/publish-subscribe.md" %}
+[publish-subscribe.md](../../../../developers/service-apis/hl7-fhir/santedb-fhir-implementation/publish-subscribe.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../../../developers/server-plugins/implementing-.net-features/service-definitions/audit-dispatch-service.md" %}

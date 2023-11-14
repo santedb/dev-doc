@@ -35,8 +35,8 @@ As more of each of the items listed above are used, the password is stronger. **
 * A status bar should be displayed yellow or red or not at all.
 * Status bar is labelled to the right of the status bar as either **Moderate** (using "Clinic@l"; shown below) or **Weak** (using "Clinic") or **Very Weak** (using "Clini").
 
-![](<../../../../../../../../../.gitbook/assets/image (230).png>)
+![](<../../../../../../../../../.gitbook/assets/image (243).png>)
 
 * When all other required fields are provided, clicking **Save** should prompt a **Business Rules Violation** modal with a message stating "password failed validation".
 
-![](<../../../../../../../../../.gitbook/assets/image (120).png>)
+![](<../../../../../../../../../.gitbook/assets/image (194).png>)

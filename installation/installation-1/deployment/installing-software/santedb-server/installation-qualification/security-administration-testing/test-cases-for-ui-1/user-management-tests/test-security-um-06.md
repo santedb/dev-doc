@@ -24,15 +24,15 @@ Users can be assigned multiple roles/groups that could have various policies and
 
 1\. Select the **Role** textbox within the **Security Properties** section.
 
-![](<../../../../../../../../../.gitbook/assets/image (228).png>)
+![](<../../../../../../../../../.gitbook/assets/image (701).png>)
 
 2\. Click on an existing group's **Role Name** in the dropdown menu (e.g. "USERS" has been selected here).
 
-![](<../../../../../../../../../.gitbook/assets/image (166).png>)
+![](<../../../../../../../../../.gitbook/assets/image (713).png>)
 
 3\. Begin entering the string value of another existing group's **Role Name** until it is the only matching **Role Name** appearing in the dropdown menu (e.g. "sensi" is being entered here and only matches "SENSITIVE\_USERS" as intended).
 
-![](<../../../../../../../../../.gitbook/assets/image (139).png>)
+![](<../../../../../../../../../.gitbook/assets/image (722).png>)
 
 4\. Press the **Enter** key.
 
@@ -41,4 +41,4 @@ Users can be assigned multiple roles/groups that could have various policies and
 * Multiple tags appear, each representing a **Role Name** of a group and can be removed from the **Role** textbox.
 * Policies and permissions for the **Role Name(s)** in the **Role** textbox are applied upon creation of the corresponding user (see [TEST: SECURITY-UM-01](test-security-um-01.md)).
 
-![](<../../../../../../../../../.gitbook/assets/image (227).png>)
+![](<../../../../../../../../../.gitbook/assets/image (772).png>)

@@ -6,7 +6,7 @@ The messaging settings section allows system administrators to configure the var
 
 The REST based services in the configuration panel have two sections of configuration in their panel, as illustrated in the FHIR panel below.
 
-![](<../../../../.gitbook/assets/image (475).png>)
+![](<../../../../.gitbook/assets/image (43).png>)
 
 * REST API -> This section of the configuration panel is common to all REST services and controls the ports, paths and bindings of the REST API.
 * Service -> This section varies and is specific to the actual API being configured.
@@ -21,7 +21,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 
 
-![](<../../../../.gitbook/assets/image (507).png>)
+![](<../../../../.gitbook/assets/image (467).png>)
 
 <table><thead><tr><th width="216.2676612932232">Setting</th><th width="269.5026452105254">Description</th><th>Examples</th></tr></thead><tbody><tr><td>Behavior Configuration</td><td>An XML fragment which controls the settings for the specific behavior. These change based on the behavior applied. See <a href="../../host-configuration-file/service-api-configuration/rest-service-configuration.md#service-behaviors">Service Behaviors </a>for more information.</td><td><code>&#x3C;maxConcurrency>10&#x3C;/maxConcurrency></code></td></tr><tr><td>Type</td><td>The type of behavior that should be applied to the service scope. This is the actual behavior implementation that will run.</td><td></td></tr></tbody></table>
 
@@ -29,7 +29,7 @@ The service behaviors option can be expanded to show a collection editor. Here, 
 
 Editing the endpoints will present a collection editor where administrators can add/remove specific endpoint bindings to/from the service. Endpoint bindings dictate the port, scheme and path where the REST API can be accessed.
 
-![](<../../../../.gitbook/assets/image (483).png>)
+![](<../../../../.gitbook/assets/image (485).png>)
 
 
 
@@ -39,7 +39,7 @@ Editing the endpoints will present a collection editor where administrators can 
 
 When you set an endpoint address to scheme `https://` the certificate binding configuration is enabled.
 
-![](<../../../../.gitbook/assets/image (502).png>)
+![](<../../../../.gitbook/assets/image (466).png>)
 
 When binding an endpoint to HTTPS you must ensure:
 
@@ -48,7 +48,7 @@ When binding an endpoint to HTTPS you must ensure:
 
 Once the certificate binding is enabled, you can expand it and select the certificate
 
-![](<../../../../.gitbook/assets/image (474).png>)
+![](<../../../../.gitbook/assets/image (452).png>)
 
 
 

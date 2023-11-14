@@ -23,18 +23,18 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Delete** button
 
-![](<../../../../../../../../../.gitbook/assets/14 (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/14 (2).jpg>)
 
 2- Click  **Ok** to confirm the delete.
 
-![](<../../../../../../../../../.gitbook/assets/16 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/16.jpg)
 
 ## Expected Behaviour
 
 1- Should display a message asking to confirm the delete.
 
-![](<../../../../../../../../../.gitbook/assets/15 (2).jpg>)
+![](../../../../../../../../../.gitbook/assets/15.jpg)
 
 2- Deleted application (Create-Application-Test) Should disappear from the Applications/List page.
 
-![](<../../../../../../../../../.gitbook/assets/17 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/17.jpg)

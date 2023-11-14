@@ -117,7 +117,7 @@ locales = [ "en", "fr", "es", "sw", "it", "my" ]
 
 Once completed, you can setup a project in your Pontoon server which points to your github repository (see: [Localizing your projects](https://mozilla-pontoon.readthedocs.io/en/latest/user/localizing-your-projects.html)) and use the sync feature. The strings located in your `strings.xml` file should be reflected in the Mozilla Pontoon user interface where **Context** indicates the name of your resource string:
 
-![](<../../.gitbook/assets/image (410).png>)
+![](<../../.gitbook/assets/image (307).png>)
 
 {% hint style="info" %}
 When you use a `strings.xml` file for your translations, you cannot override the default translations with `priority=` mechanism supported by the `manifest.xml`
@@ -132,3 +132,5 @@ SanteDB community translations are collected via the SanteDB Pontoon service. Th
 3. The community can contribute translations of the new strings into the `i18n` branch
 4. Prior to a major release the `i18n` branch is merged into `develop`(all community translations are present)
 5. The build is validated and the `develop` branch is merged into `master` where a new release is packaged.
+
+If you would like to translate the core applets (for the administrative panel, MPI user interfaces, SanteGuard screens, or IMS) you can visit the [SanteDB Community Pontoon Server](https://pontoon.santesuite.net/)

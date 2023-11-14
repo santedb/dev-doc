@@ -4,7 +4,7 @@ description: This page provides instruction on Unit Testing your C# / .NET Sante
 
 # Unit Testing Framework
 
-### Install SanteDB Server TestFramework
+## Install SanteDB Server TestFramework
 
 Because many core SanteDB components (including your service implementations) will need to be registered with a SanteDB host context, you must first establish an application context. SanteDB provides tools for quickly establishing a TestApplicationContext however this requires installation of the nuget package:
 
@@ -62,7 +62,7 @@ You will also need to create an embedded resource in your test assembly named Te
 Use the SolutionExplorer and Properties window to set the **Build Action** to **Embedded Resource** and ensure that your TestConfig.xml is placed in the root of your test assembly project.
 {% endhint %}
 
-### Unit Tests for Data Services
+## Unit Tests for Data Services
 
 If your unit test requires accessing or interacting with the SanteDB data store or repository services, you should register the required persistence classes in your TestConfig.xml and inherit from DataTest.
 
@@ -96,4 +96,4 @@ namespace MyTest {
 
 If you're using the data persistence services, you will need to ensure that the Visual Studio test runner (or the NUnit tool) is running in x64 mode. In Visual Studio, this requires selecting Test -> Processor Architecture -> x64.
 
-![](<../../.gitbook/assets/image (195).png>)
+![](<../../.gitbook/assets/image (653).png>)

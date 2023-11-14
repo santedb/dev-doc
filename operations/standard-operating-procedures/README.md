@@ -16,7 +16,7 @@ Standard operating procedures included in this section include
   * [Creating New Roles](role-management-sops/creating-new-roles.md)
   * [Managing Role Membership](role-management-sops/assigning-users-to-roles.md)
   * [Managing Role Policies](role-management-sops/sop-role-policy-assignment.md)
-* [Device Management](device-management-sops.md)
+* [Device Management](device-management-sops/)
   * [Onboarding new Devices (dCDR)](device-management-sops/sop-onboarding-new-dcdr-device.md)
   * [Onboarding new Devices (HL7v2)](device-management-sops/sop-onboarding-new-hl7v2-device.md)
 * [Application Management](application-management-sops.md)

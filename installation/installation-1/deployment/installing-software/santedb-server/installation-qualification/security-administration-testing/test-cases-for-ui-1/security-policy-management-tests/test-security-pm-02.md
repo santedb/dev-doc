@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/1 (10).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (7).jpg>)
 
 2- Leave OID filed and Name field blank and click the **Save** button.( OID field and Name field are required fields )&#x20;
 
@@ -35,10 +35,10 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should navigate to the new Create Policy page.
 
-![](../../../../../../../../../.gitbook/assets/2.jpg)
+![](<../../../../../../../../../.gitbook/assets/dnld1 (2).jpg>)
 
 2- Should show an error message below OID field and Name field indicating that required field is missing.
 
-![](<../../../../../../../../../.gitbook/assets/2 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/2 (1).jpg>)
 
 &#x20;

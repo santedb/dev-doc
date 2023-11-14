@@ -21,19 +21,19 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Unlock** button.
 
-![](<../../../../../../../../../.gitbook/assets/8 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/8 (2).jpg>)
 
 2- Click  **Ok** to confirm the unlock.
 
-![](<../../../../../../../../../.gitbook/assets/9 (2).jpg>)
+![](../../../../../../../../../.gitbook/assets/9.jpg)
 
 ## Expected Behaviour
 
 1- Should display a message asking to confirm the unlock.
 
-![](<../../../../../../../../../.gitbook/assets/9 (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/9 (2).jpg>)
 
 2-  Should appear the Status of the device changed to Active.
 
-![](<../../../../../../../../../.gitbook/assets/10 (4).jpg>)
+![](<../../../../../../../../../.gitbook/assets/10 (2).jpg>)
 

@@ -6,7 +6,7 @@ The SanteDB iCDR, dCDR and its related components are designed in a modular fash
 
 The overall architecture of the SanteDB iCDR and dCDR repositories illustrated below along with some of the service classifications.
 
-![](<../../.gitbook/assets/image (173).png>)
+![](<../../.gitbook/assets/image (413).png>)
 
 ## Service Architecture
 
@@ -21,11 +21,11 @@ SanteDB classically used the service locator pattern via the IServiceProvider in
 
 Take, for example, the auditing which is implemented as:
 
-![](<../../.gitbook/assets/image (167).png>)
+![](<../../.gitbook/assets/image (100).png>)
 
 Here, the SecretClass instance relies on the contract IRepositoryService, which may be implemented by an ADO.NET implementation, an RFC3881 implementation and a FHIR implementation. At runtime, when SecretClass wishes to send an audit, it will call the ApplicationServiceContext instance, which will return an appropriate implementation based on the runtime environment.
 
-![](<../../.gitbook/assets/image (169).png>)
+![](<../../.gitbook/assets/image (362).png>)
 
 This means that the implementer of SecretClass doesn't need to worry about which audit service is being used, it merely executes the business function for auditing.
 
@@ -41,7 +41,7 @@ SanteDB's overall architecture is really a composition of services which have be
 
 Most SanteDB services are implemented assuming a service relationship as illustrated below:
 
-![](<../../.gitbook/assets/image (172).png>)
+![](<../../.gitbook/assets/image (326).png>)
 
 ### Messaging Services
 
@@ -127,4 +127,4 @@ Synchronization services are responsible for integrating the SanteDB iCDR and dC
 
 ### Additional Services
 
-SanteDB contains hundreds of service contracts for various system tasks which are not covered at a high level on this page. These services can be found on the [Service Definitions](../../developers/server-plugins/service-definitions/) page.
+SanteDB contains hundreds of service contracts for various system tasks which are not covered at a high level on this page. These services can be found on the [Service Definitions](../../developers/server-plugins/implementing-.net-features/service-definitions/) page.

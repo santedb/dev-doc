@@ -49,7 +49,7 @@ public void MyDatabaseFunction() {
 
 ## Configuration Sections
 
-It is often the case that modules must not use hard coded values, and must allow for some degree of user configuration. The use of the `GetAppSetting `/ `SetAppSetting `may be appropriate for simple settings, however for more complex configuration you should define your own IConfigurationSection implementation.
+It is often the case that modules must not use hard coded values, and must allow for some degree of user configuration. The use of the `GetAppSetting` / `SetAppSetting` may be appropriate for simple settings, however for more complex configuration you should define your own IConfigurationSection implementation.
 
 A configuration section is a complex structure contained within the configuration provider. Depending on the configuration provider it may store these values in JSON, XML, a database, or other appropriate format.
 
@@ -108,4 +108,14 @@ public void SayHello() {
         Console.WriteLine(String.Join(";", config.Names));
 }
 ```
+
+## Topics
+
+{% content-ref url="configuration-panels.md" %}
+[configuration-panels.md](configuration-panels.md)
+{% endcontent-ref %}
+
+{% content-ref url="custom-docker-feature-configuration.md" %}
+[custom-docker-feature-configuration.md](custom-docker-feature-configuration.md)
+{% endcontent-ref %}
 

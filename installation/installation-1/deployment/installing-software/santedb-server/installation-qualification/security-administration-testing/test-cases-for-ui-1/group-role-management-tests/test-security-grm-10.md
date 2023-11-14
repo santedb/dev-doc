@@ -23,11 +23,11 @@ Groups with explicitly assigned policies can be filtered using a search string.&
 
 1\. Click the **Edit** button corresponding to a **Role Name** known to have **Assigned Policies** (e.g. "SYSTEM").
 
-![](<../../../../../../../../../.gitbook/assets/image (377).png>)
+![](<../../../../../../../../../.gitbook/assets/image (696).png>)
 
 2\. Select the **Search** bar in the top-right corner of the **Assigned Policies** panel.
 
-![](<../../../../../../../../../.gitbook/assets/image (363).png>)
+![](<../../../../../../../../../.gitbook/assets/image (29).png>)
 
 3\. Enter a search string for some explicitly **Assigned Policies** (e.g. "Login").
 
@@ -35,4 +35,4 @@ Groups with explicitly assigned policies can be filtered using a search string.&
 
 * The table of **Assigned Policies** should be filtered to show only policies that have names with a substring matching the search string entered.&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/image (362).png>)
+![](<../../../../../../../../../.gitbook/assets/image (576).png>)

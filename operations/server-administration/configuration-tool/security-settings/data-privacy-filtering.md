@@ -7,7 +7,7 @@ The `Data Privacy Filtering` panel controls the configuration of the data privac
 * Control how sensitive records are disclosed or updated
 * Control which properties on which resources are forbidden (and will result in a privacy violation exception when collected, or queried).
 
-![](<../../../../.gitbook/assets/image (439) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (50).png>)
 
 | Option         | Description                                                                                                                           | Example                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -18,7 +18,7 @@ The `Data Privacy Filtering` panel controls the configuration of the data privac
 
 Expanding the resources input allows administrators to specify resources in the RIM which are subject to special protections. Clicking the ellipsis on the resources property will open a collection editor change the settings for resource controls:
 
-![](<../../../../.gitbook/assets/image (426) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (731).png>)
 
 | Option        | Description                                                                                                                                       | Example                                                                          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ The property policies allow implementing jurisdictions to control which properti
 * Restricting the collection, disclosure, or querying of Patient religion or ethnicity to all users
 * Restricting the disclosure, collection or querying of Patient VIP status to only users which have "Access to Taboo Information" policy.
 
-![](<../../../../.gitbook/assets/image (442) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (280).png>)
 
 | Option   | Description                                                                                   | Example                                                    |
 | -------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |

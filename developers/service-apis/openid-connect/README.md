@@ -59,7 +59,7 @@ This grant is useful for:
 * Authenticating users from an offline application context (periodic authentication where the UA collects passwords anyways)
 * Authenticating users from a first party application or trusted application
 
-![](<../../../.gitbook/assets/image (149).png>)
+![](<../../../.gitbook/assets/image (718).png>)
 
 The process is as follows:
 
@@ -91,7 +91,7 @@ This grant is useful for:
 * A background task from a trusted application on a trusted device (like synchronization)
 * HIE traffic between nodes / applications where dual-PKI infrastructure is prohibitively complex.
 
-![](<../../../.gitbook/assets/image (150).png>)
+![](<../../../.gitbook/assets/image (522).png>)
 
 The process for this is:
 
@@ -123,7 +123,7 @@ This grant is helpful when:
 * Integrating third party applications where you may or may not trust the application&#x20;
 * SSO where you wish to use cookies to auto-login users.
 
-![](<../../../.gitbook/assets/image (151).png>)
+![](<../../../.gitbook/assets/image (24).png>)
 
 The process for this is:
 
@@ -155,7 +155,7 @@ The parameters for this initial request are:&#x20;
 
 The user will be presented with the defined IdP login screen (specified in the applets manifest).
 
-![](<../../../.gitbook/assets/image (152).png>)
+![](<../../../.gitbook/assets/image (236).png>)
 
 If successful, the browser will be redirected back to the caller.&#x20;
 
@@ -293,3 +293,10 @@ Content-Length: 112
 
 grant_type=password&scope=2.25.3049340304933&username=allison&password=Mohawk123&client_id=fiddler&client_secret=fiddler
 ```
+
+## Related Topics
+
+{% content-ref url="consent-and-privacy.md" %}
+[consent-and-privacy.md](consent-and-privacy.md)
+{% endcontent-ref %}
+

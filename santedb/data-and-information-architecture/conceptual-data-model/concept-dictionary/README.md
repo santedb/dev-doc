@@ -2,7 +2,7 @@
 
 SanteDB's concept dictionary is based heavily on the work done in [OpenMRS' Concept Dictionary](https://wiki.openmrs.org/display/docs/Concept+Dictionary+Basics), the SanteDB concept dictionary is logically made up of four fundamental concepts, described in this page.
 
-![Relationship of Concept Dictionary](<../../../../.gitbook/assets/image (164).png>)
+![Relationship of Concept Dictionary](<../../../../.gitbook/assets/image (629).png>)
 
 ### Concepts
 

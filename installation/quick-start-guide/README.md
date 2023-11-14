@@ -82,7 +82,7 @@ This section of the file:
 
 * Creates a service named `santedb-mpi` in the docker environment
 * Enables feature via the `SDB_FEATURE` environment variable (for reference see: [feature-configuration.md](../installation-1/deployment/installing-software/santedb-server/installation-using-appliances/docker-containers/feature-configuration.md "mention")
-* Instructs the iCDR to enable [master-data-storage.md](../../santedb/data-storage-patterns/master-data-storage.md "mention") for `Patient` resources
+* Instructs the iCDR to enable [master-data-storage.md](../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md "mention") for `Patient` resources
 * Connects the main database to `santedb` on the `db` container.
 * Connects the audit database to `auditdb` on the db container
 * Instructs the iCDR to `hide` any data which is tagged with a privacy policy (other options are `redact`, `audit, none`
@@ -130,17 +130,17 @@ Once startup is completed, navigate to [http://127.0.0.1:9200](http://127.0.0.1:
 
 The rest of the settings can be left as their defaults.
 
-![](<../../.gitbook/assets/image (427) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (103).png>)
 
 Pressing the `Join` button will prompt you for a user name and password, use `Administrator` and `Mohawk123` as the password.
 
-![](<../../.gitbook/assets/image (422) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (282).png>)
 
 ### Select the MPI Role
 
 You will be managing a SanteMPI server, therefore you will need to instruct the web access gateway that this gateway will be acting in the "SanteDB Master Patient Index Functions" solution.
 
-![](<../../.gitbook/assets/image (420).png>)
+![](<../../.gitbook/assets/image (647).png>)
 
 {% hint style="info" %}
 Ensure you select the option to automatically download updates for applet files. This will ensure new applets uploaded to the iCDR will be downloaded by the dCDR gateway.
@@ -151,7 +151,7 @@ Ensure you select the option to automatically download updates for applet files.
 Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
 
 
-![](<../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (48).png>)
 
 {% hint style="danger" %}
 The `santedb-www` and Web Access Gateway in general lack the SQLite binaries needed to operate in offline mode. If you select offline mode your web container will most likely not start up.
@@ -173,19 +173,19 @@ You can customize the manner in which the SanteMPI user interface behaves by set
 
 &#x20;
 
-![](<../../.gitbook/assets/image (418) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (507).png>)
 
 ### Wait for Refresh
 
 Once your settings are saved, the web access gateway will save the settings and restart itself.
 
-![](<../../.gitbook/assets/image (426) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (770).png>)
 
 ## Customize the MPI
 
 You can now log into the web administration console for the Master Patient Index. You can use the administrator/Mohawk123 account to log into the administrative panel.
 
-![](<../../.gitbook/assets/image (447) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (72).png>)
 
 {% hint style="info" %}
 Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.
@@ -195,18 +195,18 @@ Full documentation for the Administrative panel is available at the [Broken link
 
 Since this is a demonstration environment, you will probably want to change the default access policies for `Administrators` to allow them to see clinical data and perform MDM tasks. This is done by navigating to `Security -> Groups` and pressing edit on the `Administrators` group.
 
-![](<../../.gitbook/assets/image (421) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (654).png>)
 
 You can scroll to `Policies` and add the following policies to the group:
 
 * Unrestricted MDM
 * Unrestricted Clinical Data
 
-![](<../../.gitbook/assets/image (446) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (184).png>)
 
 After adding these policies you should observe the policies in the master list of permissions.
 
-![](<../../.gitbook/assets/image (434) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (470).png>)
 
 {% hint style="info" %}
 You do not need to SAVE policy assignments, they are applied immediately.
@@ -216,7 +216,7 @@ You do not need to SAVE policy assignments, they are applied immediately.
 
 The policies associated with your session for Administrator were established when you logged in, you've changed the policy set, however, your session will still have the old policy assignments for your user role. You will need to log out of the user interface to obtain a new session with the new policies.
 
-![](<../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (437).png>)
 
 ## Perform Installation Qualification
 
@@ -226,23 +226,23 @@ An easy way to get patients into the SanteMPI instance is to run the [fhir-inter
 
 In the pre-requisites, a link was provided to the SanteMPI Installation Qualification SOAP-UI project. You can launch SOAP UI on your system and import this project.
 
-![](<../../.gitbook/assets/image (432) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (478).png>)
 
 This will expose a new project in your SOAP UI project with the SanteMPI endpoints (restricted from the Swagger documentation) shown and a test case called `Installation Qualification`
 
-![](<../../.gitbook/assets/image (430) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (560).png>)
 
 ### Start FHIR Mock Service
 
 The installation qualification tool uses PMIR notifications and subscriptions, it is a good idea to start the FHIR Mock service so that your docker container has an endpoint to send these messages to.
 
-![](<../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (561).png>)
 
 ### Run Installation Qualification Tests
 
 Double clicking on the `Installation Qualification` test suite will open the test steps for the SanteMPI installation qualification. There are 10 tests (all of which are documented in detail on the [mpi-cr-test-cases-for-fhir](../installation-1/deployment/installing-software/santedb-server/installation-qualification/fhir-interface-validation/mpi-cr-test-cases-for-fhir/ "mention")page).
 
-![](<../../.gitbook/assets/image (425) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (523).png>)
 
 If all tests return green status, it indicates that your copy of SanteMPI is operating as expected for baseline FHIR functions.
 
@@ -250,4 +250,4 @@ If all tests return green status, it indicates that your copy of SanteMPI is ope
 
 After the qualification tooling has been executed, you can now use the SanteMPI Dashboard to navigate the recent patients that were created in the installation qualification tool.
 
-![](<../../.gitbook/assets/image (436) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (509).png>)

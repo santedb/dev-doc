@@ -6,7 +6,7 @@ Whenever your .NET plugin exposes functionality to the iCDR service instance, an
 
 Features are located on the left hand side of the configuration tool, as shown below:
 
-![](<../../../../.gitbook/assets/image (407).png>)
+![](<../../../../.gitbook/assets/image (370).png>)
 
 Each of these features is discovered by scanning your .NET assembly for implementations of `IFeature` , an `IFeature` defines the following properties:
 
@@ -28,7 +28,7 @@ When a feature is enabled the `CreateInstallTasks` method is called, and should 
 The `IConfigurationTask` interface is used to control individual configuration steps to modify the provided file to perform a configuration or removal of a feature. You can see these in the confirm tasks dialog.\
 
 
-![](<../../../../.gitbook/assets/image (409).png>)
+![](<../../../../.gitbook/assets/image (367).png>)
 
 Each task can be enabled/disabled by an administrator to skip the specified task in their environment.
 

@@ -4,7 +4,9 @@ description: This page describes the history of the SanteDB project.
 
 # SanteDB History
 
-SanteDB is not a new application framework developed in isolation, rather it is an evolution of existing MEDIC products in a more easily customized package.
+SanteDB is the evolution of a reference implementation of the Canadian national digital health platform that originated in a post-secondary institution research lab beginning in 2007. SanteDB was designed with national scale, standards-based digital health applications in mind from the beginning.&#x20;
+
+The SanteDB suite of products incorporates the full functionality of previous research products such as the MEDIC CR client registry and the OpenIZ immunization management system into a deployment-ready, commercially supported package. A brief summary of the evolution of the products is provided in the following section. &#x20;
 
 ## Evolution of SanteDB
 
@@ -52,3 +54,4 @@ SanteDB is really an evolution of OpenIZ ([http://openiz.org](http://openiz.org)
 | Matching / Merging Engine                        |                                                        |                                                        | Probabilistic Matching Engine                                                 |
 | Master-Data-Model Management                     |                                                        |                                                        | X                                                                             |
 | Reporting                                        | 3rd Party                                              | Jasper Reports, ReportR 1.0                            | ReportR 2.0                                                                   |
+

@@ -69,7 +69,7 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 
 &#x20;   5\. Click the **Save** button.
 
-&#x20;   <img src="../../../../../../../../../.gitbook/assets/test1_saveButton (1) (1).png" alt="" data-size="original">&#x20;
+&#x20;   <img src="../../../../../../../../../.gitbook/assets/test1_saveButton.png" alt="" data-size="original">&#x20;
 
 ## Expected Behaviour
 

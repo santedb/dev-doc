@@ -28,5 +28,5 @@ Regardless of the format, the user journey should:
 
 For example, consider the user journey to issue a new national health identifier to patient for Demoland.&#x20;
 
-![](<../../../.gitbook/assets/image (440).png>)
+![](<../../../.gitbook/assets/image (183).png>)
 

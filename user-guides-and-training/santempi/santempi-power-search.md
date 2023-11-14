@@ -8,13 +8,13 @@ Some SanteMPI servers impose minimum search criteria and/or restricted search cr
 
 When a user visits the power search screen, they are presented with an empty search input area.
 
-![](<../../.gitbook/assets/image (448) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (67).png>)
 
 ## Creating Search Criteria
 
 To begin, enter the HDSI query expression clause. The software will provide suggestions for property clause paths which match the Patient resource. Users can select the property they wish to filter on.
 
-![](<../../.gitbook/assets/image (428) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (565).png>)
 
 Users may use keyboard shortcuts to navigate the suggestions:
 
@@ -43,33 +43,33 @@ Multiple repetitions of the same HDSI path result in logic as described below.
 
 For example, the following expression results in patients who were born between `1980-01-01` and `1980-12-31`
 
-![](<../../.gitbook/assets/image (438) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (58).png>)
 
 Conversely, the following expression results in patients named Donny or Don
 
-![](<../../.gitbook/assets/image (440) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (518).png>)
 
 ### Concept Fields
 
 Whenever the HDSI expression is a filter on a property of type `Concept` the value will be a search, of concepts.
 
-![](<../../.gitbook/assets/image (430) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (347).png>)
 
 ### Entity Fields
 
 Whenever the HDSI expression is a filter on a property of type `Entity` or when of its derivatives, the search box will be a drop down of entities. For example, searching by citizen results in a search of entities (since `.target` is bound to Entity) .
 
-![](<../../.gitbook/assets/image (429) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (392).png>)
 
 Using the cast operator `@` the input can be filtered to places only.
 
-![](<../../.gitbook/assets/image (431) (1) (1).png>)
+![](<../../.gitbook/assets/image (363).png>)
 
 ### Deep Linking Queries
 
 If the SanteDB instance is collecting data other than patient registrations (such as vaccinations), the properties of patient can be linked deeply. For example, if we wanted to filter on patients who have received a vaccination of a particular product.
 
-![](<../../.gitbook/assets/image (441) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (279).png>)
 
 ## Related Topics
 

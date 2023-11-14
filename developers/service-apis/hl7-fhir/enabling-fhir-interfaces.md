@@ -140,7 +140,7 @@ Alternately, if you would like to implement a custom resource handler which can 
 
 #### Extended Operations and Extensions
 
-The [Extending FHIR Functionality](../../../developers/santedb-software-publishers/extending-fhir-interfaces.md) wiki article described the process of extending the FHIR interface with custom operations and custom extensions.
+The [Extending FHIR Functionality](extending-fhir-interfaces.md) wiki article described the process of extending the FHIR interface with custom operations and custom extensions.
 
 ## Configuring Dispatcher Targets
 
@@ -174,7 +174,7 @@ To modify/customize a `Subscription` resource , a `<target>` is added with `<nam
 
 ## Enabling FHIR Audits
 
-All message layer functions in SanteDB produce audits which are stored in the local SanteDB audit repository instance (or in the [SanteGuard audit repository](../../../santeguard/introduction.md) if installed). These audits can optionally be shipped or forwarded to another audit repository by enabling an `IAuditDispatcher` service.
+All message layer functions in SanteDB produce audits which are stored in the local SanteDB audit repository instance (or in the [SanteGuard audit repository](../../../product-overview/santesuite-products/introduction.md) if installed). These audits can optionally be shipped or forwarded to another audit repository by enabling an `IAuditDispatcher` service.
 
 The FHIR service in SanteDB contains a FHIR based audit dispatcher which creates instances of `AuditEvent` and ships them to a FHIR server. To enable the FHIR audit dispatcher, add it as a service in your service configuration:
 

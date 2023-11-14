@@ -24,7 +24,7 @@ o => o.Names.Any(name => name.Component.Any(component => component.Value == "TES
 
 The properties are traversed using dotted notation matching the property names in the returned object as illustrated below.
 
-![](<../../../../.gitbook/assets/image (159).png>)
+![](<../../../../.gitbook/assets/image (664).png>)
 
 ## And/Or Semantics
 

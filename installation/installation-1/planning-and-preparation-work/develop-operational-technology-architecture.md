@@ -24,7 +24,7 @@ The operational documentation should keep discussion of software components and 
 Consider, for example, the software architecture for the Demoland example. \
 
 
-![Demoland Operational System Architecture](<../../../.gitbook/assets/image (432).png>)
+![Demoland Operational System Architecture](<../../../.gitbook/assets/image (378).png>)
 
 You will note that the software summary is concerned about the overall deployment of the software components onto various server infrastructure, and illustrating how data is shared and flows between these components.
 
@@ -36,7 +36,7 @@ The operational architecture should describe the operational environment on whic
 
 The system description should include a server deployment diagram (see below for an example), or if using cloud services, how those services are deployed. If the solution is deployed in clinics with special software or hardware, those deployments should also be documented. The goal is the clearly illustrate how the software is deployed so the operators can maintain the system.
 
-![Demoland Production Server Environment](<../../../.gitbook/assets/image (450).png>)
+![Demoland Production Server Environment](<../../../.gitbook/assets/image (75).png>)
 
 Additionally, any hardware specifications or network specifications should be clearly enumerated in the operational documentation. This includes:
 
@@ -152,4 +152,4 @@ The SanteDB team has prepared a template which may be helpful for organizing you
 
 As always, please refer to the [Disclaimer](../../../readme/disclaimer.md).&#x20;
 
-{% file src="../../../.gitbook/assets/Operational Architecture Template.docx" %}
+{% file src="../../../.gitbook/assets/Operational Architecture - Template - Public.docx" %}

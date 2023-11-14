@@ -2,7 +2,7 @@
 
 The SanteDB entity model represents a series of tables which are responsible for the tracking of entities within the SanteDB data model. Entities represent people, places, organizations, things, etc. and are responsible for participating within acts in some capacity.
 
-![](<../../../../../.gitbook/assets/image (165).png>)
+![](<../../../../.gitbook/assets/image (250).png>)
 
 ### Entity
 
@@ -218,7 +218,7 @@ A material represents a physical thing (syringe, drug, etc.) which participates 
 
 ### Manufactured Material
 
-A manufactured material is a specialization of a material that is manufactured. 
+A manufactured material is a specialization of a material that is manufactured.&#x20;
 
 | Column                            | Type    | Description                                                                  |
 | --------------------------------- | ------- | ---------------------------------------------------------------------------- |

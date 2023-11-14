@@ -4,6 +4,13 @@
 
 This tutorial is intended to assist developers with the writing of business rules using the SanteDB Jint business rules engine (the default business rules engine in SanteDB).
 
+{% hint style="info" %}
+SanteDB can run rules in the user interface on demand (which run in the user's browser) otherwise they are run in the dCDR and iCDR using a C# to JavaScript interpreter bridge named [JINT](https://github.com/sebastienros/jint). The JINT library.&#x20;
+
+* SanteDB < 2.0.x use JINT 2.0 which is compatible with ECMA Script 5.1
+* SanteDB > 2.1.x use JINT 3.0 Beta which is compatible with a subset of ECMA Script 6  functions (see: [https://github.com/sebastienros/jint/blob/main/README.md](https://github.com/sebastienros/jint/blob/main/README.md))
+{% endhint %}
+
 ### &#x20;What is a Business Rule?
 
 SanteDB provides a series of extension points where developers can write custom triggers to modify, extend, add, or remove data from resources. These changes are used to implement business rules on the series of objects the subscribe to. Some examples might be:
@@ -11,6 +18,10 @@ SanteDB provides a series of extension points where developers can write custom 
 * Interpreting an observation based on some pre-defined lookup tables
 * Merging patients before they are persisted based on specified criteria
 * Validating that a substance administration is correct before persisting it
+
+{% hint style="info" %}
+This article covers writing business rules in JavaScript in your applets. While this method is convenient and allows sharing of a single business rule implementation in all dCDR instances and the iCDR, if you require higher performing business rules on the iCDR, consider implementing a [business-rules-service.md](../server-plugins/implementing-.net-features/service-definitions/business-rules-service.md "mention")in C# instead.
+{% endhint %}
 
 ### &#x20;How does SanteDB treat Business Rules?
 

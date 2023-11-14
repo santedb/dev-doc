@@ -4,7 +4,7 @@ Whenever a patient has been sent to the SanteMPI system (or edited in the user i
 
 When data quality rules are detected as violated, the issue is flagged in a data quality extension (see: [data-quality-services.md](../../../operations/server-administration/host-configuration-file/data-quality-services.md "mention")), and the user interface will reflect these rules.
 
-![](<../../../.gitbook/assets/image (421).png>)
+![](<../../../.gitbook/assets/image (315).png>)
 
 The data quality rule will have:
 

@@ -2,7 +2,7 @@
 
 The data dictionary for entities which store the SanteDB concept dictionary are illustrated below.
 
-![](<../../../../.gitbook/assets/image (169).png>)
+![](<../../../../.gitbook/assets/image (547).png>)
 
 ### Concept Class
 

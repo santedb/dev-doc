@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Edit** button.
 
-![](<../../../../../../../../../.gitbook/assets/18 (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/18 (2).jpg>)
 
 2- Under the Security Properties tab, click the Device Secret **Reset** button.
 
@@ -43,4 +43,4 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 3- Should display the new Device Secret.
 
-![](<../../../../../../../../../.gitbook/assets/23 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/23.jpg)

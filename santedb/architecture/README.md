@@ -1,36 +1,38 @@
-# Overall Architecture
+# SanteDB Architecture
 
 This page provides a summary of the SanteDB architecture. A more detailed description of this architecture can be found in the SanteDB Functional Design Specification ([http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf](http://santesuite.org/assets/uploads/sdb-arch-1.11.pdf))
 
 ## Overall Architecture
 
-SanteDB is actually made up of several software components which operate together to form the basis of a cohesive digital health infrastructure.&#x20;
+A general overview and introduction to SanteDB is provided [here](../../product-overview/santesuite-products/santedb/santedb-solutions.md).&#x20;
 
-![](<../../.gitbook/assets/image (24).png>)
+SanteDB is a comprised of several software components which operate together to form the basis of a cohesive digital health infrastructure.&#x20;
+
+![](<../../.gitbook/assets/image (671).png>)
 
 ## iCDR Server
 
-The iCDR server is the central integrated clinical data repository which is used to coordinate the many connected clients in an implementation. Typically an implementation of SanteDB will only ever have one iCDR instance (or a logical grouping of iCDR servers acting as a single iCDR).
+The iCDR server is the central integrated clinical data repository which is used to coordinate the many connected clients in an implementation. Typically an implementation of SanteDB will only ever have one logical iCDR instance (i.e. many physical servers are often deployed for scalability however the logical grouping of iCDR servers is acting as a single iCDR).
 
 The primary responsibilities of the iCDR are:
 
 * Maintain a master dataset for the entire deployment of SanteDB in a particular health role.
 * Facilitate the synchronization and sharing of data between sites within the deployment.
 * Integrate with upstream services such as audit repositories, client registries, etc.
-* Distribute OTA software updates to connected clients
-* Provide a centralized authentication authentication and privacy information distribution point.
+* Distribute "over the air" (OTA) software updates to connected clients and apps
+* Provide a centralized authentication and privacy information distribution point.
 
 ## dCDR Clients
 
-The dCDR clients are the disconnected clients which connect to the central iCDR and are typically used by end users. The term dCDR client is used loosely to describe any client which is implemented on the dCDR technology. dCDR clients are deployed in data centers, in clinics, on tablets, etc. A deployment of SanteDB will have multiple dCDR clients.
+The dCDR clients are the disconnected clients which connect to the central iCDR and are typically embedded in applications used by clinics or mobile applications used by end users. The term dCDR client is used loosely to describe any client which is implemented on the dCDR technology. dCDR clients are deployed in data centers, in clinics, on tablets, etc. A deployment of SanteDB will have multiple, potentially hundreds or thousands of, dCDR clients.
 
 No matter the implementation, the dCDR clients are primarily responsible for:
 
-* Providing offline access to relevant subsets of data synchronized and replicated from the central iCDR server.
+* Providing offline access to relevant subsets of data synchronized and replicated from the central iCDR server
 * Caching centralized credentials, and providing local clinic-level authentication
-* Serving out the user interface, reports, and other end-user facing elements.
+* Serving out the user interface, reports, and other end-user facing elements
 * Providing a federation point for other dCDR instances
-* Executing data quality checks, business rules, clinical decision support rules, etc. while the central iCDR server is not available.
+* Executing data quality checks, business rules, clinical decision support rules, etc. while the central iCDR server is not available
 
 ### dCDR Android Application
 
@@ -44,9 +46,9 @@ The dCDR Windows and Linux applications are self-contained applications which ru
 
 ### dCDR Gateway
 
-The dCDR Gateway is a headless service which implements the dCDR functionality and is intended for use in environments where third party applications (or users in a shared local network) require access to offline functionality.&#x20;
+The dCDR Gateway is a network service which implements the dCDR functionality and is intended for use in environments where third party applications (or users in a shared local network) require access to offline functionality.&#x20;
 
-The dCDR gateway exposes FHIR, HL7v2, ATNA, and API calls to any connected client on a local network. The Gateway acts a "mini" SanteDB  iCDR instance, where clients connected on the local network have no knowledge of the overall connectivity of the clinic or environment they're operating within.
+The dCDR Gateway exposes FHIR, HL7v2, ATNA, and API calls to any connected client on a local network. The Gateway provides the services of a SanteDB iCDR instance, where clients connected on the local network have no knowledge of the overall connectivity of the clinic or environment they're operating within. This allows applications to continue to operate in local clinic environments even when connectivity to the iCDR is not available.&#x20;
 
 {% hint style="info" %}
 Care should be taken in planning the local network security environment when using the dCDR gateway.
@@ -56,3 +58,24 @@ Care should be taken in planning the local network security environment when usi
 
 The dCDR Web Portal is a specialized dCDR environment which has no offline capability. It is primarily designed to operate as a daemon and to serve out, on the internet, the user interfaces directly connected to the central iCDR. This is the technology used to host the administrative panels, any shared/central infrastructure, etc.
 
+## Topics
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+{% content-ref url="../software-architecture/" %}
+[software-architecture](../software-architecture/)
+{% endcontent-ref %}
+
+{% content-ref url="../data-and-information-architecture/" %}
+[data-and-information-architecture](../data-and-information-architecture/)
+{% endcontent-ref %}
+
+{% content-ref url="../security-architecture.md" %}
+[security-architecture.md](../security-architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="../privacy-architecture.md" %}
+[privacy-architecture.md](../privacy-architecture.md)
+{% endcontent-ref %}

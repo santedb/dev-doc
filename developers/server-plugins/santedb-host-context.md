@@ -1,4 +1,4 @@
-# SanteDB Host Context
+# Host Context & Lifecycle
 
 As described in the [Software Architecture](../../santedb/software-architecture/#service-architecture) documentation, the SanteDB services or iCDR and dCDR leverage dependency injection and service locator patterns. In the iCDR and dCDR both of these patterns are managed by the `ApplicationServiceContext` instance.&#x20;
 
@@ -14,7 +14,7 @@ The implementation of `ApplicationServiceContext` depends on the environment tha
 
 When the application context is initialized, it will go through a defined lifecycle, illustrated below:
 
-![](<../../.gitbook/assets/image (411).png>)
+![](<../../.gitbook/assets/image (273).png>)
 
 ### Startup
 

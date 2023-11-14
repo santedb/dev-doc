@@ -10,7 +10,7 @@ In SanteDB's administrative panel, summary lists are displayed using client-side
 
 Take, for example, the following list of identity domains.
 
-![](<../.gitbook/assets/image (453) (1) (1).png>)
+![](<../.gitbook/assets/image (171).png>)
 
 ### Table / Global Actions
 
@@ -55,9 +55,9 @@ Individual records, depending on their type, will permit actions directly from t
 
 ## Panels&#x20;
 
-SanteDB provides a robust user interface extension mechanism which is exposed using [html-widgets.md](../developers/extending-santesuite/extending-santedb/applets/assets/html-widgets.md "mention"). These widgets are provided by plugins in the SanteDB administrative or user interface panels and render as either new tabs or new panels in a detail screen.
+SanteDB provides a robust user interface extension mechanism which is exposed using [html-widgets.md](../developers/applets/assets/html-widgets.md "mention"). These widgets are provided by plugins in the SanteDB administrative or user interface panels and render as either new tabs or new panels in a detail screen.
 
-![](<../.gitbook/assets/image (439) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (47).png>)
 
 The panel may optionally show one or more action buttons (or alternate views):
 
@@ -69,7 +69,7 @@ The panel may optionally show one or more action buttons (or alternate views):
 
 When in settings or edit mode, a panel titlebar will show two icons for cancelling the change and submitting the change. Any changes made to the panel contents must be saved via the check button. The check button may be disabled when the form is incomplete or missing data.
 
-![](<../.gitbook/assets/image (438) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (563).png>)
 
 ## Contextual Help
 
@@ -77,4 +77,4 @@ As part of improving the usability of the SanteDB administrative panel, several 
 
 To access contextual help, simply hover the mouse cursor over the `?` icon in the user interface (or tap on a mobile device) and information about that data element, or function will appear.
 
-![](<../.gitbook/assets/image (435) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (32).png>)

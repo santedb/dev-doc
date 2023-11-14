@@ -2,7 +2,7 @@
 
 In SanteDB, a passive service represents a service provider (implementation of a service contract) which is constructed and called on demand. These differ from daemon services as they are constructed on-demand.
 
-Services available are listed in the [Service Definitions](../service-definitions/) wiki article. Writing and using a service involves:
+Services available are listed in the [Service Definitions](service-definitions/) wiki article. Writing and using a service involves:
 
 1. Implementing the service contract interface
 2. Registering the service with the ApplicationServiceHost
@@ -12,7 +12,7 @@ Services available are listed in the [Service Definitions](../service-definition
 
 ### IServiceImplementation
 
-All service interfaces also implement the `IServiceImplementation`. This interface contains a single property called `ServiceName `which is used in logs and configuration tooling to identify the service you've implemented to humans.&#x20;
+All service interfaces also implement the `IServiceImplementation`. This interface contains a single property called `ServiceName` which is used in logs and configuration tooling to identify the service you've implemented to humans.&#x20;
 
 For example, a simple service implementation of the barcode generator service would be:
 

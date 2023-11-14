@@ -21,7 +21,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Lock** button.
 
-![](<../../../../../../../../../.gitbook/assets/6 (2).jpg>)
+![](../../../../../../../../../.gitbook/assets/6.jpg)
 
 2- Click  **Ok** to confirm the lock.
 
@@ -35,4 +35,4 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 2- Should appear the Status of the device changed to locked.
 
-![](<../../../../../../../../../.gitbook/assets/8 (2).jpg>)
+![](../../../../../../../../../.gitbook/assets/8.jpg)

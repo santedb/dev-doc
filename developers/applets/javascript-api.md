@@ -18,7 +18,7 @@ angular.module('santedb').controller('MyController', ["$scope", "$rootScope", fu
 
 Once this reference is included in your file you should see documentation from the source files in VS Code.
 
-![](<../../.gitbook/assets/image (157).png>)
+![](<../../.gitbook/assets/image (383).png>)
 
 ## Core API
 
@@ -53,19 +53,19 @@ catch(e) {
 
 All resources in the `SanteDB.resources` utility expose the following methods
 
-| Method                | Return             | Description                                                                                                                                                                |
-| --------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| getAsync              | Resource           | Retrieve a specific instance of a resource by its UUID                                                                                                                     |
-| findAsync             | Bundle             | Execute an [HDSI Query ](../service-apis/hl7-fhir/hdsi-query-syntax.md)against the resource returning a bundle of results.                                                 |
-| insertAsync           | Inserted Resource  | Insert a new instance of the resource on the API.                                                                                                                          |
-| updateAsync           | Updated Resource   | Update an existing instance of the resource                                                                                                                                |
-| deleteAsync           | Deleted Resource   | Delete a resource by its UUID.                                                                                                                                             |
-| cancelAsync           | Cancelled Resource | Cancel the resource by its UUID (note: this method is only supported for Acts)                                                                                             |
-| nullifyAsync          | Nullified Resource | Nullify the specified resource (i.e. the resource never existed)                                                                                                           |
-| patchAsync            | Patched Resource   | Submit a patch against the specified resource type and instance. Patches are constructed using [the patch format.](../santedb-software-publishers/gs1-bms-xml/patching.md) |
-| lockAsync             | Resource           | Locks the specified resource (if supported by the resource), forbidding action on that resource.                                                                           |
-| unlockAsync           | Resource           | Unlocks the specified resource (if supported by the resource)                                                                                                              |
-| addAssociatedAsync    | Resource           | Add an associated object to the root resource. For example, add role X to user Y.                                                                                          |
-| getAssociatedAsync    | Resource           | Get a specific instance of an associated resource.                                                                                                                         |
-| findAssociatedAsync   | Bundle             | Find the associated resource instances (i.e. find associated roles for user X)                                                                                             |
-| removeAssociatedAsync | Resource           | Remove an associated resource from an instance.                                                                                                                            |
+| Method                | Return             | Description                                                                                                                                                                        |
+| --------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| getAsync              | Resource           | Retrieve a specific instance of a resource by its UUID                                                                                                                             |
+| findAsync             | Bundle             | Execute an [HDSI Query ](../service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/)against the resource returning a bundle of results.                                 |
+| insertAsync           | Inserted Resource  | Insert a new instance of the resource on the API.                                                                                                                                  |
+| updateAsync           | Updated Resource   | Update an existing instance of the resource                                                                                                                                        |
+| deleteAsync           | Deleted Resource   | Delete a resource by its UUID.                                                                                                                                                     |
+| cancelAsync           | Cancelled Resource | Cancel the resource by its UUID (note: this method is only supported for Acts)                                                                                                     |
+| nullifyAsync          | Nullified Resource | Nullify the specified resource (i.e. the resource never existed)                                                                                                                   |
+| patchAsync            | Patched Resource   | Submit a patch against the specified resource type and instance. Patches are constructed using [the patch format.](../service-apis/health-data-service-interface-hdsi/patching.md) |
+| lockAsync             | Resource           | Locks the specified resource (if supported by the resource), forbidding action on that resource.                                                                                   |
+| unlockAsync           | Resource           | Unlocks the specified resource (if supported by the resource)                                                                                                                      |
+| addAssociatedAsync    | Resource           | Add an associated object to the root resource. For example, add role X to user Y.                                                                                                  |
+| getAssociatedAsync    | Resource           | Get a specific instance of an associated resource.                                                                                                                                 |
+| findAssociatedAsync   | Bundle             | Find the associated resource instances (i.e. find associated roles for user X)                                                                                                     |
+| removeAssociatedAsync | Resource           | Remove an associated resource from an instance.                                                                                                                                    |

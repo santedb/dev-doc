@@ -23,14 +23,14 @@ After a **Policy** is added to the list of **Assigned Policies**, its **Permissi
 
 1\. Toggle **Permission** to **Elevate**, corresponding to the **Policy** having elevated permission**.**
 
-![](<../../../../../../../../../.gitbook/assets/image (374).png>)
+![](<../../../../../../../../../.gitbook/assets/image (190).png>)
 
 2\. Click the **Save** button.
 
-![](<../../../../../../../../../.gitbook/assets/image (372).png>)
+![](<../../../../../../../../../.gitbook/assets/image (68).png>)
 
 ## Expected Behaviour
 
 * The **Permission** toggle button should switch to **Elevate** being darkened (selected) for the corresponding **Policy**.
 
-![](<../../../../../../../../../.gitbook/assets/image (375).png>)
+![](<../../../../../../../../../.gitbook/assets/image (532).png>)

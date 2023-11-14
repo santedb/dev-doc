@@ -39,7 +39,7 @@ It is recommended that, after [securing-the-apis.md](../../../securing-the-apis.
   * [ ] Ensure that only ports you want opened are open
   * [ ] Ensure that ports that are open are secured.
 
-![](<../../../../../../.gitbook/assets/image (439).png>)
+![](<../../../../../../.gitbook/assets/image (555).png>)
 
 * [ ] Use OpenSSL to validate that your SSL certificates are properly configured
 

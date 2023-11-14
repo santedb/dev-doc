@@ -6,7 +6,7 @@ When opening a patient in a search result, match result, or via direct link, use
 
 Located at the top of the patient detail is the patient header. The header shows summary information about the patent record.
 
-![](<../../../.gitbook/assets/image (429) (1) (1).png>)
+![](<../../../.gitbook/assets/image (356).png>)
 
 ### Record Status
 
@@ -14,7 +14,7 @@ The SanteDB CDR supports assigning a status identifier to a record in the system
 
 
 
-![](<../../../.gitbook/assets/image (448) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64).png>)
 
 | State       | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,25 +30,25 @@ Specific states and state transitions should be defined by the implementing nati
 
 ### Record Type
 
-When [master-data-storage.md](../../../santedb/data-storage-patterns/master-data-storage.md "mention") is enabled (as is default in SanteMPI), records can exist in one of three classifications which are indicated by their status bar.&#x20;
+When [master-data-storage.md](../../../santedb/data-and-information-architecture/data-storage-patterns/master-data-storage.md "mention") is enabled (as is default in SanteMPI), records can exist in one of three classifications which are indicated by their status bar.&#x20;
 
 #### Local / Source Records
 
 A local or source record indicates that the data being viewed is the SanteDB representation of data submitted directly from a source system.  Source records are read only in the user interface, this is because editing a source record would cause a mis-match of data between SanteDB and the source system which submitted the data (and loss of context). Corrections to local records should be performed on the local system which submitted the data.
 
-![](<../../../.gitbook/assets/image (427) (1) (1).png>)
+![](<../../../.gitbook/assets/image (586).png>)
 
 #### Master Records
 
 A master record indicates that the data being viewed is collected form a series of local records and is being presented as a logical projection of the data contained in the underlying records.&#x20;
 
-![](<../../../.gitbook/assets/image (450) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (570).png>)
 
 In SanteMPI all LOCAL records must have a single MASTER record. When a master record has not been adjusted to contain official data, the notification bar will indicate this.&#x20;
 
 The **Advanced** view of the **Entity Relationship** panel shows the local records which have been used to represent the master record. For example, Gustavo Osorio's relationship with a mother record (Guerra) is inferred (indicated by the dotted line) via the local from a source system (indicated by a solid line). However, this relationship exists on one local, the other local does not have any information about Gustavo's mother.
 
-![](<../../../.gitbook/assets/image (447) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73).png>)
 
 {% hint style="info" %}
 Master records don't contain data beyond identifiers. They are abstract Entity objects which act as a linker between different sources of information.
@@ -58,7 +58,7 @@ Master records don't contain data beyond identifiers. They are abstract Entity o
 
 When a data administrator uses the administrative panel to edit a patient record, the administrative panel (granted with **Establish MDM Record of Truth**) will construct a new SOURCE/LOCAL record (which belongs to the administrative panel) which is promoted to **Record of Truth**. This will be indicated with a green bar and an option to view the ROT and/or EDIT the master.
 
-![](<../../../.gitbook/assets/image (452) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (572).png>)
 
 {% hint style="info" %}
 All edits by the administrative panel to the MASTER record are redirected to the record of truth. It is recommended that administrators and data officers edit new official information on the ROT directly.
@@ -68,7 +68,7 @@ All edits by the administrative panel to the MASTER record are redirected to the
 
 The remainder of the patient detail screen is occupied by the patient demographics and information tabs. These tabs can be extended based on the plugins enabled on the SanteDB server.&#x20;
 
-![](<../../../.gitbook/assets/image (451) (1) (1).png>)
+![](<../../../.gitbook/assets/image (430).png>)
 
 By default the following tabs may appear based on your user access level:
 

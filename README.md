@@ -33,8 +33,8 @@ SanteDB is a general purpose clinical data repository based loosely on the HL7 R
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="installation/installation/" %}
-[installation](installation/installation/)
+{% content-ref url="installation/installation-1/" %}
+[installation-1](installation/installation-1/)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference" %}

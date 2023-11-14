@@ -4,7 +4,7 @@ Administrators can specify optional retention policies which use the ADO.NET Dat
 
 When enabled, the retention policy feature will create a JOB on system startup which will ensure that data is retained according to the administrator configured policies.
 
-![](<../../../../.gitbook/assets/image (510).png>)
+![](<../../../../.gitbook/assets/image (495).png>)
 
 | Option             | Description                                                                                                                                          | Example                                                             |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ When enabled, the retention policy feature will create a JOB on system startup w
 
 The retention service requires the definition of retention policies which need to be applied.&#x20;
 
-![](<../../../../.gitbook/assets/image (480).png>)
+![](<../../../../.gitbook/assets/image (490).png>)
 
 | Option           | Description                                                                                                                                                                                                             | Example                                                                                                             |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |

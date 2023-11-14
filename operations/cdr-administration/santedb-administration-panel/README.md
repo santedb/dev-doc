@@ -3,7 +3,7 @@
 When the instance of SanteDB iCDR was installed in your environment, the Administration User Interface may have been installed. The administrative user interface is a specialized form of the SanteDB dCDR which services web-based requests.
 
 {% hint style="info" %}
-You may use the [Demonstration Server's](../../../santedb/demonstration-environment.md) administration panel as a reference for this document.
+You may use the [Demonstration Server's](../../../installation/demonstration-environment.md) administration panel as a reference for this document.
 {% endhint %}
 
 ## Contents
@@ -32,7 +32,7 @@ You may use the [Demonstration Server's](../../../santedb/demonstration-environm
 
 When you log into the SanteDB Administration Panel user interface, the default screen is the server dashboard. Depending on the plugins you have enabled (SanteMPI, SanteIMS, etc.) and your level of user access (clinical data, administrative data, etc.) you will see a series of summary dashboards for your account.
 
-![](<../../../.gitbook/assets/image (471).png>)
+![](<../../../.gitbook/assets/image (27).png>)
 
 * System Menu: The system menu provides a series of links to administrative screens which your user account can access.&#x20;
 * Dashboard Area: The dashboard area of your administrative panel. This will change depending on your jurisdiction, plugins installed, and user access.
@@ -46,7 +46,7 @@ When you log into the SanteDB Administration Panel user interface, the default s
 
 By default, the SanteMPI dashboard shows a summary of MPI information for any authenticated user which has `Query Clinical Data` policy enabled.
 
-![](<../../../.gitbook/assets/image (504).png>)
+![](<../../../.gitbook/assets/image (456).png>)
 
 * Recent Patients: The recent patients widget on the dashboard shows a list of all patients which have been registered on the iCDR or dCDR in the last 24 hours.
 * Quick Search: Allows for a query free-field search by name, address, or identifier. Additionally, devices with a camera can use the SanteDB Visual Resource Pointer QR code to directly open a patient profile.

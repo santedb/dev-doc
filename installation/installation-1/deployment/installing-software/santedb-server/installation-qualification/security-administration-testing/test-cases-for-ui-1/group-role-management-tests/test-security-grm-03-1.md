@@ -23,15 +23,15 @@ SanteSuite groups cannot be permanently destroyed. Deleting a group means that i
 
 &#x20;1\. Click the **Delete** button in the same row as the group to be deleted.
 
-![](<../../../../../../../../../.gitbook/assets/image (293).png>)
+![](<../../../../../../../../../.gitbook/assets/image (524).png>)
 
 2\. Click the **OK** button on the confirmation prompt that appears in the browser.
 
-![](<../../../../../../../../../.gitbook/assets/image (321).png>)
+![](<../../../../../../../../../.gitbook/assets/image (540).png>)
 
 ## Expected Behaviour
 
 * Deleted group should be removed from the list after it reloads and is added to the list of deleted groups.
 * Clicking the **Show Deleted** button should toggle (darkened button) the list of deleted groups and should include the group that was just deleted (e.g. "Muddsville" in this case).
 
-![](<../../../../../../../../../.gitbook/assets/image (319).png>)
+![](<../../../../../../../../../.gitbook/assets/image (202).png>)

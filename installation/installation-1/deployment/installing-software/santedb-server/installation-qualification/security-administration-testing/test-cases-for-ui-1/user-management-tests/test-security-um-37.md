@@ -23,11 +23,11 @@ A user's password can be reset by accessing a modal from the Users list.
 
 1\. Click the **Reset Pwd** button corresponding to the user whos password is being reset (e.g. "ClinicalStaffUser123").
 
-![](<../../../../../../../../../.gitbook/assets/image (323).png>)
+![](<../../../../../../../../../.gitbook/assets/image (593).png>)
 
 ## Expected Behaviour
 
 * A modal appears for resetting a user's password.&#x20;
 * Can reset the user's password by referring to step 3 of [TEST: SECURITY-UM-24](test-security-um-24.md) and supply valid **New/Confirm** **Passwords** in a similar password reset modal.
 
-![](<../../../../../../../../../.gitbook/assets/image (290).png>)
+![](<../../../../../../../../../.gitbook/assets/image (113).png>)

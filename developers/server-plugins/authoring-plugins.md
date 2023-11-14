@@ -8,7 +8,7 @@ description: >-
 
 All SanteDB components (the iCDR, dCDR, and UI) all leverage common packages. These packages are shared among a variety of the infrastructure components.&#x20;
 
-![Library Relationship](<../../.gitbook/assets/image (25).png>)
+![Library Relationship](<../../.gitbook/assets/image (782).png>)
 
 When implementing your plugin, if, for example, you target .NET Framework and use the SanteDB.Server.Plugin package, then your plugin will not work on the dCDR. Conversely if you only reference APIs in the SanteDB Core Libs package then your plugin will work on all platforms SanteDB supports.
 

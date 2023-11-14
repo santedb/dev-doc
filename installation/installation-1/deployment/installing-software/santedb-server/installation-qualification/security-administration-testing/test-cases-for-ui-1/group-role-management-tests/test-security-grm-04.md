@@ -21,7 +21,7 @@ Groups cannot be created with a duplicate **Name** matching a deleted group.
 
 1\. Click the **Create** button.
 
-![](<../../../../../../../../../.gitbook/assets/image (295).png>)
+![](<../../../../../../../../../.gitbook/assets/image (699).png>)
 
 2\. Enter invalid **Name** for the group (duplicate; e.g. "Muddsville").
 
@@ -31,4 +31,4 @@ Groups cannot be created with a duplicate **Name** matching a deleted group.
 * Remain on **Administration Panel / Security / Groups / Create Group** page.
 * Display a prompt below the required **Name** textbox with a validation message as follows:
 
-![](<../../../../../../../../../.gitbook/assets/image (328).png>)
+![](<../../../../../../../../../.gitbook/assets/image (553).png>)

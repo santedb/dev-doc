@@ -27,4 +27,4 @@ New users being created can be assigned multiple employers in the **Employer** t
 
 * Multiple tags appear, each representing an **Employer** for a new user being created and can be removed from the **Employer** textbox.
 
-![](<../../../../../../../../../.gitbook/assets/image (279).png>)
+![](<../../../../../../../../../.gitbook/assets/image (91).png>)

@@ -6,7 +6,7 @@ Sometimes your plugin/applet will need to include specialized data in order to o
 * New Materials and ManufacturedMaterials which are used/distributed by the application
 * New Places or Organizations which support a particular plugin.
 
-### Dataset Files
+## Dataset Files
 
 All data in SanteDB's datastore can be distributed in the form of a data set. A data set file is a special file which contains a series of RIM objects (serialized in HDSI XML format) and instructions on how the RIM object should be treated.
 
@@ -48,7 +48,7 @@ The following objects are supported on the dataset:
 * IdentifierType
 * AssigningAuthority
 
-### Generating a Dataset File
+## Generating a Dataset File
 
 You can generate a dataset from existing data in the SanteDB server by using the SanteDB Administration Console (sdbac) application. To do this you will use the `cdr.query` command, which is illustrated below to produce a dataset of all concepts in the FamilyMember concept set:
 

@@ -35,7 +35,7 @@ Installation of the Web Access Gateway should be performed on machines, containe
 
 Installation of the Web Access Gateway on Microsoft Windows Operating Systems is a standard Windows Installer experience. The application installer will copy the&#x20;
 
-![](<../../../../../.gitbook/assets/image (429) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (341).png>)
 
 After installation is complete you will be asked to [Configure the Web Access Gateway](installing-web-access-gateway.md#undefined).
 
@@ -45,7 +45,7 @@ When updating the SanteDB Web Access Gateway, you should use the installer provi
 
 You may receive a notice to restart existing running services. It is safe to select `Automatically Close Applications`.
 
-![](<../../../../../.gitbook/assets/image (431) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (577).png>)
 
 ### Installation on Linux Operating Systems
 
@@ -82,7 +82,7 @@ The configuration screen for the web access gateway is identical to the configur
 
 ### Join the Security Domain
 
-![](<../../../../../.gitbook/assets/image (442) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (187).png>)
 
 * **Local Device ID**: The device identifier which this web access gateway will use to enrol itself in the iCDR security domain (example: `admin-portal` or `admin-portal-cluster-1`)
 * **Domain Address**: The IP address or host name of the iCDR server instance. If you're running the iCDR in a distributed deployment, this should be the address to a machine or group running the [administrative-management-interface.md](../../../../../operations/server-administration/configuration-tool/messaging-settings/administrative-management-interface.md "mention")  .
@@ -93,7 +93,7 @@ The configuration screen for the web access gateway is identical to the configur
 
 Pressing the **JOIN** button will require you to login as the system administrator for the SanteDB server.
 
-![](<../../../../../.gitbook/assets/image (436) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (387).png>)
 
 You should use the administrative user account and password to authenticate yourself with the domain.
 
@@ -103,11 +103,11 @@ A single SanteDB iCDR server can host multiple SanteDB solutions and user interf
 
 When configuring the SanteDB Web Access Gateway (like all dCDR instances) you must select the application role that the SanteDB dCDR will be taking on.
 
-![](<../../../../../.gitbook/assets/image (445) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (427).png>)
 
 Additionally, it is recommended that you select SanteDB to automatically update applets on the Web Access Gateway. &#x20;
 
-![](<../../../../../.gitbook/assets/image (441) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (94).png>)
 
 {% hint style="info" %}
 The SanteDB dCDR software packages like the Windows Application, Android Application and dCDR Gateway may opt to not auto-update applets depending on bandwidth restrictions.
@@ -117,19 +117,19 @@ The SanteDB dCDR software packages like the Windows Application, Android Applica
 
 Since the SanteDB Web Access Gateway is intended to be used in an environment where it can always communicate with the iCDR server directly, and because it lacks the storage capacity to operate offline, the synchronization mode of the Web Access Gateway should be set to Online Only.
 
-![](<../../../../../.gitbook/assets/image (446) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (61).png>)
 
 ### Set Log Verbosity
 
 By default, SanteDB Web Access Gateway release builds will only log events which are errors or warnings. If you desire more verbose logging you can alter the setting for logging in this panel.
 
-![](<../../../../../.gitbook/assets/image (421) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (391).png>)
 
 ### Application Services
 
 It is recommended you leave the default application services selected for the Web Access Gateway. These settings are primarily intended for disconnected client gateways which require fine tuning of HL7, FHIR, ATNA and other services for local clinics.
 
-![](<../../../../../.gitbook/assets/image (444) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (477).png>)
 
 ### Set Networking Parameters
 
@@ -137,7 +137,7 @@ By default, the SanteDB dCDR instances will optimize traffic with the central iC
 
 If you're running the iCDR server on the same machine as the Web Access Gateway or are using a 10gbE connection between the two, you can set this to Local Network, since this will disable all compression (saving compute resources). If you are running the Web Access Gateway and iCDR in an environment which has a slower connection between the iCDR and dCDR it may be beneficial to select another option.
 
-![](<../../../../../.gitbook/assets/image (443) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (37).png>)
 
 | Optimization Setting | Compression Used |
 | -------------------- | ---------------- |
@@ -153,7 +153,7 @@ You may also optionally proxy traffic flowing between the Web Access Gateway and
 
 The other settings panel allows you to configure custom behaviors for the Web Access Gateway. These settings are documented on the [app-settings.md](app-settings.md "mention")wiki page.
 
-![](<../../../../../.gitbook/assets/image (430) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (188).png>)
 
 {% hint style="info" %}
 You can change the application settings for the Web Access Gateway after initial configuration via the file `%systemroot%\Windows\SYSWOW64\config\systemprofile\AppData\Roaming\SanteDB\wwww-default` on Windows or via `~/.config/santedb/santedb-www` on Linux and Docker.

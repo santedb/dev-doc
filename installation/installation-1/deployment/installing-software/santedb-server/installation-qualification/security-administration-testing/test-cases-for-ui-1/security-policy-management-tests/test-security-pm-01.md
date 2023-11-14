@@ -21,17 +21,17 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button &#x20;
 
-![](<../../../../../../../../../.gitbook/assets/1 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (10).jpg>)
 
 2- Fill out the fields appropriately and click the **Save** button.(keep in mind that  OID field and Name field are required fields )&#x20;
 
-![](<../../../../../../../../../.gitbook/assets/3 (5).jpg>)
+![](<../../../../../../../../../.gitbook/assets/3 (1).jpg>)
 
 ## Expected Behaviour
 
 1- Should navigate to the new Create Policy page.
 
-![](<../../../../../../../../../.gitbook/assets/dnld1 (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/2 (4).jpg>)
 
 2-
 
@@ -39,7 +39,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 * Should momentarily display success message in the top right corner
 * Should appear New Policy(**Create-Policy-Test**)  in the table of policies on the Index page with properties matching those put in the form required to create a new policy.
 
-![](<../../../../../../../../../.gitbook/assets/4 (1).jpg>)
+![](../../../../../../../../../.gitbook/assets/4.jpg)
 
 
 

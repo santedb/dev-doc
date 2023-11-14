@@ -8,7 +8,7 @@ Devices have a secret (like an application) and may optionally have a public sig
 
 The device list is accessed using the `Devices` menu item in the security menu. The device list shows a list of all active (non-deleted) devices which are permitted to access the SanteDB iCDR instance.
 
-![](<../../../../.gitbook/assets/image (432) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (454).png>)
 
 The actions which are available under this panel are:
 
@@ -35,7 +35,7 @@ To create a new security device click the `Create` button. Administrators may wi
 * A new HL7v2 trading partner is being setup&#x20;
 * An new node-authentication partner account needs to be created (for Client Certificate Mapping)
 
-![](<../../../../.gitbook/assets/image (440) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (448).png>)
 
 The `Name` of the device should be unique within the context of the SanteDB solution which has been deployed.&#x20;
 
@@ -51,7 +51,7 @@ The `Extended Properties` panel is used to capture non-security related informat
 
 When editing a device, administrators will be shown the device security information. The `Core Properties` panel shows the provenance information (last update, creation, etc.) as well as the security ID (UUID for the object) and the name with which the device authenticates itself.
 
-![](<../../../../.gitbook/assets/image (435) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (469).png>)
 
 {% hint style="info" %}
 The core properties of a security device cannot be edited once a device is created. It is recommended that administrators delete the device and re-add the device credentials.
@@ -63,7 +63,7 @@ The security properties of the device are used for viewing lockout status, inval
 
 &#x20;
 
-![](<../../../../.gitbook/assets/image (423) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (582).png>)
 
 #### Invalid Authentications
 
@@ -79,11 +79,11 @@ A device account's lockout can be reset using the `Unlock` button.
 
 The device secret allows an administrator to set a new device secret. The existing secret for the device is not shown (unless the device is new). Administrators can either `Edit` the secret to a custom value:
 
-![](<../../../../.gitbook/assets/image (447) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (564).png>)
 
 After which, pressing the `Save` button will commit the change. Alternately the administrator can set the secret to a random value with `Reset`.
 
-![](<../../../../.gitbook/assets/image (446) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (450).png>)
 
 {% hint style="info" %}
 When using X509 client certificate authentication, the secret of the device account should be X509 thumbprint of the certificate which the device will be presenting to the server. The value of the secret should be the `THUMBPRINT` attribute of the certificate in hexidecimal format in lower case. For example: `a11164321e30c84bd825ab20225421434622c52a`
@@ -93,11 +93,11 @@ When using X509 client certificate authentication, the secret of the device acco
 
 By default a new device will copy its policies from the `DEVICES` group. After creation policies can be customized using the policies panel. New policies are added by first searching for the policy and then pressing the `+` button.&#x20;
 
-![](<../../../../.gitbook/assets/image (438) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (644).png>)
 
 By default a device will be assigned the policy with a GRANT permission. You can alter these by clicking the permission type.
 
-![](<../../../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (468).png>)
 
 The permission types in SanteDB are:
 
@@ -118,7 +118,7 @@ SanteDB 3.0 introduces the ability to map certificates for either authentication
 * Authentication: Authentication certificates are used when the SanteDB server is running in HTTPS mode which requires client certificates, or operating behind NGINX with the correct HTTP headers passed for client authentication.&#x20;
 * Digital Signatures: Digital signatures are used in the generation of SanteDB VRP, JWS payloads, sessions, etc. issued by the device.
 
-<figure><img src="../../../../.gitbook/assets/image (464).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (790).png" alt=""><figcaption></figcaption></figure>
 
 Certificates are mapped by selecting a PEM encoded file (a `cer, crt` or `der` file extension) and uploading it.&#x20;
 

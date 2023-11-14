@@ -25,7 +25,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Click the **Create** button.
 
-![](<../../../../../../../../../.gitbook/assets/1 (13).jpg>)
+![](<../../../../../../../../../.gitbook/assets/1 (1).jpg>)
 
 2- Fill out all the fields appropriately and for the Name field, use a name with which a device exists. (for example "Create-Device-Test")
 
@@ -33,8 +33,8 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 1- Should navigate to the new Create Device page.
 
-![](<../../../../../../../../../.gitbook/assets/2 (4) (1).jpg>)
+![](<../../../../../../../../../.gitbook/assets/2 (5).jpg>)
 
 2- Should show an error message below Name field indicating that duplicate record detected.
 
-![](<../../../../../../../../../.gitbook/assets/5 (3).jpg>)
+![](<../../../../../../../../../.gitbook/assets/5 (2).jpg>)

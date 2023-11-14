@@ -26,11 +26,11 @@ santedb Error: 0 : Fatal exception occurred: System.Security.SecurityException: 
 On Microsoft Windows operating systems you can validate digital signatures and publishers of a plugin by right clicking on the plugin in Windows Explorer and using the `Digital Signatures` tab of the properties window.\
 
 
-![Viewing Digital Signatures](<../../.gitbook/assets/image (413).png>)
+![Viewing Digital Signatures](<../../.gitbook/assets/image (396).png>)
 
 By clicking `Details` you can view the digital signature on the assembly code and validate the issuer and publisher of the digital signature.&#x20;
 
-![Certificate Details](<../../.gitbook/assets/image (414).png>)
+![Certificate Details](<../../.gitbook/assets/image (620).png>)
 
 {% hint style="info" %}
 You can use the `chktrust` command on Linux and MacOS to perform the same verification steps for your assembly.
@@ -60,7 +60,7 @@ If you're compiling a general purpose plugin or SanteDB distribution, or are wri
 
 If you're only developing software for SanteDB and wish only to publish extensions and plugins for SanteDB, you may obtain a publishing certificate from the SanteSuite community. These community certificates are only trusted by SanteDB iCDR and dCDR software packages, which means they are less suited for general purpose software development.
 
-In order to obtain a certificate from SanteSuite community you will need to become a [SanteDB Software Publisher](../santedb-software-publishers/).&#x20;
+In order to obtain a certificate from SanteSuite community you will need to become a [SanteDB Software Publisher](../santedb-software-publishers.md).&#x20;
 
 #### Self-Signed Publisher Certificate
 

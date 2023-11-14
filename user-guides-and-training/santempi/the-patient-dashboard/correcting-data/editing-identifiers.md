@@ -10,7 +10,7 @@ Identifiers can be edited within the administrative portal if :
 * The identifier type is scoped in a way that it can be assigned to a ROT
   * For example: If an identifier is scoped to a Master Entity (such as a national health id) then the portal cannot change or assign a new identifier in that domain.
 
-![](<../../../../.gitbook/assets/image (439) (1).png>)
+![](<../../../../.gitbook/assets/image (70).png>)
 
 ### Changing Identifiers
 
@@ -26,13 +26,13 @@ To change an identifier users should first remove the existing identifier from t
 
 To add an identifier to the patient's record you can select the identity domain of identifier to be added, and add the identifier to the list.
 
-![](<../../../../.gitbook/assets/image (56).png>)
+![](<../../../../.gitbook/assets/image (628).png>)
 
 ### Identifier Generators
 
 SanteMPI provides API hooks to generate random identifiers based on some sort of algorithm. If an identity domain has a generator attached, a generation icon will appear next to the add button which can be used to generate the identifier.
 
-![](<../../../../.gitbook/assets/image (87).png>)
+![](<../../../../.gitbook/assets/image (25).png>)
 
 ## Related Topics
 

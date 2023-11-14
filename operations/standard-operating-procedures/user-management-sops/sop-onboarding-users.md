@@ -67,7 +67,7 @@ This standard operating procedure (SOP) should be used when an implementing juri
 [managing-user-accounts.md](../../cdr-administration/santedb-administration-panel/security-administration/managing-user-accounts.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../server-administration/santedb-icdr-admin-console/user-administration.md" %}
-[user-administration.md](../../server-administration/santedb-icdr-admin-console/user-administration.md)
+{% content-ref url="../../cdr-administration/santedb-icdr-admin-console/user-administration.md" %}
+[user-administration.md](../../cdr-administration/santedb-icdr-admin-console/user-administration.md)
 {% endcontent-ref %}
 

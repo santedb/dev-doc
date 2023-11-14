@@ -26,7 +26,7 @@ The installation wizard on the Windows installer simply requires pressing the Ne
 
 After installation is completed, you can configure the service:
 
-![](<../../../../../.gitbook/assets/image (38).png>)
+![](<../../../../../.gitbook/assets/image (38) (1).png>)
 
 ### Installation on Linux and Unix based Operating Systems
 
@@ -52,7 +52,7 @@ You must be connected to the internet to perform the initial configuration.
 
 When you first configure the SanteDB dCG you'll be asked which security domain you'd like to join. There may be several security domains in your jurisdiction depending on different projects, or uses of SanteDB.&#x20;
 
-![](<../../../../../.gitbook/assets/image (73).png>)
+![](<../../../../../.gitbook/assets/image (124).png>)
 
 The configuration settings are:
 
@@ -65,7 +65,7 @@ The configuration settings are:
 
 Once you press **Join Realm** you'll be prompted with an elevation prompt. Enter your username and password for the target domain:
 
-![](<../../../../../.gitbook/assets/image (91).png>)
+![](<../../../../../.gitbook/assets/image (581).png>)
 
 {% hint style="info" %}
 The user account you use MUST be granted the **Create Device Identity** policy permission by the central administrator.&#x20;
@@ -73,7 +73,7 @@ The user account you use MUST be granted the **Create Device Identity** policy p
 
 If successful you'll be welcomed to the domain:
 
-![](<../../../../../.gitbook/assets/image (48).png>)
+![](<../../../../../.gitbook/assets/image (127).png>)
 
 ### Selecting an Application Role
 
@@ -85,7 +85,7 @@ You may also select whether you'd like automatic updates to be downloaded when t
 
 You can configure the frequency of synchronization and the conflict resolution mechanism on the next screen.&#x20;
 
-![](<../../../../../.gitbook/assets/image (100).png>)
+![](<../../../../../.gitbook/assets/image (665).png>)
 
 {% hint style="info" %}
 If your clinic is never usually connected to the internet, or has limited bandwidth packages. You may select to only manually synchronize with the central server.
@@ -100,13 +100,13 @@ When the disconnected gateway is online, it has the opportunity to download a su
 * **Facility :** Where the dCG can establish a relationship between a patient or event and a facility
 * **Identifier :** Where the dCG will only download information which has an identifier from the specified domain.
 
-![](<../../../../../.gitbook/assets/image (84).png>)
+![](<../../../../../.gitbook/assets/image (612).png>)
 
 ### Configure the Local Database
 
 Current SanteDB's dCG only supports SQLite as a storage mechanism, however PostgreSQL and FirebirdSQL are on our roadmap for support. You can configure which database system you'd like to use for your dCG on this screen (for smaller clinics we recommend SQLite).
 
-![](<../../../../../.gitbook/assets/image (82).png>)
+![](<../../../../../.gitbook/assets/image (693).png>)
 
 ### Configure Local Security
 
@@ -118,13 +118,13 @@ Because the dCG operates offline, it must maintain security settings which dicta
   * Whether only users assigned to that facility can log in
 * Who is the administrative contact for the device
 
-![](<../../../../../.gitbook/assets/image (70).png>)
+![](<../../../../../.gitbook/assets/image (667).png>)
 
 ### Configure Network Settings
 
 The network configuration page allows you to specify parameters about your local network and how it connects to the master server. Here you can specify how heavily you would like to compress traffic (to save bandwidth and time), as well as any proxy settings
 
-![](<../../../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../../../.gitbook/assets/image (691).png>)
 
 {% hint style="info" %}
 Putting the dCG into 2g optimization mode will use LZMA Max compression. This saves quite a bit of bandwidth, however introduces quite a bit of CPU pressure on the dCG (as it requires more computing power to compress traffic). Only use this mode if you are really on a 2g or slow connection where CPU time is less valuable than bandwidth time.
@@ -134,7 +134,7 @@ Putting the dCG into 2g optimization mode will use LZMA Max compression. This sa
 
 If you're using a system to communicate with the dCG which uses HL7v2 messaging (such as OpenMRS or VistA) you can setup your LLP traffic settings including the sending facility and device name, and the bind port:
 
-![](<../../../../../.gitbook/assets/image (47).png>)
+![](<../../../../../.gitbook/assets/image (602).png>)
 
 {% hint style="info" %}
 You can change the endpoint to llp://0.0.0.0:12100 to allow external traffic. You can also use sllp:// to indicate you prefer TLS encrypted traffic. You will need to setup the certificate separately however.
@@ -144,27 +144,27 @@ You can change the endpoint to llp://0.0.0.0:12100 to allow external traffic. Yo
 
 The dCG comes with a lightweight IHE ATNA compliant audit repository. This is used to track audits against the dCG from local clinic traffic while offline. You can configure the transport and enterprise site ID of the local audit repository:
 
-![](<../../../../../.gitbook/assets/image (27).png>)
+![](<../../../../../.gitbook/assets/image (165).png>)
 
 ### Complete the Installation
 
 After you're done, you can press the Save button. You should be greeted with a notification instructing you to restart the service:
 
-![](<../../../../../.gitbook/assets/image (33).png>)
+![](<../../../../../.gitbook/assets/image (580).png>)
 
 This is done from the start menu:
 
-![](<../../../../../.gitbook/assets/image (107).png>)
+![](<../../../../../.gitbook/assets/image (712).png>)
 
 ## Confirm Connectivity
 
 After waiting a few seconds, you can login to the main administrative user interface from the local device or from another device on the local network by visiting : http://localhost:9200
 
-![](<../../../../../.gitbook/assets/image (102).png>)
+![](<../../../../../.gitbook/assets/image (635).png>)
 
 To confirm connectivity, login to the portal and check the synchronization centre status
 
-![](<../../../../../.gitbook/assets/image (63).png>)
+![](<../../../../../.gitbook/assets/image (160).png>)
 
 {% hint style="info" %}
 It is a good idea to have each of the clinic staff login with their accounts during initial setup. This is because the first time a user logs into the dCG they must be connected to the central server for their user profile to be downloaded. Subsequent logins do not require internet access.

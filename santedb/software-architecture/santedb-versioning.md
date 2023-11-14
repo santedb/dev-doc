@@ -37,27 +37,13 @@ Starting with SanteDB named version Jasper , the entire shared assembly infrastr
 We're still in the process of updating our documentation to reflect this change of underlying frameworks.
 {% endhint %}
 
-### Informational Versions
+### Community Technology Preview Versions
 
-Informational versions are usually tied to milestones or date ranges. Typically an informational version may be comprised of one or more assemblies with different semantic versions. Informational version names are mostly for humans. The informational version names are alphabetical (with Algonquin being the first and Iqaluit being the most recent)&#x20;
+Starting with SanteDB 2.x, versions are differentiated between a technology preview version and a hardened/LTS version using the minor build number. Minor builds which are even numbered are considered stable and no API changes are permitted (2.0.x, 2.2.x, 2.4.x, etc.). Builds with odd numbered minor versions are considered technology preview builds (2.1.x, 2.3.x, 2.5.x). CTP releases are suitable for use for developers, pilots, etc. and each revision within the minor build should be relatively compatible with one another.
 
-* Algonquin - 0.x series
-* Bluenose - 0.9.x series
-* Chippewa - 0.9.2.x series
-* Dalhousie - 0.9.4.x series
-* Edmonton - 0.9.7.x series
-* Fredericton - 1.0.0 series
-* Gananoque - 1.10 - 1.50&#x20;
-* Halifax - 1.50 - 1.99
-* Iqaluit - 1.100 - 1.119&#x20;
-* Jasper - 2.0.0 - 2.0.9&#x20;
-  * Upgrade to .NET Standard and .NET Framework 4.8
-* Kelowna - 2.0.10 - 2.0.29
-* Langley - 2.0.30 - 2.0.49
-* Montreal - 2.0.50 - 2.0.069
-* Nanaimo - 2.0.70 - 2.0.89
-* Ottawa - 2.0.90 - 2.0.109
-* Pickering - 2.0.110 - 2.0.129
+CTP releases may, however, contain new features or enhancements which have not been deployed by the SanteDB team in a production context. These releases typically follow on another. For example, the 2.1.x CTP releases are used as the basis for the 2.2.x stable releases.&#x20;
 
-##
+### New Data Layer Version
+
+The SanteDB has performed significant work in refactoring the persistence layer and MDM layer during 2021 and 2022 to improve the manner in which data is loaded and filtered from the underlying datastore. This version on branch `feature/nuado` represents the last version of the 2.x series of the SanteDB platform code prior to the next-gen redesign (version 3.0)&#x20;
 

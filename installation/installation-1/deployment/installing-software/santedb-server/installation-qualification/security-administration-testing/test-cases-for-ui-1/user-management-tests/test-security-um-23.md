@@ -27,19 +27,19 @@ The number of invalid login attempts per user is stored as a user's security pro
 
 1\. Click the pencil in the top right-hand corner of **Security Properties** to edit them.
 
-![](<../../../../../../../../../.gitbook/assets/image (242).png>)
+![](<../../../../../../../../../.gitbook/assets/image (684).png>)
 
 2\. Click the **Reset** button beside the **Invalid Logins** property.
 
-![](<../../../../../../../../../.gitbook/assets/image (266).png>)
+![](<../../../../../../../../../.gitbook/assets/image (197).png>)
 
 3\. Click the **OK** button when the confirmation prompt appears in the browser.
 
-![](<../../../../../../../../../.gitbook/assets/image (282).png>)
+![](<../../../../../../../../../.gitbook/assets/image (224).png>)
 
 5\. Click the green checkmark to save the edited **Invalid Logins**.
 
-![](<../../../../../../../../../.gitbook/assets/image (264).png>)
+![](<../../../../../../../../../.gitbook/assets/image (252).png>)
 
 ## Expected Behaviour
 
