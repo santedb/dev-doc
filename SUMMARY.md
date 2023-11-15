@@ -347,7 +347,7 @@
     * [HTML Widgets](developers/extending-santesuite/extending-santedb/applets/assets/html-widgets.md)
     * [Virtual Assets](developers/extending-santesuite/extending-santedb/applets/assets/virtual-assets.md)
   * [AngularJS](developers/extending-santesuite/extending-santedb/applets/angularjs.md)
-  * [Clinical Decision-Support](developers/applets/cdss-protocols/README.md)
+  * [Clinical Decision-Support](developers/extending-santesuite/extending-santedb/applets/cdss-protocols.md)
     * [CDSS Definitions](developers/applets/cdss-protocols/cdss-definitions.md)
     * [Legacy CDSS](developers/applets/cdss-protocols/legacy-cdss.md)
   * [Business Rules](developers/extending-santesuite/extending-santedb/applets/business-rules.md)

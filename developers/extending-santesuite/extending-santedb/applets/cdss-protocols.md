@@ -1,7 +1,7 @@
 # Clinical Decision-Support
 
 {% hint style="info" %}
-SanteDB 3.0 includes support for a new, more robust Clinical Decision Support system. This page documents the new CDSS subsystem. For documentation on SanteDB 2.x CDSS please see the [Legacy CDSS ](legacy-cdss.md)topic.
+SanteDB 3.0 includes support for a new, more robust Clinical Decision Support system. This page documents the new CDSS subsystem. For documentation on SanteDB 2.x CDSS please see the [Legacy CDSS ](../../../applets/cdss-protocols/legacy-cdss.md)topic.
 {% endhint %}
 
 ## Introduction

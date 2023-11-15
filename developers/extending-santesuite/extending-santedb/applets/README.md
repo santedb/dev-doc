@@ -77,8 +77,8 @@ sdb-ade --applet=path_to_source_code --ref=org.santedb.core --ref=org.santedb.ui
 [angularjs.md](angularjs.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../applets/cdss-protocols/" %}
-[cdss-protocols](../../../applets/cdss-protocols/)
+{% content-ref url="cdss-protocols.md" %}
+[cdss-protocols.md](cdss-protocols.md)
 {% endcontent-ref %}
 
 {% content-ref url="business-rules.md" %}

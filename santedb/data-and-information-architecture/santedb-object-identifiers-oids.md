@@ -49,29 +49,31 @@ Clinical templates are structures which dictate the format, entry, and display o
 * `1.3.6.1.4.1.52820.5.2.2` - Templates for `Act`&#x20;
 * `1.3.6.1.4.1.52820.5.2.3` - Templates for `SubstanceAdminsitration`&#x20;
 * `1.3.6.1.4.1.52820.5.2.4` - Templates for `Procedure`
+* `1.3.6.1.4.1.52820.5.2.5` - Templates for `PatientEncounter`
 
 The clinical templates defined by SanteDB community implementations are:
 
 
 
-| OID                        | ID                                                | Name                                                        |
-| -------------------------- | ------------------------------------------------- | ----------------------------------------------------------- |
-| 1.3.6.1.4.1.52820.5.2.0.1  | org.santedb.emr.patient                           | SanteEMR Generic Patient Registration                       |
-| 1.3.6.1.4.1.52820.5.2.0.2  | org.santedb.emr.patient.baby                      | SanteEMR Newborn Patient Registration                       |
-| 1.3.6.1.4.1.52820.5.2.1.1  | org.santedb.emr.observation.cod                   | SanteEMR Cause Of Death (Suspected) Entry                   |
-| 1.3.6.1.4.1.52820.5.2.1.2  | org.santedb.emr.observation.birthDeliveryLocation | SanteEMR Birth & Delivery Location                          |
-| 1.3.6.1.4.1.52820.5.2.1.3  | org.santedb.emr.observation.birthDeliveryMethod   | SanteEMR Birth &  Delivery Method                           |
-| 1.3.6.1.4.1.52820.5.2.1.4  | org.santedb.emr.observation.birthDeliveryOutcome  | SanteEMR Birth & Delivery Outcome                           |
-| 1.3.6.1.4.1.52820.5.2.1.5  | org.santedb.emr.observation.birthWeight           | SanteEMR Birth Weight Observation                           |
-| 1.3.6.1.4.1.52820.5.2.1.6  | org.santedb.emr.observation.heightLying           | SanteEMR Height/Length (Lying down)                         |
-| 1.3.6.1.4.1.52820.5.2.1.7  | org.santedb.emr.observation.liveBirths            | SanteEMR Number of Live Births (Reported)                   |
-| 1.3.6.1.4.1.52820.5.2.1.8  | org.santedb.emr.observation.death                 | SanteEMR Patient Clinical Status  = Dead                    |
-| 1.3.6.1.4.1.52820.5.2.1.9  | org.santedb.emr.observation.verification          | SanteEMR Clinical Status Verification Observation           |
-| 1.3.6.1.4.1.52820.5.2.1.10 | org.santedb.emr.observation.weight                | SanteEMR Weight Observation                                 |
-| 1.3.5.1.4.1.52820.5.2.2.1  | org.santedb.emr.act.registration.birth            | Registration of a performed delivery/birth                  |
-| 1.3.5.1.4.1.52820.5.2.2.2  | org.santedb.emr.act.registration.death            | Registration of a confirmed or suspected death              |
-| 1.3.5.1.4.1.52820.5.2.3.1  | org.santedb.emr.sbadm.supplement                  | SanteIMS Supplemental (non-tracked material) administration |
-| 1.3.5.1.4.1.52820.5.2.3.2  | org.santedb.emr.sbadm.immunization                | SanteIMS Immunization (tracked material) administration.    |
+| OID                        | ID                                                | Name                                                                                                                      |
+| -------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| 1.3.6.1.4.1.52820.5.2.0.1  | org.santedb.emr.patient                           | SanteEMR Generic Patient Registration                                                                                     |
+| 1.3.6.1.4.1.52820.5.2.0.2  | org.santedb.emr.patient.baby                      | SanteEMR Newborn Patient Registration                                                                                     |
+| 1.3.6.1.4.1.52820.5.2.1.1  | org.santedb.emr.observation.cod                   | SanteEMR Cause Of Death (Suspected) Entry                                                                                 |
+| 1.3.6.1.4.1.52820.5.2.1.2  | org.santedb.emr.observation.birthDeliveryLocation | SanteEMR Birth & Delivery Location                                                                                        |
+| 1.3.6.1.4.1.52820.5.2.1.3  | org.santedb.emr.observation.birthDeliveryMethod   | SanteEMR Birth &  Delivery Method                                                                                         |
+| 1.3.6.1.4.1.52820.5.2.1.4  | org.santedb.emr.observation.birthDeliveryOutcome  | SanteEMR Birth & Delivery Outcome                                                                                         |
+| 1.3.6.1.4.1.52820.5.2.1.5  | org.santedb.emr.observation.birthWeight           | SanteEMR Birth Weight Observation                                                                                         |
+| 1.3.6.1.4.1.52820.5.2.1.6  | org.santedb.emr.observation.heightLying           | SanteEMR Height/Length (Lying down)                                                                                       |
+| 1.3.6.1.4.1.52820.5.2.1.7  | org.santedb.emr.observation.liveBirths            | SanteEMR Number of Live Births (Reported)                                                                                 |
+| 1.3.6.1.4.1.52820.5.2.1.8  | org.santedb.emr.observation.death                 | SanteEMR Patient Clinical Status  = Dead                                                                                  |
+| 1.3.6.1.4.1.52820.5.2.1.9  | org.santedb.emr.observation.verification          | SanteEMR Clinical Status Verification Observation                                                                         |
+| 1.3.6.1.4.1.52820.5.2.1.10 | org.santedb.emr.observation.weight                | SanteEMR Weight Observation                                                                                               |
+| 1.3.5.1.4.1.52820.5.2.2.1  | org.santedb.emr.act.registration.birth            | Registration of a performed delivery/birth                                                                                |
+| 1.3.5.1.4.1.52820.5.2.2.2  | org.santedb.emr.act.registration.death            | Registration of a confirmed or suspected death                                                                            |
+| 1.3.5.1.4.1.52820.5.2.3.1  | org.santedb.emr.sbadm.supplement                  | SanteIMS Supplemental (non-tracked material) administration                                                               |
+| 1.3.5.1.4.1.52820.5.2.3.2  | org.santedb.emr.sbadm.immunization                | SanteIMS Immunization (tracked material) administration.                                                                  |
+| 1.3.5.1.4.1.52820.5.2.5.1  | org.santedb.emr.enc.children.healthyVisit         | SanteEMR/IMS Childhood Healthy Visit Encounter (regular encounter for children under 10 for weight/height, immunizations) |
 
 ## Clinical Protocol OIDs
 
@@ -90,4 +92,5 @@ Clinical protocols and libraries exist in the `1.3.5.1.4.1.52820.5.3` namespace,
 | 1.3.5.1.4.1.52820.5.3.2.2     | Clinical Protocol | Administer DTP-Hib-HepB trivalent to children three times. First dose occurring 42 days after birth (recommended between 42-49 days), second and third doses administered 28-35 days after previous dose. |
 | 1.3.5.1.4.1.52820.5.3.2.3     | Clinical Protocol | When child is under 18 months of age, administer MR1 dose at 274 days after birth, with second dose on or after 18th birthday                                                                             |
 | 1.3.5.1.4.1.52820.5.2.3.2.3.1 | Clinical Protocol | Accelerated MR Schedule: When child is older than 18 months and has not received MR1, administer MR1 immediately and administer MR2 1 months after first dose.                                            |
+| 1.3.5.1.4.1.52820.5.2.3.2.4   | Clinical Protocol | Regular PCV13 vaccination schedule for children under 5 years old.                                                                                                                                        |
 
