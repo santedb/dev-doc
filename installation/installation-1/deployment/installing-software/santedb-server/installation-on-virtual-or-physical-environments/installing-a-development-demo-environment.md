@@ -60,7 +60,7 @@ The JINT business rules engine allows applets to customize the iCDR and dCDR app
 
 #### XML Clinical Support Decision Engine
 
-If your installation of the iCDR will be [using clinical decision support ](../../../../../../developers/extending-santesuite/extending-santedb/applets/cdss-protocols.md#introduction)(CDSS) via the built-in XML protocol format, you should enable CDSS support.
+If your installation of the iCDR will be [using clinical decision support ](../../../../../../developers/applets/cdss-protocols/#introduction)(CDSS) via the built-in XML protocol format, you should enable CDSS support.
 
 #### Messaging Interfaces
 
