@@ -1,6 +1,6 @@
 # CDSS Definitions
 
-Starting with SanteDB 3.0, a new, more robust CDSS XML format has been introduced which greatly improves the re-use of decision logic blocks in CDSS rules. CDSS definitions are contained in an XML structure known as a **CDSS Library**. The CDSS library contains different definition sections as illustrated below.
+Starting with SanteDB 3.0, a new, more robust CDSS XML format has been introduced which greatly improves the re-use of decision logic blocks in CDSS rules. CDSS definitions are contained in an XML or text file structure known as a **CDSS Library**. The CDSS library contains different definition sections as illustrated below.
 
 <figure><img src="../../../.gitbook/assets/image (465).png" alt=""><figcaption></figcaption></figure>
 
@@ -13,12 +13,14 @@ Starting with SanteDB 3.0, a new, more robust CDSS XML format has been introduce
   * **Protocols:** A more structured version of a rule which includes metadata for the CDSS engine, including the steps in a care plan package.
 * **Data Blocks:** Allow a CDSS author to include reference data which rules may use. For example, an author may include pre-computed z-scores for a particular type of observation which is then used to set the interpretation of an observation.
 
-The CDSS definition is provided in an XML file, with the structure as illustrated below.
+The CDSS definition is provided in an XML file or a CDSS definition file, with the structure as illustrated below.
 
 {% hint style="info" %}
 You can reference the `SanteDBCdss.xsd` file in your XML editor to obtain auto-complete information for the CDSS definition files.
 {% endhint %}
 
+{% tabs %}
+{% tab title="XML" %}
 ```xml
 <CdssLibrary xmlns="http://santedb.org/cdss" 
   uuid="UNIQUE_ID_FOR_LIBRARY" 
@@ -38,8 +40,32 @@ You can reference the `SanteDBCdss.xsd` file in your XML editor to obtain auto-c
     <!-- CSV data set -->
   </data>
 </CdssLibrary>
-
 ```
+{% endtab %}
+
+{% tab title="CDSS" %}
+```
+include <id.of.lib.to.include>
+
+library "name of library file"
+   having id <id.of.library>
+   having uuid "uuid-of-library"
+   having status active|trial|dont-use
+   with metadata
+   ...
+   end metadata
+as 
+   define logic "name of logic block"
+      // logic definitions
+   end logic
+   
+   define data "name of data block"
+      // CSV data
+   end data 
+end library
+```
+{% endtab %}
+{% endtabs %}
 
 ## Object Status
 
