@@ -833,9 +833,181 @@ end rule
 
 ### Raise an Alert
 
+There are often times where a CDSS rule may wish to raise an alert to an end-user in the context of an encounter based on some clinical status of the patient or a previously observed value. This is done with the `raise` statement in CDSS or the `<raise>` element in XML.
+
+The raise alert function will do three things:
+
+1. When the CDSS engine is being called as part of analysis for a captured value (via `Analyze()`) it will be displayed to the user in their encounter capture screen.
+2. When the CDSS engine is being called as part of a care plan generation, the issue is added to the care plan in the [http://santedb.org/extensions/core/safetyConcernIssue](http://santedb.org/extensions/core/safetyConcernIssue) extension.
+3. When the CDSS engine is being called prior to discharge of the patient, the end user must clear (or acknowledge) the alert before discharging the patient.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+raise 
+   having priority (danger|warn|info)
+   having type "UUID-OF-CONCEPT-FOR-CLASSIFICATION"
+   having id <dotted.id.for.issue>
+   with metadata
+      ...
+   end
+$$
+   This is the text that is to be displayed in the alert. You can also use a 
+   single line string with "quotes around a single line of text"
+$$ 
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```
+<raise>
+    <issue xmlns="http://santedb.org/issue"
+        priority="Error|Warning|Information"
+        id="dotted.id.of.issue"
+        type="uuid-of-issue-type"
+    >
+    This is the text of your issue
+    </issue>
+</raise>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+define rule "Alert Clinician the Nutritional Counseling Should be Performed" as
+    when 
+        any(
+            "Child Is Under Healthy Weight For Age",
+            "Child Is Over Healthy Weight for Age"
+        )
+    then 
+        raise having priority warn
+            $$
+                The observed weight indicates that the child is not a normal 
+                healthy weight. Please review pamphlet PM5049 with the guardian 
+                prior to discharge.
+            $$
+end rule
+```
+{% endtab %}
+{% endtabs %}
+
 ### Apply Another Rule
 
+One rule may be chained to another via an explicit call. This is useful for protocols where a series of rules needs to be executed in a specific order to create an appropriate care plan. Applying rules is performed via the `apply` statement or `<apply>` in XML.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+// Apply by rule name
+apply "name of the rule to be applied"
+// Apply by rule unique id
+apply <dotted.id.of.rule>
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```
+<!-- Apply via name -->
+<apply ref="Name of Rule to be Applied" />
+<!-- Apply via ID -->
+<apply ref="#dotted.id.of.rule.to.be.applied" />
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+define protocol "A simple vaccination protocol" as 
+    when 
+        "Patient is Eligible for Enrolment to Simple Vaccination Programme"
+    then 
+        assign "true" to tag[IsEnrolledInSpecialProgramme]
+        apply "Simple Vaccination Programme Step 1"
+        apply "Simple Vaccination Programme Step 2"
+end protocol
+```
+{% endtab %}
+{% endtabs %}
+
 ### Repeat Actions
+
+Any action (proposals, assignment, raising, etc.) can be repeated a specific number of iterations (like a for loop) or until a certain fact becomes true or not null (like a while loop). Repeat actions are defined with the `repeat ... end repeat` statements or the `<repeat>` element in XML.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+// Repeat specified actiosn N times 
+repeat for N iterations track-by fact_name
+    apply ...
+    propose ...
+    raise ...
+    assign ...
+end repeat
+
+// Repeat specified actions until the specified fact becomes true
+repeat until 
+    // one of 
+    hdsi( ... )
+    csharp( ... )
+    "fact name"
+    all( ... )
+    any( ... )
+    none( ... )
+    // actions
+    apply ...
+    propose ...
+    raise ...
+    assign ...
+end repeat
+```
+{% endtab %}
+
+{% tab title="XML" %}
+<pre class="language-xml"><code class="lang-xml">&#x3C;!-- Repeat N times -->
+&#x3C;repeat iterations="N" trackBy="name_of_track_fact">
+<strong>    &#x3C;apply ... />
+</strong>    &#x3C;raise ... />
+    &#x3C;propose ... />
+    &#x3C;assign ... />
+&#x3C;/repeat>
+
+&#x3C;!-- Repeat until fact is true -->
+&#x3C;repeat>
+    &#x3C;until>
+        &#x3C;csharp ... />
+        &#x3C;hdsi ... />
+        &#x3C;all ... />
+        &#x3C;any ... />
+        &#x3C;none ... />
+        &#x3C;fact ref="name of fact" />
+    &#x3C;/until>
+    &#x3C;apply ... />
+    &#x3C;raise ... />
+    &#x3C;propose ... />
+    &#x3C;assign ... />
+&#x3C;/repeat>    
+</code></pre>
+{% endtab %}
+
+{% tab title="Example" %}
+```
+define protocol "Measure Weight for 6 months post-operation" 
+    when 
+        "Patient Has Had Procedure XYZ Performed and Requires Weight Observation"
+    then 
+        repeat for 6 iterations track-by index
+            propose "Weight Observation"
+                having model "Weight Observation"
+                as 
+                assign csharp($$ 
+                    ((DateTime)context["Date Of Procedure"]).AddMonths((int)context["index"])
+                $$)
+            end propose
+        end repeat
+end protocol            
+```
+{% endtab %}
+{% endtabs %}
 
 ## Data Blocks
 
