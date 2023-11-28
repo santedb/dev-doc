@@ -285,7 +285,9 @@ Facts can also be used to extract data in a consistent form, for example, a fact
 
 ```xml
 define fact "Patient Age In Years" having type real as
-  csharp($$DateTime.Now.Subtract(context.Target.DateOfBirth.Value.Date).TotalDays / 365.25f$$)
+  csharp($$
+     DateTime.Now.Subtract(context.Target.DateOfBirth.Value.Date).TotalDays / 365.25f
+  $$)
 end
 ```
 
@@ -310,7 +312,7 @@ define logic "Interpret Weight"
 	as 
 	    hdsi("value")
 	    normalize when "Weight is Expressed in Lbs" 
-	        computed csharp($$ value * 0.45359237d $$)
+	        computed as csharp($$ value * 0.45359237d $$)
 	end fact
 end logic
 ```
@@ -368,7 +370,7 @@ define model "Propose HPV Dose Administration"
               "quantity": 1
             }]
       }
-    }			      }
+    }
     $$
 end model
 ```
@@ -377,11 +379,47 @@ end model
 
 ### Rules
 
-Rules represent a specific case where a series of conditions (facts) are true, the result is one or more actionable proposals or alerts. A rule has a format such as that provided below.
+Rules are defined within a logic blocks and represent a simple logic construct using when/then semantics. Rules are defined using the `define rule ... end rule` or the `<rule>` element in XML. The when block represents the trigger and is comprised of any [computable expression](cdss-definitions.md#computable-expressions). The then block is a collection of [output actions ](cdss-definitions.md#output-actions)which should be undertaken when the condition is true.
 
+The structure of the rules is illustrated below.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+rule "Name of Rule"
+   having id <dotted.id.of.rule>
+   having uuid "uuid-of-rule"
+   having oid "dotted.oid.of.rule"
+   having status (active|trial-use|dont-use|retired)
+   having priority NNN
+   with metadata
+      ...
+   end metadata
+   as 
+      when 
+         any( ...
+         all( ...
+         none( ...
+         csharp( ...
+         hdsi( ...
+      then 
+         raise ...
+         repeat ...
+         apply ...
+         propose ...
+         assign ...
+end rule
+```
+{% endtab %}
+
+{% tab title="XML" %}
 ```xml
 <rule name="Name of Rule"
-      id="dotted.id.of.rule">
+      id="dotted.id.of.rule"
+      priority="n">
+      <meta>
+          ...
+      </meta>
       <when>
             <!-- Computable Expression Here -->
             <csharp.../>
@@ -400,26 +438,34 @@ Rules represent a specific case where a series of conditions (facts) are true, t
       </then>
 </rule>
 ```
+{% endtab %}
 
-Rules are applied whenever a library is executed, an object is analyzed or when a protocol references them. For example, a rule may raise an alert for the user when a known allergy exists
-
+{% tab title="Example" %}
 ```xml
-<rule name="Raise Alert When Patient Has Reported AEFI to COVID Vaccine">
-    <when>
-        <all>
-            <fact ref="Patient Has Unresolved COVID Vaccine AEFI" />
-            <fact ref="Patient Was Proposed COVID Vaccine" />
-        </all>
-    </when>
-    <then>
-        <raise>
-            <issue xmlns="http://santedb.org/issue" priority="Warning">
-            <![CDATA[Patient has previous suspected or confirmed AEFI for COVID vaccinations 
-            in their history, please consult patient history]]>
-        </raise>
-    </then>
-</rule>
+define rule "Raise Alert When Patient Has AEFI to COVID Vaccine"
+   metadata
+     doc Will raise a warning when a COVID vaccination has been proposed and 
+     doc an unresolved adverse event or allergy has been recorded
+   end metadata
+   when 
+     all(
+       "Patient Has Unresolved COVID Vaccine AEFI",
+       "Patient Was Proposed COVID Vaccine"
+     )
+   then 
+     raise $$
+       Patient has previous suspected or confirmed adverse reaction or allergy
+       to COVID vaccination in their history. Please review allergen and event
+       history with patient prior to administration
+     $$ having priority danger
+end rule
 ```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+When the CDSS engine's `Execute()` or `Analyze()` methods are invoked, all rules which are contained in the relevant logic blocks (which apply to the object being executed or analyzed). Rules are selectively applied when a `ComputeProposal()` call or `GenerateCarePlan()` methods are called based on the protocols which apply.
+{% endhint %}
 
 ### Protocols
 
@@ -432,29 +478,115 @@ Protocols can be used to represent:
 
 A protocol **always applies to PATIENT** , protocols cannot be applied to contexts other than PATIENT.
 
+Protocols are defined with the `define protocol ... end protocol` or `<protocol>` element.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+define protocol "Name of Protocol"
+   having id <dotted.id.of.protocol>
+   having uuid "uuid-of-rule"
+   having oid "dotted.oid.of.rule"
+   having status (active|trial-use|dont-use|retired)
+   having priority NNN
+   having scope <dotted.id.of.scope>
+   having scope "name of scope"
+   with metadata
+      ...
+   end metadata
+   as
+     when 
+       any( ...
+       all( ...
+       none( ...
+       csharp( ...
+       hdsi( ...
+     then
+       raise ...
+       repeat ...
+       apply ...
+       propose ...
+       assign ...
+end protocol    
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```xml
+<protocol name="Name of Rule"
+   oid="dotted.oid.of.rule"
+   id="dotted.id.of.rule"
+   uuid="uuid-of-rule"
+   priority="N">
+   <scopes>
+      <add id="dotted.id.of.scope" oid="oid.of.scope" />
+   </scopes>
+   <when>
+      <csharp ... />
+      <hdsi ... />
+      <all ... />
+      <any ... />
+      <none ... />
+      <fact ref="name of fact" />
+   </when>
+   <then>
+      <propose ... />
+      <assign ... />
+      <repeat ... />
+      <apply ... />
+      <raise ... />
+   </then>
+</rule>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+define protocol "COVID Vaccination Base Immunization Schedule"
+    having id <org.example.covid.vaccine.protocol>
+    having oid "2.25.30239238239232"
+    having scope <org.santedb.emr.enc.adult.consult>
+as
+    when 
+        none(
+            "Patient Has Previous Adverse Event to COVID Vaccine",
+            "Patient Has No Previous Doses of COVID Vaccine"
+        )
+    then
+        apply "Propose COVID Vaccine Dose #1 Standard Schedule"
+        apply "Propose COVID Vaccine Dose #2 Standard Schedule"
+end protocol
+```
+{% endtab %}
+{% endtabs %}
+
 ### Computable Expressions
 
-#### \<HDSI> - Health Data Service Interface Query
+#### Health Data Service Interface Query
 
-#### \<CSHARP> - C# Expression
+#### C# Expression
 
-#### \<ANY>&#x20;
+#### Any Contained Expression&#x20;
 
-#### \<ALL>
+#### All Contained Expressions
 
-#### \<NONE>
+#### No Contained Expressions
 
-#### \<FACT>
+#### Fact References
 
 
 
 ### Output Actions
 
-#### \<PROPOSE> - Propose an Action
+#### Propose an Action
 
-#### \<ASSIGN> - Change a Property Value
+#### Assign a Property Value
 
-#### \<RAISE> - Raise an Alert
+#### Raise an Alert
+
+#### Apply Another Rule
+
+#### Repeat Actions
 
 ## Data Blocks
 
