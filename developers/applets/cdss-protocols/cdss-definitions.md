@@ -560,33 +560,87 @@ end protocol
 {% endtab %}
 {% endtabs %}
 
-### Computable Expressions
+## Computable Expressions
 
-#### Health Data Service Interface Query
+Computable expressions are those expressions which are used to:
 
-#### C# Expression
+* Extract data from a resource as the basis for a `fact`
+* Determine a boolean logic output for a `when` condition in a `rule` or `protocol` or as a block on a `logic` block.
 
-#### Any Contained Expression&#x20;
+Computable expressions are made against either the `context` (which is the input data) or the `scopedObject` which is the current action object. The `scopedObject` represents:
 
-#### All Contained Expressions
+* The input context object for facts
+* The output object of a proposal
 
-#### No Contained Expressions
+### Health Data Service Interface Query
 
-#### Fact References
+The Health Data Service Interface Query computable expression uses the [Health Data Service Query](../../service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/) grammar to extract data or make decisions. HDSI queries are encapsulated in the `hdsi()` qualifier in CDSS text file or the `<hdsi>` element in XML.&#x20;
+
+The HDSI expression is either scoped to `context` meaning the input object to the analysis or the `proposal` which is the currently scoped object. HDSI expressions which are `negated` are those which have a NOT() operation applied to them.
+
+{% tabs %}
+{% tab title="CDSS" %}
+Multiline expression:
+
+```
+hdsi($$
+   expression
+$$ 
+   scoped-to (context|proposal) 
+   negated
+)
+```
+
+Singleline expression:
+
+```
+hdsi("expression here" scoped-to (context|proposal) negated)
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```
+<hdsi scope="context|scopedObject">expression</hdsi>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+define fact "Patient Is Over 10 Years Old" type bool as
+    csharp(
+    $$
+        dateOfBirth=:(age)>P10Y
+    $$ 
+        scoped-to context
+    )
+end fact
+```
+{% endtab %}
+{% endtabs %}
+
+### C# Expressions
+
+### Any Contained Expression&#x20;
+
+### All Contained Expressions
+
+### No Contained Expressions
+
+### Fact References
 
 
 
-### Output Actions
+## Output Actions
 
-#### Propose an Action
+### Propose an Action
 
-#### Assign a Property Value
+### Assign a Property Value
 
-#### Raise an Alert
+### Raise an Alert
 
-#### Apply Another Rule
+### Apply Another Rule
 
-#### Repeat Actions
+### Repeat Actions
 
 ## Data Blocks
 
