@@ -648,7 +648,7 @@ $$)
 ```
 ...
 then 
-    repeat iterations 100 track-by index
+    repeat for 100 iterations track-by index
         csharp($$
             Trace.WriteLine("Iteration {0}", context["index"])
         $$)
