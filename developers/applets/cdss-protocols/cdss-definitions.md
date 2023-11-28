@@ -620,21 +620,216 @@ end fact
 
 ### C# Expressions
 
-### Any Contained Expression&#x20;
+There arise some instances in your decision logic where you must execute more advanced operations such as calculations, date subtraction, and string formatting. The CDSS engine allow the execution of a limited subset of expressions using the C# language. The subset allows for CDSS rule developers to:
 
-### All Contained Expressions
+* Cast objects from the context as base types or resources
+* Perform mathematical operations&#x20;
+* Perform Date calculations&#x20;
+* Array functions (like `Find`, `FirstOrDefault`, etc.)
 
-### No Contained Expressions
+The C# expression handler has access to reflection disabled, and late object binding disabled. While this increases the security of the C# expressions, it does mean that all variables must be cast prior to use.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+csharp($$
+   // C# Code Here
+$$)
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```xml
+<csharp><![CDATA[ // csharp goes here ]]></csharp>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+...
+then 
+    repeat iterations 100 track-by index
+        csharp($$
+            Trace.WriteLine("Iteration {0}", context["index"])
+        $$)
+    end repeat
+end rule
+```
+{% endtab %}
+{% endtabs %}
+
+#### Context Object
+
+The current CDSS context object can be accessed with the `context` variable. `context` can be used to lookup facts and the output of rules which have been (or will be) executed. Context is used in the following manners
+
+| Description                                                  | Example                                                                                                                                                                                                                                |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lookup a fact from the current execution context.            | `context["name of fact"]`                                                                                                                                                                                                              |
+| Get the value of a fact with a specified type                | <p><code>context.Int("name of fact")</code> <br><code>context.String("name of fact")</code><br><code>context.Real("name of fact")</code><br><code>context.Date("name of fact")</code><br><code>context.Bool("name of fact")</code></p> |
+| Lookup a dataset from the context (see )                     | `context.DataSets["name of dataset"]`                                                                                                                                                                                                  |
+| Cast a fact as a RIM based object                            | `(Patient)context["name of fact"]`                                                                                                                                                                                                     |
+| Access the input object (context's current execution target) | `context.Target.DateOfBirth`                                                                                                                                                                                                           |
+| Set a value of a fact on the context                         | `context["name of fact"] = value of fact`                                                                                                                                                                                              |
+
+#### Special Variables
+
+There are other special variables which can be accessed in the C# interpreter including:
+
+* `scopedObject` which is of type `IdentifiedData` and always points to the current "in scope" object. If the C# appears in a fact definition this is the same as `context.Target` , if it appears in a `propose` statement it is the value of the proposal (the object that is being proposed)
+* `value` which is used when a   `normalize` computation is written in C#.
+
+### Aggregate Logic Expression
+
+&#x20;There are three aggregate logic expressions which can be used to combine the result of multiple computable expressions. These are identiifed in the table below:
+
+<table><thead><tr><th>Expression</th><th width="128">Logic</th><th>Description</th></tr></thead><tbody><tr><td><code>any(...)</code></td><td>OR</td><td>Returns TRUE when any of the contained facts or statements return TRUE or a non-null value.</td></tr><tr><td><code>all(...)</code></td><td>AND</td><td>Returns TRUE when all of the contained facts or statements return TRUE or a non-null value.</td></tr><tr><td><code>none(...)</code></td><td>NAND</td><td>Returns TRUE only when all of the contained statements are not TRUE or are a null value.</td></tr></tbody></table>
+
+These logic statements can be combined to represent decision logic structures, for example, if we want to define a fact that is true when:
+
+* The Patient is Under 18 Months `AND` received the first dose of an antigen in their 17 months, `OR`
+* The Patient is Over 18 Months `AND` has `NOT` received any dose of the antigen&#x20;
+
+```
+define fact "Child is Eligible for Accelerated MR Schedule" type bool as
+    any(
+        all(
+            hdsi($$ dateOfBirth=:(age)<P18M $$),
+            csharp($$ (int)context["Age of Patient for Dose 1"] > 16 $$)
+        ),
+        all(
+            hdsi($$ dateOfBirth=:(age)>P18M &&),
+            none("Patient's Administration of Dose 1")
+        )
+    )
+end fact
+```
 
 ### Fact References
 
-
+Facts can be referenced and combined using fact references. In the CDSS text file syntax, this is done by referencing the name of the fact in quotes. In XML this is done using the `<fact ref="Name of Fact"/>` element or `<fact ref="#id.of.fact"/>`.
 
 ## Output Actions
 
-### Propose an Action
+Actions are used in rules and protocols as a series of steps which should be taken. These actions can:
 
-### Assign a Property Value
+* Propose that some action or course of treatment be performed
+* Assign a value (such as an interpretation, or flag) on the existing object in scope
+* Raise an end-user alert which must be cleared prior to completing the encounter
+* Apply another rule or decision tree
+* Repeat certain actions for a specified number of iterations or until a condition is true.
+
+### Propose
+
+The propose action is used to emit a proposal onto the current context. A proposal represents an `Act` which should occur (with a [mood code ](../../../santedb/data-and-information-architecture/conceptual-data-model/acts/mood-concepts.md)of `Propose`).
+
+Proposals are represented in CDSS text files with the `propose ... end propose` statement or in XML with `<propose>`. Proposals must carry a `model` (see [models](cdss-definitions.md#models)) and optionally a series of `assign` (see [assign](cdss-definitions.md#assign-a-property-value)) statements to modify the model.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+// Using a shared model reference
+propose "Descriprive Name for Proposal"
+   having model "Name of Model Definition To Use"
+   with metadata
+      ...
+   end metadata
+   as
+      assign ...
+end propose
+
+// Using an inline model 
+propose "Descriptive Name for Proposal"
+   having model with format (json|xml) as
+   $$
+      model here
+   $$
+   with metadata 
+       ...
+    end metadata
+    as
+       assign ...
+end propose
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```xml
+<propose name="Name for Proposal">
+    <model ref="Name of Referenced Model">
+        <json>
+           // JSON for inline model
+        </json>
+     </model>
+     <assign ... />
+</propose>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+define rule "Propose Supplement for Underweight Patients"  as
+   when 
+      "Patient Is Underweight"
+   then 
+      propose "Propose Nutrition Supplement Administration"
+         having model "Nutrition Supplement Administration Model"
+         as
+         assign csharp("DateTime.Now") to actTime
+         assign const 1 to doseSequence
+      end propose
+end rule
+```
+{% endtab %}
+{% endtabs %}
+
+### Assign a Value to Property
+
+Actions can also assign computed, fixed values, or facts to a property on the `scopedObject.` When an assignment exists outside of a `propose` this means the assignment occurs on `context.Target` however within a `propose` the assignment is against the scoped (proposed) object.
+
+Assignments are made using the `assign ... to path` syntax or the `<assign>` element in XML.
+
+{% tabs %}
+{% tab title="CDSS" %}
+```markup
+// Assign C# expression 
+assign csharp(...) to property
+// Assign HDSI expression
+assign hdsi(...) to property
+// Assign a fact to property
+assign "name of fact" to property
+// Assign a fixed value to a property
+assign const value to property
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```xml
+<assign path="propertyName">
+    <csharp ... />
+    <hdsi ... />
+    <fixed>value</fixed>
+    <fact ref="name of fact" />
+</assign>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+rule "Assign Interpretation Code With Observed Value is Low" as
+    when 
+        all(
+            "Observed Value Is Below Normal Reference Range",
+            "Author Has Not Manually Assigned an Interpretation"
+        )
+    then 
+        assign const "6188F821-261F-420C-9520-0DE240A05661" to interpretationConcept
+        assign const "true" to tag[cdssInterpretation]
+        assign const "CDSS Has Set Interpretation Concept on this observation"
+            to note
+end rule
+```
+{% endtab %}
+{% endtabs %}
 
 ### Raise an Alert
 
