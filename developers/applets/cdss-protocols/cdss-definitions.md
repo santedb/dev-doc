@@ -1090,6 +1090,10 @@ The `Between(columnName, lowerValue, upperValue)` function can be used to filter
 
 To select a column, the `Select(columnName)` function is used. This returns a numerator which can be used with any of the `System.Linq` operators (such as `Average()`, `Sum()`, `Min()`, `Max()`, etc.).&#x20;
 
+{% hint style="info" %}
+The expression evaluator used in SanteDB currently does not support generics. Use the functions `SelectInt(columnName)`, `SelectReal(columnName)`, or `SelectLong(columnName)` as an alternate to `Select(columnName).OfType<>()`.
+{% endhint %}
+
 For example, to compute a fact for `Patient Weight Below Average` one may write:&#x20;
 
 ```
@@ -1099,12 +1103,24 @@ define fact "Patient Weight Below Average" type bool as
         context["Reference Ranges"]
             .Lookup("gender", context["Patient Gender"])
             .Between("ageInWeeks", context.Int("Patient Age In Weeks") - 5, context.Int("Patient Age In Weeks") + 5)
-            .Select("nominal")
+            .SelectReal("nominal")
             .Average()
     $$)
 end fact
 ```
 
-#### First or Last Value
+LINQ aggregation functions which are useful for CDSS rules are enumerated in the table below.
 
-If a fact relies on a specfic value in the lookup table, the `First(columnName)` or `Last(columnName)` function should be used. The `First` function will return the first non-null value of `columnName` found in the reader, wheras `Last` will return the last non-null value of `columnName` from the reader.
+| Expression          | Behavior                                                                                                                             | Example                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ |
+| `Last()`            | Return the last non-null object in the reader, throw an error if no matching records exist.                                          |                                      |
+| `LastOrDefault()`   | Return the last non-null object in the reader, return the default `null` if none found.                                              |                                      |
+| `First()`           | Return the first non-null object in the reader, throw an error if no matching records exist.                                         |                                      |
+| `FirstOrDefault()`  | Return the first non-null object in the reader, return `null` if none found.                                                         | `.Select("column").FirstOrDefault()` |
+| `Average()`         | Compute the average of all the matching column values.                                                                               | `.SelectReal("nominal").Average()`   |
+| `Sum()`             | Compute the sum of all matching column values.                                                                                       | `.SelectInt("column").Sum()`         |
+| `Min()`             | Select the minimum value of matching columns.                                                                                        | `.SelectLong("column").Min()`        |
+| `Max()`             | Select the maximum value of matching columns.                                                                                        | `.Select("column").Max()`            |
+| `Single()`          | Select a single matching value from the result set, throw an error if more than one matching row exists, or if no row exists.        |                                      |
+| `SingleOrDefault()` | Select a sinle matching value from the result set, thow an error if more than one matching row exists, if no row exists return null. |                                      |
+
