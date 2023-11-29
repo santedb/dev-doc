@@ -662,14 +662,14 @@ end rule
 
 The current CDSS context object can be accessed with the `context` variable. `context` can be used to lookup facts and the output of rules which have been (or will be) executed. Context is used in the following manners
 
-| Description                                                  | Example                                                                                                                                                                                                                                |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lookup a fact from the current execution context.            | `context["name of fact"]`                                                                                                                                                                                                              |
-| Get the value of a fact with a specified type                | <p><code>context.Int("name of fact")</code> <br><code>context.String("name of fact")</code><br><code>context.Real("name of fact")</code><br><code>context.Date("name of fact")</code><br><code>context.Bool("name of fact")</code></p> |
-| Lookup a dataset from the context (see )                     | `context.DataSets["name of dataset"]`                                                                                                                                                                                                  |
-| Cast a fact as a RIM based object                            | `(Patient)context["name of fact"]`                                                                                                                                                                                                     |
-| Access the input object (context's current execution target) | `context.Target.DateOfBirth`                                                                                                                                                                                                           |
-| Set a value of a fact on the context                         | `context["name of fact"] = value of fact`                                                                                                                                                                                              |
+| Description                                                                                              | Example                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lookup a fact from the current execution context.                                                        | `context["name of fact"]`                                                                                                                                                                                                              |
+| Get the value of a fact with a specified type                                                            | <p><code>context.Int("name of fact")</code> <br><code>context.String("name of fact")</code><br><code>context.Real("name of fact")</code><br><code>context.Date("name of fact")</code><br><code>context.Bool("name of fact")</code></p> |
+| Lookup a dataset from the context (see [Querying Data Blocks](cdss-definitions.md#querying-data-blocks)) | `context.DataSets["name of dataset"]`                                                                                                                                                                                                  |
+| Cast a fact as a RIM based object                                                                        | `(Patient)context["name of fact"]`                                                                                                                                                                                                     |
+| Access the input object (context's current execution target)                                             | `context.Target.DateOfBirth`                                                                                                                                                                                                           |
+| Set a value of a fact on the context                                                                     | `context["name of fact"] = value of fact`                                                                                                                                                                                              |
 
 #### Special Variables
 
@@ -1011,3 +1011,100 @@ end protocol
 
 ## Data Blocks
 
+There arise occasions where a CDSS rules will need to reference pre-computed tables. Examples may include:
+
+* Standardized Z-Scores for "acceptable" observation values
+* Standardized age ranges for dosing and/or procedure schedules
+* Computation of offsets or unit conversion tables
+
+In the SanteDB CDSS rule format, you can specify these reference sets in your library using a data block. Data blocks are defined with the `define data ... end data` or `<data>` element in XML.&#x20;
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+library "Name of Library"
+   ...
+   define data "Name of Reference Data"
+      having id <dotted.id.of.data>
+      having uuid {uuid-of-data}
+      having oid "dotted.oid.of.data"
+      with metadata 
+         ...
+      end metadata
+      as
+      $$
+      csv,formatted,data,here
+      with,the,first,row,as,column,names
+      ##
+   end data
+end library
+```
+{% endtab %}
+
+{% tab title="XML" %}
+```
+<library ...>
+    <data name="name of data block"
+        id="dotted.id.of.data.block"
+        uuid="uuid-of-data-block"
+        oid="dotted.oid.of.data.block"
+        compression="zip|gz|bz">
+        <meta>
+            ...
+        </meta>
+        <![CDATA[data]]>
+    </data>
+</library>
+```
+{% endtab %}
+
+{% tab title="Example" %}
+
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+All data blocks in the text CDSS rule format are uncompressed comma-separated-values. Data blocks in XML may either be a raw format CSV data block, or a base-64 blob representing the compressed CSV data using algorithm `@compression`.
+{% endhint %}
+
+### Querying Data Blocks
+
+Data blocks in a CDSS library are referenced in [C# Computable Expressions ](cdss-definitions.md#c-expressions)by calling the `DataSets` property on the `context` object passing the dotted identifier or name of the dataset into the parameter as a reference. This can be done via:
+
+* Name of the data block such as `context.DataSets["name of the data block"]`
+* Id of the data block prefixed with a hash such as `context.DataSets["#dotted.id.of.the.data.block"]`
+
+The data block reference will load the CSV data into the data context where the data can be filtered. Filtering is performed via a streaming reader on the CSV data so it is important that your data is sorted in the manner you're filtering. The operations which are available on the data set object are enumerated below.
+
+#### Lookup Row
+
+Lookup up a row is performed with the `Lookup(columnName, value)`, where `columnName` is the name of the column as it appears in the first row of the CSV data. For example, to look-up a gender based on a fact of `Patient Gender` the filter: `context["Reference Ranges"].Lookup("gender", context["Patient Gender"])` .&#x20;
+
+The result of a lookup row is a filtered streaming reader. This can be chained with another lookup, for example, to filter on `gender` for those records matching `Patient Gender` and then filter on `ageInWeeks` on fact `Patient Age in Weeks` the C# expression: `context.DataSets["Reference Ranges"].Lookup("gender", context["Patient Gender"]).Lookup("ageInWeeks", context["Patient Age in Weeks"])`
+
+#### Lookup Range
+
+The `Between(columnName, lowerValue, upperValue)` function can be used to filter the input reader for any rows where `columnName` is between the `lowerValue` and `upperValue`.&#x20;
+
+#### Select a Column
+
+To select a column, the `Select(columnName)` function is used. This returns a numerator which can be used with any of the `System.Linq` operators (such as `Average()`, `Sum()`, `Min()`, `Max()`, etc.).&#x20;
+
+For example, to compute a fact for `Patient Weight Below Average` one may write:&#x20;
+
+```
+define fact "Patient Weight Below Average" type bool as 
+    csharp($$
+        context.Real("Observed Patient Weight in Kgs") <
+        context["Reference Ranges"]
+            .Lookup("gender", context["Patient Gender"])
+            .Between("ageInWeeks", context.Int("Patient Age In Weeks") - 5, context.Int("Patient Age In Weeks") + 5)
+            .Select("nominal")
+            .Average()
+    $$)
+end fact
+```
+
+#### First or Last Value
+
+If a fact relies on a specfic value in the lookup table, the `First(columnName)` or `Last(columnName)` function should be used. The `First` function will return the first non-null value of `columnName` found in the reader, wheras `Last` will return the last non-null value of `columnName` from the reader.
