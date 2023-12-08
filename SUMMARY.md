@@ -317,6 +317,11 @@
     * [Testing Match Configuration](user-guides-and-training/santempi/matching-configuration/testing-match-configuration.md)
     * [Match Configuration XML Definition](user-guides-and-training/santempi/matching-configuration/match-configuration-xml-definition.md)
   * [SanteMPI Dashboard](user-guides-and-training/santempi/santempi-dashboard.md)
+* [SanteEMR](user-guides-and-training/santeemr/README.md)
+  * [EMR Administration](user-guides-and-training/santeemr/emr-administration/README.md)
+    * [CDSS Library](user-guides-and-training/santeemr/emr-administration/cdss-library/README.md)
+      * [View CDSS Library](user-guides-and-training/santeemr/emr-administration/cdss-library/view-cdss-library.md)
+      * [Edit CDSS Library](user-guides-and-training/santeemr/emr-administration/cdss-library/edit-cdss-library.md)
 * [SanteGuard](user-guides-and-training/santeguard.md)
 
 ## Developers

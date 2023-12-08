@@ -72,7 +72,7 @@ After creating a place, or viewing a place from the existing list of places regi
 
 To change the place status, administrators should click on the status indicator and select another state to place the Place instance into:
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Statuses here follow the normal [Entity State Machine](../../../../santedb/data-and-information-architecture/conceptual-data-model/entities/state-machine.md).
 
@@ -80,7 +80,7 @@ Statuses here follow the normal [Entity State Machine](../../../../santedb/data-
 
 The core properties can be edited by clicking the pencil icon in the **Place Properties** panel. This will switch the editing panel into edit mode:
 
-<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Changing the Classification of the place is only recommended if the place does not have any active relationships. Modification of the classification may invalidate some relationships and may cause issues for any existing data.
@@ -92,7 +92,7 @@ In many contexts, places may have additional pseudonyms which can be used to ref
 
 The Name tab on the edit screen can be used to modify these aliases and can be used to add other names to the place:
 
-<figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Adding Identifiers
 
@@ -112,7 +112,7 @@ Identifiers can be removed using the **X** button beside the identifier to be re
 
 The address on a place (City, Province, Country, etc.) often serves the address template whenever a structure address is selected for this place. Addresses should be updated whenever the parent relationship changes, or can be used to specify the address template for objects created within this place.
 
-<figure><img src="../../../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Editing Hierarchy
 
@@ -134,7 +134,7 @@ A place can have only one Parent. When changing the parent of the current place 
 
 SanteDB supports the assignment of dedicate service delivery locations (facilities) which service the geographic region. This can be performed via the facility editing screen, or can be performed directly in the Place editing screen. Assigning a facility starts with pressing the **Add** button on the **Service Facilities** panel.
 
-<figure><img src="../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (21) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Associating an Existing Facility
 

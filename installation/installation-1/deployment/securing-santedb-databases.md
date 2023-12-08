@@ -42,11 +42,11 @@ SanteDB 3.0 introduces ALE. ALE is database intdependent and transparently handl
 
 For example, by default the SanteDB entity name table may appear as:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 However, when ALE is enabled, the data in the database column appears as:
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The original values remain for any of the SanteDB APIs, the values are transparently encrypted so in the database an encrypted string is stored.
 
@@ -77,7 +77,7 @@ In SanteDB ALE is comprised of the following components:
 
 The encryption is performed transparently to the applications using the data.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Enabling ALE
 
