@@ -226,8 +226,9 @@ The entity table is used to render a dynamic client side table which allows for 
 <entity-table
     id="[id of table]"
     type="SecurityUser|SecurityRole|Patient|Place|..."
+    search-field="'field-to-search-on'"
     properties="[ 'list', 'of', 'properties', 'as', 'columns' ]"
-    external="true|false"
+    upstream="true|false"
     default-query="{ 'filter':value, 'filter': value }"
     item-actions="[{ name: 'button_name', 
         sref: 'nav-to-state', 
@@ -266,7 +267,7 @@ The properties are described in more detail below:
 | render              | <p>Provides a series of rendering functions for the named columns. For example, to render "userName" using a function "renderUserName" the following value would be used:</p><p>{ userName: 'renderUserName' }</p> |
 | properties          | A JavaScript array of properties from the object (root properties only) which are to be rendered.                                                                                                                  |
 | can-filter          | When true, indicates the user can search the results in the entity table.                                                                                                                                          |
-| external            | When true, binds the entity table to an upstream datasource.                                                                                                                                                       |
+| upstream            | When true, binds the entity table to an upstream datasource.                                                                                                                                                       |
 | can-sort            | When true, sorting is enabled.                                                                                                                                                                                     |
 | stateless           | When true, a \_queryId parameter is not appended to queries that the entity-table does. This slows down pagination, however allows for dynamic refreshes of the data.                                              |
 | sub-resource        | If querying from a sub-resource (example: `Patient/{id}/some-property` then the property to use.                                                                                                                   |
@@ -341,6 +342,68 @@ The output of this is a control which allows examination of the event including 
 ![Rendering of the Provenance Filter](<../../../../.gitbook/assets/image (51) (1).png>)
 
 ###
+
+### Entity List
+
+{% hint style="info" %}
+This feature is new to SanteDB 3.0
+{% endhint %}
+
+The `entity-list` directive behaves much like the `entity-table` only it presents a more mobile friendly view of results to the user. The `entity-list` can operate as a list, or as a grid of paged search results.
+
+```html
+<entity-list
+    id="[id of list]"
+    type="Person|SubstanceAdministration|Patient|Place|..."
+    display="'list'|'grid'"
+    search-field="'field-to-search-on'"
+    upstream="true|false"
+    default-query="{ 'filter':value, 'filter': value }"
+    item-actions="[{ name: 'button_name', 
+        sref: 'nav-to-state', 
+        action: 'callback',
+        demand: 'required policy',
+        className: 'button css class',
+        icon: 'button icon',
+        when: 'expression-when-to-show' 
+    }]"
+    actions="see item-actions"
+    item-supplement="function_to_call_for_each_record"
+    order-by="sorting-order"
+    can-filter="true|false"
+    can-size="true|false"
+    item-class="css class for items"
+    stateless="true|false"
+    sub-resource-scope="id-of-parent-resource"
+    sub-resource="name_of_sub_resource"
+    operation="name_of_operation"
+    operation-scope="id-of-parent-resource"
+    key-property="property of item key"
+    >
+    <!-- Template for each result card here -->
+</entity-list>
+```
+
+
+
+<table><thead><tr><th width="186">Property</th><th width="159">Dynamic/Bind</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>No</td><td>The unique identifier for the DOM element representing the root of the item list.</td></tr><tr><td>type</td><td>No</td><td>The name of the resource which is used to populate the table.</td></tr><tr><td>display</td><td>Yes</td><td>The display of the list either <code>grid</code> for a grid of results or <code>list</code> for a simple list.</td></tr><tr><td>search-field</td><td>Yes</td><td>The field which is used to search for objects in <code>@type</code></td></tr><tr><td>upstream</td><td>Yes</td><td>True if the search should be executed against the upstream server or false for a local search.</td></tr><tr><td>default-query</td><td>Yes</td><td>The query which is used to filter the initial set of results.</td></tr><tr><td>item-actions</td><td>Yes</td><td>The actions which should be placed in the footer of each result.</td></tr><tr><td>actions</td><td>Yes</td><td>The actions which should be placed in the header of the the result.</td></tr><tr><td>item-supplement</td><td>Yes</td><td>The function which should be called for each result. These functions can fetch additional data or make computations for the view model for each result.</td></tr><tr><td>order-by</td><td>No</td><td>The default sorting expression for results in the format : <code>field_name:[asc|desc]</code></td></tr><tr><td>can-filter</td><td>No</td><td>When explicitly set to false the filtering option will not appear</td></tr><tr><td>can-size</td><td>No</td><td>When set to true, allow the user to select the number of results.</td></tr><tr><td>item-class</td><td>No</td><td>The CSS class which should be applied to every result.</td></tr><tr><td>stateless</td><td>No</td><td>When set to true, indicates that each pagination of search of the resource should not include <code>_queryId</code></td></tr><tr><td>sub-resource-scope</td><td>Yes</td><td>The id in which the <code>@sub-resource</code> path is applied.</td></tr><tr><td>sub-resource</td><td>No</td><td>The name of the sub-property/resource on the API to query</td></tr><tr><td>operation-scope</td><td>Yes</td><td>The id in which the <code>@operation</code> path is applied</td></tr><tr><td>operation</td><td>No</td><td>The name of the operation to invoke to query for results</td></tr><tr><td>key-property</td><td>No</td><td>The name of the property which serves as the KEY for the result</td></tr></tbody></table>
+
+For example, to display all `Place` in a grid of results:
+
+```html
+<entity-list type="Place" display="'grid'" search-field="'name.component.value'" 
+   item-actions="[
+      {
+         name: 'view',
+         sref: 'santedb-admin.data.place.view',
+         className: 'btn-primary',
+         icon: 'fa-eye'
+   ]">
+   <div class="card-header">
+       <h5 class="card-title">{{ item.name | name }}</h5>
+    </div>
+ </entity-list>
+```
 
 ## Filters
 
