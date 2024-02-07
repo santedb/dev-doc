@@ -44,7 +44,7 @@ The service provider attribute accepts these parameters:
 | Name          | String  | Override the ServiceName property                                                                                                                                                                      |
 | Required      | Boolean | Indicates that the service should not be disabled by users from user interfaces.                                                                                                                       |
 | Configuration | Type    | If your service uses an IConfigurationSection implementation to control configuration, this is the type of the configuration section the service uses. (NB: This is used by the configuration tooling) |
-| Type          | Enum    | Indicates whether the service is a Singleton (only one instance is created during the entire SnateDB runtime) or PerCall (a service instance is created each time GetService is called)                |
+| Type          | Enum    | Indicates whether the service is a Singleton (only one instance is created during the entire SanteDB runtime) or PerCall (a service instance is created each time GetService is called)                |
 | Dependencies  | Type\[] | An array of other service interfaces that must be running before this service starts.                                                                                                                  |
 
 ### Service Lifecycle
@@ -72,11 +72,11 @@ public class MyBarcodeGeneratorService : IBarcodeGeneratorService
 Instance services are those services which are constructed on each call to `GetService<T>()` , this means that your service instances can use state variables, it also means that repeated calls to `GetService<T>` , will return different instances of the service.
 
 ```csharp
-[ServiceProvider(Name = "Singleton Service", Type = ServiceInstantiationType.Singleton)]
+[ServiceProvider(Name = "Demand Instanced Service", Type = ServiceInstantiationType.PerCall)]
 public class MyBarcodeGeneratorService : IBarcodeGeneratorService
 {
     public MyBarcodeGeneratorService() {
-        // Called every time GetService<T> is called
+    // Called every time GetService<T> is called
     }
 }
 ```
