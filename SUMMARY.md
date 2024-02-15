@@ -259,6 +259,7 @@
       * [Place Administration](operations/cdr-administration/santedb-administration-panel/reference-data-administration/place-administration.md)
       * [Identity Domain Management](operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
     * [Concept Dictionary Administration](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/README.md)
+      * [Concepts](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/concepts.md)
       * [Code Systems](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/code-systems.md)
     * [Data Warehouse](operations/cdr-administration/santedb-administration-panel/data-warehouse.md)
     * [Reports Centre](operations/cdr-administration/santedb-administration-panel/reports-centre.md)
