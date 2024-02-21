@@ -3,7 +3,7 @@
 For most users the [.](./ "mention")user interface should be sufficient for defining matching rules. There are, however, advanced use cases, where the use of the XML configuration is desired.&#x20;
 
 {% hint style="info" %}
-Before editing the matching configuration, administrators should review the [matching-engine.md](../../../santedb/matching-engine.md "mention")architecture documentation.
+Before editing the matching configuration, administrators should review the [matching-engine.md](../../../../../santedb/matching-engine.md "mention")architecture documentation.
 {% endhint %}
 
 ## Match Configuration
@@ -44,7 +44,7 @@ Here the configuration is indicating that the matching algorithm should be appli
 
 ## Blocking Stage Configuration
 
-The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
+The blocking stage is configured using one or more \<blocking> elements, blocking elements are structured [HDSI format ](../../../../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/)queries which are executed against the configured persistence layer. Blocking can be configured as illustrated:
 
 ```markup
   <!-- Patient which have same MRN -->

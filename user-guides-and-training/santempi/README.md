@@ -32,6 +32,6 @@ This section is concerned with the data administration of the screens provided b
 [the-patient-dashboard](the-patient-dashboard/)
 {% endcontent-ref %}
 
-{% content-ref url="matching-configuration/" %}
-[matching-configuration](matching-configuration/)
+{% content-ref url="../../operations/cdr-administration/santedb-administration-panel/cdr-administration/matching-configuration/" %}
+[matching-configuration](../../operations/cdr-administration/santedb-administration-panel/cdr-administration/matching-configuration/)
 {% endcontent-ref %}

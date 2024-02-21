@@ -6,7 +6,7 @@ The general configuration tab shows metadata related to the configuration as wel
 
 The general properties tab of the match configuration is used to control the general settings of the match configuration. When creating a new match configuration, the panel will default to edit mode to allow for capture of the properties.
 
-![](<../../../.gitbook/assets/image (441) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (441) (1) (1) (1).png>)
 
 The fields on this properties panel are:
 
@@ -27,7 +27,7 @@ By default, only the MDM layer in the SanteDB iCDR will use the tags setting.&#x
 
 The explain diagram for a configuration illustrates the overall matching process which will be undertaken for the overall matching process.&#x20;
 
-![](<../../../.gitbook/assets/image (450) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (450) (1) (1) (1).png>)
 
 The explain diagram shows:
 
