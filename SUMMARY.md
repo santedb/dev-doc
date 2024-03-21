@@ -203,6 +203,7 @@
         * [Installing Disconnected Windows Application](installation/installation-1/deployment/installing-software/disconnected-gateway/installing-disconnected-windows-application.md)
         * [Installing the dCDR SDK](installation/installation-1/deployment/installing-software/disconnected-gateway/installing-the-dcdr-sdk.md)
         * [User Interface App Settings](installation/installation-1/deployment/installing-software/disconnected-gateway/app-settings.md)
+    * [Configuring Privacy Controls](installation/installation-1/deployment/configuring-privacy-controls.md)
     * [Post Deployment Tuning](installation/installation/santedb-server/production-installation-notes.md)
     * [Securing SanteDB Configuration](installation/installation-1/deployment/securing-santedb-configuration.md)
     * [Securing SanteDB Databases](installation/installation-1/deployment/securing-santedb-databases.md)
