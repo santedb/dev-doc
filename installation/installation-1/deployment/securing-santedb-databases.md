@@ -46,7 +46,7 @@ For example, by default the SanteDB entity name table may appear as:
 
 However, when ALE is enabled, the data in the database column appears as:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The original values remain for any of the SanteDB APIs, the values are transparently encrypted so in the database an encrypted string is stored.
 

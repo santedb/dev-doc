@@ -2,7 +2,7 @@
 
 The code system management index is where administrators will manage the global list of code systems in SanteDB. A [Code System](../../../../santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary/#reference-terms) is a collection of reference terms defined by a standards body and is typically used on the SanteDB [FHIR](../../../../operations-1/standard-operating-procedures/hl7-fhir/), [HL7v2](../../../../developers/service-apis/hl7v2.md), or GS1 interfaces.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Code systems can be viewed, deleted, or created using the relevant buttons in the user interface.
 

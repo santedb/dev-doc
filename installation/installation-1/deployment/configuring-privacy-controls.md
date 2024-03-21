@@ -66,12 +66,18 @@ The `Action` column describes what this setting does when set to TRUE in the con
 
 #### Propagation to dCDR Instances
 
-The settings listed above can be propagated to dCDR instances by prefixing the setting with `dcdr.` for example (this applies to all settings which are propagated to dCDR clients):
+The settings listed above can be propagated to dCDR instances by populating the `<publicSettings>` element in the `AmiConfigurationSection`:
 
+```xml
+<section xsi:type="AmiConfigurationSection">
+    <welcomeMessage>Welcome to SanteMPI</welcomeMessage>
+    <publicSettings>    
+      <add key="allow.patient.maritalStatus" value="true" />
 ```
-   <add key="allow.patient.maritalStatus" value="true" />
-   <add key="dcdr.allow.patient.maritalStatus" value="true" />
-```
+
+This can also be set using the Configuration Tool by navigating to `Messaging > Administrative Management Interface`
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 #### In Configuration Tool
 
