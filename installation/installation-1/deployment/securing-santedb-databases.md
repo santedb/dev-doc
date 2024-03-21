@@ -140,6 +140,12 @@ sudo systemctl start santedb
 When ALE is enabled via the --reencrypt option, your configuration file will be protected.
 {% endhint %}
 
+#### Configuration Tool
+
+You can enable and change the ALE parameters using the Configuration Tool under `Security -> Application Layer Encryption.`
+
+<figure><img src="../../../.gitbook/assets/image (529).png" alt=""><figcaption></figcaption></figure>
+
 ### Disabling/Changing ALE Parameters
 
 If, for any reason, the ALE parameters need to be disabled or changed, you must instruct SanteDB to decrypt the database fields (prior optionally to re-encrypting them with another key).&#x20;

@@ -6,7 +6,7 @@ These rules are then downloaded for offline use in the dCDRs and the SanteEMR en
 
 When accessing the SanteDB CDSS Library screen, the user will be presented with a summation of the decision support libraries available in the SanteEMR instance.
 
-<figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
 
 The information provided on this screen is:
 
