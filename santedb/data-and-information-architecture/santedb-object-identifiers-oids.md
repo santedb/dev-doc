@@ -19,6 +19,7 @@ The root of SanteDB OIDs from  the OpenIZ root `1.3.6.1.4.1.33349.3.1.5.9`
 | 1.3.6.1.4.1.52820.5       | 1     | Deployments                     |
 | 1.3.6.1.4.1.52820.5       | 2     | Clinical Templates              |
 | 1.3.6.1.4.1.52820.5       | 3     | Clinical Protocols & CDSS Rules |
+| 1.3.6.1.4.1.52820.5       | 4     | Identity Domains                |
 
 ## Privacy & Security OIDs
 
@@ -100,3 +101,20 @@ Clinical protocols and libraries exist in the `1.3.5.1.4.1.52820.5.3` namespace,
 | 1.3.5.1.4.1.52820.5.2.3.2.7   | Clinical Protocol | Administration of Human Papilloma Virus (HPV) vaccine after 9 years of age                                                                                                                                |
 | 1.3.5.1.4.1.52820.5.2.3.2.8   | Clinical Protocol | Administration of Inactivated Polio Virus Vaccine (IPV)                                                                                                                                                   |
 
+
+
+## Identity Domain OIDs
+
+Identity domain oids reside in the root `1.3.6.1.4.1.52820.5.4` and are further subdivided into:
+
+* `.1` - Patient domains
+* `.2` - Organization domains
+* `.3` - Material Identity&#x20;
+* `.4` - Place Identity&#x20;
+* `.5` - Act Identity
+
+| OID                       | Domain             | Name                       |
+| ------------------------- | ------------------ | -------------------------- |
+| 1.3.6.1.4.1.52820.5.4.2.1 | SIMS\_MANUFACTURER | SanteIMS Manufacturer Code |
+|                           |                    |                            |
+|                           |                    |                            |
