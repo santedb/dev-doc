@@ -6,7 +6,7 @@ These rules are then downloaded for offline use in the dCDRs and the SanteEMR en
 
 When accessing the SanteDB CDSS Library screen, the user will be presented with a summation of the decision support libraries available in the SanteEMR instance.
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 The information provided on this screen is:
 
@@ -24,14 +24,14 @@ Executable library definitions can be downloaded directly from the index page us
 
 A CDSS library can be created using the **Create** button on the CDSS library screen. When creating a library two options are presented:
 
-<figure><img src="../../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
 
 * **Upload CDSS Library File:** Allows an administrator to select a CDSS definition file either in executable XML format or in the source CDSS format.
 * **Manually Create CDSS Library:** Allows for the entry of CDSS metadata fields to register a new, empty CDSS library.
 
 When manually creating a CDSS library, the metadata inputs will be used to construct a scaffolded CDSS library in the SanteDB server instance.
 
-<figure><img src="../../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
 
 * **Name:** The human friendly name for the CDSS library. In the definition file this becomes the contents of `define library NAME OF LIBRARY` and should be unique in the scope of the SanteDB server.
 * **Identifier:** The unique "computer" identifier for the CDSS library. This should be unique for all of SanteDB instances and should be a dotted identifier. Typically the naming convention of `mycountry.myproject.mysubproject.library` should be used, for example, in the Canadian Province of Ontario , a library for calculating HPV dosing may have an identifier of `ca.on.epi.vaccine.hpv`

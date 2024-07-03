@@ -77,7 +77,7 @@ The settings listed above can be propagated to dCDR instances by populating the 
 
 This can also be set using the Configuration Tool by navigating to `Messaging > Administrative Management Interface`
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 #### In Configuration Tool
 

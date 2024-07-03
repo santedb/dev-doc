@@ -6,7 +6,7 @@ This page documents a user interface which is used for the entry of CDSS Definit
 
 SanteEMR's administration portal allows administrators to edit CDSS definition rules directly in the administrative panel. This can be accessed via the CDSS library index, or by clicking the **Edit** option while viewing a CDSS library.&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (11) (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Editing CDSS Rules
 
