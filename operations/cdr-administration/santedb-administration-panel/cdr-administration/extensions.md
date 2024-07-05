@@ -9,7 +9,11 @@ Extensions are used to allow SanteDB to store additional, unstructured data whic
 * To store additional information which is attached to a resource (see: [extended-data.md](../../../../santedb/data-and-information-architecture/conceptual-data-model/extended-data.md "mention"))
 * To accept (verbatim) data which is provided via a FHIR extension directly into the database without writing an extension handler (see: [#extension-handlers](../../../../developers/santedb-software-publishers/extending-fhir-interfaces.md#extension-handlers "mention"))
 
-Extensions, unlike tags (which are simple key/value pair data) must be registered with a type. To use the administration console to manage extensions adminsitrators should access the **CDR Administration > Extensions** page.
+Extensions, unlike tags (which are simple key/value pair data) must be registered with a type. To use the administration console to manage extensions administrators should access the **CDR Administration > Extensions** page.
+
+{% hint style="warning" %}
+Deleting or changing the URI of an extension which is in use may cause problems at the interoperability layers of SanteDB (FHIR, HDSI, etc.)
+{% endhint %}
 
 ## Extension Registry
 
