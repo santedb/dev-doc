@@ -266,6 +266,7 @@
     * [CDR Administration](operations/cdr-administration/santedb-administration-panel/cdr-administration/README.md)
       * [Importing Data](operations/cdr-administration/santedb-administration-panel/cdr-administration/importing-data.md)
       * [Data Quality Rules](operations/cdr-administration/santedb-administration-panel/cdr-administration/data-quality-rules.md)
+      * [Extensions](operations/cdr-administration/santedb-administration-panel/cdr-administration/extensions.md)
       * [Decision Support Library](operations/cdr-administration/santedb-administration-panel/cdr-administration/decision-support-library/README.md)
         * [View CDSS Library](operations/cdr-administration/santedb-administration-panel/cdr-administration/decision-support-library/view-cdss-library.md)
         * [Edit CDSS Library](operations/cdr-administration/santedb-administration-panel/cdr-administration/decision-support-library/edit-cdss-library.md)
