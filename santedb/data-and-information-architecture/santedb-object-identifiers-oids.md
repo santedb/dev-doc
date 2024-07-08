@@ -113,8 +113,8 @@ Identity domain oids reside in the root `1.3.6.1.4.1.52820.5.4` and are further 
 * `.4` - Place Identity&#x20;
 * `.5` - Act Identity
 
-| OID                       | Domain             | Name                       |
-| ------------------------- | ------------------ | -------------------------- |
-| 1.3.6.1.4.1.52820.5.4.2.1 | SIMS\_MANUFACTURER | SanteIMS Manufacturer Code |
-|                           |                    |                            |
-|                           |                    |                            |
+| OID                       | Domain             | Name                                        |
+| ------------------------- | ------------------ | ------------------------------------------- |
+| 1.3.6.1.4.1.52820.5.4.2.1 | SIMS\_MANUFACTURER | SanteIMS Manufacturer Code                  |
+| 1.3.6.1.4.1.52820.5.4.4.1 | PDH\_FAC\_UNIT\_ID | Pacific Data Hub Facility Import Identifier |
+|                           |                    |                                             |
