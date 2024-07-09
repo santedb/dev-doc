@@ -51,6 +51,7 @@ Clinical templates are structures which dictate the format, entry, and display o
 * `1.3.6.1.4.1.52820.5.2.3` - Templates for `SubstanceAdminsitration`&#x20;
 * `1.3.6.1.4.1.52820.5.2.4` - Templates for `Procedure`
 * `1.3.6.1.4.1.52820.5.2.5` - Templates for `PatientEncounter`
+* `1.3.6.1.4.1.52820.5.2.6` - Templates for stock related data
 
 The clinical templates defined by SanteDB community implementations are:
 
@@ -75,6 +76,7 @@ The clinical templates defined by SanteDB community implementations are:
 | 1.3.5.1.4.1.52820.5.2.3.1  | org.santedb.emr.sbadm.supplement                  | SanteIMS Supplemental (non-tracked material) administration                                                               |
 | 1.3.5.1.4.1.52820.5.2.3.2  | org.santedb.emr.sbadm.immunization                | SanteIMS Immunization (tracked material) administration.                                                                  |
 | 1.3.5.1.4.1.52820.5.2.5.1  | org.santedb.emr.enc.children.healthyVisit         | SanteEMR/IMS Childhood Healthy Visit Encounter (regular encounter for children under 10 for weight/height, immunizations) |
+| 1.3.6.1.4.1.52820.5.2.6    | org.santedb.ims.container.functionalStatus        | SanteIMS functional status observation of a container/fridge.                                                             |
 
 ## Clinical Protocol OIDs
 
