@@ -102,3 +102,44 @@ To assign an existing member of staff as a manager, press the **Manager** button
 * Start sessions for other users and clinics which are children of the facility they manage
 
 Managers of clinics are not (by default) local administrators of that clinic. Rather, these types of users must be assigned as a clinic manager and also a local adminsitrator.
+
+### Stock Stores
+
+{% hint style="info" %}
+This feature is only enabled on installations of SanteIMS EIR 3.0
+{% endhint %}
+
+When the SanteIMS EIR plugins are installed and active on your SanteDB installation, the facility page will provide an extra tab for stock management at the facility. Stock stores are used by SanteIMS to manage the places within a facility where stock is physically kept. Stock stores include:
+
+* Refrigerators for vaccinations and cold-chain stock items
+* Freezers for deep-cold vaccinations (such as mRNA SARS nCOV-2)
+* Pantries for non-cold store stock (syringes, vitamins, etc.)
+
+Stock stores are managed on the stock tab.
+
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Using this summary view, administrators may:
+
+* Create a new stock store within the facility
+* Remove stock stores from the facility
+* View current contents of the stock store (lots and quantities) as well as a history of previous stock counts performed by the facility
+* View current and historical functional status and temperature readings for the facility
+* Initiate an administrative stock count or stock take
+* Initiate an administrative temperature reading / functional status report
+
+#### Creating a Stock Store
+
+To create a new stock store, the administrator should use the **Create** option, this will allow the administrator to enter the details about the new store:
+
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+The fields for the stock containers are:
+
+* **Name/Description:** A friendly name for the fridge that is shown to users when they perform stock counts or temperature readings.
+* **Type:** The type of stock store such as a cold store (Fridge, Freezer, Cold Box/Flask) or a regular store (Pantry, Box, etc.)
+* **Identifiers:** One or more identifiers which are scoped to **Container** which are used to uniquely identify the fridge
+* **Manufacturer:** If the stock store is a manufactured container (such as a fridge or freezer) which may require repair and/or service, this indicates the manufacturer of the store.
+* **Serial #**: If a serial or model number is required for service, this is the serial number of the unit
+* **Expires:** Some cold storage units have expiration dates or dates where their certification period ends.&#x20;
+* **Max Capacity:** The maximum capacity (policy) of the store.
