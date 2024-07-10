@@ -243,3 +243,25 @@ It is also possible to create composite charts
         backgroundColor="rgba(0,255,0,0.5)">gender == 'F' ? 1 : 0</bi:dataset>
 </bi:chart>
 ```
+
+#### Reference Data / Layers
+
+Within a bar, line or radar chart you can add reference data sets which are useful for comparing data against a known good value set. These reference sets will appear as other datasets on the chart, however are drawn from a different data source than the primary view.
+
+Reference data sets must:
+
+* Have their first column match the `<labels>` or `<axis>` elements as they appear on the chart
+* Should be sorted in the same manner as the primary axis or dataset
+
+Reference datasets are included via the `@ref-source` attribute on the `<bi:chart` element, and individual lines created using `<bi:refset`. For example, if there is a chart with ages, and a target population to serve as a reference set:
+
+```xml
+<bi:chart source="patient_population" type="line" ref-source="ref-targetpop">
+    <bi:title>Patient Population (Age in Years)</bi:title>
+    <bi:labels format="#0">(DateTime.Now - birth_time).TotalDays / 365.25</bi:labels>
+    <bi:refset label="Target Population (Male)" fill="false">Male</bi:refset>
+    <bi:refset label="Target Population (Female)" fill="false">Female</bi:refset>
+    <bi:dataset label="Male" fn="sum">Male</bi:dataset>
+    <bi:dataset label="Female" fn="sum">Female</bi:dataset>
+</bi:chart>
+```
