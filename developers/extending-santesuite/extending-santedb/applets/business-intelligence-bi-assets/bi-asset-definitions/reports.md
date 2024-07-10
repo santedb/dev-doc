@@ -265,3 +265,9 @@ Reference datasets are included via the `@ref-source` attribute on the `<bi:char
     <bi:dataset label="Female" fn="sum">Female</bi:dataset>
 </bi:chart>
 ```
+
+#### Styling Chart Data
+
+Charts can be styled using the following attributes on the `<bi:dataset` or `<bi:refset` as documented below.
+
+<table><thead><tr><th>Attribute</th><th width="164">Type</th><th>Description</th></tr></thead><tbody><tr><td>backgroundColor</td><td>Color</td><td>Controls the fill color of the series</td></tr><tr><td>borderColor</td><td>Color</td><td>Controls the line color of the border</td></tr><tr><td>borderWidth</td><td>Number</td><td>Controls the width of the border drawn</td></tr><tr><td>fill</td><td>Boolean</td><td>When <code>false</code> the series will not be a filled series</td></tr><tr><td>order</td><td>Number</td><td>The relative order of the series in the chart</td></tr><tr><td>pointRadius</td><td>Number</td><td>The radius of the data points on the series (so users can see the data value)</td></tr><tr><td>spanGaps</td><td>Boolean</td><td>When true, any gaps in data will be filled, when false the line will be broken</td></tr><tr><td>barThickness</td><td>Number</td><td>When using a bar graph, controls the width of each bar.</td></tr><tr><td>skipNull</td><td>Boolean</td><td>When true, elements with no value are skipped in the dataset.</td></tr></tbody></table>
