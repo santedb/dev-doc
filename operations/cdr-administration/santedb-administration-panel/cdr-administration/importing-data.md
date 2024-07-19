@@ -31,7 +31,7 @@ Imports for data are processed on the server in the background. To begin the pro
 Currently only CSV is supported as a data import format.
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. Select the file which should be imported. Your file should be within the allowable file upload limit for your environment.
 2. Select the import mapping which has been created by your development team. The **ONC Patient Matching Dataset** is included standard with SanteDB ([https://github.com/onc-healthit/patient-matching](https://github.com/onc-healthit/patient-matching))
@@ -47,7 +47,7 @@ The user can manually initiate the import process.
 
 After import, the file may be placed in the **Completed With Errors** state. This indicates that not all records could be processed in the file. Users can view the issues by clicking on the import details screen.
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 To correct import errors, you may download the **Rejected Records** file to your hard disk. This file matches the format of the original import file, with an additional column named `import_error`. This column indicates the issue that needs to be corrected.&#x20;
 

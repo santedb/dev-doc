@@ -261,6 +261,7 @@
       * [Materials](operations/cdr-administration/santedb-administration-panel/reference-data-administration/materials.md)
       * [Identity Domain Management](operations/cdr-administration/santedb-administration-panel/reference-data-administration/identity-domain-management.md)
     * [Concept Dictionary Administration](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/README.md)
+      * [Concept Sets](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/concept-sets.md)
       * [Concepts](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/concepts.md)
       * [Code Systems](operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/code-systems.md)
     * [CDR Administration](operations/cdr-administration/santedb-administration-panel/cdr-administration/README.md)

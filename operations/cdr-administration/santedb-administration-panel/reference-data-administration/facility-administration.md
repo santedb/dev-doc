@@ -117,7 +117,7 @@ When the SanteIMS EIR plugins are installed and active on your SanteDB installat
 
 Stock stores are managed on the stock tab.
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Using this summary view, administrators may:
 
@@ -132,7 +132,7 @@ Using this summary view, administrators may:
 
 To create a new stock store, the administrator should use the **Create** option, this will allow the administrator to enter the details about the new store:
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The fields for the stock containers are:
 

@@ -72,7 +72,7 @@ After creating a place, or viewing a place from the existing list of places regi
 
 To change the place status, administrators should click on the status indicator and select another state to place the Place instance into:
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Statuses here follow the normal [Entity State Machine](../../../../santedb/data-and-information-architecture/conceptual-data-model/entities/state-machine.md).
 

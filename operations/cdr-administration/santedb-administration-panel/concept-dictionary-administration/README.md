@@ -8,7 +8,7 @@ The [SanteDB Concept Dictionary](../../../../santedb/data-and-information-archit
 
 Administrators can administer the SanteDB concept dictionary from the **Concept Dictionary** administration area of the administration panel.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 The concept dictionary administration panel allows administrators to edit:
 
