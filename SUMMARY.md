@@ -11,6 +11,7 @@
   * [Master Patient Index - SanteMPI](product-overview/santesuite-products/master-patient-index-santempi.md)
   * [Immunization Management System - SanteIMS](product-overview/santesuite-products/immunization-management-system-santeims.md)
   * [Privacy & Security - SanteGuard](santeguard/introduction.md)
+* [SanteDB Versions](product-overview/santedb-versioning.md)
 
 ## Architecture <a href="#santedb" id="santedb"></a>
 
@@ -20,7 +21,6 @@
 * [Software Architecture](santedb/software-architecture.md)
   * [Publish / Subscribe Architecture](santedb/software-architecture/publish-subscribe-architecture.md)
   * [New ADO (nuado)](santedb/software-architecture/new-ado-nuado.md)
-  * [SanteDB Versioning](product-overview/santesuite-products/santedb-versioning.md)
   * [Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
 * [Data & Information Architecture](santedb/data-and-information-architecture/README.md)
   * [Conceptual Information Model](santedb/data-and-information-architecture/conceptual-data-model/README.md)
