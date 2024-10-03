@@ -50,17 +50,17 @@ name.component[Given].value=JOHN&name.component[Given].value=JOHNNY&name.compone
 
 Operators allow for the filtering of values based on equality, negation, etc. The operators for HDSI query syntax are listed below:
 
-| Operation             | Operator | Example                     |
-| --------------------- | -------- | --------------------------- |
-| Equal                 | =        | name.component.value=JOHN   |
-| Not Equal             | =!       | name.component.value=!JOHN  |
-| Less Than             | =<       | dateOfBirth=<2020-01-01     |
-| Less Than or Equal    | =<=      | dateOfBirth=<=2020-01-01    |
-| Greater Than          | =>       | dateOfBirth=>2020-01-01     |
-| Greater Than or Equal | =>=      | dateOfBirth=>=2020-01-01    |
-| About Equal (Pattern) | =\~      | name.component.value=\~JO\* |
-| Starts With           | =^       | name.component.value=^JO    |
-| Ends With             | =$       | name.componentvalue=$HN     |
+| Operation             | Operator       | Example                                                           |
+| --------------------- | -------------- | ----------------------------------------------------------------- |
+| Equal                 | `=` or `eq`    | name.component.value=JOHN                                         |
+| Not Equal             | `=!` or `ne`   | <p>name.component.value=!JOHN<br>name.component.value=neJOHN</p>  |
+| Less Than             | `=<` or `lt`   | <p>dateOfBirth=&#x3C;2020-01-01<br>dateOfBirth=lt2020-01-01</p>   |
+| Less Than or Equal    | `=<=` or `lte` | <p>dateOfBirth=&#x3C;=2020-01-01<br>dateOfBirth=lte2020-01-01</p> |
+| Greater Than          | `=>` or `gt`   | <p>dateOfBirth=>2020-01-01<br>dateOfBirth=gt2020-01-01</p>        |
+| Greater Than or Equal | `=>=` or `gte` | <p>dateOfBirth=>=2020-01-01<br>dateOfBirth=gte2020-01-01</p>      |
+| About Equal (Pattern) | `=~` or `ap`   | <p>name.component.value=~JO*<br>name.component.value=apJO*</p>    |
+| Starts With           | =^             | name.component.value=^JO                                          |
+| Ends With             | =$             | name.componentvalue=$HN                                           |
 
 ## Collection Guards
 
@@ -125,6 +125,22 @@ o => o.Names.Where(
           name => name.Component.Any(
                component => component.Value == "SMITH"))
 ```
+
+## Complex Guards
+
+{% hint style="info" %}
+This section documents a feature that is only available in SanteDB v3.0 or later
+{% endhint %}
+
+Guards can also contain complex expressions. Complex expressions in a guard are triggered by using the `=` sign in the guard. For example, to guard on a telecom address whose use is `Home` and type is an e-mail:
+
+```
+telecom[use.mnemonic=Home&amp;type.mnemonic=Internet].value=bob@bob.com
+```
+
+{% hint style="warning" %}
+When submitting the request via a string or via HTTP directly the `=` in the guard expression must be URL escaped value of `%3d`
+{% endhint %}
 
 ## Casting
 
@@ -206,11 +222,12 @@ See: [filter-functions.md](filter-functions.md "mention") for more information o
 
 HDSI query control parameters are prefixed with an underscore. These query parameters are not mapped to the internal data structures of the RIM for filtering, and are intended, to provide control over how the result set is returned.
 
-| `_count`   | number             | Controls the number of records which are returned in the result set.                                  |
-| ---------- | ------------------ | ----------------------------------------------------------------------------------------------------- |
-| `_offset`  | number             | Controls the offset of the first record to be returned in the result set.                             |
-| `_orderBy` | field:\[asc\|desc] | Controls the ordering of results in the result set.                                                   |
-| `_any`     | string             | Initiates a free text search (or rather, allows the server to control how the result set is queried). |
+| `_count`        | number             | Controls the number of records which are returned in the result set.                                                                                                          |
+| --------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `_offset`       | number             | Controls the offset of the first record to be returned in the result set.                                                                                                     |
+| `_orderBy`      | field:\[asc\|desc] | Controls the ordering of results in the result set.                                                                                                                           |
+| `_any`          | string             | Initiates a free text search (or rather, allows the server to control how the result set is queried).                                                                         |
+| `_includeTotal` | boolean            | True if the response should include the total count - this is used to allow callers to indicate that they don't want the API to perform the extra step of `COUNT` of results. |
 
 ## Freetext Search
 
