@@ -45,21 +45,4 @@ SanteDB version 3.0 and its related solutions (SanteMPI 3.0, SanteIMS 3.0, Sante
 This Page Documents a feature in SanteDB v3.0
 {% endhint %}
 
-In summary the enhancements are:
-
-* Refactoring of the entire data persistence layer to use more efficient database calls (see: [new-ado-nuado.md](../santedb/software-architecture/new-ado-nuado.md "mention"))
-* Implementation of the data mart and data warehouse which allows for secondary use of SanteDB data outside of the RIM and allows implementers to specify their own data marts (see: [data-marts.md](../developers/applets/business-intelligence-bi-assets/bi-asset-definitions/data-marts.md "mention"))
-* Ability to customize the data quality rules within the administrative user interface (see: [data-quality-rules.md](../operations/cdr-administration/santedb-administration-panel/cdr-administration/data-quality-rules.md "mention"))
-* Ability to import data directly from CSV files into the CDR using the administrative interface (see: [importing-data.md](../operations/cdr-administration/santedb-administration-panel/cdr-administration/importing-data.md "mention"))
-* Ability to register new publish/subscribe targets in the administrative user interface, and more granular control of the dispatcher queues for subscriptions (see: [pub-sub-manager.md](../operations/cdr-administration/santedb-administration-panel/system-administration/pub-sub-manager.md "mention"))
-* Improvements to the iCDR / dCDR onboarding routine and ability to map data signature and authentication certificates to users, applications, and devices (see: [#certificate-mapping](../operations/cdr-administration/santedb-administration-panel/security-administration/managing-devices.md#certificate-mapping "mention"))
-* Full ability to manage the Concept Dictionary via the administrative interface, including ability to import concept sets and reference terminology from CSV files directly from file system (see: [concept-dictionary-administration](../operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/ "mention"))
-* Completely refactored Clinical Decision Support (CDSS) system which allows for editing of CDSS definitions directly in the user interface in realtime (including realtime debugging of CDSS rules) (see: [decision-support-library](../operations/cdr-administration/santedb-administration-panel/cdr-administration/decision-support-library/ "mention"))
-* New text based CDSS asset type which allows for easy creation and modification of CDSS rules (rather than XML format) (see: [cdss-definitions.md](../developers/applets/cdss-protocols/cdss-definitions.md "mention"))
-* Complex HDSI Guard Expressions
-* CDSS as a service operations allow for third party callers to invoke CDSS rules over the REST interfaces
-* Care Pathways allowing for enrolment and storage of clinical care plans based on a logical grouping of care patterns (see: [care-pathways.md](../user-guides-and-training/santeemr/emr-administration/care-pathways.md "mention"))
-* Improvements to the reporting infrastructure to support new, complex types of graphing and report layouts
-* Ability to export most CDR configuration and metadata to dataset files from the user interface (when the `Export CDR Metadata` policy is enabled)
-*
-
+In summary the enhancements are detailed in [3.0-releases.md](../installation/releases/3.0-releases.md "mention")
