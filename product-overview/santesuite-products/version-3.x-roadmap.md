@@ -1,10 +1,10 @@
-# Version 3 Roadmap
+# Roadmap
 
 SanteDB 1.x was a near direct refactor of the original OpenIZ core, which had components from the MEDIC Service Core project dating back to 2008/2009. While SanteDB 2.x was a refactor off this .NET Framework and PCL code to .NET Standard, there are still many components and patterns (ghosts) of the original service core code from 2008.&#x20;
 
 The SanteDB Version 3.x roadmap seeks to fully remove these patterns and re-implement many of the core services. However, this presents a problem in that it makes incremental change difficult, and will break the services. For this reason, much of the Version 3.x roadmap is currently in the design / wishlist phase.
 
-## Refactor Persistence Layer
+## Refactor Persistence Layer (done)
 
 {% hint style="info" %}
 The persistence layer refactor is currently underway and the code for these features can be found at: [https://github.com/santedb/santedb-server/tree/feature/nuado](https://github.com/santedb/santedb-server/tree/feature/nuado)
@@ -51,7 +51,7 @@ Unfortunately this refactor will change the service calls such that any existing
   * This would add allow existing plugins to continue to operate as normal, however would require any implementations of the existing services to be refactored to add async methods.
   * This has the same maintenance issues as the IAsyncX method
 
-## Add Complex Guard Expressions
+## Add Complex Guard Expressions (done)
 
 Currently within SanteDB, simple guard classifications can be done on a classifier property, for example:
 

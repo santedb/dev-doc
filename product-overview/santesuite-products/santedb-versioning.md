@@ -37,13 +37,28 @@ Starting with SanteDB named version Jasper , the entire shared assembly infrastr
 We're still in the process of updating our documentation to reflect this change of underlying frameworks.
 {% endhint %}
 
-### Community Technology Preview Versions
+### Version 3.0&#x20;
 
-Starting with SanteDB 2.x, versions are differentiated between a technology preview version and a hardened/LTS version using the minor build number. Minor builds which are even numbered are considered stable and no API changes are permitted (2.0.x, 2.2.x, 2.4.x, etc.). Builds with odd numbered minor versions are considered technology preview builds (2.1.x, 2.3.x, 2.5.x). CTP releases are suitable for use for developers, pilots, etc. and each revision within the minor build should be relatively compatible with one another.
+SanteDB version 3.0 and its related solutions (SanteMPI 3.0, SanteIMS 3.0, SanteEMR 3.0) have many enhancements which improve the efficiency and maintainability of SanteDB products. These features are documented in detail throughout the wiki and tagged with:
 
-CTP releases may, however, contain new features or enhancements which have not been deployed by the SanteDB team in a production context. These releases typically follow on another. For example, the 2.1.x CTP releases are used as the basis for the 2.2.x stable releases.&#x20;
+{% hint style="info" %}
+This Page Documents a feature in SanteDB v3.0
+{% endhint %}
 
-### New Data Layer Version
+In summary the enhancements are:
 
-The SanteDB has performed significant work in refactoring the persistence layer and MDM layer during 2021 and 2022 to improve the manner in which data is loaded and filtered from the underlying datastore. This version on branch `feature/nuado` represents the last version of the 2.x series of the SanteDB platform code prior to the next-gen redesign (version 3.0)&#x20;
+* Refactoring of the entire data persistence layer to use more efficient database calls (see: [new-ado-nuado.md](../../santedb/software-architecture/new-ado-nuado.md "mention"))
+* Implementation of the data mart and data warehouse which allows for secondary use of SanteDB data outside of the RIM and allows implementers to specify their own data marts (see: [data-marts.md](../../developers/applets/business-intelligence-bi-assets/bi-asset-definitions/data-marts.md "mention"))
+* Ability to customize the data quality rules within the administrative user interface (see: [data-quality-rules.md](../../operations/cdr-administration/santedb-administration-panel/cdr-administration/data-quality-rules.md "mention"))
+* Ability to import data directly from CSV files into the CDR using the administrative interface (see: [importing-data.md](../../operations/cdr-administration/santedb-administration-panel/cdr-administration/importing-data.md "mention"))
+* Ability to register new publish/subscribe targets in the administrative user interface, and more granular control of the dispatcher queues for subscriptions (see: [pub-sub-manager.md](../../operations/cdr-administration/santedb-administration-panel/system-administration/pub-sub-manager.md "mention"))
+* Improvements to the iCDR / dCDR onboarding routine and ability to map data signature and authentication certificates to users, applications, and devices (see: [#certificate-mapping](../../operations/cdr-administration/santedb-administration-panel/security-administration/managing-devices.md#certificate-mapping "mention"))
+* Full ability to manage the Concept Dictionary via the administrative interface, including ability to import concept sets and reference terminology from CSV files directly from file system (see: [concept-dictionary-administration](../../operations/cdr-administration/santedb-administration-panel/concept-dictionary-administration/ "mention"))
+* Completely refactored Clinical Decision Support (CDSS) system which allows for editing of CDSS definitions directly in the user interface in realtime (including realtime debugging of CDSS rules) (see: [decision-support-library](../../operations/cdr-administration/santedb-administration-panel/cdr-administration/decision-support-library/ "mention"))
+* New text based CDSS asset type which allows for easy creation and modification of CDSS rules (rather than XML format) (see: [cdss-definitions.md](../../developers/applets/cdss-protocols/cdss-definitions.md "mention"))
+* CDSS as a service operations allow for third party callers to invoke CDSS rules over the REST interfaces
+* Care Pathways allowing for enrolment and storage of clinical care plans based on a logical grouping of care patterns (see: [care-pathways.md](../../user-guides-and-training/santeemr/emr-administration/care-pathways.md "mention"))
+* Improvements to the reporting infrastructure to support new, complex types of graphing and report layouts
+* Ability to export most CDR configuration and metadata to dataset files from the user interface (when the `Export CDR Metadata` policy is enabled)
+*
 

@@ -21,7 +21,7 @@
   * [Publish / Subscribe Architecture](santedb/software-architecture/publish-subscribe-architecture.md)
   * [New ADO (nuado)](santedb/software-architecture/new-ado-nuado.md)
   * [SanteDB Versioning](product-overview/santesuite-products/santedb-versioning.md)
-  * [Version 3 Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
+  * [Roadmap](product-overview/santesuite-products/version-3.x-roadmap.md)
 * [Data & Information Architecture](santedb/data-and-information-architecture/README.md)
   * [Conceptual Information Model](santedb/data-and-information-architecture/conceptual-data-model/README.md)
     * [Concept Dictionary](santedb/data-and-information-architecture/conceptual-data-model/concept-dictionary/README.md)
@@ -329,7 +329,8 @@
     * [Data Quality Tab](user-guides-and-training/santempi/the-patient-dashboard/data-quality-tab.md)
   * [SanteMPI Dashboard](user-guides-and-training/santempi/santempi-dashboard.md)
 * [SanteEMR](user-guides-and-training/santeemr/README.md)
-  * [EMR Administration](user-guides-and-training/santeemr/emr-administration.md)
+  * [EMR Administration](user-guides-and-training/santeemr/emr-administration/README.md)
+    * [Care Pathways](user-guides-and-training/santeemr/emr-administration/care-pathways.md)
 * [SanteGuard](user-guides-and-training/santeguard.md)
 
 ## Developers
