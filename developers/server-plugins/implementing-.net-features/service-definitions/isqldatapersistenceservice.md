@@ -1,4 +1,4 @@
-`ISqlDataPersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
+`ISqlDataPersistenceService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a data persistence service where arbitrary SQL can be run
@@ -18,17 +18,8 @@ Represents a data persistence service where arbitrary SQL can be run
 # Implementations
 
 
-## ADO.NET Data Persistence Service - (SanteDB.Persistence.Data.ADO)
-Registers and configures the necessary sub-services and [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) implementations
-            to allow SanteDB iCDR to persist, query, and read messages from available ADO.NET data providers
-### Description
-This service is responsible for registering the necessary [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) providers
-            which are responsible for interfacing the SanteDB [Physical Model](https://help.santesuite.org/santedb/data-and-information-architecture/physical-model) 
-            with the SanteDB [Business / Object Model](https://help.santesuite.org/santedb/data-and-information-architecture/conceptual-data-model). Each 
-            persistence implementation is derived from the [ModelMap](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Map_ModelMap.htm) configuration, and is uses the ADO.NET classes to via the [IDbProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_OrmLite_Providers_IDbProvider.htm) configured.
-
-Additionally, on start of the SanteDB iCDR or dCDR, this service is responsible for applying any [Data Patches](https://help.santesuite.org/developers/server-plugins/database-patching)
-            which have been provided (compiled via an embedded resource) by any of the validated SanteDB plugins.
+## ADO.NET Persistence Service - (SanteDB.Persistence.Data)
+A daemon service which registers the other persistence services
 
 ### Service Registration
 ```markup
@@ -36,7 +27,7 @@ Additionally, on start of the SanteDB iCDR or dCDR, this service is responsible 
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Persistence.Data.Services.AdoPersistenceService, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -65,4 +56,4 @@ public class MySqlDataPersistenceService : SanteDB.Core.Services.ISqlDataPersist
 # References
 
 * [ISqlDataPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISqlDataPersistenceService.htm)
-* [AdoPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoPersistenceService.htm)
+* [AdoPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoPersistenceService.htm)

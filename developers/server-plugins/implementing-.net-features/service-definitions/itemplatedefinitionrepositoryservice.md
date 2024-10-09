@@ -1,8 +1,7 @@
-`ITemplateDefinitionRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
+`ITemplateDefinitionRepositoryService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
-Represents a repository which deals with metadata such as assigning authorities,
-            concept classes, etc.
+Represents a template definition repository which loads clinical template definitions
 
 # Operations
 
@@ -13,7 +12,7 @@ Represents a repository which deals with metadata such as assigning authorities,
 # Implementations
 
 
-## LocalTemplateDefinitionRepositoryService - (SanteDB.Server.Core)
+## LocalTemplateDefinitionRepositoryService - (SanteDB.Core.Api)
 Represents a local metadata repository service
 
 ### Service Registration
@@ -22,7 +21,7 @@ Represents a local metadata repository service
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalTemplateDefinitionRepositoryService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.Repository.LocalTemplateDefinitionRepositoryService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -45,4 +44,4 @@ public class MyTemplateDefinitionRepositoryService : SanteDB.Core.Services.ITemp
 # References
 
 * [ITemplateDefinitionRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ITemplateDefinitionRepositoryService.htm)
-* [LocalTemplateDefinitionRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalTemplateDefinitionRepositoryService.htm)
+* [LocalTemplateDefinitionRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_Repository_LocalTemplateDefinitionRepositoryService.htm)

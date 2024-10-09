@@ -1,4 +1,4 @@
-`INotificationService` in assembly SanteDB.Core.Api version 2.1.151.0
+`INotificationService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a notification service which manages the sending of a notification
@@ -15,7 +15,8 @@ Represents a notification service which manages the sending of a notification
 |-|-|-|-|
 |GetNotificationRelay|INotificationRelay|*Uri* **toAddress**|Gets the specified notification relay|
 |GetNotificationRelay|INotificationRelay|*String* **toAddress**|Gets the specified notification relay|
-|Send|Guid[]|*String[]* **to**<br/>*String* **subject**<br/>*String* **body**<br/>*Nullable&lt;DateTimeOffset>* **scheduleDelivery**<br/>*Boolean* **ccAdmins**<br/>*NotificationAttachment[]* **attachments**|Send the message to the specified addresses|
+|SendNotification|Guid[]|*String[]* **to**<br/>*String* **subject**<br/>*String* **body**<br/>*Nullable&lt;DateTimeOffset>* **scheduleDelivery**<br/>*Boolean* **ccAdmins**<br/>*NotificationAttachment[]* **attachments**|Send a notification to one or more addresses.|
+|SendTemplatedNotification|Guid[]|*String[]* **to**<br/>*String* **templateId**<br/>*String* **templateLanguage**<br/>*Object* **templateModel**<br/>*Nullable&lt;DateTimeOffset>* **scheduleDelivery**<br/>*Boolean* **ccAdmins**<br/>*NotificationAttachment[]* **attachments**|Send a notification using a template to one or more addresses.|
 
 # Implementations
 
@@ -29,7 +30,7 @@ Default notification relay service that scans the current appdomain for relays
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Notifications.DefaultNotificationService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Notifications.DefaultNotificationService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -59,9 +60,15 @@ public class MyNotificationService : SanteDB.Core.Notifications.INotificationSer
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Send the message to the specified addresses
+	/// Send a notification to one or more addresses.
 	/// </summary>
-	public Guid[] Send(String[] to,String subject,String body,Nullable<DateTimeOffset> scheduleDelivery,Boolean ccAdmins,NotificationAttachment[] attachments){
+	public Guid[] SendNotification(String[] to,String subject,String body,Nullable<DateTimeOffset> scheduleDelivery,Boolean ccAdmins,NotificationAttachment[] attachments){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Send a notification using a template to one or more addresses.
+	/// </summary>
+	public Guid[] SendTemplatedNotification(String[] to,String templateId,String templateLanguage,Object templateModel,Nullable<DateTimeOffset> scheduleDelivery,Boolean ccAdmins,NotificationAttachment[] attachments){
 		throw new System.NotImplementedException();
 	}
 }

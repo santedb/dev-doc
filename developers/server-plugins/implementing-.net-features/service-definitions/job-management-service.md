@@ -1,4 +1,4 @@
-`IJobManagerService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IJobManagerService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Job Management Service
@@ -25,17 +25,35 @@ The job manager is the service which manages the master list of [IJob](http://sa
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |AddJob|void|*IJob* **jobType**<br/>*TimeSpan* **elapseTime**<br/>*JobStartType* **startType**|Add a job to the job manager|
+|RegisterJob|IJob|*Type* **jobType**|Adds a job by type to the job manager|
 |AddJob|void|*IJob* **jobType**<br/>*JobStartType* **startType**|Add a job to the job manager|
 |IsJobRegistered|Boolean|*Type* **jobType**|Returns true if the job is registered|
 |StartJob|void|*IJob* **job**<br/>*Object[]* **parameters**|Starts the specified|
 |StartJob|void|*Type* **jobType**<br/>*Object[]* **parameters**|Starts the specified|
 |GetJobInstance|IJob|*Guid* **jobKey**|Get this manager's instance of a job|
+|GetJobInstance|IJob|*Type* **jobType**|Get this manager's instance of a job|
 |GetJobSchedules|IEnumerable&lt;IJobSchedule>|*IJob* **job**|Get the schedule for the specified job|
 |SetJobSchedule|IJobSchedule|*IJob* **job**<br/>*DayOfWeek[]* **daysOfWeek**<br/>*DateTime* **scheduleTime**|Schedule a job to start at a specific time with a specific repetition|
 |SetJobSchedule|IJobSchedule|*IJob* **job**<br/>*TimeSpan* **intervalSpan**|Schedule a job to start at a specific time with a specific repetition|
+|ClearJobSchedule|void|*IJob* **job**|Clear the schedule of a job.|
+|GetAvailableJobs|IEnumerable&lt;Type>|*none*|TODO|
 
 # Implementations
 
+
+## UpstreamJobManager - (SanteDB.Client)
+Represents a [IJobManagerService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_IJobManagerService.htm) which operates only on the upstream jobs service
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Management.UpstreamJobManager, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
 ## Default Job Manager - (SanteDB.Core.Api)
 SanteDB's default implementation of the [IJobManagerService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_IJobManagerService.htm)
@@ -48,7 +66,7 @@ SanteDB's default implementation of the [IJobManagerService](http://santesuite.o
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Jobs.DefaultJobManagerService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Jobs.DefaultJobManagerService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -69,6 +87,12 @@ public class MyJobManagerService : SanteDB.Core.Jobs.IJobManagerService {
 	/// Add a job to the job manager
 	/// </summary>
 	public void AddJob(IJob jobType,TimeSpan elapseTime,JobStartType startType){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Adds a job by type to the job manager
+	/// </summary>
+	public IJob RegisterJob(Type jobType){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -102,6 +126,12 @@ public class MyJobManagerService : SanteDB.Core.Jobs.IJobManagerService {
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
+	/// Get this manager's instance of a job
+	/// </summary>
+	public IJob GetJobInstance(Type jobType){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
 	/// Get the schedule for the specified job
 	/// </summary>
 	public IEnumerable<IJobSchedule> GetJobSchedules(IJob job){
@@ -119,10 +149,20 @@ public class MyJobManagerService : SanteDB.Core.Jobs.IJobManagerService {
 	public IJobSchedule SetJobSchedule(IJob job,TimeSpan intervalSpan){
 		throw new System.NotImplementedException();
 	}
+	/// <summary>
+	/// Clear the schedule of a job.
+	/// </summary>
+	public void ClearJobSchedule(IJob job){
+		throw new System.NotImplementedException();
+	}
+	public IEnumerable<Type> GetAvailableJobs(){
+		throw new System.NotImplementedException();
+	}
 }
 ```
 
 # References
 
 * [IJobManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_IJobManagerService.htm)
+* [UpstreamJobManager C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Management_UpstreamJobManager.htm)
 * [DefaultJobManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_DefaultJobManagerService.htm)

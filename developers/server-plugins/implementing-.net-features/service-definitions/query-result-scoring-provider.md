@@ -1,4 +1,4 @@
-`IQueryScoringService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IQueryScoringService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service that can score queries

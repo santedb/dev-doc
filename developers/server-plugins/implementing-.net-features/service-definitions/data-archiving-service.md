@@ -1,4 +1,4 @@
-`IDataArchiveService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IDataArchiveService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Service contract for data archival and purging
@@ -19,20 +19,8 @@ The data archive service is used by various jobs throughout SanteDB iCDR (such a
 
 # Implementations
 
+None
 
-## ADO.NET Archiving and Data Shipping - (SanteDB.Persistence.Data.ADO)
-The AdoArchiveService is an archival service which stores data in a secondary database
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoArchiveService, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
 # Example Implementation
 ```csharp
 /// Example Implementation
@@ -70,4 +58,3 @@ public class MyDataArchiveService : SanteDB.Core.Services.IDataArchiveService {
 # References
 
 * [IDataArchiveService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataArchiveService.htm)
-* [AdoArchiveService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoArchiveService.htm)

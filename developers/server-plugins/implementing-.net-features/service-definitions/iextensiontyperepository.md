@@ -1,4 +1,4 @@
-`IExtensionTypeRepository` in assembly SanteDB.Core.Api version 2.1.151.0
+`IExtensionTypeRepository` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents the extension type repository
@@ -12,7 +12,7 @@ Represents the extension type repository
 # Implementations
 
 
-## LocalExtensionTypeRepository - (SanteDB.Server.Core)
+## LocalExtensionTypeRepository - (SanteDB.Core.Api)
 Local extension types
 
 ### Service Registration
@@ -21,7 +21,7 @@ Local extension types
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalExtensionTypeRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.Repository.LocalExtensionTypeRepository, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -44,4 +44,4 @@ public class MyExtensionTypeRepository : SanteDB.Core.Services.IExtensionTypeRep
 # References
 
 * [IExtensionTypeRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IExtensionTypeRepository.htm)
-* [LocalExtensionTypeRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalExtensionTypeRepository.htm)
+* [LocalExtensionTypeRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_Repository_LocalExtensionTypeRepository.htm)

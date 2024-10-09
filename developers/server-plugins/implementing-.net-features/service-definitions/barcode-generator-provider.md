@@ -1,4 +1,4 @@
-`IBarcodeProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IBarcodeProviderService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a barcode generator (QR, CODE39, etc.) which generates visual pointers to provided data
@@ -16,19 +16,13 @@ This interface is the basis for the [Visual Resource Pointer](https://help.sante
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Generate|Stream|*IEnumerable&lt;IdentifierBase&lt;TEntity>>* **identifers**|Generate a barcode from the specified identifier|
-|Generate|Stream|*String* **rawData**|Generate the barcode from raw data|
+|GetBarcodeGenerator|IBarcodeGenerator|*String* **barcodeAlgorithm**|Get the  for|
 
 # Implementations
 
 
-## QR Code Barcode Generator - (SanteDB.DisconnectedClient.UI)
-Barcode generator service that generates a QR code
-### Description
-This service is an implementation of the [IBarcodeProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBarcodeProviderService.htm) which generates 
-            two dimensional barcodes with the ZXing library. This service uses the [IResourcePointerService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IResourcePointerService.htm)
-            to generate digitally signed [Visual Resource Pointer](https://help.santesuite.org/developers/service-apis/health-data-service-interface-hdsi/digitally-signed-visual-code-api) 
-            payloads which are represented as a QR code.
+## DefaultBarcodeProviderService - (SanteDB.Core.Api)
+Default implementation of [IBarcodeProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBarcodeProviderService.htm)
 
 ### Service Registration
 ```markup
@@ -36,7 +30,7 @@ This service is an implementation of the [IBarcodeProviderService](http://santes
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.DisconnectedClient.UI.Services.QrBarcodeGenerator, SanteDB.DisconnectedClient.UI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.DefaultBarcodeProviderService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -48,15 +42,9 @@ using SanteDB.Core.Services;
 public class MyBarcodeProviderService : SanteDB.Core.Services.IBarcodeProviderService { 
 	public String ServiceName => "My own IBarcodeProviderService service";
 	/// <summary>
-	/// Generate a barcode from the specified identifier
+	/// Get the  for
 	/// </summary>
-	public Stream Generate<TEntity>(IEnumerable<IdentifierBase<TEntity>> identifers){
-		throw new System.NotImplementedException();
-	}
-	/// <summary>
-	/// Generate the barcode from raw data
-	/// </summary>
-	public Stream Generate(String rawData){
+	public IBarcodeGenerator GetBarcodeGenerator(String barcodeAlgorithm){
 		throw new System.NotImplementedException();
 	}
 }
@@ -65,4 +53,4 @@ public class MyBarcodeProviderService : SanteDB.Core.Services.IBarcodeProviderSe
 # References
 
 * [IBarcodeProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBarcodeProviderService.htm)
-* [QrBarcodeGenerator C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_UI_Services_QrBarcodeGenerator.htm)
+* [DefaultBarcodeProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_DefaultBarcodeProviderService.htm)

@@ -1,4 +1,4 @@
-`IRecordMatchingService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IRecordMatchingService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service that performs record matching and classification
@@ -7,7 +7,7 @@ Represents a service that performs record matching and classification
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Block|IEnumerable&lt;T>|*T* **input**<br/>*String* **configurationId**<br/>*IEnumerable&lt;Guid>* **ignoreList**<br/>*IRecordMatchingDiagnosticSession* **collector**|Instructs the record matching service to perform a quick block function of records            for type  with|
+|Block|IQueryResultSet&lt;T>|*T* **input**<br/>*String* **configurationId**<br/>*IEnumerable&lt;Guid>* **ignoreList**<br/>*IRecordMatchingDiagnosticSession* **collector**|Instructs the record matching service to perform a quick block function of records            for type  with|
 |Classify|IEnumerable&lt;IRecordMatchResult&lt;T>>|*T* **input**<br/>*IEnumerable&lt;T>* **blocks**<br/>*String* **configurationId**<br/>*IRecordMatchingDiagnosticSession* **collector**|Instructs the record matcher to run a detailed classification on the matching blocks in|
 |Match|IEnumerable&lt;IRecordMatchResult&lt;T>>|*T* **input**<br/>*String* **configurationId**<br/>*IEnumerable&lt;Guid>* **ignoreList**<br/>*IRecordMatchingDiagnosticSession* **collector**|Instructs the record matcher to run a block and match operation against|
 |Match|IEnumerable&lt;IRecordMatchResult>|*IdentifiedData* **input**<br/>*String* **configurationId**<br/>*IEnumerable&lt;Guid>* **ignoreList**<br/>*IRecordMatchingDiagnosticSession* **collector**|A non-generic method which uses the type of  to call Match<T>|
@@ -30,7 +30,7 @@ Represents a deterministic record matching service
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Matcher.Matchers.SimpleRecordMatchingService, SanteDB.Matcher, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Matcher.Matchers.SimpleRecordMatchingService, SanteDB.Matcher, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -44,7 +44,7 @@ Represents a probabalistic record matching service
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Matcher.Matchers.WeightedRecordMatchingService, SanteDB.Matcher, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Matcher.Matchers.WeightedRecordMatchingService, SanteDB.Matcher, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -59,7 +59,7 @@ Represents a matching service that wraps the underlying system
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.MDM.Services.MdmRecordMatchingService, SanteDB.Persistence.MDM, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Persistence.MDM.Services.MdmRecordMatchingService, SanteDB.Persistence.MDM, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -73,7 +73,7 @@ public class MyRecordMatchingService : SanteDB.Core.Matching.IRecordMatchingServ
 	/// <summary>
 	/// Instructs the record matching service to perform a quick block function of records            for type  with
 	/// </summary>
-	public IEnumerable<T> Block<T>(T input,String configurationId,IEnumerable<Guid> ignoreList,IRecordMatchingDiagnosticSession collector){
+	public IQueryResultSet<T> Block<T>(T input,String configurationId,IEnumerable<Guid> ignoreList,IRecordMatchingDiagnosticSession collector){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>

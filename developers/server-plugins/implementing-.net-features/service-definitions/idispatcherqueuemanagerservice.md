@@ -1,4 +1,4 @@
-`IDispatcherQueueManagerService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IDispatcherQueueManagerService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 A service which is responsible for storing messages in a reliable place for dispatching
@@ -39,7 +39,7 @@ A persistent queue service that uses the file system (use when there's no other 
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Services.Impl.FileSystemDispatcherQueueService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.FileSystemDispatcherQueueService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -58,8 +58,10 @@ TODO: Document this
 	</serviceProviders>
 ```
 
-## FileSystemQueueService - (SanteDB.Server.Core)
-Represents a file system queue that monitors directories
+## RabbitMqService - (SanteDB.Queue.RabbitMq)
+An implementation of the [IDispatcherQueueManagerService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Queue_IDispatcherQueueManagerService.htm) which uses RabbitMQ as the queue managing service
+### Description
+This queue service uses RabbitMQ to manage queues and loading/unloading of items to queues.
 
 ### Service Registration
 ```markup
@@ -67,7 +69,7 @@ Represents a file system queue that monitors directories
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.FileSystemQueueService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Queue.RabbitMq.RabbitMqService, SanteDB.Queue.RabbitMq, Version=2.1.132.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -147,6 +149,6 @@ public class MyDispatcherQueueManagerService : SanteDB.Core.Queue.IDispatcherQue
 # References
 
 * [IDispatcherQueueManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Queue_IDispatcherQueueManagerService.htm)
-* [FileSystemDispatcherQueueService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_FileSystemDispatcherQueueService.htm)
+* [Persistent queue service using a file system directory for storage C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_FileSystemDispatcherQueueService.htm)
 * [MsmqPersistentQueueService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Queue_Msmq_MsmqPersistentQueueService.htm)
-* [FileSystemQueueService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_FileSystemQueueService.htm)
+* [RabbitMqService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Queue_RabbitMq_RabbitMqService.htm)

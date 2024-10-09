@@ -1,4 +1,4 @@
-`ISecurityChallengeService` in assembly SanteDB.Core.Api version 2.1.151.0
+`ISecurityChallengeService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents an interface that allows for the retrieval of pre-configured security challenges
@@ -15,7 +15,21 @@ Represents an interface that allows for the retrieval of pre-configured security
 # Implementations
 
 
-## AdoSecurityChallengeProvider - (SanteDB.Persistence.Data.ADO)
+## UpstreamSecurityChallengeProvider - (SanteDB.Client)
+Remote security challenge provider repository
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Repositories.UpstreamSecurityChallengeProvider, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## AdoSecurityChallengeProvider - (SanteDB.Persistence.Data)
 Represents a callenge service which uses the ADO.NET tables
 
 ### Service Registration
@@ -24,16 +38,16 @@ Represents a callenge service which uses the ADO.NET tables
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoSecurityChallengeProvider, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Persistence.Data.Services.AdoSecurityChallengeProvider, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 # Example Implementation
 ```csharp
 /// Example Implementation
-using SanteDB.Core.Security;
+using SanteDB.Core.Security.Services;
 /// Other usings here
-public class MySecurityChallengeService : SanteDB.Core.Security.ISecurityChallengeService { 
+public class MySecurityChallengeService : SanteDB.Core.Security.Services.ISecurityChallengeService { 
 	public String ServiceName => "My own ISecurityChallengeService service";
 	/// <summary>
 	/// Gets the challenges current registered for the user (not the answers)
@@ -64,5 +78,6 @@ public class MySecurityChallengeService : SanteDB.Core.Security.ISecurityChallen
 
 # References
 
-* [ISecurityChallengeService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_ISecurityChallengeService.htm)
-* [AdoSecurityChallengeProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoSecurityChallengeProvider.htm)
+* [ISecurityChallengeService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_ISecurityChallengeService.htm)
+* [UpstreamSecurityChallengeProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Repositories_UpstreamSecurityChallengeProvider.htm)
+* [AdoSecurityChallengeProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoSecurityChallengeProvider.htm)

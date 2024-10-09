@@ -1,4 +1,4 @@
-`IRoleProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IRoleProviderService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service which is capableof retrieving roles
@@ -18,8 +18,9 @@ Represents a service which is capableof retrieving roles
 # Implementations
 
 
-## ADO.NET Role Provider Service - (SanteDB.Persistence.Data.ADO)
-Local role provider
+## BridgedRoleProvider - (SanteDB.Client)
+The bridged role provider is the preferred service for the role provider and is just a wrapper for [ILocalServiceProvider`1](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ILocalServiceProvider_1.htm) 
+            for the dCDR
 
 ### Service Registration
 ```markup
@@ -27,7 +28,35 @@ Local role provider
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoRoleProvider, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Client.Upstream.Security.BridgedRoleProvider, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## UpstreamRoleProviderService - (SanteDB.Client)
+A [IRoleProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IRoleProviderService.htm) which manages upstream roles
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Security.UpstreamRoleProviderService, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## AdoRoleProvider - (SanteDB.Persistence.Data)
+A role provider which uses the ADO.NET classes
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.Services.AdoRoleProvider, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -86,4 +115,6 @@ public class MyRoleProviderService : SanteDB.Core.Security.Services.IRoleProvide
 # References
 
 * [IRoleProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IRoleProviderService.htm)
-* [AdoRoleProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoRoleProvider.htm)
+* [BridgedRoleProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Security_BridgedRoleProvider.htm)
+* [UpstreamRoleProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Security_UpstreamRoleProviderService.htm)
+* [AdoRoleProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoRoleProvider.htm)

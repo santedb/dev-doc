@@ -1,4 +1,4 @@
-`IPasswordValidatorService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IPasswordValidatorService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a password validation service
@@ -14,10 +14,6 @@ Represents a password validation service
 
 ## RegexPasswordValidator - (SanteDB.Core.Api)
 Represents a regular expression password validator
-{% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
-
-## Default Password Validator - (SanteDB.Server.Core)
-Represents a local regex password validator
 
 ### Service Registration
 ```markup
@@ -25,7 +21,7 @@ Represents a local regex password validator
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Security.DefaultPasswordValidationService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Security.RegexPasswordValidator, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -48,5 +44,4 @@ public class MyPasswordValidatorService : SanteDB.Core.Security.Services.IPasswo
 # References
 
 * [IPasswordValidatorService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IPasswordValidatorService.htm)
-* [RegexPasswordValidator C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_RegexPasswordValidator.htm)
-* [DefaultPasswordValidationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Security_DefaultPasswordValidationService.htm)
+* [RegexPasswordValidator C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_RegexPasswordValidator.htm)

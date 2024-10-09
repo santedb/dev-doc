@@ -1,4 +1,4 @@
-`IFreetextSearchService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IFreetextSearchService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Contract which defines free-text search functionality
@@ -19,12 +19,12 @@ Implementations of the freetext search service may be technologies like Apache L
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Search|IEnumerable&lt;TEntity>|*String[]* **term**<br/>*Guid* **queryId**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*ModelSort`1[]* **orderBy**|Search the provider of freetext indexing for any term provided|
+|SearchEntity|IQueryResultSet&lt;TEntity>|*String[]* **term**|Perform the freetext search with|
 
 # Implementations
 
 
-## AdoFreetextSearchService - (SanteDB.Persistence.Data.ADO)
+## ADO.NET Freetext Service - (SanteDB.Persistence.Data)
 An implementation of the [IFreetextSearchService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IFreetextSearchService.htm) which uses the underlying built-in database functionality
 ### Description
 This implementation of the free-text search service relies on a [IDbProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_OrmLite_Providers_IDbProvider.htm) implementation 
@@ -38,7 +38,7 @@ This implementation of the free-text search service relies on a [IDbProvider](ht
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoFreetextSearchService, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Persistence.Data.Services.AdoFreetextSearchService, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -56,7 +56,7 @@ Only use this freetext search service if your freetext search service implementa
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.MDM.Services.MdmFreetextSearchService, SanteDB.Persistence.MDM, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Persistence.MDM.Services.MdmFreetextSearchService, SanteDB.Persistence.MDM, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -68,9 +68,9 @@ using SanteDB.Core.Services;
 public class MyFreetextSearchService : SanteDB.Core.Services.IFreetextSearchService { 
 	public String ServiceName => "My own IFreetextSearchService service";
 	/// <summary>
-	/// Search the provider of freetext indexing for any term provided
+	/// Perform the freetext search with
 	/// </summary>
-	public IEnumerable<TEntity> Search<TEntity>(String[] term,Guid queryId,Int32 offset,Nullable<Int32> count,Int32& totalResults,ModelSort`1[] orderBy){
+	public IQueryResultSet<TEntity> SearchEntity<TEntity>(String[] term){
 		throw new System.NotImplementedException();
 	}
 }
@@ -79,5 +79,5 @@ public class MyFreetextSearchService : SanteDB.Core.Services.IFreetextSearchServ
 # References
 
 * [IFreetextSearchService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IFreetextSearchService.htm)
-* [AdoFreetextSearchService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoFreetextSearchService.htm)
+* [AdoFreetextSearchService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoFreetextSearchService.htm)
 * [MdmFreetextSearchService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_MdmFreetextSearchService.htm)

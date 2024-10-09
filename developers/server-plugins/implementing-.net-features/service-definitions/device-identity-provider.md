@@ -1,4 +1,4 @@
-`IDeviceIdentityProviderService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IDeviceIdentityProviderService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service which retrieves [IDeviceIdentity](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Principal_IDeviceIdentity.htm) and can authenticate to an [IPrincipal](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal.iprincipal) for devices.
@@ -28,16 +28,24 @@ See: [SanteDB authentication architecture](https://help.santesuite.org/santedb/s
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Authenticate|IPrincipal|*String* **deviceId**<br/>*String* **deviceSecret**<br/>*AuthenticationMethod* **authMethod**|Authenticates the specified device identifier.|
-|GetIdentity|IIdentity|*String* **name**|Gets the specified identity for an device.|
-|SetLockout|void|*String* **name**<br/>*Boolean* **lockoutState**<br/>*IPrincipal* **principal**|Set the lockout status|
-|ChangeSecret|void|*String* **name**<br/>*String* **deviceSecret**<br/>*IPrincipal* **principal**|Change the device secret|
+|Authenticate|IPrincipal|*String* **deviceName**<br/>*String* **deviceSecret**<br/>*AuthenticationMethod* **authMethod**|Authenticates the specified device identifier.|
+|CreateIdentity|IDeviceIdentity|*String* **deviceName**<br/>*String* **secret**<br/>*IPrincipal* **principal**<br/>*Nullable&lt;Guid>* **withSid**|Create a basic identity in the provider|
+|GetSid|Guid|*String* **deviceName**|Gets the SID for the specified identity|
+|GetIdentity|IDeviceIdentity|*String* **deviceName**|Gets the specified identity for an device.|
+|GetIdentity|IDeviceIdentity|*Guid* **sid**|Gets the specified identity for an device.|
+|SetLockout|void|*String* **deviceName**<br/>*Boolean* **lockoutState**<br/>*IPrincipal* **principal**|Set the lockout status|
+|ChangeSecret|void|*String* **deviceName**<br/>*String* **deviceSecret**<br/>*IPrincipal* **principal**|Change the device secret|
+|AddClaim|void|*String* **deviceName**<br/>*IClaim* **claim**<br/>*IPrincipal* **principal**<br/>*Nullable&lt;TimeSpan>* **expiry**|Add a  to|
+|GetClaims|IEnumerable&lt;IClaim>|*String* **deviceName**|Get all active claims for the specified device|
+|RemoveClaim|void|*String* **deviceName**<br/>*String* **claimType**<br/>*IPrincipal* **principal**|Removes a claim from the specified device account|
 
 # Implementations
 
 
-## ADO.NET Device Identity Provider - (SanteDB.Persistence.Data.ADO)
-Represents a device identity provider.
+## UpstreamDeviceIdentityProvider - (SanteDB.Client)
+Represents an identity provider that provides upstream device identities
+### Description
+This is a partial implementation only for the resolution of identity objects
 
 ### Service Registration
 ```markup
@@ -45,7 +53,21 @@ Represents a device identity provider.
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoDeviceIdentityProvider, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Client.Upstream.Security.UpstreamDeviceIdentityProvider, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## AdoDeviceIdentityProvider - (SanteDB.Persistence.Data)
+An implementation of the device identity provider
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.Services.AdoDeviceIdentityProvider, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -67,25 +89,61 @@ public class MyDeviceIdentityProviderService : SanteDB.Core.Security.Services.ID
 	/// <summary>
 	/// Authenticates the specified device identifier.
 	/// </summary>
-	public IPrincipal Authenticate(String deviceId,String deviceSecret,AuthenticationMethod authMethod){
+	public IPrincipal Authenticate(String deviceName,String deviceSecret,AuthenticationMethod authMethod){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create a basic identity in the provider
+	/// </summary>
+	public IDeviceIdentity CreateIdentity(String deviceName,String secret,IPrincipal principal,Nullable<Guid> withSid){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets the SID for the specified identity
+	/// </summary>
+	public Guid GetSid(String deviceName){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Gets the specified identity for an device.
 	/// </summary>
-	public IIdentity GetIdentity(String name){
+	public IDeviceIdentity GetIdentity(String deviceName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Gets the specified identity for an device.
+	/// </summary>
+	public IDeviceIdentity GetIdentity(Guid sid){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Set the lockout status
 	/// </summary>
-	public void SetLockout(String name,Boolean lockoutState,IPrincipal principal){
+	public void SetLockout(String deviceName,Boolean lockoutState,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Change the device secret
 	/// </summary>
-	public void ChangeSecret(String name,String deviceSecret,IPrincipal principal){
+	public void ChangeSecret(String deviceName,String deviceSecret,IPrincipal principal){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Add a  to
+	/// </summary>
+	public void AddClaim(String deviceName,IClaim claim,IPrincipal principal,Nullable<TimeSpan> expiry){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Get all active claims for the specified device
+	/// </summary>
+	public IEnumerable<IClaim> GetClaims(String deviceName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Removes a claim from the specified device account
+	/// </summary>
+	public void RemoveClaim(String deviceName,String claimType,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }
@@ -94,4 +152,5 @@ public class MyDeviceIdentityProviderService : SanteDB.Core.Security.Services.ID
 # References
 
 * [IDeviceIdentityProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IDeviceIdentityProviderService.htm)
-* [AdoDeviceIdentityProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoDeviceIdentityProvider.htm)
+* [UpstreamDeviceIdentityProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Security_UpstreamDeviceIdentityProvider.htm)
+* [AdoDeviceIdentityProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoDeviceIdentityProvider.htm)

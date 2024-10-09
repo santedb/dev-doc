@@ -1,4 +1,4 @@
-`IAliasProvider` in assembly SanteDB.Core.Api version 2.1.151.0
+`IAliasProvider` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Provider for name and place aliasing
@@ -25,20 +25,8 @@ name.component.value=:(alias|Bob)&gt;=1.0
 
 # Implementations
 
+None
 
-## AdoNameAliasService - (SanteMPI.Persistence.ADO)
-TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteMPI.Persistence.ADO.Services.AdoNameAliasService, SanteMPI.Persistence.ADO, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
 # Example Implementation
 ```csharp
 /// Example Implementation
@@ -76,4 +64,3 @@ public class MyAliasProvider : SanteDB.Core.Services.IAliasProvider {
 # References
 
 * [IAliasProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IAliasProvider.htm)
-* [AdoNameAliasService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteMPI_Persistence_ADO_Services_AdoNameAliasService.htm)

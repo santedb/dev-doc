@@ -1,4 +1,4 @@
-`IRecordMatchingConfigurationService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IRecordMatchingConfigurationService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service
@@ -20,6 +20,20 @@ Represents a service
 # Implementations
 
 
+## UpstreamMatchConfigurationService - (SanteDB.Client)
+Upstream record matching configuration service
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Matching.UpstreamMatchConfigurationService, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## AppletMatchConfigurationProvider - (SanteDB.Matcher)
 Applet match configuration provider loads match configurations from available applets
 
@@ -29,7 +43,7 @@ Applet match configuration provider loads match configurations from available ap
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Matcher.Services.AppletMatchConfigurationProvider, SanteDB.Matcher, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Matcher.Services.AppletMatchConfigurationProvider, SanteDB.Matcher, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -43,7 +57,7 @@ File based match configuration provider
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Matcher.Services.AssemblyMatchConfigurationProvider, SanteDB.Matcher, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Matcher.Services.AssemblyMatchConfigurationProvider, SanteDB.Matcher, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -57,7 +71,21 @@ Represents a configuration provider which is for matching
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Matcher.Services.FileMatchConfigurationProvider, SanteDB.Matcher, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Matcher.Services.FileMatchConfigurationProvider, SanteDB.Matcher, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## AdoRecordMatchingConfigurationService - (SanteDB.Persistence.Data)
+Record matching persistence service using the database
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.Services.AdoRecordMatchingConfigurationService, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -71,7 +99,7 @@ A specialized match configuration service which wraps the already configured one
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.MDM.Services.MdmMatchConfigurationService, SanteDB.Persistence.MDM, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Persistence.MDM.Services.MdmMatchConfigurationService, SanteDB.Persistence.MDM, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -112,7 +140,9 @@ public class MyRecordMatchingConfigurationService : SanteDB.Core.Matching.IRecor
 # References
 
 * [IRecordMatchingConfigurationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Matching_IRecordMatchingConfigurationService.htm)
+* [UpstreamMatchConfigurationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Matching_UpstreamMatchConfigurationService.htm)
 * [AppletMatchConfigurationProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Matcher_Services_AppletMatchConfigurationProvider.htm)
 * [AssemblyMatchConfigurationProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Matcher_Services_AssemblyMatchConfigurationProvider.htm)
 * [FileMatchConfigurationProvider C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Matcher_Services_FileMatchConfigurationProvider.htm)
+* [AdoRecordMatchingConfigurationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoRecordMatchingConfigurationService.htm)
 * [MdmMatchConfigurationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_MdmMatchConfigurationService.htm)

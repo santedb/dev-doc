@@ -1,4 +1,4 @@
-`IDataCachingService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IDataCachingService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Defines a service which can be used by callers to store full [IdentifiedData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_IdentifiedData.htm) RIM objects
@@ -41,6 +41,7 @@ Of course, keeping the cache service in a consistent state is tantamount to the 
 |Remove|void|*Guid* **key**|Removes/evicts an object with identifier  from the cache|
 |Remove|void|*IdentifiedData* **data**|Removes/evicts an object with identifier  from the cache|
 |Clear|void|*none*|TODO|
+|Exists|Boolean|*Guid* **id**|Returns true if the specified cache item exists|
 
 # Implementations
 
@@ -69,7 +70,7 @@ This class uses the TTL setting from the [MemoryCacheConfigurationSection](http:
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Memory.MemoryCacheService, SanteDB.Caching.Memory, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Memory.MemoryCacheService, SanteDB.Caching.Memory, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -93,7 +94,7 @@ The caching data is stored in database 1 of the REDIS server.
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Redis.RedisCacheService, SanteDB.Caching.Redis, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Redis.RedisCacheService, SanteDB.Caching.Redis, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -153,6 +154,12 @@ public class MyDataCachingService : SanteDB.Core.Services.IDataCachingService {
 		throw new System.NotImplementedException();
 	}
 	public void Clear(){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Returns true if the specified cache item exists
+	/// </summary>
+	public Boolean Exists<TData>(Guid id){
 		throw new System.NotImplementedException();
 	}
 }

@@ -1,4 +1,4 @@
-`ILocalizationService` in assembly SanteDB.Core.Api version 2.1.151.0
+`ILocalizationService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Interface which provides localization functions
@@ -9,9 +9,10 @@ Interface which provides localization functions
 |-|-|-|-|
 |GetString|String|*String* **stringKey**|Get the specified string in the current locale|
 |GetString|String|*String* **locale**<br/>*String* **stringKey**|Get the specified string in the current locale|
-|FormatString|String|*String* **stringKey**<br/>*Object* **parameters**|Format a  with|
-|FormatString|String|*String* **locale**<br/>*String* **stringKey**<br/>*Object* **parameters**|Format a  with|
-|GetStrings|KeyValuePair`2[]|*String* **locale**|Get all strings in the specified locale|
+|GetString|String|*String* **stringKey**<br/>*Object* **parameters**|Get the specified string in the current locale|
+|GetString|String|*String* **locale**<br/>*String* **stringKey**<br/>*Object* **parameters**|Get the specified string in the current locale|
+|GetAvailableLocales|IEnumerable&lt;String>|*none*|TODO|
+|GetStrings|IEnumerable&lt;KeyValuePair&lt;String,String>>|*String* **locale**|Get all strings in the specified locale|
 |Reload|void|*none*|TODO|
 
 # Implementations
@@ -26,7 +27,7 @@ Applet localization
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Applets.Services.Impl.AppletLocalizationService, SanteDB.Core.Applets, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletLocalizationService, SanteDB.Core.Applets, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -50,21 +51,24 @@ public class MyLocalizationService : SanteDB.Core.Services.ILocalizationService 
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Format a  with
+	/// Get the specified string in the current locale
 	/// </summary>
-	public String FormatString(String stringKey,Object parameters){
+	public String GetString(String stringKey,Object parameters){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Format a  with
+	/// Get the specified string in the current locale
 	/// </summary>
-	public String FormatString(String locale,String stringKey,Object parameters){
+	public String GetString(String locale,String stringKey,Object parameters){
+		throw new System.NotImplementedException();
+	}
+	public IEnumerable<String> GetAvailableLocales(){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Get all strings in the specified locale
 	/// </summary>
-	public KeyValuePair`2[] GetStrings(String locale){
+	public IEnumerable<KeyValuePair<String,String>> GetStrings(String locale){
 		throw new System.NotImplementedException();
 	}
 	public void Reload(){

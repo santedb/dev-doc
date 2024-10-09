@@ -1,4 +1,4 @@
-`ISubscriptionRepository` in assembly SanteDB.Core.Api version 2.1.151.0
+`ISubscriptionRepository` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a repository which maintains subscription definitions
@@ -22,7 +22,7 @@ An implementation of the [ISubscriptionRepository](http://santesuite.org/assets/
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```

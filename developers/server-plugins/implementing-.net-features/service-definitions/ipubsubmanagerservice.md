@@ -1,4 +1,4 @@
-`IPubSubManagerService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IPubSubManagerService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a pub/sub manager service
@@ -20,8 +20,8 @@ Represents a pub/sub manager service
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|FindChannel|IEnumerable&lt;PubSubChannelDefinition>|*Expression&lt;Func&lt;PubSubChannelDefinition,Boolean>>* **filter**|Find an existing channel|
-|FindSubscription|IEnumerable&lt;PubSubSubscriptionDefinition>|*Expression&lt;Func&lt;PubSubSubscriptionDefinition,Boolean>>* **filter**|Find an existing subscription|
+|FindChannel|IQueryResultSet&lt;PubSubChannelDefinition>|*Expression&lt;Func&lt;PubSubChannelDefinition,Boolean>>* **filter**|Find an existing channel|
+|FindSubscription|IQueryResultSet&lt;PubSubSubscriptionDefinition>|*Expression&lt;Func&lt;PubSubSubscriptionDefinition,Boolean>>* **filter**|Find an existing subscription|
 |FindChannel|IEnumerable&lt;PubSubChannelDefinition>|*Expression&lt;Func&lt;PubSubChannelDefinition,Boolean>>* **filter**<br/>*Int32* **offset**<br/>*Int32* **count**<br/>*Int32&* **totalResults**|Find an existing channel|
 |FindSubscription|IEnumerable&lt;PubSubSubscriptionDefinition>|*Expression&lt;Func&lt;PubSubSubscriptionDefinition,Boolean>>* **filter**<br/>*Int32* **offset**<br/>*Int32* **count**<br/>*Int32&* **totalResults**|Find an existing subscription|
 |RegisterChannel|PubSubChannelDefinition|*String* **name**<br/>*Type* **dispatcherFactoryType**<br/>*Uri* **endpoint**<br/>*IDictionary&lt;String,String>* **settings**|Registers the specified pub-sub channel using the specified dispatcher|
@@ -40,8 +40,8 @@ Represents a pub/sub manager service
 # Implementations
 
 
-## ADO.NET Pub/Sub Subscription Manager - (SanteDB.Persistence.PubSub.ADO)
-TODO: Document this
+## UpstreamPubSubManager - (SanteDB.Client)
+Upstream publish and subscribe
 
 ### Service Registration
 ```markup
@@ -49,7 +49,21 @@ TODO: Document this
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.PubSub.ADO.AdoPubSubManager, SanteDB.Persistence.PubSub.ADO, Version=2.1.3.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Client.Upstream.Management.UpstreamPubSubManager, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## ADO.NET Pub/Sub Subscription Manager - (SanteDB.Persistence.PubSub.ADO)
+Represents a pub/sub manager which stores definitions in a database
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.PubSub.ADO.AdoPubSubManager, SanteDB.Persistence.PubSub.ADO, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -95,13 +109,13 @@ public class MyPubSubManagerService : SanteDB.Core.PubSub.IPubSubManagerService 
 	/// <summary>
 	/// Find an existing channel
 	/// </summary>
-	public IEnumerable<PubSubChannelDefinition> FindChannel(Expression<Func<PubSubChannelDefinition,Boolean>> filter){
+	public IQueryResultSet<PubSubChannelDefinition> FindChannel(Expression<Func<PubSubChannelDefinition,Boolean>> filter){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Find an existing subscription
 	/// </summary>
-	public IEnumerable<PubSubSubscriptionDefinition> FindSubscription(Expression<Func<PubSubSubscriptionDefinition,Boolean>> filter){
+	public IQueryResultSet<PubSubSubscriptionDefinition> FindSubscription(Expression<Func<PubSubSubscriptionDefinition,Boolean>> filter){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -194,4 +208,5 @@ public class MyPubSubManagerService : SanteDB.Core.PubSub.IPubSubManagerService 
 # References
 
 * [IPubSubManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_PubSub_IPubSubManagerService.htm)
+* [UpstreamPubSubManager C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Management_UpstreamPubSubManager.htm)
 * [AdoPubSubManager C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_PubSub_ADO_AdoPubSubManager.htm)

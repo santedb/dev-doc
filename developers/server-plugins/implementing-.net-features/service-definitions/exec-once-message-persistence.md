@@ -1,4 +1,4 @@
-`IMessagePersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IMessagePersistenceService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Identifies a service which maintains a log of messages received to ensure that actions are only processed once

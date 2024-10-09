@@ -1,4 +1,4 @@
-`IResourcePointerService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IResourcePointerService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service which is tasked with generating verified pointers to data
@@ -7,8 +7,8 @@ Represents a service which is tasked with generating verified pointers to data
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|GeneratePointer|String|*IEnumerable&lt;IdentifierBase&lt;TEntity>>* **identifer**|Generate a structured pointer for the identified object|
-|ResolveResource|IdentifiedData|*String* **pointerData**<br/>*Boolean* **validate**|Resolve the specified resource|
+|GeneratePointer|String|*IHasIdentifiers* **entity**|Generate a structured pointer for the identified object|
+|ResolveResource|IHasIdentifiers|*String* **pointerData**<br/>*Boolean* **validate**|Resolve the specified resource|
 
 # Implementations
 
@@ -22,7 +22,7 @@ Represents a record pointer service using JWS
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Services.Impl.JwsResourcePointerService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.JwsResourcePointerService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -36,13 +36,13 @@ public class MyResourcePointerService : SanteDB.Core.Services.IResourcePointerSe
 	/// <summary>
 	/// Generate a structured pointer for the identified object
 	/// </summary>
-	public String GeneratePointer<TEntity>(IEnumerable<IdentifierBase<TEntity>> identifer){
+	public String GeneratePointer(IHasIdentifiers entity){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Resolve the specified resource
 	/// </summary>
-	public IdentifiedData ResolveResource(String pointerData,Boolean validate){
+	public IHasIdentifiers ResolveResource(String pointerData,Boolean validate){
 		throw new System.NotImplementedException();
 	}
 }

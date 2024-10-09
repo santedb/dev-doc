@@ -1,4 +1,4 @@
-`IRecordMergingService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IRecordMergingService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Record merging service
@@ -8,10 +8,10 @@ Record merging service
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |GetMergeCandidateKeys|IEnumerable&lt;Guid>|*Guid* **masterKey**|Gets the duplicates for the specified master record|
-|GetMergeCandidates|IEnumerable&lt;IdentifiedData>|*Guid* **masterKey**|Get merge candidate keys|
-|GetGlobalMergeCandidates|IEnumerable&lt;ITargetedAssociation>|*Int32* **count**<br/>*Int32* **offset**<br/>*Int32&* **totalResults**|Get all merge candidates|
+|GetMergeCandidates|IQueryResultSet&lt;IdentifiedData>|*Guid* **masterKey**|Get merge candidate keys|
+|GetGlobalMergeCandidates|IQueryResultSet&lt;ITargetedAssociation>|*none*|TODO|
 |GetIgnoredKeys|IEnumerable&lt;Guid>|*Guid* **masterKey**|Gets the ignore list for the specified master record|
-|GetIgnored|IEnumerable&lt;IdentifiedData>|*Guid* **masterKey**|Gets the ignore list for the specified master record|
+|GetIgnored|IQueryResultSet&lt;IdentifiedData>|*Guid* **masterKey**|Gets the ignore list for the specified master record|
 |Ignore|IdentifiedData|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **falsePositives**|Indicates that the engine should ignore the specified false positives|
 |UnIgnore|IdentifiedData|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **ignoredKeys**|Indicates that an ignored record should be removed from the ignore list|
 |Merge|RecordMergeResult|*Guid* **masterKey**<br/>*IEnumerable&lt;Guid>* **linkedDuplicates**|Merges the specified  into|
@@ -21,14 +21,17 @@ Record merging service
 |ClearGlobalIgnoreFlags|void|*none*|TODO|
 |ClearMergeCandidates|void|*Guid* **masterKey**|Clear all merge candidates|
 |ClearIgnoreFlags|void|*Guid* **masterKey**|Clear ignored flags|
+|DetectMergeCandidates|void|*Guid* **masterKey**|Perform the necessary operations to detect merge candidates for|
 |Reset|void|*Guid* **masterKey**<br/>*Boolean* **includeVerified**<br/>*Boolean* **linksOnly**|Reset the specified merge service data on the specified record|
 |Reset|void|*Boolean* **includeVerified**<br/>*Boolean* **linksOnly**|Reset the specified merge service data on the specified record|
 
 # Implementations
 
 
-## SimResourceMerger&lt;TModel> - (SanteDB.Core.Api)
-TODO: Document this
+## SimResourceInterceptor&lt;TModel> - (SanteDB.Core.Api)
+Single Instance Mode Handler
+### Description
+This class binds to startup and enables the listening and merging of records based on the record matcher
 {% hint style="info" %} This service implementation is abstract or is a generic definition. It is intended to be implemented or constructed at runtime from other services and cannot be used directly {% endhint %}
 
 ## MdmEntityMerger&lt;TEntity> - (SanteDB.Persistence.MDM)
@@ -56,13 +59,10 @@ public class MyRecordMergingService : SanteDB.Core.Services.IRecordMergingServic
 	/// <summary>
 	/// Get merge candidate keys
 	/// </summary>
-	public IEnumerable<IdentifiedData> GetMergeCandidates(Guid masterKey){
+	public IQueryResultSet<IdentifiedData> GetMergeCandidates(Guid masterKey){
 		throw new System.NotImplementedException();
 	}
-	/// <summary>
-	/// Get all merge candidates
-	/// </summary>
-	public IEnumerable<ITargetedAssociation> GetGlobalMergeCandidates(Int32 count,Int32 offset,Int32& totalResults){
+	public IQueryResultSet<ITargetedAssociation> GetGlobalMergeCandidates(){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -74,7 +74,7 @@ public class MyRecordMergingService : SanteDB.Core.Services.IRecordMergingServic
 	/// <summary>
 	/// Gets the ignore list for the specified master record
 	/// </summary>
-	public IEnumerable<IdentifiedData> GetIgnored(Guid masterKey){
+	public IQueryResultSet<IdentifiedData> GetIgnored(Guid masterKey){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -123,6 +123,12 @@ public class MyRecordMergingService : SanteDB.Core.Services.IRecordMergingServic
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
+	/// Perform the necessary operations to detect merge candidates for
+	/// </summary>
+	public void DetectMergeCandidates(Guid masterKey){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
 	/// Reset the specified merge service data on the specified record
 	/// </summary>
 	public void Reset(Guid masterKey,Boolean includeVerified,Boolean linksOnly){
@@ -140,6 +146,6 @@ public class MyRecordMergingService : SanteDB.Core.Services.IRecordMergingServic
 # References
 
 * [IRecordMergingService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRecordMergingService.htm)
-* [SimResourceMerger&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService+SimResourceMerger_1.htm)
+* [SimResourceInterceptor&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Management_SimResourceInterceptor_1.htm)
 * [MdmEntityMerger&lt;TEntity> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmEntityMerger_1.htm)
 * [MdmResourceMerger&lt;TModel> C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_Resources_MdmResourceMerger_1.htm)

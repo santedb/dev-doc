@@ -1,4 +1,4 @@
-`IBusinessRulesService&lt;TModel>` in assembly SanteDB.Core.Api version 2.1.151.0
+`IBusinessRulesService&lt;TModel>` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service that executes business rules based on triggers which happen in the [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) layer
@@ -32,12 +32,12 @@ Note: This can be done, instead with events on the persistence layer on the Sant
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |AfterInsert|TModel|*TModel* **data**|Called after an insert occurs.|
-|AfterObsolete|TModel|*TModel* **data**|Called after obsolete has been committed|
-|AfterQuery|IEnumerable&lt;TModel>|*IEnumerable&lt;TModel>* **results**|Called after a query has been executed|
+|AfterDelete|TModel|*TModel* **data**|Called after obsolete has been committed|
+|AfterQuery|IQueryResultSet&lt;TModel>|*IQueryResultSet&lt;TModel>* **results**|Called after a query has been executed|
 |AfterRetrieve|TModel|*TModel* **result**|Called after retrieve of an object|
 |AfterUpdate|TModel|*TModel* **data**|Called after update has been committed|
 |BeforeInsert|TModel|*TModel* **data**|Called before an insert occurs|
-|BeforeObsolete|TModel|*TModel* **data**|Called before obsolete occurs|
+|BeforeDelete|TModel|*TModel* **data**|Called before obsolete occurs|
 |BeforeUpdate|TModel|*TModel* **data**|Called before an update occurs|
 |Validate|List&lt;DetectedIssue>|*TModel* **data**|Called to validate the data provided|
 
@@ -73,7 +73,7 @@ This business rule prevents this behavior by performing a look-ahead. It will sc
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.BusinessRules.JavaScript.Rules.BundleWrapperRule, SanteDB.BusinessRules.JavaScript, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.BusinessRules.JavaScript.Rules.BundleWrapperRule, SanteDB.BusinessRules.JavaScript, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -95,7 +95,7 @@ This business rule wraps the insertion or update of a [Bundle](http://santesuite
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Data.Quality.DataQualityBundleRule, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Data.Quality.DataQualityBundleRule, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -130,13 +130,13 @@ public class MyBusinessRulesService<TModel> : SanteDB.Core.Services.IBusinessRul
 	/// <summary>
 	/// Called after obsolete has been committed
 	/// </summary>
-	public TModel AfterObsolete(TModel data){
+	public TModel AfterDelete(TModel data){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
 	/// Called after a query has been executed
 	/// </summary>
-	public IEnumerable<TModel> AfterQuery(IEnumerable<TModel> results){
+	public IQueryResultSet<TModel> AfterQuery(IQueryResultSet<TModel> results){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -160,7 +160,7 @@ public class MyBusinessRulesService<TModel> : SanteDB.Core.Services.IBusinessRul
 	/// <summary>
 	/// Called before obsolete occurs
 	/// </summary>
-	public TModel BeforeObsolete(TModel data){
+	public TModel BeforeDelete(TModel data){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>

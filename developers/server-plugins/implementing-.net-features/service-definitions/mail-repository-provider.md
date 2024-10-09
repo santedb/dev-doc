@@ -1,30 +1,34 @@
-`IMailMessageRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IMailMessageService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
-Represents an alerting service.
+Represents a service which handles the mailbox services.
 
 # Events
 
 |Event|Type|Description|
 |-|-|-|
-|Committed|EventHandler&lt;MailMessageEventArgs>|Fired when an alert is received.|
-|Received|EventHandler&lt;MailMessageEventArgs>|Fired when an alert was raised and is being processed.|
+|Sent|EventHandler&lt;MailMessageEventArgs>|Fired when an mail message has been received.|
 
 # Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|Broadcast|void|*MailMessage* **message**|Broadcasts an alert.|
-|Find|IEnumerable&lt;MailMessage>|*Expression&lt;Func&lt;MailMessage,Boolean>>* **predicate**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalCount**<br/>*ModelSort`1[]* **orderBy**|Searches for alerts.|
-|Get|MailMessage|*Guid* **id**|Gets an alert.|
-|Insert|MailMessage|*MailMessage* **message**|Inserts an alert message.|
-|Save|MailMessage|*MailMessage* **message**|Saves an alert.|
+|Send|MailMessage|*MailMessage* **mail**|Send the specified mailmessage according to its sending instructions|
+|GetMailboxes|IQueryResultSet&lt;Mailbox>|*Nullable&lt;Guid>* **forUserKey**|Get mailboxes for the current user|
+|GetMailbox|Mailbox|*String* **mailboxName**|Get a specific mailbox|
+|CreateMailbox|Mailbox|*String* **name**<br/>*Nullable&lt;Guid>* **ownerKey**|Create a new mailbox for the specified user|
+|GetMessages|IQueryResultSet&lt;MailboxMailMessage>|*String* **mailboxName**|Get messages from the mailbox|
+|MoveMessage|MailboxMailMessage|*Guid* **messageKey**<br/>*String* **targetMailboxName**<br/>*Boolean* **copy**|Move  to|
+|DeleteMessage|MailboxMailMessage|*String* **fromMailboxName**<br/>*Guid* **messageKey**|Delete the specified message|
+|DeleteMailbox|Mailbox|*String* **fromMailboxName**<br/>*Nullable&lt;Guid>* **ownerKey**|Delete mailbox from current user account|
+|UpdateStatusFlag|MailboxMailMessage|*Guid* **mailMessageKey**<br/>*MailStatusFlags* **statusFlag**|Update the flag for the specified mail message instance|
 
 # Implementations
 
 
-## Local Mail Message - (SanteDB.Server.Core)
-Represents a local alert service.
+## LocalMailMessageService - (SanteDB.Core.Api)
+Represents a [IMailMessageService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IMailMessageService.htm) which uses database persistence layer 
+            to store / retrieve mail messages within the system
 
 ### Service Registration
 ```markup
@@ -32,7 +36,7 @@ Represents a local alert service.
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalMailMessageRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.LocalMailMessageService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -41,44 +45,64 @@ Represents a local alert service.
 /// Example Implementation
 using SanteDB.Core.Services;
 /// Other usings here
-public class MyMailMessageRepositoryService : SanteDB.Core.Services.IMailMessageRepositoryService { 
-	public String ServiceName => "My own IMailMessageRepositoryService service";
+public class MyMailMessageService : SanteDB.Core.Services.IMailMessageService { 
+	public String ServiceName => "My own IMailMessageService service";
 	/// <summary>
-	/// Fired when an alert is received.
+	/// Fired when an mail message has been received.
 	/// </summary>
-	public event EventHandler<MailMessageEventArgs> Committed;
+	public event EventHandler<MailMessageEventArgs> Sent;
 	/// <summary>
-	/// Fired when an alert was raised and is being processed.
+	/// Send the specified mailmessage according to its sending instructions
 	/// </summary>
-	public event EventHandler<MailMessageEventArgs> Received;
-	/// <summary>
-	/// Broadcasts an alert.
-	/// </summary>
-	public void Broadcast(MailMessage message){
+	public MailMessage Send(MailMessage mail){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Searches for alerts.
+	/// Get mailboxes for the current user
 	/// </summary>
-	public IEnumerable<MailMessage> Find(Expression<Func<MailMessage,Boolean>> predicate,Int32 offset,Nullable<Int32> count,Int32& totalCount,ModelSort`1[] orderBy){
+	public IQueryResultSet<Mailbox> GetMailboxes(Nullable<Guid> forUserKey){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Gets an alert.
+	/// Get a specific mailbox
 	/// </summary>
-	public MailMessage Get(Guid id){
+	public Mailbox GetMailbox(String mailboxName){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Inserts an alert message.
+	/// Create a new mailbox for the specified user
 	/// </summary>
-	public MailMessage Insert(MailMessage message){
+	public Mailbox CreateMailbox(String name,Nullable<Guid> ownerKey){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Saves an alert.
+	/// Get messages from the mailbox
 	/// </summary>
-	public MailMessage Save(MailMessage message){
+	public IQueryResultSet<MailboxMailMessage> GetMessages(String mailboxName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Move  to
+	/// </summary>
+	public MailboxMailMessage MoveMessage(Guid messageKey,String targetMailboxName,Boolean copy){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Delete the specified message
+	/// </summary>
+	public MailboxMailMessage DeleteMessage(String fromMailboxName,Guid messageKey){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Delete mailbox from current user account
+	/// </summary>
+	public Mailbox DeleteMailbox(String fromMailboxName,Nullable<Guid> ownerKey){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Update the flag for the specified mail message instance
+	/// </summary>
+	public MailboxMailMessage UpdateStatusFlag(Guid mailMessageKey,MailStatusFlags statusFlag){
 		throw new System.NotImplementedException();
 	}
 }
@@ -86,5 +110,5 @@ public class MyMailMessageRepositoryService : SanteDB.Core.Services.IMailMessage
 
 # References
 
-* [IMailMessageRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IMailMessageRepositoryService.htm)
-* [LocalMailMessageRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalMailMessageRepository.htm)
+* [IMailMessageService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IMailMessageService.htm)
+* [LocalMailMessageService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_LocalMailMessageService.htm)

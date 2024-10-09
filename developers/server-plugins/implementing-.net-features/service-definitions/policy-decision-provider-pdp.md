@@ -1,4 +1,4 @@
-`IPolicyDecisionService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IPolicyDecisionService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a policy decision service
@@ -16,6 +16,20 @@ Represents a policy decision service
 # Implementations
 
 
+## ClientPolicyDecisionProviderService - (SanteDB.Client.Disconnected)
+Represents a PDP service which can map between server permissions and the client permissions
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Disconnected.Services.ClientPolicyDecisionProviderService, SanteDB.Client.Disconnected, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
 ## Default PDP Service - (SanteDB.Core.Api)
 Local policy decision service
 
@@ -25,7 +39,7 @@ Local policy decision service
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Security.DefaultPolicyDecisionService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Security.DefaultPolicyDecisionService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -72,4 +86,5 @@ public class MyPolicyDecisionService : SanteDB.Core.Security.Services.IPolicyDec
 # References
 
 * [IPolicyDecisionService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IPolicyDecisionService.htm)
+* [ClientPolicyDecisionProviderService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Disconnected_Services_ClientPolicyDecisionProviderService.htm)
 * [DefaultPolicyDecisionService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_DefaultPolicyDecisionService.htm)

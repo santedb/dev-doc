@@ -1,4 +1,4 @@
-`IPolicyInformationService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IPolicyInformationService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a contract for a policy information service
@@ -12,13 +12,15 @@ Represents a contract for a policy information service
 |GetPolicy|IPolicy|*String* **policyOid**|Get a specific policy|
 |AddPolicies|void|*Object* **securable**<br/>*PolicyGrantType* **rule**<br/>*IPrincipal* **principal**<br/>*String[]* **policyOids**|Adds the specified policies to the specified securable object|
 |GetPolicyInstance|IPolicyInstance|*Object* **securable**<br/>*String* **policyOid**|Gets the policy instance for the specified object|
+|HasPolicy|Boolean|*Object* **securable**<br/>*String* **policyOid**|Returns true if  has  assigned to it|
 |RemovePolicies|void|*Object* **securable**<br/>*IPrincipal* **principal**<br/>*String[]* **oid**|Removes the specified policies from the user account|
+|CreatePolicy|void|*IPolicy* **policy**<br/>*IPrincipal* **principal**|Create  in the policy information point|
 
 # Implementations
 
 
-## ADO.NET Policy Information Service - (SanteDB.Persistence.Data.ADO)
-Represents a PIP fed from SQL Server tables
+## BridgedPolicyInformationService - (SanteDB.Client)
+Policy information service that uses either local or upstream policy provider.
 
 ### Service Registration
 ```markup
@@ -26,7 +28,35 @@ Represents a PIP fed from SQL Server tables
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPolicyInformationService, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Client.Upstream.Security.BridgedPolicyInformationService, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## UpstreamPolicyInformationService - (SanteDB.Client)
+Represents a policy information service which communicates with an upstream policy information service
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Repositories.UpstreamPolicyInformationService, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## AdoPolicyInformationService - (SanteDB.Persistence.Data)
+A PIP service which stores data in the database
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Persistence.Data.Services.AdoPolicyInformationService, SanteDB.Persistence.Data, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -68,9 +98,21 @@ public class MyPolicyInformationService : SanteDB.Core.Security.Services.IPolicy
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
+	/// Returns true if  has  assigned to it
+	/// </summary>
+	public Boolean HasPolicy(Object securable,String policyOid){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
 	/// Removes the specified policies from the user account
 	/// </summary>
 	public void RemovePolicies(Object securable,IPrincipal principal,String[] oid){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Create  in the policy information point
+	/// </summary>
+	public void CreatePolicy(IPolicy policy,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 }
@@ -79,4 +121,6 @@ public class MyPolicyInformationService : SanteDB.Core.Security.Services.IPolicy
 # References
 
 * [IPolicyInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IPolicyInformationService.htm)
-* [AdoPolicyInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoPolicyInformationService.htm)
+* [BridgedPolicyInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Security_BridgedPolicyInformationService.htm)
+* [UpstreamPolicyInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Repositories_UpstreamPolicyInformationService.htm)
+* [AdoPolicyInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_Services_AdoPolicyInformationService.htm)

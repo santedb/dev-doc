@@ -1,4 +1,4 @@
-`IPrivacyEnforcementService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IPrivacyEnforcementService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Contract for services which enforce privacy directives
@@ -30,7 +30,7 @@ Additionally, the ValidateQuery method is invoked prior to querying to ensure th
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
 |Apply|TData|*TData* **data**<br/>*IPrincipal* **principal**|Applies the privacy policies attached to the provided data such that a disclosure to the provided principal would            not compromise patient privacy.|
-|Apply|IEnumerable&lt;TData>|*IEnumerable&lt;TData>* **data**<br/>*IPrincipal* **principal**|Applies the privacy policies attached to the provided data such that a disclosure to the provided principal would            not compromise patient privacy.|
+|Apply|IQueryResultSet&lt;TData>|*IQueryResultSet&lt;TData>* **data**<br/>*IPrincipal* **principal**|Applies the privacy policies attached to the provided data such that a disclosure to the provided principal would            not compromise patient privacy.|
 |ValidateWrite|Boolean|*TData* **data**<br/>*IPrincipal* **principal**|Determine if the record provided contains data that the user             shouldn't be sending.|
 |ValidateQuery|Boolean|*Expression&lt;Func&lt;TModel,Boolean>>* **query**<br/>*IPrincipal* **principal**|Validate that a query can be performed by user  and does not contain forbidden or compromising fields|
 
@@ -55,12 +55,12 @@ This privacy enforcement service provides a baseline implementation of a privacy
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Security.Privacy.DataPolicyFilterService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Security.Privacy.DataPolicyFilterService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## ExemptablePolicyFilterService - (SanteDB.Server.Core)
+## ExemptablePolicyFilterService - (SanteDB.Core.Api)
 A data privacy filter service which supports exemption based on configuration
 ### Description
 This class is an extension of the [DataPolicyFilterService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Privacy_DataPolicyFilterService.htm) which adds support for exempting certain types
@@ -73,16 +73,16 @@ This class is an extension of the [DataPolicyFilterService](http://santesuite.or
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Security.Privacy.ExemptablePolicyFilterService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Security.Privacy.ExemptablePolicyFilterService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 # Example Implementation
 ```csharp
 /// Example Implementation
-using SanteDB.Core.Security;
+using SanteDB.Core.Security.Services;
 /// Other usings here
-public class MyPrivacyEnforcementService : SanteDB.Core.Security.IPrivacyEnforcementService { 
+public class MyPrivacyEnforcementService : SanteDB.Core.Security.Services.IPrivacyEnforcementService { 
 	public String ServiceName => "My own IPrivacyEnforcementService service";
 	/// <summary>
 	/// Applies the privacy policies attached to the provided data such that a disclosure to the provided principal would            not compromise patient privacy.
@@ -93,7 +93,7 @@ public class MyPrivacyEnforcementService : SanteDB.Core.Security.IPrivacyEnforce
 	/// <summary>
 	/// Applies the privacy policies attached to the provided data such that a disclosure to the provided principal would            not compromise patient privacy.
 	/// </summary>
-	public IEnumerable<TData> Apply<TData>(IEnumerable<TData> data,IPrincipal principal){
+	public IQueryResultSet<TData> Apply<TData>(IQueryResultSet<TData> data,IPrincipal principal){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -113,6 +113,6 @@ public class MyPrivacyEnforcementService : SanteDB.Core.Security.IPrivacyEnforce
 
 # References
 
-* [IPrivacyEnforcementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_IPrivacyEnforcementService.htm)
+* [IPrivacyEnforcementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IPrivacyEnforcementService.htm)
 * [DataPolicyFilterService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Privacy_DataPolicyFilterService.htm)
-* [ExemptablePolicyFilterService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Security_Privacy_ExemptablePolicyFilterService.htm)
+* [ExemptablePolicyFilterService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Privacy_ExemptablePolicyFilterService.htm)

@@ -1,4 +1,4 @@
-`IAdhocCacheService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IAdhocCacheService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Defines a service which can store commonly used objects in a transient cache
@@ -20,7 +20,10 @@ Note to Implementers: Your implementation of this interface should not be a pers
 |-|-|-|-|
 |Add|void|*String* **key**<br/>*T* **value**<br/>*Nullable&lt;TimeSpan>* **timeout**|Add the specified object to the cache|
 |Get|T|*String* **key**|Gets the specified object from the cache|
+|TryGet|Boolean|*String* **key**<br/>*T&* **value**|Try to fetch  from the cache|
 |Remove|Boolean|*String* **key**|Removes the specified object from the adhoc|
+|RemoveAll|void|*String* **patternKey**|Remove all keys matching|
+|Exists|Boolean|*String* **key**|Returns true if  exists in the cache|
 
 # Implementations
 
@@ -37,7 +40,7 @@ This implementation of the adhoc caching service uses in-process memory to store
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Memory.MemoryAdhocCacheService, SanteDB.Caching.Memory, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Memory.MemoryAdhocCacheService, SanteDB.Caching.Memory, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -56,7 +59,7 @@ The data is stored in database 3 of the REDIS server
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Redis.RedisAdhocCache, SanteDB.Caching.Redis, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Redis.RedisAdhocCache, SanteDB.Caching.Redis, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -80,9 +83,27 @@ public class MyAdhocCacheService : SanteDB.Core.Services.IAdhocCacheService {
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
+	/// Try to fetch  from the cache
+	/// </summary>
+	public Boolean TryGet<T>(String key,T& value){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
 	/// Removes the specified object from the adhoc
 	/// </summary>
 	public Boolean Remove(String key){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Remove all keys matching
+	/// </summary>
+	public void RemoveAll(String patternKey){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Returns true if  exists in the cache
+	/// </summary>
+	public Boolean Exists(String key){
 		throw new System.NotImplementedException();
 	}
 }

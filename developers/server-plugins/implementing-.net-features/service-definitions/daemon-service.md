@@ -1,4 +1,4 @@
-`IDaemonService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IDaemonService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Defines a service which follows the daemon service pattern ([](https://help.santesuite.org/developers/server-plugins/implementing-.net-features/daemon-services))
@@ -41,12 +41,8 @@ If the daemon also implements the .NET [IDisposable](https://docs.microsoft.com/
 # Implementations
 
 
-## OAuth 2.0 Messaging Service - (SanteDB.Authentication.OAuth2)
-Represents a [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) which serves OpenID Connect and 
-            OAUTH requests
-### Description
-This service is responsible for starting and maintaining the [OAuthTokenBehavior](http://santesuite.org/assets/doc/net/html/T_SanteDB_Authentication_OAuth2_Rest_OAuthTokenBehavior.htm) REST service which 
-            is responsible for supporting SanteDB's [OpenID Connect](https://help.santesuite.org/developers/service-apis/openid-connect) interface
+## Applet JavaScript BRE - (SanteDB.BusinessRules.JavaScript)
+A daemon which loads business rules from the applet manager
 
 ### Service Registration
 ```markup
@@ -54,7 +50,7 @@ This service is responsible for starting and maintaining the [OAuthTokenBehavior
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Authentication.OAuth2.OAuthMessageHandler, SanteDB.Authentication.OAuth2, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.BusinessRules.JavaScript.AppletBusinessRulesDaemon, SanteDB.BusinessRules.JavaScript, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -83,7 +79,7 @@ This class uses the TTL setting from the [MemoryCacheConfigurationSection](http:
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Memory.MemoryCacheService, SanteDB.Caching.Memory, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Memory.MemoryCacheService, SanteDB.Caching.Memory, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -102,7 +98,7 @@ The data is stored in database 3 of the REDIS server
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Redis.RedisAdhocCache, SanteDB.Caching.Redis, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Redis.RedisAdhocCache, SanteDB.Caching.Redis, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -126,7 +122,7 @@ The caching data is stored in database 1 of the REDIS server.
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Redis.RedisCacheService, SanteDB.Caching.Redis, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Redis.RedisCacheService, SanteDB.Caching.Redis, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -143,14 +139,13 @@ This persistence service uses REDIS list values to store the UUIDs representing 
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Redis.RedisQueryPersistenceService, SanteDB.Caching.Redis, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Redis.RedisQueryPersistenceService, SanteDB.Caching.Redis, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## Security Audit Service - (SanteDB.Core.Api)
-An implementation of [IDaemonService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDaemonService.htm) which monitors instances of [IIdentityProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IIdentityProviderService.htm)
-            and [ISessionIdentityProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISessionIdentityProviderService.htm) to audit login and logout events in the audit repository
+## UpstreamSynchronizationService - (SanteDB.Client.Disconnected)
+An implementation of the [ISynchronizationService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Disconnected_Data_Synchronization_ISynchronizationService.htm) which pulls HDSI and AMI data from the remote
 
 ### Service Registration
 ```markup
@@ -158,7 +153,22 @@ An implementation of [IDaemonService](http://santesuite.org/assets/doc/net/html/
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Security.Audit.AuditDaemonService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Client.Disconnected.Data.Synchronization.UpstreamSynchronizationService, SanteDB.Client.Disconnected, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## Security Audit Service - (SanteDB.Core.Api)
+An implementation of [IDaemonService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDaemonService.htm) which monitors instances of [IIdentityProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_IIdentityProviderService.htm)
+            and [ISessionIdentityProviderService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Services_ISessionIdentityProviderService.htm) to audit login and logout events in the audit repository
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Security.Audit.AuditDaemonService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -180,7 +190,7 @@ The Pub/Sub broker is the central daemon which is responsible for coordinating o
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.PubSub.Broker.PubSubBroker, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.PubSub.Broker.PubSubBroker, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -207,7 +217,21 @@ Note: You must have an [IConfigurationManager](http://santesuite.org/assets/doc/
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Services.Impl.DependencyServiceManager, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.DependencyServiceManager, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## ServerMonitorService - (SanteDB.Core.Api)
+Represents a security monitoring service which notifies the administrator based on a series of events
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Management.ServerMonitorService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -223,7 +247,22 @@ SanteDB's default implementation of the [IJobManagerService](http://santesuite.o
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Jobs.DefaultJobManagerService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Jobs.DefaultJobManagerService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## DataQualityService - (SanteDB.Core.Api)
+A [IDaemonService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDaemonService.htm) which registers [DataQualityBusinessRule`1](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule_1.htm) against
+            configured targets
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Data.Quality.DataQualityService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -246,14 +285,16 @@ The SIM data management service implements the [Single Instance Mode](https://he
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Data.SimDataManagementService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Data.Management.SimDataManagementService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## DataQualityService - (SanteDB.Core.Api)
-A [IDaemonService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDaemonService.htm) which registers [DataQualityBusinessRule`1](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityBusinessRule_1.htm) against
-            configured targets
+## Dataset Installation Service - (SanteDB.Core.Api)
+Data initialization service
+### Description
+This service will read all datasets provided by any registered [IDatasetProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Initialization_IDatasetProvider.htm) and will instal them via the 
+            configured [IDatasetInstallerService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Initialization_IDatasetInstallerService.htm)
 
 ### Service Registration
 ```markup
@@ -261,7 +302,22 @@ A [IDaemonService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Serv
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Data.Quality.DataQualityService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Data.Initialization.DataInitializationService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## AppletNotificationTemplateRepository - (SanteDB.Core.Applets)
+An implementation of the [INotificationTemplateRepository](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_INotificationTemplateRepository.htm) which loads [NotificationTemplate](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_NotificationTemplate.htm) instances
+            from the ```notification/``` folder in applets
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletNotificationTemplateRepository, SanteDB.Core.Applets, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -275,20 +331,13 @@ An implementation of the [ISubscriptionRepository](http://santesuite.org/assets/
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletSubscriptionRepository, SanteDB.Core.Applets, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## AgsService - (SanteDB.DisconnectedClient.Ags)
-The Applet Gateway Service
-### Description
-The AGS service is responsible for starting the REST based services for the dCDR instance and is responsible
-            for maintaining and managing these services through the life cycle including:
-
-* [Health Data Service Interface](https://help.santesuite.org/developers/service-apis/health-data-service-interface-hdsi)
-* [Administration Management Interface](https://help.santesuite.org/developers/service-apis/administration-management-interface-ami)
-* [Business Intelligence Service](https://help.santesuite.org/developers/service-apis/business-intelligence-services-bis)
+## Local Applet Repository/Manager - (SanteDB.Core.Applets)
+Represents an applet manager service that uses the local file system
 
 ### Service Registration
 ```markup
@@ -296,62 +345,7 @@ The AGS service is responsible for starting the REST based services for the dCDR
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.DisconnectedClient.Ags.AgsService, SanteDB.DisconnectedClient.Ags, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## BluetoothPeerToPeerShareService - (SanteDB.DisconnectedClient.UI)
-An implementation of the [IPeerToPeerShareService](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_Services_IPeerToPeerShareService.htm) which sends and receives data over bluetooth
-### Description
-The bluetooth peer to peer sharing service allows SanteDB plug-ins to request and receive ad-hoc data
-            between peers using bluetooth file sharing
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.DisconnectedClient.UI.Services.Bluetooth.BluetoothPeerToPeerShareService, SanteDB.DisconnectedClient.UI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## Administrative Management Interface - (SanteDB.Messaging.AMI)
-An implementation of the [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) which hosts and manages the 
-            [Administrative Management Interface](https://help.santesuite.org/developers/service-apis/administration-management-interface-ami) REST services.
-### Description
-This service is responsible for starting up and shutting down the REST services for the AMI, as well as
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Messaging.AMI.AmiMessageHandler, SanteDB.Messaging.AMI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## FhirDataInitializationService - (SanteDB.Messaging.FHIR)
-Scans the configured directory on application startup to import or seed data into SanteDB from FHIR
-### Description
-This service, like the [DataInitializationService](#DataInitializationService) reads FHIR resource
-            files in the configured directory and imports the data from those files (on system startup) into the CDR instance. FHIR resource files
-            can be either ```.xml``` or ```.json``` instances.
-
-After data is processed the import process will rename the input file as ```.complete``` and will emit an equivalent file
-            suffixed with ```-response``` to indicate any information returned by the FHIR handler for the contained resources.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Messaging.FHIR.FhirDataInitializationService, SanteDB.Messaging.FHIR, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Applets.Services.Impl.FileSystemAppletManagerService, SanteDB.Core.Applets, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -361,7 +355,7 @@ Implementation of an [IApiEndpointProvider](http://santesuite.org/assets/doc/net
 ### Description
 The FHIR based message handler is responsible for starting the [IFhirServiceContract](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_FHIR_Rest_IFhirServiceContract.htm) REST service and 
             enables SanteDB's [FHIR REST](https://help.santesuite.org/developers/service-apis/hl7-fhir) services. Consult the
-            [org/developers/service-apis/hl7-fhir/enabling-fhir-interfaces](#org/developers/service-apis/hl7-fhir/enabling-fhir-interfaces) documentation
+            [Enabling FHIR Interfaces](https://help.santesuite.org/developers/service-apis/hl7-fhir/enabling-fhir-interfaces) documentation
             for more information on enabling these services in SanteDB.
 
 ### Service Registration
@@ -370,24 +364,7 @@ The FHIR based message handler is responsible for starting the [IFhirServiceCont
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.FHIR.FhirMessageHandler, SanteDB.Messaging.FHIR, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## GS1 Stock Event Subscriber - (SanteDB.Messaging.GS1)
-Represents a notification service that listens to stock events and then prepares them for broadcast
-### Description
-This service is obsolete and will be replaced using the [PubSubBroker](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_PubSub_Broker_PubSubBroker.htm) implementation and 
-            [IPubSubDispatcherFactory](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_PubSub_IPubSubDispatcherFactory.htm) implementation instead.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Messaging.GS1.StockSubscriber, SanteDB.Messaging.GS1, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.FHIR.FhirMessageHandler, SanteDB.Messaging.FHIR, Version=3.0.1982.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -404,7 +381,24 @@ This service is responsible for maintaining the lifecycle of the [IStockService]
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.GS1.StockServiceMessageHandler, SanteDB.Messaging.GS1, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.GS1.StockServiceMessageHandler, SanteDB.Messaging.GS1, Version=3.0.1982.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## GS1 Stock Event Subscriber - (SanteDB.Messaging.GS1)
+Represents a notification service that listens to stock events and then prepares them for broadcast
+### Description
+This service is obsolete and will be replaced using the [PubSubBroker](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_PubSub_Broker_PubSubBroker.htm) implementation and 
+            [IPubSubDispatcherFactory](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_PubSub_IPubSubDispatcherFactory.htm) implementation instead.
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Messaging.GS1.StockSubscriber, SanteDB.Messaging.GS1, Version=3.0.1982.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -420,25 +414,7 @@ This class is obsolete and will be migrated to the [IPubSubDispatcherFactory](ht
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.GS1.Transport.AS2.As2IntegrationService, SanteDB.Messaging.GS1, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## Health Data Services Interface - (SanteDB.Messaging.HDSI)
-Implementation of [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) for the Health Data Services Interface REST service
-### Description
-The HDSI message handler is responsible for the maintenance and lifecycle of SanteDB's 
-            [Health Data Service Interface](https://help.santesuite.org/developers/service-apis/health-data-service-interface-hdsi). The service
-            starts the necessary REST and query services on start and tears them down on system shutdown.
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Messaging.HDSI.HdsiMessageHandler, SanteDB.Messaging.HDSI, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.GS1.Transport.AS2.As2IntegrationService, SanteDB.Messaging.GS1, Version=3.0.1982.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -457,7 +433,7 @@ This service is responsible for starting up and tearing down the various [IHL7Me
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.HL7.HL7MessageHandler, SanteDB.Messaging.HL7, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.HL7.HL7MessageHandler, SanteDB.Messaging.HL7, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -471,22 +447,16 @@ Represents the daemon service that starts/stops the OpenApi information file
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.Metadata.MetadataMessageHandler, SanteDB.Messaging.Metadata, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.Metadata.MetadataMessageHandler, SanteDB.Messaging.Metadata, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## ADO.NET Data Persistence Service - (SanteDB.Persistence.Data.ADO)
-Registers and configures the necessary sub-services and [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) implementations
-            to allow SanteDB iCDR to persist, query, and read messages from available ADO.NET data providers
+## Administrative Management Interface - (SanteDB.Rest.AMI)
+An implementation of the [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) which hosts and manages the 
+            [Administrative Management Interface](https://help.santesuite.org/developers/service-apis/administration-management-interface-ami) REST services.
 ### Description
-This service is responsible for registering the necessary [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) providers
-            which are responsible for interfacing the SanteDB [Physical Model](https://help.santesuite.org/santedb/data-and-information-architecture/physical-model) 
-            with the SanteDB [Business / Object Model](https://help.santesuite.org/santedb/data-and-information-architecture/conceptual-data-model). Each 
-            persistence implementation is derived from the [ModelMap](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Map_ModelMap.htm) configuration, and is uses the ADO.NET classes to via the [IDbProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_OrmLite_Providers_IDbProvider.htm) configured.
-
-Additionally, on start of the SanteDB iCDR or dCDR, this service is responsible for applying any [Data Patches](https://help.santesuite.org/developers/server-plugins/database-patching)
-            which have been provided (compiled via an embedded resource) by any of the validated SanteDB plugins.
+This service is responsible for starting up and shutting down the REST services for the AMI, as well as
 
 ### Service Registration
 ```markup
@@ -494,20 +464,16 @@ Additionally, on start of the SanteDB iCDR or dCDR, this service is responsible 
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.Data.ADO.Services.AdoPersistenceService, SanteDB.Persistence.Data.ADO, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Rest.AMI.AmiMessageHandler, SanteDB.Rest.AMI, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## MDM Data Repository - (SanteDB.Persistence.MDM)
-An implementation of the [IDataManagementPattern](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_IDataManagementPattern.htm) which keeps multiple copies of 
-            source records and maintains linkages with a single master record.
+## Application Interaction Interface - (SanteDB.Rest.AppService)
+Implementation of [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) for the Application Service REST service
 ### Description
-The MDM data management service provides the [Master Data Storage](https://help.santesuite.org/santedb/data-storage-patterns/master-data-storage) pattern
-            for SanteDB. This service is responsible for creating subscribers to listen to events from the [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) layer in SanteDB
-            and take appropriate actions to seggregate source information form record of truth information. Additionally, this service registers implementations
-            of [IFreetextSearchService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IFreetextSearchService.htm), [IRecordMatchingService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Matching_IRecordMatchingService.htm), [IRecordMergingService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRecordMergingService.htm) and [ISubscriptionExecutor](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISubscriptionExecutor.htm) functionality to ensure the freetext and subscription requests are 
-            properly handled and synthesized.
+The application service manager is used for end-user facing CDR deployments and provides methods for manipulating 
+            the user environment
 
 ### Service Registration
 ```markup
@@ -515,7 +481,7 @@ The MDM data management service provides the [Master Data Storage](https://help.
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Persistence.MDM.Services.MdmDataManagementService, SanteDB.Persistence.MDM, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Rest.AppService.AppServiceMessageHandler, SanteDB.Rest.AppService, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -529,20 +495,17 @@ Represents a message handler for the BIS
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Rest.BIS.BisMessageHandler, SanteDB.Rest.BIS, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Rest.BIS.BisMessageHandler, SanteDB.Rest.BIS, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## Local (database) repository service - (SanteDB.Server.Core)
-Registers the [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) instances with the core application context and provides a 
-            [IServiceFactory](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IServiceFactory.htm) implementation to construct repository services.
+## Health Data Services Interface - (SanteDB.Rest.HDSI)
+Implementation of [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) for the Health Data Services Interface REST service
 ### Description
-The instances of [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) which this service constructs contact directly with the 
-            equivalent [IDataPersistenceService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDataPersistenceService.htm) for each object. The repository layers add business process
-            logic for calling [IBusinessRulesService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IBusinessRulesService.htm), [IPrivacyEnforcementService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_IPrivacyEnforcementService.htm), and others as 
-            necessary to ensure secure and safe access to the underlying data repositories. All requests to any [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm)
-            constructed by this service use the [AuthenticationContext](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_AuthenticationContext.htm) to establish "who" is performing the action.
+The HDSI message handler is responsible for the maintenance and lifecycle of SanteDB's 
+            [Health Data Service Interface](https://help.santesuite.org/developers/service-apis/health-data-service-interface-hdsi). The service
+            starts the necessary REST and query services on start and tears them down on system shutdown.
 
 ### Service Registration
 ```markup
@@ -550,48 +513,17 @@ The instances of [IRepositoryService](http://santesuite.org/assets/doc/net/html/
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalRepositoryService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Rest.HDSI.HdsiMessageHandler, SanteDB.Rest.HDSI, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## Local Applet Repository/Manager - (SanteDB.Server.Core)
-Represents an applet manager service that uses the local file system
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalAppletManagerService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## Applet JavaScript BRE - (SanteDB.Server.Core)
-A daemon which loads business rules from the applet manager
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Server.Core.Services.Daemons.AppletBusinessRulesDaemon, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## Dataset Installation Service - (SanteDB.Server.Core)
-Data initialization service
+## OAuth 2.0 Messaging Provider - (SanteDB.Rest.OAuth)
+Represents a [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) which serves OpenID Connect and 
+            OAUTH requests
 ### Description
-This service reads data from the configured directory (usually the ```data/``` directory) with extension ```.dataset```
-            and imports the data into the SanteDB iCDR instance. Each [Dataset](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Export_Dataset.htm) file is then renamed to ```.completed``` to 
-            indicate that the import of the provided data was successful. This service allows SanteDB instances to share information between
-            deployments easily.
-
-For more information consult the [Distributing Data](https://help.santesuite.org/developers/applets/distributing-data) files
+This service is responsible for starting and maintaining the [OAuthServiceBehavior](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_OAuth_Rest_OAuthServiceBehavior.htm) REST service which 
+            is responsible for supporting SanteDB's [OpenID Connect](https://help.santesuite.org/developers/service-apis/openid-connect) interface
 
 ### Service Registration
 ```markup
@@ -599,13 +531,15 @@ For more information consult the [Distributing Data](https://help.santesuite.org
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Persistence.DataInitializationService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Rest.OAuth.OAuthMessageHandler, SanteDB.Rest.OAuth, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
 
-## Debugger: Data Sandbox UI - (SanteDB.Tools.Debug)
-TODO: Document this
+## WWW Interface - (SanteDB.Rest.WWW)
+Implementation of [IApiEndpointProvider](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Interop_IApiEndpointProvider.htm) for the World Wide Web service
+### Description
+The world wide web message handler is responsible for serving HTTP requests for web pages
 
 ### Service Registration
 ```markup
@@ -613,21 +547,7 @@ TODO: Document this
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Tools.Debug.DataSandboxService, SanteDB.Tools.Debug, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-		...
-	</serviceProviders>
-```
-
-## File Based BI Repository - (SanteDB.Tools.Debug)
-TODO: Document this
-
-### Service Registration
-```markup
-...
-<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
-	<serviceProviders>
-		...
-		<add type="SanteDB.Tools.Debug.BI.FileMetadataRepository, SanteDB.Tools.Debug, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Rest.WWW.WwwMessageHandler, SanteDB.Rest.WWW, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -672,35 +592,32 @@ public class MyDaemonService : SanteDB.Core.Services.IDaemonService {
 # References
 
 * [IDaemonService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IDaemonService.htm)
-* [OAuthMessageHandler C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Authentication_OAuth2_OAuthMessageHandler.htm)
+* [AppletBusinessRulesDaemon C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_BusinessRules_JavaScript_AppletBusinessRulesDaemon.htm)
 * [MemoryCacheService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Caching_Memory_MemoryCacheService.htm)
 * [RedisAdhocCache C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Caching_Redis_RedisAdhocCache.htm)
 * [RedisCacheService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Caching_Redis_RedisCacheService.htm)
 * [RedisQueryPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Caching_Redis_RedisQueryPersistenceService.htm)
+* [UpstreamSynchronizationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Disconnected_Data_Synchronization_UpstreamSynchronizationService.htm)
 * [AuditDaemonService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Security_Audit_AuditDaemonService.htm)
 * [Publish Subscribe Broker C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_PubSub_Broker_PubSubBroker.htm)
 * [DependencyServiceManager C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_DependencyServiceManager.htm)
+* [ServerMonitorService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Management_ServerMonitorService.htm)
 * [DefaultJobManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_DefaultJobManagerService.htm)
-* [SimDataManagementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_SimDataManagementService.htm)
 * [DataQualityService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Quality_DataQualityService.htm)
+* [SimDataManagementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Management_SimDataManagementService.htm)
+* [DataInitializationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Data_Initialization_DataInitializationService.htm)
+* [AppletNotificationTemplateRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_AppletNotificationTemplateRepository.htm)
 * [AppletSubscriptionRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_AppletSubscriptionRepository.htm)
-* [AgsService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_Ags_AgsService.htm)
-* [BluetoothPeerToPeerShareService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_DisconnectedClient_UI_Services_Bluetooth_BluetoothPeerToPeerShareService.htm)
-* [The AMI provides administrative operations for SanteDB over HTTP C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_AMI_AmiMessageHandler.htm)
-* [FhirDataInitializationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_FHIR_FhirDataInitializationService.htm)
+* [FileSystemAppletManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_FileSystemAppletManagerService.htm)
 * [Allows SanteDB iCDR to send and receive HL7 FHIR R4 messages C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_FHIR_FhirMessageHandler.htm)
-* [StockSubscriber C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_GS1_StockSubscriber.htm)
 * [Allows SanteDB iCDR to send and receive GS1 BMS XML messages over REST based transport C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_GS1_StockServiceMessageHandler.htm)
+* [StockSubscriber C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_GS1_StockSubscriber.htm)
 * [As2IntegrationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_GS1_Transport_AS2_As2IntegrationService.htm)
-* [The primary iCDR Health Data Messaging Service (HDSI) allows sharing of RIM objects in XML or JSON over HTTP C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_HDSI_HdsiMessageHandler.htm)
 * [HL7MessageHandler C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_HL7_HL7MessageHandler.htm)
 * [Allows SanteDB iCDR/dCDR to expose service metadata using OpenAPI/Swagger 2.0 C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_Metadata_MetadataMessageHandler.htm)
-* [AdoPersistenceService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_Data_ADO_Services_AdoPersistenceService.htm)
-* [MdmDataManagementService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Persistence_MDM_Services_MdmDataManagementService.htm)
+* [The AMI provides administrative operations for SanteDB over HTTP C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_AMI_AmiMessageHandler.htm)
+* [Application Service C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_AppService_AppServiceMessageHandler.htm)
 * [Exposes the SanteDB Business Intelligence functions (reports, queries, etc.) over HTTP REST C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_BIS_BisMessageHandler.htm)
-* [LocalRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalRepositoryService.htm)
-* [LocalAppletManagerService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalAppletManagerService.htm)
-* [AppletBusinessRulesDaemon C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Daemons_AppletBusinessRulesDaemon.htm)
-* [DataInitializationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Persistence_DataInitializationService.htm)
-* [DataSandboxService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Tools_Debug_DataSandboxService.htm)
-* [FileMetadataRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Tools_Debug_BI_FileMetadataRepository.htm)
+* [The primary iCDR Health Data Messaging Service (HDSI) allows sharing of RIM objects in XML or JSON over HTTP C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_HDSI_HdsiMessageHandler.htm)
+* [OAuthMessageHandler C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_OAuth_OAuthMessageHandler.htm)
+* [WwwMessageHandler C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Rest_WWW_WwwMessageHandler.htm)

@@ -1,4 +1,4 @@
-`IStockManagementRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IStockManagementRepositoryService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a stock management repository service.
@@ -15,7 +15,7 @@ Represents a stock management repository service.
 # Implementations
 
 
-## Local Stock Management Repository - (SanteDB.Server.Core)
+## Local Stock Management Repository - (SanteDB.Core.Api)
 Represents a stock management repository service.
 
 ### Service Registration
@@ -24,7 +24,7 @@ Represents a stock management repository service.
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalStockManagementRepositoryService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.Repository.LocalStockManagementRepositoryService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -65,4 +65,4 @@ public class MyStockManagementRepositoryService : SanteDB.Core.Services.IStockMa
 # References
 
 * [IStockManagementRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IStockManagementRepositoryService.htm)
-* [LocalStockManagementRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalStockManagementRepositoryService.htm)
+* [LocalStockManagementRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_Repository_LocalStockManagementRepositoryService.htm)

@@ -1,4 +1,4 @@
-`IPatchService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IPatchService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a patch service which can calculate and apply patches
@@ -23,7 +23,7 @@ Represents a simple patch service which can calculate patches and apply them
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Core.Services.Impl.SimplePatchService, SanteDB.Core.Api, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.SimplePatchService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```

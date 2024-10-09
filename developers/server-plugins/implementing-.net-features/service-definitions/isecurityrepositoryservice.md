@@ -1,4 +1,4 @@
-`ISecurityRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
+`ISecurityRepositoryService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Security repository service is responsible for the maintenance of security entities
@@ -9,7 +9,8 @@ Security repository service is responsible for the maintenance of security entit
 |-|-|-|-|
 |ChangePassword|SecurityUser|*Guid* **userId**<br/>*String* **password**|Changes a user's password.|
 |GetProviderEntity|Provider|*IIdentity* **identity**|Gets the specified provider entity from the specified identity|
-|CreateUser|SecurityUser|*SecurityUser* **userInfo**<br/>*String* **password**|Creates a user with a specified password.|
+|GetSid|Guid|*IIdentity* **identity**|Get the security identifier for the provided|
+|ResolveName|String|*Guid* **sid**|Resolves the name from a security identifier|
 |GetUser|SecurityUser|*String* **userName**|Get a user by user name|
 |GetDevice|SecurityDevice|*String* **deviceName**|Get a device by name|
 |GetApplication|SecurityApplication|*String* **applicationName**|Get a app by name|
@@ -27,12 +28,41 @@ Security repository service is responsible for the maintenance of security entit
 |UnlockUser|void|*Guid* **userId**|Unlocks a specific user.|
 |GetProvenance|SecurityProvenance|*Guid* **provenanceId**|Get the provenance object|
 |GetSecurityEntity|SecurityEntity|*IPrincipal* **principal**|Get the data object for the provided|
-|FindProvenance|IEnumerable&lt;SecurityProvenance>|*Expression&lt;Func&lt;SecurityProvenance,Boolean>>* **query**<br/>*Int32* **offset**<br/>*Nullable&lt;Int32>* **count**<br/>*Int32&* **totalResults**<br/>*Guid* **queryId**<br/>*ModelSort`1[]* **orderBy**|Find provenance objects matching the specified object|
+|GetCdrEntity|Entity|*IPrincipal* **principal**|Get the CDR entity which is assigned to the|
+|FindProvenance|IQueryResultSet&lt;SecurityProvenance>|*Expression&lt;Func&lt;SecurityProvenance,Boolean>>* **query**|Find provenance objects matching the specified object|
 
 # Implementations
 
 
-## LocalSecurityRepositoryService - (SanteDB.Server.Core)
+## BridgedSecurityRepositoryService - (SanteDB.Client)
+Represents a security repository service that will use local or upstream data based on the availibity of the services for upstream
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Repositories.BridgedSecurityRepositoryService, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## UpstreamSecurityRepository - (SanteDB.Client)
+A security repository that uses the upstream services to perform its duties
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Upstream.Repositories.UpstreamSecurityRepository, SanteDB.Client, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
+
+## LocalSecurityRepositoryService - (SanteDB.Core.Api)
 Represents a security repository service that uses the direct local services
 
 ### Service Registration
@@ -41,7 +71,7 @@ Represents a security repository service that uses the direct local services
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalSecurityRepositoryService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.Repository.LocalSecurityRepositoryService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -65,9 +95,15 @@ public class MySecurityRepositoryService : SanteDB.Core.Services.ISecurityReposi
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
-	/// Creates a user with a specified password.
+	/// Get the security identifier for the provided
 	/// </summary>
-	public SecurityUser CreateUser(SecurityUser userInfo,String password){
+	public Guid GetSid(IIdentity identity){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Resolves the name from a security identifier
+	/// </summary>
+	public String ResolveName(Guid sid){
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
@@ -173,9 +209,15 @@ public class MySecurityRepositoryService : SanteDB.Core.Services.ISecurityReposi
 		throw new System.NotImplementedException();
 	}
 	/// <summary>
+	/// Get the CDR entity which is assigned to the
+	/// </summary>
+	public Entity GetCdrEntity(IPrincipal principal){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
 	/// Find provenance objects matching the specified object
 	/// </summary>
-	public IEnumerable<SecurityProvenance> FindProvenance(Expression<Func<SecurityProvenance,Boolean>> query,Int32 offset,Nullable<Int32> count,Int32& totalResults,Guid queryId,ModelSort`1[] orderBy){
+	public IQueryResultSet<SecurityProvenance> FindProvenance(Expression<Func<SecurityProvenance,Boolean>> query){
 		throw new System.NotImplementedException();
 	}
 }
@@ -184,4 +226,6 @@ public class MySecurityRepositoryService : SanteDB.Core.Services.ISecurityReposi
 # References
 
 * [ISecurityRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_ISecurityRepositoryService.htm)
-* [LocalSecurityRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalSecurityRepositoryService.htm)
+* [BridgedSecurityRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Repositories_BridgedSecurityRepositoryService.htm)
+* [UpstreamSecurityRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Upstream_Repositories_UpstreamSecurityRepository.htm)
+* [LocalSecurityRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_Repository_LocalSecurityRepositoryService.htm)

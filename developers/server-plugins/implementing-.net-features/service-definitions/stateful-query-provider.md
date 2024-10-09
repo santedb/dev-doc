@@ -1,4 +1,4 @@
-`IQueryPersistenceService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IQueryPersistenceService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Defines a service which can store the results of a query for later retrieval
@@ -29,6 +29,7 @@ Implementers of this service should ensure that whatever technology they are usi
 |QueryResultTotalQuantity|Int64|*Guid* **queryId**|Count the number of query results which have been registered for|
 |AddResults|void|*Guid* **queryId**<br/>*IEnumerable&lt;Guid>* **results**<br/>*Int32* **totalResults**|Adds more results to an already registered stateful query|
 |SetQueryTag|void|*Guid* **queryId**<br/>*Object* **value**|Adds or changes the query tag on  to|
+|AbortQuerySet|void|*Guid* **queryId**|Abort the query|
 
 # Implementations
 
@@ -45,7 +46,7 @@ This implementation of the query persistence service uses the [MemoryCache](http
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Memory.MemoryQueryPersistenceService, SanteDB.Caching.Memory, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Memory.MemoryQueryPersistenceService, SanteDB.Caching.Memory, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -62,7 +63,7 @@ This persistence service uses REDIS list values to store the UUIDs representing 
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Caching.Redis.RedisQueryPersistenceService, SanteDB.Caching.Redis, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Caching.Redis.RedisQueryPersistenceService, SanteDB.Caching.Redis, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -119,6 +120,12 @@ public class MyQueryPersistenceService : SanteDB.Core.Services.IQueryPersistence
 	/// Adds or changes the query tag on  to
 	/// </summary>
 	public void SetQueryTag(Guid queryId,Object value){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Abort the query
+	/// </summary>
+	public void AbortQuerySet(Guid queryId){
 		throw new System.NotImplementedException();
 	}
 }

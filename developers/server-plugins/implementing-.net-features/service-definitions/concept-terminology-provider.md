@@ -1,4 +1,4 @@
-`IConceptRepositoryService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IConceptRepositoryService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service which is responsible for the maintenance of concepts.
@@ -30,11 +30,14 @@ This class is responsible for the management of [Concept](http://santesuite.org/
 |GetConceptReferenceTerm|ReferenceTerm|*Guid* **conceptId**<br/>*String* **codeSystem**<br/>*Boolean* **exact**|Gets the concept reference term for the specified code system|
 |GetConceptReferenceTerm|ReferenceTerm|*String* **conceptMnemonic**<br/>*String* **codeSystem**|Gets the concept reference term for the specified code system|
 |FindReferenceTermsByConcept|IEnumerable&lt;ConceptReferenceTerm>|*Guid* **conceptId**<br/>*String* **codeSystem**|Finds all reference terms for the concept with  in the specified  system.|
+|GetName|String|*Guid* **conceptId**<br/>*String* **twoLetterISOLanguageName**|Get the specified concept name|
+|ExpandConceptSet|IQueryResultSet&lt;Concept>|*Guid* **conceptSetId**|Expand the concept set to a flat list of values|
+|ExpandConceptSet|IQueryResultSet&lt;Concept>|*String* **conceptSetMnemonic**|Expand the concept set to a flat list of values|
 
 # Implementations
 
 
-## LocalConceptRepository - (SanteDB.Server.Core)
+## LocalConceptRepository - (SanteDB.Core.Api)
 Represents a service which is responsible for the maintenance of concepts using local persistence.
 
 ### Service Registration
@@ -43,7 +46,7 @@ Represents a service which is responsible for the maintenance of concepts using 
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.LocalConceptRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.Repository.LocalConceptRepository, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -126,10 +129,28 @@ public class MyConceptRepositoryService : SanteDB.Core.Services.IConceptReposito
 	public IEnumerable<ConceptReferenceTerm> FindReferenceTermsByConcept(Guid conceptId,String codeSystem){
 		throw new System.NotImplementedException();
 	}
+	/// <summary>
+	/// Get the specified concept name
+	/// </summary>
+	public String GetName(Guid conceptId,String twoLetterISOLanguageName){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Expand the concept set to a flat list of values
+	/// </summary>
+	public IQueryResultSet<Concept> ExpandConceptSet(Guid conceptSetId){
+		throw new System.NotImplementedException();
+	}
+	/// <summary>
+	/// Expand the concept set to a flat list of values
+	/// </summary>
+	public IQueryResultSet<Concept> ExpandConceptSet(String conceptSetMnemonic){
+		throw new System.NotImplementedException();
+	}
 }
 ```
 
 # References
 
 * [IConceptRepositoryService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IConceptRepositoryService.htm)
-* [LocalConceptRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_LocalConceptRepository.htm)
+* [LocalConceptRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_Repository_LocalConceptRepository.htm)

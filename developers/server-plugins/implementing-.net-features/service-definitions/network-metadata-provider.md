@@ -1,4 +1,4 @@
-`INetworkInformationService` in assembly SanteDB.Core.Api version 2.1.151.0
+`INetworkInformationService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents network information service
@@ -30,7 +30,7 @@ Represents network information service
 # Implementations
 
 
-## Default Network Information Service - (SanteDB.Server.Core)
+## Default Network Information Service - (SanteDB.Core.Api)
 Default network information service
 
 ### Service Registration
@@ -39,7 +39,7 @@ Default network information service
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.DefaultNetworkInformationService, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Services.Impl.DefaultNetworkInformationService, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -99,4 +99,4 @@ public class MyNetworkInformationService : SanteDB.Core.Services.INetworkInforma
 # References
 
 * [INetworkInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_INetworkInformationService.htm)
-* [DefaultNetworkInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_DefaultNetworkInformationService.htm)
+* [DefaultNetworkInformationService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_Impl_DefaultNetworkInformationService.htm)

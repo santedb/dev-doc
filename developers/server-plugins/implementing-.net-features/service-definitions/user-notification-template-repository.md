@@ -1,4 +1,4 @@
-`INotificationTemplateRepository` in assembly SanteDB.Core.Api version 2.1.151.0
+`INotificationTemplateRepository` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service which takes / provides structured templates into structured message objects
@@ -15,8 +15,9 @@ Represents a service which takes / provides structured templates into structured
 # Implementations
 
 
-## File System based Notification Template Repository - (SanteDB.Server.Core)
-File notification template service
+## AppletNotificationTemplateRepository - (SanteDB.Core.Applets)
+An implementation of the [INotificationTemplateRepository](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_INotificationTemplateRepository.htm) which loads [NotificationTemplate](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_NotificationTemplate.htm) instances
+            from the ```notification/``` folder in applets
 
 ### Service Registration
 ```markup
@@ -24,7 +25,7 @@ File notification template service
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Services.Impl.FileNotificationTemplateRepository, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Applets.Services.Impl.AppletNotificationTemplateRepository, SanteDB.Core.Applets, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -65,4 +66,4 @@ public class MyNotificationTemplateRepository : SanteDB.Core.Notifications.INoti
 # References
 
 * [INotificationTemplateRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_INotificationTemplateRepository.htm)
-* [FileNotificationTemplateRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Services_Impl_FileNotificationTemplateRepository.htm)
+* [AppletNotificationTemplateRepository C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Applets_Services_Impl_AppletNotificationTemplateRepository.htm)

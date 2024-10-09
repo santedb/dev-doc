@@ -1,4 +1,4 @@
-`INotificationTemplateFiller` in assembly SanteDB.Core.Api version 2.1.151.0
+`INotificationTemplateFiller` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service that can fill the template
@@ -12,8 +12,8 @@ Represents a service that can fill the template
 # Implementations
 
 
-## RazorNotificationTemplateFiller - (SanteDB.Server.Core)
-Represents a notification template filler that uses Razor engine
+## SimpleNotificationTemplateFiller - (SanteDB.Core.Api)
+A simple notification template filler that uses ${value} for inputs
 
 ### Service Registration
 ```markup
@@ -21,7 +21,7 @@ Represents a notification template filler that uses Razor engine
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Server.Core.Notifications.Templating.RazorNotificationTemplateFiller, SanteDB.Server.Core, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Core.Notifications.Templating.SimpleNotificationTemplateFiller, SanteDB.Core.Api, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -44,4 +44,4 @@ public class MyNotificationTemplateFiller : SanteDB.Core.Notifications.INotifica
 # References
 
 * [INotificationTemplateFiller C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_INotificationTemplateFiller.htm)
-* [RazorNotificationTemplateFiller C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Server_Core_Notifications_Templating_RazorNotificationTemplateFiller.htm)
+* [SimpleNotificationTemplateFiller C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Notifications_Templating_SimpleNotificationTemplateFiller.htm)

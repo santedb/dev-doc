@@ -1,30 +1,47 @@
-`IAuditDispatchService` in assembly SanteDB.Core.Api version 2.1.151.0
+`IAuditDispatchService` in assembly SanteDB.Core.Api version 3.0.1980.0
 
 # Summary
 Represents a service that dispatches audits to a central repository
 
 ## Description
 The auditing of access to clinical data is of the utmost importance. SanteDB generates 
-            and stores audits locally using an [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) for [AuditData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Auditing_AuditData.htm). However, 
+            and stores audits locally using an [IRepositoryService](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IRepositoryService.htm) for [AuditEventData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Audit_AuditEventData.htm). However, 
             many implementations will have centralized audit repositories for collecting audits from various health
             systems in a central place. Such collection is useful to establishing overall patterns of access
             across systems in an HIE (for example)
 
-The audit dispatching service is responsible for sending [AuditData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Auditing_AuditData.htm) instances to remote
+The audit dispatching service is responsible for sending [AuditEventData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Audit_AuditEventData.htm) instances to remote
             audit repositories. The service's responsibilities are:
 
-1. Ensure that the [AuditData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Auditing_AuditData.htm) instance is complete and contains relevant information for this node
-1. Transform the [AuditData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Auditing_AuditData.htm) class into the appropriate format (IETF RFC3881, FHIR, etc.)
+1. Ensure that the [AuditEventData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Audit_AuditEventData.htm) instance is complete and contains relevant information for this node
+1. Transform the [AuditEventData](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Audit_AuditEventData.htm) class into the appropriate format (IETF RFC3881, FHIR, etc.)
 1. Ensure the delivery of the audit to the central repository
 
 # Operations
 
 |Operation|Response/Return|Input/Parameter|Description|
 |-|-|-|-|
-|SendAudit|void|*AuditData* **audit**|Sends the audit to the central authority|
+|SendAudit|void|*AuditEventData* **audit**|Sends the audit to the central authority|
 
 # Implementations
 
+
+## SynchronizationAuditDispatcher - (SanteDB.Client.Disconnected)
+Represents an audit dispatcher which uses the administrative queue for the dispatching of audits.
+### Description
+In order to reduce the number of audits which are sent to the central environment, a dispatcher is used. This allows 
+            only audits relevant audits to be sent to the central server via [ISynchronizationQueueManager](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Disconnected_Data_Synchronization_ISynchronizationQueueManager.htm)
+
+### Service Registration
+```markup
+...
+<section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
+	<serviceProviders>
+		...
+		<add type="SanteDB.Client.Disconnected.Services.SynchronizationAuditDispatcher, SanteDB.Client.Disconnected, Version=3.0.1980.0, Culture=neutral, PublicKeyToken=null" />
+		...
+	</serviceProviders>
+```
 
 ## IHE ATNA Audit Dispatcher - (SanteDB.Messaging.Atna)
 Represents an audit service that communicates Audits via an IHE ATNA transport
@@ -56,7 +73,7 @@ The configuration of this service is described in [AtnaConfigurationSection](htt
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.Atna.AtnaAuditService, SanteDB.Messaging.Atna, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.Atna.AtnaAuditService, SanteDB.Messaging.Atna, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -77,7 +94,7 @@ This dispatcher is configured using the [FhirDispatcherTargetConfiguration](http
 <section xsi:type="ApplicationServiceContextConfigurationSection" threadPoolSize="4">
 	<serviceProviders>
 		...
-		<add type="SanteDB.Messaging.FHIR.Auditing.FhirAuditDispatcher, SanteDB.Messaging.FHIR, Version=2.1.151.0, Culture=neutral, PublicKeyToken=null" />
+		<add type="SanteDB.Messaging.FHIR.Auditing.FhirAuditDispatcher, SanteDB.Messaging.FHIR, Version=3.0.1982.0, Culture=neutral, PublicKeyToken=null" />
 		...
 	</serviceProviders>
 ```
@@ -91,7 +108,7 @@ public class MyAuditDispatchService : SanteDB.Core.Services.IAuditDispatchServic
 	/// <summary>
 	/// Sends the audit to the central authority
 	/// </summary>
-	public void SendAudit(AuditData audit){
+	public void SendAudit(AuditEventData audit){
 		throw new System.NotImplementedException();
 	}
 }
@@ -100,5 +117,6 @@ public class MyAuditDispatchService : SanteDB.Core.Services.IAuditDispatchServic
 # References
 
 * [IAuditDispatchService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Services_IAuditDispatchService.htm)
+* [SynchronizationAuditDispatcher C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Client_Disconnected_Services_SynchronizationAuditDispatcher.htm)
 * [AtnaAuditService C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_Atna_AtnaAuditService.htm)
 * [FhirAuditDispatcher C# Documentation](http://santesuite.org/assets/doc/net/html/T_SanteDB_Messaging_FHIR_Auditing_FhirAuditDispatcher.htm)
