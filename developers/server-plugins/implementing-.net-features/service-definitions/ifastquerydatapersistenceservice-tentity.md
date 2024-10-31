@@ -1,0 +1,2 @@
+# IFastQueryDataPersistenceService{TEntity}
+

@@ -1,0 +1,2 @@
+# IPersistableQueryRepositoryService{TEntity}
+

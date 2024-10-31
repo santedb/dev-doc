@@ -30,7 +30,7 @@ Once the administrator has completed the necessary fields, the **Save** button m
 
 Existing code systems can be edited by selecting **Edit** from the code system list. This will present a code system dashboard.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Core Properties
 

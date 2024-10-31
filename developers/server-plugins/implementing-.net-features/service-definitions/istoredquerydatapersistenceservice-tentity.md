@@ -1,0 +1,2 @@
+# IStoredQueryDataPersistenceService{TEntity}
+

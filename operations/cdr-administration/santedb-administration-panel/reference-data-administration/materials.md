@@ -12,7 +12,7 @@ In SanteDB and is derived products: SanteEMR, SanteIMS, etc. the concept of a [M
 
 Take, for example, the material of HPV - HPV is modeled in SanteDB as:
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Here:
 
@@ -26,7 +26,7 @@ Here:
 
 To manage materials, administrators should use **Reference Data > Materials** this will present the administrator with a list of all top level material definitions in SanteDB.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The administrator can use this screen to:
 
@@ -39,7 +39,7 @@ The administrator can use this screen to:
 
 Creating a new material definition is accessed via the Material List. First the material core properties are configured
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -49,7 +49,7 @@ Creating a new material definition is accessed via the Material List. First the 
 
 Materials typically also carry one or more identifiers which are used for interoperability with logistics systems, and other trading partners.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Depending on your deployment of SanteDB, there may be additional identifier types which are required to facilitate interoperability. Please consult your local deployment documentation.

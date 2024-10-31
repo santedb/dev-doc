@@ -1,0 +1,2 @@
+# IFastQueryRepositoryService{TEntity}
+
