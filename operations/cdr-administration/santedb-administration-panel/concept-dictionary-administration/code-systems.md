@@ -73,6 +73,6 @@ For larger terminologies with thousands of codes, it may be easier to adapt a fl
 * `Concept` (optional) - Containing the Mnemonic of an existing (or new) concept to be created
 * `Mapping` (optional) - Containing the nature of the mapping between `Concept` and `Mnemonic` (`SameAs`,`NarrowerThan`, etc.)
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 This file can be uploaded into the reference term dialog, and uploaded.

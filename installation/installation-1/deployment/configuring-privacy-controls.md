@@ -6,7 +6,7 @@ This article documents and uses features of SanteDB 3.0. The implementation of t
 
 All SanteDB solutions (SanteMPI, SanteEMR, and SanteIMS) are designed to support adherence to a variety of privacy controls which can be used by implementers to conform to local privacy legislation such as:
 
-* [The Canadian Personal Information Protection and Electronic Documents Act ](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/r\_o\_p/)(PIPEDA)&#x20;
+* [The Canadian Personal Information Protection and Electronic Documents Act ](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/r_o_p/)(PIPEDA)&#x20;
 * [General Data Protection Regulation](https://gdpr.eu/) (GDPR)
 
 Because SanteDB provides a platform for implementation of many different use cases in many different legislative environments, it is the responsibility of implementers to properly configure the necessary controls in the SanteDB product to match their use case. This article provides brief guidance on how such configurations are made to the underlying privacy control system using legislatively agnostic terminology.
@@ -77,7 +77,7 @@ The settings listed above can be propagated to dCDR instances by populating the 
 
 This can also be set using the Configuration Tool by navigating to `Messaging > Administrative Management Interface`
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### In Configuration Tool
 
@@ -153,7 +153,7 @@ Once configured, privacy officers can use the SanteDB administration panel to re
 
 ### Limiting Data Retention
 
-Limitation of the retention of data (including audits, and any CDR clinical data) is handled by the [Data Archiving Service](../../../developers/server-plugins/implementing-.net-features/service-definitions/data-archiving-service.md) and ensuring that the [Data Retention Job](http://santesuite.org/assets/doc/net/html/T\_SanteDB\_Core\_Jobs\_DataRetentionJob.htm) is enabled and scheduled. Generally, this process involves:
+Limitation of the retention of data (including audits, and any CDR clinical data) is handled by the [Data Archiving Service](../../../developers/server-plugins/implementing-.net-features/service-definitions/data-archiving-service.md) and ensuring that the [Data Retention Job](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Jobs_DataRetentionJob.htm) is enabled and scheduled. Generally, this process involves:
 
 * Determine the appropriate retention parameters which are required such as cutoff dates for archiving or purging the data, lookups, etc.
 * Determine the types of data to which the retention policies apply (Patients, Observations, etc.) and configuring the appropriate retention strategies.&#x20;

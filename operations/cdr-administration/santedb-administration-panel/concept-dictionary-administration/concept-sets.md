@@ -22,7 +22,7 @@ Concepts are administered through the **Concept Set** administration page. Conce
 
 When an administrator visits the **Concept Sets** page in SanteDB, they are presented with a list of concept sets which are registered with their SanteDB instance.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Administrators may use this page to:
 
@@ -35,7 +35,7 @@ Administrators may use this page to:
 
 Administrators can create a concept set by selecting the **Create** option. This will display a form of minimal properties for establishing a new concept set.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The fields are as follows:
 
@@ -45,7 +45,7 @@ The fields are as follows:
 
 Viewing a concept set will allow administrators see members of the set and modify the core properties.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Administrators can **export** the concept into any formats (XLSX, CSV, HTML) for consumption in third party systems. The concept set can also be **download** into a dataset format file for import into another SanteDB instance.
 
@@ -55,21 +55,21 @@ Concept properties can be eited using the concept set properties grid edit optio
 
 Concepts can be added to the concept set using the **Add** option in the **Concept Set Expansion** panel. The interface will show a modal allowing the administrator to add an existing concept to the set or define a new concept.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Concepts may be added one at a time, or multiples using the expanded add button action.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once done adding, the concept set is displayed with the concept and the owning set.
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Composing Concept Sets
 
 A concept set can also be composed from other concept sets. Concept set composition is performed using the **Compose** option.
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Composition of a concept set is either:
 
@@ -78,7 +78,7 @@ Composition of a concept set is either:
 
 The example above the example concept set will include all concepts in the **Act Status** set with the exclusion of **Concept Status**. When saving, the concept set expansion window is updated.
 
-<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Included concepts from other sets will have their **Member of Set** column populated with the set from which the concept is drawn and cannot be manually removed from the set. Additionally the **Composition** field will be updated to include all registered concept set compositions.
 

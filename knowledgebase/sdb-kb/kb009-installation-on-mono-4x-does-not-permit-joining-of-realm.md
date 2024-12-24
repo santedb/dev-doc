@@ -10,7 +10,7 @@
 
 * When joining the realm you receive an error which says : "The realm cannot be contacted"
 
-**Cause:**The cause of this is Mono 4.x lacks support for some of the .NET 4.5 features that the disconnected client uses. Namely, the remote certificate validation callback on the Mono 4.x framework throws a Missing Method Exception.
+**Cause:**&#x54;he cause of this is Mono 4.x lacks support for some of the .NET 4.5 features that the disconnected client uses. Namely, the remote certificate validation callback on the Mono 4.x framework throws a Missing Method Exception.
 
 **Solution:**
 
@@ -24,6 +24,5 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-* On MacOS 
-  * Download [http://www.mono-project.com/download/\#download-mac](http://www.mono-project.com/download/#download-mac)
-
+* On MacOS&#x20;
+  * Download [http://www.mono-project.com/download/#download-mac](http://www.mono-project.com/download/#download-mac)

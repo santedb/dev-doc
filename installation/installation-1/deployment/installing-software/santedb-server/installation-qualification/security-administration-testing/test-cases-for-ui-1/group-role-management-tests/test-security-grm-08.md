@@ -21,7 +21,7 @@ After a **Policy** is added to the list of **Assigned Policies**, its **Permissi
 
 ## Actions/Steps
 
-1\. Toggle **Permission** to **Elevate**, corresponding to the **Policy** having elevated permission**.**
+1\. Toggle **Permission** to **Elevate**, corresponding to the **Policy** having elevated permissio&#x6E;**.**
 
 ![](<../../../../../../../../../.gitbook/assets/image (374).png>)
 

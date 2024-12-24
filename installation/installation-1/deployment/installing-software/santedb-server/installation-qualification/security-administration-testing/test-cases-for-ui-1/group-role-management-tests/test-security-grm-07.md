@@ -21,7 +21,7 @@ After a **Policy** is added to the list of **Assigned Policies**, its **Permissi
 
 ## Actions/Steps
 
-1\. Toggle **Permission** to **Denied**, corresponding to the **Policy** having denied permission**.**
+1\. Toggle **Permission** to **Denied**, corresponding to the **Policy** having denied permissio&#x6E;**.**
 
 ![](<../../../../../../../../../.gitbook/assets/image (387).png>)
 

@@ -331,6 +331,8 @@
 * [SanteEMR](user-guides-and-training/santeemr/README.md)
   * [EMR Administration](user-guides-and-training/santeemr/emr-administration/README.md)
     * [Care Pathways](user-guides-and-training/santeemr/emr-administration/care-pathways.md)
+    * [Visit Types & Flows](user-guides-and-training/santeemr/emr-administration/visit-types-and-flows.md)
+    * [Clinical Templates](user-guides-and-training/santeemr/emr-administration/clinical-templates.md)
 * [SanteGuard](user-guides-and-training/santeguard.md)
 
 ## Developers
@@ -500,7 +502,7 @@
 ## Knowledgebase
 
 * [Knowledgebase](knowledgebase/sdb-kb/README.md)
-  * [SanteDB 2.1.161+ on PostgreSQL 10 returns "websearch\_to\_tsquery" error](knowledgebase/sdb-kb/santedb-2.1.161+-on-postgresql-10-returns-websearch\_to\_tsquery-error.md)
+  * [SanteDB 2.1.161+ on PostgreSQL 10 returns "websearch\_to\_tsquery" error](knowledgebase/sdb-kb/santedb-2.1.161+-on-postgresql-10-returns-websearch_to_tsquery-error.md)
   * [Upgrading SanteDB iCDR with large databases](knowledgebase/sdb-kb/upgrading-santedb-icdr-with-large-databases.md)
   * [Upgrading Gateway to SanteDB Langley (v2.0.30+) from SanteDB Kelowna and earlier](knowledgebase/sdb-kb/upgrading-gateway-to-santedb-langley-v2.0.30+-from-santedb-kelowna-and-earlier.md)
   * [When sending a National Scoped ID in PID-19 (SSN) you receive "AuthorityUuid" missing error](knowledgebase/sdb-kb/when-sending-a-national-scoped-id-in-pid-19-ssn-you-receive-authorityuuid-missing-error.md)

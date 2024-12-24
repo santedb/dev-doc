@@ -24,17 +24,17 @@ Once downloaded, visit the SanteMPI administration console and import the datase
 
 Once uploaded - administrators will see the dataaset scheduled for import:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 Pressing the **Run Scheduled** will setup the identity domains.
 
 Following this step, the ONC dataset files can be uploaded, when uploading a dataset file, be sure to set the type of file to **ONC Patient Matching Challenge** as pictured below:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the files are uploaded, you can run the import.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The seeding of the entire ONC patient dataset can take upwards of 12 hours depending on the complexity of your matching configuration.

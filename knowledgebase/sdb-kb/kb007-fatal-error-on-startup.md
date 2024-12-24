@@ -1,7 +1,7 @@
 # Fatal Error on Startup
 
 **Issue:** When restarting the application after a hard crash (one where the application closes), you receive an error:\
-_A serious error occurred during startup. OpenIZ Mobile cannot continue. Please reference the following error code when seeking help :: << error code >>_
+&#xNAN;_&#x41; serious error occurred during startup. OpenIZ Mobile cannot continue. Please reference the following error code when seeking help :: << error code >>_
 
 **Applies To:**
 
@@ -28,16 +28,16 @@ _A serious error occurred during startup. OpenIZ Mobile cannot continue. Please 
     ![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb007-runbrainbug.png)
 9. You will be asked to backup. _**DO NOT ENTER A PASSWORD**_![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb007-fullbackup.png)
 10. If successful, brainbug will create a directory called **mycrash.ab** on your desktop.
-11. Send this file to your support personnel and they will be able to extract the tablet crash files and data, If you do not have a support organization you can follow these steps: 
-    1. Run the brainbug tool again to extract the file: **brainbug --extract=.\mycrash --bkfile=mycrash.ab** 
-    2. In the directory .\mycrash\apps\tz.timr.mobile\f (or org.openiz.core if using vanilla) you will notice two folders: .config and .local, make a note of where these folders are. 
-    3. Reset the minims configuration using **minims --reset** 
-    4. Run the MINIMS debugging tool using **minims --ref="C:\Program Files (x86)\Mohawk College\OpenIZ\sdk\org.openiz.core.pak" --applet=.\\** 
-    5. Join the security realm _**to which you want to push the recovered data**_. Be sure to subscribe to the right facility. 
-    6. Stop the mini-ims server by pressing **Enter** 
-    7. Start the mini-ims server again (you can press the up arrow key in windows) 
+11. Send this file to your support personnel and they will be able to extract the tablet crash files and data, If you do not have a support organization you can follow these steps:&#x20;
+    1. Run the brainbug tool again to extract the file: **brainbug --extract=.\mycrash --bkfile=mycrash.ab**&#x20;
+    2. In the directory .\mycrash\apps\tz.timr.mobile\f (or org.openiz.core if using vanilla) you will notice two folders: .config and .local, make a note of where these folders are.&#x20;
+    3. Reset the minims configuration using **minims --reset**&#x20;
+    4. Run the MINIMS debugging tool using **minims --ref="C:\Program Files (x86)\Mohawk College\OpenIZ\sdk\org.openiz.core.pak" --applet=.\\**&#x20;
+    5. Join the security realm _**to which you want to push the recovered data**_. Be sure to subscribe to the right facility.&#x20;
+    6. Stop the mini-ims server by pressing **Enter**&#x20;
+    7. Start the mini-ims server again (you can press the up arrow key in windows)&#x20;
     8. When asked to update press the cancel button. You will notice the mini-ims will start to do an initial sync![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb007-minimsinitialsync.png)
-    9. Cancel this sync by pressing enter. 
-    10. Copy the following files from your back to **%localappdata%\MINIMS**![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb007-copydatabases.png) 
+    9. Cancel this sync by pressing enter.&#x20;
+    10. Copy the following files from your back to **%localappdata%\MINIMS**![](https://raw.githubusercontent.com/santedb/dev-doc/master/.gitbook/assets/kb007-copydatabases.png)&#x20;
     11. Restart the mini-ims with the specified parameters from step vii.
 12. You can now access your data as though it was on the tablet (including forcing a synchronization).
