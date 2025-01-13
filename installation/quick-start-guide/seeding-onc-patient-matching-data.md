@@ -30,7 +30,7 @@ Pressing the **Run Scheduled** will setup the identity domains.
 
 Following this step, the ONC dataset files can be uploaded, when uploading a dataset file, be sure to set the type of file to **ONC Patient Matching Challenge** as pictured below:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the files are uploaded, you can run the import.
 

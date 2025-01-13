@@ -39,6 +39,14 @@ Next, administrators should specify the criteria under which the notification is
 * Event(s) - The persistence events when the recipient should be notified
 * When Criteria - The filters for new events which should be applied when new data is received. These dictate when the recipient will be notified.
 
+#### Preventing Bouncing
+
+Sometimes when a SanteDB product notifies an external party of a registration of an event, the notified party will respond back with updates it would like to perform. In this scenario, we do not want the SanteDB server to re-send the object back to the system which made the change.&#x20;
+
+To prevent this behavior, filter the subscription based on the principal/application that last created the version of the object. For example, if the API key of the object which is the target of the notification is `APP_THAT_SENDS_STUFF`we can instruct the pub/sub layer to prevent sending any updates received by `APP_THAT_SENDS_STUFF`to the application:
+
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ### Endpoint Settings
 
 The endpoint settings are used to control how and when the messages are sent to the remote endpoint.&#x20;

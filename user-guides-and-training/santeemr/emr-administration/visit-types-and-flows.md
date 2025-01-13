@@ -8,7 +8,7 @@ Whenever a patient is checked-in for a visit in SanteEMR, the visit classificati
 
 SanteEMR's state flows are linked to encounter types using the **Visit Types & Flows** administrative screen on the **SanteEMR** area of the administrative panel.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating/Editing a Visit Type
 

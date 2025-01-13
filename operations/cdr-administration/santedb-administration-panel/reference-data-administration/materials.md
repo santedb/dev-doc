@@ -26,7 +26,7 @@ Here:
 
 To manage materials, administrators should use **Reference Data > Materials** this will present the administrator with a list of all top level material definitions in SanteDB.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The administrator can use this screen to:
 

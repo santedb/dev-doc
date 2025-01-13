@@ -132,7 +132,7 @@ Using this summary view, administrators may:
 
 To create a new stock store, the administrator should use the **Create** option, this will allow the administrator to enter the details about the new store:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The fields for the stock containers are:
 
