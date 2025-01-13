@@ -19,6 +19,22 @@ It is recommended to use BI assets for reports within your applet as these compo
 * User Interfaces as Report - Meaning the UI can use the same data to construct charts, tables, etc.
 * FHIR Measure Report - Meaning that FHIR services can obtain the data from the view as  a measure report (In the roadmap)
 
+## Editing BI Assets
+
+Editing BI assets is greatly assisted with the use of the SanteDB schemas. BI Assets are available from the SanteDB community server and can be referenced in your favorite XML editor with:
+
+```xml
+<BiViewDefinition xmlns="http://santedb.org/bi" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://santedb.org/bi http://santedb.org/schema/v3.0/BusinessIntelligence.xsd"
+>
+</BiViewDefinition>
+```
+
+This will enable auto completion and validation on your instance
+
+<figure><img src="../../../../../../.gitbook/assets/image (542).png" alt=""><figcaption></figcaption></figure>
+
 ## Topics
 
 {% content-ref url="data-sources.md" %}

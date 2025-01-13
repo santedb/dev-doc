@@ -10,6 +10,18 @@ Next, you'll need to clone or create an applet. You can clone the starter applet
 
 ![](<../../../../.gitbook/assets/image (193).png>)
 
+## Configure a SanteDB iCDR in Debug Mode
+
+You can configure a SanteDB iCDR (such as the vanilla iCDR or the SanteMPI) to load your applet definitions from the file system. To do so, navigate to `Development > Developer Options`and enable the debug repository, set the solution file to one of the following:
+
+* For Administrative Panel Development: `C:\Program Files\Sante Suite\SDK\santedb.admin.sln`
+* For Generic Development: `C:\Program Files\Sante Suite\SDK\santedb.core.sln`&#x20;
+* For EMR Development: `C:\Program Files\Sante Suite\SDK\santedb.emr.sln`
+
+<figure><img src="../../../../.gitbook/assets/image (544).png" alt=""><figcaption></figcaption></figure>
+
+Then set the `Applets To Debug`to the path where you cloned the starter code
+
 ## Hello World!
 
 If you re-run the command `sdb-ade --ref=santedb.admin.sln.pak --applet=path-to-applet-starter` you'll notice that upon login you see the administrative panel. This is because the --ref= is instructing the SDK that your module is extending the admin panel.
