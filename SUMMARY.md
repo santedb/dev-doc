@@ -339,7 +339,7 @@
 
 * [Extending & Customizing SanteDB](developers/extending-santesuite/README.md)
 * [Getting Started](developers/extending-santesuite/extending-santedb/applets/getting-started.md)
-* [SanteDB Schemas](developers/santedb-schemas.md)
+* [SanteDB XML Schemas](developers/santedb-xml-schemas.md)
 * [Applets](developers/extending-santesuite/extending-santedb/applets/README.md)
   * [Applet Use and Lifecycle](developers/extending-santesuite/extending-santedb/applets/applet-use-and-lifecycle.md)
   * [Applet SDK Components](developers/extending-santesuite/extending-santedb/applets/applet-sdk/README.md)
@@ -358,6 +358,7 @@
       * [Views](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/views.md)
       * [Data Marts](developers/applets/business-intelligence-bi-assets/bi-asset-definitions/data-marts.md)
       * [Reports](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-asset-definitions/reports.md)
+      * [Indicators](developers/applets/business-intelligence-bi-assets/bi-asset-definitions/indicators.md)
     * [BI Render Controls](developers/extending-santesuite/extending-santedb/applets/business-intelligence-bi-assets/bi-render-controls.md)
   * [Localization](developers/extending-santesuite/extending-santedb/applets/localization.md)
   * [Customization & Branding](developers/extending-santesuite/extending-santedb/applets/customization-and-branding.md)

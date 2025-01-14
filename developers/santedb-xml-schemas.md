@@ -1,8 +1,10 @@
-# SanteDB Schemas
+# SanteDB XML Schemas
 
 When editing an asset in SanteDB which is in XML format, the use of an XML Schema can greatly assist the development process. The SanteDB community provides schemas for developers to use in their XML files at `http://santedb.org/schema/v3.0`or `http://santedb.org/schema/v2.2`.
 
 ## Schemas
+
+The schema location in the table below assumes a root of `http://santedb.org/schema/v3.0/`for example `http://santedb.org/schema/v3.0/Applet.xsd`would reference the applet manifest schema.
 
 | Schema Location            | Uses                                                                                                                                                                                                                                |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
