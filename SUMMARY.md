@@ -337,8 +337,9 @@
 
 ## Developers
 
-* [Extending SanteSuite](developers/extending-santesuite/README.md)
+* [Extending & Customizing SanteDB](developers/extending-santesuite/README.md)
 * [Getting Started](developers/extending-santesuite/extending-santedb/applets/getting-started.md)
+* [SanteDB Schemas](developers/santedb-schemas.md)
 * [Applets](developers/extending-santesuite/extending-santedb/applets/README.md)
   * [Applet Use and Lifecycle](developers/extending-santesuite/extending-santedb/applets/applet-use-and-lifecycle.md)
   * [Applet SDK Components](developers/extending-santesuite/extending-santedb/applets/applet-sdk/README.md)

@@ -2,6 +2,8 @@
 
 This article will illustrate the use of the SanteDB dCDR SDK to write a portable SanteDB dCDR applet.&#x20;
 
+## Obtain & Install the Software Development Kit&#x20;
+
 You should follow the [installing-the-dcdr-sdk.md](../../../../installation/installation-1/deployment/installing-software/disconnected-gateway/installing-the-dcdr-sdk.md "mention") before completing this exercise.
 
 ## Obtain the Starter Code
