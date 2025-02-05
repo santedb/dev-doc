@@ -66,6 +66,24 @@ The endpoint settings are used to control how and when the messages are sent to 
 | fhir-rest-hook                  | Send messages using FHIR REST operations such as POST, PUT, DELETE.                                    | <ul><li>Content-Type - Controls the format with <code>application/fhir+xml</code> sending XML format messages and <code>application/fhir+json</code> sending JSON</li></ul>                                                                                                                                                                                          |
 | hl7-pat-id-source (SanteDB 3.x) | Sends LLP messages to a remote HL7v2 receiver using ADT^A01 , ADT^A08 and ADT^A40 (optionally ADT^A38) | <ul><li>MSH8 - The MSH8 security setting to be used</li><li>Transport - <code>sllp</code> to use secure LLP and <code>llp</code> to use unsecure llp</li><li>MSH34 - The MSH3 | MSH4 to send (default is the SanteDB server's)</li><li>SendAs - <code>Client</code> if sending ADT^A01, ADT^A08, ADT^A40 messages, or <code>Server</code> if using ADT^A38</li></ul> |
 
+## Authenticator Flows
+
+The HL7 FHIR integrators can leverage a dispatch authenticator implementing a `IFhirClientAuthenticator`implementation. By default, SanteDB ships with an OAUTH authenticator which allows the FHIR dispatcher to reach out to an OAUTH service to obtain a token prior to issuing the FHIR message request. To enable this, add the following properties to your channel configuration
+
+| Setting                   | Value                             | Description                                                                                                                                        |
+| ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$authenticationProvider` | `oauth`                           | Sets the authentication provider to OAUTH                                                                                                          |
+| `$oauth.server`           | URL                               | The base URL to the OAUTH server. The provider will use this value and attempt to obtain the `.well-known/openid-configuration`file from the path  |
+| `$oauth.client_id`        | String                            | The client identifier to pass in all requests                                                                                                      |
+| `$oauth.client_secret`    | String                            | The client secret to use on the OAUTH server                                                                                                       |
+| `$oauth.grant_type`       | `password`or `client_credentials` | The grant type to use for the issuing of requests to the server. This is how the sending SanteDB server authenticates itself to the remote         |
+| `$oauth.username`         | String                            | When using a password grant, the username to authenticate as.                                                                                      |
+| `$oauth.password`         | String                            | When using a password grant, the password to authenticate as.                                                                                      |
+| `$oauth.scope`            | String                            | The scope names which the SanteDB server should request when sending data to the server.                                                           |
+| `$oauth.novalidate`       | True or False                     | When set to True the issuing SanteDB server will not attempt to validate the token passed back from the issuing server.                            |
+
+
+
 ## Related Topics
 
 {% content-ref url="../../../../developers/santedb-software-publishers/publish-subscribe.md" %}
