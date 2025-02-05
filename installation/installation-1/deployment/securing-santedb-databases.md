@@ -91,7 +91,7 @@ To enable, ALE, in a supported `<section>` element in your configuration file, a
       storeName="My" 
       storeLocation="CurrentUser" 
       findValue="e3829c6d1db995abcc4fc0a1a7cde9445e411e10"/>
-  <saltSeed>AEAD43FD3E4FE3FDB432F032348090232F</saltSeed>
+  <ivSeed>AEAD43FD3E4FE3FDB432F032348090232F</ivSeed>
   <!-- Need exact matching -->
   <field mode="deterministic">entity.identifier</field>
   <!-- Need exact matching -->
