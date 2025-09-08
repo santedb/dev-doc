@@ -586,7 +586,7 @@ Multiline expression:
 hdsi($$
    expression
 $$ 
-   scoped-to (context|proposal) 
+   scoped-to (context|proposal|fact "Name Of Fact") 
    negated
 )
 ```
@@ -594,7 +594,7 @@ $$
 Singleline expression:
 
 ```
-hdsi("expression here" scoped-to (context|proposal) negated)
+hdsi("expression here" scoped-to (context|proposal|fact "Name of Fact") negated)
 ```
 {% endtab %}
 
@@ -617,6 +617,8 @@ end fact
 ```
 {% endtab %}
 {% endtabs %}
+
+When the option `scoped-to fact "Name of Fact"` the HDSI expression is evaluated against the value of the fact. This is useful if your CDSS rules need to be chained off another fact. For example, `Patient's Last  Administration of HPV` could be chained to `Patient Has Received Dose 2 of HPV` as `hdsi($$ doseSequence=2 $$ scoped-to fact "Patient's Last Administration of HPV"` .
 
 ### C# Expressions
 
@@ -799,6 +801,8 @@ assign hdsi(...) to property
 assign "name of fact" to property
 // Assign a fixed value to a property
 assign const value to property
+// Assign a value to a fact property
+assign XXXX to fact "Name of Fact" property
 ```
 {% endtab %}
 
@@ -830,6 +834,8 @@ end rule
 ```
 {% endtab %}
 {% endtabs %}
+
+Assignment to another fact can be used to assign a value to a fact that has been computed. This is not recommended as the CDSS only uses the synchronization format and deeply linked objects may not be supported.
 
 ### Raise an Alert
 
@@ -1008,6 +1014,17 @@ end protocol
 ```
 {% endtab %}
 {% endtabs %}
+
+### CDSS Tags
+
+CDSS tags can be used to control the output of the CDSS with the user interface elements. These tags are listed in the Table below.
+
+| Tag                        | Value  | Behavior                                                                                                                                        |
+| -------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$cdss.overwriteComponent` | UUID   | The UUID of the `relationship[HasComponent]` which should be overwritten with the output / proposal. Used to assign a proposal to another data. |
+| `$cdss.minValue`           | Varied | The minimum value of the observation.                                                                                                           |
+| `$cdss.maxValue`           | Varied | The maximum value of the observation.                                                                                                           |
+| `$cdss.valueset`           | String | The name of the concept set that the user interface should use to populate the drop-down values for the proposal.                               |
 
 ## Data Blocks
 
