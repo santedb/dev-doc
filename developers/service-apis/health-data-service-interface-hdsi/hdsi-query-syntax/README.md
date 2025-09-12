@@ -139,7 +139,7 @@ telecom[use.mnemonic=Home&amp;type.mnemonic=Internet].value=bob@bob.com
 ```
 
 {% hint style="warning" %}
-When submitting the request via a string or via HTTP directly the `=` in the guard expression must be URL escaped value of `%3d`
+When submitting the request via a string or via HTTP directly the `=` in the guard expression must be URL escaped value of `%3d`or you may use the `:` character in a guard expression as a shortcut, for example: `name[use.mnemonic:Legal]`&#x20;
 {% endhint %}
 
 ## Casting
