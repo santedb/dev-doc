@@ -620,6 +620,70 @@ end fact
 
 When the option `scoped-to fact "Name of Fact"` the HDSI expression is evaluated against the value of the fact. This is useful if your CDSS rules need to be chained off another fact. For example, `Patient's Last  Administration of HPV` could be chained to `Patient Has Received Dose 2 of HPV` as `hdsi($$ doseSequence=2 $$ scoped-to fact "Patient's Last Administration of HPV"` .
 
+### Data Query&#x20;
+
+The `query(` operation can be used to retrieve data from an object or element associated with the target. The query element is expressed as:
+
+{% tabs %}
+{% tab title="CDSS" %}
+```
+query(
+    from hdsi($$ expression $$)
+    where hdsi($$ expression $$)
+    select [first|last] hdsi($$ expression $$)
+    order by hdsi($$ expression $$)
+```
+{% endtab %}
+
+{% tab title="Example" %}
+```
+// Extract the latest temperature observation from the patient
+define fact "Patient's Last Temperature Observation" as 
+    query(
+        from hdsi($$ participation[RecordTarget] $$)
+        where hdsi($$ 
+            source@QuantityObservation.typeConcept.mnemonic=VitalSign-Temperature
+        $$)
+        select last hdsi($$ source@QuantityObservation $$)
+        order by hdsi($$ actTime $$)
+end fact
+```
+{% endtab %}
+{% endtabs %}
+
+This fact can then be used in other facts, for example, if we extend the fact above, we can interpret the weight:
+
+```
+define fact "Patient's Last Temperature Observation Was Low" 
+    having type bool
+    as 
+        hdsi($$ value<35.4 $$ scoped-to fact "Patient's Last Temperature Observation")
+end fact
+```
+
+The query `from` clause can also be scoped ot a fact. For example, to extract the patient's mother's last temperature:
+
+```
+// Patient's Mother
+define fact "Patient's Mother" as 
+    query(
+        from hdsi($$ relationship[Mother] $$)
+        where hdsi($$ target.deceasedDate=null $$)
+        select first hdsi($$ target@Patient $$)
+    )
+end fact
+
+define fact "Patient's Mother's Last Temperature" as
+    query(
+        from hdsi($$ participation[RecordTarget] $$ scoped-to fact "Patient's Mother")
+        where hdsi($$ 
+            source@QuantityObservation.typeConcept.mnemonic=VitalSign-Temperature
+        $$)
+        select last hdsi($$ source@QuantityObservation $$)
+        order by hdsi($$ actTime $$)
+end fact
+```
+
 ### C# Expressions
 
 There arise some instances in your decision logic where you must execute more advanced operations such as calculations, date subtraction, and string formatting. The CDSS engine allow the execution of a limited subset of expressions using the C# language. The subset allows for CDSS rule developers to:
