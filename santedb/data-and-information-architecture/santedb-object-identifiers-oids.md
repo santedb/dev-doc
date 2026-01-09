@@ -25,7 +25,125 @@ The root of SanteDB OIDs from  the OpenIZ root `1.3.6.1.4.1.33349.3.1.5.9`
 
 Privacy and security OIDs assigned in the `1.3.6.1.4.1.33349.3.1.5.9.2` namespace represent policies. These policies are expressed in OIDs as they are hierarchical in nature. The default OIDs in this namespace are:
 
-<table><thead><tr><th width="64">OID</th><th width="64">Policy</th></tr></thead><tbody><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2</td><td>Unrestricted All</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0</td><td>Unrestricted Administrative Function</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.1</td><td>Change Password</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.2</td><td>Create Role</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.3</td><td>Alter Role</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.4</td><td>Create Identity</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.5</td><td>Create Device</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.6</td><td>Create Application</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.7</td><td>Administer Concept Dictionary</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.8</td><td>Alter Identity</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.9</td><td>Alter Policy</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.10</td><td>Administer Data Warehouse</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1</td><td>Login</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0</td><td>Login as a Service</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2</td><td>Unrestricted Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2.0</td><td>Query Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2.1</td><td>Write Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2.2</td><td>Delete Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2.3</td><td>Read Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2.4</td><td>Export Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.999</td><td>Override Disclosure</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4</td><td>Unrestricted Metadata</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.0</td><td>Read Metadata</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.10</td><td>Access Client Administrative Function</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.5</td><td>Unrestricted Data Warehouse</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.5.0</td><td>Write Warehouse Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.5.1</td><td>Delete Warehouse Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.5.2</td><td>Read Warehouse Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.5.3</td><td>Query Warehouse Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3</td><td>Restricted Information</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.1.0</td><td>Write Materials</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.1.1</td><td>Delete Materials</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.0.1.2</td><td>Read Materials</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.0.1.3</td><td>Query Materials</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.2.0</td><td>Write Places &#x26; Orgs</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.2.1</td><td>Delete Places &#x26; Orgs</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.0.2.2</td><td>Read Places &#x26; Orgs</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.4.0.2.3</td><td>Query Places &#x26; Orgs</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.11</td><td>Access Audit Log</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.12</td><td>Administer Applets</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.13</td><td>Assign Policy</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.2.5</td><td>Elevate Clinical Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.1</td><td>Login for Password Reassignment</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.600</td><td>Special Security Elevation</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.600.1</td><td>Change Security Challenge Question</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.2</td><td>Allow Impersonation of Application</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.4.1</td><td>Create Local Users</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.8.1</td><td>Alter Local Users</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.18</td><td>Manage System Backups</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.18.1</td><td>Create System Backup on (Private or Public)</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.18.1.1</td><td>Create Private System Backup</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.19</td><td>Unrestricted Security Certificate Management</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.19.1</td><td>Issue New Certificates</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.19.2</td><td>Revoke Certificates</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.19.3</td><td>Assign Certificate to Security Identity</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15</td><td>Alter System Configuration</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.17</td><td>Administer Internal Mail / Messages</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.20</td><td>Manage Foreign Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.500</td><td>Export CDR Data</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.1</td><td>Unrestricted Match Configuration</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.1.1</td><td>Alter Match Configurations</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.1.2</td><td>Disable/Enable Match Configurations</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0</td><td>OAUTH Login</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1</td><td>OAUTH client_credentials flow permission</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0</td><td>OAUTH client_credentials flow permission no device cred</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.2</td><td>OAUTH password flow permission</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.2.0</td><td>OAUTH password flow permission no device cred</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.3</td><td>OAUTH authoization code grant flow permission</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.3.0</td><td>OAUTH authoization code grant flow permission no device cred</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.4</td><td>OAUTH Password Reset grant (extended permission)</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.4.0</td><td>OAUTH Password Reset grant (extended permission) no device cred</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2</td><td>Unrestricted Clinical Protocol Configuration</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2.0</td><td>Create Clinical Protocol</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2.1</td><td>Alter Clinical Protocol</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2.2</td><td>Delete Clinical Protocol</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.14</td><td>Unrestricted PubSub Administration</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.14.1</td><td>Create/Alter PubSub Subscriptions</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.14.2</td><td>Disable/Enable PubSub Subscriptions</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.14.3</td><td>Delete PubSub Subscriptions</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.14.4</td><td>Read PubSub Subscriptions</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.0.16</td><td>Unrestricted Dispatcher Queue</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.6</td><td>Unrestricted MDM</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.6.1</td><td>Write MDM Master</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.6.2</td><td>Read MDM Locals</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.6.3</td><td>Merge MDM Master</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.6.4</td><td>Establish MDM Record of Truth</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.2.6.4.1</td><td>Edit Existing MDM Record of Truth</td></tr></tbody></table>
+| OID                                   | Policy                                                          |
+| ------------------------------------- | --------------------------------------------------------------- |
+| 1.3.6.1.4.1.33349.3.1.5.9.2           | Unrestricted All                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0         | Unrestricted Administrative Function                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.1       | Change Password                                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.10      | Administer Data Warehouse                                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.11      | Access Audit Log                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.12      | Administer Applets                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.13      | Assign Policy                                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.14      | Unrestricted PubSub Administration                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.14.1    | Create/Alter PubSub Subscriptions                               |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.14.2    | Disable/Enable PubSub Subscriptions                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.14.3    | Delete PubSub Subscriptions                                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.14.4    | Read PubSub Subscriptions                                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15      | Alter System Configuration                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.1    | Unrestricted Match Configuration                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.1.1  | Alter Match Configurations                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.1.2  | Disable/Enable Match Configurations                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2    | Unrestricted Clinical Protocol Configuration                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2.0  | Create Clinical Protocol                                        |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2.1  | Alter Clinical Protocol                                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.2.2  | Delete Clinical Protocol                                        |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.15.3    | Alter Clinical Data Templates                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.16      | Unrestricted Dispatcher Queue                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.17      | Administer Internal Mail / Messages                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.18      | Manage System Backups                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.18.1    | Create System Backup on (Private or Public)                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.18.1.1  | Create Private System Backup                                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.19      | Unrestricted Security Certificate Management                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.19.1    | Issue New Certificates                                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.19.2    | Revoke Certificates                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.19.3    | Assign Certificate to Security Identity                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.2       | Create Role                                                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.20      | Manage Foreign Data                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.21      | Unrestricted Access to Service Logs                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.21.1    | Read Service Logs                                               |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.21.2    | Delete Service Logs                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.22      | Unrestricted Job Management                                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.22.0    | Read System Jobs                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.22.1    | Start/Run System Job                                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.22.2    | Alter System Job Schedule                                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.22.3    | Register New System Job                                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.3       | Alter Role                                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.4       | Create Identity                                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.4.1     | Create Local Users                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.5       | Create Device                                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.6       | Create Application                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.7       | Administer Concept Dictionary                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.8       | Alter Identity                                                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.8.1     | Alter Local Users                                               |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.0.9       | Alter Policy                                                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1         | Login                                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0       | Login as a Service                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0     | OAUTH Login                                                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1   | OAUTH client\_credentials flow permission                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0 | OAUTH client\_credentials flow permission no device cred        |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.2   | OAUTH password flow permission                                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.2.0 | OAUTH password flow permission no device cred                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.3   | OAUTH authoization code grant flow permission                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.3.0 | OAUTH authoization code grant flow permission no device cred    |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.4   | OAUTH Password Reset grant (extended permission)                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.4.0 | OAUTH Password Reset grant (extended permission) no device cred |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.1     | Login for Password Reassignment                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.1.0.2     | Allow Impersonation of Application                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.10        | Access Client Administrative Function                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.100       | Access All SanteDB Tools                                        |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.100.1     | Access SanteDB Administrator Panel                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.100.2     | Access SanteEMR Clinical Interface                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2         | Unrestricted Clinical Data                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.0       | Query Clinical Data                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.1       | Write Clinical Data                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.2       | Delete Clinical Data                                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.3       | Read Clinical Data                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.4       | Export Clinical Data (PHI)                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.5       | Elevate Clinical Data                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.6       | Unrestricted Non-PHI CDR Acts                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.6.1     | Write Non-PHI CDR Acts                                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.2.6.2     | Read Non-PHI CDR Acts                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.200       | Unrestricted EMR Functions                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.200.1     | Clinic Reporting                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300       | Unrestricted IMS Functions                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1     | Unrestricted Stock Management                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1.0   | View Clinic Stock Information                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1.1   | Alter Clinic Stock Stores                                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1.2   | Perform Stock Count                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1.3   | Manage Clinic Vaccination Sessions                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1.4   | Perform Stock Adjustment                                        |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.1.5   | Perform Stock Store Temperature Monitoring                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.2     | Unrestricted Order Management                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.2.1   | Create or Cancel Order Request                                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.2.2   | Accept and Despatch Order Requests                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.300.2.3   | Accept Order Despatch                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4         | Unrestricted Metadata                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.0       | Read Metadata                                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.0.1.2   | Read Materials                                                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.0.1.3   | Query Materials                                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.0.2.2   | Read Places & Orgs                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.0.2.3   | Query Places & Orgs                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.1.0     | Write Materials                                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.1.1     | Delete Materials                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.2.0     | Write Places & Orgs                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.4.2.1     | Delete Places & Orgs                                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.5         | Unrestricted Data Warehouse                                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.5.0       | Write Warehouse Data                                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.5.1       | Delete Warehouse Data                                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.5.2       | Read Warehouse Data                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.5.3       | Query Warehouse Data                                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.500       | Export CDR Metadata                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.6         | Unrestricted MDM                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.6.1       | Write MDM Master                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.6.2       | Read MDM Locals                                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.6.3       | Merge MDM Master                                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.6.4       | Establish MDM Record of Truth                                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.6.4.1     | Edit Existing MDM Record of Truth                               |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.600       | Special Security Elevation                                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.600.1     | Change Security Challenge Question                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.900       | Login Any Facility                                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.2.999       | Override Disclosure                                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.3           | Restricted Information / Confidential                           |
 
 ## Concept & Vocabulary OIDs
 
