@@ -206,6 +206,12 @@ When evaluating HDSI expressions in the CDSS engine the following additional var
 | `$index`      | Integer | When the `repeat` clause is specified on a rule, this represents the current index of the repetition                                                                      |
 | `$background` | Boolean | When true, indicates that the CDSS rule is being called as part of a background process, when false indicates that the CDSS rule is being executed in the user interface. |
 
+Additionally, any `<fact>` defined in the CDSS definition can be accessed via HDSI using it as a variable, for example if a fact `Patient Mother Date Of Birth` has been defined, the value can be used in the HDSI expression as:
+
+```
+relationship[Mother].target@Person.dateOfBirth=$Patient Mother Date Of Birth&...
+```
+
 ## Extension Functions
 
 The default matching operations may be extended via SanteDB's query extension methods. These methods allow for custom matching parameters. These extension functions are enumerated below (with a discussion on which plugins must be enabled to activate them).
@@ -231,7 +237,7 @@ HDSI query control parameters are prefixed with an underscore. These query param
 
 ## Freetext Search
 
-The `_any` parameter in a search allows clients to execute a filter on any data in the requested resource. The behavior of the `_any` parameter depends on the persistence layer and how the [Broken link](broken-reference "mention") has been configured.
+The `_any` parameter in a search allows clients to execute a filter on any data in the requested resource. The behavior of the `_any` parameter depends on the persistence layer and how the [Broken link](/broken/pages/-MDKigCYsEK9rsyumMOC "mention") has been configured.
 
 * On PostgreSQL this search uses the `tsvector` type to execute web search queries.
 * On SQLite (before version 2.3 of the dCDR) the search uses a simple keyword search. Integration of the Lucene engine is being developed for version 2.3 of the dCDR
