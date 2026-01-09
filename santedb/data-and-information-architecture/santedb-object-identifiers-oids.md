@@ -31,7 +31,118 @@ Privacy and security OIDs assigned in the `1.3.6.1.4.1.33349.3.1.5.9.2` namespac
 
 Concept sets and code systems which are specific to SanteDB existing in the root `1.3.6.1.4.1.33349.3.1.5.9.3` these concept sets are:
 
-<table><thead><tr><th width="64">OID</th><th width="64">Concept Set</th></tr></thead><tbody><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.0</td><td>Concept Status</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.1</td><td>Act Class</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.2</td><td>Act Mood</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.3</td><td>Act Status</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.4</td><td>Act Relationship Type</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.6</td><td>Entity Class</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.7</td><td>Entity Status</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.8</td><td>Entity Relationship Type</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.9</td><td>Address Use</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.10</td><td>Address Component Type</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.11</td><td>Name Use</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.18</td><td>Name Component Type</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.12</td><td>Telecom Address Use</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.14</td><td>Service Code</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.15</td><td>Industry Code</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.16</td><td>Administrative Genders</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.17</td><td>Role Status</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.23</td><td>Family members of children</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.24</td><td>Spousal Family Members</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.60</td><td>Living Arrangement</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.61</td><td>Marital Status</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.62</td><td>Ethnicities</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.63</td><td>Religions</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.1.39</td><td>Allergies and Intolerance Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.5</td><td>Act Interpretation</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.19</td><td>Reason Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.37</td><td>Protocol Violation Reason</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.50</td><td>Protocol Violation - Don't Reschedule</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.26</td><td>Administration Act Type Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.1.41</td><td>Act Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.66</td><td>Place Classifications</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.13</td><td>Telecom Address Type</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.1.53</td><td>Adverse Event Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.32</td><td>AdministrationSite</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.88</td><td>Body Site Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.51</td><td>Diagnosis Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.44</td><td>Causes of Death</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.70</td><td>Encounter Type Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.80</td><td>Identifier Type Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.59</td><td>Language Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.65</td><td>Master Data Model Relationship Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.84</td><td>Country Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.85</td><td>Nationality Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.77</td><td>Occupation Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.45</td><td>Observation Act Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.53</td><td>Problem or Concern Observation Types</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.79</td><td>Relationship Classification</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.29</td><td>Route of administration</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.48</td><td>Security Audit Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.35</td><td>Units of Measure</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.36</td><td>Units of Measure for Weight</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.75</td><td>Units of Measure for Height</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.78</td><td>VIP Status Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.149</td><td>Vaccine Support Materials</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.49</td><td>Material Type Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.28</td><td>AdministrableDrugForm</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.72</td><td>Delivery Outcome Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.73</td><td>Delivery Method Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.74</td><td>Delivery Location Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.86</td><td>Detected Issue Type</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.30</td><td>Subset of Discharge Disposition (HL7)</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.47</td><td>Subset of Disposition (HL7)</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.64</td><td>Education Levels</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.67</td><td>Name Prefix</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.68</td><td>Name Suffix</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.42</td><td>Null Reason</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.76</td><td>Verification Status</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.55</td><td>Organization Type Concept</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.54</td><td>Place Type Concepts (Sub-Classes)</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.56</td><td>Place Entity Class Code Concepts</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.87</td><td>Procedure Technique Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.90</td><td>Provider Types for Individuals</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.69</td><td>Purposes of Use</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.46</td><td>Reaction Observations</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.71</td><td>Registration Event Type Codes</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.43</td><td>Severity Observation Values</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.25</td><td>Vaccines</td></tr><tr><td>1.3.6.1.4.1.33349.3.1.5.9.3.34</td><td>Vital Signs</td></tr></tbody></table>
+| OID                               | Concept Set                              |
+| --------------------------------- | ---------------------------------------- |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.0     | Concept Status                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.1     | Act Class                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.10    | Address Component Type                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.103   | Patient Status Observation Types         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.104   | Condition Indication Concepts            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.104.1 | Condition Negation Indicator Concepts    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.105   | Equipment Functional Status              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.106   | Unit of Measure (Temperatures)           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.107   | Equipment Failure Reason                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.108   | Pregnancy Complications                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.109   | EMR Encounter Tags                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.11    | Name Use                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.111   | Tetanus Immunity Status Codes            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.115   | Narrative Note Types                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.12    | Telecom Address Use                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.120   | Patient Condition Trigger Codes          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.120.1 | Patient Multi-Condition Codes            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.124   | Pediatric Developmental Disorders        |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.13    | Telecom Address Type                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.13.1  | Human Telecom Address Type               |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.14    | Service Code                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.149   | Vaccine Support Materials                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.15    | Industry Code                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.16    | Administrative Genders                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.165   | Confidential Observation Types           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.17    | Role Status                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.18    | Name Component Type                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.19    | Reason Codes                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.2     | Act Mood                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.23    | Family members of children               |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.24    | Spousal Family Members                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.25    | Vaccines                                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.26    | Administration Act Type Codes            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.27    | Container Type                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.27.1  | Cold Storage Containers                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.28    | AdministrableDrugForm                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.29    | Route of administration                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.3     | Act Status                               |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.30    | Subset of Discharge Disposition (HL7)    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.31    | Drug Administration Units                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.32    | AdministrationSite                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.33    | Drug Administration Units                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.34    | Vital Signs                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.35    | Units of Measure                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.36    | Units of Measure for Weight              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.37    | Protocol Violation Reason                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.38    | Stock Adjustment Reasons                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.38.0  | Stock Act Reasons - Decrease             |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.38.1  | Stock Act Reason Codes - Increase        |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.38.2  | Vaccination Session Adjustment Reasons   |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.39    | Allergies and Intolerance Types          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.4     | Act Relationship Type                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.40    | SupplementCodes                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.41    | Act Types                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.42    | Null Reason                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.43    | Severity Observation Values              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.44    | Causes of Death                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.45    | Observation Act Types                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.46    | Reaction Observations                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.47    | Subset of Disposition (HL7)              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.48    | Security Audit Codes                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.49    | Material Type Codes                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.5     | Act Interpretation                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.50    | Protocol Violation - Don't Reschedule    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.51    | Diagnosis Codes                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.52    | Problem or Concern Observation Types     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.53    | Adverse Event Types                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.54    | Place Type Concepts (Sub-Classes)        |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.54.1  | Facility Type Concepts (Sub-Classes)     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.55    | Organization Type Concept                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.55.1  | Educational Organization Types           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.56    | Place Entity Class Code Concepts         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.59    | Language Codes                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.6     | Entity Class                             |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.60    | Living Arrangement                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.61    | Marital Status                           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.62    | Ethnicities                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.63    | Religions                                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.64    | Education Levels                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.65    | Master Data Model Relationship Types     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.66    | Place Classifications                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.67    | Name Prefix                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.68    | Name Suffix                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.69    | Purposes of Use                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.7     | Entity Status                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.70    | Encounter Type Codes                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.71    | Registration Event Type Codes            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.72    | Delivery Outcome Codes                   |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.73    | Delivery Method Codes                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.74    | Delivery Location Codes                  |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.75    | Units of Measure for Height              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.76    | Verification Status                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.77    | Occupation Types                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.78    | VIP Status Codes                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.79    | Relationship Classification              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.8     | Entity Relationship Type                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.80    | Identifier Type Codes                    |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.82    | Pregnancy Outcomes                       |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.84    | Country Codes                            |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.85    | Nationality Codes                        |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.86    | Detected Issue Type                      |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.87    | Procedure Technique Codes                |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.88    | Body Site Codes                          |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.9     | Address Use                              |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.90    | Provider Types for Individuals           |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.91    | HIV Status Codes                         |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.92    | Syphilis Diagnosis Codes                 |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.94    | Herpes Simplex Virus                     |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.95    | Sexually Transmitted Infectious Diseases |
+| 1.3.6.1.4.1.33349.3.1.5.9.3.99    | Contact Role                             |
 
 ## Community Deployments
 
@@ -39,7 +150,7 @@ Community deployments undertaken by SanteSuite Inc. or SanteSuite partners typic
 
 
 
-<table><thead><tr><th>OID</th><th width="146">Jurisdiction</th><th>Uses</th></tr></thead><tbody><tr><td>1.3.6.1.4.1.52820.5.1.0</td><td>ELB</td><td>Demoland MPI</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.1</td><td>MY</td><td>Myanmar National MPI<br>Myanmar OpenMRS Identifiers</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.2</td><td>SB</td><td>Solomon Islands National MPI</td></tr></tbody></table>
+<table><thead><tr><th>OID</th><th width="146">Jurisdiction</th><th>Uses</th></tr></thead><tbody><tr><td>1.3.6.1.4.1.52820.5.1.0</td><td>ELB</td><td>Elbonia MPI</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.1</td><td>MY</td><td>Myanmar National MPI<br>Myanmar OpenMRS Identifiers</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.2</td><td>SB</td><td>Solomon MPI &#x26; IIS</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.3</td><td>FJ</td><td>Fiji MPI &#x26; IIS</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.4</td><td>KI</td><td>Kiribati MPI &#x26; IIS</td></tr><tr><td>1.3.6.1.4.1.52820.5.1.5</td><td>DL</td><td>Demoland (new Demonstration Jurisdiction)</td></tr></tbody></table>
 
 ## Clinical Templates
 
@@ -55,28 +166,7 @@ Clinical templates are structures which dictate the format, entry, and display o
 
 The clinical templates defined by SanteDB community implementations are:
 
-
-
-| OID                        | ID                                                | Name                                                                                                                      |
-| -------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 1.3.6.1.4.1.52820.5.2.0.1  | org.santedb.emr.patient                           | SanteEMR Generic Patient Registration                                                                                     |
-| 1.3.6.1.4.1.52820.5.2.0.2  | org.santedb.emr.patient.baby                      | SanteEMR Newborn Patient Registration                                                                                     |
-| 1.3.6.1.4.1.52820.5.2.1.1  | org.santedb.emr.observation.cod                   | SanteEMR Cause Of Death (Suspected) Entry                                                                                 |
-| 1.3.6.1.4.1.52820.5.2.1.2  | org.santedb.emr.observation.birthDeliveryLocation | SanteEMR Birth & Delivery Location                                                                                        |
-| 1.3.6.1.4.1.52820.5.2.1.3  | org.santedb.emr.observation.birthDeliveryMethod   | SanteEMR Birth &  Delivery Method                                                                                         |
-| 1.3.6.1.4.1.52820.5.2.1.4  | org.santedb.emr.observation.birthDeliveryOutcome  | SanteEMR Birth & Delivery Outcome                                                                                         |
-| 1.3.6.1.4.1.52820.5.2.1.5  | org.santedb.emr.observation.birthWeight           | SanteEMR Birth Weight Observation                                                                                         |
-| 1.3.6.1.4.1.52820.5.2.1.6  | org.santedb.emr.observation.heightLying           | SanteEMR Height/Length (Lying down)                                                                                       |
-| 1.3.6.1.4.1.52820.5.2.1.7  | org.santedb.emr.observation.liveBirths            | SanteEMR Number of Live Births (Reported)                                                                                 |
-| 1.3.6.1.4.1.52820.5.2.1.8  | org.santedb.emr.observation.death                 | SanteEMR Patient Clinical Status  = Dead                                                                                  |
-| 1.3.6.1.4.1.52820.5.2.1.9  | org.santedb.emr.observation.verification          | SanteEMR Clinical Status Verification Observation                                                                         |
-| 1.3.6.1.4.1.52820.5.2.1.10 | org.santedb.emr.observation.weight                | SanteEMR Weight Observation                                                                                               |
-| 1.3.5.1.4.1.52820.5.2.2.1  | org.santedb.emr.act.registration.birth            | Registration of a performed delivery/birth                                                                                |
-| 1.3.5.1.4.1.52820.5.2.2.2  | org.santedb.emr.act.registration.death            | Registration of a confirmed or suspected death                                                                            |
-| 1.3.5.1.4.1.52820.5.2.3.1  | org.santedb.emr.sbadm.supplement                  | SanteIMS Supplemental (non-tracked material) administration                                                               |
-| 1.3.5.1.4.1.52820.5.2.3.2  | org.santedb.emr.sbadm.immunization                | SanteIMS Immunization (tracked material) administration.                                                                  |
-| 1.3.5.1.4.1.52820.5.2.5.1  | org.santedb.emr.enc.children.healthyVisit         | SanteEMR/IMS Childhood Healthy Visit Encounter (regular encounter for children under 10 for weight/height, immunizations) |
-| 1.3.6.1.4.1.52820.5.2.6    | org.santedb.ims.container.functionalStatus        | SanteIMS functional status observation of a container/fridge.                                                             |
+<table><thead><tr><th width="257">OID</th><th width="259">Mnemonic</th><th width="335">Name</th></tr></thead><tbody><tr><td>1.3.6.1.4.1.52820.5.2.0.1</td><td>org.santedb.emr.patient</td><td>Patient Registration</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.0.2</td><td>org.santedb.emr.patient.baby</td><td>Newborn Information</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.0</td><td>org.santedb.emr.observation.verification</td><td>Observation Verification State</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.1</td><td>org.santedb.emr.observation.cod</td><td>Cause Of Death</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.10</td><td>org.santedb.emr.observation.weight</td><td>Weight Entry</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.11</td><td>org.santedb.ims.problem.aefi</td><td>Adverse Event Following Immunization (AEFI)</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.12</td><td>org.santedb.emr.hiv.status</td><td>HIV Status</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.13</td><td>org.santedb.emr.pregnancy.status</td><td>Pregnancy Status</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.13.1</td><td>org.santedb.emr.pregnancy.lmp</td><td>Last Menstrual Period</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.13.2</td><td>org.santedb.emr.pregnancy.edd</td><td>Estimated Delivery Date</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.13.3</td><td>org.santedb.emr.pregnancy.aof</td><td>Estimated Age of Fetus</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.13.4</td><td>org.santedb.emr.pregnancy.confirm</td><td>Confirmation of Pregnancy</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.13.5</td><td>org.santedb.emr.pregnancy.complication</td><td>Pregnancy Complication(s)</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.14</td><td>org.santedb.emr.pregnancy.history</td><td>Pregnancy History</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.15</td><td>org.santedb.emr.infant.feeding</td><td>Breast Feeding Status</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.16</td><td>org.santedb.emr.hiv.mothersStatus</td><td>Mother's HIV Status</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.17</td><td>org.santedb.emr.observation.headCircumference</td><td>Head Circumference</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.18</td><td>org.santedb.emr.observation.vitalSigns</td><td>Vital Signs</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.18.1</td><td>org.santedb.emr.observation.heartRate</td><td>Heart Rate</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.18.2</td><td>org.santedb.emr.observation.respirationRate</td><td>Respiration Rate</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.19</td><td>org.santedb.emr.observation.temperature</td><td>Body Temperature</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.20</td><td>org.santedb.emr.observation.bloodPressure</td><td>Blood Pressure Reading</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.21</td><td>org.santedb.emr.condition.allergy</td><td>Allergy / Intolerance Entry</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.30</td><td>org.santedb.emr.pregnancy.conclude</td><td>Pregnancy Completion/Termination</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.40</td><td>org.santedb.emr.organizer.sti.panel</td><td>Sexually Transmitted Diseases (Current &#x26; Historical)</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.40.1</td><td>org.santedb.emr.act.sti.infection</td><td>Sexually Transmited Infectious Disease</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.6</td><td>org.santedb.emr.observation.height</td><td>Height Entry</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.60</td><td>org.santedb.emr.observation.pediatric.developmentDisability</td><td>Developmental Disability</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.8</td><td>org.santedb.emr.observation.death</td><td>Death Report</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.1.8.1</td><td>org.santedb.emr.observation.timeofdeath</td><td>Time of Death</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1</td><td>org.santedb.emr.act.registration.birth</td><td>Birth Registration</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.1</td><td>org.santedb.emr.observation.birthWeight</td><td>Birth Weight Entry</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.2</td><td>org.santedb.emr.observation.birthSex</td><td>Birth Sex</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.3</td><td>org.santedb.emr.observation.birthDeliveryLocation</td><td>Birth Delivery Location</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.4</td><td>org.santedb.emr.observation.birthDeliveryMethod</td><td>Birth Delivery Method</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.5</td><td>org.santedb.emr.observation.birthDeliveryOutcome</td><td>APGAR Panel</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.6</td><td>org.santedb.emr.observation.deliveryDateAndTime</td><td>Birth Date &#x26; Time</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.7</td><td>org.santedb.emr.observation.gestationalAgeAtBirth</td><td>Gestational Age at Birth</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.8</td><td>org.santedb.emr.observation.apgarScore.panel</td><td>APGAR Scores</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.8.1</td><td>org.santedb.emr.observation.apgarScore.1Minute</td><td>1 Minute APGAR Score</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.8.10</td><td>org.santedb.emr.observation.apgarScore.10Minute</td><td>10 Minute APGAR Score</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.8.5</td><td>org.santedb.emr.observation.apgarScore.5Minute</td><td>5 Minute APGAR Score</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.1.9</td><td>org.santedb.emr.observation.birthLength</td><td>Birth Length Entry</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.2.2</td><td>org.santedb.emr.act.registration.death</td><td>Death Registration</td></tr><tr><td>1.3.5.1.4.1.52820.5.2.3.1</td><td>org.santedb.emr.sbadm.supplement</td><td>Supplements</td></tr><tr><td>1.3.5.1.4.1.52820.5.2.3.2</td><td>org.santedb.emr.sbadm.immunization</td><td>Scheduled / Routine Immunization</td></tr><tr><td>1.3.5.1.4.1.52820.5.2.3.2.1</td><td>org.santedb.emr.sbadm.immunization.booster</td><td>Immunization (Booster/AdHoc)</td></tr><tr><td>1.3.5.1.4.1.52820.5.2.3.2.2</td><td>org.santedb.emr.sbadm.immunization.embedded</td><td>Immunization Inline</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.5.1</td><td>org.santedb.emr.act.visit.lds</td><td>Labour &#x26; Delivery Visit</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.5.2</td><td>org.santedb.emr.act.visit.anc</td><td>ANC Visit</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.5.3</td><td>org.santedb.emr.act.visit.general</td><td>General / Primary Care Visit</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.5.6</td><td>org.santedb.emr.act.visit.neonatal</td><td>Neonatal Visit</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.5.8</td><td>org.santedb.ims.pediatric.routineVacc</td><td>Routine Vaccination (Pediatric)</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.1</td><td>org.santedb.ims.container.functionalStatus</td><td>Functional Status</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.2</td><td>org.santedb.ims.container.temperature</td><td>Temperature Reading</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.3</td><td>org.santedb.ims.container.monitoring</td><td>Routine Monitoring of Cold Storage</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.4</td><td>org.santedb.ims.container.count</td><td>Stock count &#x26; assignment</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.5</td><td>org.santedb.ims.container.adjust</td><td>Stock adjustment</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.6</td><td>org.santedb.ims.container.transfer</td><td>Stock transfer</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.7.1</td><td>org.santedb.ims.session.start</td><td>Start Vaccination Session</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.7.2</td><td>org.santedb.ims.session.issue</td><td>Issue More Stock to Vaccination Session</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.7.3</td><td>org.santedb.ims.session.return</td><td>Return Stock from Vaccination Session</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.7.4</td><td>org.santedb.ims.session.end</td><td>End Vaccination Session</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.7.5</td><td>org.santedb.ims.session.openVialWaste</td><td>Session Open Vial Wastage</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.6.8</td><td>org.santedb.ims.stock.vvm</td><td>Vaccine Vial Monitoring</td></tr><tr><td>1.3.6.1.4.1.52820.5.2.999</td><td>org.santedb.core.masked</td><td>Confidential / Restricted Entry</td></tr></tbody></table>
 
 ## Clinical Protocol OIDs
 
