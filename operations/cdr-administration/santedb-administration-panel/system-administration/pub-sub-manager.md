@@ -15,6 +15,18 @@ The commands on this screen:
 * Enable / Disable - When a subscription is active, it is sending data out to the configured endpoints, when the subscription is inactive the subscription is registered, but will not send notifications. The enable/disable button permits the administrator to change this setting.
 * Delete / Un-Delete - Allows an administrator to remove a subscription, and to restore it.
 
+### Re-Processing Subscriptions
+
+The pub/sub infrastructure in SanteDB relies on real-time monitoring of the dispatcher queue setup for the subscription.&#x20;
+
+There are occasions where data may not have been dispatched from the CDR to the subscriber such as:
+
+* The subscription has been disabled by an administrator for a period of time
+* The subscription was created after data already existed in the CDR
+* The subscription criteria has changed
+
+In this case, there may be a need to re-process the subscription. When re-processing the subscription, the subscription criteria for the specified filter will be applied against all objects in the CDR and placed into the outbound dispatcher queue for the subscription.
+
 ## Creating/Editing a Subscription
 
 When creating a subscription the administrator will be prompted to enter settings related to the subscription which is being created.
@@ -82,7 +94,9 @@ The HL7 FHIR integrators can leverage a dispatch authenticator implementing a `I
 | `$oauth.scope`            | String                            | The scope names which the SanteDB server should request when sending data to the server.                                                           |
 | `$oauth.novalidate`       | True or False                     | When set to True the issuing SanteDB server will not attempt to validate the token passed back from the issuing server.                            |
 
+## Additional Subscription Settings
 
+<table><thead><tr><th width="226">Setting</th><th width="119">Value</th><th width="155">Dispatcher</th><th>Description</th></tr></thead><tbody><tr><td><code>notify.local</code></td><td>Boolean</td><td>fhir-message<br>fhir-rest-hook</td><td>When true, instructs a SanteDB server to call the data management pattern to dispatch a local copy of the record in question rather than the golden or master record.</td></tr><tr><td><code>notify.bundle</code></td><td>Boolean</td><td>fhir-rest-hook</td><td>When true, indicates that the rest hook should send the notifications as a FHIR transaction bundle including sending data which is related to the focus object in the bundle.</td></tr><tr><td><code>notify.includeMetaData</code></td><td>Boolean</td><td>fhir-rest-hook</td><td>When true, instructs the rest hook to include all CDR metadata (MDM info, system tags, etc.) in the message. By default SanteDB will not send this information to the remote service.</td></tr><tr><td><code>linkAsMerge</code></td><td>Boolean</td><td>fhir-message<br>fhir-rest-hook</td><td>When true, whenever a link/unlink of data is perform (i.e. replaces in the case of MDM) the notification is sent as a merge trigger.</td></tr></tbody></table>
 
 ## Related Topics
 
