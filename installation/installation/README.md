@@ -28,7 +28,7 @@ See: [planning-and-preparation-work](planning-and-preparation-work/ "mention")
 
 Once the project boundaries and overall planning/architecture work has been performed, the task of customizing SanteDB can commence.&#x20;
 
-See: [Broken link](broken-reference "mention")
+See: [Broken link](/broken/pages/f6VyCdlPlATqED8DQK7G "mention")
 
 ## Deployment
 

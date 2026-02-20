@@ -9,7 +9,7 @@ This deployment pattern is well suited when:
 
 
 
-See: [Broken link](broken-reference "mention")&#x20;
+See: [Broken link](/broken/pages/-M9jS2Rkd5xs2XeTCI6i#disconnected-offline-patterns "mention")&#x20;
 
 ## Installation on Windows
 

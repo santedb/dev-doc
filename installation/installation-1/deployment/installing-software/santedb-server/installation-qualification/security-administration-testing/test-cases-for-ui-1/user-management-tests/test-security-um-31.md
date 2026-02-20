@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 * [TEST: SECURITY-UM-30](test-security-um-30.md)
 
 ## Discussion

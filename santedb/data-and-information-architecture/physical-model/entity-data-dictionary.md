@@ -1,7 +1,6 @@
 # Entity Data Dictionary
 
-The [Conceptual Entity Data Dictionary](../conceptual-data-model/entities/data-dictionary.md) expressed in ADO.NET tables.\
-
+The [Conceptual Entity Data Dictionary](../conceptual-data-model/entities/data-dictionary.md) expressed in ADO.NET tables.<br>
 
 ![](<../../../.gitbook/assets/image (411).png>)
 

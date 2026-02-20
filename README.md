@@ -25,35 +25,35 @@ SanteDB is a general purpose clinical data repository based loosely on the HL7 R
 
 ## Topics
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/u7zir3iBTIiNXFWhXmlI" %}
+[Broken link](/broken/pages/u7zir3iBTIiNXFWhXmlI)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-LZBNtZENgNDNP3oXPQF" %}
+[Broken link](/broken/pages/-LZBNtZENgNDNP3oXPQF)
 {% endcontent-ref %}
 
 {% content-ref url="installation/installation/" %}
 [installation](installation/installation/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/1dPRYMBlcBLGP0ddijYH" %}
+[Broken link](/broken/pages/1dPRYMBlcBLGP0ddijYH)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/Si8SWdtwBR8su3JfK52M" %}
+[Broken link](/broken/pages/Si8SWdtwBR8su3JfK52M)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/f6VyCdlPlATqED8DQK7G" %}
+[Broken link](/broken/pages/f6VyCdlPlATqED8DQK7G)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-La7y4IKCf_fhUYT78bN" %}
+[Broken link](/broken/pages/-La7y4IKCf_fhUYT78bN)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-Le6mcRriam6Zd2CbGzY" %}
+[Broken link](/broken/pages/-Le6mcRriam6Zd2CbGzY)
 {% endcontent-ref %}
 

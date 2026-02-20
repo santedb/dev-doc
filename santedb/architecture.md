@@ -60,8 +60,8 @@ The dCDR Web Portal is a specialized dCDR environment which has no offline capab
 
 ## Topics
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/uyhcrDEWXBWrilxH3Dk7" %}
+[Broken link](/broken/pages/uyhcrDEWXBWrilxH3Dk7)
 {% endcontent-ref %}
 
 {% content-ref url="software-architecture.md" %}

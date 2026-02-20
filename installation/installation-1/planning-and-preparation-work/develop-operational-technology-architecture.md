@@ -21,8 +21,7 @@ The operational architecture documentation should summarize the software environ
 
 The operational documentation should keep discussion of software components and business processes to a brief overview (the majority of your software modifications and flows should be captured in a FDS).&#x20;
 
-Consider, for example, the software architecture for the Demoland example. \
-
+Consider, for example, the software architecture for the Demoland example. <br>
 
 ![Demoland Operational System Architecture](<../../../.gitbook/assets/image (432).png>)
 

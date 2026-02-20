@@ -25,8 +25,7 @@ When a feature is enabled the `CreateInstallTasks` method is called, and should 
 
 ### Configuration Tasks
 
-The `IConfigurationTask` interface is used to control individual configuration steps to modify the provided file to perform a configuration or removal of a feature. You can see these in the confirm tasks dialog.\
-
+The `IConfigurationTask` interface is used to control individual configuration steps to modify the provided file to perform a configuration or removal of a feature. You can see these in the confirm tasks dialog.<br>
 
 ![](<../../../../../../.gitbook/assets/image (400).png>)
 

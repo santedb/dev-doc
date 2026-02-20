@@ -41,7 +41,7 @@ The following services are bound to the REST API in the default SanteDB installa
 | OAuth2       | [SanteDB OpenID Connect IdP](../../../../developers/extending-santesuite/extending-santedb/service-apis/openid-connect/) |
 | FHIR         | [HL7 FHIR Interface](../../../../operations-1/standard-operating-procedures/hl7-fhir/)                                   |
 | AMI          | [Administrative Management Interface](../../../../developers/service-apis/administration-management-interface-ami.md)    |
-| BIS          | [Business Intelligence Service](broken-reference)                                                                        |
+| BIS          | [Business Intelligence Service](/broken/pages/-MDKigCD6oCqtCOQ4Wue)                                                      |
 | HDSI         | [Health Data Service Interface](../../../../developers/service-apis/health-data-service-interface-hdsi.md)               |
 | META         | OpenAPI (Swagger) Metadata Exchange                                                                                      |
 

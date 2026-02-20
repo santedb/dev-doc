@@ -329,6 +329,7 @@
     * [Data Quality Tab](user-guides-and-training/santempi/the-patient-dashboard/data-quality-tab.md)
   * [SanteMPI Dashboard](user-guides-and-training/santempi/santempi-dashboard.md)
 * [SanteEMR](user-guides-and-training/santeemr/README.md)
+  * [Conditions & Status Observations](user-guides-and-training/santeemr/conditions-and-status-observations.md)
   * [EMR Administration](user-guides-and-training/santeemr/emr-administration/README.md)
     * [Care Pathways](user-guides-and-training/santeemr/emr-administration/care-pathways.md)
     * [Visit Types & Flows](user-guides-and-training/santeemr/emr-administration/visit-types-and-flows.md)

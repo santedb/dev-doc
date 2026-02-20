@@ -8,13 +8,13 @@ Whenever a patient is checked-in for a visit in SanteEMR, the visit classificati
 
 SanteEMR's state flows are linked to encounter types using the **Visit Types & Flows** administrative screen on the **SanteEMR** area of the administrative panel.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating/Editing a Visit Type
 
 Creating and editing a visit type are the similar processes. When creating a visit type, users will enter the classification concept and will identify the workflow states that are applicable to this type of visit. For example, creating an inpatient visit type and flow may appear as:
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 In this flow, the administrator has indicated that the visit flow for an inpatient visit in their deployment is as follows:
 
@@ -26,8 +26,8 @@ In this flow, the administrator has indicated that the visit flow for an inpatie
 
 The states for the EMR flows are contained in the **Concept Dictionary** in the **EMREncounterTags** concept set. The administrator may create new states by creating new concepts in this concept set.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Each state is then assigned one or more concept relationships of type **State Flow** to indicate the outward flow of a state to another. This is administered on the concept detail screen.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>

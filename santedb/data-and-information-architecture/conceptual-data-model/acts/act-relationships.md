@@ -10,8 +10,7 @@ Often time acts are related to one another via the ActRelationship entity. Act r
     &#x20;In this use case the primary act is a PatientEncounter with mood of Intent (i.e. I intend to have an encounter) and date in the future. The PatientEncounter may have one or more substance administrations with mood of Intent that represent the vaccinations that are intended to be given at the appointment. &#x20;
 
     <img src="../../../../.gitbook/assets/image (128).png" alt="" data-size="original">
-3.  **Patient Presents for Appointment:** In this use case, the patient presents for the scheduled appointment. The encounter fulfills the appointment request.  \
-
+3.  **Patient Presents for Appointment:** In this use case, the patient presents for the scheduled appointment. The encounter fulfills the appointment request.  <br>
 
     <img src="../../../../.gitbook/assets/image (114).png" alt="" data-size="original">
 4. **Forecasted vaccination:**\

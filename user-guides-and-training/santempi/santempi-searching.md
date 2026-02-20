@@ -8,8 +8,7 @@ SanteMPI provides two different search pages for filtering patient data in the a
 
 ## Basic Search
 
-The default mode of searching the MPI is to use the `_any` search method (see: [#freetext-search](../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/#freetext-search "mention")). Searching by identifier allows a user to type (or scan) a patient identifier to retrieve patient results.\
-
+The default mode of searching the MPI is to use the `_any` search method (see: [#freetext-search](../../developers/service-apis/health-data-service-interface-hdsi/hdsi-query-syntax/#freetext-search "mention")). Searching by identifier allows a user to type (or scan) a patient identifier to retrieve patient results.<br>
 
 ![](<../../.gitbook/assets/image (437) (1) (1) (1) (1) (1) (1).png>)
 
@@ -41,8 +40,7 @@ The action taken depends on the type of code scanned:
 
 Users can click on the `Advanced Search >` link on the search screen to open the discrete demographics search for the MPI.
 
-The advanced search provides discrete inputs for the base identification which is provided in the Master Patient Index. \
-
+The advanced search provides discrete inputs for the base identification which is provided in the Master Patient Index. <br>
 
 ![](<../../.gitbook/assets/image (428) (1) (1) (1) (1) (1) (1).png>)
 

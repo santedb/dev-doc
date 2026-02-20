@@ -6,7 +6,7 @@ description: Testing the successful assigning a policy to a device.
 
 ## References
 
-* [Device Management](broken-reference)
+* [Device Management](/broken/pages/-LyJMhbVM6ouxYs1bDRc)
 
 ## Discussion
 

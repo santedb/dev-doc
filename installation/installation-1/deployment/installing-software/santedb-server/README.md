@@ -9,7 +9,7 @@ description: >-
 Every deployment of SanteDB requires an iCDR Server instance. The iCDR instance is responsible for aggregation and central administration functions. This article covers the installation procedure for the SanteDB iCDR server. The process for installation is common across all SanteDB solutions.
 
 {% hint style="info" %}
-If you're deploying SanteDB iCDR in a production environment, or are planning on using SanteDB in a large scale project, please review the [Broken link](broken-reference "mention")article.
+If you're deploying SanteDB iCDR in a production environment, or are planning on using SanteDB in a large scale project, please review the [Broken link](/broken/pages/-M9jS2Rkd5xs2XeTCI6i "mention")article.
 {% endhint %}
 
 ## Table of Contents

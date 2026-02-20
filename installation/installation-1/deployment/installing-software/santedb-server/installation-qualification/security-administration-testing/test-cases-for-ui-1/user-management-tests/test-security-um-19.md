@@ -6,7 +6,7 @@ description: Testing the Employer textbox from Demographic Properties with multi
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 * [TEST: SECURITY-UM-16](test-security-um-16.md)
 

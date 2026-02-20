@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Device Management](broken-reference)
+* [Device Management](/broken/pages/-LyJMhbVM6ouxYs1bDRc)
 
 ## Discussion
 

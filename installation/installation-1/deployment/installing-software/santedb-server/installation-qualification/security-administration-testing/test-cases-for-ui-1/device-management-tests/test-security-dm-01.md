@@ -6,7 +6,7 @@ description: Testing the successful creation of a new device.
 
 ## References
 
-* [Device Management](broken-reference)
+* [Device Management](/broken/pages/-LyJMhbVM6ouxYs1bDRc)
 
 ## Discussion
 
@@ -29,8 +29,7 @@ This is a basic test to demonstrate that the UI components appear and operate co
 
 ## Expected Behaviour
 
-1-  Should navigate to the new Create Device page.\
-
+1-  Should navigate to the new Create Device page.<br>
 
 ![](<../../../../../../../../../.gitbook/assets/2 (2).jpg>)
 

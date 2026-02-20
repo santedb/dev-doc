@@ -6,7 +6,7 @@ description: Testing the successful unlocking a locked device.
 
 ## References
 
-* [Device Management](broken-reference)
+* [Device Management](/broken/pages/-LyJMhbVM6ouxYs1bDRc)
 
 ## Discussion
 

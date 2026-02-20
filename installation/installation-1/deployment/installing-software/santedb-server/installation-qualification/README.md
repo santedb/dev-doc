@@ -6,7 +6,7 @@ After installing a SanteDB iCDR product, such as SanteMPI or SanteIMS, there is 
 
 The Security Administration Testing wiki article provides test steps that users can perform to validate that the security environment of SanteDB is running correctly.&#x20;
 
-If you're running the iCDR and the web host portal you can use the [User Interface Test Cases ](security-administration-testing/test-cases-for-ui-1/), if you're operating SanteDB iCDR in a headless environment the [Admin Console tests](broken-reference) provide equivalent tests using the `sdbac` tooling.
+If you're running the iCDR and the web host portal you can use the [User Interface Test Cases ](security-administration-testing/test-cases-for-ui-1/), if you're operating SanteDB iCDR in a headless environment the [Admin Console tests](/broken/pages/-MdSCYZjHgQ82FZkFTqY) provide equivalent tests using the `sdbac` tooling.
 
 ## SanteMPI Functional Testing
 

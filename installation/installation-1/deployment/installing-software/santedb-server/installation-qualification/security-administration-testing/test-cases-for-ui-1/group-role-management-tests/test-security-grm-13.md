@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Group / Role Management](broken-reference)
+* [Group / Role Management](/broken/pages/-LyJMcL5RmXYBlKFG77H)
 * [TEST: SECURITY-GRM-13](test-security-grm-11.md)
 
 ## Discussion

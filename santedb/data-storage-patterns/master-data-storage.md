@@ -10,7 +10,7 @@ The Master Data Management plugin permits your SanteDB CDR instance to store mul
 * Persons
 
 {% hint style="info" %}
-The use of Master Data Management services require a compatible [Matching and Merge](broken-reference) service to operate. This is how the MDM solution detects candidate master records.
+The use of Master Data Management services require a compatible [Matching and Merge](/broken/pages/-MDKigCduY4LFGruHO_w) service to operate. This is how the MDM solution detects candidate master records.
 {% endhint %}
 
 ## MDM Data Storage Pattern
@@ -36,8 +36,7 @@ In the case where a match between a LOCAL and MASTER record is ambiguous (i.e. d
 
 In the scenario below, Good Health Clinic has registered John Doe born Jan 1 1980 with ID 1230493. The MDM layer has constructed a master record. A subsequent registration by HIV Health Clinic for John Doe, born sometime in 1980 with ID 3029402 as registered after.
 
-Assuming that the match configuration was setup such that the HIV record had a match score below "DEFINITE" match, the MDM plugin would establish a new MASTER which contains one LOCAL. That LOCAL would also be related to the MASTER from Good Health Clinic with relationship type `MDM-CandidateLocal`.\
-
+Assuming that the match configuration was setup such that the HIV record had a match score below "DEFINITE" match, the MDM plugin would establish a new MASTER which contains one LOCAL. That LOCAL would also be related to the MASTER from Good Health Clinic with relationship type `MDM-CandidateLocal`.<br>
 
 ![](<../../.gitbook/assets/image (186).png>)
 
@@ -159,8 +158,7 @@ When the CDR receives a registration request for a new object which is under MDM
 
 ![](<../../.gitbook/assets/image (223).png>)
 
-A query for EID A123 would now result in a single result with the synthesized data from both sources and links to the sources where the data was obtained.\
-
+A query for EID A123 would now result in a single result with the synthesized data from both sources and links to the sources where the data was obtained.<br>
 
 ![](<../../.gitbook/assets/image (216).png>)
 

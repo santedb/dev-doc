@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 
 ## Discussion
 
@@ -21,7 +21,7 @@ description: >-
 
 1\. Click the **x** on the left side of a **Role Name** tag that has been added to the **Role** textbox.
 
-![](../../../../../../../../../.gitbook/assets/Role\_RemoveHover.png)
+![](../../../../../../../../../.gitbook/assets/Role_RemoveHover.png)
 
 ## Expected Behaviour
 

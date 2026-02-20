@@ -6,7 +6,7 @@ description: Testing the successful unlocking a locked application.
 
 ## References
 
-* [Application Management](broken-reference)
+* [Application Management](/broken/pages/-LyJMkkX_xrto5sCaNnM)
 
 ## Discussion
 

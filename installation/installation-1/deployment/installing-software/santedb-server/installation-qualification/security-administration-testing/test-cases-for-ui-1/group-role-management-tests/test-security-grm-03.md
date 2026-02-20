@@ -6,7 +6,7 @@ description: Testing the Name textbox with a duplicate non-deleted group.
 
 ## References
 
-* [Group / Role Management](broken-reference)
+* [Group / Role Management](/broken/pages/-LyJMcL5RmXYBlKFG77H)
 * [TEST: SECURITY-GRM-01](test-security-grm-01-1.md)
 
 ## Discussion

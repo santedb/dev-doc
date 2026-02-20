@@ -6,7 +6,7 @@ description: Testing the addition of a Member while editing a group's Members.
 
 ## References
 
-* [Group / Role Management](broken-reference)
+* [Group / Role Management](/broken/pages/-LyJMcL5RmXYBlKFG77H)
 * [TEST: SECURITY-GRM-01](test-security-grm-01-1.md)
 
 ## Discussion

@@ -6,7 +6,7 @@ description: Testing the successful undeleting a deleted device.
 
 ## References
 
-* [Device Management](broken-reference)
+* [Device Management](/broken/pages/-LyJMhbVM6ouxYs1bDRc)
 
 ## Discussion
 

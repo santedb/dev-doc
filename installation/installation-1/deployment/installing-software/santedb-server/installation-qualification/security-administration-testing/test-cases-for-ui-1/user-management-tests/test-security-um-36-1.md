@@ -6,7 +6,7 @@ description: Testing the Unlock button for a locked user.
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 * [TEST: SECURITY-UM-35](test-security-um-35-1.md)
 
 ## Discussion

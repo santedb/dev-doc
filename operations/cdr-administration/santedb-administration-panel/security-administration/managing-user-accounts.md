@@ -88,8 +88,7 @@ SanteDB security users also have a profile exposed in the CDR (apart from the se
 * Business Contacts
 * Addresses
 
-These can be edited using the **profile** tab of the user's detail screen.\
-
+These can be edited using the **profile** tab of the user's detail screen.<br>
 
 ![](<../../../../.gitbook/assets/image (39).png>)
 

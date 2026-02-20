@@ -14,7 +14,7 @@
 * [ ] Protection of Patient Information Documented
   * [ ] [Privacy Impact Assessment Drafted](../planning-and-preparation-work/developing-privacy-impact-assessments.md) / Reviewed
   * [ ] [Threat / Risk Assessment Drafted / Reviewed](../planning-and-preparation-work/develop-threat-risk-assessments.md)
-* [ ] [Modifications to SanteDB Developed and Tested](broken-reference)
+* [ ] [Modifications to SanteDB Developed and Tested](/broken/pages/f6VyCdlPlATqED8DQK7G)
 * [ ] Deployment Pre-Requisites Procured
   * [ ] Physical, Virtual or Cloud Resources Purchased and Installed
   * [ ] Operating Systems Installed and up to date

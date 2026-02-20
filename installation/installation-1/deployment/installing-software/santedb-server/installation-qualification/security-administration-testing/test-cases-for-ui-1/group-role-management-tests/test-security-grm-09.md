@@ -6,7 +6,7 @@ description: Testing the removal of a Policy while editing a group's Assigned Po
 
 ## References
 
-* [Group / Role Management](broken-reference)
+* [Group / Role Management](/broken/pages/-LyJMcL5RmXYBlKFG77H)
 * [TEST: SECURITY-GRM-08](test-security-grm-06.md)
 
 ## Discussion

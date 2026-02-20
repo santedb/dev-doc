@@ -6,11 +6,11 @@ description: Testing the successful creation of a Group with all properties spec
 
 ## References
 
-* [Group / Role Management](broken-reference)
+* [Group / Role Management](/broken/pages/-LyJMcL5RmXYBlKFG77H)
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating new groups on the [Group / Role Management](broken-reference) page.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new groups on the [Group / Role Management](/broken/pages/-LyJMcL5RmXYBlKFG77H) page.
 
 ## Pre-Conditions / Setup
 

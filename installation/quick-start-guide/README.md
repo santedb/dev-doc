@@ -148,8 +148,7 @@ Ensure you select the option to automatically download updates for applet files.
 
 ### Set Online Only Function Level
 
-Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)\
-
+Since the web access gateway will be acting as an administration panel, you should set the dCDR in online only mode (no disconnected use)<br>
 
 ![](<../../.gitbook/assets/image (433) (1) (1) (1) (1) (1) (1) (1).png>)
 
@@ -188,7 +187,7 @@ You can now log into the web administration console for the Master Patient Index
 ![](<../../.gitbook/assets/image (447) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
-Full documentation for the Administrative panel is available at the [Broken link](broken-reference "mention") page.
+Full documentation for the Administrative panel is available at the [Broken link](/broken/pages/VjO9ryB6V5Hr1y5izsr4 "mention") page.
 {% endhint %}
 
 ### Give Administrators Access to MDM and Clinical Data

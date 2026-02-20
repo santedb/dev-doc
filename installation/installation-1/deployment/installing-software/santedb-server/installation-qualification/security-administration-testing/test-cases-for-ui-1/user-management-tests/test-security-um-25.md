@@ -6,7 +6,7 @@ description: Testing editing a User Profile by registering names for multiple Na
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 * [TEST: SECURITY-UM-21](test-security-um-21.md)
 * [TEST: SECURITY-UM-13](test-security-um-13.md)

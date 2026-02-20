@@ -6,7 +6,7 @@ description: Testing the successful deleting an application.
 
 ## References
 
-* [Application Management](broken-reference)
+* [Application Management](/broken/pages/-LyJMkkX_xrto5sCaNnM)
 
 ## Discussion
 

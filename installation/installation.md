@@ -3,7 +3,7 @@
 SanteDB solutions such as SanteMPI, SanteIMS, and the generic CDR are installed in a similar manner. This section provides resources on the planning, preparation, installation and securing of SanteDB iCDR and dCDR software packages.
 
 {% hint style="info" %}
-It is recommended that readers review the [Broken link](broken-reference "mention") documentation to become familiar with the high level concepts of SanteDB architecture.
+It is recommended that readers review the [Broken link](/broken/pages/-LZBNtZENgNDNP3oXPQF "mention") documentation to become familiar with the high level concepts of SanteDB architecture.
 {% endhint %}
 
 ## Installation for Development&#x20;

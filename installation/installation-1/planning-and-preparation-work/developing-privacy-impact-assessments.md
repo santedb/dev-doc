@@ -16,10 +16,10 @@ As always, before making use of any of our resources, please read and accept our
 [disclaimer.md](../../../readme/disclaimer.md)
 {% endcontent-ref %}
 
-{% file src="../../../.gitbook/assets/PrivacyImpactAssessment-Template.docx" %}
+{% file src="../../../.gitbook/assets/PrivacyImpactAssessment-Template (1).docx" %}
 Privacy Impact Assessment Template
 {% endfile %}
 
-{% file src="../../../.gitbook/assets/PrivacyImpactAssessment-Guide.docx" %}
+{% file src="../../../.gitbook/assets/PrivacyImpactAssessment-Guide (1).docx" %}
 Privacy Impact Assessment Guide
 {% endfile %}

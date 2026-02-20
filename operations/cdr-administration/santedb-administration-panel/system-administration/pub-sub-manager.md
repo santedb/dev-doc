@@ -45,7 +45,7 @@ Sometimes when a SanteDB product notifies an external party of a registration of
 
 To prevent this behavior, filter the subscription based on the principal/application that last created the version of the object. For example, if the API key of the object which is the target of the notification is `APP_THAT_SENDS_STUFF`we can instruct the pub/sub layer to prevent sending any updates received by `APP_THAT_SENDS_STUFF`to the application:
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Endpoint Settings
 

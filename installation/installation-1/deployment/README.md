@@ -27,8 +27,8 @@ These installation procedures assume that readers are familiar with the mechanic
 [production-installation-notes.md](../../installation/santedb-server/production-installation-notes.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/spaces/-LZ0_pjgTp_kx4hqTZ3a/pages/c0UjabWQ0jDT6zqo71bg" %}
+[Broken link](/broken/spaces/-LZ0_pjgTp_kx4hqTZ3a/pages/c0UjabWQ0jDT6zqo71bg)
 {% endcontent-ref %}
 
 {% content-ref url="securing-the-apis.md" %}

@@ -6,7 +6,7 @@ description: Testing the successful resetting a device's secret.
 
 ## References
 
-* [Device Management](broken-reference)
+* [Device Management](/broken/pages/-LyJMhbVM6ouxYs1bDRc)
 
 ## Discussion
 

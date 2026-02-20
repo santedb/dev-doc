@@ -6,11 +6,11 @@ description: Testing the successful creation of a new user with all properties s
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 
 ## Discussion
 
-This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](broken-reference) page.
+This is a basic test to demonstrate that the UI components appear and operate correctly when creating new users on the [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM) page.
 
 ## Pre-Conditions / Setup
 
@@ -57,15 +57,15 @@ Each of the tabs below (corresponding to a form section) contain a table that su
 
 &#x20;   2\. Enter valid text into the **Core Properties** drop-down form group.
 
-![](../../../../../../../../../.gitbook/assets/test1\_coreProperties.png)
+![](../../../../../../../../../.gitbook/assets/test1_coreProperties.png)
 
 &#x20;   3\. Enter valid text into the **Security Properties** drop-down form group.
 
-![](../../../../../../../../../.gitbook/assets/test1\_securityProperties.png)
+![](../../../../../../../../../.gitbook/assets/test1_securityProperties.png)
 
 &#x20;   4\. Enter valid text into the **Demographic Properties** drop-down form group.
 
-![](../../../../../../../../../.gitbook/assets/test1\_demographicProperties.png)
+![](../../../../../../../../../.gitbook/assets/test1_demographicProperties.png)
 
 &#x20;   5\. Click the **Save** button.
 

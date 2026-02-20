@@ -8,7 +8,7 @@ description: >-
 
 ## References
 
-* [Security Policy Management](broken-reference)
+* [Security Policy Management](/broken/pages/-LyJMeXTqUGM9ThfTS7k)
 
 ## Discussion
 

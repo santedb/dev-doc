@@ -6,7 +6,7 @@ description: Testing attempted creation of a new user with required properties m
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 * [TEST: SECURITY-UM-01](test-security-um-01.md)
 
 ## Discussion
@@ -27,7 +27,7 @@ Some user properties are specifically required to successfully create a new user
 
 1\. Click the **Save** button.  &#x20;
 
-![](../../../../../../../../../.gitbook/assets/blankCreate\_saveButton.png)
+![](../../../../../../../../../.gitbook/assets/blankCreate_saveButton.png)
 
 ## Expected Behaviour
 
@@ -35,4 +35,4 @@ Some user properties are specifically required to successfully create a new user
 * Remain on **Administration Panel / Security / Users / Create User** page.
 * Display a prompt below each required property textbox with a validation message as follows:
 
-![](../../../../../../../../../.gitbook/assets/blankCreate\_prompted.png)
+![](../../../../../../../../../.gitbook/assets/blankCreate_prompted.png)

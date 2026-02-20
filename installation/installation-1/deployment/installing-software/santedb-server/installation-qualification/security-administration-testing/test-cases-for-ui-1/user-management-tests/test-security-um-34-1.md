@@ -6,7 +6,7 @@ description: Testing successful un-deletion of a user that has previously been d
 
 ## References
 
-* [User Management](broken-reference)
+* [User Management](/broken/pages/-LyJM_KRwADCTfXEdvxM)
 * [TEST: SECURITY-UM-33](test-security-um-33-1.md)
 
 ## Discussion

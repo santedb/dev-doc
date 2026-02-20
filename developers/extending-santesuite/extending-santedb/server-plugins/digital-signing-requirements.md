@@ -23,8 +23,7 @@ santedb Error: 0 : Fatal exception occurred: System.Security.SecurityException: 
 
 ### Validating Digital Signatures
 
-On Microsoft Windows operating systems you can validate digital signatures and publishers of a plugin by right clicking on the plugin in Windows Explorer and using the `Digital Signatures` tab of the properties window.\
-
+On Microsoft Windows operating systems you can validate digital signatures and publishers of a plugin by right clicking on the plugin in Windows Explorer and using the `Digital Signatures` tab of the properties window.<br>
 
 ![Viewing Digital Signatures](<../../../../.gitbook/assets/image (404).png>)
 

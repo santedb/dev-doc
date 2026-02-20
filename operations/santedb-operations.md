@@ -64,6 +64,6 @@ The [standard-operating-procedures](standard-operating-procedures/ "mention") to
 [application-management-sops.md](standard-operating-procedures/application-management-sops.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/a6rzZABA5tmvyx7e3uTW" %}
+[Broken link](/broken/pages/a6rzZABA5tmvyx7e3uTW)
 {% endcontent-ref %}
