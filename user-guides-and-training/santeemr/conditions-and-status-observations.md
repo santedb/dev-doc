@@ -25,11 +25,11 @@ This is controlled via the concept set `PatientStatusObservationType` . Whenever
 
 For example, pregnancy status and pregnancy history defined in the status concept set:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Will result in only one of these observations being shown in the current status panel. Any subsequent recordation of either pregnancy history or pregnancy status, effectively replaces the current value with the newly observed value.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Condition Observations
 
@@ -44,7 +44,7 @@ Conditions observations are more specific than a status observation in that the 
 
 For example, a condition with type `PregnancyStatus` and value of `NotPregnant` should not indicate the patient has an active medical concern related to being pregnant. The SanteEMR plugin includes logic which, whenever an observation having a type concept and a value trigger matches, a new `Act` of type `Condition` is created. The RIM structure for this is illustrated below, where a pregnancy status of `HighRisk` has been observed
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 If at a later time, a pregnancy status of `NotPregnant` is observed, the condition is automatically resolved and removed from the patient status panel, while the status observation remains present.<br>
 

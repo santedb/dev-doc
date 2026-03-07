@@ -8,13 +8,13 @@ Whenever a patient is checked-in for a visit in SanteEMR, the visit classificati
 
 SanteEMR's state flows are linked to encounter types using the **Visit Types & Flows** administrative screen on the **SanteEMR** area of the administrative panel.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating/Editing a Visit Type
 
 Creating and editing a visit type are the similar processes. When creating a visit type, users will enter the classification concept and will identify the workflow states that are applicable to this type of visit. For example, creating an inpatient visit type and flow may appear as:
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In this flow, the administrator has indicated that the visit flow for an inpatient visit in their deployment is as follows:
 

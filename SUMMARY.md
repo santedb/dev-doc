@@ -334,6 +334,7 @@
     * [Care Pathways](user-guides-and-training/santeemr/emr-administration/care-pathways.md)
     * [Visit Types & Flows](user-guides-and-training/santeemr/emr-administration/visit-types-and-flows.md)
     * [Clinical Templates](user-guides-and-training/santeemr/emr-administration/clinical-templates.md)
+  * [EMR Clinical Portal](user-guides-and-training/santeemr/emr-clinical-portal.md)
 * [SanteGuard](user-guides-and-training/santeguard.md)
 
 ## Developers

@@ -35,7 +35,7 @@ Administrators may use this page to:
 
 Administrators can create a concept set by selecting the **Create** option. This will display a form of minimal properties for establishing a new concept set.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The fields are as follows:
 
@@ -45,7 +45,7 @@ The fields are as follows:
 
 Viewing a concept set will allow administrators see members of the set and modify the core properties.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Administrators can **export** the concept into any formats (XLSX, CSV, HTML) for consumption in third party systems. The concept set can also be **download** into a dataset format file for import into another SanteDB instance.
 
