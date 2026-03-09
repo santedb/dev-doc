@@ -189,7 +189,7 @@ The HTTP UNLOCK operation in SanteDB is used to release a lock on an object, or 
 There are use cases where clients may wish to obtain an exclusive EDIT lock on a particular resource. This is done by performing an HTTP CHECKOUT on a supported resource (like Patient, Concept, etc.). This prevents concurrent editing of the same resource.
 
 ```http
-CHECKOUT /SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16 HTTP/1.1
+CHECKOUT /ami/SecurirtyUser/fb00e97a-bdfc-403d-8f62-52f8e6846a16 HTTP/1.1
 Host: demo.openiz.org:8080
 Authorization: bearer XXXXXXX
 ```
@@ -201,6 +201,48 @@ The response, if successful, is an `HTTP 204 NO CONTENT` . Any attempt to update
 The `CHECKIN` verb performs the opposite action as the `CHECKOUT` verb, in that it releases the lock (if any) on the specified resource.
 
 ### Get Service Parameters (OPTIONS)
+
+The `OPTIONS` verb is used to obtain a discovery document from the requested API or resource. The `OPTIONS` document is can be executed on a service or o a resource in the the service.&#x20;
+
+* Service Options:
+  * Identify the resources which are exposed and configured on the endpoint
+  * Identifies the endpoints where each reasource can be accessed
+  * Identifies the actions which can be performed on each resource
+  * Identifies any other server endpoints (on other infrastructure) for related services (such as auth, reports, etc.)
+  * Discloses any public settings on the server when the request is authorized
+* Resource Options:
+  * Identify the actions which are supported on the specific resource
+  * Identifies any child resources and API operations that can be executed on the server for that resource
+  * Identifies the actions supported on the resource as well as the policies required to access the resource
+
+```http
+OPTIONS /hdsi/Patient
+Host: ims-ncc-1701.santesuite.net
+Authorization: bearer XXXXXXX
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 4983
+Connection: keep-alive
+
+{
+    "resource": "Patient",
+    "cap": [
+        {
+            "cap": "Create",
+            "demand": [
+                "1.3.6.1.4.1.33349.3.1.5.9.2.2.1",
+                "1.3.6.1.4.1.33349.3.1.5.9.2.1.0"
+            ]
+        },
+        {
+            "cap": "CreateOrUpdate",
+            "demand": [
+                "1.3.6.1.4.1.33349.3.1.5.9.2.2.1",
+                "1.3.6.1.4.1.33349.3.1.5.9.2.1.0"
+            ]
+        },
+```
 
 ### Ping Service Availability (PING)
 
