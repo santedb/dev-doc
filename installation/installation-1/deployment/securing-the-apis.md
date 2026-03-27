@@ -165,3 +165,42 @@ The `<configuration>` element of the client certificate access behavior controls
 | revokeCheck       | Online, Offline, None | Controls how client certificates' revokation status is validated.                                                                                                                                          |
 | allowClientHeader | true, false           | Indicates whether the `X-SSL-ClientCert` header is to be allowed. Note: **If running behind NGINX with SSL termination this must be true, if not it is recommended to be false.**                          |
 | trustedIssuers    | X509 Certificate      | The trusted issuers of client certificates. If the client presents a certificate that is valid to the operating system, however is not issued by a CA in this list then the access request will be denied. |
+
+## Securing Default Applications
+
+By default SanteDB's database contains credentials for applications which ship with SanteDB (such as the debugger, the admin console, the DCG, etc.). After deployment, it is recommended that system administrators perform the following actions:
+
+1. Disable or lock any applications not being used (for example: if you are not using the DCG then disabling the gateway credential is recommended)
+2. If an application is being used, reset the application secret (i.e. generate a new - non-default password for the application) this can be done via the SDBAC command `application.secret org.santedb.disconnected_client.gateway`)
+3. Any application that does not require client authorization grants (i.e. non-interactive sessions) should have the `OAUTH client_credentials flow permission no device credential` set to DENY (you may use the SDBAC command: `application.grant <NAME OF APPLICATION> -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY` )
+
+To perform this operation on all default applications in the SanteDB deployment the following script can be used:
+
+```
+## Reset client credentials
+application.secret org.santedb.debug
+application.secret org.santedb.disconnected_client.www
+application.secret org.santedb.disconnected_client.win32
+application.secret org.santedb.disconnected_client
+application.secret org.santedb.ims
+application.secret org.santedb.administration
+application.secret org.santedb.disconnected_client.gateway
+application.secret org.santedb.disconnected_client.android
+
+## Lock Fiddler (debugging credential)
+application.lock -l fiddler
+
+## Remove the OAUTH Client Credentials Grant
+application.grant org.santedb.debug -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.disconnected_client.www -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.disconnected_client.win32 -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.disconnected_client -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.ims -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.administration -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.disconnected_client.gateway -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+application.grant org.santedb.disconnected_client.android -p '1.3.6.1.4.1.33349.3.1.5.9.2.1.0.0.1.0' -g DENY
+```
+
+{% hint style="info" %}
+The `OAUTH client_credentials flow permission no device credential` policy permits applications to log into the OAUTH service with only a secret and an application ID. Denying this prevents this operation, however an application can continue to use the `client_credentials` when the `Authorization: BASIC <DEVICE CREDENTIAL>` is sent to the authorization endpoint.
+{% endhint %}
