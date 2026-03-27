@@ -166,6 +166,30 @@ The `<configuration>` element of the client certificate access behavior controls
 | allowClientHeader | true, false           | Indicates whether the `X-SSL-ClientCert` header is to be allowed. Note: **If running behind NGINX with SSL termination this must be true, if not it is recommended to be false.**                          |
 | trustedIssuers    | X509 Certificate      | The trusted issuers of client certificates. If the client presents a certificate that is valid to the operating system, however is not issued by a CA in this list then the access request will be denied. |
 
+### Client Certificates Behind a Reverse Proxy
+
+When using client certificate authentication and a reverse proxy - the TLS session is dropped (and optionally re-established afterwards). This prevents the SanteDB iCDR from determining the identity of the secure node accessing the API beyond the proxy.&#x20;
+
+If your reverse proxy natively supports forwarding the TLS session (and client certificate) this is the preferred method. However, if using client certificate authentication behind a reverse proxy which cannot re-authenticate via client certificate the reverse proxy can emit the `X-SSL-ClientCert` header on the request to the iCDR behind the proxy.&#x20;
+
+For example, in NGINX the configuration for `proxy_pass` would be:
+
+```
+   ## Configuration Truncated
+   ## Have NGINX validate the certificate
+   ssl_client_certificate /etc/ssl/certs/ca.crt;
+   ssl_verify_client on;
+   location / {
+     # Forward to app server
+     proxy_pass http://internal-ip-address:8080/;
+     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+     proxy_cookie_domain internal-ip-address name-of-your-server.net;
+     proxy_pass_request_headers on;
+     ## Attach a copy of the client certificate to the request for the iCDR to inspect
+     proxy_set_header X-SSL-ClientCert $ssl_client_cert;
+}
+```
+
 ## Securing Default Applications
 
 By default SanteDB's database contains credentials for applications which ship with SanteDB (such as the debugger, the admin console, the DCG, etc.). After deployment, it is recommended that system administrators perform the following actions:
