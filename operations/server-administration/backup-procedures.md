@@ -70,7 +70,7 @@ There are disadvantages to virtual disk backups, these can include:
 
 ### Data Dump Backups
 
-It is also possible to leverage database backups for your backup strategy of the iCDR. Implementers may use the built-in `pg_dump` backup method ([see tutorial here](https://snapshooter.com/learn/postgresql/pg\_dump\_pg\_restore)) or they may use a third party software tools ([see Bacula as an example](https://www.bacula.org/postgresql-backup-software/)).
+It is also possible to leverage database backups for your backup strategy of the iCDR. Implementers may use the built-in `pg_dump` backup method ([see tutorial here](https://snapshooter.com/learn/postgresql/pg_dump_pg_restore)) or they may use a third party software tools ([see Bacula as an example](https://www.bacula.org/postgresql-backup-software/)).
 
 The advantages of performing data dump backups are:
 
@@ -136,7 +136,7 @@ Backup files can be accessed in the following locations:
 * On Linux Operating Systems backups are stored in `~/.local/SanteDB/<instance-name>/backup`
 * On Android Operating Systems backups are stored in `~/Documents/SanteDB`
 
-### Restoring dCDR Backups
+### Restoring dCDR Backups (Version 2.x)
 
 To restore a dCDR backup is a straightforward process which differs based on the technology used.&#x20;
 
@@ -179,3 +179,45 @@ To restore a database on Android:
 2. Wipe the data for the SanteDB dCDR application (in the Application Manager clear the data for the application)
 3. Configure the application using the same tablet name and subscription settings as before
 4. When prompted at startup, answer "YES" to the restore from backup prompt provided
+
+### Restoring dCDR Backups (Version 3.x)
+
+#### Restoring Disconnected Gateway
+
+Backups from a DCG are stored in `C:\Users\Public\Documents\SanteDB` . Backups made on a dCG to the **Public** location should be copied from the source system to the target. Backups have an extension of `.bin` and are encrypted.&#x20;
+
+Once the backup for the dCG is copied to the restore target and placed into `C:\Users\Public\Documents\SanteDB` the backup should appear in the target's backup list under the `Public` location.&#x20;
+
+{% hint style="info" %}
+The environment on which the backup is restored must exactly match the environment of the machine on which the backup was made. For example, if the primary CDR database was stored on PostgreSQL on the original machine, it is not possible to restore the data onto a SQLite instance.
+{% endhint %}
+
+When restoring in a disaster recovery scenario (i.e. when the dCG user interface not accessible, the administrator can  restore the environment using the command line. Running `santedb-dcg.exe` with the `--restore` and `--system` parameters from an elevated command prompt.
+
+For example:&#x20;
+
+```
+C:\Program Files\SanteSuite\SanteDB\DCG>santedb-dcg --restore --system
+SanteDB Disconnected Gateway (SanteDB-DCG) 3.0.2080.0 (Chippewa+540d481c837ef4abaa4e9d092e145b8784a18886)
+Copyright (C) 2020-2025 SanteSuite Contributors (see NOTICE)
+Complete Copyright information available at http://github.com/santedb/santedb-dcg
+Starting restoration process
+Configuration Directory: C:\Program Files\SanteSuite\SanteDB\DCG\instances\default\config
+Data Directory: C:\Program Files\SanteSuite\SanteDB\DCG\instances\default\data
+Initializing the environment...
+Construct context with SanteDB.Client.Configuration.InitialConfigurationManager...
+Preparing the restoration environment...
+Available Backups in C:\Users\Public\Documents\SanteDB:
+        (0) - 639159178070064453 created 2026-06-01T17:36:47.0328211Z
+        (o) - Other File
+        (r) - Refresh options
+        (c) - Cancel / abort
+Specify Restore Option:0
+Are you sure you want to restore data from 639159178070064453 created on 2026-06-01T17:36:47.0328211Z?? [y]es [n]o:
+y
+This backup is encrypted. Please enter the backup passphrase:
+99% - Restoring Environment
+Environment restored
+```
+
+After restoration is complete, the DCG can be started via the `net start` command or `santedb-dcg --restart` or the relevant configuration added to the service manager wih `santedb-dcg --install`
