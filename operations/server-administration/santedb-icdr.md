@@ -19,14 +19,15 @@ For more information, see the [SanteDB Configuration](host-configuration-file/) 
 
 The following options can be used on the SanteDB.exe command
 
-| Option            | Use                                                                                     | Example             |
-| ----------------- | --------------------------------------------------------------------------------------- | ------------------- |
-| `--console`       | Run as an application rather than a service.                                            | --console           |
-| `--test-startup`  | Tests the configuration file (for startup) then stops .                                 | --test-startup      |
-| `--name=INSTANCE` | Named instance to configure as a windows service                                        | --name=IMS1         |
-| `--config=file`   | Load an alternate configuration file                                                    | --config=myconf.xml |
-| `--genconfig`     | Generate an empty configuration file.                                                   |                     |
-| `--install-certs` | Install the SanteSuite community certificates into the local trust store for the server |                     |
+| Option            | Use                                                                                                                                          | Example             |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `--console`       | Run as an application rather than a service.                                                                                                 | --console           |
+| `--test-startup`  | Tests the configuration file (for startup) then stops .                                                                                      | --test-startup      |
+| `--name=INSTANCE` | Named instance to configure as a windows service                                                                                             | --name=IMS1         |
+| `--config=file`   | Load an alternate configuration file                                                                                                         | --config=myconf.xml |
+| `--genconfig`     | Generate an empty configuration file.                                                                                                        |                     |
+| `--install-certs` | Install the SanteSuite community certificates into the local trust store for the server                                                      |                     |
+| `--reencrypt`     | Rotates the keys for all Application Layer Encryption enabled databases (or decrypts the database if no replacement certificate is provided) |                     |
 
 ### Running in Linux / MacOS
 
