@@ -501,6 +501,19 @@
       * [FHIR Subscriptions](developers/santedb-software-publishers/publish-subscribe.md)
       * [Related Persons](developers/santedb-software-publishers/related-persons.md)
     * [Extending FHIR Functionality](developers/santedb-software-publishers/extending-fhir-interfaces.md)
+    * [API Documentation](developers/service-apis/hl7-fhir/api-documentation/README.md)
+      * ```yaml
+        type: builtin:openapi
+        props:
+          models: false
+          downloadLink: true
+          grouping: by-tag
+        dependencies:
+          spec:
+            ref:
+              kind: openapi
+              spec: SanteSuiteNCC
+        ```
   * [GS1 BMS XML](developers/santedb-software-publishers/gs1-bms-xml/README.md)
   * [Examples](developers/santedb-software-publishers/examples/README.md)
     * [Connecting to the FHIR API](developers/santedb-software-publishers/examples/connecting-to-the-fhir-api.md)
