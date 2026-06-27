@@ -491,6 +491,19 @@
     * [MDM Extensions for HDSI](developers/santedb-software-publishers/gs1-bms-xml/matching-extensions-for-hdsi.md)
     * [Synchronization API](developers/service-apis/health-data-service-interface-hdsi/synchronization-api.md)
     * [Visual Resource Pointer API](developers/santedb-software-publishers/gs1-bms-xml/digitally-signed-visual-code-api.md)
+    * [API Documentation](developers/service-apis/health-data-service-interface-hdsi/api-documentation/README.md)
+      * ```yaml
+        type: builtin:openapi
+        props:
+          models: true
+          downloadLink: true
+          grouping: by-tag
+        dependencies:
+          spec:
+            ref:
+              kind: openapi
+              spec: SanteSuiteHDSINCC
+        ```
   * [HL7v2](developers/service-apis/hl7v2.md)
     * [Enabling HL7v2 Interfaces](developers/service-apis/administration-management-interface-ami/enabling-hl7v2-interfaces.md)
     * [HL7 Authentication](developers/service-apis/administration-management-interface-ami/hl7-authentication.md)
