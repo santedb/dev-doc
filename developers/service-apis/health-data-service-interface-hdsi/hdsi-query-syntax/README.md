@@ -26,6 +26,20 @@ The properties are traversed using dotted notation matching the property names i
 
 ![](<../../../../.gitbook/assets/image (159).png>)
 
+### Self Reference
+
+An HDSI query can self-reference the object using the `$self` query parameter. This parameter references the object's own instance and is helpful in contexts where casting or global searches on the object are required. For example, using freetext:
+
+```
+$self=:(freetext)+JOHN +SMITH -SMYTHE
+```
+
+Or calling a special function on an object for the query, such as getting a security claim:
+
+```
+$self@SecurityUser=:(getClaim|myclaim)true&userName=Bob
+```
+
 ## And/Or Semantics
 
 By default all filters passed in an HDSI query string are AND unless the property path is the same, in which case multiples are treated as OR. For example, to find patients with any name component of either JOHN or SMITH

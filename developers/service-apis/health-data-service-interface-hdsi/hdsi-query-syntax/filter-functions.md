@@ -172,6 +172,64 @@ WHERE column BETWEEN @minDate AND @maxDate
 | Month     | `new DateTime(value.Year, value.Month, 01)` | `new DateTime(value.Year, value.Month, DateTime.DaysInMonth(value.Month)` |
 | Day       | `value.Date`                                | `value.Date`                                                              |
 
+### Hex Decode
+
+Decodes a hex encoded value for query as the raw string in the database. This is useful for querying by security token values, or other data where the data in the database is stored as a byte / blob and represented in the API as a hex encoded string.
+
+```
+:(hexdecode)AFB4FE
+```
+
+### Byte Value
+
+Whenever a plain text string is presented on the API but stored as raw byte array in the database (such as [extended-data.md](../../../../santedb/data-and-information-architecture/conceptual-data-model/extended-data.md "mention") using the `StringExtensionHandler`) the byte value may be used.&#x20;
+
+For example, to query a string extension containing the value `bar` the following HDSI query can be used:
+
+```
+?extension[http://example.com/foo].value=:(tobytes)bar
+```
+
+### Base 64 Decode
+
+When querying an extended value (see [extended-data.md](../../../../santedb/data-and-information-architecture/conceptual-data-model/extended-data.md "mention")) using the API serialized base-64 string provided - the `base64decode` operation can be used:
+
+```
+?name.component.value=:(base64decode)AQ==
+```
+
+### No Case
+
+The nocase filter performs a case-insensitive match. For example, to ignore the case of a query on a family name SMITH:
+
+```
+?name.component[Family].value=:(nocase)SMITH
+```
+
+### Trim
+
+The trim filter will trim all spaces surrounding a value.&#x20;
+
+```
+?name.component[Family].value=:(nocase)%20%20SMITH%20
+```
+
+### Freetext
+
+The `freetext` filter will perform a match on the specified object using whatever underlying freetext or fulltext search engine the persistence layer is configured with. Free text is always applied against the object using `$self` .
+
+```
+?$self@Patient=:(freetext)+JOHN +SMITH -SALLY
+```
+
+### Get Claim
+
+The get claim query filter extension method is a special implementation for security objects. The claim value is filtered on a `SecurityUser`, `SecurityDevice`, or `SecurityApplication`'s claim instance.  This is executed against `$self`
+
+```
+?$self@SecurityUser=:(getClaim|notBefore)>2025-06-04
+```
+
 ## SanteMatch Filters
 
 ### Approximate Match
@@ -218,10 +276,10 @@ Uses the configured phonetic algorithm to determine whether the supplied string 
 
 #### SQL Translations / Support
 
-| PostgreSQL  | Supported (since 2.0)                                                                                    |
-| ----------- | -------------------------------------------------------------------------------------------------------- |
-| FirebirdSQL | Not Supported                                                                                            |
-| SQLite      | Supported (since 2.0 - requires SQLite [Soundex ](https://sqlite.org/lang\_corefunc.html#soundex)option) |
+| PostgreSQL  | Supported (since 2.0)                                                                                   |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| FirebirdSQL | Not Supported                                                                                           |
+| SQLite      | Supported (since 2.0 - requires SQLite [Soundex ](https://sqlite.org/lang_corefunc.html#soundex)option) |
 
 #### Examples
 
@@ -262,10 +320,10 @@ The soundex comparison is used to compare the difference in SOUNDEX codes of eac
 
 #### SQL Translations / Support
 
-| PostgreSQL  | Supported (since 2.0)                                                                                    |
-| ----------- | -------------------------------------------------------------------------------------------------------- |
-| FirebirdSQL | Not Supported                                                                                            |
-| SQLite      | Supported (since 2.0 - requires SQLite [Soundex ](https://sqlite.org/lang\_corefunc.html#soundex)option) |
+| PostgreSQL  | Supported (since 2.0)                                                                                   |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| FirebirdSQL | Not Supported                                                                                           |
+| SQLite      | Supported (since 2.0 - requires SQLite [Soundex ](https://sqlite.org/lang_corefunc.html#soundex)option) |
 
 ### Metaphone Comparison
 
@@ -368,10 +426,24 @@ Implementers should note that the default similarity threshold will impact what 
 | FirebirdSQL | Not Supported         |
 | SQLite      | Not Supported         |
 
+### Alias
+
+The alias filter function performs a specialized lookup of values which are known aliases for the input value. For example, `William` has known aliases of `Bill`, `Will`, and `Billy` . The name alias extension requires the installation and configuration of the `IAliasProvider` (provided by `SanteMPI`).&#x20;
+
+```
+?name.component.value=:(alias)BILL
+```
+
+The implementation of the `IAliasPRovider` may support any number of aliasing algorithms and alias reference sets. For example, a country-specific implementation may provide known aliases for locations:
+
+```
+?address.component[City].value=:(alias)The Big Apple
+```
+
 ## Custom Filter Functions
 
 Implementers can write custom filter functions by implementing the following interfaces:
 
-* [IQueryExtensionFilter](http://santesuite.org/assets/doc/net/html/T\_SanteDB\_Core\_Model\_Query\_IQueryFilterExtension.htm) interface which maps and composes the HDSI query expression to/from a .NET Expression tree&#x20;
+* [IQueryExtensionFilter](http://santesuite.org/assets/doc/net/html/T_SanteDB_Core_Model_Query_IQueryFilterExtension.htm) interface which maps and composes the HDSI query expression to/from a .NET Expression tree&#x20;
 * Implementing a [.NET Extension Method](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) which allows the HDSI filter to be exposed in a .NET LINQ Expression (and which is used to evaluate the HDSI filter on .NET objects in memory)
-* Implementing [IDbFilterFunction ](http://santesuite.org/assets/doc/net/html/Methods\_T\_SanteDB\_OrmLite\_Providers\_IDbFilterFunction.htm)interface for each persistence interface. This class translates the HDSI Query and LINQ extension into SQL for the appropriate platform.
+* Implementing [IDbFilterFunction ](http://santesuite.org/assets/doc/net/html/Methods_T_SanteDB_OrmLite_Providers_IDbFilterFunction.htm)interface for each persistence interface. This class translates the HDSI Query and LINQ extension into SQL for the appropriate platform.
